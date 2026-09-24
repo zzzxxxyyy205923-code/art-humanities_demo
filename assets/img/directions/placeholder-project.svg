@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#1E2433"/>
+  <rect x="14" y="14" width="772" height="572" fill="none" stroke="#3A4356" stroke-width="2" stroke-dasharray="10 8"/>
+  <text x="400" y="292" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="34" fill="#7C8391">项目图片占位</text>
+  <text x="400" y="336" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="20" fill="#5A6170">PLACEHOLDER · 待提供</text>
+</svg>
