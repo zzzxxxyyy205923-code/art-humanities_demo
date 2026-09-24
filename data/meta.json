@@ -1,0 +1,46 @@
+{
+  "brand": "SFK 艺术人文科系",
+  "brandEn": "SFK Art & Humanities",
+  "subtitle": "插画 × 纯艺术 · 本科爬藤与升学就业规划",
+  "nav": {
+    "main": {
+      "label": "主要内容",
+      "items": [
+        { "id": "undergraduate", "label": "本科爬藤", "href": "#/undergraduate" },
+        { "id": "fulltime", "label": "全日制", "href": "#/fulltime" },
+        { "id": "graduate", "label": "研究生", "href": "#/graduate" }
+      ]
+    },
+    "right": [
+      { "id": "intro", "label": "关于艺术人文", "href": "#/home" },
+      { "id": "offers", "label": "OFFER成果", "href": "#/home/offers" },
+      { "id": "instructors", "label": "导师团队", "href": "#/home/instructors" },
+      { "id": "resources", "label": "校企资源", "href": "#/home/resources" },
+      { "id": "timeline", "label": "成长时间轴", "href": "#/home/timeline" },
+      { "id": "courses", "label": "课程产品", "href": "#/home/courses" },
+      { "id": "cases", "label": "学生案例", "href": "#/cases" }
+    ],
+    "overlay": {
+      "eyebrow": "主要内容 · CONTENTS",
+      "primary": [
+        { "id": "cases", "label": "学生案例", "href": "#/cases" },
+        { "id": "timeline", "label": "成长时间轴", "href": "#/home/timeline" },
+        { "id": "courses", "label": "课程产品", "href": "#/home/courses" }
+      ],
+      "secondary": [
+        { "id": "intro", "label": "关于艺术人文", "href": "#/home" },
+        { "id": "offers", "label": "OFFER成果", "href": "#/home/offers" },
+        { "id": "instructors", "label": "导师团队", "href": "#/home/instructors" },
+        { "id": "resources", "label": "校企资源", "href": "#/home/resources" }
+      ],
+      "cta": { "label": "规划我的未来", "labelEn": "Plan Your Future", "href": "#/employment" }
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 SFK 艺术人文科系 · 本页面为课程与案例演示站点，数据仅供展示",
+    "contact": {
+      "email": "admissions@sfk-edu.demo",
+      "tel": "400-000-0000"
+    }
+  }
+}

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SFK 艺术人文科系 · ARTS × HUMANITIES</title>
+  <meta name="description" content="SFK 艺术人文科系 — 插画与纯艺术本科爬藤、升学就业规划与案例展示">
+  <link rel="icon" type="image/png" href="assets/img/brand/logo-illustration-fineart.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="app-header"></div>
+
+<!-- ══════════ 视图容器（全部内容都在当前文档内，靠 hash 路由切换） ══════════ -->
+
+<!-- 首页 -->
+<main class="view" id="view-home">
+  <!-- 学生案例图片区：由原「占位图」扩展为覆盖整个首页显示范围的横向滚动作品带（JS 注入图卷） -->
+  <div class="home-reel" id="home-reel" aria-hidden="true"></div>
+
+  <section class="hero hero--video">
+    <div class="hero__media" aria-hidden="true">
+      <video id="hero-video" class="hero__video" src="assets/video/art-humanities-intro-20260920.mp4" autoplay muted loop playsinline preload="auto" disablepictureinpicture tabindex="-1"></video>
+      <span class="hero__veil"></span>
+    </div>
+
+    <div class="hero__inner">
+      <div class="hero__eyebrow">SFK · 艺术人文科系 · <span class="u-en">ARTS &amp; HUMANITIES </span></div>
+      <h1>以人文深度 <em>塑造未来艺术人才</em></h1>
+      <p class="hero__sub">从艺术创作、人⽂研究到⾏业现场，艺术⼈⽂科系帮助学⽣建⽴⼀条能被名校看⻅、能被⾏业理解、能被未来转化的成⻓路径。</p>
+      <div class="hero__tags" aria-label="学科方向">
+        <span>ART</span> <span>SCULPTURE</span> <span>PHOTOGRAPHY</span>
+      </div>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#/undergraduate">本科爬藤</a>
+        <a class="btn btn--ghost" href="#/employment">就业力规划</a>
+        <a class="btn btn--ghost" href="#/cases">学生案例</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="intro">
+    <div class="section__header">
+      <span class="section__eyebrow u-en">MAJORS</span>
+      <h2 class="section__title">两大专业方向</h2>
+      <p class="section__desc">插画与纯艺术共享视觉语言训练，但在叙事应用、创作目标与职业出口上各有侧重。点击下方卡片进入对应本科爬藤板块。</p>
+    </div>
+    <div class="card-grid" id="major-grid"></div>
+  </section>
+
+  <!-- 录取成果 / OFFER 展示：结构 / 布局 / 信息层级复用 dad_demo 首页「offer 展示」板块
+       （页头 → 地区筛选标签 → rough-grid 院校卡片栅格 → 查看更多 / 收起），
+       标题沿用「offer展示」，具体院校、数量与描述均为占位，后期由你填入。 -->
+  <section class="section" id="offers">
+    <div class="section__header">
+      <span class="section__eyebrow u-en">OFFERS 2026</span>
+      <h2 class="section__title">offer展示</h2>
+      <p class="section__desc">【占位】2026 申请季录取战报描述待提供 —— 覆盖美国、英国、港新与全球院校的真实 offer 数据，后期由你填入。</p>
+    </div>
+    <div id="offers-root"></div>
+  </section>
+
+  <!-- 导师团队：结构 / 布局 / 信息层级复用 dad_demo 首页「导师团队」板块
+       （页头 → 类别筛选标签 → rough-grid 导师卡片栅格 → 展开查看更多 / 收起），
+       导师姓名、院校/机构、职称与头像均为占位，后期由你填入。 -->
+  <section class="section" id="instructors">
+    <div class="section__header">
+      <span class="section__eyebrow u-en">INSTRUCTORS</span>
+      <h2 class="section__title">导师团队</h2>
+      <p class="section__desc">【占位】来自顶尖高校与业界的导师团队 —— 覆盖海外教授、教研导师、学术导师、业界导师与顶尖学者，导师信息后期由你填入。</p>
+    </div>
+    <div id="instructors-root"></div>
+  </section>
+
+  <!-- 校企资源：结构 / 布局 / 信息层级复用 dad_demo 首页「资源网络」板块
+       （页头 → 校企 logo 横向滚动 marquee，悬停查看合作内容），
+       公司/高校名称、logo 与简介均为占位，后期由你填入。 -->
+  <section class="section" id="resources">
+    <div class="section__header">
+      <span class="section__eyebrow u-en">RESOURCES</span>
+      <h2 class="section__title">校企资源</h2>
+      <p class="section__desc">【占位】横跨八大行业方向、深度覆盖的校企资源网络 —— 合作院校与企业信息后期由你填入。</p>
+    </div>
+    <div id="resources-root"></div>
+  </section>
+
+  <section class="section" id="timeline">
+    <div class="section__header">
+      <span class="section__eyebrow u-en">TIMELINE</span>
+      <h2 class="section__title">成长时间轴</h2>
+      <p class="section__desc">从 9 年级到本科录取的关键节点规划占位区。</p>
+    </div>
+    <div class="placeholder-card" style="margin-top:0;">
+      <h3>成长时间轴筹备中</h3>
+      <p>本版块将展示学术准备、作品集、申请、面试与录取衔接的完整时间轴。</p>
+    </div>
+  </section>
+
+  <!-- 课程产品：结构 / 布局 / 信息层级复用 dad_demo「课程产品」页
+       （页头 + 长线旗舰产品 + 课程目录 两个分区 + 卡片带），
+       视觉令牌、间距与交互语言全部沿用艺术人文站既有体系。 -->
+  <section class="section" id="courses">
+    <div class="section__header">
+      <span class="section__eyebrow u-en" id="cp-eyebrow">COURSE PRODUCTS</span>
+      <h2 class="section__title" id="cp-title">课程产品</h2>
+      <p class="section__desc" id="cp-sub">从长线旗舰项目到分类课程目录，覆盖学术探索、行业实习与商业实践的完整课程体系。点击任意卡片查看完整介绍。</p>
+    </div>
+    <div class="cp-page">
+      <div class="cp-zone">
+        <div class="cp-zone__eyebrow u-en" id="cp-longform-eyebrow">Signature Programs</div>
+        <h3 class="cp-zone__title" id="cp-longform-title">长线旗舰产品</h3>
+        <div class="cp-grid" id="cp-longform-grid"></div>
+      </div>
+      <div class="cp-zone cp-zone--catalog">
+        <div class="cp-zone__eyebrow u-en" id="cp-catalog-eyebrow">Program Catalog</div>
+        <h3 class="cp-zone__title" id="cp-catalog-title">课程目录</h3>
+        <div class="cp-grid" id="cp-catalog-grid"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- 本科爬藤 -->
+<main class="view" id="view-undergraduate">
+  <section class="planning-hero planning-hero--wide" style="border-bottom:1px solid var(--line);">
+    <div class="hero__eyebrow" style="justify-content:center;display:flex;">SFK · 艺术人文科系 · <span class="u-en">Undergraduate</span></div>
+    <h1>本科爬藤</h1>
+    <p>以插画与纯艺术两大方向为轴，覆盖英联邦学术背景、升学体系、英本与美本全链路规划。</p>
+  </section>
+  <!-- 01–05 五个规划模块：横向手风琴 + 联动详情
+       （布局 / 结构 / 层级 / 悬停反馈对齐「十大核心岗位」.careers，
+         总宽 = 主栏内容宽，与下方「插画 ILLUSTRATION / 纯艺术 FINE ART」同宽） -->
+  <section class="planning-section" id="planning" style="padding-top:48px;padding-bottom:24px;">
+    <section class="pacc" id="planning-modules">
+      <div class="pacc__head">
+        <span class="section__eyebrow u-en">Undergraduate Planning 01–05</span>
+        <p class="pacc__hint">悬停或点击任一模块 → 该模块横向展开、其余收窄，下方详情同步切换。</p>
+      </div>
+      <div class="pacc__rail" id="planning-sections"></div>
+      <div class="pacc__detail" id="planning-detail"></div>
+    </section>
+  </section>
+
+  <section class="section" style="padding-top:48px;">
+    <div class="tabs" id="major-tabs"></div>
+    <!-- 专业切换后的滚动落点：标题 + 下属内容（id 供 UndergradPage.scrollToDetail 定位） -->
+    <div id="major-detail" style="margin-bottom:16px;">
+      <h2 class="section__title active-major__title" id="active-major-title"></h2>
+      <p class="section__desc" id="active-major-tagline"></p>
+    </div>
+    <div id="major-content"></div>
+  </section>
+</main>
+
+<!-- 就业力 -->
+<main class="view" id="view-employment">
+  <section class="planning-hero planning-hero--wide">
+    <div class="hero__eyebrow" style="justify-content:center;display:flex;">SFK · ART & · <span class="u-en">Career Map</span></div>
+    <h1 id="planning-title"></h1>
+    <p id="planning-subtitle"></p>
+  </section>
+  <section class="planning-section" style="padding-top:24px;">
+    <!-- 八大就业方向一览：持续滑动卡片带 + 方向标签
+         位于「十大核心岗位」上方；数据来自 data/directions.json，
+         布局 / 结构 / 交互语言与 careers 板块统一（总宽 = 主栏内容宽）。 -->
+    <section class="directions" id="directions">
+      <div class="directions__head">
+        <div class="directions__head-top">
+          <span class="directions__eyebrow u-en" id="directions-eyebrow"></span>
+        </div>
+        <h2 class="directions__title" id="directions-title"></h2>
+        <p class="directions__subtitle" id="directions-subtitle"></p>
+        <div class="planning-tags" id="directions-tags"></div>
+      </div>
+      <div class="directions__wrap">
+        <div class="directions__rail" id="directions-rail"></div>
+      </div>
+    </section>
+
+    <!-- 十大核心岗位：横向手风琴 + 联动详情 -->
+    <section class="careers" id="careers">
+      <div class="careers__head">
+        <span class="section__eyebrow u-en" id="careers-eyebrow"></span>
+        <h2 class="section__title" id="careers-title"></h2>
+        <p class="section__desc" id="careers-subtitle"></p>
+        <p class="careers__hint" id="careers-hint"></p>
+      </div>
+      <div class="careers__rail" id="careers-rail"></div>
+      <div class="careers__detail" id="careers-detail"></div>
+    </section>
+  </section>
+</main>
+
+<!-- 案例展示 -->
+<main class="view" id="view-cases">
+  <section class="planning-hero planning-hero--wide" style="border-bottom:1px solid var(--line);">
+    <div class="hero__eyebrow" style="justify-content:center;display:flex;">SFK · 艺术人文科系 · <span class="u-en">Cases</span></div>
+    <h1>学生案例</h1>
+    <p>真正决定这些年轻人去向的，从来不是分数、国别与课程标签，而是他们如何以独有的目光审视世界，把成长里的困惑、眷恋与追问，淬炼成有温度、有思想密度的作品——这正是艺术与人文区别于一切标准化评价的气质与厚度。</p>
+  </section>
+  <section class="section">
+    <div class="section__header">
+      <span class="section__eyebrow u-en">GALLERY</span>
+      <h2 class="section__title">录取案例</h2>
+      <p class="section__desc">从插画与纯艺术两条申请主线出发，逐条拆解每位学员的<span class="u-hl">院校背景</span>、<span class="u-hl">课程体系</span>、<span class="u-hl">学术与语言成绩</span>、<span class="u-hl">作品集研究</span>方向与最终录取结果。案例覆盖英国、美国、加拿大、澳洲四个申请地区，既有 <span class="u-hl">UAL</span>、<span class="u-hl">RISD</span> 等艺术名校，也有 <span class="u-hl">牛津</span>、<span class="u-hl">UCL</span>、<span class="u-hl">布朗</span>、<span class="u-hl">达特茅斯</span>等综合性大学。</p>
+    </div>
+
+    <!-- 案例筛选：专业方向 / 申请地区 / 就业导向三级；由 data/cases.json 的 filters 驱动 -->
+    <div class="case-filters" id="cases-filters"></div>
+    <div class="case-result" id="cases-result"></div>
+
+    <div class="case-grid" id="cases-grid"></div>
+  </section>
+</main>
+
+<!-- 全日制（占位） -->
+<main class="view" id="view-fulltime">
+  <section class="placeholder-page">
+    <div class="placeholder-card">
+      <h1>全日制</h1>
+      <p>正在筹备中，敬请期待。</p>
+      <p style="margin-top:24px;"><a class="btn btn--ghost" href="#/home">返回首页</a></p>
+    </div>
+  </section>
+</main>
+
+<!-- 研究生（占位） -->
+<main class="view" id="view-graduate">
+  <section class="placeholder-page">
+    <div class="placeholder-card">
+      <h1>研究生</h1>
+      <p>正在筹备中，敬请期待。</p>
+      <p style="margin-top:24px;"><a class="btn btn--ghost" href="#/home">返回首页</a></p>
+    </div>
+  </section>
+</main>
+
+<!-- 课程详情全屏浮层：点击任一课程卡片进入。
+     结构复用 dad_demo 的 CourseOverlay（背景遮罩 + 居中面板 + 关闭按钮 + cd-page__body），
+     关闭方式：关闭按钮 / 点背景 / ESC，与站内 dir-sheet 一致加 body.is-locked 锁滚动。 -->
+<div id="course-overlay" class="course-overlay">
+  <div class="course-overlay__backdrop"></div>
+  <div class="course-overlay__panel">
+    <button class="course-overlay__close" type="button" aria-label="关闭">✕</button>
+    <div id="course-overlay-body" class="cd-page__body"></div>
+  </div>
+</div>
+
+<div id="app-footer"></div>
+
+<button id="hero-sound" class="hero-sound" type="button" hidden aria-pressed="false" aria-label="开启影像声音">
+<svg class="hero-sound__icon" data-state="muted" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z" fill="currentColor"/><path d="M15.5 9.5l5 5M20.5 9.5l-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+<svg class="hero-sound__icon" data-state="on" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z" fill="currentColor"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+</button>
+
+<!-- 数据：优先用内嵌数据（file:// 直开也能跑），缺失时回落到 fetch -->
+<script src="data/site-data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/hero-video.js"></script>
+</body>
+</html>

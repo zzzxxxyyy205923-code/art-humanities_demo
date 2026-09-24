@@ -1,0 +1,1219 @@
+{
+  "filters": [
+    {
+      "id": "major",
+      "label": "专业方向",
+      "labelEn": "MAJOR",
+      "all": "全部",
+      "options": [
+        {
+          "value": "illustration",
+          "label": "插画"
+        },
+        {
+          "value": "fine-art",
+          "label": "纯艺术"
+        },
+        {
+          "value": "cross",
+          "label": "插画 / 纯艺术"
+        }
+      ]
+    },
+    {
+      "id": "region",
+      "label": "申请地区",
+      "labelEn": "REGION",
+      "all": "全部",
+      "options": [
+        {
+          "value": "英国",
+          "label": "英国"
+        },
+        {
+          "value": "美国",
+          "label": "美国"
+        },
+        {
+          "value": "加拿大",
+          "label": "加拿大"
+        },
+        {
+          "value": "澳洲",
+          "label": "澳洲"
+        }
+      ]
+    },
+    {
+      "id": "career",
+      "label": "就业导向",
+      "labelEn": "CAREER",
+      "all": "全部",
+      "source": "careers",
+      "hint": "子标签取自「十大核心岗位」（data/careers.json）。案例侧的就业导向标签待标注，当前全部归入「暂未匹配」，标注后即按岗位归类。",
+      "options": []
+    }
+  ],
+  "illustration": [
+    {
+      "student": "Lin.",
+      "studentZh": "林同学",
+      "school": "伦敦艺术大学 UAL",
+      "schoolEn": "University of the Arts London",
+      "college": "Camberwell College of Arts",
+      "country": "英国",
+      "region": "英国",
+      "major": "illustration",
+      "program": "BA Illustration",
+      "programCn": "插画",
+      "offerType": "本科直录",
+      "background": "厦门国际高中 · 国际学校背景",
+      "academic": [
+        "A-Level 中文 A*",
+        "A-Level 纯艺预估 A",
+        "GPA 4.2/5"
+      ],
+      "language": "—",
+      "tags": [
+        "时间紧迫",
+        "目标高",
+        "一年制冲刺"
+      ],
+      "persona": "学术背景：国际学校背景，已有两门 A-Level 成绩（★★★★）；时间跨度：不到一年准备期，时间紧张（★★）；目标院校：顶尖艺术大学，家长期待高（★★★★★）；专业能力：中上，需要针对性指导（★★★）。",
+      "creation": [],
+      "offers": [
+        {
+          "school": "UAL-Camberwell",
+          "schoolEn": "Camberwell College of Arts, UAL",
+          "program": "BA Illustration"
+        }
+      ],
+      "works": [],
+      "career": null
+    },
+    {
+      "student": "Guan.",
+      "studentZh": "管同学",
+      "school": "爱丁堡大学",
+      "schoolEn": "The University of Edinburgh",
+      "college": "",
+      "country": "英国",
+      "region": "英国",
+      "major": "illustration",
+      "program": "BA Illustration（大二直录）",
+      "programCn": "插画",
+      "offerType": "大二直录",
+      "background": "普高脱产 · SFK 全日制",
+      "academic": [
+        "GPA 3.6/4"
+      ],
+      "language": "—",
+      "tags": [
+        "非国际背景",
+        "想去综校",
+        "两年规划"
+      ],
+      "persona": "学术背景：非国际背景、普高（★★）；时间跨度：两年，时间宽裕（★★★★★）；目标院校：综合大学，家长期待高（★★★★★）；专业能力：中上，需要针对性指导（★★★）。",
+      "creation": [],
+      "offers": [
+        {
+          "school": "爱丁堡大学",
+          "schoolEn": "The University of Edinburgh",
+          "program": "BA Illustration（大二直录）"
+        }
+      ],
+      "works": [],
+      "career": null
+    },
+    {
+      "student": "Teng.",
+      "studentZh": "藤同学",
+      "school": "伦敦大学学院 UCL",
+      "schoolEn": "University College London",
+      "college": "",
+      "country": "英国",
+      "region": "英国",
+      "major": "illustration",
+      "program": "BA Creative Arts and Humanities",
+      "programCn": "创意艺术与人文科学",
+      "offerType": "本科",
+      "background": "光华剑桥 · 国际高中",
+      "academic": [
+        "A-Level 中文 A",
+        "A-Level 数学 A",
+        "A-Level 艺术预估 A",
+        "A-Level 经济预估 A*",
+        "BTEC Distinction"
+      ],
+      "language": "雅思 6.5",
+      "tags": [
+        "全链路版本",
+        "A-Level + BTEC"
+      ],
+      "persona": "",
+      "creation": [
+        "学生作品探讨了：1. 成长中的亲密到冲突；2. 个体独立性与情感共生性。",
+        "学生作品探讨了：1. 当代艺术技法与艺术疗愈的实践途径；2. 从焦虑到自我重建的内心旅程。"
+      ],
+      "offers": [
+        {
+          "school": "UCL",
+          "schoolEn": "University College London",
+          "program": "BA Creative Arts and Humanities"
+        }
+      ],
+      "works": [
+        "assets/img/cases/teng-ucl-02.jpg",
+        "assets/img/cases/teng-ucl-03.jpg",
+        "assets/img/cases/teng-ucl-04.png",
+        "assets/img/cases/teng-ucl-05.png"
+      ],
+      "career": null
+    },
+    {
+      "student": "Liu.",
+      "studentZh": "刘同学",
+      "school": "伦敦大学学院 UCL",
+      "schoolEn": "University College London",
+      "college": "",
+      "country": "英国",
+      "region": "英国",
+      "major": "illustration",
+      "program": "BA Media",
+      "programCn": "媒体",
+      "offerType": "本科",
+      "background": "青岛中学国际部 · 普高国际部",
+      "academic": [
+        "A-Level 艺术 A",
+        "GPA 4.2/4.3",
+        "BTEC Distinction"
+      ],
+      "language": "雅思 7.0",
+      "tags": [
+        "公益与社会责任",
+        "领导力",
+        "跨专业"
+      ],
+      "persona": "活动经历：11 年级国际少美联赛、日本国际儿童漫画樱花奖；儿童福利院关爱活动与校园二手义卖策划；CTB 比赛团队领导人、校报采写部主编、校内艺术社团策展人。",
+      "creation": [
+        "学生作品通过插画和视觉手册，为残疾儿童发声，呼吁社会的关注。",
+        "学生将旅居中对归属感的缺失与追寻，通过艺术创作转化为对人与环境关系的视觉思考。"
+      ],
+      "offers": [
+        {
+          "school": "UCL",
+          "schoolEn": "University College London",
+          "program": "BA Media"
+        }
+      ],
+      "works": [
+        "assets/img/cases/liu-ucl-02.jpg",
+        "assets/img/cases/liu-ucl-03.jpg",
+        "assets/img/cases/liu-ucl-04.png",
+        "assets/img/cases/liu-ucl-05.png"
+      ],
+      "career": null
+    },
+    {
+      "student": "Wang.",
+      "studentZh": "王同学",
+      "school": "伦敦艺术大学 UAL",
+      "schoolEn": "University of the Arts London",
+      "college": "Camberwell College of Arts",
+      "country": "英国",
+      "region": "英国",
+      "major": "illustration",
+      "program": "BA Illustration",
+      "programCn": "插画",
+      "offerType": "本科",
+      "background": "牛津公学 · 国际高中",
+      "academic": [
+        "A-Level 艺术 AA",
+        "BTEC Distinction"
+      ],
+      "language": "—",
+      "tags": [
+        "A-Level + BTEC",
+        "UAL 夏校"
+      ],
+      "persona": "",
+      "creation": [
+        "通过三维插画将童年时对夜晚的恐惧记忆转化为成年后的怀旧与超现实诠释。",
+        "《微小世界改变者》：一本用天真解释日常现象的童年手绘故事集。"
+      ],
+      "offers": [
+        {
+          "school": "UAL-Camberwell",
+          "schoolEn": "Camberwell College of Arts, UAL",
+          "program": "BA Illustration"
+        }
+      ],
+      "works": [
+        "assets/img/cases/wang-ual-02.jpg",
+        "assets/img/cases/wang-ual-03.png",
+        "assets/img/cases/wang-ual-04.png",
+        "assets/img/cases/wang-ual-05.png",
+        "assets/img/cases/wang-ual-06.png",
+        "assets/img/cases/wang-ual-07.jpg"
+      ],
+      "career": null
+    },
+    {
+      "student": "Huang.",
+      "studentZh": "黄同学",
+      "school": "伦敦艺术大学 UAL",
+      "schoolEn": "University of the Arts London",
+      "college": "Camberwell College of Arts",
+      "country": "英国",
+      "region": "英国",
+      "major": "illustration",
+      "program": "BA Illustration",
+      "programCn": "插画",
+      "offerType": "本科",
+      "background": "SFK 全日制",
+      "academic": [
+        "A-Level 艺术 A*A",
+        "BTEC Distinction"
+      ],
+      "language": "—",
+      "tags": [
+        "全日制",
+        "A-Level 冬校冲刺"
+      ],
+      "persona": "",
+      "creation": [
+        "创作源于昆虫的生命周期，它以一种非线性叙事的日历形式，映射人类对死亡的深思。",
+        "一款以家中「隐藏访客」为灵感的桌游，玩家可扮演它们探索人类生活。"
+      ],
+      "offers": [
+        {
+          "school": "UAL-Camberwell",
+          "schoolEn": "Camberwell College of Arts, UAL",
+          "program": "BA Illustration"
+        }
+      ],
+      "works": [
+        "assets/img/cases/huang-ual-02.jpg",
+        "assets/img/cases/huang-ual-03.jpg",
+        "assets/img/cases/huang-ual-04.png",
+        "assets/img/cases/huang-ual-05.png",
+        "assets/img/cases/huang-ual-06.png",
+        "assets/img/cases/huang-ual-07.png"
+      ],
+      "career": null
+    },
+    {
+      "student": "Ding.",
+      "studentZh": "丁同学",
+      "school": "伦敦艺术大学 UAL",
+      "schoolEn": "University of the Arts London",
+      "college": "London College of Fashion",
+      "country": "英国",
+      "region": "英国",
+      "major": "illustration",
+      "program": "BA Fashion Imaging and Illustration",
+      "programCn": "时尚影像与插画",
+      "offerType": "本科",
+      "background": "SFK 全日制",
+      "academic": [
+        "A-Level 艺术 AA",
+        "BTEC Distinction"
+      ],
+      "language": "—",
+      "tags": [
+        "全日制",
+        "时尚插画"
+      ],
+      "persona": "",
+      "creation": [
+        "因无力救治病鹦鹉的内疚，催生了以人类阶级预言与三维绘画构成的《生死之书》，揭示生命价值的现实不平等。",
+        "以日常材质的纹理为灵感，通过绘画与手工的联想实验，构建一套探索「材料幻想」的完整作品系列。"
+      ],
+      "offers": [
+        {
+          "school": "UAL-LCF",
+          "schoolEn": "London College of Fashion, UAL",
+          "program": "BA Fashion Imaging and Illustration"
+        }
+      ],
+      "works": [
+        "assets/img/cases/ding-lcf-02.jpg",
+        "assets/img/cases/ding-lcf-03.jpg",
+        "assets/img/cases/ding-lcf-04.png",
+        "assets/img/cases/ding-lcf-05.png",
+        "assets/img/cases/ding-lcf-07.png"
+      ],
+      "career": null
+    },
+    {
+      "student": "Hong.",
+      "studentZh": "洪同学",
+      "school": "爱丁堡大学",
+      "schoolEn": "The University of Edinburgh",
+      "college": "",
+      "country": "英国",
+      "region": "英国",
+      "major": "illustration",
+      "program": "BA Illustration（大二录取）",
+      "programCn": "插画",
+      "offerType": "大二录取",
+      "background": "SFK 全日制",
+      "academic": [
+        "A-Level 艺术 AA",
+        "BTEC Distinction"
+      ],
+      "language": "—",
+      "tags": [
+        "全日制",
+        "大二录取"
+      ],
+      "persona": "",
+      "creation": [
+        "以木炭为媒介，从人格解离的亲历者与旁观者双重身份出发，通过视觉叙事再现身心分离的异化体验。",
+        "将囤积的书信拟作精灵，讲述依靠朋友来信治愈异乡求学困境的情感故事，探索物品作为精神支撑的心理联结。"
+      ],
+      "offers": [
+        {
+          "school": "爱丁堡大学",
+          "schoolEn": "The University of Edinburgh",
+          "program": "BA Illustration"
+        }
+      ],
+      "works": [
+        "assets/img/cases/hong-edin-01.jpg",
+        "assets/img/cases/hong-edin-03.jpg",
+        "assets/img/cases/hong-edin-04.png",
+        "assets/img/cases/hong-edin-05.png",
+        "assets/img/cases/hong-edin-06.png"
+      ],
+      "career": null
+    },
+    {
+      "student": "Xiao.",
+      "studentZh": "肖同学",
+      "school": "伦敦艺术大学 UAL",
+      "schoolEn": "University of the Arts London",
+      "college": "Central Saint Martins",
+      "country": "英国",
+      "region": "英国",
+      "major": "illustration",
+      "program": "BA Graphic Communication",
+      "programCn": "平面视觉传达",
+      "offerType": "本科",
+      "background": "海外高中",
+      "academic": [
+        "BTEC Distinction",
+        "GPA 3.73/4.0"
+      ],
+      "language": "雅思 6.5",
+      "tags": [
+        "海外高中",
+        "跨专业"
+      ],
+      "persona": "",
+      "creation": [
+        "用绘画与日记记录因转学而产生的友谊的离别，让经历者共鸣，予旁观者微光。",
+        "为无法归家的青少年设计海胆状可移动精神庇护所装置及对比手册。"
+      ],
+      "offers": [
+        {
+          "school": "UAL-CSM",
+          "schoolEn": "Central Saint Martins, UAL",
+          "program": "BA Graphic Communication"
+        }
+      ],
+      "works": [
+        "assets/img/cases/xiao-csm-02.jpg",
+        "assets/img/cases/xiao-csm-03.png",
+        "assets/img/cases/xiao-csm-04.png",
+        "assets/img/cases/xiao-csm-05.png",
+        "assets/img/cases/xiao-csm-06.png"
+      ],
+      "career": null
+    },
+    {
+      "student": "Xu.",
+      "studentZh": "徐同学",
+      "school": "伦敦艺术大学 UAL",
+      "schoolEn": "University of the Arts London",
+      "college": "Camberwell College of Arts",
+      "country": "英国",
+      "region": "英国",
+      "major": "illustration",
+      "program": "BA Illustration",
+      "programCn": "插画",
+      "offerType": "本科",
+      "background": "新东方艺术高中",
+      "academic": [
+        "A-Level 艺术 AB",
+        "BTEC Distinction"
+      ],
+      "language": "—",
+      "tags": [
+        "A-Level + BTEC",
+        "UAL 夏校"
+      ],
+      "persona": "",
+      "creation": [
+        "以孩童的低角度视野与强烈透视手法，描绘记忆中独属于童年的观察与想象。",
+        "基于中医「人体有机整体」与「天人动态平衡」的理念，通过植物与人体器官结合的视觉隐喻，诠释传统健康观的系统性智慧。"
+      ],
+      "offers": [
+        {
+          "school": "UAL-Camberwell",
+          "schoolEn": "Camberwell College of Arts, UAL",
+          "program": "BA Illustration"
+        }
+      ],
+      "works": [
+        "assets/img/cases/xu-ual-02.jpg",
+        "assets/img/cases/xu-ual-03.jpg",
+        "assets/img/cases/xu-ual-04.jpg",
+        "assets/img/cases/xu-ual-05.jpg",
+        "assets/img/cases/xu-ual-06.jpg"
+      ],
+      "career": null
+    }
+  ],
+  "fine-art": [
+    {
+      "student": "Huang.",
+      "studentZh": "黄同学",
+      "school": "牛津大学",
+      "schoolEn": "University of Oxford",
+      "college": "",
+      "country": "英国",
+      "region": "英国",
+      "major": "fine-art",
+      "program": "Fine Art",
+      "programCn": "纯艺术",
+      "offerType": "本科",
+      "background": "斯芬克艺术高中",
+      "academic": [
+        "AP 5555",
+        "BTEC Merit",
+        "GPA 4.2"
+      ],
+      "language": "雅思 7.0",
+      "tags": [
+        "25F",
+        "牛津",
+        "五校录取"
+      ],
+      "persona": "对于中国本土文化很有感情的学生；从小受到父亲的影响对于传统美学感兴趣；喜欢思考哲学以及与社会科学相关问题。",
+      "creation": [],
+      "offers": [
+        {
+          "school": "牛津大学",
+          "schoolEn": "University of Oxford",
+          "program": "Fine Art"
+        },
+        {
+          "school": "爱丁堡大学",
+          "schoolEn": "University of Edinburgh",
+          "program": "BA Fine Art"
+        },
+        {
+          "school": "加州大学戴维斯分校",
+          "schoolEn": "University of California, Davis",
+          "program": "Bachelor of Arts"
+        },
+        {
+          "school": "伦敦大学金史密斯学院",
+          "schoolEn": "Goldsmiths University of London",
+          "program": "BA Fine Art (Extension Degree)"
+        },
+        {
+          "school": "利兹大学",
+          "schoolEn": "The University of Leeds",
+          "program": "Fine Art BA"
+        }
+      ],
+      "works": [
+        "assets/img/cases/huang-oxford-01.png",
+        "assets/img/cases/huang-oxford-02.png"
+      ],
+      "career": null
+    },
+    {
+      "student": "O.",
+      "studentZh": "O 同学",
+      "school": "格林内尔学院",
+      "schoolEn": "Grinnell College",
+      "college": "",
+      "country": "美国",
+      "region": "美国",
+      "major": "fine-art",
+      "program": "Fine Art BFA",
+      "programCn": "纯艺术",
+      "offerType": "本科",
+      "background": "广州斐特思 · 国际高中",
+      "academic": [
+        "BTEC Level 3 D*D*D"
+      ],
+      "language": "雅思 7.5",
+      "tags": [
+        "26F",
+        "文理学院",
+        "多校录取"
+      ],
+      "persona": "艺术奖项：在加拿大非盈利公益组织中担任 Vice President；其它活动：国际滑雪双板一级教练、美国童军远东第八分队成员；夏校 Parsons School of Design A。",
+      "creation": [
+        "技术净化背后污染物的迁移与隐匿性。",
+        "通过公众参与的剪与缝，具身化地探讨在达成性别平等的路径中，系统性暴力与集体修复之间的关系。",
+        "通过战争遗物重构缺席的个体痕迹，探讨历史记忆如何成为一个由生者与逝者共同参与的、永未完成的对话。"
+      ],
+      "offers": [
+        {
+          "school": "格林内尔学院",
+          "schoolEn": "Grinnell College",
+          "program": "文理学院"
+        },
+        {
+          "school": "罗德岛设计学院",
+          "schoolEn": "Rhode Island School of Design",
+          "program": "Fine Art BFA"
+        },
+        {
+          "school": "英属哥伦比亚大学",
+          "schoolEn": "The University of British Columbia",
+          "program": "Bachelor of Fine Arts in Visual Art"
+        },
+        {
+          "school": "牛津大学",
+          "schoolEn": "University of Oxford",
+          "program": "Fine Art BFA（面试邀请）"
+        }
+      ],
+      "works": [
+        "assets/img/cases/o-grinnell-01.jpg",
+        "assets/img/cases/o-grinnell-02.png",
+        "assets/img/cases/o-grinnell-03.png",
+        "assets/img/cases/o-grinnell-04.png",
+        "assets/img/cases/o-grinnell-05.png",
+        "assets/img/cases/o-grinnell-06.png"
+      ],
+      "career": null
+    },
+    {
+      "student": "Du.",
+      "studentZh": "杜同学",
+      "school": "伦敦大学学院 UCL",
+      "schoolEn": "University College London",
+      "college": "",
+      "country": "英国",
+      "region": "英国",
+      "major": "fine-art",
+      "program": "Fine Art BA",
+      "programCn": "纯艺术",
+      "offerType": "本科",
+      "background": "加拿大高中 · 海外高中",
+      "academic": [
+        "GPA 87"
+      ],
+      "language": "雅思 7.5",
+      "tags": [
+        "26F",
+        "海外高中",
+        "多校录取"
+      ],
+      "persona": "反思型观察者：善于对社会现象、技术影响、人性矛盾进行深入观察和哲学思考，并通过艺术形式提出问题和观点，而非给出简单答案。关注社会与人文的创作者：作品流露出对集体历史、社会重建、个体在当代社会中的处境等议题的深切关怀，试图揭示表象之下的人文价值。",
+      "creation": [
+        "秩序与无序、完美与缺陷的辩证关系。",
+        "建筑的社会意义与人文关怀。",
+        "技术、媒介与真实体验的反思。"
+      ],
+      "offers": [
+        {
+          "school": "UCL",
+          "schoolEn": "University College London",
+          "program": "Fine Art BA"
+        },
+        {
+          "school": "UAL-Camberwell",
+          "schoolEn": "Camberwell College of Arts, UAL",
+          "program": "BA (Hons) Fine Art: Sculpture"
+        },
+        {
+          "school": "UAL-Camberwell",
+          "schoolEn": "Camberwell College of Arts, UAL",
+          "program": "BA (Hons) Fine Art: Photography"
+        },
+        {
+          "school": "加州艺术学院",
+          "schoolEn": "CalArts",
+          "program": "BFA in Art"
+        },
+        {
+          "school": "艺术中心设计学院",
+          "schoolEn": "ArtCenter College of Design",
+          "program": "First Year Immersion"
+        },
+        {
+          "school": "伦敦大学金史密斯学院",
+          "schoolEn": "Goldsmiths, University of London",
+          "program": "BA Fine Art"
+        }
+      ],
+      "works": [
+        "assets/img/cases/du-ucl-01.jpg",
+        "assets/img/cases/du-ucl-02.png",
+        "assets/img/cases/du-ucl-03.png",
+        "assets/img/cases/du-ucl-04.png",
+        "assets/img/cases/du-ucl-05.png"
+      ],
+      "career": null
+    },
+    {
+      "student": "Li.",
+      "studentZh": "李同学",
+      "school": "伦敦大学学院 UCL",
+      "schoolEn": "University College London",
+      "college": "",
+      "country": "英国",
+      "region": "英国",
+      "major": "fine-art",
+      "program": "Fine Art BA",
+      "programCn": "纯艺术",
+      "offerType": "本科",
+      "background": "君诚国际 · 国际高中",
+      "academic": [
+        "AP + BTEC L4",
+        "GPA 3.87"
+      ],
+      "language": "雅思 6.0",
+      "tags": [
+        "26F",
+        "多校录取",
+        "RISD 夏校"
+      ],
+      "persona": "深具人文关怀的反思者：她的创作根植于真实的个人情感与社会观察，表现出对生命存在、记忆消逝、情感联结以及人类处境的深切关怀与哲学反思。研究始终围绕现代人的精神处境、记忆情感的价值以及人与技术、自然、内在自我的关系展开，并通过高度个人化、材料驱动且充满实验性的艺术语言，构建了一个连贯、有力且不断演进的艺术世界。",
+      "creation": [
+        "对人类中心主义与科技局限性的批判。",
+        "情感与存在状态的深切关怀。",
+        "在理性秩序与感性生命之间寻找平衡与突破。"
+      ],
+      "offers": [
+        {
+          "school": "UCL",
+          "schoolEn": "University College London",
+          "program": "Fine Art BA"
+        },
+        {
+          "school": "UAL-Chelsea",
+          "schoolEn": "Chelsea College of Arts, UAL",
+          "program": "BA (Hons) Fine Art"
+        },
+        {
+          "school": "UAL-CSM",
+          "schoolEn": "Central Saint Martins, UAL",
+          "program": "BA (Hons) Fine Art"
+        },
+        {
+          "school": "加州艺术学院",
+          "schoolEn": "CalArts",
+          "program": "BFA in Art"
+        },
+        {
+          "school": "艺术中心设计学院",
+          "schoolEn": "ArtCenter College of Design",
+          "program": "BS in Spatial Experience Design"
+        },
+        {
+          "school": "伦敦大学金史密斯学院",
+          "schoolEn": "Goldsmiths, University of London",
+          "program": "BA Fine Art"
+        },
+        {
+          "school": "帕森斯设计学院",
+          "schoolEn": "Parsons School of Design",
+          "program": "BFA in Fine Art"
+        },
+        {
+          "school": "普瑞特艺术学院",
+          "schoolEn": "Pratt Institute",
+          "program": "BFA in Fine Art"
+        },
+        {
+          "school": "芝加哥艺术学院",
+          "schoolEn": "School of the Art Institute of Chicago",
+          "program": "Painting & Drawing"
+        }
+      ],
+      "works": [
+        "assets/img/cases/li-ucl-01.jpg",
+        "assets/img/cases/li-ucl-02.png",
+        "assets/img/cases/li-ucl-03.png",
+        "assets/img/cases/li-ucl-04.png",
+        "assets/img/cases/li-ucl-05.png"
+      ],
+      "career": null
+    },
+    {
+      "student": "Yang.",
+      "studentZh": "杨同学",
+      "school": "伦敦艺术大学 UAL",
+      "schoolEn": "University of the Arts London",
+      "college": "Central Saint Martins",
+      "country": "英国",
+      "region": "英国",
+      "major": "fine-art",
+      "program": "BA Performance: Design and Practice",
+      "programCn": "表演设计与实践",
+      "offerType": "本科",
+      "background": "SFK 全日制",
+      "academic": [
+        "BTEC + A-Level",
+        "GPA 3.27/4.0",
+        "BTEC 预估 Distinction",
+        "A-Level 预估 中文 A* / 艺术 A / 艺术 B"
+      ],
+      "language": "—",
+      "tags": [
+        "26F",
+        "全日制",
+        "多校录取"
+      ],
+      "persona": "创作实践呈现出清晰的理论驱动、方法论自觉与主题关联性，其研究围绕当代个体在物理、数字与精神空间中的存在、感知与身份建构这一核心命题展开。研究构成了一个紧密的矩阵：从外部的物理与社会空间（城市、网络），到内部的哲学与精神空间（存在、意义），再到作为交界点的身体（表演身份、承载商品），全方位地探讨了当代个体如何感知、表演并建构自我。",
+      "creation": [
+        "研究构成紧密矩阵：从外部的物理与社会空间，到内部的哲学与精神空间，再到作为交界点的身体。"
+      ],
+      "offers": [
+        {
+          "school": "UAL-CSM",
+          "schoolEn": "Central Saint Martins, UAL",
+          "program": "BA Performance: Design and Practice"
+        },
+        {
+          "school": "金斯顿大学",
+          "schoolEn": "Kingston University London",
+          "program": "Photography BA (Hons)"
+        },
+        {
+          "school": "UCL",
+          "schoolEn": "University College London",
+          "program": "BA in Media"
+        },
+        {
+          "school": "UAL-Camberwell",
+          "schoolEn": "Camberwell College of Arts, UAL",
+          "program": "BA (Hons) Fine Art: Photography"
+        }
+      ],
+      "works": [
+        "assets/img/cases/yang-csm-01.jpg",
+        "assets/img/cases/yang-csm-02.png",
+        "assets/img/cases/yang-csm-03.png",
+        "assets/img/cases/yang-csm-04.png",
+        "assets/img/cases/yang-csm-05.png"
+      ],
+      "career": null
+    },
+    {
+      "student": "Zhang.",
+      "studentZh": "张同学",
+      "school": "伦敦艺术大学 UAL",
+      "schoolEn": "University of the Arts London",
+      "college": "Camberwell College of Arts",
+      "country": "英国",
+      "region": "英国",
+      "major": "fine-art",
+      "program": "BA (Hons) Fine Art: Sculpture",
+      "programCn": "纯艺术 · 雕塑",
+      "offerType": "本科",
+      "background": "SFK 全日制",
+      "academic": [
+        "A-Level + BTEC L4"
+      ],
+      "language": "—",
+      "tags": [
+        "26F",
+        "全日制",
+        "海外教授项目"
+      ],
+      "persona": "学生的艺术实践围绕自我身份探寻、空间与身体的交互体验、以及流行文化与权力结构的批判三大核心线索展开。坚定的身份重构者与自我叙事者；深度的同人文化参与者与理论实践者，将个人粉丝实践与宏大的权力结构分析相结合，揭示文化消费背后的身份政治与空间政治。",
+      "creation": [
+        "自我身份的重构与「苔藓」哲学的践行。",
+        "空间、身体与体验的「行动场域」。",
+        "对流行文化（同人文化）的权力解构与再生产。",
+        "女性叙事、神话重构与主体性赋权。"
+      ],
+      "offers": [
+        {
+          "school": "UAL-Camberwell",
+          "schoolEn": "Camberwell College of Arts, UAL",
+          "program": "BA (Hons) Fine Art: Sculpture"
+        },
+        {
+          "school": "UCL",
+          "schoolEn": "University College London",
+          "program": "Fine Art BFA"
+        },
+        {
+          "school": "ARU",
+          "schoolEn": "Anglia Ruskin University",
+          "program": "BA (Hons) Fine Art"
+        },
+        {
+          "school": "UCA",
+          "schoolEn": "University for the Creative Arts",
+          "program": "BA (Hons) Fine Art"
+        },
+        {
+          "school": "伦敦大学金史密斯学院",
+          "schoolEn": "Goldsmiths, University of London",
+          "program": "BA Fine Art Extension Degree"
+        }
+      ],
+      "works": [
+        "assets/img/cases/zhang-camberwell-01.jpg",
+        "assets/img/cases/zhang-camberwell-02.png",
+        "assets/img/cases/zhang-camberwell-03.png",
+        "assets/img/cases/zhang-camberwell-04.png",
+        "assets/img/cases/zhang-camberwell-05.png",
+        "assets/img/cases/zhang-camberwell-06.png",
+        "assets/img/cases/zhang-camberwell-07.png"
+      ],
+      "career": null
+    },
+    {
+      "student": "Huang.",
+      "studentZh": "黄同学",
+      "school": "伦敦艺术大学 UAL",
+      "schoolEn": "University of the Arts London",
+      "college": "Central Saint Martins",
+      "country": "英国",
+      "region": "英国",
+      "major": "fine-art",
+      "program": "BA (Hons) Ceramic",
+      "programCn": "陶瓷",
+      "offerType": "本科",
+      "background": "华爱融合国际高中",
+      "academic": [
+        "OSSD + BTEC"
+      ],
+      "language": "—",
+      "tags": [
+        "26F",
+        "材料叙事",
+        "UAL 夏校"
+      ],
+      "persona": "一位「材料叙事者」。擅长通过跨媒介实验，在身体触觉与社会符号之间搭建桥梁。比起单纯的造型，更关注材料背后的文化重量 —— 既有从艺术史与哲学中汲取养分的思辨严谨，又始终保持着对脆弱性、日常性的温柔注视，让陶瓷成为承载记忆与身份的「沉积层」。",
+      "creation": [
+        "研究始终围绕「材料的辩证关系」展开：用黏土固化织物的柔软褶皱，隐喻社会阶层对身体的规训。",
+        "重组破碎瓷片，在侘寂美学中探讨断裂与再生。",
+        "以硅藻土转译虚拟游戏空间，模糊数字与现实的边界。",
+        "最后解构日常包装，打捞那些被忽视的生活痕迹与时间记忆。"
+      ],
+      "offers": [
+        {
+          "school": "UAL-CSM",
+          "schoolEn": "Central Saint Martins, UAL",
+          "program": "BA (Hons) Ceramic"
+        }
+      ],
+      "works": [
+        "assets/img/cases/huang-csm-ceramic-01.jpg",
+        "assets/img/cases/huang-csm-ceramic-02.jpg",
+        "assets/img/cases/huang-csm-ceramic-03.jpg",
+        "assets/img/cases/huang-csm-ceramic-04.jpg",
+        "assets/img/cases/huang-csm-ceramic-05.jpg"
+      ],
+      "career": null
+    }
+  ],
+  "other": [
+    {
+      "student": "Zhou.",
+      "studentZh": "周同学",
+      "school": "威廉姆斯学院",
+      "schoolEn": "Williams College",
+      "college": "",
+      "country": "美国",
+      "region": "美国",
+      "major": "cross",
+      "program": "BA Physics",
+      "programCn": "物理",
+      "offerType": "本科",
+      "background": "北京国际学校",
+      "academic": [
+        "IB 42",
+        "SAT 1500"
+      ],
+      "language": "托福 115",
+      "tags": [
+        "学霸",
+        "跨学科",
+        "文理学院"
+      ],
+      "persona": "活动实践背景：Pioneer 量子物理研究和计算物理研究；自主创立项目 Physbirds，通过双语漫画和文章传播物理知识。奖项与荣誉：漫画作品 Physbirds 由中国机械工业出版社出版；Polyphony Literature 杂志 20 周年纪念刊「艺术家聚焦」专题作者；中篇小说发表于《青春》；短篇小说发表于《小小说》；两幅作品发表于 Teen Ink 杂志。",
+      "creation": [
+        "学生作品通过系列插画，描述在物理法则笼罩下，关于自由意志与虚无存在的哲思。",
+        "学生通过这套隧道装置，模拟现代社会的感官超载，隐喻技术进步对人类体验的复杂影响。"
+      ],
+      "offers": [
+        {
+          "school": "威廉姆斯学院",
+          "schoolEn": "Williams College",
+          "program": "BA Physics"
+        }
+      ],
+      "works": [
+        "assets/img/cases/zhou-williams-02.png",
+        "assets/img/cases/zhou-williams-03.png",
+        "assets/img/cases/zhou-williams-04.jpg",
+        "assets/img/cases/zhou-williams-05.jpg",
+        "assets/img/cases/zhou-williams-06.jpg"
+      ],
+      "career": null
+    },
+    {
+      "student": "Pan.",
+      "studentZh": "潘同学",
+      "school": "达特茅斯学院",
+      "schoolEn": "Dartmouth College",
+      "college": "",
+      "country": "美国",
+      "region": "美国",
+      "major": "cross",
+      "program": "BA Studio Art",
+      "programCn": "艺术",
+      "offerType": "本科",
+      "background": "包玉刚中学",
+      "academic": [
+        "IB 41",
+        "ACT 35"
+      ],
+      "language": "托福 113",
+      "tags": [
+        "学霸",
+        "藤校",
+        "跨学科"
+      ],
+      "persona": "录取成功因素：利用绘画充分体现学生对自我和周遭事物的观察；扎实的基本功；个人视觉语言的表现；留学指导部和作品导师共同规划；精准的院校和作品匹配；最终获得藤校达特茅斯录取。",
+      "creation": [
+        "装置和绘画以穿梭的肢体，模糊童年与当下、现实与虚幻的边界，揭示存在之外无尽的可能性。",
+        "创意绘画，强烈的情绪和感官表达。"
+      ],
+      "offers": [
+        {
+          "school": "达特茅斯学院",
+          "schoolEn": "Dartmouth College",
+          "program": "BA Studio Art"
+        }
+      ],
+      "works": [
+        "assets/img/cases/pan-dartmouth-02.png",
+        "assets/img/cases/pan-dartmouth-03.png",
+        "assets/img/cases/pan-dartmouth-04.png",
+        "assets/img/cases/pan-dartmouth-05.png",
+        "assets/img/cases/pan-dartmouth-06.jpg"
+      ],
+      "career": null
+    },
+    {
+      "student": "Zhu.",
+      "studentZh": "朱同学",
+      "school": "布朗大学",
+      "schoolEn": "Brown University",
+      "college": "",
+      "country": "美国",
+      "region": "美国",
+      "major": "cross",
+      "program": "BFA Fine Art",
+      "programCn": "纯艺术",
+      "offerType": "本科",
+      "background": "北京德威国际学校",
+      "academic": [
+        "GPA 40/42",
+        "SAT 1510"
+      ],
+      "language": "—",
+      "tags": [
+        "学霸",
+        "藤校",
+        "跨专业"
+      ],
+      "persona": "学生创作展现出敏锐的观察力、扎实的技艺与鲜明的个人语言。作品深入探索记忆、身份、情感与生态等议题，并能将个人体验转化为具有普遍共鸣的视觉叙事，体现了从观念到形式的成熟掌控力。",
+      "creation": [
+        "人之间的联结如静夜观星，相伴愈久，联结愈明，如月宫嫦娥：孤独宇宙中，相伴的微光尤为珍贵。",
+        "「家」究竟在何处？作品探讨宇宙的无限性和探索归属感，以单色极简的线条风格致敬了我对天体物理学的热爱。"
+      ],
+      "offers": [
+        {
+          "school": "布朗大学",
+          "schoolEn": "Brown University",
+          "program": "BFA Fine Art"
+        }
+      ],
+      "works": [
+        "assets/img/cases/zhu-brown-02.png",
+        "assets/img/cases/zhu-brown-03.png",
+        "assets/img/cases/zhu-brown-04.png",
+        "assets/img/cases/zhu-brown-05.png",
+        "assets/img/cases/zhu-brown-06.png",
+        "assets/img/cases/zhu-brown-07.jpg"
+      ],
+      "career": null
+    },
+    {
+      "student": "Xu.",
+      "studentZh": "徐同学",
+      "school": "罗德岛设计学院 RISD",
+      "schoolEn": "Rhode Island School of Design",
+      "college": "",
+      "country": "美国",
+      "region": "美国",
+      "major": "illustration",
+      "program": "BFA Painting",
+      "programCn": "绘画",
+      "offerType": "本科",
+      "background": "德闳国际学校",
+      "academic": [
+        "IB 37/42"
+      ],
+      "language": "雅思 7.5",
+      "tags": [
+        "艺术名校直申",
+        "国际奖项",
+        "夏校"
+      ],
+      "persona": "专业相关：个人展、作品多次参展、创立学校校刊社；夏校：RISD、UAL；公益与社会责任感：留学生主题书籍插画项目；领导力：独立运营摄影工作室。奖项：芬兰 AG 设计奖暨中芬国际文化艺术交流双年展铜奖（国际）、纽约 IYAC TOP 国际插画赛金奖（国际）、365 Art + Japanese Magazine 两次登刊（国际）。",
+      "creation": [
+        "一件承载 44 个人物的装置绘画，旨在剥离过度解读，引导观众直面并感受艺术中最原始的快乐。",
+        "人与物的互动。"
+      ],
+      "offers": [
+        {
+          "school": "罗德岛设计学院",
+          "schoolEn": "Rhode Island School of Design",
+          "program": "BFA Painting"
+        }
+      ],
+      "works": [
+        "assets/img/cases/xu-risd-02.png",
+        "assets/img/cases/xu-risd-03.png",
+        "assets/img/cases/xu-risd-04.png",
+        "assets/img/cases/xu-risd-05.jpg"
+      ],
+      "career": null
+    },
+    {
+      "student": "Li.",
+      "studentZh": "李同学",
+      "school": "谢尔丹学院",
+      "schoolEn": "Sheridan College",
+      "college": "",
+      "country": "加拿大",
+      "region": "加拿大",
+      "major": "illustration",
+      "program": "BA Illustration",
+      "programCn": "插画",
+      "offerType": "本科",
+      "background": "国美附中",
+      "academic": [],
+      "language": "雅思 6.5 / 多邻国 115",
+      "tags": [
+        "北美艺术院校",
+        "专业附中"
+      ],
+      "persona": "",
+      "creation": [
+        "受童年伙伴逝去启发，本作品借由「蝉」的意象构建了一场虚拟的告别仪式，旨在填补被遗忘的记忆空白，以此长久地怀念他。",
+        "这件作品以窗户为主题，记录了作者搬入社区四年来的回忆，意在传达高楼邻里间如家人般的联结感与幸福感。"
+      ],
+      "offers": [
+        {
+          "school": "谢尔丹学院",
+          "schoolEn": "Sheridan College",
+          "program": "BA Illustration"
+        }
+      ],
+      "works": [
+        "assets/img/cases/li-sheridan-02.png",
+        "assets/img/cases/li-sheridan-03.png",
+        "assets/img/cases/li-sheridan-04.png",
+        "assets/img/cases/li-sheridan-05.jpg"
+      ],
+      "career": null
+    },
+    {
+      "student": "Sang.",
+      "studentZh": "桑同学",
+      "school": "墨尔本大学",
+      "schoolEn": "The University of Melbourne",
+      "college": "",
+      "country": "澳洲",
+      "region": "澳洲",
+      "major": "illustration",
+      "program": "BA Design",
+      "programCn": "设计",
+      "offerType": "本科",
+      "background": "普高",
+      "academic": [],
+      "language": "雅思 6.5",
+      "tags": [
+        "澳八大",
+        "普高背景"
+      ],
+      "persona": "",
+      "creation": [
+        "该项目通过手工靠垫和绘画，将作者对猫的分离焦虑具象化，把私密情感转化为共享体验。",
+        "该项目用互动图画书和案例报告轻松揭示囤积的普遍性，倡导坦然接受无害的囤积习惯。"
+      ],
+      "offers": [
+        {
+          "school": "墨尔本大学",
+          "schoolEn": "The University of Melbourne",
+          "program": "BA Design"
+        }
+      ],
+      "works": [
+        "assets/img/cases/sang-melbourne-02.png",
+        "assets/img/cases/sang-melbourne-03.png",
+        "assets/img/cases/sang-melbourne-04.jpg"
+      ],
+      "career": null
+    },
+    {
+      "student": "Sang.",
+      "studentZh": "桑同学",
+      "school": "墨尔本大学",
+      "schoolEn": "The University of Melbourne",
+      "college": "",
+      "country": "澳洲",
+      "region": "澳洲",
+      "major": "illustration",
+      "program": "BA Design",
+      "programCn": "设计",
+      "offerType": "本科",
+      "background": "普高",
+      "academic": [],
+      "language": "雅思 6.5",
+      "tags": [
+        "澳八大",
+        "普高背景"
+      ],
+      "persona": "",
+      "creation": [
+        "该项目探讨年轻人用童真消费作为「精神盔甲」抵御现实压力的 Kidulting 现象。",
+        "该项目为残障人士设计鸢尾花主题的珠宝与 APP，将科技辅助与人文美学融为一体。"
+      ],
+      "offers": [
+        {
+          "school": "墨尔本大学",
+          "schoolEn": "The University of Melbourne",
+          "program": "BA Design"
+        }
+      ],
+      "works": [
+        "assets/img/cases/sang-melbourne-2-02.png",
+        "assets/img/cases/sang-melbourne-2-03.png",
+        "assets/img/cases/sang-melbourne-2-04.png",
+        "assets/img/cases/sang-melbourne-2-05.png",
+        "assets/img/cases/sang-melbourne-2-06.jpg"
+      ],
+      "career": null
+    }
+  ]
+}

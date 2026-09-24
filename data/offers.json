@@ -1,0 +1,756 @@
+{
+  "hero": {
+    "eyebrow": "OFFERS 2026",
+    "title": "offer展示",
+    "desc": "【占位】2026 申请季录取战报描述待提供 —— 覆盖美国、英国、港新与全球院校的真实 offer 数据，后期由你填入。"
+  },
+  "rows": 4,
+  "filters": [
+    {
+      "id": "US",
+      "label": "🇺🇸 美国"
+    },
+    {
+      "id": "UK",
+      "label": "🇬🇧 英国"
+    },
+    {
+      "id": "HK_SG",
+      "label": "🇭🇰 港新"
+    },
+    {
+      "id": "OTHER",
+      "label": "🌏 其他"
+    }
+  ],
+  "groups": {
+    "US": [
+      {
+        "count": "—",
+        "zh": "占位院校 01",
+        "en": "PLACEHOLDER 01"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 02",
+        "en": "PLACEHOLDER 02"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 03",
+        "en": "PLACEHOLDER 03"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 04",
+        "en": "PLACEHOLDER 04"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 05",
+        "en": "PLACEHOLDER 05"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 06",
+        "en": "PLACEHOLDER 06"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 07",
+        "en": "PLACEHOLDER 07"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 08",
+        "en": "PLACEHOLDER 08"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 09",
+        "en": "PLACEHOLDER 09"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 10",
+        "en": "PLACEHOLDER 10"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 11",
+        "en": "PLACEHOLDER 11"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 12",
+        "en": "PLACEHOLDER 12"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 13",
+        "en": "PLACEHOLDER 13"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 14",
+        "en": "PLACEHOLDER 14"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 15",
+        "en": "PLACEHOLDER 15"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 16",
+        "en": "PLACEHOLDER 16"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 17",
+        "en": "PLACEHOLDER 17"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 18",
+        "en": "PLACEHOLDER 18"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 19",
+        "en": "PLACEHOLDER 19"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 20",
+        "en": "PLACEHOLDER 20"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 21",
+        "en": "PLACEHOLDER 21"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 22",
+        "en": "PLACEHOLDER 22"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 23",
+        "en": "PLACEHOLDER 23"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 24",
+        "en": "PLACEHOLDER 24"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 25",
+        "en": "PLACEHOLDER 25"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 26",
+        "en": "PLACEHOLDER 26"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 27",
+        "en": "PLACEHOLDER 27"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 28",
+        "en": "PLACEHOLDER 28"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 29",
+        "en": "PLACEHOLDER 29"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 30",
+        "en": "PLACEHOLDER 30"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 31",
+        "en": "PLACEHOLDER 31"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 32",
+        "en": "PLACEHOLDER 32"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 33",
+        "en": "PLACEHOLDER 33"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 34",
+        "en": "PLACEHOLDER 34"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 35",
+        "en": "PLACEHOLDER 35"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 36",
+        "en": "PLACEHOLDER 36"
+      }
+    ],
+    "UK": [
+      {
+        "count": "—",
+        "zh": "占位院校 01",
+        "en": "PLACEHOLDER 01"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 02",
+        "en": "PLACEHOLDER 02"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 03",
+        "en": "PLACEHOLDER 03"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 04",
+        "en": "PLACEHOLDER 04"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 05",
+        "en": "PLACEHOLDER 05"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 06",
+        "en": "PLACEHOLDER 06"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 07",
+        "en": "PLACEHOLDER 07"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 08",
+        "en": "PLACEHOLDER 08"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 09",
+        "en": "PLACEHOLDER 09"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 10",
+        "en": "PLACEHOLDER 10"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 11",
+        "en": "PLACEHOLDER 11"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 12",
+        "en": "PLACEHOLDER 12"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 13",
+        "en": "PLACEHOLDER 13"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 14",
+        "en": "PLACEHOLDER 14"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 15",
+        "en": "PLACEHOLDER 15"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 16",
+        "en": "PLACEHOLDER 16"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 17",
+        "en": "PLACEHOLDER 17"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 18",
+        "en": "PLACEHOLDER 18"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 19",
+        "en": "PLACEHOLDER 19"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 20",
+        "en": "PLACEHOLDER 20"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 21",
+        "en": "PLACEHOLDER 21"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 22",
+        "en": "PLACEHOLDER 22"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 23",
+        "en": "PLACEHOLDER 23"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 24",
+        "en": "PLACEHOLDER 24"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 25",
+        "en": "PLACEHOLDER 25"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 26",
+        "en": "PLACEHOLDER 26"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 27",
+        "en": "PLACEHOLDER 27"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 28",
+        "en": "PLACEHOLDER 28"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 29",
+        "en": "PLACEHOLDER 29"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 30",
+        "en": "PLACEHOLDER 30"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 31",
+        "en": "PLACEHOLDER 31"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 32",
+        "en": "PLACEHOLDER 32"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 33",
+        "en": "PLACEHOLDER 33"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 34",
+        "en": "PLACEHOLDER 34"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 35",
+        "en": "PLACEHOLDER 35"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 36",
+        "en": "PLACEHOLDER 36"
+      }
+    ],
+    "HK_SG": [
+      {
+        "count": "—",
+        "zh": "占位院校 01",
+        "en": "PLACEHOLDER 01"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 02",
+        "en": "PLACEHOLDER 02"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 03",
+        "en": "PLACEHOLDER 03"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 04",
+        "en": "PLACEHOLDER 04"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 05",
+        "en": "PLACEHOLDER 05"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 06",
+        "en": "PLACEHOLDER 06"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 07",
+        "en": "PLACEHOLDER 07"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 08",
+        "en": "PLACEHOLDER 08"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 09",
+        "en": "PLACEHOLDER 09"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 10",
+        "en": "PLACEHOLDER 10"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 11",
+        "en": "PLACEHOLDER 11"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 12",
+        "en": "PLACEHOLDER 12"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 13",
+        "en": "PLACEHOLDER 13"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 14",
+        "en": "PLACEHOLDER 14"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 15",
+        "en": "PLACEHOLDER 15"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 16",
+        "en": "PLACEHOLDER 16"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 17",
+        "en": "PLACEHOLDER 17"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 18",
+        "en": "PLACEHOLDER 18"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 19",
+        "en": "PLACEHOLDER 19"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 20",
+        "en": "PLACEHOLDER 20"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 21",
+        "en": "PLACEHOLDER 21"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 22",
+        "en": "PLACEHOLDER 22"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 23",
+        "en": "PLACEHOLDER 23"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 24",
+        "en": "PLACEHOLDER 24"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 25",
+        "en": "PLACEHOLDER 25"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 26",
+        "en": "PLACEHOLDER 26"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 27",
+        "en": "PLACEHOLDER 27"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 28",
+        "en": "PLACEHOLDER 28"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 29",
+        "en": "PLACEHOLDER 29"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 30",
+        "en": "PLACEHOLDER 30"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 31",
+        "en": "PLACEHOLDER 31"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 32",
+        "en": "PLACEHOLDER 32"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 33",
+        "en": "PLACEHOLDER 33"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 34",
+        "en": "PLACEHOLDER 34"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 35",
+        "en": "PLACEHOLDER 35"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 36",
+        "en": "PLACEHOLDER 36"
+      }
+    ],
+    "OTHER": [
+      {
+        "count": "—",
+        "zh": "占位院校 01",
+        "en": "PLACEHOLDER 01"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 02",
+        "en": "PLACEHOLDER 02"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 03",
+        "en": "PLACEHOLDER 03"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 04",
+        "en": "PLACEHOLDER 04"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 05",
+        "en": "PLACEHOLDER 05"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 06",
+        "en": "PLACEHOLDER 06"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 07",
+        "en": "PLACEHOLDER 07"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 08",
+        "en": "PLACEHOLDER 08"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 09",
+        "en": "PLACEHOLDER 09"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 10",
+        "en": "PLACEHOLDER 10"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 11",
+        "en": "PLACEHOLDER 11"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 12",
+        "en": "PLACEHOLDER 12"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 13",
+        "en": "PLACEHOLDER 13"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 14",
+        "en": "PLACEHOLDER 14"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 15",
+        "en": "PLACEHOLDER 15"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 16",
+        "en": "PLACEHOLDER 16"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 17",
+        "en": "PLACEHOLDER 17"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 18",
+        "en": "PLACEHOLDER 18"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 19",
+        "en": "PLACEHOLDER 19"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 20",
+        "en": "PLACEHOLDER 20"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 21",
+        "en": "PLACEHOLDER 21"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 22",
+        "en": "PLACEHOLDER 22"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 23",
+        "en": "PLACEHOLDER 23"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 24",
+        "en": "PLACEHOLDER 24"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 25",
+        "en": "PLACEHOLDER 25"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 26",
+        "en": "PLACEHOLDER 26"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 27",
+        "en": "PLACEHOLDER 27"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 28",
+        "en": "PLACEHOLDER 28"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 29",
+        "en": "PLACEHOLDER 29"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 30",
+        "en": "PLACEHOLDER 30"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 31",
+        "en": "PLACEHOLDER 31"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 32",
+        "en": "PLACEHOLDER 32"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 33",
+        "en": "PLACEHOLDER 33"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 34",
+        "en": "PLACEHOLDER 34"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 35",
+        "en": "PLACEHOLDER 35"
+      },
+      {
+        "count": "—",
+        "zh": "占位院校 36",
+        "en": "PLACEHOLDER 36"
+      }
+    ]
+  }
+}

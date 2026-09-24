@@ -1,0 +1,86 @@
+{
+  "eyebrow": "INDUSTRY MAP",
+  "title": "八大就业方向一览",
+  "subtitle": "从视觉商业、潮流 IP、艺术机构与策展，到教育、公共文化、职业艺术家与艺术疗愈，将审美判断、人文研究与项目实践转化为可持续职业竞争力。",
+  "directions": [
+    {
+      "num": "01",
+      "poster": "assets/img/directions/direction-01-brand-design.png",
+      "title": "商业视觉与品牌设计",
+      "titleEn": "COMMERCIAL VISUAL & BRAND",
+      "desc": "以视觉语言连接品牌策略、营销传播与商业场景。",
+      "roles": ["品牌视觉设计师", "商业插画师", "艺术指导 AD", "AIGC 创意设计师", "包装设计师", "视觉内容策划"],
+      "salary": "15K-35K / 月",
+      "color": "#63E6D4"
+    },
+    {
+      "num": "02",
+      "poster": "assets/img/directions/direction-02-trend-ip.png",
+      "title": "潮流 IP 与文创衍生",
+      "titleEn": "TREND IP & CULTURAL CREATIVE",
+      "desc": "从角色原创、世界观建立走向产品化与品牌联名。",
+      "roles": ["IP 设计师", "潮流设计师", "衍生品设计师", "绘本作者", "IP 内容运营", "个人 IP 主理人"],
+      "salary": "12K-35K / 月",
+      "color": "#4ADBA0"
+    },
+    {
+      "num": "03",
+      "poster": "assets/img/directions/direction-03-gallery.png",
+      "title": "当代艺术生态与画廊运营",
+      "titleEn": "ART ECOSYSTEM & GALLERY",
+      "desc": "连接艺术家、展览、收藏、市场与公众传播。",
+      "roles": ["艺术家路径", "画廊运营专员", "艺术品销售顾问", "展览执行", "艺术机构运营", "Registrar"],
+      "salary": "10K-25K / 月",
+      "color": "#7FE0B8"
+    },
+    {
+      "num": "04",
+      "poster": "assets/img/directions/direction-04-curation.jpg",
+      "title": "策展实践与空间叙事",
+      "titleEn": "CURATORIAL & SPATIAL NARRATIVE",
+      "desc": "把研究议题转译为展览、空间和公众体验。",
+      "roles": ["策展助理", "展览项目执行", "展陈空间设计师", "博物馆展陈设计", "公共教育专员", "商业策展专员"],
+      "salary": "10K-30K / 月",
+      "color": "#E06C9F"
+    },
+    {
+      "num": "05",
+      "poster": "assets/img/directions/direction-05-education.jpg",
+      "title": "艺术教育与学术研究",
+      "titleEn": "ART EDUCATION & RESEARCH",
+      "desc": "将艺术知识转化为课程、研究与公共教育影响力。",
+      "roles": ["高校讲师", "艺术课程研发", "作品集导师", "美术馆公教专员", "艺术史研究助理", "教研主管"],
+      "salary": "10K-30K / 月",
+      "color": "#C678DD"
+    },
+    {
+      "num": "06",
+      "poster": "assets/img/directions/direction-06-public-culture.jpg",
+      "title": "文旅体制与公共文化服务",
+      "titleEn": "CULTURAL TOURISM & PUBLIC CULTURE",
+      "desc": "以文化研究、公共项目与城市传播服务社会。",
+      "roles": ["文旅规划专员", "公共文化服务专员", "美术馆公教专员", "城市文化研究助理", "非遗项目专员", "文化传播专员"],
+      "salary": "8K-25K / 月",
+      "color": "#E5C07B"
+    },
+    {
+      "num": "07",
+      "poster": "assets/img/directions/direction-07-independent.jpg",
+      "title": "独立创业与职业艺术家",
+      "titleEn": "INDEPENDENT & PROFESSIONAL ARTIST",
+      "desc": "以持续创作、展览、收藏和品牌合作建立职业资产。",
+      "roles": ["职业艺术家", "独立策展人", "画廊/影像艺术家", "艺术工作室主理人", "公共艺术创作者", "品牌合作艺术家"],
+      "salary": "初期多渠道 · 成熟期无上限",
+      "color": "#61AFEF"
+    },
+    {
+      "num": "08",
+      "title": "艺术疗愈与跨界应用",
+      "titleEn": "ART THERAPY & WELLBEING",
+      "desc": "让艺术进入心理、教育、健康与社会支持场景。",
+      "roles": ["艺术治疗师", "艺术健康项目专员", "特殊教育艺术教师", "博物馆健康专员", "社区艺术策划", "企业 EAP 策划"],
+      "salary": "10K-30K / 月",
+      "color": "#E06C75"
+    }
+  ]
+}

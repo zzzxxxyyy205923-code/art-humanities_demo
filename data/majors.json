@@ -1,0 +1,126 @@
+{
+  "illustration": {
+    "id": "illustration",
+    "num": "01",
+    "title": "插画",
+    "titleEn": "ILLUSTRATION",
+    "tagline": "用图像讲故事，让视觉成为语言",
+    "summary": "插画专业强调叙事、符号与视觉转译能力。学生需建立个人图像语言，同时具备出版、品牌、数字媒体等多元应用场景的适应能力。",
+    "plates": [
+      {
+        "num": "01",
+        "id": "academic-background",
+        "title": "英联邦学术背景",
+        "titleEn": "ACADEMIC BACKGROUND",
+        "points": [
+          "A-Level / BTEC / IB 等国际课程为英本申请主流学术路径。",
+          "作品集是核心录取依据，需体现调研、发展、成品与反思的完整过程。",
+          "伦敦艺术大学、金斯顿大学等院校注重概念创新、跨学科协作与视觉叙事。",
+          "学术背景规划需兼顾课程成绩、语言成绩与艺术项目实践的统一呈现。"
+        ],
+        "schools": ["UAL", "Kingston", "Edinburgh", "Brighton", "Cambridge School of Art"]
+      },
+      {
+        "num": "02",
+        "id": "admissions-system",
+        "title": "英联邦升学体系",
+        "titleEn": "ADMISSIONS SYSTEM",
+        "points": [
+          "英本插画路径通常分为 Foundation → BA 直升，或 A-Level/BTEC 直申本科。",
+          "UCAS 系统为核心申请通道，最多可申请 5 个志愿。",
+          "UAL 系统下院校众多：LCC、Camberwell、Kingston 各有侧重。",
+          "申请节奏通常为：9 月开通 UCAS → 次年 1 月底主轮截止 → 3-5 月面试与录取。"
+        ],
+        "notes": ["UAL", "UCAS", "BTEC", "Foundation"]
+      },
+      {
+        "num": "03",
+        "id": "uk-planning",
+        "title": "英联邦全链路规划",
+        "titleEn": "UK FULL-CHAIN PLANNING",
+        "points": [
+          "高一至高二：夯实绘画基础，建立 sketchbook 习惯，初步探索叙事与媒介。",
+          "高二暑期：完成 1-2 个主题性项目，参加夏校或短期大师课以获取院校反馈。",
+          "高三上学期：整理作品集、准备文书、参加 BTEC / Foundation 申请。",
+          "录取后：确认 offer、办理签证、衔接预科或本科课程，提前适应英式 crit 与项目制学习。"
+        ],
+        "timeline": ["G10 探索", "G11 项目", "G12 申请", "录取衔接"]
+      },
+      {
+        "num": "04",
+        "id": "us-planning",
+        "title": "美本全链路规划",
+        "titleEn": "US UNDERGRADUATE PLANNING",
+        "points": [
+          "美本插画路径包括艺术院校（RISD、SVA、MICA）与综合大学艺术系两类。",
+          "Common App + 作品集平台（Slideroom）双线并行，需提前注册并熟悉格式要求。",
+          "综合大学爬藤需兼顾标化、课外活动与作品集主题深度。",
+          "特长爬藤 vs 专业爬藤：前者以作品集亮点补充综合背景，后者以学术方向精准匹配导师与研究资源。"
+        ],
+        "cases": ["RISD", "SVA", "MICA", "Brown+RISD", "Yale"]
+      }
+    ]
+  },
+  "fine-art": {
+    "id": "fine-art",
+    "num": "02",
+    "title": "纯艺术",
+    "titleEn": "FINE ART",
+    "tagline": "以观念驱动创作，建立个人艺术语言",
+    "summary": "纯艺术强调批判性思维、跨媒介实验与个人表达。学生需在绘画、雕塑、影像、装置与表演等多元实践中，形成可被美术馆、画廊与学术体系识别的作者语言。",
+    "plates": [
+      {
+        "num": "01",
+        "id": "academic-background",
+        "title": "英联邦学术背景",
+        "titleEn": "ACADEMIC BACKGROUND",
+        "points": [
+          "纯艺术方向重视概念研究与实践记录，学术背景需展示持续的艺术探索轨迹。",
+          "A-Level Art / BTEC Art & Design / IB Visual Arts 均可作为申请学术基础。",
+          "UAL、Goldsmiths、Glasgow 等院校强调批判理论与创作实践的结合。",
+          "除课程成绩外，参观展览、艺术家调研与写作练习也是背景的重要组成部分。"
+        ],
+        "schools": ["UAL (Chelsea/Camberwell)", "Goldsmiths", "Glasgow", "Edinburgh", "Slade"]
+      },
+      {
+        "num": "02",
+        "id": "admissions-system",
+        "title": "英联邦升学体系",
+        "titleEn": "ADMISSIONS SYSTEM",
+        "points": [
+          "本科直申通常要求 A-Level 或 BTEC 艺术相关科目，部分院校要求 Foundation 预科。",
+          "作品集需体现从概念到材料选择、过程记录到最终展示的完整研究链。",
+          "面试环节常以作品陈述与 crit 讨论为主，需准备艺术家研究与未来创作计划。",
+          "UCAS 与部分院校独立申请并行，需留意 deadline 与作品集上传平台差异。"
+        ],
+        "notes": ["UCAS", "Foundation", "Crit", "Portfolio"]
+      },
+      {
+        "num": "03",
+        "id": "uk-planning",
+        "title": "英联邦全链路规划",
+        "titleEn": "UK FULL-CHAIN PLANNING",
+        "points": [
+          "G9-G10：广泛尝试绘画、影像、装置等媒介，建立 sketchbook 与视觉日记。",
+          "G11：确定 2-3 个核心创作主题，参加艺术家工作坊或驻地项目。",
+          "G12 上：完成作品集主体，撰写 artist statement，预约院校面试。",
+          "录取后：利用预科或本科第一年拓展跨媒介语言，逐步定位毕业创作方向。"
+        ],
+        "timeline": ["G9-10 实验", "G11 聚焦", "G12 申请", "入学深化"]
+      },
+      {
+        "num": "04",
+        "id": "us-planning",
+        "title": "美本全链路规划",
+        "titleEn": "US UNDERGRADUATE PLANNING",
+        "points": [
+          "美本纯艺术路径分为专门艺术院校（SAIC、RISD、CalArts）与综合大学艺术系。",
+          "申请需 Common App + Slideroom 作品集，部分院校要求补充文书或视频介绍。",
+          "综合大学爬藤强调跨学科优势：艺术 + 人文/社科/科技的交叉项目更具竞争力。",
+          "早申（ED/EA）可显著提升录取概率，需在 11 月前完成作品集与文书定稿。"
+        ],
+        "cases": ["RISD", "SAIC", "Yale", "Columbia", "UCLA"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <!-- 笔头：彩虹色鬃毛 -->
+    <linearGradient id="bristle" x1="0" y1="-3.4" x2="0" y2="3.4" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#63E6D4"/>
+      <stop offset=".26" stop-color="#4ADE80"/>
+      <stop offset=".5" stop-color="#FDE047"/>
+      <stop offset=".76" stop-color="#FB7185"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <!-- 金属箍 -->
+    <linearGradient id="ferrule" x1="0" y1="-3.4" x2="0" y2="3.4" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F4F6F8"/>
+      <stop offset=".45" stop-color="#C3CAD2"/>
+      <stop offset="1" stop-color="#7D8792"/>
+    </linearGradient>
+    <!-- 笔杆：沿长度方向的五彩渐变 -->
+    <linearGradient id="handle" x1="15" y1="0" x2="31" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#63E6D4"/>
+      <stop offset=".22" stop-color="#4ADE80"/>
+      <stop offset=".42" stop-color="#FDE047"/>
+      <stop offset=".62" stop-color="#FB923C"/>
+      <stop offset=".8" stop-color="#FB7185"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 笔尖朝左上（热点 3,3），笔身向右下 45° -->
+  <g transform="translate(2.7,2.7) rotate(45)" stroke="#080B12" stroke-width=".85" stroke-linejoin="round">
+    <!-- 鬃毛笔头 -->
+    <path d="M0,0 C3,-1.1 6.2,-2.3 9.3,-3.05 L9.3,3.05 C6.2,2.3 3,1.1 0,0 Z" fill="url(#bristle)"/>
+    <!-- 鬃毛纹理 -->
+    <path d="M1.4,.75 L8.6,2.5" fill="none" stroke="rgba(8,11,18,.45)" stroke-width=".55"/>
+    <path d="M1.4,-.75 L8.6,-2.5" fill="none" stroke="rgba(255,255,255,.5)" stroke-width=".55"/>
+    <!-- 金属箍 -->
+    <path d="M9.1,-3.25 L15.7,-3.25 L15.7,3.25 L9.1,3.25 Z" fill="url(#ferrule)"/>
+    <path d="M11.4,-3.25 L11.4,3.25" fill="none" stroke="rgba(8,11,18,.4)" stroke-width=".5"/>
+    <path d="M13.6,-3.25 L13.6,3.25" fill="none" stroke="rgba(8,11,18,.4)" stroke-width=".5"/>
+    <!-- 笔杆 -->
+    <path d="M15.5,-3.45 C21,-3.55 26.6,-2.95 30.1,-2.15 L30.1,2.15 C26.6,2.95 21,3.55 15.5,3.45 Z" fill="url(#handle)"/>
+    <!-- 杆身高光 -->
+    <path d="M16.4,-2.1 C21.4,-2.3 26.4,-1.85 29.4,-1.25" fill="none" stroke="rgba(255,255,255,.55)" stroke-width=".6"/>
+    <!-- 笔尾 -->
+    <path d="M30.1,-2.15 C31.2,-1.6 31.2,1.6 30.1,2.15 Z" fill="#6D4B8F"/>
+  </g>
+</svg>
