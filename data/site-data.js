@@ -4571,7 +4571,14 @@ window.SFK_DATA = {
         "closing": {
           "cn": "用作品集与科研，同时回答「你是谁」。",
           "en": "Portfolio and research, answering who you are."
-        }
+        },
+        "regions": [
+          "us-top30",
+          "liberal-arts",
+          "uk-g5",
+          "risd",
+          "hk-sg"
+        ]
       },
       {
         "id": "longform2",
@@ -4644,7 +4651,14 @@ window.SFK_DATA = {
         "closing": {
           "cn": "不只拿到录取，也拿到下一段起点。",
           "en": "An offer, and the first step after it."
-        }
+        },
+        "regions": [
+          "us-top30",
+          "liberal-arts",
+          "uk-g5",
+          "risd",
+          "hk-sg"
+        ]
       },
       {
         "id": "longform3",
@@ -4721,7 +4735,14 @@ window.SFK_DATA = {
         "closing": {
           "cn": "两种节奏，同一条港研路径。",
           "en": "Two paces, one Hong Kong pathway."
-        }
+        },
+        "regions": [
+          "us-top30",
+          "liberal-arts",
+          "uk-g5",
+          "risd",
+          "hk-sg"
+        ]
       }
     ],
     "catalog": [
@@ -4796,7 +4817,14 @@ window.SFK_DATA = {
         "closing": {
           "cn": "课程内容与图片待补充。",
           "en": "Content & visuals to be provided."
-        }
+        },
+        "regions": [
+          "us-top30",
+          "liberal-arts",
+          "uk-g5",
+          "risd",
+          "hk-sg"
+        ]
       },
       {
         "id": "summerwinter",
@@ -4869,7 +4897,14 @@ window.SFK_DATA = {
         "closing": {
           "cn": "课程内容与图片待补充。",
           "en": "Content & visuals to be provided."
-        }
+        },
+        "regions": [
+          "us-top30",
+          "liberal-arts",
+          "uk-g5",
+          "risd",
+          "hk-sg"
+        ]
       },
       {
         "id": "bizpractice",
@@ -4942,7 +4977,14 @@ window.SFK_DATA = {
         "closing": {
           "cn": "课程内容与图片待补充。",
           "en": "Content & visuals to be provided."
-        }
+        },
+        "regions": [
+          "us-top30",
+          "liberal-arts",
+          "uk-g5",
+          "risd",
+          "hk-sg"
+        ]
       },
       {
         "id": "masterclass",
@@ -5015,7 +5057,14 @@ window.SFK_DATA = {
         "closing": {
           "cn": "课程内容与图片待补充。",
           "en": "Content & visuals to be provided."
-        }
+        },
+        "regions": [
+          "us-top30",
+          "liberal-arts",
+          "uk-g5",
+          "risd",
+          "hk-sg"
+        ]
       }
     ]
   },
@@ -5049,728 +5098,1088 @@ window.SFK_DATA = {
         {
           "count": "—",
           "zh": "占位院校 01",
-          "en": "PLACEHOLDER 01"
+          "en": "PLACEHOLDER 01",
+          "tags": [
+            "us-top30"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 02",
-          "en": "PLACEHOLDER 02"
+          "en": "PLACEHOLDER 02",
+          "tags": [
+            "us-top30"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 03",
-          "en": "PLACEHOLDER 03"
+          "en": "PLACEHOLDER 03",
+          "tags": [
+            "us-top30"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 04",
-          "en": "PLACEHOLDER 04"
+          "en": "PLACEHOLDER 04",
+          "tags": [
+            "us-top30"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 05",
-          "en": "PLACEHOLDER 05"
+          "en": "PLACEHOLDER 05",
+          "tags": [
+            "us-top30"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 06",
-          "en": "PLACEHOLDER 06"
+          "en": "PLACEHOLDER 06",
+          "tags": [
+            "us-top30"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 07",
-          "en": "PLACEHOLDER 07"
+          "en": "PLACEHOLDER 07",
+          "tags": [
+            "us-top30"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 08",
-          "en": "PLACEHOLDER 08"
+          "en": "PLACEHOLDER 08",
+          "tags": [
+            "us-top30"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 09",
-          "en": "PLACEHOLDER 09"
+          "en": "PLACEHOLDER 09",
+          "tags": [
+            "us-top30"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 10",
-          "en": "PLACEHOLDER 10"
+          "en": "PLACEHOLDER 10",
+          "tags": [
+            "us-top30"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 11",
-          "en": "PLACEHOLDER 11"
+          "en": "PLACEHOLDER 11",
+          "tags": [
+            "us-top30"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 12",
-          "en": "PLACEHOLDER 12"
+          "en": "PLACEHOLDER 12",
+          "tags": [
+            "us-top30"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 13",
-          "en": "PLACEHOLDER 13"
+          "en": "PLACEHOLDER 13",
+          "tags": [
+            "us-top30"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 14",
-          "en": "PLACEHOLDER 14"
+          "en": "PLACEHOLDER 14",
+          "tags": [
+            "us-top30"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 15",
-          "en": "PLACEHOLDER 15"
+          "en": "PLACEHOLDER 15",
+          "tags": [
+            "liberal-arts"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 16",
-          "en": "PLACEHOLDER 16"
+          "en": "PLACEHOLDER 16",
+          "tags": [
+            "liberal-arts"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 17",
-          "en": "PLACEHOLDER 17"
+          "en": "PLACEHOLDER 17",
+          "tags": [
+            "liberal-arts"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 18",
-          "en": "PLACEHOLDER 18"
+          "en": "PLACEHOLDER 18",
+          "tags": [
+            "liberal-arts"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 19",
-          "en": "PLACEHOLDER 19"
+          "en": "PLACEHOLDER 19",
+          "tags": [
+            "liberal-arts"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 20",
-          "en": "PLACEHOLDER 20"
+          "en": "PLACEHOLDER 20",
+          "tags": [
+            "liberal-arts"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 21",
-          "en": "PLACEHOLDER 21"
+          "en": "PLACEHOLDER 21",
+          "tags": [
+            "liberal-arts"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 22",
-          "en": "PLACEHOLDER 22"
+          "en": "PLACEHOLDER 22",
+          "tags": [
+            "liberal-arts"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 23",
-          "en": "PLACEHOLDER 23"
+          "en": "PLACEHOLDER 23",
+          "tags": [
+            "liberal-arts"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 24",
-          "en": "PLACEHOLDER 24"
+          "en": "PLACEHOLDER 24",
+          "tags": [
+            "liberal-arts"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 25",
-          "en": "PLACEHOLDER 25"
+          "en": "PLACEHOLDER 25",
+          "tags": [
+            "liberal-arts"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 26",
-          "en": "PLACEHOLDER 26"
+          "en": "PLACEHOLDER 26",
+          "tags": [
+            "liberal-arts"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 27",
-          "en": "PLACEHOLDER 27"
+          "en": "PLACEHOLDER 27",
+          "tags": [
+            "risd"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 28",
-          "en": "PLACEHOLDER 28"
+          "en": "PLACEHOLDER 28",
+          "tags": [
+            "risd"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 29",
-          "en": "PLACEHOLDER 29"
+          "en": "PLACEHOLDER 29",
+          "tags": [
+            "risd"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 30",
-          "en": "PLACEHOLDER 30"
+          "en": "PLACEHOLDER 30",
+          "tags": [
+            "risd"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 31",
-          "en": "PLACEHOLDER 31"
+          "en": "PLACEHOLDER 31",
+          "tags": [
+            "risd"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 32",
-          "en": "PLACEHOLDER 32"
+          "en": "PLACEHOLDER 32",
+          "tags": [
+            "risd"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 33",
-          "en": "PLACEHOLDER 33"
+          "en": "PLACEHOLDER 33",
+          "tags": [
+            "risd"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 34",
-          "en": "PLACEHOLDER 34"
+          "en": "PLACEHOLDER 34",
+          "tags": [
+            "risd"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 35",
-          "en": "PLACEHOLDER 35"
+          "en": "PLACEHOLDER 35",
+          "tags": [
+            "risd"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 36",
-          "en": "PLACEHOLDER 36"
+          "en": "PLACEHOLDER 36",
+          "tags": [
+            "risd"
+          ]
         }
       ],
       "UK": [
         {
           "count": "—",
           "zh": "占位院校 01",
-          "en": "PLACEHOLDER 01"
+          "en": "PLACEHOLDER 01",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 02",
-          "en": "PLACEHOLDER 02"
+          "en": "PLACEHOLDER 02",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 03",
-          "en": "PLACEHOLDER 03"
+          "en": "PLACEHOLDER 03",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 04",
-          "en": "PLACEHOLDER 04"
+          "en": "PLACEHOLDER 04",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 05",
-          "en": "PLACEHOLDER 05"
+          "en": "PLACEHOLDER 05",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 06",
-          "en": "PLACEHOLDER 06"
+          "en": "PLACEHOLDER 06",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 07",
-          "en": "PLACEHOLDER 07"
+          "en": "PLACEHOLDER 07",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 08",
-          "en": "PLACEHOLDER 08"
+          "en": "PLACEHOLDER 08",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 09",
-          "en": "PLACEHOLDER 09"
+          "en": "PLACEHOLDER 09",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 10",
-          "en": "PLACEHOLDER 10"
+          "en": "PLACEHOLDER 10",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 11",
-          "en": "PLACEHOLDER 11"
+          "en": "PLACEHOLDER 11",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 12",
-          "en": "PLACEHOLDER 12"
+          "en": "PLACEHOLDER 12",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 13",
-          "en": "PLACEHOLDER 13"
+          "en": "PLACEHOLDER 13",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 14",
-          "en": "PLACEHOLDER 14"
+          "en": "PLACEHOLDER 14",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 15",
-          "en": "PLACEHOLDER 15"
+          "en": "PLACEHOLDER 15",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 16",
-          "en": "PLACEHOLDER 16"
+          "en": "PLACEHOLDER 16",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 17",
-          "en": "PLACEHOLDER 17"
+          "en": "PLACEHOLDER 17",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 18",
-          "en": "PLACEHOLDER 18"
+          "en": "PLACEHOLDER 18",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 19",
-          "en": "PLACEHOLDER 19"
+          "en": "PLACEHOLDER 19",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 20",
-          "en": "PLACEHOLDER 20"
+          "en": "PLACEHOLDER 20",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 21",
-          "en": "PLACEHOLDER 21"
+          "en": "PLACEHOLDER 21",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 22",
-          "en": "PLACEHOLDER 22"
+          "en": "PLACEHOLDER 22",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 23",
-          "en": "PLACEHOLDER 23"
+          "en": "PLACEHOLDER 23",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 24",
-          "en": "PLACEHOLDER 24"
+          "en": "PLACEHOLDER 24",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 25",
-          "en": "PLACEHOLDER 25"
+          "en": "PLACEHOLDER 25",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 26",
-          "en": "PLACEHOLDER 26"
+          "en": "PLACEHOLDER 26",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 27",
-          "en": "PLACEHOLDER 27"
+          "en": "PLACEHOLDER 27",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 28",
-          "en": "PLACEHOLDER 28"
+          "en": "PLACEHOLDER 28",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 29",
-          "en": "PLACEHOLDER 29"
+          "en": "PLACEHOLDER 29",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 30",
-          "en": "PLACEHOLDER 30"
+          "en": "PLACEHOLDER 30",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 31",
-          "en": "PLACEHOLDER 31"
+          "en": "PLACEHOLDER 31",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 32",
-          "en": "PLACEHOLDER 32"
+          "en": "PLACEHOLDER 32",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 33",
-          "en": "PLACEHOLDER 33"
+          "en": "PLACEHOLDER 33",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 34",
-          "en": "PLACEHOLDER 34"
+          "en": "PLACEHOLDER 34",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 35",
-          "en": "PLACEHOLDER 35"
+          "en": "PLACEHOLDER 35",
+          "tags": [
+            "uk-g5"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 36",
-          "en": "PLACEHOLDER 36"
+          "en": "PLACEHOLDER 36",
+          "tags": [
+            "uk-g5"
+          ]
         }
       ],
       "HK_SG": [
         {
           "count": "—",
           "zh": "占位院校 01",
-          "en": "PLACEHOLDER 01"
+          "en": "PLACEHOLDER 01",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 02",
-          "en": "PLACEHOLDER 02"
+          "en": "PLACEHOLDER 02",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 03",
-          "en": "PLACEHOLDER 03"
+          "en": "PLACEHOLDER 03",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 04",
-          "en": "PLACEHOLDER 04"
+          "en": "PLACEHOLDER 04",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 05",
-          "en": "PLACEHOLDER 05"
+          "en": "PLACEHOLDER 05",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 06",
-          "en": "PLACEHOLDER 06"
+          "en": "PLACEHOLDER 06",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 07",
-          "en": "PLACEHOLDER 07"
+          "en": "PLACEHOLDER 07",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 08",
-          "en": "PLACEHOLDER 08"
+          "en": "PLACEHOLDER 08",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 09",
-          "en": "PLACEHOLDER 09"
+          "en": "PLACEHOLDER 09",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 10",
-          "en": "PLACEHOLDER 10"
+          "en": "PLACEHOLDER 10",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 11",
-          "en": "PLACEHOLDER 11"
+          "en": "PLACEHOLDER 11",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 12",
-          "en": "PLACEHOLDER 12"
+          "en": "PLACEHOLDER 12",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 13",
-          "en": "PLACEHOLDER 13"
+          "en": "PLACEHOLDER 13",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 14",
-          "en": "PLACEHOLDER 14"
+          "en": "PLACEHOLDER 14",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 15",
-          "en": "PLACEHOLDER 15"
+          "en": "PLACEHOLDER 15",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 16",
-          "en": "PLACEHOLDER 16"
+          "en": "PLACEHOLDER 16",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 17",
-          "en": "PLACEHOLDER 17"
+          "en": "PLACEHOLDER 17",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 18",
-          "en": "PLACEHOLDER 18"
+          "en": "PLACEHOLDER 18",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 19",
-          "en": "PLACEHOLDER 19"
+          "en": "PLACEHOLDER 19",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 20",
-          "en": "PLACEHOLDER 20"
+          "en": "PLACEHOLDER 20",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 21",
-          "en": "PLACEHOLDER 21"
+          "en": "PLACEHOLDER 21",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 22",
-          "en": "PLACEHOLDER 22"
+          "en": "PLACEHOLDER 22",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 23",
-          "en": "PLACEHOLDER 23"
+          "en": "PLACEHOLDER 23",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 24",
-          "en": "PLACEHOLDER 24"
+          "en": "PLACEHOLDER 24",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 25",
-          "en": "PLACEHOLDER 25"
+          "en": "PLACEHOLDER 25",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 26",
-          "en": "PLACEHOLDER 26"
+          "en": "PLACEHOLDER 26",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 27",
-          "en": "PLACEHOLDER 27"
+          "en": "PLACEHOLDER 27",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 28",
-          "en": "PLACEHOLDER 28"
+          "en": "PLACEHOLDER 28",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 29",
-          "en": "PLACEHOLDER 29"
+          "en": "PLACEHOLDER 29",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 30",
-          "en": "PLACEHOLDER 30"
+          "en": "PLACEHOLDER 30",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 31",
-          "en": "PLACEHOLDER 31"
+          "en": "PLACEHOLDER 31",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 32",
-          "en": "PLACEHOLDER 32"
+          "en": "PLACEHOLDER 32",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 33",
-          "en": "PLACEHOLDER 33"
+          "en": "PLACEHOLDER 33",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 34",
-          "en": "PLACEHOLDER 34"
+          "en": "PLACEHOLDER 34",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 35",
-          "en": "PLACEHOLDER 35"
+          "en": "PLACEHOLDER 35",
+          "tags": [
+            "hk-sg"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 36",
-          "en": "PLACEHOLDER 36"
+          "en": "PLACEHOLDER 36",
+          "tags": [
+            "hk-sg"
+          ]
         }
       ],
       "OTHER": [
         {
           "count": "—",
           "zh": "占位院校 01",
-          "en": "PLACEHOLDER 01"
+          "en": "PLACEHOLDER 01",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 02",
-          "en": "PLACEHOLDER 02"
+          "en": "PLACEHOLDER 02",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 03",
-          "en": "PLACEHOLDER 03"
+          "en": "PLACEHOLDER 03",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 04",
-          "en": "PLACEHOLDER 04"
+          "en": "PLACEHOLDER 04",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 05",
-          "en": "PLACEHOLDER 05"
+          "en": "PLACEHOLDER 05",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 06",
-          "en": "PLACEHOLDER 06"
+          "en": "PLACEHOLDER 06",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 07",
-          "en": "PLACEHOLDER 07"
+          "en": "PLACEHOLDER 07",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 08",
-          "en": "PLACEHOLDER 08"
+          "en": "PLACEHOLDER 08",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 09",
-          "en": "PLACEHOLDER 09"
+          "en": "PLACEHOLDER 09",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 10",
-          "en": "PLACEHOLDER 10"
+          "en": "PLACEHOLDER 10",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 11",
-          "en": "PLACEHOLDER 11"
+          "en": "PLACEHOLDER 11",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 12",
-          "en": "PLACEHOLDER 12"
+          "en": "PLACEHOLDER 12",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 13",
-          "en": "PLACEHOLDER 13"
+          "en": "PLACEHOLDER 13",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 14",
-          "en": "PLACEHOLDER 14"
+          "en": "PLACEHOLDER 14",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 15",
-          "en": "PLACEHOLDER 15"
+          "en": "PLACEHOLDER 15",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 16",
-          "en": "PLACEHOLDER 16"
+          "en": "PLACEHOLDER 16",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 17",
-          "en": "PLACEHOLDER 17"
+          "en": "PLACEHOLDER 17",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 18",
-          "en": "PLACEHOLDER 18"
+          "en": "PLACEHOLDER 18",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 19",
-          "en": "PLACEHOLDER 19"
+          "en": "PLACEHOLDER 19",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 20",
-          "en": "PLACEHOLDER 20"
+          "en": "PLACEHOLDER 20",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 21",
-          "en": "PLACEHOLDER 21"
+          "en": "PLACEHOLDER 21",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 22",
-          "en": "PLACEHOLDER 22"
+          "en": "PLACEHOLDER 22",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 23",
-          "en": "PLACEHOLDER 23"
+          "en": "PLACEHOLDER 23",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 24",
-          "en": "PLACEHOLDER 24"
+          "en": "PLACEHOLDER 24",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 25",
-          "en": "PLACEHOLDER 25"
+          "en": "PLACEHOLDER 25",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 26",
-          "en": "PLACEHOLDER 26"
+          "en": "PLACEHOLDER 26",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 27",
-          "en": "PLACEHOLDER 27"
+          "en": "PLACEHOLDER 27",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 28",
-          "en": "PLACEHOLDER 28"
+          "en": "PLACEHOLDER 28",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 29",
-          "en": "PLACEHOLDER 29"
+          "en": "PLACEHOLDER 29",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 30",
-          "en": "PLACEHOLDER 30"
+          "en": "PLACEHOLDER 30",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 31",
-          "en": "PLACEHOLDER 31"
+          "en": "PLACEHOLDER 31",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 32",
-          "en": "PLACEHOLDER 32"
+          "en": "PLACEHOLDER 32",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 33",
-          "en": "PLACEHOLDER 33"
+          "en": "PLACEHOLDER 33",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 34",
-          "en": "PLACEHOLDER 34"
+          "en": "PLACEHOLDER 34",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 35",
-          "en": "PLACEHOLDER 35"
+          "en": "PLACEHOLDER 35",
+          "tags": []
         },
         {
           "count": "—",
           "zh": "占位院校 36",
-          "en": "PLACEHOLDER 36"
+          "en": "PLACEHOLDER 36",
+          "tags": []
         }
       ]
     }
@@ -5790,280 +6199,336 @@ window.SFK_DATA = {
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "海外教授",
-        "img": ""
+        "img": "",
+        "regions": [
+          "us-top30"
+        ]
       },
       {
         "name": "占位导师 02",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "海外教授",
-        "img": ""
+        "img": "",
+        "regions": [
+          "liberal-arts"
+        ]
       },
       {
         "name": "占位导师 03",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "海外教授",
-        "img": ""
+        "img": "",
+        "regions": [
+          "uk-g5"
+        ]
       },
       {
         "name": "占位导师 04",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "海外教授",
-        "img": ""
+        "img": "",
+        "regions": [
+          "risd"
+        ]
       },
       {
         "name": "占位导师 05",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "海外教授",
-        "img": ""
+        "img": "",
+        "regions": [
+          "hk-sg"
+        ]
       },
       {
         "name": "占位导师 06",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "海外教授",
-        "img": ""
+        "img": "",
+        "regions": [
+          "us-top30"
+        ]
       },
       {
         "name": "占位导师 07",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "海外教授",
-        "img": ""
+        "img": "",
+        "regions": [
+          "liberal-arts"
+        ]
       },
       {
         "name": "占位导师 08",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "海外教授",
-        "img": ""
+        "img": "",
+        "regions": [
+          "uk-g5"
+        ]
       },
       {
         "name": "占位导师 09",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "教研导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 10",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "教研导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 11",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "教研导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 12",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "教研导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 13",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "教研导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 14",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "教研导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 15",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "教研导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 16",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "教研导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 17",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "学术导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 18",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "学术导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 19",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "学术导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 20",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "学术导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 21",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "学术导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 22",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "学术导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 23",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "学术导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 24",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "学术导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 25",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "业界导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 26",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "业界导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 27",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "业界导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 28",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "业界导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 29",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "业界导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 30",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "业界导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 31",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "业界导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 32",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "业界导师",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 33",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "顶尖学者",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 34",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "顶尖学者",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 35",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "顶尖学者",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 36",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "顶尖学者",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 37",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "顶尖学者",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 38",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "顶尖学者",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 39",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "顶尖学者",
-        "img": ""
+        "img": "",
+        "regions": []
       },
       {
         "name": "占位导师 40",
         "background": "院校 / 机构（待提供）",
         "title": "职称 / 方向（待提供）",
         "category": "顶尖学者",
-        "img": ""
+        "img": "",
+        "regions": []
       }
     ]
   },
@@ -6176,6 +6641,175 @@ window.SFK_DATA = {
         "intro": "合作内容待提供",
         "collab": [
           "合作方向待提供"
+        ]
+      }
+    ]
+  },
+  "undergrad-regions": {
+    "note": "本科爬藤·地区标签配置。每个 tab 的 caseSchoolKeys 用于「学生案例」匹配（对案例院校 / offer 院校名做包含匹配，命中任一关键词即归入该标签，可同时归属多个标签）；「海外教授」按 instructors.json 的 regions 字段、「OFFER成果」按 offers.json 的 tags 字段、「课程产品」按 course-products.json 的 regions 字段过滤。后续提供真实信息后，维护本文件与各数据源的区域字段即可。",
+    "tabs": [
+      {
+        "id": "us-top30",
+        "title": "美国TOP30",
+        "titleEn": "US TOP 30",
+        "color": "#63E6D4",
+        "tagline": "【占位】美国TOP30 方向副标题信息待提供。",
+        "interpret": [
+          "【占位】专业解读正文待提供——将覆盖该方向的培养目标、课程体系、申请要点与选拔偏好。",
+          "【占位】第二段正文待提供。"
+        ],
+        "caseSchoolKeys": [
+          "达特茅斯",
+          "Dartmouth",
+          "布朗",
+          "Brown",
+          "哈佛",
+          "Harvard",
+          "耶鲁",
+          "Yale",
+          "康奈尔",
+          "Cornell",
+          "哥伦比亚",
+          "Columbia",
+          "杜克",
+          "Duke",
+          "西北大学",
+          "Northwestern",
+          "芝加哥大学",
+          "UChicago",
+          "约翰霍普金斯",
+          "Johns Hopkins",
+          "莱斯",
+          "Rice",
+          "范德堡",
+          "Vanderbilt",
+          "圣路易斯华盛顿",
+          "WashU",
+          "埃默里",
+          "Emory",
+          "NYU",
+          "纽约大学"
+        ],
+        "timeline": [
+          "【占位】成长时间轴内容待接入——将同步目录页「成长时间轴」模块中本方向对应的本科爬藤时间轴。"
+        ]
+      },
+      {
+        "id": "liberal-arts",
+        "title": "文理学院",
+        "titleEn": "LIBERAL ARTS",
+        "color": "#4ADBA0",
+        "tagline": "【占位】文理学院方向副标题信息待提供。",
+        "interpret": [
+          "【占位】专业解读正文待提供——将覆盖该方向的培养目标、课程体系、申请要点与选拔偏好。",
+          "【占位】第二段正文待提供。"
+        ],
+        "caseSchoolKeys": [
+          "格林内尔",
+          "Grinnell",
+          "威廉姆斯",
+          "Williams",
+          "阿默斯特",
+          "Amherst",
+          "斯沃斯莫尔",
+          "Swarthmore",
+          "波莫纳",
+          "Pomona",
+          "韦尔斯利",
+          "Wellesley",
+          "鲍登",
+          "Bowdoin",
+          "明德",
+          "Middlebury",
+          "克莱蒙特",
+          "Claremont",
+          "巴纳德",
+          "Barnard",
+          "瓦萨",
+          "Vassar",
+          "史密斯学院",
+          "Smith College",
+          "卡尔顿",
+          "Carleton",
+          "卫斯理安",
+          "Wesleyan"
+        ],
+        "timeline": [
+          "【占位】成长时间轴内容待接入——将同步目录页「成长时间轴」模块中本方向对应的本科爬藤时间轴。"
+        ]
+      },
+      {
+        "id": "uk-g5",
+        "title": "英国G5",
+        "titleEn": "UK G5",
+        "color": "#E5C07B",
+        "tagline": "【占位】英国G5 方向副标题信息待提供。",
+        "interpret": [
+          "【占位】专业解读正文待提供——将覆盖该方向的培养目标、课程体系、申请要点与选拔偏好。",
+          "【占位】第二段正文待提供。"
+        ],
+        "caseSchoolKeys": [
+          "牛津",
+          "Oxford",
+          "剑桥",
+          "Cambridge",
+          "帝国理工",
+          "Imperial",
+          "伦敦政经",
+          "LSE",
+          "伦敦大学学院",
+          "UCL"
+        ],
+        "timeline": [
+          "【占位】成长时间轴内容待接入——将同步目录页「成长时间轴」模块中本方向对应的本科爬藤时间轴。"
+        ]
+      },
+      {
+        "id": "risd",
+        "title": "罗德岛RISD",
+        "titleEn": "RISD",
+        "color": "#E06C9F",
+        "tagline": "【占位】罗德岛设计学院方向副标题信息待提供。",
+        "interpret": [
+          "【占位】专业解读正文待提供——将覆盖该方向的培养目标、课程体系、申请要点与选拔偏好。",
+          "【占位】第二段正文待提供。"
+        ],
+        "caseSchoolKeys": [
+          "罗德岛",
+          "RISD",
+          "Rhode Island"
+        ],
+        "timeline": [
+          "【占位】成长时间轴内容待接入——将同步目录页「成长时间轴」模块中本方向对应的本科爬藤时间轴。"
+        ]
+      },
+      {
+        "id": "hk-sg",
+        "title": "港新",
+        "titleEn": "HK & SINGAPORE",
+        "color": "#61AFEF",
+        "tagline": "【占位】港新方向副标题信息待提供。",
+        "interpret": [
+          "【占位】专业解读正文待提供——将覆盖该方向的培养目标、课程体系、申请要点与选拔偏好。",
+          "【占位】第二段正文待提供。"
+        ],
+        "caseSchoolKeys": [
+          "香港",
+          "HKU",
+          "港大",
+          "中文大学",
+          "CUHK",
+          "科技大学",
+          "HKUST",
+          "新加坡",
+          "NUS",
+          "南洋理工",
+          "NTU",
+          "管理大学",
+          "SMU"
+        ],
+        "timeline": [
+          "【占位】成长时间轴内容待接入——将同步目录页「成长时间轴」模块中本方向对应的本科爬藤时间轴。"
         ]
       }
     ]

@@ -2196,3 +2196,38 @@ html.is-overlay-open { overflow: hidden; }
 }
 .coop-hover-overlay__collab { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; }
 .coop-card__collab-tag { font-size: 8.5px; font-weight: 700; letter-spacing: .01em; color: var(--brand-dark); background: var(--brand); padding: 2px 7px; border-radius: var(--radius-pill); white-space: nowrap; }
+
+/* ═══════════════════════════════════════════════════════════════
+   本科爬藤 · 地区标签（美国TOP30 / 文理学院 / 英国G5 / 罗德岛RISD / 港新）
+   形态对齐「艺术疗愈与跨界应用」展开页底部的 .dir-sheet__tab：
+   竖向长方形、圆角、高亮描边、标题文字居中；悬停提亮 + 描边转方向色，
+   选中态描边与文字同色。容器叠加 .tabs（吸顶在固定导航条下方）。
+   ═══════════════════════════════════════════════════════════════ */
+.region-tabs { justify-content: center; gap: 12px; }
+.region-tab {
+  appearance: none; cursor: pointer; background: transparent;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  /* 高度较此前等比缩减 15%：垂直内边距 9→5px、行距 3→2.5px（文字字号/行高不变），
+     标签总高 ≈56px → ≈47.6px，两行文字仍完整居中 */
+  gap: 2.5px; width: 128px; padding: 5px 12px;
+  font-family: var(--font-sans); text-align: center; line-height: 1.3;
+  color: var(--text-soft); border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm); transition: .2s;
+}
+.region-tab__title { font-size: var(--fs-body); font-weight: var(--fw-semibold); }
+.region-tab__en { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--text-dim); }
+.region-tab:hover { color: var(--text); background: var(--surface-2); border-color: var(--tab-color, var(--brand)); box-shadow: var(--glow-primary-soft); transform: translateY(-2px); }
+.region-tab.is-active {
+  color: var(--tab-color, var(--brand)); border-color: var(--tab-color, var(--brand));
+  background: var(--surface-2); font-weight: var(--fw-semibold);
+}
+.region-tab.is-active .region-tab__en { color: var(--tab-color, var(--brand)); }
+.region-tab:focus-visible {
+  outline: none; border-color: var(--tab-color, var(--brand));
+  box-shadow: 0 0 0 3px rgba(99,230,212,.16);
+}
+/* 展开面板的空态（某标签下暂无匹配的教授 / 案例 / 课程等） */
+.plate__empty { margin: 0; color: var(--text-dim); font-size: var(--fs-small); }
+@media (max-width: 600px) {
+  .region-tab { width: 104px; padding: 4px 10px; }   /* 同步等比缩减 15% */
+}

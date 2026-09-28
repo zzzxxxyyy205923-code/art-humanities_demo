@@ -17,7 +17,8 @@ const files = [
   'course-products.json',
   'offers.json',
   'instructors.json',
-  'resources.json'
+  'resources.json',
+  'undergrad-regions.json'
 ];
 
 const out = {};

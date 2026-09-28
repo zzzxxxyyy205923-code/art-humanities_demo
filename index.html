@@ -143,12 +143,18 @@
   </section>
 
   <section class="section" style="padding-top:48px;">
-    <div class="tabs" id="major-tabs"></div>
-    <!-- 专业切换后的滚动落点：标题 + 下属内容（id 供 UndergradPage.scrollToDetail 定位） -->
+    <!-- 切换标签后的滚动落点：大标题（与标签文字一致）+ 副标题（占位，待提供）
+         （id 供 UndergradPage.scrollToDetail 定位） -->
     <div id="major-detail" style="margin-bottom:16px;">
       <h2 class="section__title active-major__title" id="active-major-title"></h2>
       <p class="section__desc" id="active-major-tagline"></p>
     </div>
+    <!-- 地区标签（美国TOP30 / 文理学院 / 英国G5 / 罗德岛RISD / 港新）：
+         位于大/小标题下方（副标题之下、展开板块之上，两处均留间距）；
+         形态对齐「艺术疗愈与跨界应用」展开页底部的 dir-sheet__tab —— 竖向长方形、
+         圆角、高亮描边、文字居中，悬停自动切换下方板块；容器叠加 .tabs 保留吸顶，
+         数据来自 data/undergrad-regions.json，由 UndergradPage 渲染 -->
+    <div class="tabs region-tabs" id="major-tabs"></div>
     <div id="major-content"></div>
   </section>
 </main>

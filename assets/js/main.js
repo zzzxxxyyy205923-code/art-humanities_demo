@@ -9,7 +9,7 @@
 const DATA = { cache: {} };
 
 /* ── 数据加载：内嵌优先，fetch 兜底 ── */
-async function loadData(files = ['meta', 'majors', 'cases', 'planning', 'careers', 'directions', 'direction-details', 'course-products', 'offers', 'instructors', 'resources']) {
+async function loadData(files = ['meta', 'majors', 'cases', 'planning', 'careers', 'directions', 'direction-details', 'course-products', 'offers', 'instructors', 'resources', 'undergrad-regions']) {
   if (window.SFK_DATA) { DATA.cache = window.SFK_DATA; return; }      // file:// 直开也能拿到数据
   if (location.protocol === 'file:') throw new Error('file 协议下无法 fetch，请改用 HTTP 预览');
   await Promise.all(files.map(async name => {
@@ -830,8 +830,10 @@ const ResourcesSection = {
 /* ═══════════ 本科爬藤（专业 Tab） ═══════════ */
 const UndergradPage = {
   init() {
-    const majors = DATA.cache.majors;
-    this.keys = Object.keys(majors);
+    /* 地区标签：来自 data/undergrad-regions.json（美国TOP30 / 文理学院 / 英国G5 / 罗德岛RISD / 港新） */
+    const tabs = (DATA.cache['undergrad-regions'] || {}).tabs || [];
+    this.tabs = tabs;
+    this.keys = tabs.map(t => t.id);
     this.tabWrap = document.getElementById('major-tabs');
     this.content = document.getElementById('major-content');
     if (!this.tabWrap || !this.content) return;
@@ -839,28 +841,46 @@ const UndergradPage = {
     const { section } = Router.parse();
     this.active = this.keys.includes(section) ? section : this.keys[0];
 
-    this.switch = key => {
+    this.switch = (key, opts) => {
+      if (!this.keys.includes(key)) return;
+      const changed = key !== this.active;
       this.active = key;
       // 只改 hash、不触发整页重渲染
       history.replaceState(null, '', `#/undergraduate/${key}`);
       Header.markActive('undergraduate', key);
-      this.render();
-      this.scrollToDetail();
+      if (changed) this.render();
+      if (!opts || opts.scroll !== false) this.scrollToDetail();
     };
+
+    /* 光标悬停标签 → 下方板块自动切换（不滚动、不打断阅读）；
+       点击仍走 switch 的滚动定位，二者共用同一渲染 */
+    this.tabWrap.addEventListener('mouseover', e => {
+      const btn = e.target.closest('.region-tab');
+      if (!btn) return;
+      this.switch(btn.getAttribute('data-key'), { scroll: false });
+    });
 
     /* 默认全部收起：进入页面 / 切换专业都从空集合开始 */
     this.openIds = new Set();
 
     /* 折叠交互用事件委托：内容每次 render 都会整块重绘，不能绑在具体节点上 */
     this.content.addEventListener('click', e => {
+      /* 课程产品卡：直接复用目录页「课程产品」的详情浮层（CourseProducts.open） */
+      const cp = e.target.closest('.cp-card');
+      if (cp) {
+        CourseProducts.open(cp.getAttribute('data-cp-id'),
+          cp.classList.contains('cp-card--catalog') ? 'catalog' : 'longform');
+        return;
+      }
       const head = e.target.closest('.plate__head');
       if (!head) return;
       const plate = head.closest('.plate');
       const id = plate.dataset.id;
       // 各板块互不干涉：只切换被点击的这一个（已展开 → 收起，已收起 → 展开）
       this.openIds.has(id) ? this.openIds.delete(id) : this.openIds.add(id);
+      // 仅就地切换开合：applyOpen 只改 maxHeight / 类名，不重绘内容、不切换内容区；
+      // 按要求不做任何滚动补偿——页面滚动位置、视图状态与布局保持原样
       this.applyOpen();
-      this.ensureVisible(plate);          // 展开的板块若露出视口底部，就近补一点滚动
     });
     /* 视口变化会让正文换行、面板变高 → 重算已展开项的高度 */
     window.addEventListener('resize', () => this.applyOpen());
@@ -881,30 +901,16 @@ const UndergradPage = {
     });
   },
 
-  /* 展开项底部若被视口切掉，就补一小段滚动把它露出来（不动顶部，尽可能少滚）。
-     这里用 scrollBy 而不是 scrollIntoView：后者会叠加 html 的 scroll-padding-top。 */
-  ensureVisible(el) {
-    if (!el || !el.classList.contains('is-open')) return;
-    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const step = () => {
-      const over = el.getBoundingClientRect().bottom - window.innerHeight + 16;
-      if (over > 0) window.scrollBy({ top: over, behavior: reduce ? 'auto' : 'smooth' });
-    };
-    // 展开动画 .42s，量早了拿到的是收起态高度 → 等动画结束再量
-    reduce ? step() : setTimeout(step, 460);
-  },
-
-  /* 切换专业后：平滑滚到「插画 · ILLUSTRATION / 纯艺术 · FINE ART」标题，
-     让它完整落在（固定导航条 + 吸顶 Tab 条）下方，作为内容阅读的起始位置。
-     用 window.scrollTo 而非 scrollIntoView：后者会叠加 html 上的 scroll-padding-top，
-     且不会为吸顶的 Tab 条让位，标题会被切掉。 */
+  /* 点击切换标签后：平滑滚到大标题（与标签文字一致）处，让它完整落在固定导航条
+     下方，作为内容阅读的起始位置（标签行已位于标题之下，无需再为其让位）。
+     用 window.scrollTo 而非 scrollIntoView：后者会叠加 html 上的 scroll-padding-top。 */
   scrollToDetail() {
     const el = document.getElementById('major-detail');
     if (!el) return;
     requestAnimationFrame(() => {
       const navH = parseFloat(getComputedStyle(document.documentElement)
         .getPropertyValue('--navbar-h')) || 64;
-      const offset = navH + (this.tabWrap ? this.tabWrap.offsetHeight : 0) + 12;
+      const offset = navH + 12;
       const top = Math.max(el.getBoundingClientRect().top + window.scrollY - offset, 0);
       const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
       window.scrollTo({ top, behavior: reduce ? 'auto' : 'smooth' });
@@ -914,20 +920,161 @@ const UndergradPage = {
     });
   },
 
+  /* ── 六个下属板块的固定骨架：编号 / 标题 / 英文小标 ──
+     内容按当前地区标签动态装配：专业解读与成长时间轴暂为占位文案；
+     海外教授 / OFFER成果 / 学生案例 / 课程产品 从目录页对应模块按区域抓取：
+       · 海外教授  ← instructors.json（category=海外教授 且 regions 含当前标签）
+       · OFFER成果 ← offers.json（tags 含当前标签的录取院校）
+       · 学生案例  ← cases.json（案例院校 / offer 院校命中 caseSchoolKeys 任一关键词）
+       · 课程产品  ← course-products.json（regions 含当前标签，真实数据就位后生效） */
+  PLATES: [
+    { num: '01', id: 'interpret',  title: '专业解读',   titleEn: 'MAJOR INSIGHT' },
+    { num: '02', id: 'professors', title: '海外教授',   titleEn: 'FACULTY' },
+    { num: '03', id: 'offers',     title: 'OFFER成果',  titleEn: 'OFFER SHOWCASE' },
+    { num: '04', id: 'cases',      title: '学生案例',   titleEn: 'STUDENT CASES' },
+    { num: '05', id: 'courses',    title: '课程产品',   titleEn: 'COURSE PROGRAMS' },
+    { num: '06', id: 'timeline',   title: '成长时间轴', titleEn: 'TIMELINE' }
+  ],
+
+  esc(v) {
+    return String(v == null ? '' : v)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  },
+
+  professorsOf(tab) {
+    return ((DATA.cache.instructors || {}).instructors || [])
+      .filter(r => r.category === '海外教授' && (r.regions || []).includes(tab.id));
+  },
+
+  offersOf(tab) {
+    const groups = (DATA.cache.offers || {}).groups || {};
+    const out = [];
+    Object.keys(groups).forEach(g => groups[g].forEach(e => {
+      if ((e.tags || []).includes(tab.id)) out.push(e);
+    }));
+    return out;
+  },
+
+  /* 目录页学生案例全集：与 CasesPage.build 同序同构（插画 → 纯艺术 → 插画/纯艺术），
+     保证案例卡点击 CaseSheet.open(全局下标) 在本页也能打开同一份详情档案 */
+  allCases() {
+    if (CasesPage.all && CasesPage.all.length) return CasesPage.all;
+    const c = DATA.cache.cases || {};
+    CasesPage.all = [
+      ...(c.illustration || []).map(x => ({ ...x, branch: '插画' })),
+      ...(c['fine-art'] || []).map(x => ({ ...x, branch: '纯艺术' })),
+      ...(c.other || []).map(x => ({ ...x, branch: '插画 / 纯艺术' }))
+    ];
+    return CasesPage.all;
+  },
+
+  casesOf(tab) {
+    const keys = tab.caseSchoolKeys || [];
+    if (!keys.length) return [];
+    return this.allCases()
+      .map((x, idx) => ({ ...x, __idx: idx }))
+      .filter(x => {
+        const hay = [x.school, x.schoolEn, x.region]
+          .concat((x.offers || []).map(o => `${o.school || ''} ${o.schoolEn || ''}`))
+          .join(' | ');
+        return keys.some(k => hay.includes(k));
+      });
+  },
+
+  /* 课程产品板块：取目录页「课程目录」课程（按标签 regions 过滤），
+     展开后直接呈现课程详情浮层中的「课程模块 · CURRICULUM」内容 */
+  coursesOf(tab) {
+    const d = DATA.cache['course-products'] || {};
+    return (d.catalog || []).filter(p => (p.regions || []).includes(tab.id));
+  },
+
+  /* 板块展开后的正文：直接复用目录页对应子标题的页面结构、层级与样式 ——
+     海外教授 → 「导师团队」person-card 栅格（rough-grid）
+     OFFER成果 → 「OFFER成果」offer-card 栅格（rough-grid）
+     学生案例 → 「学生案例」case-card 栅格（case-grid，点击开 CaseSheet 详情）
+     课程产品 → 「课程产品」cp-card 列表（cp-grid，点击开 CourseProducts 详情） */
+  plateBodyHTML(tab, plate) {
+    const empty = `<p class="plate__empty">该分类内容筹备中 · 敬请期待</p>`;
+    if (plate.id === 'interpret' || plate.id === 'timeline') {
+      const points = tab[plate.id] || [];
+      return points.length
+        ? `<div class="plate__body"><ul>${points.map(pt => `<li>${this.esc(pt)}</li>`).join('')}</ul></div>`
+        : empty;
+    }
+    if (plate.id === 'professors') {
+      const list = this.professorsOf(tab);
+      if (!list.length) return empty;
+      return `<div class="rough-grid">${list.map(r => `
+        <div class="person-card">
+          <div class="person-card__avatar">${r.img ? `<img src="${this.esc(r.img)}" alt="" loading="lazy">` : `<span class="person-card__avatar-ph">待提供</span>`}</div>
+          <div class="person-card__name">${this.esc(r.name)}</div>
+          ${r.background ? `<div class="person-card__background">${this.esc(r.background)}</div>` : ''}
+          ${r.title ? `<div class="person-card__title">${this.esc(r.title)}</div>` : ''}
+        </div>`).join('')}</div>`;
+    }
+    if (plate.id === 'offers') {
+      const list = this.offersOf(tab);
+      if (!list.length) return empty;
+      return `<div class="rough-grid">${list.map(r => `
+        <div class="offer-card">
+          <div class="offer-card__count">${this.esc(r.count)}</div>
+          <div class="offer-card__school-zh">${this.esc(r.zh)}</div>
+          <div class="offer-card__school-en">${this.esc(r.en)}</div>
+        </div>`).join('')}</div>`;
+    }
+    if (plate.id === 'cases') {
+      const list = this.casesOf(tab);
+      if (!list.length) return empty;
+      return `<div class="case-grid">${list.map(c => `
+        <article class="case-card" role="button" tabindex="0"
+                 onclick="CaseSheet.open(${c.__idx})"
+                 onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();CaseSheet.open(${c.__idx})}">
+          <div class="case-card__top">
+            <span class="case-card__branch u-en">${this.esc(c.branch)} · ${this.esc(c.offerType || '')}</span>
+            <span class="case-card__student">${this.esc(c.studentZh || c.student)}<span class="u-en">${this.esc(c.student || '')}</span></span>
+          </div>
+          <div class="case-card__school">${this.esc(c.school)}</div>
+          <div class="case-card__school-en u-en">${this.esc(c.schoolEn || '')}</div>
+          <div class="case-card__program"><span class="u-en">${this.esc(c.program || '')}</span>${c.programCn ? ` · ${this.esc(c.programCn)}` : ''}</div>
+          <div class="case-card__meta">${this.esc(c.background || '')}</div>
+          <div class="case-card__tags">${(c.tags || []).map(t => `<span class="case-card__tag">${this.esc(t)}</span>`).join('')}</div>
+          <span class="case-card__more">查看作品与申请档案 <span class="u-en">→</span></span>
+        </article>`).join('')}</div>`;
+    }
+    if (plate.id === 'courses') {
+      /* 直接复用目录页点击课程卡后的详情浮层中「课程模块 · CURRICULUM」一节：
+         cd-section + cd-curriculum-grid / cd-curriculum-card，结构与样式与
+         CourseProducts.detail 完全一致；不展示「长线旗舰产品」「课程目录」分区 */
+      const modules = this.coursesOf(tab).reduce((acc, p) => acc.concat(p.curriculum || []), []);
+      if (!modules.length) return empty;
+      return `<section class="cd-section"><div class="cd-section__label">课程模块 · CURRICULUM</div><div class="cd-curriculum-grid">${modules.map(c =>
+        `<div class="cd-curriculum-card"><div class="cd-curriculum-card__img" aria-hidden="true"></div>
+          <div class="cd-curriculum-card__body"><h4 class="cd-curriculum-card__title">${this.esc(c.title)}</h4>
+          <p class="cd-curriculum-card__desc">${this.esc(c.desc)}</p></div></div>`).join('')}</div></section>`;
+    }
+    return empty;
+  },
+
   render() {
-    const majors = DATA.cache.majors;
-    const m = majors[this.active];
+    const tab = this.tabs.find(t => t.id === this.active) || this.tabs[0];
 
-    this.tabWrap.innerHTML = this.keys.map(k => `
-      <button class="tab-btn${k === this.active ? ' is-active' : ''}" data-key="${k}" onclick="UndergradPage.switch('${k}')">
-        ${majors[k].title} <span class="u-en">${majors[k].titleEn}</span>
+    /* 地区标签：竖向长方形、圆角、高亮描边、文字居中（形态对齐「艺术疗愈与跨界应用」
+       展开页底部的 dir-sheet__tab：悬停提亮 + 描边转方向色，选中态描边与文字同色） */
+    this.tabWrap.innerHTML = this.keys.map(k => {
+      const t = this.tabs.find(x => x.id === k);
+      return `
+      <button class="region-tab${k === this.active ? ' is-active' : ''}" style="--tab-color:${t.color || '#63E6D4'}" data-key="${k}" onclick="UndergradPage.switch('${k}')">
+        <span class="region-tab__title">${this.esc(t.title)}</span>
+        <span class="region-tab__en u-en">${this.esc(t.titleEn)}</span>
       </button>
-    `).join('');
+    `;
+    }).join('');
 
-    document.getElementById('active-major-title').textContent = `${m.title} · ${m.titleEn}`;
-    document.getElementById('active-major-tagline').textContent = m.tagline;
+    /* 大标题与标签文字一致；副标题暂为占位，后续由你提供 */
+    document.getElementById('active-major-title').textContent = tab.title;
+    document.getElementById('active-major-tagline').textContent = tab.tagline;
 
-    this.content.innerHTML = m.plates.map(p => `
+    this.content.innerHTML = this.PLATES.map(p => `
       <article class="plate" id="${p.id}" data-id="${p.id}">
         <button type="button" class="plate__head" aria-expanded="false" aria-controls="panel-${p.id}">
           <span class="plate__num">${p.num}</span>
@@ -942,20 +1089,13 @@ const UndergradPage = {
         </button>
         <div class="plate__panel" id="panel-${p.id}">
           <span class="plate__sweep"></span>
-          <div class="plate__panel-inner">
-            <div class="plate__body"><ul>${p.points.map(pt => `<li>${pt}</li>`).join('')}</ul></div>
-            ${p.schools ? `<div class="plate__tags">${p.schools.map(s => `<span class="badge">${s}</span>`).join('')}</div>` : ''}
-            ${p.notes ? `<div class="plate__tags">${p.notes.map(s => `<span class="badge">${s}</span>`).join('')}</div>` : ''}
-            ${p.timeline ? `<div class="plate__tags">${p.timeline.map(s => `<span class="badge">${s}</span>`).join('')}</div>` : ''}
-            ${p.cases ? `<div class="plate__tags">${p.cases.map(s => `<span class="badge">${s}</span>`).join('')}</div>` : ''}
-          </div>
+          <div class="plate__panel-inner">${this.plateBodyHTML(tab, p)}</div>
         </div>
       </article>
     `).join('');
 
-    /* 起始态一律全部收起：先看到 01–04 的板块标题，需要哪个正文再点开。
-       切换专业同样回到全部收起，各板块的开合只由点击决定。 */
-    this.openIds = new Set();   // 重建集合（兼容 render 先于 init 被调用的情况）
+    /* 悬停 / 点击切换标签时保留各板块的开合状态：已展开的板块保持展开，
+       便于跨标签对比同一板块的内容（起始态全部收起由 init 的空集合保证）。 */
     this.applyOpen();
   }
 };
