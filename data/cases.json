@@ -22,8 +22,8 @@
     },
     {
       "id": "region",
-      "label": "申请地区",
-      "labelEn": "REGION",
+      "label": "申请国家",
+      "labelEn": "COUNTRY",
       "all": "全部",
       "options": [
         {
@@ -1215,5 +1215,21 @@
       ],
       "career": null
     }
-  ]
+  ],
+  "dimension": {
+    "id": "dimension",
+    "label": "申请维度",
+    "labelEn": "DIMENSION",
+    "options": [
+      {
+        "value": "ug",
+        "label": "本科"
+      },
+      {
+        "value": "pg",
+        "label": "研究生"
+      }
+    ],
+    "note": "本科 = offerType 含「本科/大二」；研究生 = 含「研究生/硕士」。当前 24 条案例均为本科录取，研究生维度待真实数据就位后自动生效。"
+  }
 }

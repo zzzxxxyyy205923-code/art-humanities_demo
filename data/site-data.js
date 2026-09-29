@@ -7,23 +7,28 @@ window.SFK_DATA = {
     "nav": {
       "main": {
         "label": "主要内容",
-        "items": [
-          {
-            "id": "undergraduate",
-            "label": "本科爬藤",
-            "href": "#/undergraduate"
-          },
-          {
-            "id": "fulltime",
-            "label": "全日制",
-            "href": "#/fulltime"
-          },
-          {
-            "id": "graduate",
-            "label": "研究生",
-            "href": "#/graduate"
-          }
-        ]
+        "items": [],
+        "archived": {
+          "_restore": "恢复机制：①把下列条目移回上方 items；②移除 index.html 中 view-fulltime / view-graduate 的 hidden 属性；③把 fulltime.html / graduate.html 的跳转目标改回各自 hash",
+          "items": [
+            {
+              "id": "undergraduate",
+              "label": "本科爬藤",
+              "href": "#/undergraduate",
+              "note": "已整体迁移至 overlay.primary 第 4 项（目录页 04）"
+            },
+            {
+              "id": "fulltime",
+              "label": "全日制",
+              "href": "#/fulltime"
+            },
+            {
+              "id": "graduate",
+              "label": "研究生",
+              "href": "#/graduate"
+            }
+          ]
+        }
       },
       "right": [
         {
@@ -79,6 +84,11 @@ window.SFK_DATA = {
             "id": "courses",
             "label": "课程产品",
             "href": "#/home/courses"
+          },
+          {
+            "id": "undergraduate",
+            "label": "本科爬藤",
+            "href": "#/undergraduate"
           }
         ],
         "secondary": [
@@ -312,8 +322,8 @@ window.SFK_DATA = {
       },
       {
         "id": "region",
-        "label": "申请地区",
-        "labelEn": "REGION",
+        "label": "申请国家",
+        "labelEn": "COUNTRY",
         "all": "全部",
         "options": [
           {
@@ -1505,7 +1515,23 @@ window.SFK_DATA = {
         ],
         "career": null
       }
-    ]
+    ],
+    "dimension": {
+      "id": "dimension",
+      "label": "申请维度",
+      "labelEn": "DIMENSION",
+      "options": [
+        {
+          "value": "ug",
+          "label": "本科"
+        },
+        {
+          "value": "pg",
+          "label": "研究生"
+        }
+      ],
+      "note": "本科 = offerType 含「本科/大二」；研究生 = 含「研究生/硕士」。当前 24 条案例均为本科录取，研究生维度待真实数据就位后自动生效。"
+    }
   },
   "planning": {
     "title": "产业全景 · 职业规划",
@@ -4493,6 +4519,18 @@ window.SFK_DATA = {
       "catalog": {
         "eyebrow": "Program Catalog",
         "title": "课程目录"
+      },
+      "elite": {
+        "eyebrow": "Global Talent Visa",
+        "title": "艺术精英计划"
+      },
+      "overseas": {
+        "eyebrow": "Overseas Programs",
+        "title": "境外项目"
+      },
+      "frontier": {
+        "eyebrow": "Art Frontier Lectures",
+        "title": "艺术前沿讯息讲座"
       }
     },
     "longform": [
@@ -4578,6 +4616,9 @@ window.SFK_DATA = {
           "uk-g5",
           "risd",
           "hk-sg"
+        ],
+        "levels": [
+          "pg"
         ]
       },
       {
@@ -4658,6 +4699,9 @@ window.SFK_DATA = {
           "uk-g5",
           "risd",
           "hk-sg"
+        ],
+        "levels": [
+          "pg"
         ]
       },
       {
@@ -4742,6 +4786,9 @@ window.SFK_DATA = {
           "uk-g5",
           "risd",
           "hk-sg"
+        ],
+        "levels": [
+          "pg"
         ]
       }
     ],
@@ -4824,6 +4871,9 @@ window.SFK_DATA = {
           "uk-g5",
           "risd",
           "hk-sg"
+        ],
+        "levels": [
+          "pg"
         ]
       },
       {
@@ -4904,6 +4954,10 @@ window.SFK_DATA = {
           "uk-g5",
           "risd",
           "hk-sg"
+        ],
+        "levels": [
+          "ug",
+          "pg"
         ]
       },
       {
@@ -4984,6 +5038,9 @@ window.SFK_DATA = {
           "uk-g5",
           "risd",
           "hk-sg"
+        ],
+        "levels": [
+          "pg"
         ]
       },
       {
@@ -5064,6 +5121,219 @@ window.SFK_DATA = {
           "uk-g5",
           "risd",
           "hk-sg"
+        ],
+        "levels": [
+          "ug",
+          "pg"
+        ]
+      }
+    ],
+    "elite": [
+      {
+        "id": "elite-uk-plan",
+        "badge": "UK Centre",
+        "tileVariant": null,
+        "cover": "",
+        "placeholder": false,
+        "meta": {
+          "eyebrow": "UK Centre｜艺术生留英 · Global Talent Visa",
+          "titleEn": "Global Talent Visa",
+          "titleCn": "艺术生留英计划",
+          "desc": "面向艺术、设计、建筑、影视、时尚等创意从业者的留英发展方案：以英国全球人才签证（Global Talent Visa）为目标路径——它不是传统「先拿 offer、再由雇主担保」的工签，而是「先认人、再给发展空间」的路线。从艺术家身份规划、展览与媒体报道、推荐信，到移民律师递交与签证落地，完成全链条孵化。",
+          "chips": [
+            "无需雇主担保",
+            "3 / 5 年转永居",
+            "艺术家身份孵化",
+            "招募中"
+          ]
+        },
+        "snapshot": [
+          {
+            "k": "无需雇主担保",
+            "v": "无强制语言与薪资要求，可受雇、自雇或创业"
+          },
+          {
+            "k": "3 / 5 年",
+            "v": "杰出人才 3 年、杰出潜力 5 年转永居"
+          },
+          {
+            "k": "14 项材料",
+            "v": "3 封推荐信 + 10 项证据（展览 / 媒体 / 奖项 3 类）+ 1 份艺术家 CV"
+          },
+          {
+            "k": "8–12 周",
+            "v": "Stage 1 背书审核周期，背书信 3 个月内有效"
+          }
+        ],
+        "curriculum": [
+          {
+            "title": "GTV 申请咨询与评估",
+            "desc": "信息咨询与初步作品评估（1 次），判断当前积累与 Exceptional Talent / Exceptional Promise 两条路径的匹配度。"
+          },
+          {
+            "title": "艺术家身份规划",
+            "desc": "申请人艺术家身份提炼与整体规划（1 次）：围绕过去 3–5 年的行业成就或认可，明确「你是谁、影响力何在」的叙事主线。"
+          },
+          {
+            "title": "艺术家 CV 与个人网站",
+            "desc": "打造艺术家时间线 CV（1 份，清晰呈现近 3–5 年职业轨迹），并完成个人完整专业艺术网站搭建（1 次，不含运营）。"
+          },
+          {
+            "title": "展览体系搭建",
+            "desc": "依托 GTV 合作画廊，完成国内或海外个展 1 次、群展 6 次——伦敦及全球的展览经历是 GTV 证据链的核心。"
+          },
+          {
+            "title": "媒体报道",
+            "desc": "资深艺评人发表与专业艺术平台媒体报道共 4 篇，来自与国际知名艺术媒体的深度合作，符合 GTV 审核标准的国际曝光。"
+          },
+          {
+            "title": "推荐信",
+            "desc": "由参加过展览的画廊主或策展人出具推荐信 3 封（至少包含一封英国机构推荐信），须表明申请人有潜力成为其专业领域的领导者。"
+          },
+          {
+            "title": "艺术作品辅导",
+            "desc": "申请人艺术作品指导 2–4 个项目：建议准备至少 4–6 个作品（最好有系列性），回应「对英国社会文化的贡献」这一审核偏好。"
+          },
+          {
+            "title": "证据材料与律师递交",
+            "desc": "14 项申请材料的证据排版设计（1 次），移民律师完成材料整体审核及 Stage 1 背书提交（1 次）；Stage 2 签证申请在背书信 3 个月内完成。"
+          },
+          {
+            "title": "全程跟踪汇报",
+            "desc": "班主任 / 教务老师全程跟踪汇报，覆盖从身份规划到签证落地的全流程。"
+          }
+        ],
+        "whySFK": [
+          {
+            "t": "全球化艺术资源网络",
+            "d": "整合伦敦、巴黎、纽约、东京、墨尔本、阿姆斯特丹等全球核心艺术城市的合作画廊资源，并与国际知名时尚与艺术媒体深度合作。"
+          },
+          {
+            "t": "全链条系统化陪伴",
+            "d": "从入学到签证获批的闭环服务：身份与履历规划、国际艺术教育课程、展览与曝光机会、推荐信、材料准备与签证落地。"
+          },
+          {
+            "t": "证据链思维",
+            "d": "GTV 拼的是证据链，而非单纯学历或简历长度——把「行业影响力」转化为可执行、可验证、可呈现的证据链条。"
+          },
+          {
+            "t": "自由的身份框架",
+            "d": "不绑雇主、可就业可创业、家属可同行、国际流动性强——GTV 给你一个自由、长期、可持续发展的身份框架。"
+          }
+        ],
+        "closing": {
+          "cn": "GTV 的价值不只是「先拿到英国居留」——更在于一个自由、长期、可持续发展的身份框架。",
+          "en": "More than residency — a free, long-term and sustainable framework for your art career."
+        },
+        "levels": [
+          "ug",
+          "pg"
+        ]
+      },
+      {
+        "id": "elite-incubator",
+        "badge": "课程待录入",
+        "tileVariant": null,
+        "cover": "",
+        "placeholder": true,
+        "meta": {
+          "eyebrow": "Global Talent Visa｜艺术精英计划",
+          "titleEn": "Young Artist Incubator",
+          "titleCn": "青年艺术家孵化计划",
+          "desc": "【占位】课程介绍待提供。",
+          "chips": [
+            "占位标签"
+          ]
+        },
+        "snapshot": [
+          {
+            "k": "占位指标 A",
+            "v": "【占位】待提供。"
+          },
+          {
+            "k": "占位指标 B",
+            "v": "【占位】待提供。"
+          },
+          {
+            "k": "占位指标 C",
+            "v": "【占位】待提供。"
+          }
+        ],
+        "curriculum": [
+          {
+            "title": "课程模块二-1（占位）",
+            "desc": "【占位】模块说明待提供。"
+          },
+          {
+            "title": "课程模块二-2（占位）",
+            "desc": "【占位】模块说明待提供。"
+          },
+          {
+            "title": "课程模块二-3（占位）",
+            "desc": "【占位】模块说明待提供。"
+          }
+        ],
+        "whySFK": [
+          {
+            "t": "占位亮点（待提供）",
+            "d": "【占位】说明文字待提供。"
+          },
+          {
+            "t": "占位亮点（待提供）",
+            "d": "【占位】说明文字待提供。"
+          }
+        ],
+        "closing": {
+          "cn": "【占位】结语待提供。",
+          "en": "Placeholder closing."
+        },
+        "levels": [
+          "ug",
+          "pg"
+        ]
+      }
+    ],
+    "overseas": [
+      {
+        "id": "overseas-program",
+        "badge": "课程待录入",
+        "tileVariant": null,
+        "cover": "",
+        "placeholder": true,
+        "meta": {
+          "eyebrow": "Overseas Programs｜境外项目",
+          "titleEn": "Overseas Program",
+          "titleCn": "境外项目",
+          "desc": "【占位】课程介绍待提供。",
+          "chips": [
+            "占位标签"
+          ]
+        },
+        "levels": [
+          "ug",
+          "pg"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "id": "frontier-lecture",
+        "badge": "课程待录入",
+        "tileVariant": null,
+        "cover": "",
+        "placeholder": true,
+        "meta": {
+          "eyebrow": "Art Frontier Lectures｜艺术前沿讯息讲座",
+          "titleEn": "Art Frontier Lecture",
+          "titleCn": "艺术前沿讯息讲座",
+          "desc": "【占位】课程介绍待提供。",
+          "chips": [
+            "占位标签"
+          ]
+        },
+        "levels": [
+          "ug",
+          "pg"
         ]
       }
     ]
@@ -5089,6 +5359,10 @@ window.SFK_DATA = {
         "label": "🇭🇰 港新"
       },
       {
+        "id": "JP",
+        "label": "🇯🇵 日本"
+      },
+      {
         "id": "OTHER",
         "label": "🌏 其他"
       }
@@ -5101,6 +5375,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 01",
           "tags": [
             "us-top30"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5109,6 +5388,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 02",
           "tags": [
             "us-top30"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5117,6 +5401,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 03",
           "tags": [
             "us-top30"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5125,6 +5414,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 04",
           "tags": [
             "us-top30"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5133,6 +5427,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 05",
           "tags": [
             "us-top30"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5141,6 +5440,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 06",
           "tags": [
             "us-top30"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5149,6 +5453,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 07",
           "tags": [
             "us-top30"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5157,6 +5466,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 08",
           "tags": [
             "us-top30"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5165,6 +5479,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 09",
           "tags": [
             "us-top30"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5173,6 +5492,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 10",
           "tags": [
             "us-top30"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5181,6 +5505,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 11",
           "tags": [
             "us-top30"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5189,6 +5518,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 12",
           "tags": [
             "us-top30"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5197,6 +5531,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 13",
           "tags": [
             "us-top30"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5205,6 +5544,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 14",
           "tags": [
             "us-top30"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5213,6 +5557,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 15",
           "tags": [
             "liberal-arts"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5221,6 +5570,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 16",
           "tags": [
             "liberal-arts"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5229,6 +5583,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 17",
           "tags": [
             "liberal-arts"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5237,6 +5596,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 18",
           "tags": [
             "liberal-arts"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5245,6 +5609,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 19",
           "tags": [
             "liberal-arts"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5253,6 +5622,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 20",
           "tags": [
             "liberal-arts"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5261,6 +5635,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 21",
           "tags": [
             "liberal-arts"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5269,6 +5648,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 22",
           "tags": [
             "liberal-arts"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5277,6 +5661,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 23",
           "tags": [
             "liberal-arts"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5285,6 +5674,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 24",
           "tags": [
             "liberal-arts"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5293,6 +5687,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 25",
           "tags": [
             "liberal-arts"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5301,6 +5700,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 26",
           "tags": [
             "liberal-arts"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5309,6 +5713,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 27",
           "tags": [
             "risd"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5317,6 +5726,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 28",
           "tags": [
             "risd"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5325,6 +5739,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 29",
           "tags": [
             "risd"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5333,6 +5752,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 30",
           "tags": [
             "risd"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5341,6 +5765,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 31",
           "tags": [
             "risd"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5349,6 +5778,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 32",
           "tags": [
             "risd"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5357,6 +5791,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 33",
           "tags": [
             "risd"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5365,6 +5804,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 34",
           "tags": [
             "risd"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5373,6 +5817,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 35",
           "tags": [
             "risd"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5381,6 +5830,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 36",
           "tags": [
             "risd"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         }
       ],
@@ -5391,6 +5845,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 01",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5399,6 +5858,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 02",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5407,6 +5871,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 03",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5415,6 +5884,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 04",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5423,6 +5897,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 05",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5431,6 +5910,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 06",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5439,6 +5923,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 07",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5447,6 +5936,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 08",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5455,6 +5949,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 09",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5463,6 +5962,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 10",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5471,6 +5975,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 11",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5479,6 +5988,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 12",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5487,6 +6001,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 13",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5495,6 +6014,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 14",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5503,6 +6027,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 15",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5511,6 +6040,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 16",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5519,6 +6053,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 17",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5527,6 +6066,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 18",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5535,6 +6079,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 19",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5543,6 +6092,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 20",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5551,6 +6105,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 21",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5559,6 +6118,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 22",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5567,6 +6131,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 23",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5575,6 +6144,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 24",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5583,6 +6157,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 25",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5591,6 +6170,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 26",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5599,6 +6183,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 27",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5607,6 +6196,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 28",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5615,6 +6209,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 29",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5623,6 +6222,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 30",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5631,6 +6235,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 31",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5639,6 +6248,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 32",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5647,6 +6261,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 33",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5655,6 +6274,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 34",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5663,6 +6287,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 35",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5671,6 +6300,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 36",
           "tags": [
             "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         }
       ],
@@ -5681,6 +6315,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 01",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5689,6 +6328,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 02",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5697,6 +6341,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 03",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5705,6 +6354,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 04",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5713,6 +6367,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 05",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5721,6 +6380,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 06",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5729,6 +6393,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 07",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5737,6 +6406,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 08",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5745,6 +6419,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 09",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5753,6 +6432,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 10",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5761,6 +6445,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 11",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5769,6 +6458,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 12",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5777,6 +6471,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 13",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5785,6 +6484,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 14",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5793,6 +6497,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 15",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5801,6 +6510,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 16",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5809,6 +6523,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 17",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5817,6 +6536,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 18",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5825,6 +6549,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 19",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5833,6 +6562,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 20",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5841,6 +6575,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 21",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5849,6 +6588,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 22",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5857,6 +6601,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 23",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5865,6 +6614,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 24",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5873,6 +6627,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 25",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5881,6 +6640,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 26",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5889,6 +6653,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 27",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5897,6 +6666,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 28",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5905,6 +6679,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 29",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5913,6 +6692,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 30",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5921,6 +6705,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 31",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5929,6 +6718,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 32",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5937,6 +6731,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 33",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5945,6 +6744,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 34",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5953,6 +6757,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 35",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         },
         {
@@ -5961,6 +6770,11 @@ window.SFK_DATA = {
           "en": "PLACEHOLDER 36",
           "tags": [
             "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
           ]
         }
       ],
@@ -5969,220 +6783,803 @@ window.SFK_DATA = {
           "count": "—",
           "zh": "占位院校 01",
           "en": "PLACEHOLDER 01",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 02",
           "en": "PLACEHOLDER 02",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 03",
           "en": "PLACEHOLDER 03",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 04",
           "en": "PLACEHOLDER 04",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 05",
           "en": "PLACEHOLDER 05",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 06",
           "en": "PLACEHOLDER 06",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 07",
           "en": "PLACEHOLDER 07",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 08",
           "en": "PLACEHOLDER 08",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 09",
           "en": "PLACEHOLDER 09",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 10",
           "en": "PLACEHOLDER 10",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 11",
           "en": "PLACEHOLDER 11",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 12",
           "en": "PLACEHOLDER 12",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 13",
           "en": "PLACEHOLDER 13",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 14",
           "en": "PLACEHOLDER 14",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 15",
           "en": "PLACEHOLDER 15",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 16",
           "en": "PLACEHOLDER 16",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 17",
           "en": "PLACEHOLDER 17",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 18",
           "en": "PLACEHOLDER 18",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 19",
           "en": "PLACEHOLDER 19",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 20",
           "en": "PLACEHOLDER 20",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 21",
           "en": "PLACEHOLDER 21",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 22",
           "en": "PLACEHOLDER 22",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 23",
           "en": "PLACEHOLDER 23",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 24",
           "en": "PLACEHOLDER 24",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 25",
           "en": "PLACEHOLDER 25",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 26",
           "en": "PLACEHOLDER 26",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 27",
           "en": "PLACEHOLDER 27",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 28",
           "en": "PLACEHOLDER 28",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 29",
           "en": "PLACEHOLDER 29",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 30",
           "en": "PLACEHOLDER 30",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 31",
           "en": "PLACEHOLDER 31",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 32",
           "en": "PLACEHOLDER 32",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 33",
           "en": "PLACEHOLDER 33",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 34",
           "en": "PLACEHOLDER 34",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 35",
           "en": "PLACEHOLDER 35",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         },
         {
           "count": "—",
           "zh": "占位院校 36",
           "en": "PLACEHOLDER 36",
-          "tags": []
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        }
+      ],
+      "JP": [
+        {
+          "count": "—",
+          "zh": "占位院校 01",
+          "en": "PLACEHOLDER 01",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 02",
+          "en": "PLACEHOLDER 02",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 03",
+          "en": "PLACEHOLDER 03",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 04",
+          "en": "PLACEHOLDER 04",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 05",
+          "en": "PLACEHOLDER 05",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 06",
+          "en": "PLACEHOLDER 06",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 07",
+          "en": "PLACEHOLDER 07",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 08",
+          "en": "PLACEHOLDER 08",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 09",
+          "en": "PLACEHOLDER 09",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 10",
+          "en": "PLACEHOLDER 10",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 11",
+          "en": "PLACEHOLDER 11",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 12",
+          "en": "PLACEHOLDER 12",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 13",
+          "en": "PLACEHOLDER 13",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 14",
+          "en": "PLACEHOLDER 14",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 15",
+          "en": "PLACEHOLDER 15",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 16",
+          "en": "PLACEHOLDER 16",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 17",
+          "en": "PLACEHOLDER 17",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 18",
+          "en": "PLACEHOLDER 18",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 19",
+          "en": "PLACEHOLDER 19",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 20",
+          "en": "PLACEHOLDER 20",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 21",
+          "en": "PLACEHOLDER 21",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 22",
+          "en": "PLACEHOLDER 22",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 23",
+          "en": "PLACEHOLDER 23",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 24",
+          "en": "PLACEHOLDER 24",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 25",
+          "en": "PLACEHOLDER 25",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 26",
+          "en": "PLACEHOLDER 26",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 27",
+          "en": "PLACEHOLDER 27",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 28",
+          "en": "PLACEHOLDER 28",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 29",
+          "en": "PLACEHOLDER 29",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 30",
+          "en": "PLACEHOLDER 30",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 31",
+          "en": "PLACEHOLDER 31",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 32",
+          "en": "PLACEHOLDER 32",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 33",
+          "en": "PLACEHOLDER 33",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 34",
+          "en": "PLACEHOLDER 34",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 35",
+          "en": "PLACEHOLDER 35",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "count": "—",
+          "zh": "占位院校 36",
+          "en": "PLACEHOLDER 36",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ]
         }
       ]
-    }
+    },
+    "seasonFilters": [
+      "2024",
+      "2025",
+      "2026"
+    ]
   },
   "instructors": {
     "rows": 4,

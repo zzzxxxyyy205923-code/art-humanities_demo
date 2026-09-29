@@ -12,6 +12,18 @@
     "catalog": {
       "eyebrow": "Program Catalog",
       "title": "课程目录"
+    },
+    "elite": {
+      "eyebrow": "Global Talent Visa",
+      "title": "艺术精英计划"
+    },
+    "overseas": {
+      "eyebrow": "Overseas Programs",
+      "title": "境外项目"
+    },
+    "frontier": {
+      "eyebrow": "Art Frontier Lectures",
+      "title": "艺术前沿讯息讲座"
     }
   },
   "longform": [
@@ -97,6 +109,9 @@
         "uk-g5",
         "risd",
         "hk-sg"
+      ],
+      "levels": [
+        "pg"
       ]
     },
     {
@@ -177,6 +192,9 @@
         "uk-g5",
         "risd",
         "hk-sg"
+      ],
+      "levels": [
+        "pg"
       ]
     },
     {
@@ -261,6 +279,9 @@
         "uk-g5",
         "risd",
         "hk-sg"
+      ],
+      "levels": [
+        "pg"
       ]
     }
   ],
@@ -343,6 +364,9 @@
         "uk-g5",
         "risd",
         "hk-sg"
+      ],
+      "levels": [
+        "pg"
       ]
     },
     {
@@ -423,6 +447,10 @@
         "uk-g5",
         "risd",
         "hk-sg"
+      ],
+      "levels": [
+        "ug",
+        "pg"
       ]
     },
     {
@@ -503,6 +531,9 @@
         "uk-g5",
         "risd",
         "hk-sg"
+      ],
+      "levels": [
+        "pg"
       ]
     },
     {
@@ -583,6 +614,219 @@
         "uk-g5",
         "risd",
         "hk-sg"
+      ],
+      "levels": [
+        "ug",
+        "pg"
+      ]
+    }
+  ],
+  "elite": [
+    {
+      "id": "elite-uk-plan",
+      "badge": "UK Centre",
+      "tileVariant": null,
+      "cover": "",
+      "placeholder": false,
+      "meta": {
+        "eyebrow": "UK Centre｜艺术生留英 · Global Talent Visa",
+        "titleEn": "Global Talent Visa",
+        "titleCn": "艺术生留英计划",
+        "desc": "面向艺术、设计、建筑、影视、时尚等创意从业者的留英发展方案：以英国全球人才签证（Global Talent Visa）为目标路径——它不是传统「先拿 offer、再由雇主担保」的工签，而是「先认人、再给发展空间」的路线。从艺术家身份规划、展览与媒体报道、推荐信，到移民律师递交与签证落地，完成全链条孵化。",
+        "chips": [
+          "无需雇主担保",
+          "3 / 5 年转永居",
+          "艺术家身份孵化",
+          "招募中"
+        ]
+      },
+      "snapshot": [
+        {
+          "k": "无需雇主担保",
+          "v": "无强制语言与薪资要求，可受雇、自雇或创业"
+        },
+        {
+          "k": "3 / 5 年",
+          "v": "杰出人才 3 年、杰出潜力 5 年转永居"
+        },
+        {
+          "k": "14 项材料",
+          "v": "3 封推荐信 + 10 项证据（展览 / 媒体 / 奖项 3 类）+ 1 份艺术家 CV"
+        },
+        {
+          "k": "8–12 周",
+          "v": "Stage 1 背书审核周期，背书信 3 个月内有效"
+        }
+      ],
+      "curriculum": [
+        {
+          "title": "GTV 申请咨询与评估",
+          "desc": "信息咨询与初步作品评估（1 次），判断当前积累与 Exceptional Talent / Exceptional Promise 两条路径的匹配度。"
+        },
+        {
+          "title": "艺术家身份规划",
+          "desc": "申请人艺术家身份提炼与整体规划（1 次）：围绕过去 3–5 年的行业成就或认可，明确「你是谁、影响力何在」的叙事主线。"
+        },
+        {
+          "title": "艺术家 CV 与个人网站",
+          "desc": "打造艺术家时间线 CV（1 份，清晰呈现近 3–5 年职业轨迹），并完成个人完整专业艺术网站搭建（1 次，不含运营）。"
+        },
+        {
+          "title": "展览体系搭建",
+          "desc": "依托 GTV 合作画廊，完成国内或海外个展 1 次、群展 6 次——伦敦及全球的展览经历是 GTV 证据链的核心。"
+        },
+        {
+          "title": "媒体报道",
+          "desc": "资深艺评人发表与专业艺术平台媒体报道共 4 篇，来自与国际知名艺术媒体的深度合作，符合 GTV 审核标准的国际曝光。"
+        },
+        {
+          "title": "推荐信",
+          "desc": "由参加过展览的画廊主或策展人出具推荐信 3 封（至少包含一封英国机构推荐信），须表明申请人有潜力成为其专业领域的领导者。"
+        },
+        {
+          "title": "艺术作品辅导",
+          "desc": "申请人艺术作品指导 2–4 个项目：建议准备至少 4–6 个作品（最好有系列性），回应「对英国社会文化的贡献」这一审核偏好。"
+        },
+        {
+          "title": "证据材料与律师递交",
+          "desc": "14 项申请材料的证据排版设计（1 次），移民律师完成材料整体审核及 Stage 1 背书提交（1 次）；Stage 2 签证申请在背书信 3 个月内完成。"
+        },
+        {
+          "title": "全程跟踪汇报",
+          "desc": "班主任 / 教务老师全程跟踪汇报，覆盖从身份规划到签证落地的全流程。"
+        }
+      ],
+      "whySFK": [
+        {
+          "t": "全球化艺术资源网络",
+          "d": "整合伦敦、巴黎、纽约、东京、墨尔本、阿姆斯特丹等全球核心艺术城市的合作画廊资源，并与国际知名时尚与艺术媒体深度合作。"
+        },
+        {
+          "t": "全链条系统化陪伴",
+          "d": "从入学到签证获批的闭环服务：身份与履历规划、国际艺术教育课程、展览与曝光机会、推荐信、材料准备与签证落地。"
+        },
+        {
+          "t": "证据链思维",
+          "d": "GTV 拼的是证据链，而非单纯学历或简历长度——把「行业影响力」转化为可执行、可验证、可呈现的证据链条。"
+        },
+        {
+          "t": "自由的身份框架",
+          "d": "不绑雇主、可就业可创业、家属可同行、国际流动性强——GTV 给你一个自由、长期、可持续发展的身份框架。"
+        }
+      ],
+      "closing": {
+        "cn": "GTV 的价值不只是「先拿到英国居留」——更在于一个自由、长期、可持续发展的身份框架。",
+        "en": "More than residency — a free, long-term and sustainable framework for your art career."
+      },
+      "levels": [
+        "ug",
+        "pg"
+      ]
+    },
+    {
+      "id": "elite-incubator",
+      "badge": "课程待录入",
+      "tileVariant": null,
+      "cover": "",
+      "placeholder": true,
+      "meta": {
+        "eyebrow": "Global Talent Visa｜艺术精英计划",
+        "titleEn": "Young Artist Incubator",
+        "titleCn": "青年艺术家孵化计划",
+        "desc": "【占位】课程介绍待提供。",
+        "chips": [
+          "占位标签"
+        ]
+      },
+      "snapshot": [
+        {
+          "k": "占位指标 A",
+          "v": "【占位】待提供。"
+        },
+        {
+          "k": "占位指标 B",
+          "v": "【占位】待提供。"
+        },
+        {
+          "k": "占位指标 C",
+          "v": "【占位】待提供。"
+        }
+      ],
+      "curriculum": [
+        {
+          "title": "课程模块二-1（占位）",
+          "desc": "【占位】模块说明待提供。"
+        },
+        {
+          "title": "课程模块二-2（占位）",
+          "desc": "【占位】模块说明待提供。"
+        },
+        {
+          "title": "课程模块二-3（占位）",
+          "desc": "【占位】模块说明待提供。"
+        }
+      ],
+      "whySFK": [
+        {
+          "t": "占位亮点（待提供）",
+          "d": "【占位】说明文字待提供。"
+        },
+        {
+          "t": "占位亮点（待提供）",
+          "d": "【占位】说明文字待提供。"
+        }
+      ],
+      "closing": {
+        "cn": "【占位】结语待提供。",
+        "en": "Placeholder closing."
+      },
+      "levels": [
+        "ug",
+        "pg"
+      ]
+    }
+  ],
+  "overseas": [
+    {
+      "id": "overseas-program",
+      "badge": "课程待录入",
+      "tileVariant": null,
+      "cover": "",
+      "placeholder": true,
+      "meta": {
+        "eyebrow": "Overseas Programs｜境外项目",
+        "titleEn": "Overseas Program",
+        "titleCn": "境外项目",
+        "desc": "【占位】课程介绍待提供。",
+        "chips": [
+          "占位标签"
+        ]
+      },
+      "levels": [
+        "ug",
+        "pg"
+      ]
+    }
+  ],
+  "frontier": [
+    {
+      "id": "frontier-lecture",
+      "badge": "课程待录入",
+      "tileVariant": null,
+      "cover": "",
+      "placeholder": true,
+      "meta": {
+        "eyebrow": "Art Frontier Lectures｜艺术前沿讯息讲座",
+        "titleEn": "Art Frontier Lecture",
+        "titleCn": "艺术前沿讯息讲座",
+        "desc": "【占位】课程介绍待提供。",
+        "chips": [
+          "占位标签"
+        ]
+      },
+      "levels": [
+        "ug",
+        "pg"
       ]
     }
   ]

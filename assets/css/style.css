@@ -396,6 +396,8 @@ p { margin: 0 0 14px; text-wrap: pretty; }
 /* ═══ 视图切换（单页哈希路由） ═══ */
 .view { display: none; }
 .view.is-active { display: block; }
+/* 下架视图的保险：hidden 属性优先级高于 .view.is-active，防止路由激活时意外显示 */
+[hidden] { display: none !important; }
 .section__header { margin-bottom: 42px; }
 /* 小标签：干净的全大写字母，去掉胶囊描边等冗余装饰 */
 .section__eyebrow {
@@ -589,7 +591,8 @@ p { margin: 0 0 14px; text-wrap: pretty; }
   background: var(--surface); border: 1px solid var(--line);
   border-radius: var(--radius); overflow: hidden; transition: border-color .2s, background .2s;
 }
-.case-filter.is-open { border-color: var(--brand); }
+/* 仅悬停时边缘发亮（青绿描边），亮度为原来的 60%；展开态不再常亮 */
+.case-filter:hover { border-color: rgba(99, 230, 212, .6); }
 .case-filter__head {
   width: 100%; display: flex; align-items: center; gap: 12px;
   padding: 14px 18px; border: 0; background: transparent; cursor: pointer;
@@ -602,9 +605,8 @@ p { margin: 0 0 14px; text-wrap: pretty; }
   flex: 0 0 auto; width: 13px; height: 13px; border-radius: 3px;
   border: 2px solid var(--brand); background: transparent; transition: .2s;
 }
-.case-filter__head:hover .case-filter__square,
-.case-filter.is-open .case-filter__square { box-shadow: 0 0 0 3px rgba(99,230,212,.16); }
-.case-filter.is-open .case-filter__square { background: var(--brand); }
+/* 方块光晕：仅悬停出现，强度为原 .16 的 60%；展开态不再保持点亮 */
+.case-filter__head:hover .case-filter__square { box-shadow: 0 0 0 3px rgba(99,230,212,.10); }
 .case-filter__name {
   display: inline-flex; align-items: baseline; gap: 8px;
   font-size: var(--fs-body); font-weight: var(--fw-semibold);
@@ -627,7 +629,7 @@ p { margin: 0 0 14px; text-wrap: pretty; }
   position: relative; max-height: 0; opacity: 0; overflow: hidden;
   transition: max-height .42s cubic-bezier(.22,.61,.36,1), opacity .28s ease;
 }
-.case-filter.is-open .case-filter__panel { max-height: 640px; opacity: 1; }
+.case-filter.is-open .case-filter__panel { max-height: 1600px; opacity: 1; }   /* 提高上限：全部展开时不截断 */
 .case-filter__sweep {
   position: absolute; left: 0; right: 0; top: 0; height: 2px; opacity: 0; pointer-events: none;
   background: linear-gradient(90deg, transparent, var(--brand) 35%, var(--brand) 65%, transparent);
@@ -640,14 +642,15 @@ p { margin: 0 0 14px; text-wrap: pretty; }
   100% { transform: translateY(340px); opacity: 0; }
 }
 .case-filter__hint { margin: 0 18px 12px; color: var(--text-dim); font-size: var(--fs-small); line-height: 1.6; }
-.case-filter__opts { display: flex; flex-wrap: wrap; gap: 8px; padding: 4px 18px 18px; }
+.case-filter__opts { display: flex; flex-wrap: wrap; gap: 6px; padding: 2px 16px 14px; }
 /* 子类较多的一类（就业导向 10 项）走网格，名称可完整显示不挤压 */
-.case-filter__opts--grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(224px, 1fr)); }
-.case-filter__btn { display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; text-align: left; }
+.case-filter__opts--grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+/* 子标签统一调小（覆盖 .tab-btn 的尺寸）：整体层级更紧凑 */
+.case-filter__btn { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; font-size: var(--fs-label); text-align: left; }
 .case-filter__opts--grid .case-filter__btn { width: 100%; }
 .case-filter__idx { font-family: var(--font-mono); font-size: 10px; color: var(--brand); opacity: .8; }
 .case-filter__txt { flex: 1; }
-.case-filter__n { font-family: var(--font-mono); font-size: 11px; opacity: .65; font-variant-numeric: tabular-nums; }
+.case-filter__n { font-family: var(--font-mono); font-size: 10px; opacity: .65; font-variant-numeric: tabular-nums; }
 .case-result {
   display: flex; align-items: center; gap: 14px;
   color: var(--text-muted); font-size: var(--fs-small); margin-bottom: 24px;
@@ -2106,6 +2109,16 @@ html.is-overlay-open { overflow: hidden; }
 
 /* 地区筛选标签：胶囊按钮，选中态填青绿 + 柔和辉光，与站内主色一致 */
 .filter-bar { display: flex; gap: var(--space-2); flex-wrap: wrap; align-items: center; margin-bottom: var(--space-5); }
+/* 带小标题的筛选组（OFFER 板块：申请季 / 国家）：小标题与按钮之间以“|”划分，
+   两组之间留一段间距；标题用弱化小字，不抢按钮层级 */
+.filter-group { display: flex; align-items: center; gap: 10px; }
+.filter-group + .filter-group { margin-left: 36px; }   /* 组间距：18px → 36px（×2） */
+.filter-group__label {
+  font-size: var(--text-xs); color: #FFFFFF; letter-spacing: .06em; white-space: nowrap;
+  font-weight: var(--fw-bold);   /* 加粗 + 纯白：深色底上清晰醒目；不加下划线等装饰 */
+}
+.filter-group__sep { color: var(--line-strong); font-weight: 300; user-select: none; }
+.filter-group__btns { display: flex; gap: var(--space-2); flex-wrap: wrap; align-items: center; }
 .filter-btn {
   padding: 7px 16px; font-size: var(--text-xs);
   background: var(--surface-2); border: 1px solid var(--line);
@@ -2231,3 +2244,7 @@ html.is-overlay-open { overflow: hidden; }
 @media (max-width: 600px) {
   .region-tab { width: 104px; padding: 4px 10px; }   /* 同步等比缩减 15% */
 }
+
+/* 录取案例：标题说明文字扁平化 —— 横向拉长（取消 34em 限宽，通栏排布）
+   并收紧行高降低整体高度，形成更扁的排版效果 */
+#cases .section__desc { max-width: none; line-height: 1.35; }

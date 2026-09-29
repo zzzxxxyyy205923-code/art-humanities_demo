@@ -260,17 +260,18 @@ const Header = {
               <span class="navbar__logo-zh">艺术人文科系</span>
             </span>
           </a>
-          <span class="navbar__divider"></span>
-          <!-- “主要内容”触发器：绿色空心方框；子层级由全屏浮层承载 -->
+        </div>
+        <div class="navbar__right">
+          ${main.items.map(it => `<a class="nav-link nav-link--main" href="${it.href}" data-view="${it.id}">${it.label}</a>`).join('')}
+          <!-- “主要内容”触发器（绿色空心方框）：已从左上角移至右侧链接区末位（原“研究生”位置）；
+               本科爬藤 / 全日制 / 研究生 三个入口已收进全屏目录页（左上角仅保留 Logo 与站名）。
+               main.items 由 meta.json 驱动，恢复时把 archived 条目移回 items 即会在此重新渲染 -->
           <div class="nav-dropdown" id="main-dropdown">
             <button class="nav-btn nav-btn--square" onclick="NavOverlay.toggle()"
                     aria-label="${main.label}" title="${main.label}">
               <span class="nav-square"></span>
             </button>
           </div>
-        </div>
-        <div class="navbar__right">
-          ${main.items.map(it => `<a class="nav-link nav-link--main" href="${it.href}" data-view="${it.id}">${it.label}</a>`).join('')}
           ${right.map(it => `<a class="nav-link nav-link--section-mobile" href="${it.href}" data-view="${it.id}">${it.label}</a>`).join('')}
           <span class="navbar__divider"></span>
           <a class="nav-btn nav-btn--cta" href="#/employment">规划我的未来</a>
@@ -372,6 +373,20 @@ const PAGES = {
 const CourseProducts = {
   esc(v) { return DirectionsSection.escape(v == null ? '' : String(v)); },
 
+  /* 分区骨架：key 对应 course-products.json 的数据数组；
+     elite 与 longform 同用长线式卡片/详情，catalog/overseas/frontier 同用目录式 */
+  ZONES: [
+    { key: 'elite',    grid: 'cp-elite-grid',    group: 'longform' },
+    { key: 'longform', grid: 'cp-longform-grid', group: 'longform' },
+    { key: 'catalog',  grid: 'cp-catalog-grid',  group: 'catalog' },
+    { key: 'overseas', grid: 'cp-overseas-grid', group: 'catalog' },
+    { key: 'frontier', grid: 'cp-frontier-grid', group: 'catalog' }
+  ],
+
+  /* 学历层次筛选状态：'' = 全部；'ug' = 本科；'pg' = 研究生 */
+  _level: '',
+  _levelBound: false,
+
   build() {
     const d = DATA.cache['course-products'];
     if (!d) return;
@@ -381,15 +396,48 @@ const CourseProducts = {
     set('cp-eyebrow', hero.eyebrow);
     set('cp-title', hero.title);
     set('cp-sub', hero.sub);
-    if (zones.longform) { set('cp-longform-eyebrow', zones.longform.eyebrow); set('cp-longform-title', zones.longform.title); }
-    if (zones.catalog) { set('cp-catalog-eyebrow', zones.catalog.eyebrow); set('cp-catalog-title', zones.catalog.title); }
+    this.ZONES.forEach(z => {
+      const zc = zones[z.key];
+      if (zc) { set('cp-' + z.key + '-eyebrow', zc.eyebrow); set('cp-' + z.key + '-title', zc.title); }
+    });
 
-    const lf = document.getElementById('cp-longform-grid');
-    const cat = document.getElementById('cp-catalog-grid');
-    if (lf) lf.innerHTML = (d.longform || []).map(p => this.card(p, 'longform')).join('');
-    if (cat) cat.innerHTML = (d.catalog || []).map(p => this.card(p, 'catalog')).join('');
-
+    this.renderLevelBar();
+    this.renderGrids();
     this.bind();
+  },
+
+  /* 标题下方「本科 / 研究生」筛选：单击选中、再击取消（取消后展示全部课程） */
+  renderLevelBar() {
+    const bar = document.getElementById('cp-level-bar');
+    if (!bar) return;
+    const items = [{ id: 'ug', label: '本科' }, { id: 'pg', label: '研究生' }];
+    bar.innerHTML = items.map(it =>
+      `<button class="filter-btn${this._level === it.id ? ' is-active' : ''}" type="button" data-level="${it.id}">${it.label}</button>`).join('');
+    if (!this._levelBound) {
+      this._levelBound = true;
+      bar.addEventListener('click', e => {
+        const b = e.target.closest('.filter-btn');
+        if (!b) return;
+        const lv = b.getAttribute('data-level');
+        this._level = this._level === lv ? '' : lv;
+        this.renderLevelBar();
+        this.renderGrids();
+      });
+    }
+  },
+
+  /* 按课程条目的 levels 过滤渲染五个分区；过滤后为空的分区整体隐藏，保持版面协调 */
+  renderGrids() {
+    const d = DATA.cache['course-products'];
+    if (!d) return;
+    this.ZONES.forEach(z => {
+      const g = document.getElementById(z.grid);
+      if (!g) return;
+      const list = (d[z.key] || []).filter(p => !this._level || (p.levels || []).includes(this._level));
+      g.innerHTML = list.map(p => this.card(p, z.group)).join('');
+      const zone = g.closest('.cp-zone');
+      if (zone) zone.style.display = list.length ? '' : 'none';
+    });
   },
 
   card(p, group) {
@@ -424,7 +472,7 @@ const CourseProducts = {
     if (btn) btn.addEventListener('click', () => this.close());
     document.addEventListener('keydown', e => { if (e.key === 'Escape') this.close(); });
 
-    ['cp-longform-grid', 'cp-catalog-grid'].forEach(id => {
+    ['cp-elite-grid', 'cp-longform-grid', 'cp-catalog-grid', 'cp-overseas-grid', 'cp-frontier-grid'].forEach(id => {
       const grid = document.getElementById(id);
       if (!grid) return;
       grid.addEventListener('click', e => {
@@ -444,8 +492,10 @@ const CourseProducts = {
   open(id, group) {
     const d = DATA.cache['course-products'];
     if (!d || !this.body) return;
-    const list = group === 'catalog' ? (d.catalog || []) : (d.longform || []);
-    const p = list.filter(x => x.id === id)[0];
+    /* 详情数据在全部课程组中查找（长线旗舰 / 艺术精英 → 长线式详情；
+       课程目录 / 境外项目 / 艺术前沿讯息讲座 → 目录式详情，由各条目自身字段决定层级） */
+    const p = [d.longform, d.elite, d.catalog, d.overseas, d.frontier]
+      .reduce((f, l) => f || ((l || []).filter(x => x.id === id)[0]), null);
     if (!p) return;
     this.body.innerHTML = this.detail(p);
     this.body.classList.add('is-wide');
@@ -516,13 +566,23 @@ const OffersSection = {
     this.rows = d.rows || 4;
     this._expanded = {};
     this._active = (d.filters && d.filters[0] && d.filters[0].id) || 'US';
+    this._seasons = d.seasonFilters || [];
+    this._activeSeason = this._seasons[0] || '';
 
-    const filters = (d.filters || []).map(f =>
+    /* 两组筛选：「申请季」在前、「国家」在后，各带小标题并以“|”划分 */
+    const groupHTML = (label, btns) =>
+      `<div class="filter-group"><span class="filter-group__label">${this.esc(label)}</span><span class="filter-group__sep">|</span><span class="filter-group__btns">${btns}</span></div>`;
+    const seasonBtns = this._seasons.map(s =>
+      `<button class="filter-btn${s === this._activeSeason ? ' is-active' : ''}" type="button" data-season="${this.esc(s)}">${this.esc(s)}</button>`).join('');
+    const countryBtns = (d.filters || []).map(f =>
       `<button class="filter-btn${f.id === this._active ? ' is-active' : ''}" type="button" data-group="${this.esc(f.id)}">${this.esc(f.label)}</button>`
     ).join('');
 
     root.innerHTML = `
-      <div class="filter-bar" id="offers-filter-bar">${filters}</div>
+      <div class="filter-bar" id="offers-filter-bar">
+        ${this._seasons.length ? groupHTML('申请季', seasonBtns) : ''}
+        ${groupHTML('国家', countryBtns)}
+      </div>
       <div class="rough-grid" id="offers-grid">${this._rowsHTML(d, this._active)}</div>
       <div id="offers-more-wrap" style="text-align:center;margin-top:24px;"></div>`;
 
@@ -546,7 +606,8 @@ const OffersSection = {
     if (bar) bar.addEventListener('click', e => {
       const btn = e.target.closest('.filter-btn');
       if (!btn) return;
-      this.filter(btn.getAttribute('data-group'), btn);
+      if (btn.dataset.season) this.filterSeason(btn.dataset.season, btn);
+      else this.filter(btn.getAttribute('data-group'), btn);
     });
     root.addEventListener('click', e => {
       if (e.target.closest('#offers-expand-btn')) this.toggle(this._active);
@@ -554,7 +615,9 @@ const OffersSection = {
   },
 
   _rowsHTML(d, groupId) {
-    const list = (d.groups && d.groups[groupId]) || [];
+    /* 申请季 × 国家 双维度过滤：条目未标注 seasons 时视为全季可见（兼容旧数据） */
+    const list = ((d.groups && d.groups[groupId]) || [])
+      .filter(r => !this._activeSeason || !(r.seasons || []).length || (r.seasons || []).includes(this._activeSeason));
     return list.map(r => `
       <div class="offer-card">
         <div class="offer-card__count">${this.esc(r.count)}</div>
@@ -587,12 +650,23 @@ const OffersSection = {
   },
 
   filter(groupId, btn) {
-    document.querySelectorAll('#offers-filter-bar .filter-btn').forEach(b => b.classList.remove('is-active'));
+    document.querySelectorAll('#offers-filter-bar [data-group]').forEach(b => b.classList.remove('is-active'));
     if (btn) btn.classList.add('is-active');
     this._active = groupId;
+    this._rerenderGrid();
+  },
+
+  filterSeason(season, btn) {
+    document.querySelectorAll('#offers-filter-bar [data-season]').forEach(b => b.classList.remove('is-active'));
+    if (btn) btn.classList.add('is-active');
+    this._activeSeason = season;
+    this._rerenderGrid();
+  },
+
+  _rerenderGrid() {
     const grid = document.getElementById('offers-grid');
     const d = DATA.cache['offers'];
-    if (grid && d) grid.innerHTML = this._rowsHTML(d, groupId);
+    if (grid && d) grid.innerHTML = this._rowsHTML(d, this._active);
     this._applyClamp();
   },
 
@@ -1112,7 +1186,7 @@ const CasesPage = {
 
   /* 各类的当前选中值；缺省 'all' = 不限 */
   state: {},
-  openId: null,          // 当前展开的筛选类；null = 全部收起
+  openIds: null,         // 展开中的筛选类集合（默认全部展开，满足「同时完整展示、互不遮挡」）
   bound: false,
 
   build() {
@@ -1129,6 +1203,12 @@ const CasesPage = {
       .map(f => ({ ...f, options: this.resolveOptions(f) }));
     this.filters.forEach(f => { if (this.state[f.id] === undefined) this.state[f.id] = 'all'; });
 
+    /* 申请维度（本科 / 研究生）：默认本科（当前案例数据均为本科录取）；
+       选中维度后，下方按层级显示对应的筛选行 */
+    this.dimensionCfg = data.dimension || null;
+    this.dimension = 'ug';
+    this.openIds = new Set(['dimension', ...this.filters.map(f => f.id)]);
+
     this.all = [
       ...data.illustration.map(c => ({ ...c, branch: '插画' })),
       ...data['fine-art'].map(c => ({ ...c, branch: '纯艺术' })),
@@ -1137,7 +1217,6 @@ const CasesPage = {
 
     this.renderFilters();
     this.renderGrid();
-    this.bindOutside();
   },
 
   /* 子类来源：filters 里写了 source 就去对应数据里取，否则用内联 options */
@@ -1149,20 +1228,6 @@ const CasesPage = {
     return f.options || [];
   },
 
-  /* 类目之外点击 / ESC → 收起（与导航栏浮层同一套收起手感） */
-  bindOutside() {
-    if (this.bound) return;
-    this.bound = true;
-    document.addEventListener('click', e => {
-      if (!this.openId) return;
-      // 点击后面板会重渲染，e.target 可能已脱离文档（老节点）→ 此时不能判为「点了外面」
-      if (!e.target.isConnected) return;
-      if (this.wrap.contains(e.target)) return;
-      this.closeAll();
-    });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') this.closeAll(); });
-  },
-
   /* 案例在某维度上的取值；取不到 / 不在选项内 → 暂未匹配 */
   valueOf(c, f) {
     const v = c[f.id];
@@ -1170,8 +1235,9 @@ const CasesPage = {
     return f.options.some(o => o.value === v) ? v : this.UNMATCHED;
   },
 
-  /* 除 group 之外其它维度是否都通过（用于算每个子类按钮上的条数） */
+  /* 除 group 之外其它维度是否都通过（用于算每个子类按钮上的条数）；含申请维度 */
   passOthers(c, exceptId) {
+    if (!this.dimOk(c)) return false;
     return this.filters.every(f => {
       if (f.id === exceptId) return true;
       const v = this.state[f.id] || 'all';
@@ -1202,12 +1268,52 @@ const CasesPage = {
     return o ? o.label : '暂未匹配';
   },
 
+  /* 申请维度匹配：本科 = offerType 含「本科 / 大二」；研究生 = 含「研究生 / 硕士」。
+     当前 24 条案例均为本科录取；研究生维度待真实数据就位后自动生效。 */
+  dimMatch(c, level) {
+    const t = c.offerType || '';
+    return level === 'pg' ? /研究生|硕士/.test(t) : /本科|大二/.test(t);
+  },
+  dimOk(c) { return this.dimMatch(c, this.dimension); },
+
   renderFilters() {
     const wrap = this.wrap;
     if (!wrap) return;
-    wrap.innerHTML = this.filters.map(f => {
+    const cfg = this.dimensionCfg || { label: '申请维度', labelEn: 'DIMENSION', options: [] };
+    const dimOpen = this.openIds.has('dimension');
+    const dimCur = (cfg.options.find(o => o.value === this.dimension) || {}).label || '';
+
+    /* 顶层标签「申请维度」：展开后为 本科 / 研究生 两个子标签（附各自行内案例数） */
+    const dimensionBlock = `
+      <div class="case-filter${dimOpen ? ' is-open' : ''}" data-group="dimension">
+        <button type="button" class="case-filter__head" aria-expanded="${dimOpen}"
+                onclick="CasesPage.toggle('dimension')">
+          <span class="case-filter__square" aria-hidden="true"></span>
+          <span class="case-filter__name">${cfg.label}
+            ${cfg.labelEn ? `<span class="case-filter__en u-en">${cfg.labelEn}</span>` : ''}
+          </span>
+          <span class="case-filter__cur is-set">${dimCur}</span>
+          <span class="case-filter__caret" aria-hidden="true"></span>
+        </button>
+        <div class="case-filter__panel">
+          <span class="case-filter__sweep" aria-hidden="true"></span>
+          <div class="case-filter__opts">
+            ${cfg.options.map(o => `
+              <button type="button"
+                      class="tab-btn case-filter__btn${this.dimension === o.value ? ' is-active' : ''}"
+                      data-dimension="${o.value}" aria-pressed="${this.dimension === o.value}"
+                      onclick="CasesPage.pickDimension('${o.value}')"><span class="case-filter__txt">${o.label}</span><span class="case-filter__n">${this.all.filter(c => this.dimMatch(c, o.value)).length}</span></button>
+            `).join('')}
+          </div>
+        </div>
+      </div>`;
+
+    /* 维度 → 筛选行：本科 = 专业方向 + 申请国家；研究生 = 专业方向 + 申请国家 + 就业导向 */
+    const visible = this.dimension === 'pg' ? this.filters : this.filters.filter(f => f.id !== 'career');
+
+    const rows = visible.map(f => {
       const cur = this.state[f.id] || 'all';
-      const open = this.openId === f.id;
+      const open = this.openIds.has(f.id);
       return `
       <div class="case-filter${open ? ' is-open' : ''}" data-group="${f.id}">
         <button type="button" class="case-filter__head" aria-expanded="${open}"
@@ -1235,11 +1341,24 @@ const CasesPage = {
       </div>
     `;
     }).join('');
+
+    wrap.innerHTML = dimensionBlock + rows;
   },
 
-  /* 展开 / 收起：同一时刻只展开一类（与绿色方框浮层的开合手感一致） */
-  toggle(id) { this.openId = this.openId === id ? null : id; this.renderFilters(); },
-  closeAll() { if (!this.openId) return; this.openId = null; this.renderFilters(); },
+  /* 展开 / 收起：各类独立开合，可同时全部展开（面板为常规文档流，互不遮挡截断） */
+  toggle(id) {
+    this.openIds.has(id) ? this.openIds.delete(id) : this.openIds.add(id);
+    this.renderFilters();
+  },
+
+  /* 选择申请维度：切换下方筛选行组合，并把可见行全部展开 */
+  pickDimension(value) {
+    this.dimension = value;
+    const visible = value === 'pg' ? this.filters : this.filters.filter(f => f.id !== 'career');
+    this.openIds = new Set(['dimension', ...visible.map(f => f.id)]);
+    this.renderFilters();
+    this.renderGrid();
+  },
 
   pick(group, value) {
     this.state[group] = value;
@@ -1254,7 +1373,7 @@ const CasesPage = {
   },
 
   renderGrid() {
-    const list = this.all.filter(c => this.filters.every(f => {
+    const list = this.all.filter(c => this.dimOk(c) && this.filters.every(f => {
       const v = this.state[f.id] || 'all';
       return v === 'all' || this.valueOf(c, f) === v;
     }));

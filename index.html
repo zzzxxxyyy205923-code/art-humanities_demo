@@ -55,7 +55,7 @@
   <section class="section" id="offers">
     <div class="section__header">
       <span class="section__eyebrow u-en">OFFERS 2026</span>
-      <h2 class="section__title">offer展示</h2>
+      <h2 class="section__title">OFFERS</h2>
       <p class="section__desc">【占位】2026 申请季录取战报描述待提供 —— 覆盖美国、英国、港新与全球院校的真实 offer 数据，后期由你填入。</p>
     </div>
     <div id="offers-root"></div>
@@ -106,16 +106,38 @@
       <h2 class="section__title" id="cp-title">课程产品</h2>
       <p class="section__desc" id="cp-sub">从长线旗舰项目到分类课程目录，覆盖学术探索、行业实习与商业实践的完整课程体系。点击任意卡片查看完整介绍。</p>
     </div>
+    <!-- 学历层次筛选（本科 / 研究生）：由 CourseProducts 渲染；未选中时展示全部课程 -->
+    <div class="filter-bar" id="cp-level-bar" style="margin-bottom:28px;"></div>
     <div class="cp-page">
+      <!-- 01 艺术精英计划（Global Talent Visa）：置于板块首位；卡片与详情结构同「长线旗舰产品」 -->
+      <div class="cp-zone">
+        <div class="cp-zone__eyebrow u-en" id="cp-elite-eyebrow">Global Talent Visa</div>
+        <h3 class="cp-zone__title" id="cp-elite-title">艺术精英计划</h3>
+        <div class="cp-grid" id="cp-elite-grid"></div>
+      </div>
+      <!-- 02 长线旗舰产品 -->
       <div class="cp-zone">
         <div class="cp-zone__eyebrow u-en" id="cp-longform-eyebrow">Signature Programs</div>
         <h3 class="cp-zone__title" id="cp-longform-title">长线旗舰产品</h3>
         <div class="cp-grid" id="cp-longform-grid"></div>
       </div>
+      <!-- 03 课程目录 -->
       <div class="cp-zone cp-zone--catalog">
         <div class="cp-zone__eyebrow u-en" id="cp-catalog-eyebrow">Program Catalog</div>
         <h3 class="cp-zone__title" id="cp-catalog-title">课程目录</h3>
         <div class="cp-grid" id="cp-catalog-grid"></div>
+      </div>
+      <!-- 04 境外项目：卡片与详情结构同「课程目录」 -->
+      <div class="cp-zone cp-zone--catalog">
+        <div class="cp-zone__eyebrow u-en" id="cp-overseas-eyebrow">Overseas Programs</div>
+        <h3 class="cp-zone__title" id="cp-overseas-title">境外项目</h3>
+        <div class="cp-grid" id="cp-overseas-grid"></div>
+      </div>
+      <!-- 05 艺术前沿讯息讲座：卡片与详情结构同「课程目录」 -->
+      <div class="cp-zone cp-zone--catalog">
+        <div class="cp-zone__eyebrow u-en" id="cp-frontier-eyebrow">Art Frontier Lectures</div>
+        <h3 class="cp-zone__title" id="cp-frontier-title">艺术前沿讯息讲座</h3>
+        <div class="cp-grid" id="cp-frontier-grid"></div>
       </div>
     </div>
   </section>
@@ -220,8 +242,10 @@
   </section>
 </main>
 
-<!-- 全日制（占位） -->
-<main class="view" id="view-fulltime">
+<!-- 全日制（占位 · 已下架）：内容保留于此便于恢复——移除 hidden 属性、
+     并把 meta.json nav.main.archived 中的条目移回 items 即可还原 -->
+<!-- RESTORE: 全日制 -->
+<main class="view" id="view-fulltime" hidden>
   <section class="placeholder-page">
     <div class="placeholder-card">
       <h1>全日制</h1>
@@ -231,8 +255,10 @@
   </section>
 </main>
 
-<!-- 研究生（占位） -->
-<main class="view" id="view-graduate">
+<!-- 研究生（占位 · 已下架）：内容保留于此便于恢复——移除 hidden 属性、
+     并把 meta.json nav.main.archived 中的条目移回 items 即可还原 -->
+<!-- RESTORE: 研究生 -->
+<main class="view" id="view-graduate" hidden>
   <section class="placeholder-page">
     <div class="placeholder-card">
       <h1>研究生</h1>
