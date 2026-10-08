@@ -18,7 +18,13 @@ const files = [
   'offers.json',
   'instructors.json',
   'resources.json',
-  'undergrad-regions.json'
+  'undergrad-regions.json',
+  'timeline.json',
+  'frontier-lectures.json',
+  'masterclass-courses.json',
+  'summer-winter-courses.json',
+  'industry-courses.json',
+  'overseas-courses.json'
 ];
 
 const out = {};

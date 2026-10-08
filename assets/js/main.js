@@ -9,7 +9,7 @@
 const DATA = { cache: {} };
 
 /* ── 数据加载：内嵌优先，fetch 兜底 ── */
-async function loadData(files = ['meta', 'majors', 'cases', 'planning', 'careers', 'directions', 'direction-details', 'course-products', 'offers', 'instructors', 'resources', 'undergrad-regions']) {
+async function loadData(files = ['meta', 'majors', 'cases', 'planning', 'careers', 'directions', 'direction-details', 'course-products', 'offers', 'instructors', 'resources', 'undergrad-regions', 'timeline', 'frontier-lectures', 'masterclass-courses', 'summer-winter-courses', 'industry-courses', 'overseas-courses']) {
   if (window.SFK_DATA) { DATA.cache = window.SFK_DATA; return; }      // file:// 直开也能拿到数据
   if (location.protocol === 'file:') throw new Error('file 协议下无法 fetch，请改用 HTTP 预览');
   await Promise.all(files.map(async name => {
@@ -18,6 +18,102 @@ async function loadData(files = ['meta', 'majors', 'cases', 'planning', 'careers
     DATA.cache[name] = await res.json();
   }));
 }
+
+/* ═══════════ 首页主视觉视频 ═══════════
+   进入首页 → 自动播放并开启声音；通过导航跳转离开首页，或在首页内
+   向下滚动至其他板块内容（视频离开视口）→ 暂停播放并静音。
+   目标状态 = 「在首页」且「视频在视口内」，任一条件不满足即停播静音，
+   由路由切换（setActive）与视口观察（IntersectionObserver）共同驱动，
+   两种来源最终都收敛到 sync()，不会出现残留播放或声音冲突。
+
+   浏览器自动播放策略的完整处理（Chrome / Safari / Firefox / iOS）：
+   1. 优先直接有声播放 —— 命中浏览器的媒体参与度机制（用户常访问的站点、
+      或本次会话内已发生过手势的「刷新 / 返回」场景）时直接放行；
+   2. play() 被策略拦截时 → 立即静音起播保证画面呈现，同时武装一次性
+      「解锁监听」：pointerdown / keydown / touchstart 任意首次手势
+      （即浏览器认可的激活信号）出现时，自动解除静音并恢复播放——
+      无需用户去点右下角的声音图标；
+   3. 解锁若仍被拦截（极端环境）则重新武装监听，等待下一次手势；
+   4. iOS Safari 依赖 HTML 上的 playsinline 属性（已存在）保证内联自动播放。 */
+const HeroVideo = {
+  el: null,
+  onHome: false,
+  inView: true,
+  _inited: false,
+  _armed: false,
+
+  get video() {
+    if (!this.el) this.el = document.getElementById('hero-video');
+    return this.el;
+  },
+
+  /* 统一收敛：仅在「首页 + 视频可见」时播放（优先有声），否则停播静音 */
+  sync() {
+    const v = this.video;
+    if (!v) return;
+    if (this.onHome && this.inView) {
+      this._playWithSound();
+    } else {
+      v.pause();
+      v.muted = true;
+    }
+  },
+
+  /* 有声播放 + 策略降级链 */
+  _playWithSound() {
+    const v = this.video;
+    v.muted = false;                          // 先尝试有声播放
+    const p = v.play();
+    if (p && p.then) {
+      p.then(() => { this._armed = false; })  // 成功：确认有声状态
+       .catch(() => {
+         // 策略拦截 → 静音起播（画面先行）+ 等待首次手势自动解锁声音
+         v.muted = true;
+         v.play().catch(() => {});
+         this._armUnlock();
+       });
+    }
+  },
+
+  /* 一次性手势解锁：浏览器认可的激活信号（点击 / 按键 / 触摸）出现时，
+     自动解除静音并恢复播放；若仍被拦截则重新武装，等待下一次手势 */
+  _armUnlock() {
+    if (this._armed) return;
+    this._armed = true;
+    const unlock = () => {
+      ['pointerdown', 'keydown', 'touchstart'].forEach(ev =>
+        document.removeEventListener(ev, unlock));
+      this._armed = false;
+      if (!this.onHome || !this.inView) return;   // 已不在播放条件内，交由 sync 处理
+      const v = this.video;
+      v.muted = false;
+      const p = v.play();
+      if (p && p.catch) p.catch(() => {
+        v.muted = true;                            // 仍被拦截 → 重新武装
+        this._armUnlock();
+      });
+    };
+    ['pointerdown', 'keydown', 'touchstart'].forEach(ev =>
+      document.addEventListener(ev, unlock, { passive: true }));
+  },
+
+  /* 路由切换入口：进入/离开首页 */
+  setActive(onHome) {
+    this.onHome = !!onHome;
+    this.sync();
+  },
+
+  init() {
+    const v = this.video;
+    if (!v || this._inited) return;
+    this._inited = true;
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(entries => {
+        entries.forEach(e => { this.inView = e.isIntersecting; this.sync(); });
+      }, { threshold: 0.15 }).observe(v);
+    }
+  }
+};
 
 /* ═══════════ 路由 ═══════════ */
 const Router = {
@@ -45,6 +141,7 @@ const Router = {
 
     if (!this.built[view]) { PAGES[view] && PAGES[view](); this.built[view] = true; }
     Header.markActive(view, section);
+    HeroVideo.setActive(view === 'home');   // 进入首页 → 有声播放；离开 → 停播静音
 
     // 滚动：有 section 就锚点滚动（scroll-margin-top 已在 CSS 里留了导航条高度），否则回顶
     const el = section && document.getElementById(section);
@@ -354,6 +451,7 @@ const PAGES = {
     OffersSection.build();
     InstructorsSection.build();
     ResourcesSection.build();
+    TimelineSection.build();
   },
 
   undergraduate() { PlanningModules.build(); UndergradPage.init(); },
@@ -361,6 +459,42 @@ const PAGES = {
   employment() { EmploymentPage.build(); },
   fulltime() {},
   graduate() {}
+};
+
+/* 课程期次角标配色表（只登记需要改色的期次，色板统一取自
+   「规划我的未来 · 八大就业方向一览」所使用的 8 色）：
+     lecture 25      → #E5C07B（06 文旅体制与公共文化服务）
+     Autumn 26       → #61AFEF（07 独立创业与职业艺术家）
+     masterclass 26  → #C678DD（05 艺术教育与学术研究）
+   rgb/veil/glow 用于把「八大口」色系完整落到角标上：同色文字 + 同色描边
+   + 同色薄层叠在深色底之上（保证任何海报上都清晰）+ 同色柔和辉光。
+   未登记的期次（如 lecture 26）不输出任何样式，沿用默认青绿，外观不变。 */
+const CAT_TAG_COLORS = {
+  'lecture 25': { color: '#E5C07B', border: 'rgba(229,192,123,.35)' },
+  'Autumn 26': { color: '#61AFEF', border: 'rgba(97,175,239,.5)', rgb: '97,175,239', veil: .3, glow: .28 },
+  'masterclass 26': { color: '#C678DD', border: 'rgba(198,120,221,.5)', rgb: '198,120,221', veil: .3, glow: .28 },
+  'winter 27': { color: '#E06C75', border: 'rgba(224,108,117,.5)', rgb: '224,108,117', veil: .3, glow: .28 },
+  'summer 26': { color: '#4ADBA0', border: 'rgba(74,219,160,.5)', rgb: '74,219,160', veil: .3, glow: .28 },
+  '商业实践项目课程': { color: '#E06C9F', border: 'rgba(224,108,159,.5)', rgb: '224,108,159', veil: .3, glow: .28 },
+  '岗位制实习（实地）': { color: '#63E6D4', border: 'rgba(99,230,212,.5)', rgb: '99,230,212', veil: .3, glow: .28 },
+  '行业导师带训（线上）': { color: '#7FE0B8', border: 'rgba(127,224,184,.5)', rgb: '127,224,184', veil: .3, glow: .28 },
+  '境外访校': { color: '#61AFEF', border: 'rgba(97,175,239,.5)', rgb: '97,175,239', veil: .3, glow: .28 },
+  '境外夏校': { color: '#4ADBA0', border: 'rgba(74,219,160,.5)', rgb: '74,219,160', veil: .3, glow: .28 },
+  '境外冬校': { color: '#E5C07B', border: 'rgba(229,192,123,.5)', rgb: '229,192,123', veil: .3, glow: .28 },
+  '境外研学': { color: '#C678DD', border: 'rgba(198,120,221,.5)', rgb: '198,120,221', veil: .3, glow: .28 },
+  '家长团': { color: '#E06C9F', border: 'rgba(224,108,159,.5)', rgb: '224,108,159', veil: .3, glow: .28 }
+};
+
+/* 课程模块数据源登记表：条目声明 curriculumSource 后，由其指向的原始数据
+   经此表登记的归一化方法转换为统一卡片（新增数据源时在此加一行即可）：
+     frontier-lectures   → 艺术前沿讯息讲座（点击弹海报大图）
+     masterclass-courses → 海外大师课程（点击弹课程 PDF） */
+const CURRICULUM_SOURCES = {
+  'frontier-lectures': 'lectureCards',
+  'masterclass-courses': 'masterclassCards',
+  'summer-winter-courses': 'summerWinterCards',
+  'industry-courses': 'industryCards',
+  'overseas-courses': 'overseasCards'
 };
 
 /* ═══════════ 课程产品（主页 #courses 板块） ═══════════
@@ -456,12 +590,52 @@ const CourseProducts = {
     </div>`;
   },
 
-  /* 事件一次性绑定：关闭按钮 / 点背景 / ESC；卡片用事件委托，两个网格共用 */
+  /* 课程模块卡片：点击（或回车 / 空格）→ 海报大图弹窗。
+     事件委托在 document 上，课程详情浮层内与本科爬藤页的同一组件共用一套绑定 */
+  _bindCurriculumCards() {
+    const pick = e => (e.target && e.target.closest ? e.target.closest('.cd-curriculum-card[data-poster]') : null);
+    document.addEventListener('click', e => {
+      const card = pick(e);
+      if (card) PosterModal.open(card);
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const card = pick(e);
+      if (!card) return;
+      e.preventDefault();
+      PosterModal.open(card);
+    });
+  },
+
+  /* 封面缺失兜底（捕获阶段监听图片加载失败）：移除破图、露出卡片原有的装饰渐变底；
+     若该卡片只能靠海报打开（没有 PDF），同时取消可点状态，避免点开空弹窗。
+     把同名海报文件补进 assets/img/courses/ 后，卡片会自动恢复为图片与可点状态。 */
+  _bindImageFallback() {
+    document.addEventListener('error', e => {
+      const img = e.target;
+      if (!img || img.tagName !== 'IMG' || !img.closest) return;
+      const box = img.closest('.cd-curriculum-card__img');
+      if (!box) return;
+      box.classList.remove('cd-curriculum-card__img--photo');
+      const card = box.closest('.cd-curriculum-card');
+      if (card && card.getAttribute('data-poster') && !card.getAttribute('data-pdf')) {
+        card.removeAttribute('data-poster');
+        card.removeAttribute('role');
+        card.removeAttribute('tabindex');
+        card.classList.remove('is-clickable');
+      }
+      img.remove();
+    }, true);
+  },
+
+  /* 事件一次性绑定：关闭按钮 / 点背景 / ESC；课程卡片用事件委托，两个网格共用 */
   bind() {
     if (this._bound) return;
+    this._bound = true;
+    this._bindCurriculumCards();
+    this._bindImageFallback();
     const ov = document.getElementById('course-overlay');
     if (!ov) return;
-    this._bound = true;
     this.overlay = ov;
     this.body = document.getElementById('course-overlay-body');
     this.panel = ov.querySelector('.course-overlay__panel');
@@ -487,6 +661,30 @@ const CourseProducts = {
         this.open(card.getAttribute('data-cp-id'), card.classList.contains('cp-card--catalog') ? 'catalog' : 'longform');
       });
     });
+    this._bindCurriculumFilter();
+  },
+
+  /* 课程模块的标签筛选 + 搜索：委托在常驻的详情浮层正文容器上，
+     每次打开新详情自动作用于新内容；输入事件只更新网格，输入框本身不被重建 */
+  _bindCurriculumFilter() {
+    const box = this.body;
+    if (!box) return;
+    box.addEventListener('click', e => {
+      const main = e.target.closest('[data-cur-main]');
+      if (main) { this.curFacet('main', main); return; }
+      const sub = e.target.closest('[data-cur-sub]');
+      if (sub) { this.curFacet('sub', sub); return; }
+      if (e.target.closest('#cd-cur-clear')) this.curSearch('');
+    });
+    box.addEventListener('input', e => {
+      if (e.target && e.target.id === 'cd-cur-search') this.curSearch(e.target.value, e.target);
+    });
+    /* 搜索框内有内容时，Esc 先清空搜索词（不冒泡去关闭课程详情浮层） */
+    box.addEventListener('keydown', e => {
+      if (e.key !== 'Escape' || !e.target || e.target.id !== 'cd-cur-search' || !e.target.value) return;
+      e.stopPropagation();
+      this.curSearch('', e.target);
+    });
   },
 
   open(id, group) {
@@ -498,6 +696,7 @@ const CourseProducts = {
       .reduce((f, l) => f || ((l || []).filter(x => x.id === id)[0]), null);
     if (!p) return;
     this.body.innerHTML = this.detail(p);
+    this.renderCurriculum();          // 课程模块若带筛选/搜索，按初始状态渲染一次
     this.body.classList.add('is-wide');
     this.overlay.classList.add('is-open');
     document.body.classList.add('is-locked');
@@ -535,16 +734,697 @@ const CourseProducts = {
       ${p.placeholder ? '<p class="cd-note">本目录的具体课程、课时与配图待提供，以下为结构占位。</p>' : ''}
       ${(p.snapshot && p.snapshot.length) ? sec('核心数据 · SNAPSHOT', `<div class="cd-stat-grid">${p.snapshot.map(s =>
         `<div class="cd-stat"><div class="cd-stat__k">${esc(s.k)}</div><div class="cd-stat__v">${esc(s.v)}</div></div>`).join('')}</div>`) : ''}
-      ${(p.curriculum && p.curriculum.length) ? sec('课程模块 · CURRICULUM', `<div class="cd-curriculum-grid">${p.curriculum.map(c =>
-        `<div class="cd-curriculum-card"><div class="cd-curriculum-card__img" aria-hidden="true"></div>
-          <div class="cd-curriculum-card__body"><h4 class="cd-curriculum-card__title">${esc(c.title)}</h4>
-          <p class="cd-curriculum-card__desc">${esc(c.desc)}</p></div></div>`).join('')}</div>`) : ''}
+      ${(this.curriculumOf(p).length) ? sec('课程模块 · CURRICULUM', this.curriculumBlock(p)) : ''}
       ${(p.whySFK && p.whySFK.length) ? sec('为什么选择 SFK · WHY SFK', `<div class="cd-why-grid">${p.whySFK.map(w =>
         `<div class="cd-why"><div class="cd-stat__k">${esc(w.t)}</div><div class="cd-stat__v">${esc(w.d)}</div></div>`).join('')}</div>`) : ''}
       <div class="cd-cta">
         <p class="cd-cta__statement">${esc(p.closing && p.closing.cn)}</p>
         <p class="cd-cta__statement-en">${esc(p.closing && p.closing.en)}</p>
       </div>`;
+  },
+
+  /* ── 课程模块：标签筛选 + 搜索（由条目自身的 curriculumFacets 驱动）──────────
+     主标签按 program_type 过滤；选中带 children 的主标签时展开其子标签
+     （按 category 进一步过滤）；搜索实时匹配 curriculumFacets.searchFields
+     指定的字段（默认 company / role_or_course / suitable_for）。
+     三者为 AND 联动：主标签 × 子标签 × 搜索词，任一变化即时更新结果。
+     只重渲染网格 / 计数 / 空状态，不重建输入框，因此输入焦点与光标不被打断。 */
+  curriculumBlock(p) {
+    const cards = this.curriculumOf(p);
+    this._cur = { cards, main: '', sub: '', q: '' };
+    const f = p.curriculumFacets;
+    if (!f || !(f.groups || []).length) {
+      return `<div class="cd-curriculum-grid">${cards.map(c => this.curriculumCard(c)).join('')}</div>`;
+    }
+    const mains = f.groups.map(g =>
+      `<button class="filter-btn" type="button" data-cur-main="${this.esc(g.value)}">${this.esc(g.label)}</button>`).join('');
+    const subs = f.groups.filter(g => (g.children || []).length).map(g =>
+      g.children.map(c => `<button class="filter-btn filter-btn--sub" type="button" data-cur-sub="${this.esc(c)}" data-cur-parent="${this.esc(g.value)}">${this.esc(c)}</button>`).join('')
+    ).join('');
+    return `
+      <div class="filter-bar cd-cur-bar">
+        <div class="cd-cur-left">
+          <div class="filter-group">
+            <span class="filter-group__label">分类</span>
+            <span class="filter-group__sep">|</span>
+            <span class="filter-group__btns" id="cd-cur-mains">${mains}</span>
+          </div>
+          <div class="filter-group filter-group__btns" id="cd-cur-subs" hidden>${subs}</div>
+        </div>
+        <div class="cd-cur-right">
+          <input class="cd-cur-input" id="cd-cur-search" type="search" autocomplete="off"
+            placeholder="${this.esc(f.searchPlaceholder || '搜索课程…')}" aria-label="搜索课程">
+          <button class="cd-cur-clear" id="cd-cur-clear" type="button" hidden>清除</button>
+          <span class="cd-cur-count" id="cd-cur-count"></span>
+        </div>
+      </div>
+      <div class="cd-curriculum-grid" id="cd-cur-grid"></div>
+      <p class="cd-cur-empty" id="cd-cur-empty" hidden>没有符合当前筛选条件的课程 · 请调整标签或搜索词</p>`;
+  },
+
+  /* 按当前筛选状态重渲染课程网格 + 计数 + 空状态（不动筛选栏本身） */
+  renderCurriculum() {
+    const st = this._cur;
+    const grid = document.getElementById('cd-cur-grid');
+    if (!st || !grid) return;
+    const list = st.cards.filter(c => this.curMatch(c, st));
+    grid.innerHTML = list.map(c => this.curriculumCard(c)).join('');
+    const empty = document.getElementById('cd-cur-empty');
+    if (empty) empty.hidden = list.length > 0;
+    const count = document.getElementById('cd-cur-count');
+    if (count) count.textContent = list.length === st.cards.length
+      ? st.cards.length + ' 门课程'
+      : list.length + ' / ' + st.cards.length + ' 门课程';
+    const clear = document.getElementById('cd-cur-clear');
+    if (clear) clear.hidden = !st.q;
+  },
+
+  curMatch(c, st) {
+    const f = c.facets || {};
+    if (st.main && f.program_type !== st.main) return false;
+    if (st.sub && f.category !== st.sub) return false;
+    if (st.q && !(c.searchText || '').includes(st.q)) return false;
+    return true;
+  },
+
+  /* 主标签 / 子标签：单击选中、再击取消；切换主标签时清空并收起子标签 */
+  curFacet(kind, btn) {
+    const st = this._cur;
+    if (!st) return;
+    const attr = kind === 'main' ? 'data-cur-main' : 'data-cur-sub';
+    const val = btn.getAttribute(attr);
+    if (kind === 'main') {
+      st.main = st.main === val ? '' : val;
+      st.sub = '';
+    } else {
+      st.sub = st.sub === val ? '' : val;
+    }
+    document.querySelectorAll('#cd-cur-mains .filter-btn').forEach(b =>
+      b.classList.toggle('is-active', b.getAttribute('data-cur-main') === st.main));
+    let shown = 0;
+    document.querySelectorAll('#cd-cur-subs .filter-btn').forEach(b => {
+      b.hidden = !st.main || b.getAttribute('data-cur-parent') !== st.main;
+      if (!b.hidden) shown++;
+      b.classList.toggle('is-active', b.getAttribute('data-cur-sub') === st.sub);
+    });
+    const subs = document.getElementById('cd-cur-subs');
+    if (subs) subs.hidden = shown === 0;      // 无可用子标签（或已取消主标签）时整行收起
+    this.renderCurriculum();
+  },
+
+  /* 搜索：实时匹配（大小写不敏感）；输入框内容由输入框自身维护，不回写以免打断输入 */
+  curSearch(value, inputEl) {
+    const st = this._cur;
+    if (!st) return;
+    st.q = String(value == null ? '' : value).trim().toLowerCase();
+    const input = inputEl || document.getElementById('cd-cur-search');
+    if (input) input.value = value == null ? '' : value;
+    this.renderCurriculum();
+  },
+
+  /* ── 课程模块 · CURRICULUM（各分区共用同一张卡片结构）────────────────
+     文字层级对齐 dad_demo 的课程海报卡（port-card）：
+       图片（含左上分类角标）→ 眉标 → 标题 → 院校 · 教授 → 标签组 → 说明
+     无图卡片只渲染标题 + 说明，保持其它分区现状不变；
+     有图卡片整卡可点，点击弹出海报大图（见 PosterModal）。
+     艺术前沿讯息讲座、本科爬藤「课程产品」板块均复用本方法，保证全站一致。 */
+  curriculumCard(c) {
+    const esc = this.esc;
+    const img = c.img ? `<img src="${esc(c.img)}" alt="" loading="lazy">` : '';
+    const catTag = c.catTag ? `<span class="cd-curriculum-card__cat-tag">${esc(c.catTag)}</span>` : '';
+    const cls = 'cd-curriculum-card__img' + (c.img ? ' cd-curriculum-card__img--photo' : '');
+    /* 色系变量统一挂在卡片上，角标经 CSS 变量继承，无需各自写样式 */
+    const colors = this.catColorVars(c.catTag);
+    /* 可点性：有 PDF（大师课）优先走 PDF；否则有图（讲座）走海报大图 */
+    const clickable = !!(c.pdf || c.img);
+    const attr = clickable
+      ? ` role="button" tabindex="0"` +
+        (c.pdf ? ` data-pdf="${esc(c.pdf)}"` : '') +
+        (c.img ? ` data-poster="${esc(c.img)}"` : '') +
+        ` data-poster-title="${esc(c.title)}" aria-label="${esc(c.title)} 点击查看${c.pdf ? '课程 PDF' : '海报'}"`
+      : '';
+    const tags = (c.tags && c.tags.length)
+      ? `<div class="cd-curriculum-card__tags">${c.tags.map(t => `<span class="cd-curriculum-card__tag">${esc(t)}</span>`).join('')}</div>`
+      : '';
+    return `<div class="cd-curriculum-card${clickable ? ' is-clickable' : ''}"${attr}${colors}>
+      <div class="${cls}"${clickable ? '' : ' aria-hidden="true"'}>${img}${catTag}</div>
+      <div class="cd-curriculum-card__body">
+        ${c.eyebrow ? `<div class="cd-curriculum-card__eyebrow">${esc(c.eyebrow)}</div>` : ''}
+        <h4 class="cd-curriculum-card__title">${esc(c.title)}</h4>
+        ${c.program ? `<div class="cd-curriculum-card__program">${esc(c.program)}</div>` : ''}
+        ${tags}
+        ${c.desc ? `<p class="cd-curriculum-card__desc">${esc(c.desc)}</p>` : ''}
+      </div>
+    </div>`;
+  },
+
+  /* 期次色系变量：只对 CAT_TAG_COLORS 中登记过的期次输出内联变量，未登记的
+     期次不输出任何样式（沿用样式表默认值，外观不变）。挂在卡片上后由角标继承：
+       --cat-tag-*  角标：同色文字 / 同色描边 / 同色薄层 / 同色辉光
+       --cat-*      卡片整体：同色边框 / 同色淡底 / 同色悬停描边与辉光 / 同色副信息文字
+     仅登记了 rgb（完整色系）的期次才附带卡片整体色系，只有单色的期次（lecture 25）
+     维持原有的「仅角标改色」效果不变。 */
+  catColorVars(tab) {
+    const c = CAT_TAG_COLORS[tab];
+    if (!c) return '';
+    const vars = [`--cat-tag-color:${c.color}`];
+    if (c.border) vars.push(`--cat-tag-border:${c.border}`);
+    if (c.rgb) {
+      vars.push(`--cat-color:${c.color}`);
+      vars.push(`--cat-line:rgba(${c.rgb},.35)`);
+      vars.push(`--cat-wash:linear-gradient(rgba(${c.rgb},.07),rgba(${c.rgb},.07))`);
+      vars.push(`--cat-glow-full:0 0 0 1px rgba(${c.rgb},.45), 0 0 28px rgba(${c.rgb},.22)`);
+      vars.push(`--cat-tag-veil:linear-gradient(rgba(${c.rgb},${c.veil}),rgba(${c.rgb},${c.veil}))`);
+      vars.push(`--cat-tag-glow:0 0 16px rgba(${c.rgb},${c.glow})`);
+    }
+    return ` style="${vars.join(';')}"`;
+  },
+
+  /* 取条目的课程模块：优先条目自身的 curriculum；若条目声明了
+     curriculumSource（如艺术前沿讯息讲座 → data/frontier-lectures.json、
+     海外大师课程 → data/masterclass-courses.json），则由该原始数据经
+     CURRICULUM_SOURCES 登记的归一化方法转换而来 */
+  curriculumOf(p) {
+    const src = p.curriculumSource;
+    if (!src) return p.curriculum || [];
+    const fn = CURRICULUM_SOURCES[src];
+    return fn ? this[fn](DATA.cache[src], p) : [];
+  },
+
+  /* 艺术前沿讯息讲座原始讲座条目 → 统一课程模块卡片（字段与层级的对应关系：
+     poster→图片 · tab→分类角标 · program_type→眉标 · role_or_course→标题 ·
+     university + professor→院校·教授 · location + level + suitable_for→标签组 ·
+     outcomes→说明）。逐字取用原始字段，不新增或改写任何文案。 */
+  lectureCards(rows) {
+    return (rows || []).map(r => ({
+      img: r.poster || '',
+      catTag: r.tab || '',
+      eyebrow: r.program_type || '',
+      title: r.role_or_course || '',
+      program: [r.university, r.professor].filter(Boolean).join('｜'),
+      tags: [r.location, r.level, r.suitable_for].filter(Boolean),
+      desc: r.outcomes || ''
+    }));
+  },
+
+  /* 海外大师课程原始条目 → 统一课程模块卡片（字段与层级的对应关系：
+     poster→图片 · tab→分类角标 · program_type→眉标 · role_or_course→标题 ·
+     university + professor→院校·教授 · type + location + level + outcomes→标签组 ·
+     suitable_for→说明）。该模块的 suitable_for 是整句适合对象，故放在说明层；
+     其余短字段进标签组。逐字取用原始字段，不新增或改写任何文案。 */
+  masterclassCards(rows, p) {
+    const pdfDir = (p && p.pdfDir) || '';
+    return (rows || []).map(r => ({
+      img: r.poster || '',
+      pdf: this.pdfPath(pdfDir, r.poster),
+      catTag: r.tab || '',
+      eyebrow: r.program_type || '',
+      title: r.role_or_course || '',
+      program: [r.university, r.professor].filter(Boolean).join('｜'),
+      tags: [r.type, r.location, r.level, r.outcomes].filter(Boolean),
+      desc: r.suitable_for || ''
+    }));
+  },
+
+  /* 海外冬夏校原始条目 → 统一课程模块卡片（字段与层级的对应关系：
+     poster→图片 · tab→分类角标 · program_type→眉标 · role_or_course→标题 ·
+     university + professor→院校·教授 · type + location + level→标签组 ·
+     outcomes（逗号分隔的产出清单，逐项拆成标签）→标签组 ·
+     suitable_for→说明）。逐字取用原始字段，仅按原有逗号/顿号分隔，不新增或改写文案。 */
+  summerWinterCards(rows, p) {
+    const pdfDir = (p && p.pdfDir) || '';
+    return (rows || []).map(r => {
+      const outcomes = String(r.outcomes || '').split(/[,，]/).map(s => s.trim()).filter(Boolean);
+      return {
+        img: r.poster || '',
+        pdf: this.pdfPath(pdfDir, r.poster),
+        catTag: r.tab || '',
+        eyebrow: r.program_type || '',
+        title: r.role_or_course || '',
+        program: [r.university, r.professor].filter(Boolean).join('｜'),
+        tags: [r.type, r.location, r.level].filter(Boolean).concat(outcomes),
+        desc: r.suitable_for || ''
+      };
+    });
+  },
+
+  /* 就业力原始条目（岗位制实习 / 行业导师带训 / 商业实践项目）→ 统一课程模块卡片：
+     poster→图片 · program_type→分类角标 · category→眉标（如「头部大厂」，为空则不渲染）·
+     role_or_course→标题 · company→机构 / 企业 · location + duration + schedule +
+     名额 + 费用→标签组 · suitable_for + enrollment_status→说明。
+     同一份数据供两个模块使用，归属由条目自身的 curriculumFilter.program_type 决定。
+     （enrolled_count 全部为「—」，无实际信息，故不展示。） */
+  industryCards(rows, p) {
+    const filter = (p && p.curriculumFilter && p.curriculumFilter.program_type) || null;
+    return (rows || [])
+      .filter(r => !filter || filter.includes(r.program_type))
+      .map(r => ({
+        img: r.poster || '',
+        catTag: r.program_type || '',
+        eyebrow: r.category || '',
+        title: r.role_or_course || '',
+        program: r.company || '',
+        facets: { program_type: r.program_type || '', category: r.category || '' },
+        searchText: this.rowSearchText(r, p, ['company', 'role_or_course', 'suitable_for']),
+        tags: [
+          r.location,
+          r.duration,
+          r.schedule,
+          r.capacity ? '名额 ' + r.capacity : '',
+          r.price_rmb
+        ].filter(Boolean),
+        desc: [r.suitable_for, r.enrollment_status].filter(Boolean).join('｜')
+      }));
+  },
+
+  /* 境外项目原始条目 → 统一课程模块卡片（字段与层级的对应关系：
+     poster→图片 · program_type→分类角标（同时是筛选标签）· type→眉标 ·
+     role_or_course→标题 · university（国家）→院校 · suitable_for + level +
+     location（天数）+ outcomes（日期）→标签组 · professor（城市 / 院校）→说明）。
+     逐字取用原始字段，不新增或改写任何文案。 */
+  overseasCards(rows, p) {
+    const pdfDir = (p && p.pdfDir) || '';
+    return (rows || []).map(r => ({
+      img: r.poster || '',
+      pdf: this.pdfPath(pdfDir, r.poster),
+      catTag: r.program_type || '',
+      eyebrow: r.type || '',
+      title: r.role_or_course || '',
+      program: r.university || '',
+      facets: { program_type: r.program_type || '', category: r.category || '' },
+      searchText: this.rowSearchText(r, p, ['role_or_course', 'university', 'professor']),
+      tags: [r.suitable_for, r.level, r.location, r.outcomes].filter(Boolean),
+      desc: r.professor || ''
+    }));
+  },
+
+  /* 由条目声明的 curriculumFacets.searchFields 预拼小写检索文本（未声明时用 fallback） */
+  rowSearchText(r, p, fallback) {
+    const fields = (p && p.curriculumFacets && p.curriculumFacets.searchFields) || fallback;
+    return fields.map(k => r[k] || '').join(' ').toLowerCase();
+  },
+
+  /* 课程 PDF 路径：<pdfDir>/<海报文件名去掉 courses_ 前缀与扩展名>.pdf
+     —— 与 assets/pdf/masterclass 下已有的同名 PDF 一一对应；
+     后期把真实 PDF 以同名文件覆盖上传即可直接生效，无需改代码 */
+  pdfPath(pdfDir, poster) {
+    if (!pdfDir || !poster) return '';
+    const name = poster.split('/').pop().replace(/^courses_/, '').replace(/\.[^.]+$/, '');
+    return pdfDir.replace(/\/$/, '') + '/' + name + '.pdf';
+  }
+};
+
+/* ═══════════ 课程 PDF 查看器（弹窗内的单页浏览 + 左侧缩略图） ═══════════
+   用本地内置的 pdf.js（assets/vendor/pdfjs，v3.11.174 legacy UMD，Apache-2.0）
+   自行渲染页面：每次只显示一页，左侧缩略图边栏可快速跳转与预览。
+     · 懒加载：只在真正打开 PDF 时才拉取脚本，不影响首屏；
+     · 容错：pdf.js 加载失败、PDF 解析失败、或页面以 file:// 直开（fetch 受限）
+       时，一律自动回退到原生 iframe 查看器，保证 PDF 仍能打开；
+     · 交互：点缩略图 / ‹ › 按钮 / ← → ·PageUp·PageDown·Home·End 翻页，Esc 关闭。 */
+const PdfViewer = {
+  LIB: 'assets/vendor/pdfjs/pdf.min.js',
+  WORKER: 'assets/vendor/pdfjs/pdf.worker.min.js',
+  THUMB_W: 132,
+  MAX_CANVAS_AREA: 16e6,     // Safari / iOS 的 canvas 面积上限，避免超限后被自动降采样
+  /* 弹窗可用区占视口的比例，逐断点与 style.css 中 .poster-modal.is-pdf 的
+     max-width / max-height 保持一致（≤640px 用窄屏档，其余用宽屏档）。
+     取值尽量放大显示区：页面四周只留极窄内边距，不留多余空白，
+     同时给圆角、关闭按钮与遮罩留出安全边距。 */
+  RATIOS: [
+    { min: 0, w: 0.96, h: 0.92 },     // ≤640px（与 CSS 窄屏断点一致）
+    { min: 641, w: 0.94, h: 0.90 }    // 平板 / 桌面
+  ],
+  STAGE_PAD: 10,             // 画布区单侧内边距（px），CSS 与 JS 计算共用同一数值
+  _lib: null,
+  _libPromise: null,
+  _doc: null,
+  _mount: null,
+  _modal: null,
+  _page: 1,
+  _pages: 0,
+  _renderTask: null,
+  _alive: 0,
+  _bound: false,
+
+  /* 懒加载并缓存 pdf.js；失败时清掉缓存以便下次重试 */
+  loadLib() {
+    if (this._lib) return Promise.resolve(this._lib);
+    if (this._libPromise) return this._libPromise;
+    this._libPromise = new Promise((resolve, reject) => {
+      const s = document.createElement('script');
+      s.src = this.LIB;
+      s.onload = () => {
+        const lib = window.pdfjsLib;
+        if (!lib) { reject(new Error('pdf.js 未就绪')); return; }
+        try { lib.GlobalWorkerOptions.workerSrc = this.WORKER; } catch (e) { /* 忽略：将走假 worker */ }
+        this._lib = lib;
+        resolve(lib);
+      };
+      s.onerror = () => reject(new Error('pdf.js 加载失败'));
+      document.head.appendChild(s);
+    }).catch(err => { this._libPromise = null; throw err; });
+    return this._libPromise;
+  },
+
+  /* file:// 下 fetch 受限，pdf.js 无法读取本地 PDF → 直接用原生查看器 */
+  canRender() {
+    return location.protocol !== 'file:';
+  },
+
+  open(url, modalEl) {
+    const box = modalEl.querySelector('.poster-modal__pdf');
+    if (!box) return;
+    this.close();
+    this._modal = modalEl;
+    this._mount = box;
+    const token = ++this._alive;
+    box.classList.remove('is-loading');
+    this._bind(modalEl);
+    if (!this.canRender()) { this.fallback(url, modalEl); return; }
+    box.classList.add('is-loading');
+    this.loadLib()
+      .then(lib => lib.getDocument(url).promise)
+      .then(doc => {
+        if (token !== this._alive) { try { doc.destroy(); } catch (e) {} return; }
+        this._doc = doc;
+        this._pages = doc.numPages;
+        const total = box.querySelector('.pdf-view__page');
+        if (total) total.innerHTML = '<b>1</b> / ' + this._pages;
+        box.classList.remove('is-loading');
+        this.renderThumbs(token);
+        return this.go(1, token);
+      })
+      .catch(() => { if (token === this._alive) this.fallback(url, modalEl); });
+  },
+
+  /* 回退：用原生 iframe 查看器（浏览器自带缩略图面板） */
+  fallback(url, modalEl) {
+    const box = modalEl.querySelector('.poster-modal__pdf');
+    const frame = modalEl.querySelector('.poster-modal__pdf-frame');
+    if (box) box.classList.remove('is-loading');
+    modalEl.classList.add('is-fallback');
+    if (frame) frame.src = url + '#page=1&view=FitH';
+  },
+
+  /* 左侧缩略图：顺序渲染，避免一次性占满 CPU */
+  renderThumbs(token) {
+    const wrap = this._mount && this._mount.querySelector('.pdf-view__thumbs');
+    if (!wrap) return;
+    wrap.innerHTML = '';
+    let chain = Promise.resolve();
+    for (let n = 1; n <= this._pages; n++) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'pdf-thumb';
+      btn.setAttribute('data-pdf-page', String(n));
+      btn.setAttribute('aria-label', '第 ' + n + ' 页');
+      const canvas = document.createElement('canvas');
+      const num = document.createElement('span');
+      num.className = 'pdf-thumb__n';
+      num.textContent = String(n);
+      btn.appendChild(canvas);
+      btn.appendChild(num);
+      wrap.appendChild(btn);
+      chain = chain.then(() => this.drawThumb(n, canvas).catch(() => {}));
+    }
+  },
+
+  async drawThumb(n, canvas) {
+    const page = await this._doc.getPage(n);
+    const base = page.getViewport({ scale: 1 });
+    const vp = page.getViewport({ scale: this.THUMB_W / base.width });
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.floor(vp.width * dpr);
+    canvas.height = Math.floor(vp.height * dpr);   // 宽高交给 CSS 按内在比例缩放，避免变形
+    await page.render({
+      canvasContext: canvas.getContext('2d'),
+      viewport: vp,
+      transform: dpr !== 1 ? [dpr, 0, 0, dpr, 0, 0] : null
+    }).promise;
+  },
+
+  /* 按「当前页的真实宽高比」计算缩放比例 —— 弹窗尺寸由这一页决定，
+     而不是先固定一个高度再把页面塞进去，因此不会出现上下 / 左右的多余空白。
+     可用区域 = 视口 × 占比 − 缩略图边栏宽 − 翻页栏高 − 内边距；
+     取宽高两个方向的较小比例，保证整页完整可见（一屏一页）。 */
+  fitScale(base) {
+    const vw = window.innerWidth || document.documentElement.clientWidth || 1024;
+    const vh = window.innerHeight || document.documentElement.clientHeight || 768;
+    const side = this._mount && this._mount.querySelector('.pdf-view__side');
+    const bar = this._mount && this._mount.querySelector('.pdf-view__bar');
+    /* 弹窗尚未完成布局时测量为 0，按断点默认值兜底（与 CSS 的边栏宽度一致） */
+    const sideW = (side && side.offsetWidth) || (vw > 900 ? 156 : vw > 640 ? 116 : 84);
+    const barH = bar && bar.offsetHeight ? bar.offsetHeight : 52;   // 兜底值：CSS 中翻页栏约 52px
+    const r = this.ratioFor(vw);
+    const pad = this.STAGE_PAD * 2;
+    const availW = Math.max(120, vw * r.w - sideW - pad);
+    const availH = Math.max(120, vh * r.h - barH - pad);
+    return Math.min(availW / base.width, availH / base.height);
+  },
+
+  /* 按视口宽度取对应的占屏比例档位 */
+  ratioFor(vw) {
+    const list = this.RATIOS || [];
+    let hit = list[0] || { w: 0.94, h: 0.9 };
+    for (const r of list) if (vw >= r.min) hit = r;
+    return hit;
+  },
+
+  /* 跳到第 n 页（自动裁到 1..总页数）并渲染到主画布 */
+  async go(n, token) {
+    if (!this._doc || !this._mount) return;
+    if (token === undefined) token = this._alive;
+    const target = Math.max(1, Math.min(this._pages || 1, n));
+    this._page = target;
+    if (this._renderTask) { try { this._renderTask.cancel(); } catch (e) {} this._renderTask = null; }
+    const canvas = this._mount.querySelector('.pdf-view__canvas');
+    const stage = this._mount.querySelector('.pdf-view__stage');
+    if (!canvas || !stage) return;
+    /* 为底部固定翻页栏预留恰好足够的空间（按实测高度）：既不被栏遮挡，也不多留空白；
+       单页 PDF 没有翻页栏，收回预留。 */
+    const barEl = this._mount.querySelector('.pdf-view__bar');
+    stage.style.paddingBottom = this._pages > 1 && barEl
+      ? ((barEl.offsetHeight || 52) + this.STAGE_PAD) + 'px'
+      : this.STAGE_PAD + 'px';
+    const page = await this._doc.getPage(target);
+    if (token !== this._alive) return;
+    const base = page.getViewport({ scale: 1 });
+    const scale = this.fitScale(base);          // 按本页真实宽高比定尺寸：整页完整可见且不留空白
+    const vp = page.getViewport({ scale });
+    /* Safari / iOS 对 canvas 面积有上限，超限会自动降采样导致模糊，
+       故在保持 CSS 尺寸不变的前提下按需降低渲染倍率 */
+    let dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const area = vp.width * vp.height * dpr * dpr;
+    if (area > this.MAX_CANVAS_AREA) dpr = Math.max(1, Math.sqrt(this.MAX_CANVAS_AREA / (vp.width * vp.height)));
+    canvas.width = Math.floor(vp.width * dpr);
+    canvas.height = Math.floor(vp.height * dpr);
+    canvas.style.width = Math.round(vp.width) + 'px';
+    canvas.style.height = Math.round(vp.height) + 'px';
+    this._renderTask = page.render({
+      canvasContext: canvas.getContext('2d'),
+      viewport: vp,
+      transform: dpr !== 1 ? [dpr, 0, 0, dpr, 0, 0] : null
+    });
+    try { await this._renderTask.promise; } catch (e) { /* 渲染被新一页取消 */ }
+    this._renderTask = null;
+    if (token !== this._alive) return;
+    const numEl = this._mount.querySelector('.pdf-view__page b');
+    if (numEl) numEl.textContent = String(target);
+    this._mount.querySelectorAll('.pdf-thumb').forEach(b => {
+      const on = Number(b.getAttribute('data-pdf-page')) === target;
+      b.classList.toggle('is-active', on);
+      if (on && b.scrollIntoView) b.scrollIntoView({ block: 'nearest' });
+    });
+    /* 翻页控件状态：单页 PDF 直接隐藏整条控件栏；否则首 / 末页禁用对应方向的按钮 */
+    const single = this._pages <= 1;
+    const view = this._mount.querySelector('.pdf-view');
+    if (view) view.classList.toggle('is-single', single);
+    this._mount.querySelectorAll('[data-pdf-nav]').forEach(btn => {
+      const step = Number(btn.getAttribute('data-pdf-nav'));
+      btn.disabled = single || (step < 0 ? target <= 1 : target >= this._pages);
+    });
+  },
+
+  _bind(modalEl) {
+    if (this._bound) return;
+    this._bound = true;
+    const box = modalEl.querySelector('.poster-modal__pdf');
+    if (box) box.addEventListener('click', e => {
+      const nav = e.target.closest('[data-pdf-nav]');
+      if (nav) { this.go(this._page + Number(nav.getAttribute('data-pdf-nav'))); return; }
+      const th = e.target.closest('[data-pdf-page]');
+      if (th) this.go(Number(th.getAttribute('data-pdf-page')));
+    });
+    /* 翻页快捷键：仅在 PDF 查看器真正打开时拦截，避免影响其它页面交互 */
+    document.addEventListener('keydown', e => {
+      if (!this._doc || !PosterModal.isOpen()) return;
+      const k = e.key;
+      const step = (k === 'ArrowRight' || k === 'PageDown') ? 1
+        : (k === 'ArrowLeft' || k === 'PageUp') ? -1 : 0;
+      if (step) { e.stopImmediatePropagation(); e.preventDefault(); this.go(this._page + step); return; }
+      if (k === 'Home' || k === 'End') {
+        e.stopImmediatePropagation(); e.preventDefault();
+        this.go(k === 'Home' ? 1 : this._pages);
+      }
+    }, true);
+    /* 视口尺寸变化后按新尺寸重排当前页，始终保持“一屏一页” */
+    let timer;
+    window.addEventListener('resize', () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => { if (this._doc) this.go(this._page); }, 160);
+    });
+  },
+
+  close() {
+    this._alive++;
+    if (this._renderTask) { try { this._renderTask.cancel(); } catch (e) {} this._renderTask = null; }
+    if (this._doc) { try { this._doc.destroy(); } catch (e) {} this._doc = null; }
+    this._pages = 0;
+    this._page = 1;
+    const box = this._mount;
+    if (box) {
+      box.classList.remove('is-loading');
+      const wrap = box.querySelector('.pdf-view__thumbs');
+      if (wrap) wrap.innerHTML = '';
+      const canvas = box.querySelector('.pdf-view__canvas');
+      if (canvas) {
+        if (canvas.getContext) { try { canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height); } catch (e) {} }
+        canvas.style.width = '';          // 清掉上一份 PDF 的页尺寸，避免下次打开时闪现旧大小
+        canvas.style.height = '';
+      }
+      const view = box.querySelector('.pdf-view');
+      if (view) view.classList.remove('is-single');
+      box.querySelectorAll('[data-pdf-nav]').forEach(btn => { btn.disabled = true; });
+      const pageEl = box.querySelector('.pdf-view__page');
+      if (pageEl) pageEl.innerHTML = '<b>1</b> / —';
+      this._mount = null;
+    }
+    if (this._modal) { this._modal.classList.remove('is-fallback'); this._modal = null; }
+  }
+};
+
+/* ═══════════ 课程内容弹窗（课程模块 · CURRICULUM 点击打开） ═══════════
+   交互对齐 dad_demo 的海报弹窗（ImageModal）：
+     点遮罩 / 点 ✕ / Esc 关闭；遮罩淡入 + 卡片 3D 翻开（rotateY + 回弹缓动）。
+   两种内容模式，均只展示内容本身（沿用卡片的圆角处理），不附加文字信息：
+     · 图片模式（艺术前沿讯息讲座）：展示原始海报图；
+     · PDF 模式（海外大师课程）：展示该课程的 PDF 区域 —— iframe 指向
+       assets/pdf/masterclass/<课程名>.pdf，后期把真实 PDF 以同名文件覆盖
+       上传即可直接生效，无需改代码。
+   Esc 在捕获阶段拦截并阻断，避免关闭弹窗时误关下层的课程详情浮层。 */
+const PosterModal = {
+  _el: null,
+  _addedLock: false,
+  _lastTrigger: null,
+
+  build() {
+    if (this._el) return this._el;
+    const el = document.createElement('div');
+    el.className = 'poster-modal';
+    el.setAttribute('role', 'dialog');
+    el.setAttribute('aria-modal', 'true');
+    el.setAttribute('aria-label', '课程海报');
+    el.innerHTML = `
+      <div class="poster-modal__backdrop"></div>
+      <div class="poster-modal__flipper">
+        <div class="poster-modal__inner">
+          <button class="poster-modal__close" type="button" aria-label="关闭">✕</button>
+          <img class="poster-modal__img" src="" alt="">
+          <div class="poster-modal__pdf">
+            <div class="pdf-view">
+              <aside class="pdf-view__side" aria-label="页面缩略图">
+                <div class="pdf-view__thumbs"></div>
+              </aside>
+              <div class="pdf-view__main">
+                <div class="pdf-view__stage"><canvas class="pdf-view__canvas"></canvas></div>
+                <div class="pdf-view__bar">
+                  <button class="pdf-view__nav" type="button" data-pdf-nav="-1" aria-label="上一页" title="上一页（←）">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="M15 4.5 7.5 12 15 19.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  <span class="pdf-view__page"><b>1</b> / —</span>
+                  <button class="pdf-view__nav" type="button" data-pdf-nav="1" aria-label="下一页" title="下一页（→）">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="M9 4.5 16.5 12 9 19.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  <span class="pdf-view__hint">← → 翻页 · Esc 关闭</span>
+                </div>
+              </div>
+            </div>
+            <div class="pdf-view__loading">正在加载 PDF…</div>
+            <iframe class="poster-modal__pdf-frame" src="" title="课程 PDF"></iframe>
+          </div>
+        </div>
+      </div>`;
+    document.body.appendChild(el);
+    el.querySelector('.poster-modal__backdrop').addEventListener('click', () => this.close());
+    el.querySelector('.poster-modal__close').addEventListener('click', () => this.close());
+    document.addEventListener('keydown', e => {
+      if (e.key !== 'Escape' || !this.isOpen()) return;
+      e.stopImmediatePropagation();     // 只关海报，不再冒泡去关课程详情浮层
+      e.preventDefault();
+      this.close();
+    }, true);
+    this._el = el;
+    return el;
+  },
+
+  isOpen() { return !!this._el && this._el.classList.contains('is-visible'); },
+
+  open(cardEl) {
+    if (!cardEl) return;
+    const poster = cardEl.getAttribute('data-poster') || '';
+    const pdf = cardEl.getAttribute('data-pdf') || '';
+    if (!poster && !pdf) return;
+    const el = this.build();
+    this._lastTrigger = cardEl;
+    const title = cardEl.getAttribute('data-poster-title') || '';
+    const imgEl = el.querySelector('.poster-modal__img');
+    const frame = el.querySelector('.poster-modal__pdf-frame');
+    if (pdf) {                              // PDF 模式：单页浏览 + 左侧缩略图边栏
+      el.classList.add('is-pdf');
+      el.classList.remove('is-fallback');
+      imgEl.removeAttribute('src');
+      imgEl.alt = '';
+      frame.removeAttribute('src');
+      PdfViewer.open(pdf, el);
+    } else {                                // 图片模式：只展示原始海报
+      el.classList.remove('is-pdf');
+      el.classList.remove('is-fallback');
+      PdfViewer.close();
+      frame.removeAttribute('src');
+      imgEl.src = poster;
+      imgEl.alt = title;                    // 仅供读屏，不显示文字
+    }
+    el.setAttribute('aria-label', (title ? title + ' ' : '') + (pdf ? '课程 PDF' : '课程海报'));
+    el.style.display = 'flex';
+    el.offsetHeight;                        // 强制回流，确保入场过渡生效
+    el.classList.add('is-visible');
+    if (!document.body.classList.contains('is-locked')) {   // 详情浮层已锁滚动时不重复接管
+      document.body.classList.add('is-locked');
+      this._addedLock = true;
+    }
+    el.querySelector('.poster-modal__close').focus();
+  },
+
+  close() {
+    if (!this._el) return;
+    const el = this._el;
+    el.classList.remove('is-visible');
+    PdfViewer.close();                          // 立即释放 pdf.js 文档与渲染任务
+    if (this._addedLock) { document.body.classList.remove('is-locked'); this._addedLock = false; }
+    setTimeout(() => {
+      if (this.isOpen()) return;
+      el.style.display = 'none';
+      const frame = el.querySelector('.poster-modal__pdf-frame');
+      if (frame) frame.removeAttribute('src');   // 释放 iframe 查看器，避免下次复用时仍加载旧文件
+      el.classList.remove('is-fallback');
+    }, 340);
+    const trigger = this._lastTrigger;      // 关闭后焦点回到来源卡片
+    this._lastTrigger = null;
+    if (trigger && trigger.isConnected) trigger.focus();
   }
 };
 
@@ -901,6 +1781,88 @@ const ResourcesSection = {
   }
 };
 
+/* ═══════════ 成长时间轴（主页 #timeline 板块） ═══════════
+   数据：data/timeline.json（《艺术人文科系-全链路成长发展手册》P49–56）
+   结构：主标签（本科 / 研究生）→ 子层级标签 → 横向阶段时间轴。
+   每个阶段卡片：时间节点（等宽字、主色，置于顶部轴线圆点上）+ 阶段名
+   + 右侧阶段目标徽标 + 双泳道清单（升学线 / 就业线等，随子层级定义）。 */
+const TimelineSection = {
+  esc(v) { return String(v == null ? '' : v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); },
+
+  build() {
+    const d = DATA.cache['timeline'];
+    const root = document.getElementById('timeline-root');
+    if (!d || !root || !d.tabs || !d.tabs.length) return;
+    this.data = d;
+    this.tab = d.tabs[0].id;
+    this.sub = d.tabs[0].subs[0].id;
+    this._bind(root);
+    this.render();
+  },
+
+  _bind(root) {
+    if (this._bound) return;
+    this._bound = true;
+    root.addEventListener('click', e => {
+      const tab = e.target.closest('[data-tl-tab]');
+      if (tab) {
+        this.tab = tab.getAttribute('data-tl-tab');
+        const t = this.data.tabs.find(x => x.id === this.tab);
+        this.sub = t.subs[0].id;   // 切主标签回到该维度第一个子层级
+        this.render();
+        return;
+      }
+      const s = e.target.closest('[data-tl-sub]');
+      if (s) { this.sub = s.getAttribute('data-tl-sub'); this.render(); }
+    });
+  },
+
+  cur() {
+    const tab = this.data.tabs.find(x => x.id === this.tab) || this.data.tabs[0];
+    const sub = tab.subs.find(x => x.id === this.sub) || tab.subs[0];
+    return { tab, sub };
+  },
+
+  render() {
+    const root = document.getElementById('timeline-root');
+    if (!root) return;
+    const { tab, sub } = this.cur();
+
+    /* 单排标签：维度标签（本科/研究生）与当前维度的子层级标签同规格、
+       均匀间距排列；「研究生」与子层级组之间以 5 倍标准间距形成分组 */
+    const mainTabs = this.data.tabs.map(t =>
+      `<button class="tl-subtab${t.id === tab.id ? ' is-active' : ''}" type="button" data-tl-tab="${t.id}">${this.esc(t.label)}</button>`).join('');
+    const subTabs = tab.subs.map((s, i) =>
+      `<button class="tl-subtab${s.id === sub.id ? ' is-active' : ''}${i === 0 ? ' tl-subtab--lead' : ''}" type="button" data-tl-sub="${s.id}">${this.esc(s.label)}</button>`).join('');
+
+    const stages = sub.stages.map((st, i) => `
+      <div class="tl-col">
+        <div class="tl-head">
+          <span class="tl-time">${this.esc(st.time)}</span>
+          <span class="tl-dot" aria-hidden="true"></span>
+          <h4 class="tl-name">${this.esc(st.name)}</h4>
+        </div>
+        <article class="tl-stage">
+          ${st.tag ? `<span class="tl-stage__tag">${this.esc(st.tag)}</span>` : ''}
+          ${st.l1 ? `<div class="tl-stage__lane"><span class="tl-stage__lane-name">${this.esc(sub.laneNames[0] || '')}</span><ul>${(st.l1 || []).map(it => `<li>${this.esc(it)}</li>`).join('')}</ul></div>` : ''}
+          ${st.l2 ? `<div class="tl-stage__lane"><span class="tl-stage__lane-name">${this.esc(sub.laneNames[1] || '')}</span><ul>${(st.l2 || []).map(it => `<li>${this.esc(it)}</li>`).join('')}</ul></div>` : ''}
+        </article>
+      </div>`).join('');
+
+    const footers = (sub.footers || []).map(f =>
+      `<div class="tl-foot"><span class="tl-foot__k">${this.esc(f.k)}</span><span class="tl-foot__v">${this.esc(f.v)}</span></div>`).join('');
+
+    root.innerHTML = `
+      <div class="tl-tabs" role="tablist">${mainTabs}${subTabs}</div>
+      <p class="tl-tagline">${this.esc(sub.tagline)}</p>
+      ${sub.note ? `<p class="tl-note">${this.esc(sub.note)}</p>` : ''}
+      <div class="tl-rail">${stages}</div>
+      ${footers ? `<div class="tl-feet">${footers}</div>` : ''}
+      ${sub.quote ? `<p class="tl-quote">${this.esc(sub.quote)}</p>` : ''}
+    `;
+  }
+};
+
 /* ═══════════ 本科爬藤（专业 Tab） ═══════════ */
 const UndergradPage = {
   init() {
@@ -1121,10 +2083,7 @@ const UndergradPage = {
          CourseProducts.detail 完全一致；不展示「长线旗舰产品」「课程目录」分区 */
       const modules = this.coursesOf(tab).reduce((acc, p) => acc.concat(p.curriculum || []), []);
       if (!modules.length) return empty;
-      return `<section class="cd-section"><div class="cd-section__label">课程模块 · CURRICULUM</div><div class="cd-curriculum-grid">${modules.map(c =>
-        `<div class="cd-curriculum-card"><div class="cd-curriculum-card__img" aria-hidden="true"></div>
-          <div class="cd-curriculum-card__body"><h4 class="cd-curriculum-card__title">${this.esc(c.title)}</h4>
-          <p class="cd-curriculum-card__desc">${this.esc(c.desc)}</p></div></div>`).join('')}</div></section>`;
+      return `<section class="cd-section"><div class="cd-section__label">课程模块 · CURRICULUM</div><div class="cd-curriculum-grid">${modules.map(c => CourseProducts.curriculumCard(c)).join('')}</div></section>`;
     }
     return empty;
   },
@@ -2171,6 +3130,7 @@ const CareersPage = {
 
   Header.build();
   Footer.build();
+  HeroVideo.init();   // 首页主视觉视频：视口观察 + 自动播放策略兜底
 
   // 拦截站内跳转：#/xxx 只在当前文档内切视图，绝不发起文档导航
   document.addEventListener('click', e => {

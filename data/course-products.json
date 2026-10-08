@@ -288,10 +288,40 @@
   "catalog": [
     {
       "id": "internship",
-      "badge": "课程待录入",
+      "badge": "90 门课程",
       "tileVariant": null,
       "cover": "",
-      "placeholder": true,
+      "placeholder": false,
+      "curriculumSource": "industry-courses",
+      "curriculumFilter": {
+        "program_type": [
+          "岗位制实习（实地）",
+          "行业导师带训（线上）"
+        ]
+      },
+      "curriculumFacets": {
+        "searchPlaceholder": "搜索机构 / 岗位 / 适合对象…",
+        "searchFields": [
+          "company",
+          "role_or_course",
+          "suitable_for"
+        ],
+        "groups": [
+          {
+            "label": "岗位制实习（实地）",
+            "value": "岗位制实习（实地）",
+            "children": [
+              "创意工作室",
+              "头部大厂",
+              "行业名企"
+            ]
+          },
+          {
+            "label": "行业导师带训（线上）",
+            "value": "行业导师带训（线上）"
+          }
+        ]
+      },
       "meta": {
         "eyebrow": "Employment Track｜岗位实习 × 行业导师带训",
         "titleEn": "Career Internship Program",
@@ -320,20 +350,6 @@
         {
           "k": "占位",
           "v": "核心数据待提供"
-        }
-      ],
-      "curriculum": [
-        {
-          "title": "课程模块一（占位）",
-          "desc": "具体课程名称、课时与配图待提供。"
-        },
-        {
-          "title": "课程模块二（占位）",
-          "desc": "具体课程名称、课时与配图待提供。"
-        },
-        {
-          "title": "课程模块三（占位）",
-          "desc": "具体课程名称、课时与配图待提供。"
         }
       ],
       "whySFK": [
@@ -371,10 +387,12 @@
     },
     {
       "id": "summerwinter",
-      "badge": "课程待录入",
+      "badge": "9 门课程",
       "tileVariant": "v2",
       "cover": "",
-      "placeholder": true,
+      "placeholder": false,
+      "curriculumSource": "summer-winter-courses",
+      "pdfDir": "assets/pdf/summer-winter",
       "meta": {
         "eyebrow": "Academic Track｜海外院校冬夏校",
         "titleEn": "Overseas Summer & Winter School",
@@ -403,20 +421,6 @@
         {
           "k": "占位",
           "v": "核心数据待提供"
-        }
-      ],
-      "curriculum": [
-        {
-          "title": "课程模块一（占位）",
-          "desc": "具体课程名称、课时与配图待提供。"
-        },
-        {
-          "title": "课程模块二（占位）",
-          "desc": "具体课程名称、课时与配图待提供。"
-        },
-        {
-          "title": "课程模块三（占位）",
-          "desc": "具体课程名称、课时与配图待提供。"
         }
       ],
       "whySFK": [
@@ -455,10 +459,16 @@
     },
     {
       "id": "bizpractice",
-      "badge": "课程待录入",
+      "badge": "5 门课程",
       "tileVariant": "v3",
       "cover": "",
-      "placeholder": true,
+      "placeholder": false,
+      "curriculumSource": "industry-courses",
+      "curriculumFilter": {
+        "program_type": [
+          "商业实践项目课程"
+        ]
+      },
       "meta": {
         "eyebrow": "Practice Track｜真实商业项目实战",
         "titleEn": "Business Practice Program",
@@ -487,20 +497,6 @@
         {
           "k": "占位",
           "v": "核心数据待提供"
-        }
-      ],
-      "curriculum": [
-        {
-          "title": "课程模块一（占位）",
-          "desc": "具体课程名称、课时与配图待提供。"
-        },
-        {
-          "title": "课程模块二（占位）",
-          "desc": "具体课程名称、课时与配图待提供。"
-        },
-        {
-          "title": "课程模块三（占位）",
-          "desc": "具体课程名称、课时与配图待提供。"
         }
       ],
       "whySFK": [
@@ -538,10 +534,12 @@
     },
     {
       "id": "masterclass",
-      "badge": "课程待录入",
+      "badge": "10 门课程",
       "tileVariant": null,
       "cover": "",
-      "placeholder": true,
+      "placeholder": false,
+      "curriculumSource": "masterclass-courses",
+      "pdfDir": "assets/pdf/masterclass",
       "meta": {
         "eyebrow": "Academic Track｜海外教授大师课",
         "titleEn": "Overseas Masterclass",
@@ -570,20 +568,6 @@
         {
           "k": "占位",
           "v": "核心数据待提供"
-        }
-      ],
-      "curriculum": [
-        {
-          "title": "课程模块一（占位）",
-          "desc": "具体课程名称、课时与配图待提供。"
-        },
-        {
-          "title": "课程模块二（占位）",
-          "desc": "具体课程名称、课时与配图待提供。"
-        },
-        {
-          "title": "课程模块三（占位）",
-          "desc": "具体课程名称、课时与配图待提供。"
         }
       ],
       "whySFK": [
@@ -725,60 +709,103 @@
     },
     {
       "id": "elite-incubator",
-      "badge": "课程待录入",
+      "badge": "孵化计划",
       "tileVariant": null,
       "cover": "",
-      "placeholder": true,
+      "placeholder": false,
       "meta": {
-        "eyebrow": "Global Talent Visa｜艺术精英计划",
-        "titleEn": "Young Artist Incubator",
+        "eyebrow": "Arts & Humanities｜青年艺术家孵化 · Young Artist Incubation",
+        "titleEn": "Young Artist Incubation Program",
         "titleCn": "青年艺术家孵化计划",
-        "desc": "【占位】课程介绍待提供。",
+        "desc": "为有艺术志向的学生搭建一条从创作身份到展览背书、行业资源与商业化可能的艺术家成长路径：面向具有潜力的青年艺术家及优秀艺术毕业生，以系统性课程与高端定制服务相结合，提供从艺术家身份定位、核心作品创作、驻地与展览策划，到知名度提升、行业资源对接与商业变现的全周期、阶梯式培育路径。",
         "chips": [
-          "占位标签"
+          "五大成长资产",
+          "8 大服务模块",
+          "三档成长方案",
+          "招募中"
         ]
       },
       "snapshot": [
         {
-          "k": "占位指标 A",
-          "v": "【占位】待提供。"
+          "k": "从艺术学生到独立艺术家",
+          "v": "搭建从创作身份到展览背书、行业资源与商业变现的成长路径"
         },
         {
-          "k": "占位指标 B",
-          "v": "【占位】待提供。"
+          "k": "8 大服务模块",
+          "v": "身份可识别 → 作品可展示 → 履历可证明 → 传播可检索 → 资源可对接 → 商业转化"
         },
         {
-          "k": "占位指标 C",
-          "v": "【占位】待提供。"
+          "k": "五大成长资产",
+          "v": "身份 · 作品（20/30/50 件项目化作品组）· 展览 · 传播 · 资源"
+        },
+        {
+          "k": "全艺术生态资源",
+          "v": "高校 · 美术馆 · 画廊 · 拍卖行 · 艺博会 · 媒体 · 商业跨界品牌"
         }
       ],
       "curriculum": [
         {
-          "title": "课程模块二-1（占位）",
-          "desc": "【占位】模块说明待提供。"
+          "title": "专业升学定位",
+          "desc": "通过艺术家身份定位梳理个人经历、长期兴趣、创作母题、媒介方向、视觉风格与艺术家叙事，形成艺术家定位、创作母题关键词与面向艺术市场的 Artist Statement，并明确展览履历、市场定位与整体时间安排。"
         },
         {
-          "title": "课程模块二-2（占位）",
-          "desc": "【占位】模块说明待提供。"
+          "title": "专业基础课与软件课",
+          "desc": "围绕个人方向补齐从课堂表达到专业创作的基础能力，规划系列作品主题、作品数量、媒介语言、尺寸关系、成组逻辑和作品档案，持续打磨作品语言。"
         },
         {
-          "title": "课程模块二-3（占位）",
-          "desc": "【占位】模块说明待提供。"
+          "title": "AI基础与应用实战",
+          "desc": "课程包括 AI 认知、AI 图像生成、AI 视频生成、AI Coding 和 AI 3D，帮助创作者掌握数字艺术工具与创作流程，并理解 AI 数据雕塑等前沿数字艺术进入城市综合体与大型商业地标的真实场景。"
+        },
+        {
+          "title": "个性化作品集项目",
+          "desc": "围绕个人母题完成系列作品与作品组（20/30/50 件项目化作品组），建立可展示、可传播、可沟通的作品基础，形成可用于展览、官网、画册和商业沟通的作品档案。"
+        },
+        {
+          "title": "Meta Lab 革新研创项目",
+          "desc": "围绕前沿设计、AI 创意科技、交互体验与跨学科研究方向展开，并结合驻地创作指导进入空间、材料、地域文化与公共议题的真实艺术现场，完成驻地项目履历、现场创作经验与具有研究逻辑和创作深度的作品。"
+        },
+        {
+          "title": "科研论文双收获课程",
+          "desc": "以顶级学府的研究功底为艺术创作提供哲学与艺术史脉络的深度梳理，帮助学生从创作问题、研究方法、案例分析到学术表达建立完整路径，贡献前沿策展与商业理念。"
+        },
+        {
+          "title": "冬夏校",
+          "desc": "国际化项目强化模块：通过海外教授带教、实地项目训练和研究型产出，帮助学生建立跨文化表达、竞赛通道和国际化展示意识，补充高质量作品项目与海外学习经历。"
+        },
+        {
+          "title": "海外教授课",
+          "desc": "由海外教授围绕国际前沿课题开展 5 次线上课程，引导学生理解新的研究方向、创作方法与专业趋势，并由教研团队进行阶段性 Critique 与质量审核；行业导师或资源方的反馈将成为进入真实艺术系统的机会入口。"
+        },
+        {
+          "title": "商业实践课程",
+          "desc": "以企业、品牌或行业机构的真实需求为项目背景，完成从 Brief 解读、调研分析、创意提案到成果交付的完整实践流程；并根据作品的成熟度和市场适配度，对接画廊签约、拍卖上拍、线上艺术平台交易、品牌合作、授权衍生与商业空间应用等可能路径。"
+        },
+        {
+          "title": "文书与申请护航",
+          "desc": "完成个展与群展的策展方案、展览文本、展签信息、视觉物料、布展执行与现场记录，搭建艺术家官网、画册、媒体内容与访谈影像等传播档案，并通过艺术顾问、行业引荐与重要艺术活动参与，支持圈层融入与职业进阶。"
         }
       ],
       "whySFK": [
         {
-          "t": "占位亮点（待提供）",
-          "d": "【占位】说明文字待提供。"
+          "t": "不让学生在单一体系里被筛选",
+          "d": "很多机构做孵化依赖单一画廊、单一展览或单一导师；本计划以高校、美术馆、画廊、媒体、艺博会、品牌和国际平台构成的全艺术生态，让学术型、展览型、传播型、商业型与跨界型路径都能成立。"
         },
         {
-          "t": "占位亮点（待提供）",
-          "d": "【占位】说明文字待提供。"
+          "t": "看得懂的成长证据",
+          "d": "身份资产、作品资产（20/30/50 件项目化作品组）、展览资产、传播资产与资源资产阶段性沉淀，让家庭投入转化为作品、履历、方法和 个人文化身份。"
+        },
+        {
+          "t": "三档方案匹配成长阶段",
+          "d": "萌芽计划（20 件作品 / 1 次群展 / 电子画册）、新锐视界（30 件作品 / 2 次驻地投递 / 5–7 天展期）、菁英回廊（50 件作品 / 4 次驻地投递 / 全案展览执行）。"
+        },
+        {
+          "t": "学术与市场的双重背书",
+          "d": "艺术哲学与艺术史研究团队深度梳理创作脉络，兼具十余年艺术品市场一线实战经验，助力青年艺术家完成从学术认可到市场接纳的关键跨越。"
         }
       ],
       "closing": {
-        "cn": "【占位】结语待提供。",
-        "en": "Placeholder closing."
+        "cn": "从「我喜欢艺术」到「我正在成为艺术家」——为青年艺术家搭建完整的证据链，让作品进入真实世界。",
+        "en": "From \"I love art\" to \"I am becoming an artist\" — building a complete chain of evidence for young artists."
       },
       "levels": [
         "ug",
@@ -789,17 +816,51 @@
   "overseas": [
     {
       "id": "overseas-program",
-      "badge": "课程待录入",
+      "badge": "5 门课程",
       "tileVariant": null,
       "cover": "",
-      "placeholder": true,
+      "placeholder": false,
+      "curriculumSource": "overseas-courses",
+      "pdfDir": "assets/pdf/overseas",
+      "curriculumFacets": {
+        "searchPlaceholder": "搜索项目 / 国家 / 城市院校…",
+        "searchFields": [
+          "role_or_course",
+          "university",
+          "professor"
+        ],
+        "groups": [
+          {
+            "label": "境外访校",
+            "value": "境外访校"
+          },
+          {
+            "label": "境外夏校",
+            "value": "境外夏校"
+          },
+          {
+            "label": "境外冬校",
+            "value": "境外冬校"
+          },
+          {
+            "label": "境外研学",
+            "value": "境外研学"
+          },
+          {
+            "label": "家长团",
+            "value": "家长团"
+          }
+        ]
+      },
       "meta": {
         "eyebrow": "Overseas Programs｜境外项目",
         "titleEn": "Overseas Program",
         "titleCn": "境外项目",
-        "desc": "【占位】课程介绍待提供。",
+        "desc": "共 5 门境外项目课程，分为境外访校（新加坡 / 英国 / 美国）与境外夏校（RISD / UAL）两类，行程 7–14 天。",
         "chips": [
-          "占位标签"
+          "5 门课程",
+          "境外访校 3 · 境外夏校 2",
+          "本科 / 研究生"
         ]
       },
       "levels": [
@@ -811,17 +872,21 @@
   "frontier": [
     {
       "id": "frontier-lecture",
-      "badge": "课程待录入",
+      "badge": "11 门课程",
       "tileVariant": null,
       "cover": "",
-      "placeholder": true,
+      "placeholder": false,
+      "curriculumSource": "frontier-lectures",
       "meta": {
         "eyebrow": "Art Frontier Lectures｜艺术前沿讯息讲座",
         "titleEn": "Art Frontier Lecture",
         "titleCn": "艺术前沿讯息讲座",
-        "desc": "【占位】课程介绍待提供。",
+        "desc": "覆盖 lecture 25 与 lecture 26 两季共 11 门海外院校领航课，由 Camberwell、RCA、CSM、UCL、Stanford、RISD、LCC、Penn 等院校教授线上授课，地方导师总结。",
         "chips": [
-          "占位标签"
+          "11 门课程",
+          "lecture 25 / lecture 26",
+          "线上",
+          "本科 / 研究生"
         ]
       },
       "levels": [

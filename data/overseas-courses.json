@@ -1,0 +1,72 @@
+[
+  {
+    "tab": "oversea",
+    "program_type": "境外访校",
+    "category": "艺术人文",
+    "role_or_course": "2027寒假-新加坡名校探访团",
+    "suitable_for": "全科系专业",
+    "location": "7天",
+    "level": "本科/研究生",
+    "outcomes": "2027.1.24-1.30",
+    "poster": "assets/img/courses/2027寒假-新加坡名校探访团.jpg",
+    "university": "新加坡",
+    "professor": "新加坡",
+    "type": "境外项目"
+  },
+  {
+    "tab": "oversea",
+    "program_type": "境外访校",
+    "category": "艺术人文",
+    "role_or_course": "2027寒假-英国名校探访团",
+    "suitable_for": "全科系专业",
+    "location": "10天",
+    "level": "本科/研究生",
+    "outcomes": "2027.2.11-2.20",
+    "poster": "assets/img/courses/2027寒假-英国名校探访团.jpg",
+    "university": "英国",
+    "professor": "伦敦、剑桥、提赛德、拉夫堡、利兹、爱丁堡、格拉斯哥",
+    "type": "境外项目"
+  },
+  {
+    "tab": "oversea",
+    "program_type": "境外访校",
+    "category": "艺术人文",
+    "role_or_course": "2027暑假-美国访校访企团",
+    "suitable_for": "全科系专业",
+    "location": "10天",
+    "level": "本科/研究生",
+    "outcomes": "2027.7",
+    "poster": "assets/img/courses/2027暑假-美国访校访企团.jpg",
+    "university": "美国",
+    "professor": "纽约、波士顿、洛杉矶",
+    "type": "境外项目"
+  },
+  {
+    "tab": "oversea",
+    "program_type": "境外夏校",
+    "category": "艺术人文",
+    "role_or_course": "2027暑假- RISD官方夏校",
+    "suitable_for": "全科系专业",
+    "location": "14天",
+    "level": "本科/研究生",
+    "outcomes": "2027.7.11-7.24",
+    "poster": "assets/img/courses/2027暑假- RISD官方夏校.jpg",
+    "university": "美国",
+    "professor": "普罗维登斯",
+    "type": "境外项目"
+  },
+  {
+    "tab": "oversea",
+    "program_type": "境外夏校",
+    "category": "艺术人文",
+    "role_or_course": "2027暑假- UAL伦艺本科官方夏校",
+    "suitable_for": "全科系专业",
+    "location": "11天",
+    "level": "本科/研究生",
+    "outcomes": "",
+    "poster": "assets/img/courses/2027暑假- UAL伦艺本科官方夏校.jpg",
+    "university": "英国",
+    "professor": "",
+    "type": "境外项目"
+  }
+]
