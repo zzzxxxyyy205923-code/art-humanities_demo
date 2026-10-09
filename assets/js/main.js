@@ -244,6 +244,119 @@ const Mosaic = {
   }
 };
 
+/* ═══════════ 学生案例页 · 作品横向滚动带 ═══════════
+   视觉与交互参照目录页（「关于艺术人文」浮层）的滚动马赛克（Mosaic）：
+   同一套 20 张作品图源（Mosaic.IMAGES），内容复制两份首尾相接，
+   translateX(0 → -50%) 无缝自右向左循环；时长 = 半幅宽 / 速度，任何视口下线速度恒定。
+
+   与目录页「按行铺满」不同，这里按「列」打包成打乱拼接的马赛克：
+   ① 每列 1–3 张，张数由该列首图自身的宽高比决定（越宽扁叠得越多）；
+   ② 列内纵向跨度按各图自身比例动态分配（越竖长占越高），合计恰好填满列高；
+   ③ 列宽 = 图带高 × WIDTH_F 循环系数 → 宽窄交错，整幅无空档。
+   间距走图块自身的右下外边距（格内留白），故半幅总宽恒为一半，-50% 处拼接无缝。 */
+const CasesReel = {
+  SPEED: 34,                 // px/s，与目录页马赛克一致
+  UNIT_ROWS: 6,              // 列高按 6 个基础格分配（与目录页同一量级）
+  WIDTH_F: [0.62, 0.44, 0.8, 0.5, 0.7],   // 列宽 = 图带高 × 系数，循环取用
+  built: false,
+
+  /* 图带高度随视口宽度伸缩：窄屏压低、宽屏封顶 */
+  stripH() {
+    return Math.round(Math.min(300, Math.max(200, window.innerWidth * 0.22)));
+  },
+
+  /* 该列能叠几张（1–3）：按「列宽 ÷ 图片自身比例」推算 —— 图越宽扁，在该列宽下的
+     自然高度越小，同高列里就叠得越多；列越宽则相反。结果夹在 1–3 之间。 */
+  stackSize(a, h, w) {
+    // ×0.8 略微收紧：竖长图更容易独占一列（1 张），宽扁图仍叠满 3 张
+    return Math.min(3, Math.max(1, Math.round(0.8 * h * a / w)));
+  },
+
+  /* 把 rows 个基础格按各图自身比例分下去：越竖长占越高，合计恰好 = rows */
+  split(rows, aspects) {
+    const wt = aspects.map(a => 1 / a);
+    const sum = wt.reduce((s, x) => s + x, 0);
+    const out = wt.map(x => Math.max(1, Math.round(rows * x / sum)));
+    let d = rows - out.reduce((s, x) => s + x, 0), i = 0;
+    while (d !== 0 && i < rows * out.length) {      // 多退少补，保证列满高
+      const j = i++ % out.length;
+      if (d > 0) { out[j]++; d--; } else if (out[j] > 1) { out[j]--; d++; }
+    }
+    return out;
+  },
+
+  /* 逐列打包：列宽循环取系数，列内张数与纵向跨度由图片自身尺寸决定 */
+  layout(h, minWidth) {
+    const imgs = Mosaic.IMAGES;
+    const cols = [];                                // [{ w, tiles:[{src,r,h,last}] }]
+    let i = 0, total = 0;
+    while (total < minWidth) {                      // 半幅 ≥ 可视宽 → 循环不露底
+      const w = Math.round(h * this.WIDTH_F[cols.length % this.WIDTH_F.length]);
+      const a0 = imgs[i % imgs.length][1] / imgs[i % imgs.length][2];
+      const srcs = [], aspects = [];
+      for (let n = 0, k = this.stackSize(a0, h, w); n < k; n++) {
+        const im = imgs[i++ % imgs.length];
+        srcs.push(im[0]); aspects.push(im[1] / im[2]);
+      }
+      const spans = this.split(this.UNIT_ROWS, aspects);
+      let r = 0;
+      const tiles = srcs.map((src, n) => {
+        const t = { src, r, h: spans[n], last: n === srcs.length - 1 };
+        r += spans[n];
+        return t;
+      });
+      cols.push({ w, tiles });
+      total += w;
+      i += cols.length % 3 === 1 ? 1 : 0;   // 打乱：隔列错开一张，避免所有列都从同一相位起图
+    }
+    return cols;
+  },
+
+  /* 两份首尾相接：第二份整体右移 cols.length 列 → 横向无缝循环 */
+  markup(cols) {
+    const one = off => cols.map((c, ci) => c.tiles.map(t =>
+      `<figure style="grid-area:${t.r + 1}/${ci + 1 + off}/span ${t.h}/span 1${t.last ? ';margin-bottom:0' : ''}">
+         <img src="assets/img/reel/${t.src}" alt="" decoding="async" draggable="false">
+       </figure>`).join('')).join('');
+    return one(0) + one(cols.length);
+  },
+
+  build() {
+    const track = document.getElementById('cases-reel-track');
+    if (!track) return;
+    const clip = track.parentElement;
+    /* 可视宽 = 裁切框宽（已与标题文字内容同宽），取不到时回落到内容宽 1104 */
+    const minWidth = Math.max((clip && clip.clientWidth) || Math.min(1104, window.innerWidth - 96), 320);
+    const unit = Math.round(this.stripH() / this.UNIT_ROWS) || 1;
+    const h = unit * this.UNIT_ROWS;                // 整格高度，避免半像素留白
+    const cols = this.layout(h, minWidth);
+    const widths = cols.map(c => c.w + 'px');
+
+    track.style.height = `${h}px`;
+    track.style.gridTemplateColumns = widths.concat(widths).join(' ');
+    track.style.gridTemplateRows = `repeat(${this.UNIT_ROWS}, ${unit}px)`;
+    track.innerHTML = this.markup(cols);
+    this.sync(track);
+    this.built = true;
+  },
+
+  /* 时长 = 半幅总宽 / 速度 → 与目录页同一套「线速度恒定」策略 */
+  sync(track) {
+    track = track || document.getElementById('cases-reel-track');
+    if (!track) return;
+    const half = track.scrollWidth / 2;
+    if (half) track.style.setProperty('--reel-dur', (half / this.SPEED).toFixed(1) + 's');
+  }
+};
+
+/* 视口尺寸变化 → 重算图带高度 / 各图宽度 / 循环时长（防抖） */
+let _casesReelRz;
+window.addEventListener('resize', () => {
+  if (!CasesReel.built) return;
+  clearTimeout(_casesReelRz);
+  _casesReelRz = setTimeout(() => CasesReel.build(), 200);
+});
+
 /* ═══════════ 「关于艺术人文」全屏浮层 ═══════════
    绿色方框触发：整屏覆盖 + 自上而下消隐（CSS clip-path 幕布 + 绿色消隐线）
    背景 = 20 张作品拼成的横向滚动马赛克（仅此界面出现，首次展开才建/加载）
@@ -433,20 +546,8 @@ const Footer = {
 /* ═══════════ 各视图构建器（懒加载，进入视图时才渲染一次） ═══════════ */
 const PAGES = {
   home() {
-    const majors = DATA.cache.majors;
-    const grid = document.getElementById('major-grid');
-    if (!grid) return;
-    grid.innerHTML = Object.values(majors).map(m => `
-      <a class="major-card" href="#/undergraduate/${m.id}">
-        <span class="major-card__num">${m.num}</span>
-        <h3 class="major-card__title">${m.title}</h3>
-        <div class="major-card__title-en u-en">${m.titleEn}</div>
-        <p class="major-card__desc">${m.summary}</p>
-        <div class="major-card__plates">
-          ${m.plates.map(p => `<span class="badge">${p.num} ${p.title}</span>`).join('')}
-        </div>
-      </a>
-    `).join('');
+    /* 「两大专业方向」已改为静态手风琴（结构内联于 index.html，纯 CSS 交互），
+       不再由 majors.json 渲染 #major-grid；其余首页板块照常构建 */
     CourseProducts.build();
     OffersSection.build();
     InstructorsSection.build();
@@ -455,7 +556,7 @@ const PAGES = {
   },
 
   undergraduate() { PlanningModules.build(); UndergradPage.init(); },
-  cases() { CasesPage.build(); },
+  cases() { CasesPage.build(); CasesReel.build(); },
   employment() { EmploymentPage.build(); },
   fulltime() {},
   graduate() {}

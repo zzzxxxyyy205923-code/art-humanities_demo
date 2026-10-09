@@ -2596,3 +2596,124 @@ html.is-overlay-open { overflow: hidden; }
   .cd-curriculum-card:hover, .cd-curriculum-card:focus-visible { transform: none; }
   .cd-curriculum-card:hover .cd-curriculum-card__img img { transform: none; }
 }
+
+/* ═══════════ 学生案例页：作品横向滚动带 ═══════════
+   参照目录页「关于艺术人文」滚动马赛克（ovReel）的轨道与动画方案：
+   width:max-content + 内容复制两份 + translateX(0 → -50%) 无缝循环。
+   图块间距用 figure 自身的 margin-right（而非容器 gap）：
+   每个图块自带尾距，半幅总宽恒为整幅一半，-50% 处首尾拼接不露缝。
+   两端渐隐遮罩与目录页图卷同一手法；悬停暂停与站内校企 marquee 一致。 */
+.cases-reel {
+  /* 与标题下文字内容同宽：--max-w 1200 − 48×2 内边距 = 1104，与下方 .section 网格同边界 */
+  max-width: var(--max-w); margin: 0 auto;
+  padding: 36px 48px 8px;
+}
+.cases-reel__clip {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 4%, #000 96%, transparent 100%);
+          mask-image: linear-gradient(90deg, transparent 0, #000 4%, #000 96%, transparent 100%);
+}
+.cases-reel__track {
+  display: grid; width: max-content; gap: 0;
+  animation: casesReel var(--reel-dur, 60s) linear infinite;
+  will-change: transform;
+}
+.cases-reel__clip:hover .cases-reel__track { animation-play-state: paused; }
+@keyframes casesReel { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.cases-reel__track figure {
+  /* 右下留白 = 图块间距（原 18px 的 45% ≈ 8px）：留白在格内，半幅总宽恒为一半 → 拼接无缝 */
+  margin: 0 var(--reel-gap, 8px) var(--reel-gap, 8px) 0;
+  border-radius: var(--radius); overflow: hidden;   /* 圆角容器：图片裁切在内，完整填满 */
+  background: var(--surface-2);
+}
+.cases-reel__track img {
+  display: block; width: 100%; height: 100%; object-fit: cover;   /* 铺满容器，不留空隙 */
+}
+/* 窄屏内边距与 .planning-hero 同步，保证左右边界仍与文字对齐 */
+@media (max-width: 700px) { .cases-reel { padding-left: 24px; padding-right: 24px; } }
+
+/* reduced-motion：停用自动滚动，降级为可手动横滑的图带 */
+@media (prefers-reduced-motion: reduce) {
+  .cases-reel__clip { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .cases-reel__track { animation: none; }
+}
+
+/* ═══════════ 首页 · 当代艺术实践（专业方向横向手风琴） ═══════════
+   交互骨架对齐「本科爬藤 UNDERGRADUATE PLANNING 01–05」的 .pacc/.pmod：
+   静态 = 8 个等宽窄条（flex: 1 1 0），配图铺满整格，底部三行（编号 / 中文标题 /
+   英文副标题）；悬停 / 聚焦 → 该条横向展开（其余保持等宽收窄），底部淡入文字解释。
+   纯 CSS 驱动（:hover / :focus-visible），无 JS 状态，触屏点按同样触发悬停态；
+   ≤900px 转纵向手风琴（沿用 .pacc 响应式思路）。 */
+.majors-acc {
+  display: flex; align-items: stretch; gap: 7.5px;   /* 间距 = 原 10px 的 75% */
+  height: clamp(360px, 50vh, 480px);
+}
+.major-acc {
+  position: relative; flex: 1 1 0; min-width: 0;
+  overflow: hidden; cursor: pointer;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface); padding: 0; text-align: left;
+  font-family: inherit; font-size: inherit; color: var(--text);
+  transition: flex-grow .45s cubic-bezier(.22,.61,.36,1), border-color .2s;
+}
+.major-acc:hover, .major-acc:focus-visible {
+  flex-grow: 3.2; border-color: var(--brand);
+}
+.major-acc:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(99,230,212,.16); }
+
+/* 配图：绝对定位铺满整格 —— 静态 / 悬浮都不留缝隙，圆角由容器 overflow 裁切。
+   默认压暗（亮度 / 明度整体降低），仅悬浮 / 聚焦该项时恢复原始亮度 */
+.major-acc__img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  filter: brightness(.55) saturate(.92);
+  transition: filter .35s ease;
+}
+.major-acc:hover .major-acc__img, .major-acc:focus-visible .major-acc__img {
+  filter: brightness(1.1) saturate(1.05);   /* 恢复亮度之上再提亮 10%、鲜艳度 +5% */
+}
+/* 底部渐变压暗：保证三行文字在任何配图上可读；展开时略加深 */
+.major-acc__veil {
+  position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(11,14,20,.1) 0%, rgba(11,14,20,0) 28%, rgba(11,14,20,0) 52%, rgba(11,14,20,.84) 100%);
+}
+.major-acc:hover .major-acc__veil, .major-acc:focus-visible .major-acc__veil {
+  background: linear-gradient(180deg, rgba(11,14,20,.28) 0%, rgba(11,14,20,.12) 45%, rgba(11,14,20,.88) 100%);
+}
+
+/* 底部三行：编号 / 中文标题 / 英文副标题；窄条时超出部分省略号收口。
+   字号整体下调（×0.85），各元素间比例关系保持不变 */
+.major-acc__stack {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 16px 16px 14px; min-width: 0;
+}
+.major-acc__num {
+  font-family: var(--font-mono); font-size: 10px; font-weight: var(--fw-semibold);
+  color: var(--brand); font-variant-numeric: tabular-nums;
+}
+.major-acc__name {
+  font-size: clamp(12px, .9vw, 13.5px); font-weight: var(--fw-semibold);
+  letter-spacing: .04em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.major-acc__en {
+  font-family: var(--font-en); font-size: 8.5px; font-weight: var(--fw-medium);
+  letter-spacing: .14em; text-transform: uppercase; color: var(--brand);   /* 与序号同色 */
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+/* 文字解释：仅展开态显示 */
+.major-acc__desc {
+  display: none; margin-top: 8px;
+  font-size: calc(var(--fs-small) * .85); line-height: 1.7; color: var(--text-soft);
+}
+.major-acc:hover .major-acc__desc, .major-acc:focus-visible .major-acc__desc { display: block; }
+
+/* 窄屏转纵向手风琴：每行收起 = 84px，展开 = 300px，配图同样铺满整格 */
+@media (max-width: 900px) {
+  .majors-acc { flex-direction: column; height: auto; }
+  .major-acc {
+    flex: 0 0 auto; height: 84px;
+    transition: height .4s cubic-bezier(.22,.61,.36,1), border-color .2s;
+  }
+  .major-acc:hover, .major-acc:focus-visible { height: 300px; flex-grow: 1; }
+}

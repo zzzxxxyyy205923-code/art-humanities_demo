@@ -42,11 +42,96 @@
 
   <section class="section" id="intro">
     <div class="section__header">
-      <span class="section__eyebrow u-en">MAJORS</span>
-      <h2 class="section__title">两大专业方向</h2>
-      <p class="section__desc">插画与纯艺术共享视觉语言训练，但在叙事应用、创作目标与职业出口上各有侧重。点击下方卡片进入对应本科爬藤板块。</p>
+      <span class="section__eyebrow u-en">Contemporary Art Practice</span>
+      <h2 class="section__title">当代艺术实践</h2>
+      <p class="section__desc">以观念为核心，运用多元媒介回应当代社会与文化议题，通向独立创作、艺术驻留、展览及公共艺术等发展方向。</p>
     </div>
-    <div class="card-grid" id="major-grid"></div>
+
+    <!-- 八大专业方向：横向手风琴（交互骨架对齐「本科爬藤 UNDERGRADUATE PLANNING 01–05」的 .pacc/.pmod）
+         静态 = 8 个等宽窄条，配图铺满整格，底部三行（编号 / 中文标题 / 英文副标题）；
+         悬停 / 聚焦 → 该条横向展开并淡入文字解释，其余保持等宽收窄。纯 CSS 驱动，触屏点按同样生效。 -->
+    <div class="majors-acc" id="majors-acc">
+      <button class="major-acc" type="button" aria-label="绘画 Painting">
+        <img class="major-acc__img" src="assets/img/majors-acc/painting.png" alt="" loading="lazy" decoding="async">
+        <span class="major-acc__veil" aria-hidden="true"></span>
+        <span class="major-acc__stack">
+          <span class="major-acc__num">01</span>
+          <span class="major-acc__name">绘画</span>
+          <span class="major-acc__en u-en">Painting</span>
+          <span class="major-acc__desc">通过色彩、材料与图像建立个人视觉语言，为职业艺术创作、展览实践、出版及视觉文化领域奠定基础。</span>
+        </span>
+      </button>
+      <button class="major-acc" type="button" aria-label="雕塑 Sculpture">
+        <img class="major-acc__img" src="assets/img/majors-acc/sculpture.png" alt="" loading="lazy" decoding="async">
+        <span class="major-acc__veil" aria-hidden="true"></span>
+        <span class="major-acc__stack">
+          <span class="major-acc__num">02</span>
+          <span class="major-acc__name">雕塑</span>
+          <span class="major-acc__en u-en">Sculpture</span>
+          <span class="major-acc__desc">以材料、形态与空间塑造立体表达能力，拓展至艺术展览、公共艺术、空间设计及跨媒介创作领域。</span>
+        </span>
+      </button>
+      <button class="major-acc" type="button" aria-label="装置 Installation Art">
+        <img class="major-acc__img" src="assets/img/majors-acc/installation.png" alt="" loading="lazy" decoding="async">
+        <span class="major-acc__veil" aria-hidden="true"></span>
+        <span class="major-acc__stack">
+          <span class="major-acc__num">03</span>
+          <span class="major-acc__name">装置</span>
+          <span class="major-acc__en u-en">Installation Art</span>
+          <span class="major-acc__desc">综合空间、影像、声音与现成材料营造沉浸式体验，面向当代艺术、公共文化、商业展陈及体验设计等领域。</span>
+        </span>
+      </button>
+      <button class="major-acc" type="button" aria-label="策展与艺术管理 Curating &amp; Arts Management">
+        <img class="major-acc__img" src="assets/img/majors-acc/curating.png" alt="" loading="lazy" decoding="async">
+        <span class="major-acc__veil" aria-hidden="true"></span>
+        <span class="major-acc__stack">
+          <span class="major-acc__num">04</span>
+          <span class="major-acc__name">策展与艺术管理</span>
+          <span class="major-acc__en u-en">Curating &amp; Arts Management</span>
+          <span class="major-acc__desc">连接艺术内容、文化机构与公众，培养展览策划和项目运营能力，通向美术馆、画廊、艺术节及文化品牌等行业。</span>
+        </span>
+      </button>
+      <button class="major-acc" type="button" aria-label="艺术史 Art History">
+        <img class="major-acc__img" src="assets/img/majors-acc/art-history.png" alt="" loading="lazy" decoding="async">
+        <span class="major-acc__veil" aria-hidden="true"></span>
+        <span class="major-acc__stack">
+          <span class="major-acc__num">05</span>
+          <span class="major-acc__name">艺术史</span>
+          <span class="major-acc__en u-en">Art History</span>
+          <span class="major-acc__desc">研究艺术作品背后的历史、社会与思想脉络，培养视觉分析与批判写作能力，服务于学术研究、策展、评论、出版及文化传播。</span>
+        </span>
+      </button>
+      <button class="major-acc" type="button" aria-label="艺术疗愈 Art Therapy">
+        <img class="major-acc__img" src="assets/img/majors-acc/art-therapy.png" alt="" loading="lazy" decoding="async">
+        <span class="major-acc__veil" aria-hidden="true"></span>
+        <span class="major-acc__stack">
+          <span class="major-acc__num">06</span>
+          <span class="major-acc__name">艺术疗愈</span>
+          <span class="major-acc__en u-en">Art Therapy</span>
+          <span class="major-acc__desc">融合艺术创作与心理学理论，支持情绪表达、自我认知及社会联结，面向医疗、心理健康、教育与社区服务等专业场景。</span>
+        </span>
+      </button>
+      <button class="major-acc" type="button" aria-label="插画与视觉艺术 Illustration &amp; Visual Arts">
+        <img class="major-acc__img" src="assets/img/majors-acc/illustration.png" alt="" loading="lazy" decoding="async">
+        <span class="major-acc__veil" aria-hidden="true"></span>
+        <span class="major-acc__stack">
+          <span class="major-acc__num">07</span>
+          <span class="major-acc__name">插画与视觉艺术</span>
+          <span class="major-acc__en u-en">Illustration &amp; Visual Arts</span>
+          <span class="major-acc__desc">以图像讲述故事、传递观念并塑造视觉形象，连接出版、品牌、广告、文创、动画及独立IP等多元行业。</span>
+        </span>
+      </button>
+      <button class="major-acc" type="button" aria-label="跨学科艺术 Interdisciplinary Art">
+        <img class="major-acc__img" src="assets/img/majors-acc/interdisciplinary.png" alt="" loading="lazy" decoding="async">
+        <span class="major-acc__veil" aria-hidden="true"></span>
+        <span class="major-acc__stack">
+          <span class="major-acc__num">08</span>
+          <span class="major-acc__name">跨学科艺术</span>
+          <span class="major-acc__en u-en">Interdisciplinary Art</span>
+          <span class="major-acc__desc">融合艺术与科技、人文及社会科学，培养跨领域研究与创新表达能力，面向实验创作、创意科技和未来文化产业。</span>
+        </span>
+      </button>
+    </div>
   </section>
 
   <!-- 录取成果 / OFFER 展示：结构 / 布局 / 信息层级复用 dad_demo 首页「offer 展示」板块
@@ -226,6 +311,16 @@
     <h1>学生案例</h1>
     <p>真正决定这些年轻人去向的，从来不是分数、国别与课程标签，而是他们如何以独有的目光审视世界，把成长里的困惑、眷恋与追问，淬炼成有温度、有思想密度的作品——这正是艺术与人文区别于一切标准化评价的气质与厚度。</p>
   </section>
+
+  <!-- 学生案例 · 作品滚动带：参照目录页（关于艺术人文）右侧横向滚动图卷的
+       视觉与交互（无缝自右向左循环、线速度恒定），由 CasesReel（main.js）注入图片。
+       图块之间保留间距、图片圆角，悬停暂停；置于标题区与「录取案例」之间 -->
+  <section class="cases-reel" id="cases-reel" aria-hidden="true">
+    <div class="cases-reel__clip">
+      <div class="cases-reel__track" id="cases-reel-track"></div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="section__header">
       <span class="section__eyebrow u-en">GALLERY</span>
