@@ -26,75 +26,45 @@ async function loadData(files = ['meta', 'majors', 'cases', 'planning', 'careers
    由路由切换（setActive）与视口观察（IntersectionObserver）共同驱动，
    两种来源最终都收敛到 sync()，不会出现残留播放或声音冲突。
 
-   浏览器自动播放策略的完整处理（Chrome / Safari / Firefox / iOS）：
-   1. 优先直接有声播放 —— 命中浏览器的媒体参与度机制（用户常访问的站点、
-      或本次会话内已发生过手势的「刷新 / 返回」场景）时直接放行；
-   2. play() 被策略拦截时 → 立即静音起播保证画面呈现，同时武装一次性
-      「解锁监听」：pointerdown / keydown / touchstart 任意首次手势
-      （即浏览器认可的激活信号）出现时，自动解除静音并恢复播放——
-      无需用户去点右下角的声音图标；
-   3. 解锁若仍被拦截（极端环境）则重新武装监听，等待下一次手势；
-   4. iOS Safari 依赖 HTML 上的 playsinline 属性（已存在）保证内联自动播放。 */
+   浏览器自动播放策略处理（Chrome / Safari / Firefox / iOS）：
+   1. 本模块只负责「播放 / 暂停」的调度，不接管声音 —— 视频始终按当前
+      muted 状态播放（刷新后为静音），绝不因任意点击而解除静音；
+   2. 声音的唯一开关是右下角声音图标（#hero-sound），由 assets/js/hero-video.js
+      独占管理（点击图标 → wantSound 翻转 → 同步 muted）；此处不再监听
+      pointerdown / keydown / touchstart 等全局手势，避免「点击视口任意位置
+      即自动播放声音」；
+   3. iOS Safari 依赖 HTML 上的 playsinline 属性（已存在）保证内联自动播放。 */
 const HeroVideo = {
   el: null,
   onHome: false,
   inView: true,
   _inited: false,
-  _armed: false,
 
   get video() {
     if (!this.el) this.el = document.getElementById('hero-video');
     return this.el;
   },
 
-  /* 统一收敛：仅在「首页 + 视频可见」时播放（优先有声），否则停播静音 */
+  /* 统一收敛：仅在「首页 + 视频可见」时播放，否则停播静音。
+     声音状态（muted）不在此处改动 —— 由右下角声音图标（hero-video.js）独占控制，
+     离开首页时置静音只为杜绝残留声音输出 */
   sync() {
     const v = this.video;
     if (!v) return;
     if (this.onHome && this.inView) {
-      this._playWithSound();
+      this._play();
     } else {
       v.pause();
       v.muted = true;
     }
   },
 
-  /* 有声播放 + 策略降级链 */
-  _playWithSound() {
+  /* 仅调度播放，不改动 muted：刷新后保持静音播放，
+     点击视口任意位置都不会触发声音同步 */
+  _play() {
     const v = this.video;
-    v.muted = false;                          // 先尝试有声播放
     const p = v.play();
-    if (p && p.then) {
-      p.then(() => { this._armed = false; })  // 成功：确认有声状态
-       .catch(() => {
-         // 策略拦截 → 静音起播（画面先行）+ 等待首次手势自动解锁声音
-         v.muted = true;
-         v.play().catch(() => {});
-         this._armUnlock();
-       });
-    }
-  },
-
-  /* 一次性手势解锁：浏览器认可的激活信号（点击 / 按键 / 触摸）出现时，
-     自动解除静音并恢复播放；若仍被拦截则重新武装，等待下一次手势 */
-  _armUnlock() {
-    if (this._armed) return;
-    this._armed = true;
-    const unlock = () => {
-      ['pointerdown', 'keydown', 'touchstart'].forEach(ev =>
-        document.removeEventListener(ev, unlock));
-      this._armed = false;
-      if (!this.onHome || !this.inView) return;   // 已不在播放条件内，交由 sync 处理
-      const v = this.video;
-      v.muted = false;
-      const p = v.play();
-      if (p && p.catch) p.catch(() => {
-        v.muted = true;                            // 仍被拦截 → 重新武装
-        this._armUnlock();
-      });
-    };
-    ['pointerdown', 'keydown', 'touchstart'].forEach(ev =>
-      document.addEventListener(ev, unlock, { passive: true }));
+    if (p && p.catch) p.catch(() => {});   // 策略拦截时保持静音画面，不再武装全局手势解锁
   },
 
   /* 路由切换入口：进入/离开首页 */
@@ -369,9 +339,19 @@ const NavOverlay = {
   markup(overlay = {}) {
     const primary = overlay.primary || [];
     const secondary = overlay.secondary || [];
-    const link = (it, i, tier) =>
-      `<a class="nav-overlay__link nav-overlay__link--${tier}" href="${it.href}" data-view="${it.id}" style="--i:${i}">` +
-        `<span class="idx">${String(i + 1).padStart(2, '0')}</span>${it.label}</a>`;
+    /* 条目渲染：编号统一由序号生成（01/02/…），保证层级与编号格式一致。
+       带 placeholder 的条目（如「05 全日制」）内容尚未上线：同样占位编号与字号，
+       渲染为不可点击的占位行 + 小标签，不产生跳转；
+       后续内容就位时，在 meta.json 去掉该项的 placeholder / placeholderNote 即成为同级正常链接 */
+    const link = (it, i, tier) => {
+      const idx = `<span class="idx">${String(i + 1).padStart(2, '0')}</span>`;
+      if (it.placeholder) {
+        return `<span class="nav-overlay__link nav-overlay__link--${tier} is-placeholder" style="--i:${i}" aria-disabled="true">` +
+          `${idx}${it.label}<span class="nav-overlay__soon">${it.placeholderNote || '内容即将上线'}</span></span>`;
+      }
+      return `<a class="nav-overlay__link nav-overlay__link--${tier}" href="${it.href}" data-view="${it.id}" style="--i:${i}">` +
+        `${idx}${it.label}</a>`;
+    };
     const cta = overlay.cta
       ? `<a class="nav-overlay__cta" href="${overlay.cta.href}" data-view="employment" style="--i:${primary.length + secondary.length}">` +
           `${overlay.cta.label}${overlay.cta.labelEn ? `<span class="nav-overlay__cta-en u-en">/ ${overlay.cta.labelEn}</span>` : ''}</a>`
@@ -405,7 +385,8 @@ const NavOverlay = {
     el.addEventListener('click', e => {
       if (e.target === el || e.target.closest('.nav-overlay__reel')) this.close();
     });
-    el.querySelectorAll('.nav-overlay__link').forEach(a =>
+    // 占位条目（is-placeholder）无链接内容 → 不参与「点击关闭并跳转」
+    el.querySelectorAll('.nav-overlay__link:not(.is-placeholder)').forEach(a =>
       a.addEventListener('click', () => this.close()));
 
     document.addEventListener('keydown', e => {
@@ -1549,6 +1530,8 @@ const OffersSection = {
     this._active = (d.filters && d.filters[0] && d.filters[0].id) || 'US';
     this._seasons = d.seasonFilters || [];
     this._activeSeason = this._seasons[0] || '';
+    this._q = '';   // 搜索词（trim + 小写；非空即进入搜索态：跨全部国家/申请季检索）
+    this._openCard = '';   // 常规态下被点击展开的院校档案卡（zh 名）
 
     /* 两组筛选：「申请季」在前、「国家」在后，各带小标题并以“|”划分 */
     const groupHTML = (label, btns) =>
@@ -1563,11 +1546,27 @@ const OffersSection = {
       <div class="filter-bar" id="offers-filter-bar">
         ${this._seasons.length ? groupHTML('申请季', seasonBtns) : ''}
         ${groupHTML('国家', countryBtns)}
+        <div class="filter-group filter-group--search">
+          <span class="filter-group__label">搜索</span>
+          <span class="filter-group__sep">|</span>
+          <input class="offers-search" id="offers-search" type="search" placeholder="输入院校中 / 英文名" autocomplete="off">
+        </div>
       </div>
-      <div class="rough-grid" id="offers-grid">${this._rowsHTML(d, this._active)}</div>
+      <div class="rough-grid" id="offers-grid">${this._rowsHTML(d)}</div>
       <div id="offers-more-wrap" style="text-align:center;margin-top:24px;"></div>`;
 
     this._bind(root);
+
+    /* 搜索：实时（150ms 防抖）；清空后恢复默认筛选态 */
+    const input = root.querySelector('#offers-search');
+    if (input) {
+      let t;
+      input.addEventListener('input', () => {
+        clearTimeout(t);
+        t = setTimeout(() => this.search(input.value), 150);
+      });
+    }
+
     this._applyClamp();
 
     if (!this._resizeBound) {
@@ -1575,7 +1574,7 @@ const OffersSection = {
       let t;
       window.addEventListener('resize', () => {
         clearTimeout(t);
-        t = setTimeout(() => { if (!this._expanded[this._active]) this._applyClamp(); }, 150);
+        t = setTimeout(() => { if (!this._expanded[this._active || '_search']) this._applyClamp(); }, 150);
       });
     }
   },
@@ -1591,20 +1590,113 @@ const OffersSection = {
       else this.filter(btn.getAttribute('data-group'), btn);
     });
     root.addEventListener('click', e => {
-      if (e.target.closest('#offers-expand-btn')) this.toggle(this._active);
+      const card = e.target.closest('.offer-card--clickable');
+      if (card) { this.toggleCard(card.dataset.school); return; }
+      if (e.target.closest('#offers-expand-btn')) this.toggle();
     });
   },
 
-  _rowsHTML(d, groupId) {
-    /* 申请季 × 国家 双维度过滤：条目未标注 seasons 时视为全季可见（兼容旧数据） */
-    const list = ((d.groups && d.groups[groupId]) || [])
-      .filter(r => !this._activeSeason || !(r.seasons || []).length || (r.seasons || []).includes(this._activeSeason));
-    return list.map(r => `
-      <div class="offer-card">
-        <div class="offer-card__count">${this.esc(r.count)}</div>
+  /* 常规态卡片点击：原地展开/折叠为院校档案卡 —— 与搜索结果完全同构
+     （同一 DOM 结构与样式类、同一份 SFK_DATA 缓存数据同步渲染、无页面跳转） */
+  toggleCard(zh) {
+    this._openCard = this._openCard === zh ? '' : zh;
+    this._rerenderGrid();
+  },
+
+  /* ── 搜索（筛选行末端）：中/英文名实时检索，跨全部国家与申请季；
+        结果卡片附「国家 + 各申请季」汇总；申请季/国家筛选仍可用以收窄结果，
+        搜索态下点击已选中的筛选按钮可取消（回到全部）；清空输入恢复默认筛选态 */
+  search(v) {
+    const q = String(v == null ? '' : v).trim().toLowerCase();
+    if (q === this._q) return;
+    this._q = q;
+    this._syncFilterState();
+    this._rerenderGrid();
+  },
+
+  /* 进入/退出搜索态时同步筛选标签选中态：
+     搜索态 → 两组标签全部取消选中（= 全部国家 × 全部申请季），由用户按需点选收窄；
+     非搜索态 → 恢复默认选中（首个国家 + 首个申请季） */
+  _syncFilterState() {
+    const bar = document.getElementById('offers-filter-bar');
+    if (!bar) return;
+    if (this._q) {
+      this._active = '';
+      this._activeSeason = '';
+    } else {
+      const d = DATA.cache['offers'];
+      this._active = (d && d.filters && d.filters[0] && d.filters[0].id) || 'US';
+      this._activeSeason = this._seasons[0] || '';
+    }
+    bar.querySelectorAll('[data-group]').forEach(b => b.classList.toggle('is-active', b.getAttribute('data-group') === this._active));
+    bar.querySelectorAll('[data-season]').forEach(b => b.classList.toggle('is-active', b.dataset.season === this._activeSeason));
+  },
+
+  /* 当前应渲染的行：[row, groupId] 二元组。
+     常规态 = 当前国家组；搜索态 = 全部组内匹配（中/英文名子串、大小写不敏感），
+     按offer总数降序，再叠加国家/申请季筛选 */
+  _currentRows(d) {
+    const groups = (d && d.groups) || {};
+    let pool = [];
+    if (this._q) {
+      Object.keys(groups).forEach(g => groups[g].forEach(r => {
+        const hay = ((r.zh || '') + ' ' + (r.en || '')).toLowerCase();
+        if (hay.includes(this._q)) pool.push([r, g]);
+      }));
+      pool.sort((a, b) => (parseInt(b[0].count, 10) || 0) - (parseInt(a[0].count, 10) || 0));
+      if (this._active) pool = pool.filter(([, g]) => g === this._active);
+    } else {
+      pool = (groups[this._active] || []).map(r => [r, null]);
+    }
+    if (this._activeSeason) {
+      pool = pool.filter(([r]) => !(r.seasons || []).length || (r.seasons || []).includes(this._activeSeason));
+    }
+    return pool;
+  },
+
+  _rowsHTML(d) {
+    /* 申请季 × 国家（× 搜索）过滤：条目未标注 seasons 时视为全季可见（兼容旧数据）。
+       seasonCounts：选中年份时展示该季 offer 数（真实统计），旧数据或未标注时回退总数。
+       院校档案卡（offer-card--dossier）：搜索态全部呈现；常规态点击卡片原地展开
+       （_openCard）—— 同一 DOM/样式/数据：国家名下方按年份从近到远纵向列出
+       「年份 ｜ offer数量」，右侧边框区域按本科/研究生分组列出录取专业（官方中英文名） */
+    const inSearch = !!this._q;
+    const filters = (d && d.filters) || [];
+    return this._currentRows(d).map(([r, g]) => {
+      const cnt = (this._activeSeason && r.seasonCounts && r.seasonCounts[this._activeSeason]) || r.count;
+      const dossier = inSearch || this._openCard === r.zh;
+      if (!dossier) {
+        return `
+      <div class="offer-card offer-card--clickable" data-school="${this.esc(r.zh)}" title="点击展开院校详情">
+        <div class="offer-card__count${r.hl ? ' offer-card__count--hl' : ''}">${this.esc(cnt)}</div>
         <div class="offer-card__school-zh">${this.esc(r.zh)}</div>
         <div class="offer-card__school-en">${this.esc(r.en)}</div>
-      </div>`).join('');
+      </div>`;
+      }
+      const fl = filters.find(f => f.id === (g || this._active));
+      const years = (r.seasons || []).slice().sort().reverse().map(s =>
+        `<div class="offer-card__year">${this.esc(s)} ｜ ${this.esc(r.seasonCounts && r.seasonCounts[s] || '—')}</div>`).join('');
+      const group = (list, label) => (list && list.length) ? `
+        <div class="offer-card__major-group">
+          <div class="offer-card__major-h">${label}</div>
+          <ul>${list.map(m => `<li><span class="offer-card__major-en">${this.esc(m[0])}</span><span class="offer-card__major-cn">${this.esc(m[1])}</span></li>`).join('')}</ul>
+        </div>` : '';
+      const majors = r.majors ? `
+        <aside class="offer-card__majors">
+          ${group(r.majors.ug, '本科 · Undergraduate')}
+          ${group(r.majors.pg, '研究生 · Postgraduate')}
+        </aside>` : '';
+      return `
+      <div class="offer-card offer-card--dossier${inSearch ? '' : ' offer-card--clickable'}" data-school="${this.esc(r.zh)}"${inSearch ? '' : ' title="点击收起"'}>
+        <div class="offer-card__info">
+          <div class="offer-card__count${r.hl ? ' offer-card__count--hl' : ''}">${this.esc(cnt)}</div>
+          <div class="offer-card__school-zh">${this.esc(r.zh)}</div>
+          <div class="offer-card__school-en">${this.esc(r.en)}</div>
+          <div class="offer-card__meta">${this.esc(fl ? fl.label : '—')}</div>
+          <div class="offer-card__years">${years}</div>
+        </div>${majors}
+      </div>`;
+    }).join('');
   },
 
   /* 原样移植自 dad_demo HomePage._gridClamp：读取栅格自身计算列数，按整行折叠，
@@ -1623,38 +1715,46 @@ const OffersSection = {
     const grid = document.getElementById('offers-grid');
     const wrap = document.getElementById('offers-more-wrap');
     if (!grid || !wrap) return;
-    const open = !!this._expanded[this._active];
+    const key = this._active || '_search';
+    const open = !!this._expanded[key];
     const { limit, total } = this._gridClamp(grid, this.rows, open);
     wrap.innerHTML = total <= limit ? '' : (open
       ? `<button class="section-cta" id="offers-expand-btn" type="button">收起</button>`
       : `<button class="section-cta" id="offers-expand-btn" type="button">查看更多 <span class="u-en">/ ${total - limit} more</span></button>`);
   },
 
+  /* 国家筛选：搜索态下点击已选中按钮 = 取消（回到全部国家）；常规态行为不变 */
   filter(groupId, btn) {
+    const deselect = this._q && btn && btn.classList.contains('is-active');
     document.querySelectorAll('#offers-filter-bar [data-group]').forEach(b => b.classList.remove('is-active'));
-    if (btn) btn.classList.add('is-active');
-    this._active = groupId;
+    if (deselect) { this._active = ''; }
+    else { if (btn) btn.classList.add('is-active'); this._active = groupId; }
     this._rerenderGrid();
   },
 
+  /* 申请季筛选：搜索态下点击已选中按钮 = 取消（回到全部申请季）；常规态行为不变 */
   filterSeason(season, btn) {
+    const deselect = this._q && btn && btn.classList.contains('is-active');
     document.querySelectorAll('#offers-filter-bar [data-season]').forEach(b => b.classList.remove('is-active'));
-    if (btn) btn.classList.add('is-active');
-    this._activeSeason = season;
+    if (deselect) { this._activeSeason = ''; }
+    else { if (btn) btn.classList.add('is-active'); this._activeSeason = season; }
     this._rerenderGrid();
   },
 
   _rerenderGrid() {
     const grid = document.getElementById('offers-grid');
     const d = DATA.cache['offers'];
-    if (grid && d) grid.innerHTML = this._rowsHTML(d, this._active);
+    if (grid && d) {
+      grid.innerHTML = this._rowsHTML(d);
+      grid.classList.toggle('rough-grid--search', !!this._q);
+    }
     this._applyClamp();
   },
 
   toggle(groupId) {
-    const g = groupId || this._active;
+    const g = groupId || this._active || '_search';
     this._expanded[g] = !this._expanded[g];
-    if (g === this._active) this._applyClamp();
+    if (g === (this._active || '_search')) this._applyClamp();
   }
 };
 
@@ -1847,7 +1947,7 @@ const ResourcesSection = {
     if (this._overlay) return this._overlay;
     const el = document.createElement('div');
     el.className = 'coop-hover-overlay';
-    el.innerHTML = `<div class="coop-hover-overlay__name"></div><div class="coop-hover-overlay__intro"></div><div class="coop-hover-overlay__collab"></div>`;
+    el.innerHTML = `<div class="coop-hover-overlay__intro"></div><div class="coop-hover-overlay__collab"></div>`;
     document.body.appendChild(el);
     this._overlay = el;
     return el;
@@ -1856,7 +1956,6 @@ const ResourcesSection = {
   _showOverlay(cardEl, p) {
     if (!p) return;
     const el = this._overlayEl();
-    el.querySelector('.coop-hover-overlay__name').textContent = p.nameCn || p.nameEn || '';
     el.querySelector('.coop-hover-overlay__intro').textContent = p.intro || '';
     el.querySelector('.coop-hover-overlay__collab').innerHTML = (p.collab || [])
       .map(c => `<span class="coop-card__collab-tag">${this.esc(c)}</span>`).join('');
@@ -2154,7 +2253,7 @@ const UndergradPage = {
       if (!list.length) return empty;
       return `<div class="rough-grid">${list.map(r => `
         <div class="offer-card">
-          <div class="offer-card__count">${this.esc(r.count)}</div>
+          <div class="offer-card__count${r.hl ? ' offer-card__count--hl' : ''}">${this.esc(r.count)}</div>
           <div class="offer-card__school-zh">${this.esc(r.zh)}</div>
           <div class="offer-card__school-en">${this.esc(r.en)}</div>
         </div>`).join('')}</div>`;
@@ -2246,7 +2345,7 @@ const CasesPage = {
 
   /* 各类的当前选中值；缺省 'all' = 不限 */
   state: {},
-  openIds: null,         // 展开中的筛选类集合（默认全部展开，满足「同时完整展示、互不遮挡」）
+  _q: '',               // 搜索词（命中国家 / 院校 / 专业的中英文名称，实时过滤）
   bound: false,
 
   build() {
@@ -2261,19 +2360,21 @@ const CasesPage = {
     this.wrap = filterWrap;
     this.filters = (Array.isArray(data.filters) ? data.filters : [])
       .map(f => ({ ...f, options: this.resolveOptions(f) }));
-    this.filters.forEach(f => { if (this.state[f.id] === undefined) this.state[f.id] = 'all'; });
+    this.filters.forEach(f => { if (this.state[f.id] === undefined) this.state[f.id] = []; });
 
-    /* 申请维度（本科 / 研究生）：默认本科（当前案例数据均为本科录取）；
-       选中维度后，下方按层级显示对应的筛选行 */
+    /* 申请维度：选项与默认值均来自 JSON「申请维度」配置（申请学位字段动态生成） */
     this.dimensionCfg = data.dimension || null;
-    this.dimension = 'ug';
-    this.openIds = new Set(['dimension', ...this.filters.map(f => f.id)]);
+    const dimOpts = (this.dimensionCfg && this.dimensionCfg.options) || [];
+    this.dimension = (dimOpts[0] && dimOpts[0].value) || '';
 
-    this.all = [
-      ...data.illustration.map(c => ({ ...c, branch: '插画' })),
-      ...data['fine-art'].map(c => ({ ...c, branch: '纯艺术' })),
-      ...data.other.map(c => ({ ...c, branch: '插画 / 纯艺术' }))
-    ];
+    /* 案例数据：Portfolio JSON（全量 45 条记录） */
+    this.all = (data.portfolio || []).map(c => ({ ...c }));
+
+    /* 默认维度自适应：当前维度下无案例时，自动切到有数据的维度 */
+    if (this.all.length && !this.all.some(c => this.dimMatch(c, this.dimension))) {
+      const alt = dimOpts.find(o => this.all.some(c => this.dimMatch(c, o.value)));
+      if (alt) this.dimension = alt.value;
+    }
 
     this.renderFilters();
     this.renderGrid();
@@ -2288,33 +2389,56 @@ const CasesPage = {
     return f.options || [];
   },
 
-  /* 案例在某维度上的取值；取不到 / 不在选项内 → 暂未匹配 */
-  valueOf(c, f) {
+  /* 记录在某筛选值上是否命中：
+     - 数组字段（案例标签 tags）：任一元素命中即可；
+     - 标量复合字段（申请国家等）：按「/」拆分为多国集合，字段中存在任一匹配项
+       （如「美国/英国」在选中「英国」或「美国」时均命中）即判定符合；
+     - 字段为空 / 所有值均不在选项内 → 仅命中「暂未匹配」 */
+  hit(c, f, value) {
     const v = c[f.id];
-    if (!v) return this.UNMATCHED;
-    return f.options.some(o => o.value === v) ? v : this.UNMATCHED;
+    if (Array.isArray(v)) {
+      if (value === this.UNMATCHED) return !v.length;
+      return v.includes(value);
+    }
+    const parts = String(v || '').split('/').map(x => x.trim()).filter(Boolean);
+    if (value === this.UNMATCHED) {
+      return !parts.length || !parts.some(p => f.options.some(o => o.value === p));
+    }
+    return parts.includes(value);
   },
 
-  /* 除 group 之外其它维度是否都通过（用于算每个子类按钮上的条数）；含申请维度 */
+  /* 「申请国家」激活时的排序键（小者靠前）：
+     层级 ×100：0 = 录取院校所在国家命中已选国家，1 = 其余；
+     层级内按「申请国家」字段中已选国家的最早出现位次（字段顺序），无位次者最前 */
+  regionSortKey(c, sel) {
+    const selSet = new Set(sel);
+    const parts = String(c.region || '').split('/').map(x => x.trim()).filter(Boolean);
+    let rank = Infinity;
+    parts.forEach((p, i) => { if (selSet.has(p) && i < rank) rank = i; });
+    if (rank === Infinity) rank = -1;
+    return (selSet.has(c.admittedCountry) ? 0 : 1) * 100 + rank;
+  },
+
+  /* 除 group 之外其它维度是否都通过（多选语义：空 = 不限，否则命中任一已选项） */
   passOthers(c, exceptId) {
     if (!this.dimOk(c)) return false;
     return this.filters.every(f => {
       if (f.id === exceptId) return true;
-      const v = this.state[f.id] || 'all';
-      return v === 'all' || this.valueOf(c, f) === v;
+      const sel = this.state[f.id] || [];
+      return !sel.length || sel.some(v => this.hit(c, f, v));
     });
   },
 
   /* 子类按钮上的条数：在其它维度已选条件下、选它能剩多少条 */
   countOf(f, value) {
     return this.all.filter(c => this.passOthers(c, f.id) &&
-      (value === 'all' || this.valueOf(c, f) === value)).length;
+      (value === 'all' || this.hit(c, f, value))).length;
   },
 
   optionsOf(f) {
     const opts = [{ value: 'all', label: f.all || '全部' }, ...f.options];
     // 「暂未匹配」只在确实存在匹配不上的案例时才出现，避免出现永远为 0 的死按钮
-    if (this.all.some(c => this.valueOf(c, f) === this.UNMATCHED)) {
+    if (this.all.some(c => this.hit(c, f, this.UNMATCHED))) {
       opts.push({ value: this.UNMATCHED, label: '暂未匹配' });
     }
     return opts;
@@ -2328,137 +2452,161 @@ const CasesPage = {
     return o ? o.label : '暂未匹配';
   },
 
-  /* 申请维度匹配：本科 = offerType 含「本科 / 大二」；研究生 = 含「研究生 / 硕士」。
-     当前 24 条案例均为本科录取；研究生维度待真实数据就位后自动生效。 */
+  /* 申请维度匹配：degree（申请学位）与选项值直接相等判断 */
   dimMatch(c, level) {
-    const t = c.offerType || '';
-    return level === 'pg' ? /研究生|硕士/.test(t) : /本科|大二/.test(t);
+    return (c.degree || '') === level;
   },
   dimOk(c) { return this.dimMatch(c, this.dimension); },
 
+  /* ── 筛选区（参照 OFFER成果 的 filter-bar 布局）──
+     第一行：申请维度（左对齐下方案例边框左侧）；
+     第二行：专业方向（多选）+ 行末搜索栏（命中国家/院校/专业中英文名，标签主色）。
+     「申请国家」字段按需求不再读取，对应筛选组已移除 */
   renderFilters() {
     const wrap = this.wrap;
     if (!wrap) return;
     const cfg = this.dimensionCfg || { label: '申请维度', labelEn: 'DIMENSION', options: [] };
-    const dimOpen = this.openIds.has('dimension');
-    const dimCur = (cfg.options.find(o => o.value === this.dimension) || {}).label || '';
 
-    /* 顶层标签「申请维度」：展开后为 本科 / 研究生 两个子标签（附各自行内案例数） */
-    const dimensionBlock = `
-      <div class="case-filter${dimOpen ? ' is-open' : ''}" data-group="dimension">
-        <button type="button" class="case-filter__head" aria-expanded="${dimOpen}"
-                onclick="CasesPage.toggle('dimension')">
-          <span class="case-filter__square" aria-hidden="true"></span>
-          <span class="case-filter__name">${cfg.label}
-            ${cfg.labelEn ? `<span class="case-filter__en u-en">${cfg.labelEn}</span>` : ''}
-          </span>
-          <span class="case-filter__cur is-set">${dimCur}</span>
-          <span class="case-filter__caret" aria-hidden="true"></span>
-        </button>
-        <div class="case-filter__panel">
-          <span class="case-filter__sweep" aria-hidden="true"></span>
-          <div class="case-filter__opts">
-            ${cfg.options.map(o => `
-              <button type="button"
-                      class="tab-btn case-filter__btn${this.dimension === o.value ? ' is-active' : ''}"
-                      data-dimension="${o.value}" aria-pressed="${this.dimension === o.value}"
-                      onclick="CasesPage.pickDimension('${o.value}')"><span class="case-filter__txt">${o.label}</span><span class="case-filter__n">${this.all.filter(c => this.dimMatch(c, o.value)).length}</span></button>
-            `).join('')}
-          </div>
+    const group = (label, btns) => this._group(label, btns);
+    const btn = (attrs, label, active, util) => this._btn(attrs, label, active, util);
+
+    /* 第一行：申请维度（单选）+ 申请国家（多选，置于其右侧） */
+    const dimBtns = cfg.options.map(o => btn(
+      `type="button" data-dimension="${o.value}" onclick="CasesPage.pickDimension('${o.value}')"`,
+      o.label, this.dimension === o.value
+    )).join('');
+    const row1Filters = this.filters.filter(f => f.row === 1);
+    const row1 = `
+      <div class="filter-bar">
+        ${group(cfg.label, dimBtns)}
+        ${row1Filters.map(f => group(f.label, this.multiBtns(f))).join('')}
+      </div>`;
+
+    /* 第二行：专业方向（多选，与上方「申请维度」左对齐）+ 行末搜索栏 */
+    const row2Filters = this.filters.filter(f => f.row === 2);
+    const row2 = `
+      <div class="filter-bar">
+        ${row2Filters.map(f => group(f.label, this.multiBtns(f))).join('')}
+        <div class="filter-group filter-group--search">
+          <span class="filter-group__label">搜索</span>
+          <span class="filter-group__sep">|</span>
+          <input class="offers-search" id="cases-search" type="search" placeholder="国家 / 院校 / 专业（中英文）" autocomplete="off">
         </div>
       </div>`;
 
-    /* 维度 → 筛选行：本科 = 专业方向 + 申请国家；研究生 = 专业方向 + 申请国家 + 就业导向 */
-    const visible = this.dimension === 'pg' ? this.filters : this.filters.filter(f => f.id !== 'career');
+    wrap.innerHTML = row1 + row2;
 
-    const rows = visible.map(f => {
-      const cur = this.state[f.id] || 'all';
-      const open = this.openIds.has(f.id);
-      return `
-      <div class="case-filter${open ? ' is-open' : ''}" data-group="${f.id}">
-        <button type="button" class="case-filter__head" aria-expanded="${open}"
-                onclick="CasesPage.toggle('${f.id}')">
-          <span class="case-filter__square" aria-hidden="true"></span>
-          <span class="case-filter__name">${f.label}
-            ${f.labelEn ? `<span class="case-filter__en u-en">${f.labelEn}</span>` : ''}
-          </span>
-          <span class="case-filter__cur${cur === 'all' ? '' : ' is-set'}">${this.labelOf(f, cur)}</span>
-          <span class="case-filter__caret" aria-hidden="true"></span>
-        </button>
-        <div class="case-filter__panel">
-          <span class="case-filter__sweep" aria-hidden="true"></span>
-          ${f.hint ? `<p class="case-filter__hint">${f.hint}</p>` : ''}
-          <div class="case-filter__opts${f.options.length > 5 ? ' case-filter__opts--grid' : ''}">
-            ${this.optionsOf(f).map(o => `
-              <button type="button"
-                      class="tab-btn case-filter__btn${cur === o.value ? ' is-active' : ''}"
-                      data-group="${f.id}" data-value="${o.value}"
-                      aria-pressed="${cur === o.value}"
-                      onclick="CasesPage.pick('${f.id}', '${o.value}')">${o.idx ? `<span class="case-filter__idx">${o.idx}</span>` : ''}<span class="case-filter__txt">${o.label}</span><span class="case-filter__n">${this.countOf(f, o.value)}</span></button>
-            `).join('')}
-          </div>
-        </div>
-      </div>
-    `;
-    }).join('');
-
-    wrap.innerHTML = dimensionBlock + rows;
+    /* 重渲染后恢复搜索词与焦点（选项计数变化会触发整块重绘） */
+    const input = wrap.querySelector('#cases-search');
+    if (input) {
+      input.value = this._q;
+      if (this._searchFocused) input.focus();
+      let t;
+      input.addEventListener('input', () => {
+        clearTimeout(t);
+        t = setTimeout(() => this.search(input.value), 150);
+      });
+      input.addEventListener('focus', () => { this._searchFocused = true; });
+      input.addEventListener('blur', () => { this._searchFocused = false; });
+    }
   },
 
-  /* 展开 / 收起：各类独立开合，可同时全部展开（面板为常规文档流，互不遮挡截断） */
-  toggle(id) {
-    this.openIds.has(id) ? this.openIds.delete(id) : this.openIds.add(id);
-    this.renderFilters();
+  /* 组容器 / 按钮模板 */
+  _group(label, btns) {
+    return `<div class="filter-group"><span class="filter-group__label">${label}</span><span class="filter-group__sep">|</span><span class="filter-group__btns">${btns}</span></div>`;
+  },
+  _btn(attrs, label, active, util) {
+    return `<button type="button" class="filter-btn${active ? ' is-active' : ''}${util ? ' filter-btn--util' : ''}" ${attrs} aria-pressed="${active}">${label}</button>`;
   },
 
-  /* 选择申请维度：切换下方筛选行组合，并把可见行全部展开 */
+  /* 多选组按钮：仅各选项（点击切换选中/取消；默认无选中 = 无筛选）。
+     「全选 / 清空」按钮已移除 —— 清空由点选取消或结果行的「重置筛选」承担 */
+  multiBtns(f) {
+    const sel = this.state[f.id] || [];
+    const opts = this.optionsOf(f).filter(o => o.value !== 'all');
+    return opts.map(o => this._btn(
+      `type="button" data-group="${f.id}" data-value="${o.value}" onclick="CasesPage.toggleOption('${f.id}', '${o.value}')"`,
+      o.label, sel.includes(o.value)
+    )).join('');
+  },
+
+  /* 搜索：命中国家 / 院校 / 专业的中英文名称（含各 offer 备选院校），与其它筛选叠加 */
+  search(v) {
+    this._q = String(v == null ? '' : v).trim().toLowerCase();
+    this.renderGrid();
+  },
+
+  _qMatch(c) {
+    if (!this._q) return true;
+    const hay = [c.admitted, c.admittedMajor, c.schoolType, c.branch, c.id,
+      (c.tags || []).join(' '), (c.otherAdmitted || []).join(' ')].join(' ').toLowerCase();
+    return hay.includes(this._q);
+  },
+
+  /* 选择申请维度：切换第二行筛选组组合 */
   pickDimension(value) {
     this.dimension = value;
-    const visible = value === 'pg' ? this.filters : this.filters.filter(f => f.id !== 'career');
-    this.openIds = new Set(['dimension', ...visible.map(f => f.id)]);
     this.renderFilters();
     this.renderGrid();
   },
 
-  pick(group, value) {
-    this.state[group] = value;
-    this.renderFilters();   // 计数会随选中项变化，需重算
+  /* 多选：点选 / 取消某个选项（同一条件内「或」） */
+  toggleOption(group, value) {
+    const sel = this.state[group] || (this.state[group] = []);
+    const i = sel.indexOf(value);
+    i >= 0 ? sel.splice(i, 1) : sel.push(value);
+    this.renderFilters();
     this.renderGrid();
   },
 
   reset() {
-    this.filters.forEach(f => { this.state[f.id] = 'all'; });
+    this.filters.forEach(f => { this.state[f.id] = []; });
+    this._q = '';
     this.renderFilters();
     this.renderGrid();
   },
 
   renderGrid() {
-    const list = this.all.filter(c => this.dimOk(c) && this.filters.every(f => {
-      const v = this.state[f.id] || 'all';
-      return v === 'all' || this.valueOf(c, f) === v;
+    /* 多值匹配：同一条件内命中任一已选项即通过（「或」）；
+       已选为空 = 默认无筛选；多个条件之间按「与」组合 */
+    const list = this.all.filter(c => this.dimOk(c) && this._qMatch(c) && this.filters.every(f => {
+      const sel = this.state[f.id] || [];
+      return !sel.length || sel.some(v => this.hit(c, f, v));
     }));
 
-    const dirty = this.filters.some(f => (this.state[f.id] || 'all') !== 'all');
+    /* 「申请国家」筛选激活时的排序：
+       第一层级 = 录取院校所在国家与已选国家一致的结果优先；
+       其后（含同层级内）按「申请国家」字段中已选国家出现的先后顺序排序 */
+    const regionSel = this.state.region || [];
+    if (regionSel.length) list.sort((a, b) => this.regionSortKey(a, regionSel) - this.regionSortKey(b, regionSel));
+
+    const dirty = this.filters.some(f => (this.state[f.id] || []).length > 0) || !!this._q;
+    /* 「重置筛选」按钮常驻 DOM（未激活时 visibility:hidden 占位隐藏）：
+       出现/消失不改变结果行高度，避免下方案例网格与页面滚动位置跳动 */
     this.result.innerHTML = `共 <span class="u-en">${list.length}</span> 个案例 · 全部 <span class="u-en">${this.all.length}</span> 个`
-      + (dirty ? `<button type="button" class="case-reset" onclick="CasesPage.reset()">重置筛选</button>` : '');
+      + `<button type="button" class="case-reset${dirty ? '' : ' is-off'}" onclick="CasesPage.reset()">重置筛选</button>`;
 
     this.grid.innerHTML = list.length
       ? list.map(c => {
         const idx = this.all.indexOf(c);
+        /* 左上：院校类型 · 学术分支（绑定 branch 字段，与「专业方向」筛选同源）；
+           右上：ID 倒数第一段 + 倒数第二段大写首字母 + 「同学」 */
         return `
         <article class="case-card" role="button" tabindex="0"
                  onclick="CaseSheet.open(${idx})"
                  onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();CaseSheet.open(${idx})}">
-          <div class="case-card__top">
-            <span class="case-card__branch u-en">${c.branch} · ${c.offerType}</span>
-            <span class="case-card__student">${c.studentZh || c.student}<span class="u-en">${c.student}</span></span>
+          <div class="case-card__hero">${c.hero
+            ? `<img src="${c.hero}" alt="${c.admitted} 首图">`
+            : `<span class="case-card__hero-ph">首图 · 待置入</span>`}
+            <div class="case-card__top">
+              <span class="case-card__branch">${c.schoolType} · ${c.branch}</span>
+              <span class="case-card__student"><span class="case-card__city">${c.idCity}</span></span>
+            </div>
           </div>
-          <div class="case-card__school">${c.school}</div>
-          <div class="case-card__school-en u-en">${c.schoolEn || ''}</div>
-          <div class="case-card__program"><span class="u-en">${c.program}</span>${c.programCn ? ` · ${c.programCn}` : ''}</div>
-          <div class="case-card__meta">${c.background || ''}</div>
+          <div class="case-card__school">${c.admitted}</div>
+          <div class="case-card__school-en u-en">${c.admittedEn || ''}</div>
+          <div class="case-card__program"><span class="u-en">${c.admittedMajor}</span></div>
           <div class="case-card__tags">${(c.tags || []).map(t => `<span class="case-card__tag">${t}</span>`).join('')}</div>
-          <span class="case-card__more">查看作品与申请档案 <span class="u-en">→</span></span>
         </article>`;
       }).join('')
       : `<div class="case-empty">
@@ -2502,6 +2650,12 @@ const CaseSheet = {
         else if (e.key === 'ArrowRight') this.step(1);
       });
     }
+    if (!this.hoverbound) {
+      this.hoverbound = true;
+      /* 鼠标移动 → 浮现左右翻页与底部返回按钮；静止 1.6s / 移出浮层 → 隐藏 */
+      el.addEventListener('mousemove', () => this.wakeHover());
+      el.addEventListener('mouseleave', () => this.sleepHover());
+    }
     return el;
   },
 
@@ -2528,6 +2682,18 @@ const CaseSheet = {
     this.el.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('is-locked');
     this.inner.innerHTML = '';
+    this.sleepHover();
+  },
+
+  /* 翻页 / 返回控件的鼠标显隐：移动即浮现，静止 1.6s 自动隐藏 */
+  wakeHover() {
+    this.el.classList.add('is-hover');
+    clearTimeout(this._hoverT);
+    this._hoverT = setTimeout(() => { if (this.el) this.el.classList.remove('is-hover'); }, 1600);
+  },
+  sleepHover() {
+    clearTimeout(this._hoverT);
+    if (this.el) this.el.classList.remove('is-hover');
   },
 
   /* 左右切图：一张一屏，用 track 的可视宽度做步长 */
@@ -2537,69 +2703,90 @@ const CaseSheet = {
   },
 
   updateCount() {
-    const cur = this.el && this.el.querySelector('.case-sheet__cur');
-    if (!cur || !this.track || !this.track.children.length) return;
+    if (!this.track || !this.track.children.length) return;
     const i = Math.min(
       this.track.children.length - 1,
       Math.round(this.track.scrollLeft / Math.max(1, this.track.clientWidth))
     );
-    cur.textContent = i + 1;
     this.track.querySelectorAll('.case-sheet__slide')
       .forEach((s, k) => s.classList.toggle('is-current', k === i));
+    /* 切换到其它张时暂停不在当前屏的视频（视频默认不自动播放） */
+    if (this._cur !== i) { this._cur = i; this.pauseVideos(); }
+  },
+
+  /* 视频：默认不自动播放，点击后播放 / 再点暂停；同屏只保留一个在播 */
+  togglePlay(v) {
+    if (!v) return;
+    const box = v.closest('.case-sheet__media');
+    if (v.paused) {
+      this.pauseVideos(v);
+      v.play();
+      if (box) box.classList.add('is-playing');
+    } else {
+      v.pause();
+      if (box) box.classList.remove('is-playing');
+    }
+  },
+  pauseVideos(except) {
+    if (!this.el) return;
+    this.el.querySelectorAll('.case-sheet__media').forEach(m => {
+      const v = m.querySelector('video');
+      if (v && v !== except && !v.paused) { v.pause(); m.classList.remove('is-playing'); }
+    });
   },
 
   markup(c) {
     const works = c.works || [];
-    const row = (label, val) => val
-      ? `<div class="case-sheet__row"><dt>${label}</dt><dd>${val}</dd></div>` : '';
+    const isVideo = u => /\.(mp4|webm|mov|m4v)(\?|#|$)/i.test(u);
     return `
       <div class="case-sheet__gallery">
         <div class="case-sheet__track">
           ${works.length
             ? works.map((w, i) => `
               <figure class="case-sheet__slide${i === 0 ? ' is-current' : ''}">
-                <img src="${w}" alt="${c.studentZh || c.student} 作品 ${i + 1}" loading="${i < 2 ? 'eager' : 'lazy'}">
+                ${isVideo(w)
+                  ? `<div class="case-sheet__media">
+                       <video src="${w}" preload="metadata" playsinline onclick="CaseSheet.togglePlay(this)"></video>
+                       <span class="case-sheet__playhint u-en">PLAY</span>
+                     </div>`
+                  : `<img src="${w}" alt="${c.admitted} 作品 ${i + 1}" loading="${i < 2 ? 'eager' : 'lazy'}">`}
                 <figcaption class="u-en">${String(i + 1).padStart(2, '0')} / ${String(works.length).padStart(2, '0')}</figcaption>
               </figure>`).join('')
-            : `<p class="case-sheet__noworks">该案例暂未收录作品图</p>`}
+            : `<p class="case-sheet__noworks">作品图片待补充</p>`}
         </div>
         ${works.length > 1 ? `
-        <div class="case-sheet__bar">
-          <button type="button" class="case-sheet__arrow" aria-label="上一张" onclick="CaseSheet.step(-1)"><span class="u-en">←</span></button>
-          <span class="case-sheet__count"><span class="case-sheet__cur">1</span> / ${works.length}</span>
-          <button type="button" class="case-sheet__arrow" aria-label="下一张" onclick="CaseSheet.step(1)"><span class="u-en">→</span></button>
-        </div>` : ''}
+        <button type="button" class="case-sheet__nav case-sheet__nav--prev" aria-label="上一张" onclick="CaseSheet.step(-1)"><span class="u-en">&lt;</span></button>
+        <button type="button" class="case-sheet__nav case-sheet__nav--next" aria-label="下一张" onclick="CaseSheet.step(1)"><span class="u-en">&gt;</span></button>` : ''}
+        <button type="button" class="case-sheet__back" aria-label="返回上一级" onclick="CaseSheet.close()"><span class="u-en">×</span></button>
       </div>
 
       <aside class="case-sheet__info">
-        <span class="case-sheet__eyebrow u-en">ADMISSION FILE</span>
-        <h3 class="case-sheet__name">${c.studentZh || c.student}<span class="u-en">${c.student}</span></h3>
-        <div class="case-sheet__school">${c.school}</div>
-        <div class="case-sheet__school-en u-en">${c.schoolEn || ''}${c.college ? ` · ${c.college}` : ''}</div>
-        <div class="case-sheet__program"><span class="u-en">${c.program}</span>${c.programCn ? ` · ${c.programCn}` : ''}</div>
-        <div class="case-sheet__tags">${(c.tags || []).map(t => `<span class="case-card__tag">${t}</span>`).join('')}</div>
-
-        <dl class="case-sheet__meta">
-          ${row('学生院校背景', c.background)}
-          ${row('学术成绩', (c.academic || []).join(' · '))}
-          ${row('语言成绩', c.language)}
-        </dl>
-
-        ${c.persona ? `<div class="case-sheet__block">
-          <h4 class="case-sheet__h4">学生画像</h4>
-          <p>${c.persona}</p>
-        </div>` : ''}
-
-        ${(c.creation || []).length ? `<div class="case-sheet__block">
-          <h4 class="case-sheet__h4">作品与创作说明</h4>
-          <ul class="case-sheet__list">${c.creation.map(x => `<li>${x}</li>`).join('')}</ul>
-        </div>` : ''}
-
-        ${(c.offers || []).length ? `<div class="case-sheet__block">
-          <h4 class="case-sheet__h4">录取院校</h4>
-          <ul class="case-sheet__offers">${c.offers.map(o => `
-            <li><span class="case-sheet__offer-school">${o.school}</span><span class="case-sheet__offer-program u-en">${o.program}</span></li>`).join('')}</ul>
-        </div>` : ''}
+        <div class="case-sheet__info-grid">
+          <div class="case-sheet__who">
+            <span class="case-card__branch">${c.schoolType} · ${c.branch}</span>
+            <div class="case-card__school">${c.admitted}</div>
+            <div class="case-card__school-en u-en">${c.admittedEn || ''}</div>
+            <div class="case-card__program"><span class="u-en">${c.admittedMajor}</span></div>
+            <div class="case-sheet__tags">${(c.tags || []).map(t => `<span class="case-card__tag">${t}</span>`).join('')}</div>
+          </div>
+          <div class="case-sheet__side">
+            <div class="case-sheet__facts">${[c.origin, c.language, c.gpa].filter(v => v && v !== '无').join(' ｜ ')}</div>
+            <div class="case-sheet__side-bottom">
+              <div class="case-sheet__block">
+                <h4 class="case-sheet__h4">学生画像</h4>
+                <p class="case-sheet__ph">内容即将上线 · 敬请期待</p>
+              </div>
+              <div class="case-sheet__block">
+                <h4 class="case-sheet__h4">作品与创作说明</h4>
+                <p class="case-sheet__ph">内容即将上线 · 敬请期待</p>
+              </div>
+              ${(c.otherAdmitted || []).length ? `<div class="case-sheet__block">
+                <h4 class="case-sheet__h4">录取院校</h4>
+                <ul class="case-sheet__list">${c.otherAdmitted.map(x => `<li>${x}</li>`).join('')}</ul>
+              </div>` : ''}
+            </div>
+          </div>
+        </div>
       </aside>`;
   }
 };
@@ -2745,6 +2932,7 @@ const DirectionsSection = {
     this.buildTags(d.directions);
     DirectionSheet.setList(d.directions);   // 全屏方向卡与卡片共用同一份数据
     this.bindCards();
+    this.bindStickyTags();
 
     this.sync();
     if (!this._resizeBound) {
@@ -2756,26 +2944,67 @@ const DirectionsSection = {
 
   /* ── 方向标签：与八大就业方向的 8 个滑动卡片一一对应 ──
      顺序、标题完全取自同一份 d.directions，改数据时标签与卡片始终同步。
-     外观与交互由 CSS（.planning-tag）统一控制，文字不换行、8 个一行居中排布。 */
+     外观由 CSS（.planning-tag）统一控制，文字不换行、8 个一行等分排布。
+     交互分两种状态：
+     · 弹层未开 → 纯指示性，点击不跳转（开弹层由下方滑动卡片承担）；
+     · 弹层打开 → 点击切换弹层内容到对应方向，当前方向标签自动发光（is-active）。
+     悬停反馈 = 边框转方向色 + 方向色发光（与 .dir-sheet__secs 的发光规范同式）。 */
   buildTags(list) {
     const box = document.getElementById('directions-tags');
     if (!box) return;
 
     box.innerHTML = list.map((item, i) => `
-      <button type="button" class="planning-tag"
-              data-direction-index="${i}"
-              data-direction-title="${this.escape(item.title)}"
-              style="--direction-color: ${this.escape(item.color || '#63E6D4')}"
-              aria-label="查看方向：${this.escape(item.title)}">${this.escape(item.title)}</button>`).join('');
+      <span class="planning-tag" data-direction-index="${i}"
+            style="--direction-color: ${this.escape(item.color || '#63E6D4')}"
+            title="${this.escape(item.title)}">${this.escape(item.title)}</span>`).join('');
 
     if (!this._tagBound) {                       // 事件只绑一次，重建标签后依然有效
       this._tagBound = true;
       box.addEventListener('click', (e) => {
         const btn = e.target.closest('.planning-tag');
-        if (!btn) return;
-        this.goToDirection(Number(btn.dataset.directionIndex), btn.dataset.directionTitle);
+        if (!btn || !DirectionSheet.isOpen()) return;   // 弹层未开 → 不响应（无跳转）
+        DirectionSheet.open(Number(btn.dataset.directionIndex));
       });
     }
+  },
+
+  /* 顶部标签的「当前方向」高亮：弹层打开时对应标签持续发光，关闭即清除 */
+  setActiveTag(idx) {
+    const tags = document.getElementById('directions-tags');
+    if (!tags) return;
+    [...tags.children].forEach((t, k) => t.classList.toggle('is-active', k === idx));
+  },
+
+  /* ── 静态标签吸顶 ──
+     页头（产业全景 · 职业规划）整体滚出视口（底边越过导航栏下缘）后，
+     8 个方向标签固定在导航栏下方，随时识别当前所在的就业方向；滚回页头即还原。
+     方向弹层打开时强制吸顶（弹层底部标签已移除，见 DirectionSheet.markup）：
+     即使页头还在视口内，这排标签也会固定到顶部并浮于弹层之上。 */
+  bindStickyTags() {
+    if (this._stickyBound) return;
+    this._stickyBound = true;
+    const update = () => this.syncTagsFixed();
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+  },
+
+  setTagsForced(on) {
+    this._tagsForced = on;
+    this.syncTagsFixed();
+  },
+
+  syncTagsFixed() {
+    const tags = document.getElementById('directions-tags');
+    const hero = document.getElementById('employment-hero');
+    if (!tags || !hero) return;
+    const navH = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--navbar-h')) || 64;
+    const r = hero.getBoundingClientRect();
+    /* 页头完全滚出视口顶部才吸顶（height=0 为隐藏态，不误判）；
+       弹层打开（_tagsForced）时无条件吸顶，is-forced 同时把标签排顶到屏幕最上沿
+       （.dir-sheet.has-top-tags 让出等高顶部空间，避免遮挡卡头标题） */
+    const out = r.height > 0 && r.bottom <= navH;
+    tags.classList.toggle('is-fixed', out || !!this._tagsForced);
+    tags.classList.toggle('is-forced', !!this._tagsForced);
   },
 
   /* 卡片 → 全屏方向卡：轨道是两份副本，data-direction-index 已是折算后的真实方向序号 */
@@ -2794,23 +3023,6 @@ const DirectionsSection = {
       e.preventDefault();
       DirectionSheet.open(Number(card.dataset.directionIndex));
     });
-  },
-
-  /* 跳转占位：目标链接后续提供。
-     拿到链接后只需按「方向标题 → 地址」填入 DIRECTION_LINKS，渲染与事件绑定都不用改；
-     值可以是站内哈希（'#/xxx'）或完整 URL。未配置时回落到该方向的全屏方向卡。 */
-  DIRECTION_LINKS: {
-    // 例：'商业视觉与品牌设计': '#/home/offers'
-  },
-
-  goToDirection(index, title) {
-    const url = this.DIRECTION_LINKS[title];
-    if (url) {                                 // 配了链接 → 优先跳转
-      if (url.startsWith('#')) location.hash = url;
-      else location.href = url;
-      return;
-    }
-    DirectionSheet.open(index);                // 未配链接 → 打开该方向的全屏方向卡
   },
 
   sync() {
@@ -2834,7 +3046,9 @@ const DirectionsSection = {
      方向主色消隐线扫过、ESC / 点背景 / 右上角左向箭头退出、body 锁滚、关闭后焦点归还触发元素。
    · 卡内视觉层次对齐 dad_demo「就业全景 × 职业规划」的行业面板：
      eyebrow → 中/英标题 → 一句话解读 → 右上角标签 chips → 主体内容 → 底部总结。
-   · 底部常驻 8 个方向标签（形态同右上角 chip）：一屏总览、点击直达；左右方向键同样可切换。 */
+   · 弹层内不再放底部方向标签：方向总览 / 切换由页面顶部吸顶的 8 个静态标签
+     （DirectionsSection.buildTags 渲染、弹层打开时强制吸顶并点亮当前方向）承担；
+     弹层左右两侧另有「<」「>」翻页箭头，与左右方向键同为 step(±1) 循环切换。 */
 const DirectionSheet = {
   list: [], idx: 0, el: null, body: null, lastFocus: null,
 
@@ -2857,6 +3071,18 @@ const DirectionSheet = {
     el.setAttribute('aria-hidden', 'true');
     el.innerHTML = `
       <div class="dir-sheet__bg"></div>
+      <button type="button" class="dir-sheet__arrow dir-sheet__arrow--prev" aria-label="上一个就业方向" title="上一个（←）"
+              onclick="DirectionSheet.step(-1)">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M14.5 5.5 8 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button type="button" class="dir-sheet__arrow dir-sheet__arrow--next" aria-label="下一个就业方向" title="下一个（→）"
+              onclick="DirectionSheet.step(1)">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M9.5 5.5 16 12l-6.5 6.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
       <div class="dir-sheet__panel">
         <div class="dir-sheet__sweep"></div>
         <button type="button" class="dir-sheet__close" aria-label="返回上一层" title="返回上一层">
@@ -2905,10 +3131,14 @@ const DirectionSheet = {
     el.classList.add('is-open');
     el.setAttribute('aria-hidden', 'false');
     document.body.classList.add('is-locked');
+    DirectionsSection.setTagsForced(true);   // 弹层内底部标签已移除 → 顶部静态标签强制吸顶，承担方向切换
+    el.classList.add('has-top-tags');        // 弹层顶部让出标签排高度，避免遮挡卡头标题
+    el.style.setProperty('--dir-color', this.color);   // 左右翻页箭头沿用方向主色
+    DirectionsSection.setActiveTag(this.idx);          // 当前方向标签自动发光
     el.querySelector('.dir-sheet__close').focus();
   },
 
-  /* 头部高度压缩（当前仅方向 08）：先按自然高度测量，再固定为 5/6，由 overflow 从底部裁掉 1/6
+  /* 头部高度压缩（所有带 hero 图的方向，与 08 一致）：先按自然高度测量，再固定为 5/6，由 overflow 从底部裁掉 1/6
      height 置为 auto 才能量到自然高度；值为 auto 时 CSS 的 var() 回退同样成立 */
   applyHeadCompact() {
     const head = this.body.querySelector('.dir-sheet__head--hero.is-compact');
@@ -2975,6 +3205,9 @@ const DirectionSheet = {
     this.el.classList.remove('is-open');
     this.el.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('is-locked');
+    DirectionsSection.setTagsForced(false);  // 还原为「页头滚出才吸顶」的常规规则
+    DirectionsSection.setActiveTag(-1);      // 清除顶部标签的当前方向发光
+    this.el.classList.remove('has-top-tags');
     this.body.innerHTML = '';
     if (this.lastFocus && this.lastFocus.focus) this.lastFocus.focus();
     this.lastFocus = null;
@@ -3046,16 +3279,9 @@ const DirectionSheet = {
     const chips = (det && det.useTagChips && det.tags ? det.tags : (item.roles || []).concat())
       .map(r => `<span class="dir-sheet__chip">${esc(r)}</span>`).join('') +
       (det && det.useTagChips && det.tags ? '' : `<span class="dir-sheet__chip dir-sheet__chip--salary">薪资参考 ${esc(item.salary)}</span>`);
-    const hero = det && det.hero ? ` dir-sheet__head--hero${det.id === 'therapy' ? ' is-compact' : ''}` : '';
+    const hero = det && det.hero ? ' dir-sheet__head--hero is-compact' : '';
     const no = String(i + 1).padStart(2, '0');
     this.color = color;
-    /* 底部常驻的 8 个方向标签：一屏总览、点击直达，形态沿用右上角标签 */
-    const tabs = this.list.map((d, k) => {
-      const c = esc(d.color || '#63E6D4');
-      const on = k === i;
-      return `<button type="button" class="dir-sheet__tab${on ? ' is-active' : ''}" style="--tab-color:${c}"` +
-        `${on ? ' aria-current="true"' : ''} onclick="DirectionSheet.open(${k})">${esc(d.title)}</button>`;
-    }).join('');
     return `
       <header class="dir-sheet__head${hero}" style="--dir-color:${color}">
         ${det && det.hero ? `<div class="dir-sheet__head-bg" style="background-image:url('${esc(det.hero)}')" aria-hidden="true"></div>` : ''}
@@ -3076,10 +3302,7 @@ const DirectionSheet = {
         ${det && det.summary ? `<aside class="dir-sheet__summary" style="--dir-color:${color}">
           <p class="dir-sheet__summary-text">${this.escHl(det.summary.text)}</p>
         </aside>` : ''}
-      </div>
-      <footer class="dir-sheet__bar">
-        <nav class="dir-sheet__tabs" aria-label="八大就业方向">${tabs}</nav>
-      </footer>`;
+      </div>`;
   }
 };
 

@@ -6,7 +6,7 @@
   <title>SFK 艺术人文科系 · ARTS × HUMANITIES</title>
   <meta name="description" content="SFK 艺术人文科系 — 插画与纯艺术本科爬藤、升学就业规划与案例展示">
   <link rel="icon" type="image/png" href="assets/img/brand/logo-illustration-fineart.png">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261014m">
 </head>
 <body>
 
@@ -139,9 +139,9 @@
        标题沿用「offer展示」，具体院校、数量与描述均为占位，后期由你填入。 -->
   <section class="section" id="offers">
     <div class="section__header">
-      <span class="section__eyebrow u-en">OFFERS 2026</span>
+      <span class="section__eyebrow u-en">OFFERS 2024-2026</span>
       <h2 class="section__title">OFFERS</h2>
-      <p class="section__desc">【占位】2026 申请季录取战报描述待提供 —— 覆盖美国、英国、港新与全球院校的真实 offer 数据，后期由你填入。</p>
+      <p class="section__desc">2024–2026 三个申请季累计斩获 5493 枚 offer，覆盖美国、英国、港新、日韩及全球 260 所艺术院校与综合大学。</p>
     </div>
     <div id="offers-root"></div>
   </section>
@@ -267,10 +267,16 @@
 
 <!-- 就业力 -->
 <main class="view" id="view-employment">
-  <section class="planning-hero planning-hero--wide">
+  <section class="planning-hero planning-hero--wide" id="employment-hero">
     <div class="hero__eyebrow" style="justify-content:center;display:flex;">SFK · ART & · <span class="u-en">Career Map</span></div>
     <h1 id="planning-title"></h1>
     <p id="planning-subtitle"></p>
+    <!-- 八大就业方向 · 8 个静态标签：位于页头底部、与下方滑动卡片带同宽；
+         底部通栏细线（.planning-tags__rule）为「产业全景 · 职业规划」div 的底部边界。
+         页头滚出视口后整排标签吸顶（DirectionsSection.syncTagsFixed）；
+         方向弹层打开时强制吸顶——弹层底部标签已移除，方向切换由这排标签承担 -->
+    <div class="planning-tags" id="directions-tags"></div>
+    <div class="planning-tags__rule" aria-hidden="true"></div>
   </section>
   <section class="planning-section" style="padding-top:24px;">
     <!-- 八大就业方向一览：持续滑动卡片带 + 方向标签
@@ -283,7 +289,6 @@
         </div>
         <h2 class="directions__title" id="directions-title"></h2>
         <p class="directions__subtitle" id="directions-subtitle"></p>
-        <div class="planning-tags" id="directions-tags"></div>
       </div>
       <div class="directions__wrap">
         <div class="directions__rail" id="directions-rail"></div>
@@ -308,13 +313,14 @@
 <main class="view" id="view-cases">
   <section class="planning-hero planning-hero--wide" style="border-bottom:1px solid var(--line);">
     <div class="hero__eyebrow" style="justify-content:center;display:flex;">SFK · 艺术人文科系 · <span class="u-en">Cases</span></div>
-    <h1>学生案例</h1>
+    <h1>作品集</h1>
     <p>真正决定这些年轻人去向的，从来不是分数、国别与课程标签，而是他们如何以独有的目光审视世界，把成长里的困惑、眷恋与追问，淬炼成有温度、有思想密度的作品——这正是艺术与人文区别于一切标准化评价的气质与厚度。</p>
   </section>
 
-  <!-- 学生案例 · 作品滚动带：参照目录页（关于艺术人文）右侧横向滚动图卷的
+  <!-- 作品集 · 作品滚动带：参照目录页（关于艺术人文）右侧横向滚动图卷的
        视觉与交互（无缝自右向左循环、线速度恒定），由 CasesReel（main.js）注入图片。
-       图块之间保留间距、图片圆角，悬停暂停；置于标题区与「录取案例」之间 -->
+       图块之间保留间距、图片圆角，悬停暂停；置于标题区与「学生案例」之间，
+       左右边缘与导航条内容边界对齐（左：Logo 左侧；右：CTA 按钮边框右侧） -->
   <section class="cases-reel" id="cases-reel" aria-hidden="true">
     <div class="cases-reel__clip">
       <div class="cases-reel__track" id="cases-reel-track"></div>
@@ -324,8 +330,8 @@
   <section class="section">
     <div class="section__header">
       <span class="section__eyebrow u-en">GALLERY</span>
-      <h2 class="section__title">录取案例</h2>
-      <p class="section__desc">从插画与纯艺术两条申请主线出发，逐条拆解每位学员的<span class="u-hl">院校背景</span>、<span class="u-hl">课程体系</span>、<span class="u-hl">学术与语言成绩</span>、<span class="u-hl">作品集研究</span>方向与最终录取结果。案例覆盖英国、美国、加拿大、澳洲四个申请地区，既有 <span class="u-hl">UAL</span>、<span class="u-hl">RISD</span> 等艺术名校，也有 <span class="u-hl">牛津</span>、<span class="u-hl">UCL</span>、<span class="u-hl">布朗</span>、<span class="u-hl">达特茅斯</span>等综合性大学。</p>
+      <h2 class="section__title">学生案例</h2>
+      <p class="section__desc section__desc--wide">从插画与纯艺术两条申请主线出发，逐条拆解每位学员的<span class="u-hl">院校背景</span>、<span class="u-hl">课程体系</span>、<span class="u-hl">学术与语言成绩</span>、<span class="u-hl">作品集研究</span>方向与最终录取结果。案例覆盖英国、美国、加拿大、澳洲四个申请地区，既有 <span class="u-hl">UAL</span>、<span class="u-hl">RISD</span> 等艺术名校，也有 <span class="u-hl">牛津</span>、<span class="u-hl">UCL</span>、<span class="u-hl">布朗</span>、<span class="u-hl">达特茅斯</span>等综合性大学。</p>
     </div>
 
     <!-- 案例筛选：专业方向 / 申请地区 / 就业导向三级；由 data/cases.json 的 filters 驱动 -->
@@ -382,7 +388,7 @@
 
 <!-- 数据：优先用内嵌数据（file:// 直开也能跑），缺失时回落到 fetch -->
 <script src="data/site-data.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main.js?v=20261014m"></script>
 <script src="assets/js/hero-video.js"></script>
 </body>
 </html>

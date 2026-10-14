@@ -1,0 +1,773 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "Art & Humanities 艺术人文科系 Art & Humanities 艺术人文科系" [ref=e4] [cursor=pointer]:
+      - /url: "#/home"
+      - img "Art & Humanities 艺术人文科系" [ref=e5]
+      - generic [ref=e6]:
+        - generic [ref=e7]: Art & Humanities
+        - generic [ref=e8]: 艺术人文科系
+    - generic [ref=e9]:
+      - button "主要内容" [ref=e11] [cursor=pointer]
+      - link "规划我的未来" [ref=e14] [cursor=pointer]:
+        - /url: "#/employment"
+  - main [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18]: SFK · 艺术人文科系 · ARTS & HUMANITIES
+      - heading [level=1] [ref=e19]:
+        - text: 以人文深度
+        - emphasis [ref=e20]: 塑造未来艺术人才
+      - paragraph [ref=e21]: 从艺术创作、人⽂研究到⾏业现场，艺术⼈⽂科系帮助学⽣建⽴⼀条能被名校看⻅、能被⾏业理解、能被未来转化的成⻓路径。
+      - generic "学科方向" [ref=e22]:
+        - generic [ref=e23]: ART
+        - generic [ref=e24]: SCULPTURE
+        - generic [ref=e25]: PHOTOGRAPHY
+      - generic [ref=e26]:
+        - link "本科爬藤" [ref=e27]:
+          - /url: "#/undergraduate"
+        - link "就业力规划" [ref=e28]:
+          - /url: "#/employment"
+        - link "学生案例" [ref=e29]:
+          - /url: "#/cases"
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]: Contemporary Art Practice
+        - heading "当代艺术实践" [level=2] [ref=e33]
+        - paragraph [ref=e34]: 以观念为核心，运用多元媒介回应当代社会与文化议题，通向独立创作、艺术驻留、展览及公共艺术等发展方向。
+      - generic [ref=e35]:
+        - button "绘画 Painting" [ref=e36] [cursor=pointer]:
+          - generic [ref=e37]:
+            - generic [ref=e38]: "01"
+            - generic [ref=e39]: 绘画
+            - generic [ref=e40]: Painting
+        - button "雕塑 Sculpture" [ref=e41] [cursor=pointer]:
+          - generic [ref=e42]:
+            - generic [ref=e43]: "02"
+            - generic [ref=e44]: 雕塑
+            - generic [ref=e45]: Sculpture
+        - button "装置 Installation Art" [ref=e46] [cursor=pointer]:
+          - generic [ref=e47]:
+            - generic [ref=e48]: "03"
+            - generic [ref=e49]: 装置
+            - generic [ref=e50]: Installation Art
+        - button "策展与艺术管理 Curating & Arts Management" [ref=e51] [cursor=pointer]:
+          - generic [ref=e52]:
+            - generic [ref=e53]: "04"
+            - generic [ref=e54]: 策展与艺术管理
+            - generic [ref=e55]: Curating & Arts Management
+        - button "艺术史 Art History" [ref=e56] [cursor=pointer]:
+          - generic [ref=e57]:
+            - generic [ref=e58]: "05"
+            - generic [ref=e59]: 艺术史
+            - generic [ref=e60]: Art History
+        - button "艺术疗愈 Art Therapy" [ref=e61] [cursor=pointer]:
+          - generic [ref=e62]:
+            - generic [ref=e63]: "06"
+            - generic [ref=e64]: 艺术疗愈
+            - generic [ref=e65]: Art Therapy
+        - button "插画与视觉艺术 Illustration & Visual Arts" [ref=e66] [cursor=pointer]:
+          - generic [ref=e67]:
+            - generic [ref=e68]: "07"
+            - generic [ref=e69]: 插画与视觉艺术
+            - generic [ref=e70]: Illustration & Visual Arts
+        - button "跨学科艺术 Interdisciplinary Art" [ref=e71] [cursor=pointer]:
+          - generic [ref=e72]:
+            - generic [ref=e73]: "08"
+            - generic [ref=e74]: 跨学科艺术
+            - generic [ref=e75]: Interdisciplinary Art
+    - generic [ref=e76]:
+      - generic [ref=e77]:
+        - generic [ref=e78]: OFFERS 2024-2026
+        - heading "OFFERS" [level=2] [ref=e79]
+        - paragraph [ref=e80]: 2024–2026 三个申请季累计斩获 5493 枚 offer，覆盖美国、英国、港新、日韩及全球 260 所艺术院校与综合大学。
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - generic [ref=e84]: 申请季
+            - generic [ref=e85]: "|"
+            - generic [ref=e86]:
+              - button "2024" [ref=e87] [cursor=pointer]
+              - button "2025" [ref=e88] [cursor=pointer]
+              - button "2026" [ref=e89] [cursor=pointer]
+          - generic [ref=e90]:
+            - generic [ref=e91]: 国家
+            - generic [ref=e92]: "|"
+            - generic [ref=e93]:
+              - button "🇺🇸 美国" [ref=e94] [cursor=pointer]
+              - button "🇬🇧 英国" [ref=e95] [cursor=pointer]
+              - button "🇭🇰 港新" [ref=e96] [cursor=pointer]
+              - button "🇯🇵🇰🇷 日韩" [ref=e97] [cursor=pointer]
+              - button "🌏 其他" [ref=e98] [cursor=pointer]
+        - generic [ref=e99]:
+          - generic [ref=e100]:
+            - generic [ref=e101]: "33"
+            - generic [ref=e102]: 纽约视觉艺术学院
+            - generic [ref=e103]: School of Visual Arts
+          - generic [ref=e104]:
+            - generic [ref=e105]: "25"
+            - generic [ref=e106]: 马里兰艺术学院
+            - generic [ref=e107]: Maryland Institute College of Art
+          - generic [ref=e108]:
+            - generic [ref=e109]: "27"
+            - generic [ref=e110]: 芝加哥艺术学院
+            - generic [ref=e111]: School of the Art Institute of Chicago
+          - generic [ref=e112]:
+            - generic [ref=e113]: "24"
+            - generic [ref=e114]: 萨凡纳艺术与设计学院
+            - generic [ref=e115]: Savannah College of Art and Design
+          - generic [ref=e116]:
+            - generic [ref=e117]: "13"
+            - generic [ref=e118]: 罗德岛设计学院
+            - generic [ref=e119]: Rhode Island School of Design
+          - generic [ref=e120]:
+            - generic [ref=e121]: "17"
+            - generic [ref=e122]: 艺术中心设计学院
+            - generic [ref=e123]: ArtCenter College of Design
+          - generic [ref=e124]:
+            - generic [ref=e125]: "7"
+            - generic [ref=e126]: 帕森斯设计学院
+            - generic [ref=e127]: Parsons School of Design at The New School
+          - generic [ref=e128]:
+            - generic [ref=e129]: "15"
+            - generic [ref=e130]: 普瑞特艺术学院
+            - generic [ref=e131]: Pratt Institute
+          - generic [ref=e132]:
+            - generic [ref=e133]: "23"
+            - generic [ref=e134]: 加州艺术学院(CCA)
+            - generic [ref=e135]: California College of the Arts
+          - generic [ref=e136]:
+            - generic [ref=e137]: "4"
+            - generic [ref=e138]: 加州大学戴维斯分校
+            - generic [ref=e139]: University of California
+          - generic [ref=e140]:
+            - generic [ref=e141]: "5"
+            - generic [ref=e142]: 纽约大学
+            - generic [ref=e143]: New York University
+          - generic [ref=e144]:
+            - generic [ref=e145]: "7"
+            - generic [ref=e146]: 旧金山艺术大学
+            - generic [ref=e147]: Academy of Art University
+          - generic [ref=e148]:
+            - generic [ref=e149]: "2"
+            - generic [ref=e150]: 加州大学尔湾分校
+            - generic [ref=e151]: University of California
+          - generic [ref=e152]:
+            - generic [ref=e153]: "3"
+            - generic [ref=e154]: 波士顿大学
+            - generic [ref=e155]: Boston University
+          - generic [ref=e156]:
+            - generic [ref=e157]: "4"
+            - generic [ref=e158]: 加州艺术学院(CalArts)
+            - generic [ref=e159]: California Institute of the Arts
+          - generic [ref=e160]:
+            - generic [ref=e161]: "1"
+            - generic [ref=e162]: 加州大学圣地亚哥分校
+            - generic [ref=e163]: University of California
+          - generic [ref=e164]:
+            - generic [ref=e165]: "1"
+            - generic [ref=e166]: 加州大学圣芭芭拉分校
+            - generic [ref=e167]: University of California
+          - generic [ref=e168]:
+            - generic [ref=e169]: "1"
+            - generic [ref=e170]: 南加州大学
+            - generic [ref=e171]: University of Southern California
+          - generic [ref=e172]:
+            - generic [ref=e173]: "6"
+            - generic [ref=e174]: 圣路易斯华盛顿大学
+            - generic [ref=e175]: Washington University in St. Louis
+          - generic [ref=e176]:
+            - generic [ref=e177]: "4"
+            - generic [ref=e178]: 雪城大学
+            - generic [ref=e179]: Syracuse University
+          - generic [ref=e180]:
+            - generic [ref=e181]: "3"
+            - generic [ref=e182]: 伊利诺伊大学香槟分校
+            - generic [ref=e183]: University of Illinois at Urbana-Champaign
+          - generic [ref=e184]:
+            - generic [ref=e185]: "3"
+            - generic [ref=e186]: 塔夫茨大学
+            - generic [ref=e187]: Tufts University
+          - generic [ref=e188]:
+            - generic [ref=e189]: "3"
+            - generic [ref=e190]: 明尼阿波利斯艺术与设计学院
+            - generic [ref=e191]: Minneapolis College of Art and Design
+          - generic [ref=e192]:
+            - generic [ref=e193]: "3"
+            - generic [ref=e194]: 奥蒂斯艺术设计学院
+            - generic [ref=e195]: Otis College of Art and Design
+        - button "查看更多 / 11 more" [ref=e197] [cursor=pointer]
+    - generic [ref=e198]:
+      - generic [ref=e199]:
+        - generic [ref=e200]: INSTRUCTORS
+        - heading "导师团队" [level=2] [ref=e201]
+        - paragraph [ref=e202]: 【占位】来自顶尖高校与业界的导师团队 —— 覆盖海外教授、教研导师、学术导师、业界导师与顶尖学者，导师信息后期由你填入。
+      - generic [ref=e203]:
+        - generic [ref=e204]:
+          - button "全部" [ref=e205] [cursor=pointer]
+          - button "海外教授" [ref=e206] [cursor=pointer]
+          - button "教研导师" [ref=e207] [cursor=pointer]
+          - button "学术导师" [ref=e208] [cursor=pointer]
+          - button "业界导师" [ref=e209] [cursor=pointer]
+          - button "顶尖学者" [ref=e210] [cursor=pointer]
+        - generic [ref=e211]:
+          - generic [ref=e212]:
+            - generic [ref=e213]: 待提供
+            - generic [ref=e215]: 占位导师 01
+            - generic [ref=e216]: 院校 / 机构（待提供）
+            - generic [ref=e217]: 职称 / 方向（待提供）
+          - generic [ref=e218]:
+            - generic [ref=e219]: 待提供
+            - generic [ref=e221]: 占位导师 02
+            - generic [ref=e222]: 院校 / 机构（待提供）
+            - generic [ref=e223]: 职称 / 方向（待提供）
+          - generic [ref=e224]:
+            - generic [ref=e225]: 待提供
+            - generic [ref=e227]: 占位导师 03
+            - generic [ref=e228]: 院校 / 机构（待提供）
+            - generic [ref=e229]: 职称 / 方向（待提供）
+          - generic [ref=e230]:
+            - generic [ref=e231]: 待提供
+            - generic [ref=e233]: 占位导师 04
+            - generic [ref=e234]: 院校 / 机构（待提供）
+            - generic [ref=e235]: 职称 / 方向（待提供）
+          - generic [ref=e236]:
+            - generic [ref=e237]: 待提供
+            - generic [ref=e239]: 占位导师 05
+            - generic [ref=e240]: 院校 / 机构（待提供）
+            - generic [ref=e241]: 职称 / 方向（待提供）
+          - generic [ref=e242]:
+            - generic [ref=e243]: 待提供
+            - generic [ref=e245]: 占位导师 06
+            - generic [ref=e246]: 院校 / 机构（待提供）
+            - generic [ref=e247]: 职称 / 方向（待提供）
+          - generic [ref=e248]:
+            - generic [ref=e249]: 待提供
+            - generic [ref=e251]: 占位导师 07
+            - generic [ref=e252]: 院校 / 机构（待提供）
+            - generic [ref=e253]: 职称 / 方向（待提供）
+          - generic [ref=e254]:
+            - generic [ref=e255]: 待提供
+            - generic [ref=e257]: 占位导师 08
+            - generic [ref=e258]: 院校 / 机构（待提供）
+            - generic [ref=e259]: 职称 / 方向（待提供）
+          - generic [ref=e260]:
+            - generic [ref=e261]: 待提供
+            - generic [ref=e263]: 占位导师 09
+            - generic [ref=e264]: 院校 / 机构（待提供）
+            - generic [ref=e265]: 职称 / 方向（待提供）
+          - generic [ref=e266]:
+            - generic [ref=e267]: 待提供
+            - generic [ref=e269]: 占位导师 10
+            - generic [ref=e270]: 院校 / 机构（待提供）
+            - generic [ref=e271]: 职称 / 方向（待提供）
+          - generic [ref=e272]:
+            - generic [ref=e273]: 待提供
+            - generic [ref=e275]: 占位导师 11
+            - generic [ref=e276]: 院校 / 机构（待提供）
+            - generic [ref=e277]: 职称 / 方向（待提供）
+          - generic [ref=e278]:
+            - generic [ref=e279]: 待提供
+            - generic [ref=e281]: 占位导师 12
+            - generic [ref=e282]: 院校 / 机构（待提供）
+            - generic [ref=e283]: 职称 / 方向（待提供）
+          - generic [ref=e284]:
+            - generic [ref=e285]: 待提供
+            - generic [ref=e287]: 占位导师 13
+            - generic [ref=e288]: 院校 / 机构（待提供）
+            - generic [ref=e289]: 职称 / 方向（待提供）
+          - generic [ref=e290]:
+            - generic [ref=e291]: 待提供
+            - generic [ref=e293]: 占位导师 14
+            - generic [ref=e294]: 院校 / 机构（待提供）
+            - generic [ref=e295]: 职称 / 方向（待提供）
+          - generic [ref=e296]:
+            - generic [ref=e297]: 待提供
+            - generic [ref=e299]: 占位导师 15
+            - generic [ref=e300]: 院校 / 机构（待提供）
+            - generic [ref=e301]: 职称 / 方向（待提供）
+          - generic [ref=e302]:
+            - generic [ref=e303]: 待提供
+            - generic [ref=e305]: 占位导师 16
+            - generic [ref=e306]: 院校 / 机构（待提供）
+            - generic [ref=e307]: 职称 / 方向（待提供）
+          - generic [ref=e308]:
+            - generic [ref=e309]: 待提供
+            - generic [ref=e311]: 占位导师 17
+            - generic [ref=e312]: 院校 / 机构（待提供）
+            - generic [ref=e313]: 职称 / 方向（待提供）
+          - generic [ref=e314]:
+            - generic [ref=e315]: 待提供
+            - generic [ref=e317]: 占位导师 18
+            - generic [ref=e318]: 院校 / 机构（待提供）
+            - generic [ref=e319]: 职称 / 方向（待提供）
+          - generic [ref=e320]:
+            - generic [ref=e321]: 待提供
+            - generic [ref=e323]: 占位导师 19
+            - generic [ref=e324]: 院校 / 机构（待提供）
+            - generic [ref=e325]: 职称 / 方向（待提供）
+          - generic [ref=e326]:
+            - generic [ref=e327]: 待提供
+            - generic [ref=e329]: 占位导师 20
+            - generic [ref=e330]: 院校 / 机构（待提供）
+            - generic [ref=e331]: 职称 / 方向（待提供）
+          - generic [ref=e332]:
+            - generic [ref=e333]: 待提供
+            - generic [ref=e335]: 占位导师 21
+            - generic [ref=e336]: 院校 / 机构（待提供）
+            - generic [ref=e337]: 职称 / 方向（待提供）
+          - generic [ref=e338]:
+            - generic [ref=e339]: 待提供
+            - generic [ref=e341]: 占位导师 22
+            - generic [ref=e342]: 院校 / 机构（待提供）
+            - generic [ref=e343]: 职称 / 方向（待提供）
+          - generic [ref=e344]:
+            - generic [ref=e345]: 待提供
+            - generic [ref=e347]: 占位导师 23
+            - generic [ref=e348]: 院校 / 机构（待提供）
+            - generic [ref=e349]: 职称 / 方向（待提供）
+          - generic [ref=e350]:
+            - generic [ref=e351]: 待提供
+            - generic [ref=e353]: 占位导师 24
+            - generic [ref=e354]: 院校 / 机构（待提供）
+            - generic [ref=e355]: 职称 / 方向（待提供）
+        - button "展开查看更多 / 16 more" [ref=e357] [cursor=pointer]
+    - generic [ref=e358]:
+      - generic [ref=e359]:
+        - generic [ref=e360]: RESOURCES
+        - heading "校企资源" [level=2] [ref=e361]
+        - paragraph [ref=e362]: 【占位】横跨八大行业方向、深度覆盖的校企资源网络 —— 合作院校与企业信息后期由你填入。
+      - generic [ref=e366]:
+        - generic [ref=e367]:
+          - generic [ref=e368]: LOGO
+          - generic [ref=e370]: PARTNER NAME 01
+          - generic [ref=e371]: 校企名称（待提供）
+        - generic [ref=e372]:
+          - generic [ref=e373]: LOGO
+          - generic [ref=e375]: PARTNER NAME 02
+          - generic [ref=e376]: 校企名称（待提供）
+        - generic [ref=e377]:
+          - generic [ref=e378]: LOGO
+          - generic [ref=e380]: PARTNER NAME 03
+          - generic [ref=e381]: 校企名称（待提供）
+        - generic [ref=e382]:
+          - generic [ref=e383]: LOGO
+          - generic [ref=e385]: PARTNER NAME 04
+          - generic [ref=e386]: 校企名称（待提供）
+        - generic [ref=e387]:
+          - generic [ref=e388]: LOGO
+          - generic [ref=e390]: PARTNER NAME 05
+          - generic [ref=e391]: 校企名称（待提供）
+        - generic [ref=e392]:
+          - generic [ref=e393]: LOGO
+          - generic [ref=e395]: PARTNER NAME 06
+          - generic [ref=e396]: 校企名称（待提供）
+        - generic [ref=e397]:
+          - generic [ref=e398]: LOGO
+          - generic [ref=e400]: PARTNER NAME 07
+          - generic [ref=e401]: 校企名称（待提供）
+        - generic [ref=e402]:
+          - generic [ref=e403]: LOGO
+          - generic [ref=e405]: PARTNER NAME 08
+          - generic [ref=e406]: 校企名称（待提供）
+        - generic [ref=e407]:
+          - generic [ref=e408]: LOGO
+          - generic [ref=e410]: PARTNER NAME 09
+          - generic [ref=e411]: 校企名称（待提供）
+        - generic [ref=e412]:
+          - generic [ref=e413]: LOGO
+          - generic [ref=e415]: PARTNER NAME 10
+          - generic [ref=e416]: 校企名称（待提供）
+        - generic [ref=e417]:
+          - generic [ref=e418]: LOGO
+          - generic [ref=e420]: PARTNER NAME 11
+          - generic [ref=e421]: 校企名称（待提供）
+        - generic [ref=e422]:
+          - generic [ref=e423]: LOGO
+          - generic [ref=e425]: PARTNER NAME 12
+          - generic [ref=e426]: 校企名称（待提供）
+        - generic [ref=e427]:
+          - generic [ref=e428]: LOGO
+          - generic [ref=e430]: PARTNER NAME 01
+          - generic [ref=e431]: 校企名称（待提供）
+        - generic [ref=e432]:
+          - generic [ref=e433]: LOGO
+          - generic [ref=e435]: PARTNER NAME 02
+          - generic [ref=e436]: 校企名称（待提供）
+        - generic [ref=e437]:
+          - generic [ref=e438]: LOGO
+          - generic [ref=e440]: PARTNER NAME 03
+          - generic [ref=e441]: 校企名称（待提供）
+        - generic [ref=e442]:
+          - generic [ref=e443]: LOGO
+          - generic [ref=e445]: PARTNER NAME 04
+          - generic [ref=e446]: 校企名称（待提供）
+        - generic [ref=e447]:
+          - generic [ref=e448]: LOGO
+          - generic [ref=e450]: PARTNER NAME 05
+          - generic [ref=e451]: 校企名称（待提供）
+        - generic [ref=e452]:
+          - generic [ref=e453]: LOGO
+          - generic [ref=e455]: PARTNER NAME 06
+          - generic [ref=e456]: 校企名称（待提供）
+        - generic [ref=e457]:
+          - generic [ref=e458]: LOGO
+          - generic [ref=e460]: PARTNER NAME 07
+          - generic [ref=e461]: 校企名称（待提供）
+        - generic [ref=e462]:
+          - generic [ref=e463]: LOGO
+          - generic [ref=e465]: PARTNER NAME 08
+          - generic [ref=e466]: 校企名称（待提供）
+        - generic [ref=e467]:
+          - generic [ref=e468]: LOGO
+          - generic [ref=e470]: PARTNER NAME 09
+          - generic [ref=e471]: 校企名称（待提供）
+        - generic [ref=e472]:
+          - generic [ref=e473]: LOGO
+          - generic [ref=e475]: PARTNER NAME 10
+          - generic [ref=e476]: 校企名称（待提供）
+        - generic [ref=e477]:
+          - generic [ref=e478]: LOGO
+          - generic [ref=e480]: PARTNER NAME 11
+          - generic [ref=e481]: 校企名称（待提供）
+        - generic [ref=e482]:
+          - generic [ref=e483]: LOGO
+          - generic [ref=e485]: PARTNER NAME 12
+          - generic [ref=e486]: 校企名称（待提供）
+    - generic [ref=e487]:
+      - generic [ref=e488]:
+        - generic [ref=e489]: TIMELINE
+        - heading "成长时间轴" [level=2] [ref=e490]
+        - paragraph [ref=e491]: 本科与研究生全链路成长时间规划——选择申请路径，横向查看每个阶段的时间节点与需要完成的事件。
+      - generic [ref=e492]:
+        - tablist [ref=e493]:
+          - button "本科" [ref=e494] [cursor=pointer]
+          - button "研究生" [ref=e495] [cursor=pointer]
+          - button "英国本科 3 年" [ref=e496] [cursor=pointer]
+          - button "美国本科 4 年" [ref=e497] [cursor=pointer]
+          - button "长线爬藤" [ref=e498] [cursor=pointer]
+          - button "当季爬藤" [ref=e499] [cursor=pointer]
+          - button "全日制" [ref=e500] [cursor=pointer]
+        - paragraph [ref=e501]: 英本三年制：大二暑假前完成积累，大三直接进入申请
+        - paragraph [ref=e502]: 没有大四缓冲：2026 年完成核心实习与材料，2027 年入读硕士并参加 2028 届秋招，2028 年毕业入职。核心策略：唯一核心暑期窗口不能浪费｜Dissertation、申请递交和毕业集中在大三｜硕士入学即进入秋招。
+        - generic [ref=e503]:
+          - generic [ref=e504]:
+            - generic [ref=e505]:
+              - generic [ref=e506]: 2024.09 — 2025.06
+              - heading "大一全年" [level=4] [ref=e508]
+            - article [ref=e509]:
+              - generic [ref=e510]: 方向探索
+              - generic [ref=e511]:
+                - generic [ref=e512]: 升学 / 申请线
+                - list [ref=e513]:
+                  - listitem [ref=e514]: 适应英本体系
+                  - listitem [ref=e515]: Major 与 GPA
+                  - listitem [ref=e516]: 目标方向初筛
+              - generic [ref=e517]:
+                - generic [ref=e518]: 实践 / 就业线
+                - list [ref=e519]:
+                  - listitem [ref=e520]: Part-time / Volunteer
+                  - listitem [ref=e521]: Career Service
+                  - listitem [ref=e522]: Spring Week 探索
+          - generic [ref=e523]:
+            - generic [ref=e524]:
+              - generic [ref=e525]: 2025.06 — 08
+              - heading "大一暑假" [level=4] [ref=e527]
+            - article [ref=e528]:
+              - generic [ref=e529]: 实习 01
+              - generic [ref=e530]:
+                - generic [ref=e531]: 升学 / 申请线
+                - list [ref=e532]:
+                  - listitem [ref=e533]: 调研 8–12 项目
+                  - listitem [ref=e534]: 建立院校 / 教授 List
+                  - listitem [ref=e535]: 整理推荐关系
+              - generic [ref=e536]:
+                - generic [ref=e537]: 实践 / 就业线
+                - list [ref=e538]:
+                  - listitem [ref=e539]: 第 1 段正式实习
+                  - listitem [ref=e540]: 暑研 / 行业实践
+          - generic [ref=e541]:
+            - generic [ref=e542]:
+              - generic [ref=e543]: 2025.09 — 2026.05
+              - heading "大二全年" [level=4] [ref=e545]
+            - article [ref=e546]:
+              - generic [ref=e547]: 申请核心实习
+              - generic [ref=e548]:
+                - generic [ref=e549]: 升学 / 申请线
+                - list [ref=e550]:
+                  - listitem [ref=e551]: 高阶课与推荐人
+                  - listitem [ref=e552]: Dissertation 选题
+                  - listitem [ref=e553]: SOP / 作品集启动
+              - generic [ref=e554]:
+                - generic [ref=e555]: 实践 / 就业线
+                - list [ref=e556]:
+                  - listitem [ref=e557]: 申请暑期实习
+                  - listitem [ref=e558]: Career Fair / 面试
+                  - listitem [ref=e559]: 求职作品集初版
+          - generic [ref=e560]:
+            - generic [ref=e561]:
+              - generic [ref=e562]: 2026.06 — 08
+              - heading "大二暑假" [level=4] [ref=e564]
+            - article [ref=e565]:
+              - generic [ref=e566]: 唯一核心窗口
+              - generic [ref=e567]:
+                - generic [ref=e568]: 升学 / 申请线
+                - list [ref=e569]:
+                  - listitem [ref=e570]: 主作品集定稿
+                  - listitem [ref=e571]: SOP / 选校锁定
+                  - listitem [ref=e572]: 推荐信到位
+                  - listitem [ref=e573]: 材料必须基本就绪
+              - generic [ref=e574]:
+                - generic [ref=e575]: 实践 / 就业线
+                - list [ref=e576]:
+                  - listitem [ref=e577]: 第 2 段核心实习
+                  - listitem [ref=e578]: 转化项目成果
+                  - listitem [ref=e579]: 争取 Return Offer
+          - generic [ref=e580]:
+            - generic [ref=e581]:
+              - generic [ref=e582]: 2026.09 — 2027.01
+              - heading "大三上" [level=4] [ref=e584]
+            - article [ref=e585]:
+              - generic [ref=e586]: 申请递交
+              - generic [ref=e587]:
+                - generic [ref=e588]: 升学 / 申请线
+                - list [ref=e589]:
+                  - listitem [ref=e590]: Dissertation 推进
+                  - listitem [ref=e591]: 分批递交 27 FALL
+                  - listitem [ref=e592]: 准备院校面试
+              - generic [ref=e593]:
+                - generic [ref=e594]: 实践 / 就业线
+                - list [ref=e595]:
+                  - listitem [ref=e596]: 维护行业网络
+                  - listitem [ref=e597]: 完善求职材料
+                  - listitem [ref=e598]: 明确 2028 岗位
+          - generic [ref=e599]:
+            - generic [ref=e600]:
+              - generic [ref=e601]: 2027.02 — 08
+              - heading "大三下 ＋ 毕业" [level=4] [ref=e603]
+            - article [ref=e604]:
+              - generic [ref=e605]: 结果与衔接
+              - generic [ref=e606]:
+                - generic [ref=e607]: 升学 / 申请线
+                - list [ref=e608]:
+                  - listitem [ref=e609]: 录取 / 押金 / 签证
+                  - listitem [ref=e610]: 完成 Dissertation
+                  - listitem [ref=e611]: 本科毕业
+              - generic [ref=e612]:
+                - generic [ref=e613]: 实践 / 就业线
+                - list [ref=e614]:
+                  - listitem [ref=e615]: 比较升学与工作选项
+                  - listitem [ref=e616]: 行前实习
+                  - listitem [ref=e617]: 秋招材料 80%
+          - generic [ref=e618]:
+            - generic [ref=e619]:
+              - generic [ref=e620]: 2027.09 — 2028.09
+              - heading "硕士 ＋ 就业" [level=4] [ref=e622]
+            - article [ref=e623]:
+              - generic [ref=e624]: 秋招 → 春招 → 入职
+              - generic [ref=e625]:
+                - generic [ref=e626]: 升学 / 申请线
+                - list [ref=e627]:
+                  - listitem [ref=e628]: 硕士课程 / 毕业项目
+                  - listitem [ref=e629]: 将课程转为职业案例
+              - generic [ref=e630]:
+                - generic [ref=e631]: 实践 / 就业线
+                - list [ref=e632]:
+                  - listitem [ref=e633]: 2027 秋：2028 届秋招
+                  - listitem [ref=e634]: 2028 春：补录 / 春招
+                  - listitem [ref=e635]: 2028 毕业入职
+        - generic [ref=e636]:
+          - generic [ref=e637]:
+            - generic [ref=e638]: 时间压缩
+            - text: 每个学年权重更高，任务必须前置
+          - generic [ref=e639]:
+            - generic [ref=e640]: 核心暑假
+            - text: 大二暑假同时服务申请与就业
+          - generic [ref=e641]:
+            - generic [ref=e642]: 最终转化
+            - text: 27 FALL 入学 → 2028 届招聘 → 2028 入职
+        - paragraph [ref=e643]: 适用于英格兰、威尔士及北爱尔兰常见三年制本科；苏格兰四年制需单独调整。（27 FALL · UK UNDERGRADUATE）
+    - generic [ref=e644]:
+      - generic [ref=e645]:
+        - generic [ref=e646]: COURSE PRODUCTS
+        - heading "课程产品" [level=2] [ref=e647]
+        - paragraph [ref=e648]: 从长线旗舰项目到分类课程目录，覆盖学术探索、行业实习与商业实践的完整课程体系。点击任意卡片查看完整介绍。
+      - generic [ref=e649]:
+        - button "本科" [ref=e650] [cursor=pointer]
+        - button "研究生" [ref=e651] [cursor=pointer]
+      - generic [ref=e652]:
+        - generic [ref=e653]:
+          - generic [ref=e654]: Global Talent Visa
+          - heading "艺术精英计划" [level=3] [ref=e655]
+          - generic [ref=e656]:
+            - button "艺术生留英计划" [ref=e657] [cursor=pointer]:
+              - generic [ref=e658]: UK Centre
+              - generic [ref=e660]:
+                - generic [ref=e661]: UK Centre｜艺术生留英 · Global Talent Visa
+                - generic [ref=e662]: 艺术生留英计划
+                - generic [ref=e663]: Global Talent Visa
+                - paragraph [ref=e664]: 面向艺术、设计、建筑、影视、时尚等创意从业者的留英发展方案：以英国全球人才签证（Global Talent Visa）为目标路径——它不是传统「先拿 offer、再由雇主担保」的工签，而是「先认人、再给发展空间」的路线。从艺术家身份规划、展览与媒体报道、推荐信，到移民律师递交与签证落地，完成全链条孵化。
+                - generic [ref=e665]:
+                  - generic [ref=e666]: 无需雇主担保
+                  - generic [ref=e667]: 3 / 5 年转永居
+                  - generic [ref=e668]: 艺术家身份孵化
+                  - generic [ref=e669]: 招募中
+            - button "青年艺术家孵化计划" [ref=e670] [cursor=pointer]:
+              - generic [ref=e671]: 孵化计划
+              - generic [ref=e673]:
+                - generic [ref=e674]: Arts & Humanities｜青年艺术家孵化 · Young Artist Incubation
+                - generic [ref=e675]: 青年艺术家孵化计划
+                - generic [ref=e676]: Young Artist Incubation Program
+                - paragraph [ref=e677]: 为有艺术志向的学生搭建一条从创作身份到展览背书、行业资源与商业化可能的艺术家成长路径：面向具有潜力的青年艺术家及优秀艺术毕业生，以系统性课程与高端定制服务相结合，提供从艺术家身份定位、核心作品创作、驻地与展览策划，到知名度提升、行业资源对接与商业变现的全周期、阶梯式培育路径。
+                - generic [ref=e678]:
+                  - generic [ref=e679]: 五大成长资产
+                  - generic [ref=e680]: 8 大服务模块
+                  - generic [ref=e681]: 三档成长方案
+                  - generic [ref=e682]: 招募中
+        - generic [ref=e683]:
+          - generic [ref=e684]: Signature Programs
+          - heading "长线旗舰产品" [level=3] [ref=e685]
+          - generic [ref=e686]:
+            - button "美国研究生未来精英计划" [ref=e687] [cursor=pointer]:
+              - generic [ref=e688]: 长线内容
+              - generic [ref=e690]:
+                - generic [ref=e691]: US Graduate Admissions｜研究生申请 · 作品集 + 科研双轨
+                - generic [ref=e692]: 美国研究生未来精英计划
+                - generic [ref=e693]: US Graduate Elite Program
+                - paragraph [ref=e694]: 面向冲刺美国顶尖艺术院校、藤校及综合大学艺术设计/跨学科创意方向的长期规划型产品：以作品集为核心，整合 AI 前沿技术、科研论文、海外教授项目与商业实践，建立更完整、更有说服力的美研申请竞争力。
+                - generic [ref=e695]:
+                  - generic [ref=e696]: TOP1 – TOP10 五层级
+                  - generic [ref=e697]: AI全线覆盖
+                  - generic [ref=e698]: 科研论文双收获
+                  - generic [ref=e699]: 招募中
+            - button "英国研究生未来成长计划" [ref=e700] [cursor=pointer]:
+              - generic [ref=e701]: 长线内容
+              - generic [ref=e703]:
+                - generic [ref=e704]: UK Graduate Admissions｜研究生申请 · 升学就业一体化
+                - generic [ref=e705]: 英国研究生未来成长计划
+                - generic [ref=e706]: UK Graduate Program
+                - paragraph [ref=e707]: 同时面向名校申请与长期职业发展的升学就业一体化产品：以个性化作品集和英国研究生申请为基础，向前加入专业定位与项目规划，向后衔接商业实践、岗位制实习、求职作品集与企业内推。
+                - generic [ref=e708]:
+                  - generic [ref=e709]: TOP1 – TOP9 多层级
+                  - generic [ref=e710]: 升学就业一体化
+                  - generic [ref=e711]: 5个项目建高匹配作品集
+                  - generic [ref=e712]: 招募中
+            - button "香港研究生升学计划" [ref=e713] [cursor=pointer]:
+              - generic [ref=e714]: 长线内容
+              - generic [ref=e716]:
+                - generic [ref=e717]: HK Graduate Admissions｜研究生申请 · 常规计划 + 学霸计划
+                - generic [ref=e718]: 香港研究生升学计划
+                - generic [ref=e719]: Hong Kong Graduate Program
+                - paragraph [ref=e720]: 以作品集为核心，结合目标院校定位、专业能力补强、个性化项目、香港高校夏冬校、商业实践、实习推荐和全流程申请服务的港研升学产品。分为常规计划与学霸计划两条路径：常规计划面向需要系统建立专业与作品集能力的学生，学霸计划面向基础较强、目标明确、时间有限的学生。
+                - generic [ref=e721]:
+                  - generic [ref=e722]: 常规计划 · 学霸计划
+                  - generic [ref=e723]: TOP3 – TOP8 分层
+                  - generic [ref=e724]: 作品集+商业实践+实习
+                  - generic [ref=e725]: 招募中
+        - generic [ref=e726]:
+          - generic [ref=e727]: Program Catalog
+          - heading "课程目录" [level=3] [ref=e728]
+          - generic [ref=e729]:
+            - button "就业实习课程 · 岗位实习与导师带训" [ref=e730] [cursor=pointer]:
+              - generic [ref=e731]: 90 门课程
+              - generic [ref=e733]:
+                - generic [ref=e734]: Employment Track｜岗位实习 × 行业导师带训
+                - generic [ref=e735]: 就业实习课程 · 岗位实习与导师带训
+                - generic [ref=e736]: Career Internship Program
+                - paragraph [ref=e737]: 面向希望获得真实行业经验、积累作品集与推荐信的学生，通过岗位制实地实习与线上行业导师带训两种路径，进入头部大厂、行业名企与创意工作室的真实项目。
+                - generic [ref=e738]:
+                  - generic [ref=e739]: 岗位制实习
+                  - generic [ref=e740]: 行业导师带训
+                  - generic [ref=e741]: 真实项目产出
+                  - generic [ref=e742]: 招募中
+            - button "海外冬夏校课程 · 顶尖院校在地学习" [ref=e743] [cursor=pointer]:
+              - generic [ref=e744]: 9 门课程
+              - generic [ref=e746]:
+                - generic [ref=e747]: Academic Track｜海外院校冬夏校
+                - generic [ref=e748]: 海外冬夏校课程 · 顶尖院校在地学习
+                - generic [ref=e749]: Overseas Summer & Winter School
+                - paragraph [ref=e750]: 走进海外顶尖院校的官方冬夏校项目，在真实校园环境中体验前沿学术方向，积累院校认可的学术背景与教授推荐资源。
+                - generic [ref=e751]:
+                  - generic [ref=e752]: 院校官方项目
+                  - generic [ref=e753]: 在地学习
+                  - generic [ref=e754]: 官方结业证明
+                  - generic [ref=e755]: 招募中
+            - button "商业实践课程 · 真实商业项目实战" [ref=e756] [cursor=pointer]:
+              - generic [ref=e757]: 5 门课程
+              - generic [ref=e759]:
+                - generic [ref=e760]: Practice Track｜真实商业项目实战
+                - generic [ref=e761]: 商业实践课程 · 真实商业项目实战
+                - generic [ref=e762]: Business Practice Program
+                - paragraph [ref=e763]: 以真实企业命题为起点，在导师带领下完成从市场调研、方案设计到路演展示的完整商业实践闭环，锻炼商业思维与团队协作能力。
+                - generic [ref=e764]:
+                  - generic [ref=e765]: 真实命题
+                  - generic [ref=e766]: 路演展示
+                  - generic [ref=e767]: 团队协作
+                  - generic [ref=e768]: 招募中
+            - button "海外大师课程 · 教授视角与方法论" [ref=e769] [cursor=pointer]:
+              - generic [ref=e770]: 10 门课程
+              - generic [ref=e772]:
+                - generic [ref=e773]: Academic Track｜海外教授大师课
+                - generic [ref=e774]: 海外大师课程 · 教授视角与方法论
+                - generic [ref=e775]: Overseas Masterclass
+                - paragraph [ref=e776]: 由海外院校教授亲自授课，围绕特定学术方向展开深度方法论训练，为学生带来教授视角的专业指导与推荐信资源。
+                - generic [ref=e777]:
+                  - generic [ref=e778]: 教授亲授
+                  - generic [ref=e779]: 方法论训练
+                  - generic [ref=e780]: 推荐信资源
+                  - generic [ref=e781]: 招募中
+        - generic [ref=e782]:
+          - generic [ref=e783]: Overseas Programs
+          - heading "境外项目" [level=3] [ref=e784]
+          - button "境外项目" [ref=e786] [cursor=pointer]:
+            - generic [ref=e787]: 5 门课程
+            - generic [ref=e789]:
+              - generic [ref=e790]: Overseas Programs｜境外项目
+              - generic [ref=e791]: 境外项目
+              - generic [ref=e792]: Overseas Program
+              - paragraph [ref=e793]: 共 5 门境外项目课程，分为境外访校（新加坡 / 英国 / 美国）与境外夏校（RISD / UAL）两类，行程 7–14 天。
+              - generic [ref=e794]:
+                - generic [ref=e795]: 5 门课程
+                - generic [ref=e796]: 境外访校 3 · 境外夏校 2
+                - generic [ref=e797]: 本科 / 研究生
+        - generic [ref=e798]:
+          - generic [ref=e799]: Art Frontier Lectures
+          - heading "艺术前沿讯息讲座" [level=3] [ref=e800]
+          - button "艺术前沿讯息讲座" [ref=e802] [cursor=pointer]:
+            - generic [ref=e803]: 11 门课程
+            - generic [ref=e805]:
+              - generic [ref=e806]: Art Frontier Lectures｜艺术前沿讯息讲座
+              - generic [ref=e807]: 艺术前沿讯息讲座
+              - generic [ref=e808]: Art Frontier Lecture
+              - paragraph [ref=e809]: 覆盖 lecture 25 与 lecture 26 两季共 11 门海外院校领航课，由 Camberwell、RCA、CSM、UCL、Stanford、RISD、LCC、Penn 等院校教授线上授课，地方导师总结。
+              - generic [ref=e810]:
+                - generic [ref=e811]: 11 门课程
+                - generic [ref=e812]: lecture 25 / lecture 26
+                - generic [ref=e813]: 线上
+                - generic [ref=e814]: 本科 / 研究生
+  - contentinfo [ref=e816]:
+    - generic [ref=e817]:
+      - generic [ref=e818]:
+        - generic [ref=e819]: SFK 艺术人文科系
+        - paragraph [ref=e821]: 插画 × 纯艺术 · 本科爬藤与升学就业规划
+      - heading "主要内容" [level=3] [ref=e823]
+      - generic [ref=e824]:
+        - heading "科系板块" [level=3] [ref=e825]
+        - link "关于艺术人文" [ref=e826] [cursor=pointer]:
+          - /url: "#/home"
+        - link "OFFER成果" [ref=e827] [cursor=pointer]:
+          - /url: "#/home/offers"
+        - link "导师团队" [ref=e828] [cursor=pointer]:
+          - /url: "#/home/instructors"
+        - link "校企资源" [ref=e829] [cursor=pointer]:
+          - /url: "#/home/resources"
+        - link "成长时间轴" [ref=e830] [cursor=pointer]:
+          - /url: "#/home/timeline"
+        - link "课程产品" [ref=e831] [cursor=pointer]:
+          - /url: "#/home/courses"
+      - generic [ref=e832]:
+        - heading "规划咨询" [level=3] [ref=e833]
+        - link "admissions@sfk-edu.demo" [ref=e834] [cursor=pointer]:
+          - /url: mailto:admissions@sfk-edu.demo
+        - link "400-000-0000" [ref=e835] [cursor=pointer]:
+          - /url: tel:400-000-0000
+    - generic [ref=e836]: © 2026 SFK 艺术人文科系 · 本页面为课程与案例演示站点，数据仅供展示
+  - button "开启影像声音" [ref=e837] [cursor=pointer]

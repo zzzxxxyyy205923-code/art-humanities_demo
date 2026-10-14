@@ -366,7 +366,8 @@ p { margin: 0 0 14px; text-wrap: pretty; }
 .btn--ghost:hover, .btn--ghost:focus-visible,
 .case-reset:hover, .case-reset:focus-visible,
 .case-sheet__close:hover, .case-sheet__close:focus-visible,
-.case-sheet__arrow:hover, .case-sheet__arrow:focus-visible,
+.case-sheet__nav:hover, .case-sheet__nav:focus-visible,
+.case-sheet__back:hover, .case-sheet__back:focus-visible,
 .tab-btn:hover, .tab-btn:focus-visible {
   color: var(--text);
   background: var(--surface-2);
@@ -419,6 +420,9 @@ p { margin: 0 0 14px; text-wrap: pretty; }
   font-size: var(--fs-sub-display); line-height: 1.6;
   max-width: 34em; margin-top: 14px;
 }
+/* 加宽版描述（学生案例页）：左侧位置不变，向右展开至内容区右缘
+   （与下方筛选标签右边界对齐），长文案控制在 2–3 行内 */
+.section__desc--wide { max-width: none; }
 
 /* ═══ CARDS ═══ */
 .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
@@ -548,7 +552,8 @@ p { margin: 0 0 14px; text-wrap: pretty; }
 .case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .case-card {
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 22px; display: flex; flex-direction: column; gap: 10px;
+  /* 底部边框向下拓展（22 → 30px）：容纳下移 1/2 高度的标签行，标签与边框保持充足间距 */
+  padding: 22px 22px 30px; display: flex; flex-direction: column; gap: 10px;
   cursor: pointer; transition: border-color .2s, background .2s, transform .2s;
 }
 .case-card:hover { border-color: var(--brand); transform: translateY(-2px); }
@@ -557,12 +562,56 @@ p { margin: 0 0 14px; text-wrap: pretty; }
   color: var(--brand); font-family: var(--font-en); font-weight: var(--fw-semibold);
   font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
 }
-.case-card__top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+/* 预留首图位：纵向延展卡片上部；倒圆角、与卡片边框之间保留 8px 细缝（视觉独立）。
+   后续置入首图时给案例记录的 hero 字段填图片路径即可 */
+.case-card__hero {
+  position: relative;
+  margin: -14px -14px 12px; height: 150px; border-radius: 10px;
+  background: var(--surface-2); border: 1px dashed var(--line-strong);
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.case-card__hero img { width: 100%; height: 100%; object-fit: cover; }
+.case-card__hero-ph { color: var(--text-dim); font-size: var(--fs-small); letter-spacing: .08em; }
+/* ① 卡片颜色填充移除：与背景一致，仅保留边框 */
+#cases-grid .case-card { background: transparent; }
+/* ② 首图缝隙减半（8 → 4px），移除描边 */
+#cases-grid .case-card__hero { margin: -18px -18px 12px; border: 0; }
+/* ③ 城市芯片同为细体 10px（muted）；「XYX同学」已移除，叠加行内仅剩 院校类型·学术分支 + 城市 */
+#cases-grid .case-card__student { font-size: 10px; font-weight: 300; letter-spacing: .12em; }
+/* ④ 官方英文名：字号更小 + 细体，与中文校名形成强对比 */
+#cases-grid .case-card__school-en { font-size: 10px; font-weight: 300; letter-spacing: .06em; }
+/* ⑤ 录取专业：移除胶囊底色与圆角，左对齐上方文字 */
+#cases-grid .case-card__program { background: transparent; border-radius: 0; padding: 0; }
+/* ── 图文高度比例反转：压缩文字行距与段落间距（字号/字重层级不变），
+   首图纵向扩大（150 → 240），使 图:文 由 0.87 反转为 ≈2.3 ── */
+#cases-grid .case-card { gap: 5px; padding: 22px 22px 30px; }
+/* 顶部行移入首图叠加后，下方文字整体上移约一行；首图等量增高（240 → 256），
+   保持 图:文 比例与整体视觉节奏不变 */
+#cases-grid .case-card__hero { height: 256px; margin: -18px -18px 8px; }
+#cases-grid .case-card__top { line-height: 1.25; }
+#cases-grid .case-card__school { line-height: 1.2; }
+#cases-grid .case-card__program { line-height: 1.25; }
+#cases-grid .case-card__tags { padding-top: 0; gap: 5px; }
+/* 顶部行（院校类型 · 学术分支 + 城市芯片）：叠加于首图顶部区域，
+   左右分布与原行一致；浅色渐变衬底保证文字在图片上可读；
+   pointer-events:none 不拦截整卡点击 */
+.case-card__top {
+  position: absolute; top: 0; left: 0; right: 0; z-index: 2;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 18px;
+  background: linear-gradient(rgba(6,7,9,.42), rgba(6,7,9,0));
+  pointer-events: none;
+}
 .case-card__student {
   display: inline-flex; align-items: baseline; gap: 6px;
   color: var(--text-muted); font-size: var(--fs-small);
 }
-.case-card__student .u-en { color: var(--brand); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+/* 城市（北京CBD）：倒圆角边框芯片 + 10% 白色填充（图片顶部区域上保证文字可读），
+   文字样式沿用原 student 细体 */
+.case-card__city {
+  border: 1px solid var(--line-strong); border-radius: 30px; padding: 3px 10px;
+  background: rgba(255,255,255,.1);
+}
 .case-card__school { font-size: var(--fs-h4); font-weight: var(--fw-bold); letter-spacing: -.014em; }
 .case-card__school-en { color: var(--text-dim); font-size: 11px; letter-spacing: .04em; }
 /* 录取专业：与主院校并列强调（例：Fine Art · 纯艺术） */
@@ -572,21 +621,64 @@ p { margin: 0 0 14px; text-wrap: pretty; }
   font-size: var(--fs-small); font-weight: var(--fw-semibold); color: var(--text);
 }
 .case-card__meta { color: var(--text-muted); font-size: var(--fs-small); }
-.case-card__more {
-  margin-top: 2px; display: inline-flex; align-items: center; gap: 6px;
-  color: var(--brand); font-size: var(--fs-label); font-weight: var(--fw-medium);
+/* 底部「查看作品与申请档案 →」已移除：标签行以 margin-top:auto 锚定卡底，卡内留白重新配平。
+   标签行固定下移 12px（≈单行标签半高）：transform 不参与布局流，上方元素定位不受影响；
+   同行各卡高度经 grid 拉伸一致、标签行底边对齐，固定下移量保证所有卡的标签水平对齐
+   （多行换行时同样对齐，不再随行高变化） */
+.case-card__tags {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 4px;
+  transform: translateY(12px);
 }
-.case-card__tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
 .case-card__tag {
   background: var(--surface-2); color: var(--text-muted); font-size: 11px;
   font-weight: var(--fw-medium); padding: 4px 8px; border-radius: 12px;
 }
+/* 案例卡底部标签：透明底 + 12px 圆角边框，与页面背景融合（详情页标签不受影响）。
+   四态（默认 / 悬停 / 选中 / 禁用）均保持同一圆角边框，仅边框色与文字色随状态变化；
+   颜色全部引用 --line-strong / --brand / --line 令牌，深色与浅色主题经令牌覆盖自动适配；
+   12px 圆角相对标签高度≈半高，换行 / 窄屏下比例始终协调 */
+.case-card__tags .case-card__tag {
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  transition: border-color .2s, color .2s;
+}
+.case-card__tags .case-card__tag.is-active,
+.case-card__tags .case-card__tag.is-selected { border-color: var(--brand); color: var(--brand); }
+.case-card__tags .case-card__tag:disabled,
+.case-card__tags .case-card__tag.is-disabled { border-color: var(--line); color: var(--text-dim); }
 
 /* 案例筛选：三大类（专业方向 / 申请地区 / 就业导向）
    每类 = 触发器（空心绿方框）+ 可展开面板，开合观感沿用「左上角绿色方框 → 全屏浮层」：
    空心方框 → 填充、自上而下的绿色消隐线、同一条 easing cubic-bezier(.22,.61,.36,1)。
    子类按钮一律挂 .tab-btn，交互语言走上方「全站按钮交互语言」统一块，此处只定静态外观。 */
 .case-filters { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+/* 筛选区两行布局（参照 OFFER成果 的 filter-bar）：行内 filter-bar 不自带下边距；
+   组间距 / 组内间距 / 按钮内边距整体收缩，保证第二行（申请国家 + 专业方向 + 搜索）
+   单行排下，整体恰好两行 */
+#cases-filters .filter-bar { margin-bottom: 0; }
+#cases-filters .filter-group { gap: 8px; }
+#cases-filters .filter-group + .filter-group { margin-left: 20px; }
+#cases-filters .filter-group.filter-group--search { margin-left: auto; }   /* 搜索组仍推至行末（同优先级、后置生效） */
+#cases-filters .filter-group__btns { gap: 6px; }
+/* 选项按钮尺寸与「搜索」输入框完全一致（高 29px，内边距 0 10px）；
+   默认态颜色填充移除（与背景色完全一致），悬停 / 选中交互效果保持不变 */
+#cases-filters .filter-btn { height: 29px; padding: 0 10px; display: inline-flex; align-items: center; line-height: 1; background: transparent; }
+#cases-filters .filter-btn:hover { background: var(--surface-3); border-color: var(--brand-2); color: var(--text); }
+#cases-filters .filter-btn.is-active {
+  background: var(--brand); color: var(--brand-dark); border-color: var(--brand);
+  box-shadow: var(--glow-primary-soft); font-weight: var(--fw-bold);
+}
+/* （全选 / 清空辅助按钮已移除：清空由点选取消或「重置筛选」承担） */
+/* 「搜索」二字上主色，与艺术人文视觉一致 */
+.filter-group--search .filter-group__label { color: var(--brand); }
+/* 第二行下方的横向细线：长度与筛选区/案例网格同宽（1104px），粗细 1px 与页面分隔线一致 */
+#cases-filters { border-bottom: 1px solid var(--line); padding-bottom: 14px; }
+/* 选项按钮上的案例计数后缀 */
+.filter-btn .filter-btn__n {
+  margin-left: 6px; font-family: var(--font-en); font-size: 10px;
+  opacity: .6; letter-spacing: .02em;
+}
+.filter-btn.is-active .filter-btn__n { opacity: .85; }
 .case-filter {
   background: var(--surface); border: 1px solid var(--line);
   border-radius: var(--radius); overflow: hidden; transition: border-color .2s, background .2s;
@@ -655,13 +747,16 @@ p { margin: 0 0 14px; text-wrap: pretty; }
   display: flex; align-items: center; gap: 14px;
   color: var(--text-muted); font-size: var(--fs-small); margin-bottom: 24px;
 }
-/* 结果行的「重置筛选」：挂进下方统一交互语言，静态外观在此 */
+/* 结果行的「重置筛选」：挂进下方统一交互语言，静态外观在此。
+   按钮常驻占位（JS 未激活时加 .is-off），visibility:hidden 保留布局空间，
+   出现/消失不影响结果行高度与其后元素定位 */
 .case-reset {
   appearance: none; border: 1px solid var(--line-strong); background: transparent;
   color: var(--text-muted); font-family: var(--font-sans);
   font-size: var(--fs-label); font-weight: var(--fw-medium);
   padding: 5px 14px; border-radius: 30px; cursor: pointer; transition: .2s;
 }
+.case-reset.is-off { visibility: hidden; pointer-events: none; }
 
 /* ═══ 学生案例次级页面（点案例卡 → 全屏档案浮层）═══
    与「绿色方框 → 全屏浮层」同一套：幕布自上而下展开（clip-path + 同一 easing）、
@@ -669,10 +764,14 @@ p { margin: 0 0 14px; text-wrap: pretty; }
 body.is-locked { overflow: hidden; }
 .case-sheet { position: fixed; inset: 0; z-index: 120; opacity: 0; pointer-events: none; transition: opacity .3s; }
 .case-sheet.is-open { opacity: 1; pointer-events: auto; }
-.case-sheet__bg { position: absolute; inset: 0; background: rgba(6,7,9,.88); }
+.case-sheet__bg {
+  position: absolute; inset: 0; background: rgba(6,7,9,.62);
+  -webkit-backdrop-filter: blur(22px) saturate(1.15);
+  backdrop-filter: blur(22px) saturate(1.15);
+}
 .case-sheet__panel {
   position: absolute; inset: 0; display: flex; flex-direction: column; overflow: hidden;
-  background: var(--surface); clip-path: inset(0 0 100% 0);
+  background: transparent; clip-path: inset(0 0 100% 0);
   transition: clip-path .62s cubic-bezier(.22,.61,.36,1);
 }
 .case-sheet.is-open .case-sheet__panel { clip-path: inset(0 0 0% 0); }
@@ -696,11 +795,11 @@ body.is-locked { overflow: hidden; }
 }
 .case-sheet__inner {
   flex: 1; min-height: 0;
-  display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(330px, .9fr);
+  display: flex; flex-direction: column;
 }
 
-/* 左：作品图横向滑动 */
-.case-sheet__gallery { position: relative; min-height: 0; display: flex; flex-direction: column; background: rgba(0,0,0,.42); }
+/* 上：作品媒体区（占满除底部信息栏外的整个浮层，全屏展示） */
+.case-sheet__gallery { position: relative; flex: 1; min-height: 0; display: flex; flex-direction: column; background: rgba(0,0,0,.42); }
 .case-sheet__track {
   flex: 1; min-height: 0; display: flex; overflow-x: auto; overflow-y: hidden;
   scroll-snap-type: x mandatory; scroll-behavior: smooth;
@@ -710,69 +809,102 @@ body.is-locked { overflow: hidden; }
 .case-sheet__track::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 4px; }
 .case-sheet__slide {
   flex: 0 0 100%; margin: 0; position: relative; scroll-snap-align: center;
-  display: flex; align-items: center; justify-content: center; padding: 48px 60px 62px;
+  display: flex; align-items: center; justify-content: center; padding: 44px 72px 58px;
 }
 .case-sheet__slide img {
   max-width: 100%; max-height: 100%; object-fit: contain;
   border-radius: 6px; opacity: .55; transition: opacity .3s;
 }
 .case-sheet__slide.is-current img { opacity: 1; }
+/* 视频：默认不自动播放，点击后播放 / 再点暂停（.is-playing 隐藏播放提示） */
+.case-sheet__media { position: relative; max-width: 100%; max-height: 100%; display: flex; }
+.case-sheet__media video {
+  display: block; max-width: 100%; max-height: 100%; object-fit: contain;
+  border-radius: 6px; cursor: pointer; background: #000;
+}
+.case-sheet__playhint {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  pointer-events: none; color: var(--text); font-size: 12px;
+  letter-spacing: .18em; text-shadow: 0 0 12px rgba(0,0,0,.8); transition: opacity .25s;
+}
+.case-sheet__playhint::before {
+  content: ''; width: 0; height: 0; margin-right: 10px;
+  border-left: 16px solid currentColor; border-top: 10px solid transparent; border-bottom: 10px solid transparent;
+}
+.case-sheet__media.is-playing .case-sheet__playhint { opacity: 0; }
 .case-sheet__slide figcaption {
-  position: absolute; left: 60px; bottom: 26px;
+  position: absolute; left: 60px; bottom: 20px;
   color: var(--text-dim); font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em;
 }
 .case-sheet__noworks { margin: auto; color: var(--text-dim); font-size: var(--fs-small); }
-.case-sheet__bar {
-  position: absolute; left: 0; right: 0; bottom: 16px;
-  display: flex; align-items: center; justify-content: center; gap: 16px; z-index: 3;
-}
-.case-sheet__arrow {
-  width: 38px; height: 38px; border-radius: 50%; appearance: none; cursor: pointer;
-  border: 1px solid var(--line-strong); background: rgba(8,9,11,.72);
-  color: var(--text); font-size: 14px; transition: .2s;
-}
-.case-sheet__count {
-  font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);
-  font-variant-numeric: tabular-nums; letter-spacing: .08em;
-}
 
-/* 右：申请档案 */
+/* 鼠标移动时浮现的翻页 / 返回控件：静止 1.6s 或移出浮层后自动隐藏（.is-hover 由 JS 维护）。
+   「<」「>」与底部正方形返回按钮同一边框语言：1px · var(--line-strong)，悬停转主色 */
+.case-sheet__nav, .case-sheet__back {
+  appearance: none; cursor: pointer; z-index: 4;
+  border: 1px solid var(--line-strong); background: rgba(8,9,11,.72);
+  color: var(--text); transition: opacity .25s, color .2s, background .2s, border-color .2s;
+  opacity: 0; pointer-events: none;
+}
+.case-sheet__nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 46px; height: 46px; border-radius: 50%;
+  font-family: var(--font-mono); font-size: 18px;
+}
+.case-sheet__nav--prev { left: 26px; }
+.case-sheet__nav--next { right: 26px; }
+.case-sheet__back {
+  position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%);
+  width: 46px; height: 46px; border-radius: 10px; font-size: 16px;
+}
+.case-sheet.is-hover .case-sheet__nav,
+.case-sheet.is-hover .case-sheet__back { opacity: 1; pointer-events: auto; }
+
+/* 下：申请档案（底部信息栏：带边框的卡片，内容全部平铺展示，不出现任何滚动） */
 .case-sheet__info {
-  border-left: 1px solid var(--line); background: var(--surface);
-  padding: 48px 34px 40px; overflow-y: auto;
+  flex: none; position: relative; z-index: 3;
+  border: 1px solid var(--line-strong); border-radius: 14px;
+  background: rgba(10,11,13,.94);
+  margin: 14px 28px 20px;
+  padding: 16px 26px;
   display: flex; flex-direction: column; gap: 12px;
+  max-height: 44vh; overflow: hidden;
 }
-.case-sheet__eyebrow { color: var(--brand); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; }
-.case-sheet__name {
-  display: inline-flex; align-items: baseline; gap: 10px;
-  font-size: var(--fs-h3); font-weight: var(--fw-bold); letter-spacing: -.014em;
+/* 左右两栏强制并排（nowrap）：右栏内容再宽也只在栏内换行，
+   事实行恒定右上、补充条目恒定右下，不随记录内容宽度整栏换行 */
+.case-sheet__info-grid {
+  display: flex; flex-wrap: nowrap; align-items: stretch; justify-content: space-between; gap: 12px 32px;
 }
-.case-sheet__name .u-en { color: var(--brand); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; }
-.case-sheet__school { font-size: var(--fs-h4); font-weight: var(--fw-semibold); }
-.case-sheet__school-en { color: var(--text-dim); font-size: 11px; letter-spacing: .04em; }
-.case-sheet__program {
-  align-self: flex-start; display: inline-flex; align-items: baseline; gap: 8px; flex-wrap: wrap;
-  background: var(--surface-2); border-radius: 10px; padding: 8px 12px;
-  font-size: var(--fs-small); font-weight: var(--fw-semibold); color: var(--text);
+.case-sheet__ph { color: var(--text-dim); font-size: var(--fs-small); line-height: 1.7; }
+/* 左块：院校类型 · 学术分支 / 中文名 / 英文名 / 录取专业 / 标签 —— 直接复用案例卡
+   （.case-card__*）的版式与字级，与列表卡片完全同构 */
+.case-sheet__who { flex: 0 0 auto; display: flex; flex-direction: column; align-items: flex-start; gap: 7px; min-width: 0; }
+/* 详情页左块的录取专业：去掉案例卡胶囊的底色填充，文字与上方校名左对齐 */
+.case-sheet__who .case-card__program {
+  align-self: auto; background: none; padding: 0; border-radius: 0;
 }
 .case-sheet__tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.case-sheet__meta { display: flex; flex-direction: column; gap: 10px; margin: 4px 0; }
-.case-sheet__row { display: grid; grid-template-columns: 84px 1fr; gap: 12px; align-items: baseline; }
-.case-sheet__row dt { color: var(--text-dim); font-size: var(--fs-label); }
-.case-sheet__row dd { margin: 0; color: var(--text); font-size: var(--fs-small); line-height: 1.7; }
-.case-sheet__block {
-  border-top: 1px solid var(--line); padding-top: 14px;
-  display: flex; flex-direction: column; gap: 8px;
+/* 右块：上 = 生源 ｜ 语言 ｜ 标化（直接读取字段值、不显示字段名，统一细体）；
+   下 = 学生画像 / 作品与创作说明 / 录取院校，靠右下排布 */
+.case-sheet__side {
+  display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end;
+  gap: 10px; min-width: 0;
 }
+.case-sheet__facts {
+  font-weight: var(--fw-sub); color: var(--text-muted);
+  font-size: var(--fs-small); letter-spacing: .02em;
+}
+.case-sheet__side-bottom { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: baseline; gap: 8px 26px; min-width: 0; }
+.case-sheet__block { display: flex; align-items: baseline; gap: 10px; min-width: 0; }
 .case-sheet__h4 { color: var(--brand); font-size: var(--fs-label); font-weight: var(--fw-semibold); letter-spacing: .06em; }
 .case-sheet__block p { margin: 0; color: var(--text-muted); font-size: var(--fs-small); line-height: 1.8; }
-.case-sheet__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.case-sheet__list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 18px; }
 .case-sheet__list li {
   position: relative; padding-left: 14px;
   color: var(--text-muted); font-size: var(--fs-small); line-height: 1.75;
 }
 .case-sheet__list li::before {
-  content: ''; position: absolute; left: 0; top: 9px;
+  content: ''; position: absolute; left: 0; top: .66em;
   width: 5px; height: 5px; border-radius: 1px; background: var(--brand);
 }
 .case-sheet__offers { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
@@ -783,10 +915,11 @@ body.is-locked { overflow: hidden; }
 .case-sheet__offer-school { color: var(--text); }
 .case-sheet__offer-program { color: var(--text-dim); text-align: right; }
 
-/* 平板 / 手机：档案浮层改为上下分区（作品在上、档案在下，整体可滚动） */
+/* 平板 / 手机：媒体区固定高度在上、信息栏在下，整层可滚动 */
 @media (max-width: 900px) {
-  .case-sheet__inner { grid-template-columns: 1fr; grid-template-rows: minmax(240px, 46vh) auto; overflow-y: auto; }
-  .case-sheet__info { border-left: 0; border-top: 1px solid var(--line); padding: 30px 22px 36px; }
+  .case-sheet__inner { display: block; overflow-y: auto; }
+  .case-sheet__gallery { height: 52vh; flex: none; }
+  .case-sheet__info { margin: 12px; max-height: none; padding: 16px 18px; }
   .case-sheet__slide { padding: 30px 22px 52px; }
   .case-sheet__slide figcaption { left: 22px; bottom: 14px; }
 }
@@ -847,35 +980,88 @@ body.is-locked { overflow: hidden; }
   gap: 8px; margin-top: 88px;
 }
 .planning-tag {
-  flex: 0 0 auto;
-  appearance: none; white-space: nowrap;
-  padding: 8px 10px; border-radius: 30px;
+  /* 8 个标签等分整行 → 标签排横向宽度 = 下方滑动卡片带（.directions__wrap）的内容宽 */
+  flex: 1 1 0; min-width: 0;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  padding: 8px 6px; border-radius: 30px;
   border: 1px solid var(--line); background: transparent; color: var(--text-soft);
-  font-size: clamp(9px, .85vw, 11px); font-weight: var(--fw-medium); line-height: 1.35;
-  text-align: center; transition: .2s;
+  /* 字号随视口收缩 + 上限 10px：保证最长标题（11 字）在等分布局下留有余量，不溢出不贴边 */
+  font-size: clamp(8px, .8vw, 10px); font-weight: var(--fw-medium); line-height: 1.35;
+  text-align: center; cursor: default; transition: .2s;
 }
-.planning-tag:hover {
-  color: var(--text); background: var(--surface-2);
+/* 悬停 / 当前方向反馈 = 边框转方向色 + 方向色发光（复用 .dir-sheet__secs 的站内发光
+   规范：0 0 18px -6px 方向色 55%），不再使用底色填充。
+   .is-active 由方向弹层驱动（DirectionSheet.open → setActiveTag）：弹层正显示该方向时
+   对应顶部标签持续发光，作为「当前所在方向」的指示。 */
+.planning-tag:hover,
+.planning-tag.is-active {
+  color: var(--text);
   border-color: var(--direction-color, var(--brand));
+  box-shadow: 0 0 18px -6px color-mix(in srgb, var(--direction-color, var(--brand)) 55%, transparent);
 }
-.planning-tag:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(99,230,212,.16);
-  border-color: var(--direction-color, var(--brand));
-}
+/* 弹层打开（强制吸顶）时标签可点击切换方向 → 用指针形态提示可交互 */
+.planning-tags.is-forced .planning-tag { cursor: pointer; }
 /* 通栏细线：与页面顶部（.navbar 底部边框）同一条线 —— 1px solid var(--line)。
-   元素放在 <main> 层级、内容容器之外，宽度即页面宽度，无需 100vw 计算，
-   也不会因滚动条占宽（100vw 含滚动条）产生横向溢出。 */
-.planning-tags__rule { border-top: 1px solid var(--line); }
-/* 窄屏一行放不下时：收紧间距并允许横向滑动（与导航 tabs 同一处理），仍是单行 */
+   就业力页：置于页头（#employment-hero）最底部、标签之下 24px，
+   作为「产业全景 · 职业规划」div 的底部边界（页头底部内边距归零，细线贴边）。 */
+.planning-tags__rule {
+  position: relative; z-index: 2;    /* 始终压在下方子板块之上，滚动时不被遮挡 */
+  border-top: 1px solid var(--line); margin-top: 24px;
+}
+#view-employment .planning-hero--wide { padding-bottom: 0; }
+
+/* 吸顶态：页头滚出视口后，8 个标签固定在导航栏下方（JS: DirectionsSection.syncTagsFixed）。
+   宽度仍与内容列（--max-w − 96 内边距）对齐；
+   条带铺与页面同色的不透明底色（--brand-dark），使下缘横线始终落在干净背景上、
+   子板块内容不会从横线区域穿过（不再出现视觉上的「被遮挡」）；
+   标签胶囊自身仍无填充（悬停仅描边发光）；z-index 1150 高于方向弹层（1100）
+   → 弹层打开时这排标签与其下缘横线仍正常显示、层级正确。 */
+.planning-tags.is-fixed {
+  position: fixed; top: var(--navbar-h); left: 0; right: 0;
+  max-width: var(--max-w); margin: 0 auto; padding: 12px 48px;
+  background: var(--brand-dark);
+  border-bottom: 1px solid var(--line);
+  z-index: 1150;
+}
+/* 弹层打开（强制吸顶）时：标签排顶到屏幕最上沿（导航条在弹层之下不可见），
+   弹层经 .has-top-tags 同步让出等高顶部空间 → 卡头标题不被遮挡 */
+.planning-tags.is-fixed.is-forced { top: 0; height: 58px; padding: 0 48px; }
+.dir-sheet.has-top-tags { padding-top: 70px; }
+
+/* 左右翻页箭头「<」「>」：位于弹层两侧留白区，形态沿用关闭键的幽灵圆钮语言；
+   悬停描边 / 箭头转方向主色 + 站内同式发光（--dir-color 由 DirectionSheet.open 设置） */
+.dir-sheet__arrow {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 6;
+  width: 44px; height: 44px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--line-strong); background: var(--surface);
+  color: var(--text-soft); cursor: pointer; transition: .2s;
+}
+.dir-sheet__arrow svg { width: 20px; height: 20px; }
+.dir-sheet__arrow:hover {
+  color: var(--dir-color, var(--brand));
+  border-color: var(--dir-color, var(--brand));
+  box-shadow: 0 0 18px -6px color-mix(in srgb, var(--dir-color, var(--brand)) 55%, transparent);
+}
+.dir-sheet__arrow--prev { left: clamp(6px, 1.4vw, 22px); }
+.dir-sheet__arrow--next { right: clamp(6px, 1.4vw, 22px); }
 @media (max-width: 900px) {
+  .dir-sheet__arrow { width: 36px; height: 36px; }
+  .dir-sheet__arrow svg { width: 17px; height: 17px; }
+  .dir-sheet__arrow--prev { left: 4px; }
+  .dir-sheet__arrow--next { right: 4px; }
+}
+/* 窄屏一行放不下（等分后容不下 11 字标题）时：改为自然宽度 + 横向滑动
+   （与导航 tabs 同一处理），仍是单行 */
+@media (max-width: 1024px) {
   .planning-tags {
     gap: 6px; justify-content: flex-start;
     overflow-x: auto; overflow-y: hidden;
     scrollbar-width: none; -ms-overflow-style: none;
   }
   .planning-tags::-webkit-scrollbar { display: none; }
-  .planning-tag { padding: 8px 8px; }
+  .planning-tag { flex: 0 0 auto; padding: 8px 10px; }
+  .planning-tags.is-fixed { padding-left: 24px; padding-right: 24px; }
 }
 
 .active-major__title { margin-bottom: 8px; }
@@ -1091,7 +1277,7 @@ body.is-locked { overflow: hidden; }
 /* hero 卡头：底边细线改挂在背景图上（随图片一起上滑，保持同步位移） */
 .dir-sheet__head--hero { min-height: 240px; overflow: hidden; border-bottom: 0; }
 .dir-sheet__head--hero .dir-sheet__head-bg { border-bottom: 1px solid var(--line); }
-/* 头部高度压缩（方向 08）：固定为自然高度的 5/6，overflow 从底部裁掉 1/6 */
+/* 头部高度压缩（所有带 hero 图的方向）：固定为自然高度的 5/6，overflow 从底部裁掉 1/6 */
 .dir-sheet__head--hero.is-compact { height: var(--hero-compact, 240px); min-height: 0; }
 .dir-sheet__head--hero::after {
   content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
@@ -1266,33 +1452,12 @@ body.is-locked { overflow: hidden; }
   .dir-card--hl:hover { transform: none; }
 }
 
-/* 底部：8 个方向标签常驻（替代原来的「箭头 + 页码」切换）
-   尺寸与形态完全沿用右上角的 .dir-sheet__chip，一屏总览、点击直达 */
-.dir-sheet__bar {
-  flex: none; display: flex; align-items: center; justify-content: center;
-  padding: 12px 20px; border-top: 1px solid var(--line); background: var(--surface);
-}
-.dir-sheet__tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
-.dir-sheet__tab {
-  appearance: none; cursor: pointer; background: transparent;
-  font-family: var(--font-sans); font-size: clamp(10px, .8vw, 12px);
-  color: var(--text-soft); border: 1px solid var(--line); border-radius: 30px;
-  padding: 4px 10px; white-space: nowrap; transition: .2s;
-}
-.dir-sheet__tab:hover { color: var(--text); background: var(--surface-2); border-color: var(--tab-color, var(--brand)); }
-.dir-sheet__tab.is-active {
-  color: var(--tab-color, var(--brand)); border-color: var(--tab-color, var(--brand));
-  background: var(--surface-2); font-weight: var(--fw-semibold, 600);
-}
-.dir-sheet__tab:focus-visible {
-  outline: none; border-color: var(--tab-color, var(--brand));
-  box-shadow: 0 0 0 3px rgba(99,230,212,.16);
-}
+/* 底部 8 个方向标签栏已移除：方向总览 / 切换由页面顶部吸顶的静态标签承担
+   （.planning-tags.is-fixed），此处不再有对应的 bar / tabs / tab 样式。 */
 
 /* 响应式：窄屏卡头改为纵向堆叠、关闭键避让、海报收窄 */
 @media (max-width: 900px) {
   .dir-sheet { padding: 18px 14px; }
-  .dir-sheet__bar { padding: 10px 12px; }
   .dir-sheet__head { flex-direction: column; align-items: flex-start; gap: 12px; padding: 20px 72px 16px 20px; }
   .dir-sheet__chips { justify-content: flex-start; max-width: 264px; margin-top: 0; }
   .dir-sheet__head--hero { min-height: 190px; }
@@ -1301,7 +1466,6 @@ body.is-locked { overflow: hidden; }
 }
 @media (max-width: 600px) {
   .dir-sheet { padding: 12px 10px; }
-  .dir-sheet__tab { padding: 4px 8px; }
   .dir-sheet__title { font-size: var(--fs-h4); }
   .dir-sheet__summary-text { font-size: 13.5px; }         /* 与高亮卡小标题一致，不随标题降级 */
   .dir-sheet__summary { min-height: calc(220px * 1.5); padding: calc(40px * 1.5) 18px calc(48px * 1.5); }
@@ -1469,6 +1633,19 @@ body.is-locked { overflow: hidden; }
 .nav-overlay__link--secondary {
   font-size: clamp(14px, min(1.6vw, 2.1vh), 21px);
   font-weight: var(--fw-semibold); color: var(--text-muted); letter-spacing: .08em;
+}
+/* ── 占位条位（如目录页「05 全日制」内容待补充）──
+   与同级条目保持完全一致的编号与字号，仅整体降亮并追加主色小标签；
+   不参与 hover 提亮、不响应点击跳转。内容上线后，在 data/meta.json 去掉该项
+   的 placeholder / placeholderNote，即自动成为同级正常链接，无需改版式。 */
+.nav-overlay__link.is-placeholder { color: var(--text-dim); cursor: default; -webkit-text-stroke: 0; }
+.nav-overlay__link.is-placeholder:hover { color: var(--text-dim); text-shadow: none; }
+.nav-overlay__link.is-placeholder .idx { opacity: .55; }
+.nav-overlay__soon {
+  font-family: var(--font-plain); font-size: .3em; font-weight: var(--fw-semibold);
+  letter-spacing: .08em; color: var(--brand); opacity: .9; white-space: nowrap;
+  border: 1px solid rgba(99, 230, 212, .38); border-radius: var(--radius-pill);
+  padding: .2em .7em; align-self: center;
 }
 
 /* 底部 CTA：沿用导航条「规划我的未来」按钮语言（青绿实底 + 深色字），
@@ -2203,10 +2380,35 @@ html.is-overlay-open { overflow: hidden; }
   transition: background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
 }
 .offer-card:hover { background: var(--surface-2); border-color: var(--brand); box-shadow: var(--glow-primary); transform: translateY(-2px); }
-.offer-card__count { font-family: var(--font-mono); font-size: var(--text-2xl); font-weight: var(--fw-medium); line-height: 1; color: var(--text); letter-spacing: -.02em; margin-bottom: var(--space-3); transition: color var(--transition-fast); }
+.offer-card__count { font-family: var(--font-mono); font-size: var(--text-2xl); font-weight: var(--fw-bold); line-height: 1; color: var(--text); letter-spacing: -.02em; margin-bottom: var(--space-3); transition: color var(--transition-fast), text-shadow var(--transition-fast); }
+/* 重点院校（2026 US News 全球 Top30 ∪ 指定重点院校，见 offers.json 的 hl 字段）：数字高亮 ——
+   站点主色（--brand 青绿）+ 同色微光，与全站霓虹强调语言一致 */
+.offer-card__count--hl { color: var(--brand); text-shadow: 0 0 16px rgba(99, 230, 212, .45); }
 .offer-card:hover .offer-card__count { color: var(--brand); }
 .offer-card__school-zh { font-size: var(--text-sm); font-weight: var(--fw-bold); color: var(--text); line-height: 1.35; margin-bottom: 3px; }
 .offer-card__school-en { font-family: var(--font-en); font-size: var(--text-xs); color: var(--text-dim); }
+/* 搜索态汇总行：所属国家（仅搜索结果卡片显示） */
+.offer-card__meta { margin-top: var(--space-2); font-size: var(--text-xs); line-height: 1.6; color: var(--text-dim); }
+/* 院校档案卡（搜索结果 + 常规态点击展开）：卡片跨两列；左列信息 + 年份纵向列表；右侧边框区内为专业面板 */
+.offer-card--clickable { cursor: pointer; }
+.offer-card--dossier { grid-column: span 2; display: flex; gap: var(--space-4); align-items: stretch; }
+.offer-card--dossier .offer-card__info { flex: 1 1 auto; min-width: 0; }
+.offer-card__years { margin-top: var(--space-2); display: flex; flex-direction: column; gap: 4px; }
+.offer-card__year { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text); letter-spacing: .04em; }
+.offer-card__majors {
+  flex: 0 0 46%; max-width: 46%; max-height: 320px; overflow-y: auto;
+  border-left: 1px solid var(--line); padding-left: var(--space-4);
+}
+.offer-card__major-group + .offer-card__major-group { margin-top: var(--space-3); }
+.offer-card__major-h { font-size: 10px; font-weight: var(--fw-bold); letter-spacing: .08em; color: var(--brand); margin-bottom: 6px; }
+.offer-card__majors ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; }
+.offer-card__majors li { display: flex; flex-direction: column; gap: 1px; }
+.offer-card__major-en { font-family: var(--font-en); font-size: var(--text-xs); line-height: 1.45; color: var(--text); }
+.offer-card__major-cn { font-size: 11px; line-height: 1.45; color: var(--text-dim); }
+@media (max-width: 600px) {
+  .offer-card--dossier { grid-column: auto; flex-direction: column; }
+  .offer-card__majors { max-width: none; flex: 1 1 auto; border-left: 0; border-top: 1px solid var(--line); padding-left: 0; padding-top: var(--space-3); }
+}
 
 /* 栅格：自适应列数，列宽下限 150px，间距与 dad_demo 一致（14px） */
 .rough-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
@@ -2231,6 +2433,22 @@ html.is-overlay-open { overflow: hidden; }
 }
 .filter-btn:hover { border-color: var(--brand-2); color: var(--text); background: var(--surface-3); }
 .filter-btn.is-active { background: var(--brand); color: var(--brand-dark); border-color: var(--brand); box-shadow: var(--glow-primary-soft); font-weight: var(--fw-bold); }
+/* OFFER 板块筛选行末端「搜索」组：margin-left:auto 推至行末（需压过
+   .filter-group + .filter-group 的 36px 间距规则）；输入框视觉沿用
+   cd-cur-input 的既有语言（暗底描边、品牌色聚焦光晕、胶囊圆角） */
+.filter-bar .filter-group--search { margin-left: auto; }
+.offers-search {
+  width: 210px; padding: 7px 12px; font-family: inherit; font-size: var(--text-xs);
+  color: var(--text); background: var(--surface-2); border: 1px solid var(--line);
+  border-radius: var(--radius-pill); appearance: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+.offers-search::placeholder { color: var(--text-dim); }
+.offers-search:focus { outline: none; border-color: var(--brand); background: var(--surface-3); box-shadow: var(--glow-primary-soft); }
+@media (max-width: 600px) {
+  .filter-group--search { margin-left: 0; width: 100%; }
+  .offers-search { flex: 1; width: auto; }
+}
 
 /* 查看更多 / 收起：实心浅色按钮 → 悬停转青绿（与站内主行动按钮同一逻辑） */
 .section-cta {
@@ -2306,7 +2524,6 @@ html.is-overlay-open { overflow: hidden; }
 .coop-hover-overlay.is-visible { opacity: 1; transform: translateY(-100%); }
 .coop-hover-overlay--below { transform: translateY(calc(0% - 8px)); }
 .coop-hover-overlay--below.is-visible { transform: translateY(0); }
-.coop-hover-overlay__name { font-size: 12px; font-weight: 700; color: #fff; line-height: 1.3; margin-bottom: 6px; }
 .coop-hover-overlay__intro {
   font-size: 10.5px; color: rgba(255,255,255,.75); line-height: 1.5; margin-bottom: 8px;
   display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; overflow: hidden;
@@ -2604,9 +2821,9 @@ html.is-overlay-open { overflow: hidden; }
    每个图块自带尾距，半幅总宽恒为整幅一半，-50% 处首尾拼接不露缝。
    两端渐隐遮罩与目录页图卷同一手法；悬停暂停与站内校企 marquee 一致。 */
 .cases-reel {
-  /* 与标题下文字内容同宽：--max-w 1200 − 48×2 内边距 = 1104，与下方 .section 网格同边界 */
-  max-width: var(--max-w); margin: 0 auto;
-  padding: 36px 48px 8px;
+  /* 横向拓展为全幅：左右内边距与固定导航条一致（clamp 12–28px），
+     使图卷左缘对齐左上角 Logo 左侧、右缘对齐右上角「规划我的未来」按钮边框右侧 */
+  padding: 36px clamp(12px, 2vw, 28px) 8px;
 }
 .cases-reel__clip {
   overflow: hidden;

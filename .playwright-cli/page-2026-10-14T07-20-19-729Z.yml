@@ -1,0 +1,116 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "Art & Humanities 艺术人文科系 Art & Humanities 艺术人文科系" [ref=e4] [cursor=pointer]:
+      - /url: "#/home"
+      - img "Art & Humanities 艺术人文科系" [ref=e5]
+      - generic [ref=e6]:
+        - generic [ref=e7]: Art & Humanities
+        - generic [ref=e8]: 艺术人文科系
+    - generic [ref=e9]:
+      - button "主要内容" [ref=e11] [cursor=pointer]
+      - link "规划我的未来" [ref=e14] [cursor=pointer]:
+        - /url: "#/employment"
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - text: SFK · 艺术人文科系 ·
+        - generic [ref=e18]: Cases
+      - heading "作品集" [level=1] [ref=e19]
+      - paragraph [ref=e20]: 真正决定这些年轻人去向的，从来不是分数、国别与课程标签，而是他们如何以独有的目光审视世界，把成长里的困惑、眷恋与追问，淬炼成有温度、有思想密度的作品——这正是艺术与人文区别于一切标准化评价的气质与厚度。
+    - generic [ref=e23]:
+      - figure [ref=e24]
+      - figure [ref=e25]
+      - figure [ref=e26]
+      - figure [ref=e27]
+      - figure [ref=e28]
+      - figure [ref=e29]
+      - figure [ref=e30]
+      - figure [ref=e31]
+      - figure [ref=e32]
+      - figure [ref=e33]
+      - figure [ref=e34]
+      - figure [ref=e35]
+      - figure [ref=e36]
+      - figure [ref=e37]
+      - figure [ref=e38]
+      - figure [ref=e39]
+      - figure [ref=e40]
+      - figure [ref=e41]
+      - figure [ref=e42]
+      - figure [ref=e43]
+      - figure [ref=e44]
+      - figure [ref=e45]
+      - figure [ref=e46]
+      - figure [ref=e47]
+      - figure [ref=e48]
+      - figure [ref=e49]
+      - figure [ref=e50]
+      - figure [ref=e51]
+      - figure [ref=e52]
+      - figure [ref=e53]
+      - figure [ref=e54]
+      - figure [ref=e55]
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - generic [ref=e58]: GALLERY
+        - heading "学生案例" [level=2] [ref=e59]
+        - paragraph [ref=e60]: 从插画与纯艺术两条申请主线出发，逐条拆解每位学员的院校背景、课程体系、学术与语言成绩、作品集研究方向与最终录取结果。案例覆盖英国、美国、加拿大、澳洲四个申请地区，既有 UAL、RISD 等艺术名校，也有 牛津、UCL、布朗、达特茅斯等综合性大学。
+      - generic [ref=e61]:
+        - generic [ref=e63]:
+          - generic [ref=e64]: 申请维度
+          - generic [ref=e65]: "|"
+          - generic [ref=e66]:
+            - button "本科" [pressed] [ref=e67] [cursor=pointer]
+            - button "研究生" [ref=e68] [cursor=pointer]
+        - generic [ref=e69]:
+          - generic [ref=e70]:
+            - generic [ref=e71]: 专业方向
+            - generic [ref=e72]: "|"
+            - generic [ref=e73]:
+              - button "纯艺" [ref=e74] [cursor=pointer]
+              - button "插画" [ref=e75] [cursor=pointer]
+              - button "摄影" [ref=e76] [cursor=pointer]
+              - button "陶瓷" [ref=e77] [cursor=pointer]
+              - button "艺术管理" [ref=e78] [cursor=pointer]
+              - button "艺术史" [ref=e79] [cursor=pointer]
+              - button "艺术教育" [ref=e80] [cursor=pointer]
+          - generic [ref=e81]:
+            - generic [ref=e82]: 搜索
+            - generic [ref=e83]: "|"
+            - searchbox "国家 / 院校 / 专业（中英文）" [ref=e84]
+      - generic [ref=e85]:
+        - text: 共
+        - generic [ref=e86]: "0"
+        - text: 个案例 · 全部
+        - generic [ref=e87]: "1"
+        - text: 个
+      - generic [ref=e89]:
+        - paragraph [ref=e90]: 当前筛选条件下暂无案例，请切换其它子类。
+        - button "重置筛选" [ref=e91] [cursor=pointer]
+  - contentinfo [ref=e93]:
+    - generic [ref=e94]:
+      - generic [ref=e95]:
+        - generic [ref=e96]: SFK 艺术人文科系
+        - paragraph [ref=e98]: 插画 × 纯艺术 · 本科爬藤与升学就业规划
+      - heading "主要内容" [level=3] [ref=e100]
+      - generic [ref=e101]:
+        - heading "科系板块" [level=3] [ref=e102]
+        - link "关于艺术人文" [ref=e103] [cursor=pointer]:
+          - /url: "#/home"
+        - link "OFFER成果" [ref=e104] [cursor=pointer]:
+          - /url: "#/home/offers"
+        - link "导师团队" [ref=e105] [cursor=pointer]:
+          - /url: "#/home/instructors"
+        - link "校企资源" [ref=e106] [cursor=pointer]:
+          - /url: "#/home/resources"
+        - link "成长时间轴" [ref=e107] [cursor=pointer]:
+          - /url: "#/home/timeline"
+        - link "课程产品" [ref=e108] [cursor=pointer]:
+          - /url: "#/home/courses"
+      - generic [ref=e109]:
+        - heading "规划咨询" [level=3] [ref=e110]
+        - link "admissions@sfk-edu.demo" [ref=e111] [cursor=pointer]:
+          - /url: mailto:admissions@sfk-edu.demo
+        - link "400-000-0000" [ref=e112] [cursor=pointer]:
+          - /url: tel:400-000-0000
+    - generic [ref=e113]: © 2026 SFK 艺术人文科系 · 本页面为课程与案例演示站点，数据仅供展示

@@ -1,0 +1,481 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "Art & Humanities 艺术人文科系 Art & Humanities 艺术人文科系" [ref=e4] [cursor=pointer]:
+      - /url: "#/home"
+      - img "Art & Humanities 艺术人文科系" [ref=e5]
+      - generic [ref=e6]:
+        - generic [ref=e7]: Art & Humanities
+        - generic [ref=e8]: 艺术人文科系
+    - generic [ref=e9]:
+      - button "主要内容" [ref=e11] [cursor=pointer]
+      - link "规划我的未来" [ref=e14] [cursor=pointer]:
+        - /url: "#/employment"
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - text: SFK · ART & ·
+        - generic [ref=e18]: Career Map
+      - heading "产业全景 · 职业规划" [level=1] [ref=e19]
+      - paragraph [ref=e20]: 审美判断 | 人文研究 | 项目实践 | 商业转化
+      - generic [ref=e21]:
+        - generic "商业视觉与品牌设计" [ref=e22]
+        - generic "潮流 IP 与文创衍生" [ref=e23]
+        - generic "当代艺术生态与画廊运营" [ref=e24]
+        - generic "策展实践与空间叙事" [ref=e25]
+        - generic "艺术教育与学术研究" [ref=e26]
+        - generic "文旅体制与公共文化服务" [ref=e27]
+        - generic "独立创业与职业艺术家" [ref=e28]
+        - generic "艺术疗愈与跨界应用" [ref=e29]
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - generic [ref=e34]: INDUSTRY MAP
+          - heading "八大就业方向一览" [level=2] [ref=e36]
+          - paragraph [ref=e37]: 从视觉商业、潮流 IP、艺术机构与策展，到教育、公共文化、职业艺术家与艺术疗愈，将审美判断、人文研究与项目实践转化为可持续职业竞争力。
+        - generic [ref=e39]:
+          - button "查看方向海报：商业视觉与品牌设计" [ref=e40] [cursor=pointer]:
+            - generic [ref=e41]: "01"
+            - heading "商业视觉与品牌设计" [level=3] [ref=e46]
+            - generic [ref=e47]: COMMERCIAL VISUAL & BRAND
+            - paragraph [ref=e48]: 以视觉语言连接品牌策略、营销传播与商业场景。
+            - generic [ref=e49]:
+              - generic [ref=e50]: 代表岗位
+              - generic [ref=e51]:
+                - generic [ref=e52]: 品牌视觉设计师
+                - generic [ref=e53]: 商业插画师
+                - generic [ref=e54]: 艺术指导 AD
+                - generic [ref=e55]: AIGC 创意设计师
+                - generic [ref=e56]: 包装设计师
+                - generic [ref=e57]: 视觉内容策划
+            - generic [ref=e58]:
+              - generic [ref=e59]: 薪资参考
+              - strong [ref=e60]: 15K-35K / 月
+          - button "查看方向海报：潮流 IP 与文创衍生" [ref=e61] [cursor=pointer]:
+            - generic [ref=e62]: "02"
+            - heading "潮流 IP 与文创衍生" [level=3] [ref=e67]
+            - generic [ref=e68]: TREND IP & CULTURAL CREATIVE
+            - paragraph [ref=e69]: 从角色原创、世界观建立走向产品化与品牌联名。
+            - generic [ref=e70]:
+              - generic [ref=e71]: 代表岗位
+              - generic [ref=e72]:
+                - generic [ref=e73]: IP 设计师
+                - generic [ref=e74]: 潮流设计师
+                - generic [ref=e75]: 衍生品设计师
+                - generic [ref=e76]: 绘本作者
+                - generic [ref=e77]: IP 内容运营
+                - generic [ref=e78]: 个人 IP 主理人
+            - generic [ref=e79]:
+              - generic [ref=e80]: 薪资参考
+              - strong [ref=e81]: 12K-35K / 月
+          - button "查看方向海报：当代艺术生态与画廊运营" [ref=e82] [cursor=pointer]:
+            - generic [ref=e83]: "03"
+            - heading "当代艺术生态与画廊运营" [level=3] [ref=e88]
+            - generic [ref=e89]: ART ECOSYSTEM & GALLERY
+            - paragraph [ref=e90]: 连接艺术家、展览、收藏、市场与公众传播。
+            - generic [ref=e91]:
+              - generic [ref=e92]: 代表岗位
+              - generic [ref=e93]:
+                - generic [ref=e94]: 艺术家路径
+                - generic [ref=e95]: 画廊运营专员
+                - generic [ref=e96]: 艺术品销售顾问
+                - generic [ref=e97]: 展览执行
+                - generic [ref=e98]: 艺术机构运营
+                - generic [ref=e99]: Registrar
+            - generic [ref=e100]:
+              - generic [ref=e101]: 薪资参考
+              - strong [ref=e102]: 10K-25K / 月
+          - button "查看方向海报：策展实践与空间叙事" [ref=e103] [cursor=pointer]:
+            - generic [ref=e104]: "04"
+            - heading "策展实践与空间叙事" [level=3] [ref=e109]
+            - generic [ref=e110]: CURATORIAL & SPATIAL NARRATIVE
+            - paragraph [ref=e111]: 把研究议题转译为展览、空间和公众体验。
+            - generic [ref=e112]:
+              - generic [ref=e113]: 代表岗位
+              - generic [ref=e114]:
+                - generic [ref=e115]: 策展助理
+                - generic [ref=e116]: 展览项目执行
+                - generic [ref=e117]: 展陈空间设计师
+                - generic [ref=e118]: 博物馆展陈设计
+                - generic [ref=e119]: 公共教育专员
+                - generic [ref=e120]: 商业策展专员
+            - generic [ref=e121]:
+              - generic [ref=e122]: 薪资参考
+              - strong [ref=e123]: 10K-30K / 月
+          - button "查看方向海报：艺术教育与学术研究" [ref=e124] [cursor=pointer]:
+            - generic [ref=e125]: "05"
+            - heading "艺术教育与学术研究" [level=3] [ref=e130]
+            - generic [ref=e131]: ART EDUCATION & RESEARCH
+            - paragraph [ref=e132]: 将艺术知识转化为课程、研究与公共教育影响力。
+            - generic [ref=e133]:
+              - generic [ref=e134]: 代表岗位
+              - generic [ref=e135]:
+                - generic [ref=e136]: 高校讲师
+                - generic [ref=e137]: 艺术课程研发
+                - generic [ref=e138]: 作品集导师
+                - generic [ref=e139]: 美术馆公教专员
+                - generic [ref=e140]: 艺术史研究助理
+                - generic [ref=e141]: 教研主管
+            - generic [ref=e142]:
+              - generic [ref=e143]: 薪资参考
+              - strong [ref=e144]: 10K-30K / 月
+          - button "查看方向海报：文旅体制与公共文化服务" [ref=e145] [cursor=pointer]:
+            - generic [ref=e146]: "06"
+            - heading "文旅体制与公共文化服务" [level=3] [ref=e151]
+            - generic [ref=e152]: CULTURAL TOURISM & PUBLIC CULTURE
+            - paragraph [ref=e153]: 以文化研究、公共项目与城市传播服务社会。
+            - generic [ref=e154]:
+              - generic [ref=e155]: 代表岗位
+              - generic [ref=e156]:
+                - generic [ref=e157]: 文旅规划专员
+                - generic [ref=e158]: 公共文化服务专员
+                - generic [ref=e159]: 美术馆公教专员
+                - generic [ref=e160]: 城市文化研究助理
+                - generic [ref=e161]: 非遗项目专员
+                - generic [ref=e162]: 文化传播专员
+            - generic [ref=e163]:
+              - generic [ref=e164]: 薪资参考
+              - strong [ref=e165]: 8K-25K / 月
+          - button "查看方向海报：独立创业与职业艺术家" [ref=e166] [cursor=pointer]:
+            - generic [ref=e167]: "07"
+            - heading "独立创业与职业艺术家" [level=3] [ref=e172]
+            - generic [ref=e173]: INDEPENDENT & PROFESSIONAL ARTIST
+            - paragraph [ref=e174]: 以持续创作、展览、收藏和品牌合作建立职业资产。
+            - generic [ref=e175]:
+              - generic [ref=e176]: 代表岗位
+              - generic [ref=e177]:
+                - generic [ref=e178]: 职业艺术家
+                - generic [ref=e179]: 独立策展人
+                - generic [ref=e180]: 画廊/影像艺术家
+                - generic [ref=e181]: 艺术工作室主理人
+                - generic [ref=e182]: 公共艺术创作者
+                - generic [ref=e183]: 品牌合作艺术家
+            - generic [ref=e184]:
+              - generic [ref=e185]: 薪资参考
+              - strong [ref=e186]: 初期多渠道 · 成熟期无上限
+          - button "查看方向海报：艺术疗愈与跨界应用" [ref=e187] [cursor=pointer]:
+            - generic [ref=e188]: "08"
+            - heading "艺术疗愈与跨界应用" [level=3] [ref=e193]
+            - generic [ref=e194]: ART THERAPY & WELLBEING
+            - paragraph [ref=e195]: 让艺术进入心理、教育、健康与社会支持场景。
+            - generic [ref=e196]:
+              - generic [ref=e197]: 代表岗位
+              - generic [ref=e198]:
+                - generic [ref=e199]: 艺术治疗师
+                - generic [ref=e200]: 艺术健康项目专员
+                - generic [ref=e201]: 特殊教育艺术教师
+                - generic [ref=e202]: 博物馆健康专员
+                - generic [ref=e203]: 社区艺术策划
+                - generic [ref=e204]: 企业 EAP 策划
+            - generic [ref=e205]:
+              - generic [ref=e206]: 薪资参考
+              - strong [ref=e207]: 10K-30K / 月
+          - button "查看方向海报：商业视觉与品牌设计" [ref=e208] [cursor=pointer]:
+            - generic [ref=e209]: "01"
+            - heading "商业视觉与品牌设计" [level=3] [ref=e214]
+            - generic [ref=e215]: COMMERCIAL VISUAL & BRAND
+            - paragraph [ref=e216]: 以视觉语言连接品牌策略、营销传播与商业场景。
+            - generic [ref=e217]:
+              - generic [ref=e218]: 代表岗位
+              - generic [ref=e219]:
+                - generic [ref=e220]: 品牌视觉设计师
+                - generic [ref=e221]: 商业插画师
+                - generic [ref=e222]: 艺术指导 AD
+                - generic [ref=e223]: AIGC 创意设计师
+                - generic [ref=e224]: 包装设计师
+                - generic [ref=e225]: 视觉内容策划
+            - generic [ref=e226]:
+              - generic [ref=e227]: 薪资参考
+              - strong [ref=e228]: 15K-35K / 月
+          - button "查看方向海报：潮流 IP 与文创衍生" [ref=e229] [cursor=pointer]:
+            - generic [ref=e230]: "02"
+            - heading "潮流 IP 与文创衍生" [level=3] [ref=e235]
+            - generic [ref=e236]: TREND IP & CULTURAL CREATIVE
+            - paragraph [ref=e237]: 从角色原创、世界观建立走向产品化与品牌联名。
+            - generic [ref=e238]:
+              - generic [ref=e239]: 代表岗位
+              - generic [ref=e240]:
+                - generic [ref=e241]: IP 设计师
+                - generic [ref=e242]: 潮流设计师
+                - generic [ref=e243]: 衍生品设计师
+                - generic [ref=e244]: 绘本作者
+                - generic [ref=e245]: IP 内容运营
+                - generic [ref=e246]: 个人 IP 主理人
+            - generic [ref=e247]:
+              - generic [ref=e248]: 薪资参考
+              - strong [ref=e249]: 12K-35K / 月
+          - button "查看方向海报：当代艺术生态与画廊运营" [ref=e250] [cursor=pointer]:
+            - generic [ref=e251]: "03"
+            - heading "当代艺术生态与画廊运营" [level=3] [ref=e256]
+            - generic [ref=e257]: ART ECOSYSTEM & GALLERY
+            - paragraph [ref=e258]: 连接艺术家、展览、收藏、市场与公众传播。
+            - generic [ref=e259]:
+              - generic [ref=e260]: 代表岗位
+              - generic [ref=e261]:
+                - generic [ref=e262]: 艺术家路径
+                - generic [ref=e263]: 画廊运营专员
+                - generic [ref=e264]: 艺术品销售顾问
+                - generic [ref=e265]: 展览执行
+                - generic [ref=e266]: 艺术机构运营
+                - generic [ref=e267]: Registrar
+            - generic [ref=e268]:
+              - generic [ref=e269]: 薪资参考
+              - strong [ref=e270]: 10K-25K / 月
+          - button "查看方向海报：策展实践与空间叙事" [ref=e271] [cursor=pointer]:
+            - generic [ref=e272]: "04"
+            - heading "策展实践与空间叙事" [level=3] [ref=e277]
+            - generic [ref=e278]: CURATORIAL & SPATIAL NARRATIVE
+            - paragraph [ref=e279]: 把研究议题转译为展览、空间和公众体验。
+            - generic [ref=e280]:
+              - generic [ref=e281]: 代表岗位
+              - generic [ref=e282]:
+                - generic [ref=e283]: 策展助理
+                - generic [ref=e284]: 展览项目执行
+                - generic [ref=e285]: 展陈空间设计师
+                - generic [ref=e286]: 博物馆展陈设计
+                - generic [ref=e287]: 公共教育专员
+                - generic [ref=e288]: 商业策展专员
+            - generic [ref=e289]:
+              - generic [ref=e290]: 薪资参考
+              - strong [ref=e291]: 10K-30K / 月
+          - button "查看方向海报：艺术教育与学术研究" [ref=e292] [cursor=pointer]:
+            - generic [ref=e293]: "05"
+            - heading "艺术教育与学术研究" [level=3] [ref=e298]
+            - generic [ref=e299]: ART EDUCATION & RESEARCH
+            - paragraph [ref=e300]: 将艺术知识转化为课程、研究与公共教育影响力。
+            - generic [ref=e301]:
+              - generic [ref=e302]: 代表岗位
+              - generic [ref=e303]:
+                - generic [ref=e304]: 高校讲师
+                - generic [ref=e305]: 艺术课程研发
+                - generic [ref=e306]: 作品集导师
+                - generic [ref=e307]: 美术馆公教专员
+                - generic [ref=e308]: 艺术史研究助理
+                - generic [ref=e309]: 教研主管
+            - generic [ref=e310]:
+              - generic [ref=e311]: 薪资参考
+              - strong [ref=e312]: 10K-30K / 月
+          - button "查看方向海报：文旅体制与公共文化服务" [ref=e313] [cursor=pointer]:
+            - generic [ref=e314]: "06"
+            - heading "文旅体制与公共文化服务" [level=3] [ref=e319]
+            - generic [ref=e320]: CULTURAL TOURISM & PUBLIC CULTURE
+            - paragraph [ref=e321]: 以文化研究、公共项目与城市传播服务社会。
+            - generic [ref=e322]:
+              - generic [ref=e323]: 代表岗位
+              - generic [ref=e324]:
+                - generic [ref=e325]: 文旅规划专员
+                - generic [ref=e326]: 公共文化服务专员
+                - generic [ref=e327]: 美术馆公教专员
+                - generic [ref=e328]: 城市文化研究助理
+                - generic [ref=e329]: 非遗项目专员
+                - generic [ref=e330]: 文化传播专员
+            - generic [ref=e331]:
+              - generic [ref=e332]: 薪资参考
+              - strong [ref=e333]: 8K-25K / 月
+          - button "查看方向海报：独立创业与职业艺术家" [ref=e334] [cursor=pointer]:
+            - generic [ref=e335]: "07"
+            - heading "独立创业与职业艺术家" [level=3] [ref=e340]
+            - generic [ref=e341]: INDEPENDENT & PROFESSIONAL ARTIST
+            - paragraph [ref=e342]: 以持续创作、展览、收藏和品牌合作建立职业资产。
+            - generic [ref=e343]:
+              - generic [ref=e344]: 代表岗位
+              - generic [ref=e345]:
+                - generic [ref=e346]: 职业艺术家
+                - generic [ref=e347]: 独立策展人
+                - generic [ref=e348]: 画廊/影像艺术家
+                - generic [ref=e349]: 艺术工作室主理人
+                - generic [ref=e350]: 公共艺术创作者
+                - generic [ref=e351]: 品牌合作艺术家
+            - generic [ref=e352]:
+              - generic [ref=e353]: 薪资参考
+              - strong [ref=e354]: 初期多渠道 · 成熟期无上限
+          - button "查看方向海报：艺术疗愈与跨界应用" [ref=e355] [cursor=pointer]:
+            - generic [ref=e356]: "08"
+            - heading "艺术疗愈与跨界应用" [level=3] [ref=e361]
+            - generic [ref=e362]: ART THERAPY & WELLBEING
+            - paragraph [ref=e363]: 让艺术进入心理、教育、健康与社会支持场景。
+            - generic [ref=e364]:
+              - generic [ref=e365]: 代表岗位
+              - generic [ref=e366]:
+                - generic [ref=e367]: 艺术治疗师
+                - generic [ref=e368]: 艺术健康项目专员
+                - generic [ref=e369]: 特殊教育艺术教师
+                - generic [ref=e370]: 博物馆健康专员
+                - generic [ref=e371]: 社区艺术策划
+                - generic [ref=e372]: 企业 EAP 策划
+            - generic [ref=e373]:
+              - generic [ref=e374]: 薪资参考
+              - strong [ref=e375]: 10K-30K / 月
+      - generic [ref=e376]:
+        - generic [ref=e377]:
+          - generic [ref=e378]: CAREER MAP
+          - heading "十大核心岗位" [level=2] [ref=e379]
+          - paragraph [ref=e380]: 艺术人文毕业生的十条主流职业路径；其中 4 个热门岗位来自《艺术人文 - 升学到就业规划手册》的完整逆向拆解。
+          - paragraph
+        - generic [ref=e381]:
+          - button "01 视觉设计师 VISUAL DESIGNER 核心负责品牌全案视觉体系搭建、营销物料设计、品牌视觉规范落地、商业画面创意执行，覆盖全行业的品牌视觉传播需求，是艺术设计类毕业生最主流的就业方向。 所属行业 互联网科技 · 快消零售 · 品牌广告 · 文化传媒 · 电商 · 金融 · 文旅 · 汽车 典型企业 腾讯 · 阿里巴巴 · bilibili · OPPO · 喜茶 · 观夏 · 好利来 · 元气森林 · 花西子 · 酵色" [ref=e382] [cursor=pointer]:
+            - generic [ref=e383]:
+              - generic [ref=e384]: "01"
+              - generic [ref=e385]: 视觉设计师
+              - generic [ref=e386]: VISUAL DESIGNER
+            - generic [ref=e388]:
+              - generic [ref=e389]: 核心负责品牌全案视觉体系搭建、营销物料设计、品牌视觉规范落地、商业画面创意执行，覆盖全行业的品牌视觉传播需求，是艺术设计类毕业生最主流的就业方向。
+              - generic [ref=e390]:
+                - generic [ref=e391]: 所属行业
+                - text: 互联网科技 · 快消零售 · 品牌广告 · 文化传媒 · 电商 · 金融 · 文旅 · 汽车
+              - generic [ref=e392]:
+                - generic [ref=e393]: 典型企业
+                - text: 腾讯 · 阿里巴巴 · bilibili · OPPO · 喜茶 · 观夏 · 好利来 · 元气森林 · 花西子 · 酵色
+          - button "02 IP 设计师 / IP 衍生品设计师 IP DESIGNER" [ref=e394] [cursor=pointer]:
+            - generic [ref=e395]:
+              - generic [ref=e396]: "02"
+              - generic [ref=e397]: IP 设计师 / IP 衍生品设计师
+              - generic [ref=e398]: IP DESIGNER
+          - button "03 新媒体内容运营 NEW MEDIA OPERATIONS" [ref=e400] [cursor=pointer]:
+            - generic [ref=e401]:
+              - generic [ref=e402]: "03"
+              - generic [ref=e403]: 新媒体内容运营
+              - generic [ref=e404]: NEW MEDIA OPERATIONS
+          - button "04 展览空间设计师 / 策展执行 EXHIBITION & CURATION" [ref=e406] [cursor=pointer]:
+            - generic [ref=e407]:
+              - generic [ref=e408]: "04"
+              - generic [ref=e409]: 展览空间设计师 / 策展执行
+              - generic [ref=e410]: EXHIBITION & CURATION
+          - button "05 AIGC 创意设计师 AIGC CREATIVE DESIGNER" [ref=e411] [cursor=pointer]:
+            - generic [ref=e412]:
+              - generic [ref=e413]: "05"
+              - generic [ref=e414]: AIGC 创意设计师
+              - generic [ref=e415]: AIGC CREATIVE DESIGNER
+          - button "06 艺术教职从业者 ART EDUCATOR" [ref=e416] [cursor=pointer]:
+            - generic [ref=e417]:
+              - generic [ref=e418]: "06"
+              - generic [ref=e419]: 艺术教职从业者
+              - generic [ref=e420]: ART EDUCATOR
+          - button "07 艺术指导 AD ART DIRECTOR" [ref=e422] [cursor=pointer]:
+            - generic [ref=e423]:
+              - generic [ref=e424]: "07"
+              - generic [ref=e425]: 艺术指导 AD
+              - generic [ref=e426]: ART DIRECTOR
+          - button "08 内容策划 / 内容编导 CONTENT PLANNER" [ref=e427] [cursor=pointer]:
+            - generic [ref=e428]:
+              - generic [ref=e429]: "08"
+              - generic [ref=e430]: 内容策划 / 内容编导
+              - generic [ref=e431]: CONTENT PLANNER
+          - button "09 文旅体制内 / 事业单位从业者 CULTURAL & PUBLIC SECTOR" [ref=e432] [cursor=pointer]:
+            - generic [ref=e433]:
+              - generic [ref=e434]: "09"
+              - generic [ref=e435]: 文旅体制内 / 事业单位从业者
+              - generic [ref=e436]: CULTURAL & PUBLIC SECTOR
+          - button "10 独立创业者 INDEPENDENT CREATOR" [ref=e437] [cursor=pointer]:
+            - generic [ref=e438]:
+              - generic [ref=e439]: "10"
+              - generic [ref=e440]: 独立创业者
+              - generic [ref=e441]: INDEPENDENT CREATOR
+        - generic [ref=e443]:
+          - generic [ref=e444]:
+            - generic [ref=e445]: "01"
+            - heading "视觉设计师 VISUAL DESIGNER" [level=3] [ref=e446]
+            - generic [ref=e447]: 手册深度拆解
+          - generic [ref=e448]:
+            - generic [ref=e449]:
+              - heading "成功入职案例 SUCCESS CASE" [level=4] [ref=e450]:
+                - text: 成功入职案例
+                - generic [ref=e451]: SUCCESS CASE
+              - generic [ref=e452]:
+                - term [ref=e453]: 背景
+                - definition [ref=e454]: 艺术背景 + AIGC 技能
+                - term [ref=e455]: 经历
+                - definition [ref=e456]: 3 段大厂实习 + 1 段创意实习 + 4 个商业项目
+                - term [ref=e457]: 结果
+                - definition [ref=e458]: 字节跳动 TikTok · 视觉创意设计师
+            - generic [ref=e459]:
+              - heading "硬门槛 HARD REQUIREMENTS" [level=4] [ref=e460]:
+                - text: 硬门槛
+                - generic [ref=e461]: HARD REQUIREMENTS
+              - generic [ref=e462]:
+                - term [ref=e463]: 学历门槛
+                - definition [ref=e464]: 普遍要求本科，但研究生更具竞争力。数据显示研究生入职大厂更有可能拿到核心岗位 offer，且薪资水平更高。
+                - term [ref=e465]: 实习经历
+                - definition [ref=e466]: 大厂普遍要求 2–3 段垂直实习经历，中厂 2 段及以上，小而美的公司普遍需要 1–2 段。
+                - term [ref=e467]: 商业项目经历
+                - definition [ref=e468]: 普遍需要商业项目 3–4 个 + 个人项目 2–3 个。
+                - term [ref=e469]: 软件 / AIGC
+                - definition [ref=e470]: 熟练掌握基本设计软件和 AIGC、理解 AIGC 的底层逻辑。
+            - generic [ref=e471]:
+              - heading "软实力 SOFT SKILLS" [level=4] [ref=e472]:
+                - text: 软实力
+                - generic [ref=e473]: SOFT SKILLS
+              - generic [ref=e474]:
+                - generic [ref=e475]: 商业落地思维
+                - generic [ref=e476]: 品牌理解力
+                - generic [ref=e477]: 执行能力
+                - generic [ref=e478]: 审美 / 独立思考
+                - generic [ref=e479]: 可塑性 / 职业性
+                - generic [ref=e480]: 沟通能力
+                - generic [ref=e481]: 团队合作
+          - generic [ref=e482]:
+            - heading "倒推升学择校标准 SCHOOL MATCHING" [level=4] [ref=e483]:
+              - text: 倒推升学择校标准
+              - generic [ref=e484]: SCHOOL MATCHING
+            - generic [ref=e485]:
+              - generic [ref=e486]:
+                - generic [ref=e487]: 英国
+                - generic [ref=e488]: 皇家艺术学院 RCA
+                - generic [ref=e489]: Communication / Visual Communication
+                - generic [ref=e490]: 概念创新 · 跨学科协作 · 视觉叙事 · 行业研究 · 个人风格塑造
+              - generic [ref=e491]:
+                - generic [ref=e492]: 英国
+                - generic [ref=e493]: 伦敦艺术大学 UAL
+                - generic [ref=e494]: Illustration & Visual Media
+                - generic [ref=e495]: 视觉语言 · 品牌认知 · 创意实践 · 商业应用
+              - generic [ref=e496]:
+                - generic [ref=e497]: 英国
+                - generic [ref=e498]: 金斯顿大学 Kingston
+                - generic [ref=e499]: Illustration / Animation
+                - generic [ref=e500]: 故事表达 · 出版应用 · 跨媒体创作 · 职业发展
+              - generic [ref=e501]:
+                - generic [ref=e502]: 英国
+                - generic [ref=e503]: 利兹大学 Leeds
+                - generic [ref=e504]: Design
+                - generic [ref=e505]: 跨界思维 · 综合能力 · 品牌理解 · 审美思考 · 落地
+              - generic [ref=e506]:
+                - generic [ref=e507]: 美国
+                - generic [ref=e508]: 罗德岛设计学院 RISD
+                - generic [ref=e509]: Illustration
+                - generic [ref=e510]: 绘画基础 · 视觉表达 · 叙事能力 · 艺术思辨 · 个人语言建立
+              - generic [ref=e511]:
+                - generic [ref=e512]: 美国
+                - generic [ref=e513]: 纽约视觉艺术学院 SVA
+                - generic [ref=e514]: Illustration
+                - generic [ref=e515]: 商业插画 · 品牌合作 · 出版传媒 · 市场意识 · 职业化发展
+              - generic [ref=e516]:
+                - generic [ref=e517]: 美国
+                - generic [ref=e518]: 马里兰艺术学院 MICA
+                - generic [ref=e519]: Illustration Practice
+                - generic [ref=e520]: 概念设计 · 视觉叙事 · 跨媒体创作 · 社会议题表达 · 创新实践
+  - contentinfo [ref=e522]:
+    - generic [ref=e523]:
+      - generic [ref=e524]:
+        - generic [ref=e525]: SFK 艺术人文科系
+        - paragraph [ref=e527]: 插画 × 纯艺术 · 本科爬藤与升学就业规划
+      - heading "主要内容" [level=3] [ref=e529]
+      - generic [ref=e530]:
+        - heading "科系板块" [level=3] [ref=e531]
+        - link "关于艺术人文" [ref=e532] [cursor=pointer]:
+          - /url: "#/home"
+        - link "OFFER成果" [ref=e533] [cursor=pointer]:
+          - /url: "#/home/offers"
+        - link "导师团队" [ref=e534] [cursor=pointer]:
+          - /url: "#/home/instructors"
+        - link "校企资源" [ref=e535] [cursor=pointer]:
+          - /url: "#/home/resources"
+        - link "成长时间轴" [ref=e536] [cursor=pointer]:
+          - /url: "#/home/timeline"
+        - link "课程产品" [ref=e537] [cursor=pointer]:
+          - /url: "#/home/courses"
+      - generic [ref=e538]:
+        - heading "规划咨询" [level=3] [ref=e539]
+        - link "admissions@sfk-edu.demo" [ref=e540] [cursor=pointer]:
+          - /url: mailto:admissions@sfk-edu.demo
+        - link "400-000-0000" [ref=e541] [cursor=pointer]:
+          - /url: tel:400-000-0000
+    - generic [ref=e542]: © 2026 SFK 艺术人文科系 · 本页面为课程与案例演示站点，数据仅供展示

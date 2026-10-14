@@ -20,7 +20,8 @@ window.SFK_DATA = {
             {
               "id": "fulltime",
               "label": "全日制",
-              "href": "#/fulltime"
+              "href": "#/fulltime",
+              "note": "目录页 overlay.primary 第 5 项已放置占位（内容即将上线），内容就位后去掉该项 placeholder 并恢复 view-fulltime"
             },
             {
               "id": "graduate",
@@ -89,6 +90,13 @@ window.SFK_DATA = {
             "id": "undergraduate",
             "label": "本科爬藤",
             "href": "#/undergraduate"
+          },
+          {
+            "id": "fulltime",
+            "label": "全日制",
+            "href": "#/fulltime",
+            "placeholder": true,
+            "placeholderNote": "内容即将上线"
           }
         ],
         "secondary": [
@@ -299,32 +307,27 @@ window.SFK_DATA = {
     }
   },
   "cases": {
+    "dimension": {
+      "id": "dimension",
+      "label": "申请维度",
+      "labelEn": "DIMENSION",
+      "options": [
+        {
+          "value": "本科",
+          "label": "本科"
+        },
+        {
+          "value": "研究生",
+          "label": "研究生"
+        }
+      ]
+    },
     "filters": [
-      {
-        "id": "major",
-        "label": "专业方向",
-        "labelEn": "MAJOR",
-        "all": "全部",
-        "options": [
-          {
-            "value": "illustration",
-            "label": "插画"
-          },
-          {
-            "value": "fine-art",
-            "label": "纯艺术"
-          },
-          {
-            "value": "cross",
-            "label": "插画 / 纯艺术"
-          }
-        ]
-      },
       {
         "id": "region",
         "label": "申请国家",
         "labelEn": "COUNTRY",
-        "all": "全部",
+        "row": 1,
         "options": [
           {
             "value": "英国",
@@ -335,1203 +338,1697 @@ window.SFK_DATA = {
             "label": "美国"
           },
           {
+            "value": "中国香港",
+            "label": "中国香港"
+          },
+          {
             "value": "加拿大",
             "label": "加拿大"
           },
           {
+            "value": "新加坡",
+            "label": "新加坡"
+          },
+          {
             "value": "澳洲",
             "label": "澳洲"
+          },
+          {
+            "value": "意大利",
+            "label": "意大利"
           }
         ]
       },
       {
-        "id": "career",
-        "label": "就业导向",
-        "labelEn": "CAREER",
-        "all": "全部",
-        "source": "careers",
-        "hint": "子标签取自「十大核心岗位」（data/careers.json）。案例侧的就业导向标签待标注，当前全部归入「暂未匹配」，标注后即按岗位归类。",
-        "options": []
+        "id": "branch",
+        "label": "专业方向",
+        "labelEn": "MAJOR",
+        "row": 2,
+        "options": [
+          {
+            "value": "纯艺",
+            "label": "纯艺"
+          },
+          {
+            "value": "插画",
+            "label": "插画"
+          },
+          {
+            "value": "摄影",
+            "label": "摄影"
+          },
+          {
+            "value": "艺术管理",
+            "label": "艺术管理"
+          },
+          {
+            "value": "陶瓷",
+            "label": "陶瓷"
+          },
+          {
+            "value": "艺术史",
+            "label": "艺术史"
+          }
+        ]
       }
     ],
-    "illustration": [
+    "portfolio": [
       {
-        "student": "Lin.",
-        "studentZh": "林同学",
-        "school": "伦敦艺术大学 UAL",
-        "schoolEn": "University of the Arts London",
-        "college": "Camberwell College of Arts",
-        "country": "英国",
-        "region": "英国",
-        "major": "illustration",
-        "program": "BA Illustration",
-        "programCn": "插画",
-        "offerType": "本科直录",
-        "background": "厦门国际高中 · 国际学校背景",
-        "academic": [
-          "A-Level 中文 A*",
-          "A-Level 纯艺预估 A",
-          "GPA 4.2/5"
+        "id": "艺术人文-纯艺-研究生-XYX-北京CBD",
+        "degree": "研究生",
+        "schoolType": "综合大学",
+        "branch": "纯艺",
+        "region": "美国",
+        "admitted": "哥伦比亚大学",
+        "admittedEn": "Columbia University",
+        "admittedCountry": "美国",
+        "admittedMajor": "MFA Sculpture｜纯艺雕塑",
+        "otherAdmitted": [
+          "纽约视觉艺术学院"
         ],
-        "language": "—",
         "tags": [
-          "时间紧迫",
-          "目标高",
-          "一年制冲刺"
+          "纯艺",
+          "雕塑",
+          "艺术疗愈"
         ],
-        "persona": "学术背景：国际学校背景，已有两门 A-Level 成绩（★★★★）；时间跨度：不到一年准备期，时间紧张（★★）；目标院校：顶尖艺术大学，家长期待高（★★★★★）；专业能力：中上，需要针对性指导（★★★）。",
-        "creation": [],
-        "offers": [
-          {
-            "school": "UAL-Camberwell",
-            "schoolEn": "Camberwell College of Arts, UAL",
-            "program": "BA Illustration"
-          }
+        "language": "雅思8",
+        "gpa": "GPA3.7",
+        "origin": "罗德岛艺术学院",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-研究生-XYX-北京CBD-首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-研究生-XYX-北京CBD/1.png",
+          "assets/img/portfolio/艺术人文-纯艺-研究生-XYX-北京CBD/2.png",
+          "assets/img/portfolio/艺术人文-纯艺-研究生-XYX-北京CBD/3.png"
         ],
+        "idCity": "北京CBD",
+        "idInitials": "XYX"
+      },
+      {
+        "id": "艺术人文-纯艺-研究生-BXZ-杭州",
+        "degree": "研究生",
+        "schoolType": "综合大学",
+        "branch": "纯艺",
+        "region": "美国",
+        "admitted": "宾夕法尼亚大学",
+        "admittedEn": "University of Pennsylvania",
+        "admittedCountry": "美国",
+        "admittedMajor": "MFA Fine Arts｜纯艺术",
+        "otherAdmitted": [
+          "南加州大学"
+        ],
+        "tags": [
+          "纯艺"
+        ],
+        "language": "免语言",
+        "gpa": "GPA3.94",
+        "origin": "纽约视觉艺术学院",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-研究生-BXZ-杭州/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-研究生-BXZ-杭州/1.png",
+          "assets/img/portfolio/艺术人文-纯艺-研究生-BXZ-杭州/2.png",
+          "assets/img/portfolio/艺术人文-纯艺-研究生-BXZ-杭州/3.png"
+        ],
+        "idCity": "杭州",
+        "idInitials": "BXZ"
+      },
+      {
+        "id": "艺术人文-摄影-研究生-ZS-北京CBD",
+        "degree": "研究生",
+        "schoolType": "艺术院校",
+        "branch": "摄影",
+        "region": "美国/英国",
+        "admitted": "芝加哥艺术学院",
+        "admittedEn": "School of the Art Institute of Chicago",
+        "admittedCountry": "美国",
+        "admittedMajor": "MFA Photography｜纯艺摄影",
+        "otherAdmitted": [
+          "皇家艺术学院"
+        ],
+        "tags": [
+          "摄影"
+        ],
+        "language": "雅思6.5",
+        "gpa": "GPA82",
+        "origin": "北京电影学院",
+        "hero": "assets/img/portfolio/艺术人文-摄影-研究生-ZS-北京CBD/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-摄影-研究生-ZS-北京CBD/1.png",
+          "assets/img/portfolio/艺术人文-摄影-研究生-ZS-北京CBD/2.png",
+          "assets/img/portfolio/艺术人文-摄影-研究生-ZS-北京CBD/3.png"
+        ],
+        "idCity": "北京CBD",
+        "idInitials": "ZS"
+      },
+      {
+        "id": "艺术人文-陶瓷-研究生-SYL-上海",
+        "degree": "研究生",
+        "schoolType": "艺术院校",
+        "branch": "陶瓷",
+        "region": "美国/英国",
+        "admitted": "罗德岛艺术设计学院",
+        "admittedEn": "Rhode Island School of Design",
+        "admittedCountry": "美国",
+        "admittedMajor": "MFA Ceramic｜纯艺陶瓷",
+        "otherAdmitted": [
+          "皇家艺术学院"
+        ],
+        "tags": [
+          "雕塑",
+          "纯艺",
+          "陶瓷"
+        ],
+        "language": "免语言",
+        "gpa": "GPA3.5",
+        "origin": "纽约视觉艺术学院",
+        "hero": "assets/img/portfolio/艺术人文-陶瓷-研究生-SYL-上海/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-陶瓷-研究生-SYL-上海/1.png",
+          "assets/img/portfolio/艺术人文-陶瓷-研究生-SYL-上海/2.png",
+          "assets/img/portfolio/艺术人文-陶瓷-研究生-SYL-上海/3.png"
+        ],
+        "idCity": "上海",
+        "idInitials": "SYL"
+      },
+      {
+        "id": "艺术人文-艺术管理-研究生-CSJ-深圳",
+        "degree": "研究生",
+        "schoolType": "综合大学",
+        "branch": "艺术管理",
+        "region": "美国",
+        "admitted": "哥伦比亚大学",
+        "admittedEn": "Columbia University",
+        "admittedCountry": "美国",
+        "admittedMajor": "MA Arts Administration｜艺术管理",
+        "otherAdmitted": [
+          "纽约大学"
+        ],
+        "tags": [
+          "艺术管理"
+        ],
+        "language": "免语言",
+        "gpa": "GPA3.3",
+        "origin": "纽约视觉艺术学院",
+        "hero": "assets/img/portfolio/艺术人文-艺术管理-研究生-CSJ-深圳/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-艺术管理-研究生-CSJ-深圳/1.png",
+          "assets/img/portfolio/艺术人文-艺术管理-研究生-CSJ-深圳/2.png",
+          "assets/img/portfolio/艺术人文-艺术管理-研究生-CSJ-深圳/3.png"
+        ],
+        "idCity": "深圳",
+        "idInitials": "CSJ"
+      },
+      {
+        "id": "艺术人文-纯艺-研究生-CWL-杭州",
+        "degree": "研究生",
+        "schoolType": "综合大学",
+        "branch": "纯艺",
+        "region": "英国",
+        "admitted": "伦敦大学学院",
+        "admittedEn": "University College London",
+        "admittedCountry": "英国",
+        "admittedMajor": "MFA Sculpture｜纯艺雕塑",
+        "otherAdmitted": [
+          "皇家艺术学院"
+        ],
+        "tags": [
+          "纯艺",
+          "雕塑"
+        ],
+        "language": "免语言",
+        "gpa": "GPA3.02",
+        "origin": "帕森斯艺术学院",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-研究生-CWL-杭州/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-研究生-CWL-杭州/1.png",
+          "assets/img/portfolio/艺术人文-纯艺-研究生-CWL-杭州/2.png",
+          "assets/img/portfolio/艺术人文-纯艺-研究生-CWL-杭州/3.png"
+        ],
+        "idCity": "杭州",
+        "idInitials": "CWL"
+      },
+      {
+        "id": "艺术人文-纯艺-研究生-WXN-成都",
+        "degree": "研究生",
+        "schoolType": "艺术院校",
+        "branch": "纯艺",
+        "region": "英国",
+        "admitted": "皇家艺术学院",
+        "admittedEn": "Royal College of Art",
+        "admittedCountry": "英国",
+        "admittedMajor": "MA Sculpture｜纯艺雕塑",
+        "otherAdmitted": [
+          "中央圣马丁"
+        ],
+        "tags": [
+          "雕塑",
+          "纯艺"
+        ],
+        "language": "无",
+        "gpa": "GPA79.56",
+        "origin": "山东大学",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-研究生-WXN-成都/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-研究生-WXN-成都/1.png",
+          "assets/img/portfolio/艺术人文-纯艺-研究生-WXN-成都/2.png",
+          "assets/img/portfolio/艺术人文-纯艺-研究生-WXN-成都/3.png"
+        ],
+        "idCity": "成都",
+        "idInitials": "WXN"
+      },
+      {
+        "id": "艺术人文-纯艺-研究生-JYF-北京CBD",
+        "degree": "研究生",
+        "schoolType": "艺术院校",
+        "branch": "纯艺",
+        "region": "英国",
+        "admitted": "皇家艺术学院",
+        "admittedEn": "Royal College of Art",
+        "admittedCountry": "英国",
+        "admittedMajor": "MA Painting｜纯艺绘画",
+        "otherAdmitted": [
+          "切尔西艺术学院"
+        ],
+        "tags": [
+          "纯艺",
+          "绘画"
+        ],
+        "language": "无",
+        "gpa": "GPA87.8",
+        "origin": "首都师范大学",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-研究生-JYF-北京CBD/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-研究生-JYF-北京CBD/1.png",
+          "assets/img/portfolio/艺术人文-纯艺-研究生-JYF-北京CBD/2.png",
+          "assets/img/portfolio/艺术人文-纯艺-研究生-JYF-北京CBD/3.png"
+        ],
+        "idCity": "北京CBD",
+        "idInitials": "JYF"
+      },
+      {
+        "id": "艺术人文-艺术管理/艺术教育-研究生-FXT-北京CBD",
+        "degree": "研究生",
+        "schoolType": "综合大学",
+        "branch": "艺术管理",
+        "region": "英国",
+        "admitted": "伦敦大学学院",
+        "admittedEn": "University College London",
+        "admittedCountry": "英国",
+        "admittedMajor": "MA Museums and Galleries in Education｜艺术管理/艺术教育",
+        "otherAdmitted": [
+          "皇家艺术学院"
+        ],
+        "tags": [
+          "艺术管理",
+          "综合大学"
+        ],
+        "language": "免语言",
+        "gpa": "GPA3.7",
+        "origin": "中央圣马丁",
+        "hero": "assets/img/portfolio/艺术人文-艺术管理-艺术教育-研究生-FXT-北京CBD/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-艺术管理-艺术教育-研究生-FXT-北京CBD/1.png",
+          "assets/img/portfolio/艺术人文-艺术管理-艺术教育-研究生-FXT-北京CBD/2.png",
+          "assets/img/portfolio/艺术人文-艺术管理-艺术教育-研究生-FXT-北京CBD/3.png"
+        ],
+        "idCity": "北京CBD",
+        "idInitials": "FXT"
+      },
+      {
+        "id": "艺术人文-艺术史-研究生-XXY-广州",
+        "degree": "研究生",
+        "schoolType": "综合大学",
+        "branch": "艺术史",
+        "region": "英国",
+        "admitted": "牛津大学",
+        "admittedEn": "University of Oxford",
+        "admittedCountry": "英国",
+        "admittedMajor": "MS History of Art and Visual Culture｜艺术史",
+        "otherAdmitted": [
+          "爱丁堡大学"
+        ],
+        "tags": [
+          "艺术史"
+        ],
+        "language": "雅思7.5",
+        "gpa": "GPA3.9",
+        "origin": "广州美术学院",
+        "hero": "assets/img/portfolio/艺术人文-艺术史-研究生-XXY-广州/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-艺术史-研究生-XXY-广州/1.png",
+          "assets/img/portfolio/艺术人文-艺术史-研究生-XXY-广州/2.png",
+          "assets/img/portfolio/艺术人文-艺术史-研究生-XXY-广州/3.png"
+        ],
+        "idCity": "广州",
+        "idInitials": "XXY"
+      },
+      {
+        "id": "艺术人文-纯艺-本科-LQX-广州",
+        "degree": "本科",
+        "schoolType": "综合大学",
+        "branch": "纯艺",
+        "region": "美国",
+        "admitted": "哥伦比亚大学",
+        "admittedEn": "Columbia University",
+        "admittedCountry": "美国",
+        "admittedMajor": "BA in Visual Arts｜视觉艺术",
+        "otherAdmitted": [],
+        "tags": [
+          "身份认同",
+          "女性意识",
+          "油画",
+          "综合材料",
+          "超现实叙事"
+        ],
+        "language": "托福110",
+        "gpa": "GPA4.0",
+        "origin": "广州碧桂园",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-本科-LQX-广州/首图.jpeg",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-本科-LQX-广州/1.jpeg",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LQX-广州/2.jpeg",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LQX-广州/3.jpeg"
+        ],
+        "idCity": "广州",
+        "idInitials": "LQX"
+      },
+      {
+        "id": "艺术人文-纯艺-本科-ZYX-北京CBD",
+        "degree": "本科",
+        "schoolType": "综合大学",
+        "branch": "纯艺",
+        "region": "美国",
+        "admitted": "布朗大学",
+        "admittedEn": "Brown University",
+        "admittedCountry": "美国",
+        "admittedMajor": "A.B. in Visual Art｜视觉艺术",
+        "otherAdmitted": [
+          "卡内基梅隆罗德岛设计学院"
+        ],
+        "tags": [
+          "华裔成长经验",
+          "双重文化记忆",
+          "心理创伤与自我疗愈",
+          "手绘与数字插画",
+          "身份认同"
+        ],
+        "language": "无",
+        "gpa": "GPA40/42",
+        "origin": "京德威国际学校",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-本科-ZYX-北京CBD/首图.jpeg",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYX-北京CBD/1.jpeg",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYX-北京CBD/2.jpeg",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYX-北京CBD/3.jpeg"
+        ],
+        "idCity": "北京CBD",
+        "idInitials": "ZYX"
+      },
+      {
+        "id": "艺术人文-纯艺-本科-LXY-成都",
+        "degree": "本科",
+        "schoolType": "综合大学",
+        "branch": "纯艺",
+        "region": "美国/英国",
+        "admitted": "卡内基梅隆大学",
+        "admittedEn": "Carnegie Mellon University",
+        "admittedCountry": "美国",
+        "admittedMajor": "BFA in Art｜艺术",
+        "otherAdmitted": [
+          "牛津大学卡内基梅隆纽约视觉艺术学院塔夫茨大学南加州大学"
+        ],
+        "tags": [
+          "代际关系",
+          "社会规训",
+          "装置艺术",
+          "综合材料",
+          "女性意识"
+        ],
+        "language": "托福113",
+        "gpa": "GPA45/45",
+        "origin": "成都市树德中学",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-本科-LXY-成都/首图.jpeg",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-本科-LXY-成都/1.jpeg",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LXY-成都/2.jpeg",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LXY-成都/3.jpeg"
+        ],
+        "idCity": "成都",
+        "idInitials": "LXY"
+      },
+      {
+        "id": "艺术人文-纯艺-本科-WRT-北京CBD",
+        "degree": "本科",
+        "schoolType": "综合大学",
+        "branch": "纯艺",
+        "region": "美国/英国",
+        "admitted": "康奈尔大学",
+        "admittedEn": "Cornell University",
+        "admittedCountry": "美国",
+        "admittedMajor": "BFA in Fine Arts｜纯艺术",
+        "otherAdmitted": [
+          "南加州大学",
+          "纽约大学",
+          "加州大学圣地亚哥分校",
+          "爱丁堡大学",
+          "北卡罗莱纳大学教堂山分校",
+          "帕森斯设计学院"
+        ],
+        "tags": [
+          "哲学思辨",
+          "音乐跨媒介转译",
+          "影像与空间装置",
+          "大型特定场域式装置"
+        ],
+        "language": "托福111",
+        "gpa": "GPA4.56",
+        "origin": "爱迪国际学校",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-本科-WRT-北京CBD/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-本科-WRT-北京CBD/1.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-WRT-北京CBD/2.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-WRT-北京CBD/3.png"
+        ],
+        "idCity": "北京CBD",
+        "idInitials": "WRT"
+      },
+      {
+        "id": "艺术人文-纯艺-本科-YRM-北京海淀",
+        "degree": "本科",
+        "schoolType": "综合大学",
+        "branch": "纯艺",
+        "region": "美国",
+        "admitted": "耶鲁大学",
+        "admittedEn": "Yale University",
+        "admittedCountry": "美国",
+        "admittedMajor": "Art + Biology｜艺术与生物学双专业",
+        "otherAdmitted": [
+          "牛津大学"
+        ],
+        "tags": [
+          "生物科技伦理",
+          "女性身体与生殖权",
+          "中国传统图像的当代转译"
+        ],
+        "language": "托福118",
+        "gpa": "GPAA+",
+        "origin": "人大附icc",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-本科-YRM-北京海淀/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-本科-YRM-北京海淀/1.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-YRM-北京海淀/2.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-YRM-北京海淀/3.png"
+        ],
+        "idCity": "北京海淀",
+        "idInitials": "YRM"
+      },
+      {
+        "id": "艺术人文-摄影-本科-FYY-北京CBD",
+        "degree": "本科",
+        "schoolType": "综合大学",
+        "branch": "摄影",
+        "region": "美国",
+        "admitted": "纽约大学",
+        "admittedEn": "New York University",
+        "admittedCountry": "美国",
+        "admittedMajor": "BFA in Photography and Imaging｜摄影与影像",
+        "otherAdmitted": [],
+        "tags": [
+          "人文摄影",
+          "纪实摄影",
+          "家庭档案",
+          "跨文化凝视"
+        ],
+        "language": "托福98",
+        "gpa": "GPA4.3",
+        "origin": "北大附中道尔顿",
+        "hero": "assets/img/portfolio/艺术人文-摄影-本科-FYY-北京CBD/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-摄影-本科-FYY-北京CBD/1.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYY-北京CBD/2.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYY-北京CBD/3.png"
+        ],
+        "idCity": "北京CBD",
+        "idInitials": "FYY"
+      },
+      {
+        "id": "艺术人文-纯艺-本科-HYH-北京CBD",
+        "degree": "本科",
+        "schoolType": "综合大学",
+        "branch": "纯艺",
+        "region": "美国/英国",
+        "admitted": "牛津大学",
+        "admittedEn": "University of Oxford",
+        "admittedCountry": "英国",
+        "admittedMajor": "BFA in Fine Art｜纯艺术",
+        "otherAdmitted": [
+          "伦敦大学金史密斯学院加州大学戴维斯分校爱丁堡大学"
+        ],
+        "tags": [
+          "代际关系",
+          "城市生态",
+          "家族记忆",
+          "行为"
+        ],
+        "language": "雅思7",
+        "gpa": "GPA90",
+        "origin": "新东方艺术高中",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-本科-HYH-北京CBD/首图.jpeg",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-本科-HYH-北京CBD/1.jpeg",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HYH-北京CBD/2.jpeg",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HYH-北京CBD/3.jpeg"
+        ],
+        "idCity": "北京CBD",
+        "idInitials": "HYH"
+      },
+      {
+        "id": "艺术人文-纯艺-本科-ZYL-北京海淀",
+        "degree": "本科",
+        "schoolType": "综合大学",
+        "branch": "纯艺",
+        "region": "美国/英国/加拿大/中国香港",
+        "admitted": "牛津大学",
+        "admittedEn": "University of Oxford",
+        "admittedCountry": "英国",
+        "admittedMajor": "BFA in Fine Art｜纯艺术",
+        "otherAdmitted": [
+          "香港大学爱丁堡大学多伦多大学纽约大学伦敦大学学院"
+        ],
+        "tags": [
+          "人类中心主义",
+          "生态艺术",
+          "声音艺术",
+          "互动装置",
+          "多媒体艺术"
+        ],
+        "language": "无",
+        "gpa": "GPA IB 38/45",
+        "origin": "瑞士CDL莱蒙国际学校(Collège du Léman)",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-本科-ZYL-北京海淀/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYL-北京海淀/1.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYL-北京海淀/2.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYL-北京海淀/3.png"
+        ],
+        "idCity": "北京海淀",
+        "idInitials": "ZYL"
+      },
+      {
+        "id": "艺术人文-纯艺-本科-GXQ-重庆",
+        "degree": "本科",
+        "schoolType": "综合大学",
+        "branch": "纯艺",
+        "region": "英国",
+        "admitted": "牛津大学",
+        "admittedEn": "University of Oxford",
+        "admittedCountry": "英国",
+        "admittedMajor": "BFA in Fine Art｜纯艺术",
+        "otherAdmitted": [
+          "伦敦大学学院中央圣马丁艺术学院伦敦大学金史密斯学院"
+        ],
+        "tags": [
+          "女性劳动",
+          "五行哲思",
+          "行为装置",
+          "仪式感",
+          "生死议题"
+        ],
+        "language": "雅思7.5",
+        "gpa": "GPA实考艺术A, 中文A*；预估数学A*， 进阶数学A",
+        "origin": "德普外国语学校",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-本科-GXQ-重庆/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-本科-GXQ-重庆/1.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-GXQ-重庆/2.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-GXQ-重庆/3.png"
+        ],
+        "idCity": "重庆",
+        "idInitials": "GXQ"
+      },
+      {
+        "id": "艺术人文-物理-本科-ZZL-北京海淀",
+        "degree": "本科",
+        "schoolType": "综合大学",
+        "branch": "插画",
+        "region": "美国",
+        "admitted": "威廉姆斯学院",
+        "admittedEn": "Williams College",
+        "admittedCountry": "美国",
+        "admittedMajor": "Physics｜物理学",
+        "otherAdmitted": [],
+        "tags": [
+          "量子物理叙事",
+          "插画",
+          "文学插画",
+          "艺术与科学"
+        ],
+        "language": "托福116",
+        "gpa": "GPA IB预估 42",
+        "origin": "鼎石",
+        "hero": "assets/img/portfolio/艺术人文-物理-本科-ZZL-北京海淀/首图.jpeg",
+        "works": [
+          "assets/img/portfolio/艺术人文-物理-本科-ZZL-北京海淀/1.jpeg",
+          "assets/img/portfolio/艺术人文-物理-本科-ZZL-北京海淀/2.jpeg",
+          "assets/img/portfolio/艺术人文-物理-本科-ZZL-北京海淀/3.jpeg"
+        ],
+        "idCity": "北京海淀",
+        "idInitials": "ZZL"
+      },
+      {
+        "id": "艺术人文-纯艺-本科-PXX-上海徐汇",
+        "degree": "本科",
+        "schoolType": "文理学院",
+        "branch": "纯艺",
+        "region": "美国",
+        "admitted": "韦尔斯利学院",
+        "admittedEn": "Wellesley College",
+        "admittedCountry": "美国",
+        "admittedMajor": "Studio Art｜工作室艺术",
+        "otherAdmitted": [
+          "布朗大学罗德岛设计学院康奈尔大学加州大学伯克利分校南加州大学纽约大学帕森斯设计学院"
+        ],
+        "tags": [
+          "综合材料",
+          "家庭联结",
+          "装置艺术",
+          "纸艺创作"
+        ],
+        "language": "无",
+        "gpa": "GPA4.69",
+        "origin": "Crean Lutheran High School",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-本科-PXX-上海徐汇/首图.jpeg",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-本科-PXX-上海徐汇/1.jpeg",
+          "assets/img/portfolio/艺术人文-纯艺-本科-PXX-上海徐汇/2.jpeg",
+          "assets/img/portfolio/艺术人文-纯艺-本科-PXX-上海徐汇/3.jpeg"
+        ],
+        "idCity": "上海徐汇",
+        "idInitials": "PXX"
+      },
+      {
+        "id": "艺术人文-纯艺-本科-OY-北京CBD",
+        "degree": "本科",
+        "schoolType": "文理学院",
+        "branch": "纯艺",
+        "region": "美国/英国/加拿大",
+        "admitted": "格林内尔学院",
+        "admittedEn": "Grinnell College",
+        "admittedCountry": "美国",
+        "admittedMajor": "BA in Studio Art｜工作室艺术",
+        "otherAdmitted": [
+          "不列颠哥伦比亚大学罗德岛设计学院加州大学戴维斯分校加州大学圣地亚哥分校"
+        ],
+        "tags": [
+          "生态材料",
+          "参与式行为",
+          "身份解构",
+          "公共议题"
+        ],
+        "language": "雅思7.5",
+        "gpa": "BTEC L3 D*D*D",
+        "origin": "广州斐特思",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-本科-OY-北京CBD/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-本科-OY-北京CBD/1.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-OY-北京CBD/2.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-OY-北京CBD/3.png"
+        ],
+        "idCity": "北京CBD",
+        "idInitials": "OY"
+      },
+      {
+        "id": "艺术人文-纯艺-本科-CXW-广州",
+        "degree": "本科",
+        "schoolType": "艺术院校",
+        "branch": "纯艺",
+        "region": "新加坡",
+        "admitted": "新加坡拉萨尔艺术学院",
+        "admittedEn": "LASALLE College of the Arts",
+        "admittedCountry": "新加坡",
+        "admittedMajor": "BA (Hons) Fine Arts｜纯艺术",
+        "otherAdmitted": [
+          "新加坡南洋艺术学院"
+        ],
+        "tags": [
+          "心理健康",
+          "可穿戴艺术",
+          "身份认同",
+          "综合材料",
+          "装置艺术"
+        ],
+        "language": "雅思6.5",
+        "gpa": "GPA79.6",
+        "origin": "NOIC Academy&Unionville High School",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-本科-CXW-广州/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-本科-CXW-广州/1.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-CXW-广州/2.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-CXW-广州/3.png"
+        ],
+        "idCity": "广州",
+        "idInitials": "CXW"
+      },
+      {
+        "id": "艺术人文-纯艺-本科-ZST-北京CBD",
+        "degree": "本科",
+        "schoolType": "综合大学",
+        "branch": "纯艺",
+        "region": "英国/中国香港",
+        "admitted": "香港大学",
+        "admittedEn": "The University of Hong Kong",
+        "admittedCountry": "中国香港",
+        "admittedMajor": "Bachelor of Arts (BA)｜文学学士",
+        "otherAdmitted": [
+          "伦敦大学学院"
+        ],
+        "tags": [
+          "动物伦理",
+          "时空折叠",
+          "生态危机",
+          "材料实验"
+        ],
+        "language": "无",
+        "gpa": "GPA IB预估40",
+        "origin": "香港耀中国际学校",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-本科-ZST-北京CBD/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZST-北京CBD/1.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZST-北京CBD/2.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZST-北京CBD/3.png"
+        ],
+        "idCity": "北京CBD",
+        "idInitials": "ZST"
+      },
+      {
+        "id": "艺术人文-纯艺-本科-XY-北京CBD",
+        "degree": "本科",
+        "schoolType": "综合大学",
+        "branch": "纯艺",
+        "region": "美国/英国/中国香港",
+        "admitted": "香港大学",
+        "admittedEn": "The University of Hong Kong",
+        "admittedCountry": "中国香港",
+        "admittedMajor": "Bachelor of Arts in Global Creative Industries [BA(GCIN)]｜全球创意产业文学学士",
+        "otherAdmitted": [
+          "伦敦大学学院罗德岛设计学院北卡罗莱纳大学教堂山分校卫斯理大学"
+        ],
+        "tags": [
+          "代际关系",
+          "社会规训",
+          "身体痕迹",
+          "认知偏见",
+          "女性意识"
+        ],
+        "language": "托福10",
+        "gpa": "GPA AP5门5",
+        "origin": "北京101",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-本科-XY-北京CBD/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-本科-XY-北京CBD/1.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-XY-北京CBD/2.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-XY-北京CBD/3.png"
+        ],
+        "idCity": "北京CBD",
+        "idInitials": "XY"
+      },
+      {
+        "id": "艺术人文-插画-本科-XSX-上海",
+        "degree": "本科",
+        "schoolType": "艺术院校",
+        "branch": "插画",
+        "region": "美国/英国",
+        "admitted": "罗德岛艺术设计学院",
+        "admittedEn": "Rhode Island School of Design",
+        "admittedCountry": "美国",
+        "admittedMajor": "BA Painting·绘画",
+        "otherAdmitted": [
+          "伦敦大学学院爱丁堡大学"
+        ],
+        "tags": [
+          "身体痕迹",
+          "公共议题",
+          "身份解构",
+          "绘画",
+          "身份认同"
+        ],
+        "language": "雅思7.5",
+        "gpa": "GPA IB37/42",
+        "origin": "德闳国际学校",
+        "hero": "assets/img/portfolio/艺术人文-插画-本科-XSX-上海/首图.jpg",
+        "works": [
+          "assets/img/portfolio/艺术人文-插画-本科-XSX-上海/小徐risd-02.mov",
+          "assets/img/portfolio/艺术人文-插画-本科-XSX-上海/1.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XSX-上海/2.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XSX-上海/3.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XSX-上海/4.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XSX-上海/5.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XSX-上海/6.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XSX-上海/7.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XSX-上海/8.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XSX-上海/9.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XSX-上海/10.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XSX-上海/11.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XSX-上海/12.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XSX-上海/13.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XSX-上海/14.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XSX-上海/15.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XSX-上海/16.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XSX-上海/17.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XSX-上海/18.png"
+        ],
+        "idCity": "上海",
+        "idInitials": "XSX"
+      },
+      {
+        "id": "艺术人文-插画-本科-XZX-上海",
+        "degree": "本科",
+        "schoolType": "综合大学",
+        "branch": "插画",
+        "region": "美国",
+        "admitted": "纽约大学",
+        "admittedEn": "New York University",
+        "admittedCountry": "美国",
+        "admittedMajor": "BA Art Studio·艺术工作室",
+        "otherAdmitted": [
+          "罗德岛设计学院"
+        ],
+        "tags": [
+          "虚拟身份",
+          "材料实验",
+          "时空折叠",
+          "身份解构",
+          "行为装置",
+          "公共议题"
+        ],
+        "language": "无",
+        "gpa": "GPA3.3/4.0",
+        "origin": "Pymble Ladies' College",
+        "hero": "assets/img/portfolio/艺术人文-插画-本科-XZX-上海/首图.jpg",
+        "works": [
+          "assets/img/portfolio/艺术人文-插画-本科-XZX-上海/1.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XZX-上海/2.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XZX-上海/3.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XZX-上海/4.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XZX-上海/5.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XZX-上海/6.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XZX-上海/7.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XZX-上海/8.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XZX-上海/9.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XZX-上海/10.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XZX-上海/11.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XZX-上海/12.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XZX-上海/13.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XZX-上海/14.png",
+          "assets/img/portfolio/艺术人文-插画-本科-XZX-上海/15.png"
+        ],
+        "idCity": "上海",
+        "idInitials": "XZX"
+      },
+      {
+        "id": "艺术人文-插画-本科-TYT-上海",
+        "degree": "本科",
+        "schoolType": "综合大学",
+        "branch": "插画",
+        "region": "英国",
+        "admitted": "伦敦大学学院",
+        "admittedEn": "University College London",
+        "admittedCountry": "英国",
+        "admittedMajor": "BA Media·媒体艺术",
+        "otherAdmitted": [
+          "伦敦艺术大学KCL"
+        ],
+        "tags": [
+          "虚拟身份",
+          "亲密关系",
+          "认知偏见",
+          "公共议题",
+          "身份解构"
+        ],
+        "language": "雅思6.5",
+        "gpa": "AlevelAA",
+        "origin": "光华剑桥",
+        "hero": "assets/img/portfolio/艺术人文-插画-本科-TYT-上海/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-插画-本科-TYT-上海/视频.MOV",
+          "assets/img/portfolio/艺术人文-插画-本科-TYT-上海/1.png",
+          "assets/img/portfolio/艺术人文-插画-本科-TYT-上海/2.png",
+          "assets/img/portfolio/艺术人文-插画-本科-TYT-上海/3.png",
+          "assets/img/portfolio/艺术人文-插画-本科-TYT-上海/4.png",
+          "assets/img/portfolio/艺术人文-插画-本科-TYT-上海/5.png",
+          "assets/img/portfolio/艺术人文-插画-本科-TYT-上海/6.png",
+          "assets/img/portfolio/艺术人文-插画-本科-TYT-上海/7.png",
+          "assets/img/portfolio/艺术人文-插画-本科-TYT-上海/8.png",
+          "assets/img/portfolio/艺术人文-插画-本科-TYT-上海/9.png",
+          "assets/img/portfolio/艺术人文-插画-本科-TYT-上海/10.png",
+          "assets/img/portfolio/艺术人文-插画-本科-TYT-上海/11.png",
+          "assets/img/portfolio/艺术人文-插画-本科-TYT-上海/12.png"
+        ],
+        "idCity": "上海",
+        "idInitials": "TYT"
+      },
+      {
+        "id": "艺术人文-插画-本科-SYT-西安",
+        "degree": "本科",
+        "schoolType": "艺术院校",
+        "branch": "插画",
+        "region": "英国/新加坡/澳洲",
+        "admitted": "南洋艺术学院",
+        "admittedEn": "Nanyang Academy of Fine Arts",
+        "admittedCountry": "新加坡",
+        "admittedMajor": "BA Design Practice·设计实践",
+        "otherAdmitted": [
+          "伦敦艺术大学莱福士设计学院皇家墨尔本理工悉尼科技大学"
+        ],
+        "tags": [
+          "身体痕迹",
+          "交互设计",
+          "互动媒体",
+          "叙事插画",
+          "身份解构",
+          "公共议题"
+        ],
+        "language": "无",
+        "gpa": "BTEC L4 D",
+        "origin": "兰州碧桂园国际学校",
+        "hero": "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/1.png",
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/2.png",
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/3.png",
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/4.png",
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/5.png",
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/6.png",
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/7.png",
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/8.png",
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/9.png",
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/10.png",
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/11.png",
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/12.png",
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/13.png",
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/14.png",
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/15.png",
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/16.png",
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/17.png",
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/18.png",
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/19.png",
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/20.png",
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/21.png",
+          "assets/img/portfolio/艺术人文-插画-本科-SYT-西安/22.png"
+        ],
+        "idCity": "西安",
+        "idInitials": "SYT"
+      },
+      {
+        "id": "艺术人文-插画-本科-CJY-苏州",
+        "degree": "本科",
+        "schoolType": "艺术院校",
+        "branch": "插画",
+        "region": "美国",
+        "admitted": "罗德岛艺术设计学院",
+        "admittedEn": "Rhode Island School of Design",
+        "admittedCountry": "美国",
+        "admittedMajor": "BA Illustration·插画",
+        "otherAdmitted": [],
+        "tags": [
+          "身份解构",
+          "文学插画",
+          "绘画",
+          "叙事插画"
+        ],
+        "language": "托福103",
+        "gpa": "Ib32",
+        "origin": "常熟UWC",
+        "hero": "assets/img/portfolio/艺术人文-插画-本科-CJY-苏州/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-插画-本科-CJY-苏州/视频.MOV",
+          "assets/img/portfolio/艺术人文-插画-本科-CJY-苏州/1.png",
+          "assets/img/portfolio/艺术人文-插画-本科-CJY-苏州/2.png",
+          "assets/img/portfolio/艺术人文-插画-本科-CJY-苏州/3.png",
+          "assets/img/portfolio/艺术人文-插画-本科-CJY-苏州/4.png",
+          "assets/img/portfolio/艺术人文-插画-本科-CJY-苏州/5.png",
+          "assets/img/portfolio/艺术人文-插画-本科-CJY-苏州/6.png",
+          "assets/img/portfolio/艺术人文-插画-本科-CJY-苏州/7.png",
+          "assets/img/portfolio/艺术人文-插画-本科-CJY-苏州/8.png",
+          "assets/img/portfolio/艺术人文-插画-本科-CJY-苏州/9.png",
+          "assets/img/portfolio/艺术人文-插画-本科-CJY-苏州/10.png",
+          "assets/img/portfolio/艺术人文-插画-本科-CJY-苏州/11.png",
+          "assets/img/portfolio/艺术人文-插画-本科-CJY-苏州/12.png",
+          "assets/img/portfolio/艺术人文-插画-本科-CJY-苏州/13.png",
+          "assets/img/portfolio/艺术人文-插画-本科-CJY-苏州/14.png",
+          "assets/img/portfolio/艺术人文-插画-本科-CJY-苏州/15.png"
+        ],
+        "idCity": "苏州",
+        "idInitials": "CJY"
+      },
+      {
+        "id": "艺术人文-纯艺-本科-ZYW-上海",
+        "degree": "本科",
+        "schoolType": "艺术院校",
+        "branch": "纯艺",
+        "region": "英国/澳洲",
+        "admitted": "伦敦艺术大学",
+        "admittedEn": "University of the Arts London",
+        "admittedCountry": "英国",
+        "admittedMajor": "BA Painting·绘画",
+        "otherAdmitted": [
+          "爱丁堡大学悉尼大学"
+        ],
+        "tags": [
+          "空间与情绪",
+          "认知偏见",
+          "材料实验",
+          "公共议题",
+          "身份解构",
+          "行为装置"
+        ],
+        "language": "雅思6.5",
+        "gpa": "Alevel A*AB BTEC L4 D",
+        "origin": "德英乐国际高中",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/1.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/2.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/3.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/4.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/5.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/6.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/7.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/8.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/9.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/10.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/11.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/12.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/13.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/14.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/15.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/16.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/17.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/18.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/19.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/20.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/21.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/22.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/23.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/24.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZYW-上海/25.png"
+        ],
+        "idCity": "上海",
+        "idInitials": "ZYW"
+      },
+      {
+        "id": "艺术人文-纯艺-本科-LLD-北京CBD",
+        "degree": "本科",
+        "schoolType": "综合大学",
+        "branch": "纯艺",
+        "region": "英国/美国",
+        "admitted": "伦敦大学学院",
+        "admittedEn": "University College London",
+        "admittedCountry": "英国",
+        "admittedMajor": "BFA Fine Art·纯艺",
+        "otherAdmitted": [
+          "伦敦艺术大学伦敦大学金史密斯学院帕森斯设计学院"
+        ],
+        "tags": [
+          "身份解构",
+          "家庭联结",
+          "行为装置",
+          "油画",
+          "哲学思辨"
+        ],
+        "language": "无",
+        "gpa": "GPA3.87/4",
+        "origin": "君诚国际",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-本科-LLD-北京CBD/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-本科-LLD-北京CBD/1.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LLD-北京CBD/2.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LLD-北京CBD/3.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LLD-北京CBD/4.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LLD-北京CBD/5.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LLD-北京CBD/6.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LLD-北京CBD/7.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LLD-北京CBD/8.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LLD-北京CBD/9.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LLD-北京CBD/10.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LLD-北京CBD/11.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LLD-北京CBD/12.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LLD-北京CBD/13.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LLD-北京CBD/14.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LLD-北京CBD/15.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LLD-北京CBD/16.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LLD-北京CBD/17.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LLD-北京CBD/18.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LLD-北京CBD/19.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LLD-北京CBD/20.png"
+        ],
+        "idCity": "北京CBD",
+        "idInitials": "LLD"
+      },
+      {
+        "id": "艺术人文-纯艺-本科-ZRC-南京",
+        "degree": "本科",
+        "schoolType": "综合大学",
+        "branch": "纯艺",
+        "region": "英国",
+        "admitted": "伦敦大学学院",
+        "admittedEn": "University College London",
+        "admittedCountry": "英国",
+        "admittedMajor": "BFA Fine Art·纯艺",
+        "otherAdmitted": [
+          "伦敦艺术大学爱丁堡大学"
+        ],
+        "tags": [
+          "人类中心主义",
+          "自然反思",
+          "公共议题",
+          "行为装置"
+        ],
+        "language": "无",
+        "gpa": "Alevel ABB",
+        "origin": "金地未来",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/1.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/2.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/3.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/4.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/5.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/6.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/7.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/8.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/9.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/10.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/11.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/12.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/13.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/14.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/15.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/16.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/17.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/18.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/19.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/20.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/21.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/22.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZRC-南京/23.png"
+        ],
+        "idCity": "南京",
+        "idInitials": "ZRC"
+      },
+      {
+        "id": "艺术人文-摄影-本科-FYW-上海",
+        "degree": "本科",
+        "schoolType": "艺术院校",
+        "branch": "摄影",
+        "region": "意大利",
+        "admitted": "欧洲设计学院（IED）",
+        "admittedEn": "Istituto Europeo di Design (IED)",
+        "admittedCountry": "意大利",
+        "admittedMajor": "BA Photography·摄影",
+        "otherAdmitted": [],
+        "tags": [
+          "成长路径",
+          "公共议题",
+          "心理健康",
+          "身份解构"
+        ],
+        "language": "雅思5.5",
+        "gpa": "无",
+        "origin": "普高",
+        "hero": "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/1.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/2.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/3.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/4.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/5.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/6.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/7.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/8.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/9.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/10.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/11.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/12.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/13.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/14.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/15.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/16.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/17.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/18.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/19.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/20.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/21.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/22.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/23.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/24.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/25.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/26.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/27.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/28.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/29.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/30.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/31.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/32.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/33.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/34.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/35.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/36.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/37.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/38.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/39.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/40.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/41.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/42.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/43.png"
+        ],
+        "idCity": "上海",
+        "idInitials": "FYW"
+      },
+      {
+        "id": "艺术人文-摄影-本科-LSW-广州",
+        "degree": "本科",
+        "schoolType": "艺术院校",
+        "branch": "摄影",
+        "region": "英国",
+        "admitted": "伦敦艺术大学",
+        "admittedEn": "University of the Arts London",
+        "admittedCountry": "英国",
+        "admittedMajor": "BA Photography·摄影",
+        "otherAdmitted": [],
+        "tags": [
+          "身份解构",
+          "纪实摄影"
+        ],
+        "language": "无",
+        "gpa": "无",
+        "origin": "辰美艺术学校",
+        "hero": "assets/img/portfolio/艺术人文-摄影-本科-LSW-广州/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-摄影-本科-LSW-广州/1.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-LSW-广州/2.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-LSW-广州/3.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-LSW-广州/4.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-LSW-广州/5.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-LSW-广州/6.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-LSW-广州/7.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-LSW-广州/8.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-LSW-广州/9.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-LSW-广州/10.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-LSW-广州/11.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-LSW-广州/12.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-LSW-广州/13.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-LSW-广州/14.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-LSW-广州/15.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-LSW-广州/16.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-LSW-广州/17.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-LSW-广州/18.png",
+          "assets/img/portfolio/艺术人文-摄影-本科-LSW-广州/19.png"
+        ],
+        "idCity": "广州",
+        "idInitials": "LSW"
+      },
+      {
+        "id": "艺术人文-插画-本科-HZM-广州",
+        "degree": "本科",
+        "schoolType": "艺术院校",
+        "branch": "插画",
+        "region": "英国",
+        "admitted": "伦敦艺术大学",
+        "admittedEn": "University of the Arts London",
+        "admittedCountry": "英国",
+        "admittedMajor": "BA Graphic Communication Design·平面",
+        "otherAdmitted": [],
+        "tags": [
+          "自然反思",
+          "认知偏见",
+          "互动装置",
+          "超现实叙事"
+        ],
+        "language": "无",
+        "gpa": "BTEC L4 D",
+        "origin": "全日制",
+        "hero": "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/1.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/2.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/3.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/4.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/5.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/6.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/7.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/8.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/9.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/10.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/11.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/12.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/13.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/14.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/15.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/16.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/17.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/18.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/19.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/20.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/21.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/22.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/23.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/24.png",
+          "assets/img/portfolio/艺术人文-插画-本科-HZM-广州/25.png"
+        ],
+        "idCity": "广州",
+        "idInitials": "HZM"
+      },
+      {
+        "id": "艺术人文-插画-本科-DYX-深圳",
+        "degree": "本科",
+        "schoolType": "艺术院校",
+        "branch": "插画",
+        "region": "英国",
+        "admitted": "伦敦艺术大学",
+        "admittedEn": "University of the Arts London",
+        "admittedCountry": "英国",
+        "admittedMajor": "BA Fashion Imaging and Illustration·时尚插画",
+        "otherAdmitted": [
+          "爱丁堡大学"
+        ],
+        "tags": [
+          "公共议题",
+          "身份解构",
+          "综合材料",
+          "叙事插画"
+        ],
+        "language": "无",
+        "gpa": "BTEC L4 D",
+        "origin": "全日制",
+        "hero": "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/1.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/2.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/3.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/4.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/5.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/6.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/7.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/8.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/9.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/10.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/11.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/12.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/13.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/14.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/15.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/16.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/17.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/18.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/19.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/20.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/21.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/22.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/23.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/24.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/25.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/26.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/27.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/28.png",
+          "assets/img/portfolio/艺术人文-插画-本科-DYX-深圳/29.png"
+        ],
+        "idCity": "深圳",
+        "idInitials": "DYX"
+      },
+      {
+        "id": "艺术人文-纯艺-本科-ZZN-北京CBD",
+        "degree": "本科",
+        "schoolType": "综合大学",
+        "branch": "纯艺",
+        "region": "英国",
+        "admitted": "伦敦大学学院",
+        "admittedEn": "University College London",
+        "admittedCountry": "英国",
+        "admittedMajor": "BFA Fine Art·纯艺",
+        "otherAdmitted": [
+          "伦敦艺术大学"
+        ],
+        "tags": [
+          "亲密关系",
+          "成长路径",
+          "装置艺术",
+          "空间设计",
+          "可穿戴艺术"
+        ],
+        "language": "无",
+        "gpa": "Alevel AAB BTEC L4 D",
+        "origin": "全日制",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/1.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/2.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/3.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/4.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/5.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/6.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/7.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/8.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/9.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/10.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/11.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/12.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/13.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/14.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/15.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/16.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/17.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/18.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/19.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/20.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/21.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/22.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/23.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/24.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/25.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/26.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-ZZN-北京CBD/27.png"
+        ],
+        "idCity": "北京CBD",
+        "idInitials": "ZZN"
+      },
+      {
+        "id": "艺术人文-纯艺-本科-HJY-北京CBD",
+        "degree": "本科",
+        "schoolType": "艺术院校",
+        "branch": "纯艺",
+        "region": "英国",
+        "admitted": "伦敦大学学院",
+        "admittedEn": "University College London",
+        "admittedCountry": "英国",
+        "admittedMajor": "BA Creative Arts and Humanities·创意艺术与人文科学",
+        "otherAdmitted": [
+          "伦敦艺术大学爱丁堡大学"
+        ],
+        "tags": [
+          "家庭联结",
+          "行为装置",
+          "成长路径",
+          "声音艺术"
+        ],
+        "language": "无",
+        "gpa": "Aleve A*AA，BTEC L4 D",
+        "origin": "全日制",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/首图.png",
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/1.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/2.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/3.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/4.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/5.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/6.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/7.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/8.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/9.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/10.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/11.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/12.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/13.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/14.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/15.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/16.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/17.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/18.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/19.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/20.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/21.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/22.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/23.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/24.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/25.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/26.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/27.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-HJY-北京CBD/28.png"
+        ],
+        "idCity": "北京CBD",
+        "idInitials": "HJY"
+      },
+      {
+        "id": "艺术人文-纯艺-本科-LJN-北京CBD",
+        "degree": "本科",
+        "schoolType": "艺术院校",
+        "branch": "纯艺",
+        "region": "英国",
+        "admitted": "伦敦大学学院",
+        "admittedEn": "University College London",
+        "admittedCountry": "英国",
+        "admittedMajor": "BFA Fine Art·纯艺",
+        "otherAdmitted": [
+          "伦敦艺术大学帕森斯设计学院芝加哥艺术学院"
+        ],
+        "tags": [
+          "跨学科研究",
+          "自然反思",
+          "心理创伤与自我疗愈"
+        ],
+        "language": "无",
+        "gpa": "Alevel AAA，BTEC L4 D",
+        "origin": "全日制",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-本科-LJN-北京CBD/首图.jpg",
         "works": [],
-        "career": null
+        "idCity": "北京CBD",
+        "idInitials": "LJN"
       },
       {
-        "student": "Guan.",
-        "studentZh": "管同学",
-        "school": "爱丁堡大学",
-        "schoolEn": "The University of Edinburgh",
-        "college": "",
-        "country": "英国",
+        "id": "艺术人文-插画-研究生-LYC-成都",
+        "degree": "研究生",
+        "schoolType": "艺术院校",
+        "branch": "插画",
         "region": "英国",
-        "major": "illustration",
-        "program": "BA Illustration（大二直录）",
-        "programCn": "插画",
-        "offerType": "大二直录",
-        "background": "普高脱产 · SFK 全日制",
-        "academic": [
-          "GPA 3.6/4"
-        ],
-        "language": "—",
+        "admitted": "爱丁堡大学",
+        "admittedEn": "The University of Edinburgh",
+        "admittedCountry": "英国",
+        "admittedMajor": "MA Illustration· 插画",
+        "otherAdmitted": [],
         "tags": [
-          "非国际背景",
-          "想去综校",
-          "两年规划"
+          "自然疗愈",
+          "心理健康",
+          "公共教育"
         ],
-        "persona": "学术背景：非国际背景、普高（★★）；时间跨度：两年，时间宽裕（★★★★★）；目标院校：综合大学，家长期待高（★★★★★）；专业能力：中上，需要针对性指导（★★★）。",
-        "creation": [],
-        "offers": [
-          {
-            "school": "爱丁堡大学",
-            "schoolEn": "The University of Edinburgh",
-            "program": "BA Illustration（大二直录）"
-          }
-        ],
+        "language": "无",
+        "gpa": "GPA3.95/5",
+        "origin": "四川美术学院",
+        "hero": "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/首图.jpg",
         "works": [],
-        "career": null
+        "idCity": "成都",
+        "idInitials": "LYC"
       },
       {
-        "student": "Teng.",
-        "studentZh": "藤同学",
-        "school": "伦敦大学学院 UCL",
-        "schoolEn": "University College London",
-        "college": "",
-        "country": "英国",
+        "id": "艺术人文-插画-研究生-ZYX-武汉",
+        "degree": "研究生",
+        "schoolType": "艺术院校",
+        "branch": "插画",
         "region": "英国",
-        "major": "illustration",
-        "program": "BA Creative Arts and Humanities",
-        "programCn": "创意艺术与人文科学",
-        "offerType": "本科",
-        "background": "光华剑桥 · 国际高中",
-        "academic": [
-          "A-Level 中文 A",
-          "A-Level 数学 A",
-          "A-Level 艺术预估 A",
-          "A-Level 经济预估 A*",
-          "BTEC Distinction"
+        "admitted": "伦敦艺术大学",
+        "admittedEn": "University of the Arts London",
+        "admittedCountry": "英国",
+        "admittedMajor": "MA Illustration· 插画",
+        "otherAdmitted": [
+          "格拉斯哥大学"
         ],
-        "language": "雅思 6.5",
         "tags": [
-          "全链路版本",
-          "A-Level + BTEC"
+          "亲密关系",
+          "心理健康",
+          "虚拟身份",
+          "认知偏见",
+          "公共议题",
+          "视觉艺术"
         ],
-        "persona": "",
-        "creation": [
-          "学生作品探讨了：1. 成长中的亲密到冲突；2. 个体独立性与情感共生性。",
-          "学生作品探讨了：1. 当代艺术技法与艺术疗愈的实践途径；2. 从焦虑到自我重建的内心旅程。"
-        ],
-        "offers": [
-          {
-            "school": "UCL",
-            "schoolEn": "University College London",
-            "program": "BA Creative Arts and Humanities"
-          }
-        ],
-        "works": [
-          "assets/img/cases/teng-ucl-02.jpg",
-          "assets/img/cases/teng-ucl-03.jpg",
-          "assets/img/cases/teng-ucl-04.png",
-          "assets/img/cases/teng-ucl-05.png"
-        ],
-        "career": null
+        "language": "无",
+        "gpa": "GPA84.46",
+        "origin": "中国美术学院",
+        "hero": "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/首图.jpg",
+        "works": [],
+        "idCity": "武汉",
+        "idInitials": "ZYX"
       },
       {
-        "student": "Liu.",
-        "studentZh": "刘同学",
-        "school": "伦敦大学学院 UCL",
-        "schoolEn": "University College London",
-        "college": "",
-        "country": "英国",
+        "id": "艺术人文-插画-研究生-CXY-上海",
+        "degree": "研究生",
+        "schoolType": "综合大学",
+        "branch": "插画",
         "region": "英国",
-        "major": "illustration",
-        "program": "BA Media",
-        "programCn": "媒体",
-        "offerType": "本科",
-        "background": "青岛中学国际部 · 普高国际部",
-        "academic": [
-          "A-Level 艺术 A",
-          "GPA 4.2/4.3",
-          "BTEC Distinction"
+        "admitted": "皇家艺术学院",
+        "admittedEn": "Royal College of Art",
+        "admittedCountry": "英国",
+        "admittedMajor": "MA Print· 版画",
+        "otherAdmitted": [
+          "伦敦艺术大学格拉斯哥大学安格利亚鲁斯金"
         ],
-        "language": "雅思 7.0",
         "tags": [
-          "公益与社会责任",
-          "领导力",
-          "跨专业"
+          "成长路径",
+          "战争记忆",
+          "空间与情绪",
+          "场所依恋"
         ],
-        "persona": "活动经历：11 年级国际少美联赛、日本国际儿童漫画樱花奖；儿童福利院关爱活动与校园二手义卖策划；CTB 比赛团队领导人、校报采写部主编、校内艺术社团策展人。",
-        "creation": [
-          "学生作品通过插画和视觉手册，为残疾儿童发声，呼吁社会的关注。",
-          "学生将旅居中对归属感的缺失与追寻，通过艺术创作转化为对人与环境关系的视觉思考。"
-        ],
-        "offers": [
-          {
-            "school": "UCL",
-            "schoolEn": "University College London",
-            "program": "BA Media"
-          }
-        ],
-        "works": [
-          "assets/img/cases/liu-ucl-02.jpg",
-          "assets/img/cases/liu-ucl-03.jpg",
-          "assets/img/cases/liu-ucl-04.png",
-          "assets/img/cases/liu-ucl-05.png"
-        ],
-        "career": null
+        "language": "无",
+        "gpa": "无",
+        "origin": "安格利亚鲁斯金",
+        "hero": "assets/img/portfolio/艺术人文-插画-研究生-CXY-上海/首图.jpg",
+        "works": [],
+        "idCity": "上海",
+        "idInitials": "CXY"
       },
       {
-        "student": "Wang.",
-        "studentZh": "王同学",
-        "school": "伦敦艺术大学 UAL",
-        "schoolEn": "University of the Arts London",
-        "college": "Camberwell College of Arts",
-        "country": "英国",
-        "region": "英国",
-        "major": "illustration",
-        "program": "BA Illustration",
-        "programCn": "插画",
-        "offerType": "本科",
-        "background": "牛津公学 · 国际高中",
-        "academic": [
-          "A-Level 艺术 AA",
-          "BTEC Distinction"
+        "id": "艺术人文-插画-研究生-YJ-重庆",
+        "degree": "研究生",
+        "schoolType": "综合大学",
+        "branch": "插画",
+        "region": "美国",
+        "admitted": "罗德岛艺术设计学院",
+        "admittedEn": "Rhode Island School of Design",
+        "admittedCountry": "美国",
+        "admittedMajor": "MFA Illustration· 插画",
+        "otherAdmitted": [
+          "纽约视觉艺术学院"
         ],
-        "language": "—",
         "tags": [
-          "A-Level + BTEC",
-          "UAL 夏校"
+          "公共议题",
+          "叙事插画",
+          "视觉艺术",
+          "认知偏见"
         ],
-        "persona": "",
-        "creation": [
-          "通过三维插画将童年时对夜晚的恐惧记忆转化为成年后的怀旧与超现实诠释。",
-          "《微小世界改变者》：一本用天真解释日常现象的童年手绘故事集。"
-        ],
-        "offers": [
-          {
-            "school": "UAL-Camberwell",
-            "schoolEn": "Camberwell College of Arts, UAL",
-            "program": "BA Illustration"
-          }
-        ],
-        "works": [
-          "assets/img/cases/wang-ual-02.jpg",
-          "assets/img/cases/wang-ual-03.png",
-          "assets/img/cases/wang-ual-04.png",
-          "assets/img/cases/wang-ual-05.png",
-          "assets/img/cases/wang-ual-06.png",
-          "assets/img/cases/wang-ual-07.jpg"
-        ],
-        "career": null
+        "language": "多邻国130",
+        "gpa": "GPA3.83",
+        "origin": "悉尼大学",
+        "hero": "assets/img/portfolio/艺术人文-插画-研究生-YJ-重庆/首图.jpg",
+        "works": [],
+        "idCity": "重庆",
+        "idInitials": "YJ"
       },
       {
-        "student": "Huang.",
-        "studentZh": "黄同学",
-        "school": "伦敦艺术大学 UAL",
-        "schoolEn": "University of the Arts London",
-        "college": "Camberwell College of Arts",
-        "country": "英国",
+        "id": "艺术人文-插画-研究生-YTY-上海",
+        "degree": "研究生",
+        "schoolType": "综合大学",
+        "branch": "插画",
         "region": "英国",
-        "major": "illustration",
-        "program": "BA Illustration",
-        "programCn": "插画",
-        "offerType": "本科",
-        "background": "SFK 全日制",
-        "academic": [
-          "A-Level 艺术 A*A",
-          "BTEC Distinction"
+        "admitted": "皇家艺术学院",
+        "admittedEn": "Royal College of Art",
+        "admittedCountry": "英国",
+        "admittedMajor": "MA Visual Communication· 视觉传达（插画）",
+        "otherAdmitted": [
+          "伦敦艺术大学格拉斯哥大学安格利亚鲁斯金"
         ],
-        "language": "—",
         "tags": [
-          "全日制",
-          "A-Level 冬校冲刺"
+          "身体痕迹",
+          "过度包装反思消费",
+          "公共议题"
         ],
-        "persona": "",
-        "creation": [
-          "创作源于昆虫的生命周期，它以一种非线性叙事的日历形式，映射人类对死亡的深思。",
-          "一款以家中「隐藏访客」为灵感的桌游，玩家可扮演它们探索人类生活。"
-        ],
-        "offers": [
-          {
-            "school": "UAL-Camberwell",
-            "schoolEn": "Camberwell College of Arts, UAL",
-            "program": "BA Illustration"
-          }
-        ],
-        "works": [
-          "assets/img/cases/huang-ual-02.jpg",
-          "assets/img/cases/huang-ual-03.jpg",
-          "assets/img/cases/huang-ual-04.png",
-          "assets/img/cases/huang-ual-05.png",
-          "assets/img/cases/huang-ual-06.png",
-          "assets/img/cases/huang-ual-07.png"
-        ],
-        "career": null
-      },
-      {
-        "student": "Ding.",
-        "studentZh": "丁同学",
-        "school": "伦敦艺术大学 UAL",
-        "schoolEn": "University of the Arts London",
-        "college": "London College of Fashion",
-        "country": "英国",
-        "region": "英国",
-        "major": "illustration",
-        "program": "BA Fashion Imaging and Illustration",
-        "programCn": "时尚影像与插画",
-        "offerType": "本科",
-        "background": "SFK 全日制",
-        "academic": [
-          "A-Level 艺术 AA",
-          "BTEC Distinction"
-        ],
-        "language": "—",
-        "tags": [
-          "全日制",
-          "时尚插画"
-        ],
-        "persona": "",
-        "creation": [
-          "因无力救治病鹦鹉的内疚，催生了以人类阶级预言与三维绘画构成的《生死之书》，揭示生命价值的现实不平等。",
-          "以日常材质的纹理为灵感，通过绘画与手工的联想实验，构建一套探索「材料幻想」的完整作品系列。"
-        ],
-        "offers": [
-          {
-            "school": "UAL-LCF",
-            "schoolEn": "London College of Fashion, UAL",
-            "program": "BA Fashion Imaging and Illustration"
-          }
-        ],
-        "works": [
-          "assets/img/cases/ding-lcf-02.jpg",
-          "assets/img/cases/ding-lcf-03.jpg",
-          "assets/img/cases/ding-lcf-04.png",
-          "assets/img/cases/ding-lcf-05.png",
-          "assets/img/cases/ding-lcf-07.png"
-        ],
-        "career": null
-      },
-      {
-        "student": "Hong.",
-        "studentZh": "洪同学",
-        "school": "爱丁堡大学",
-        "schoolEn": "The University of Edinburgh",
-        "college": "",
-        "country": "英国",
-        "region": "英国",
-        "major": "illustration",
-        "program": "BA Illustration（大二录取）",
-        "programCn": "插画",
-        "offerType": "大二录取",
-        "background": "SFK 全日制",
-        "academic": [
-          "A-Level 艺术 AA",
-          "BTEC Distinction"
-        ],
-        "language": "—",
-        "tags": [
-          "全日制",
-          "大二录取"
-        ],
-        "persona": "",
-        "creation": [
-          "以木炭为媒介，从人格解离的亲历者与旁观者双重身份出发，通过视觉叙事再现身心分离的异化体验。",
-          "将囤积的书信拟作精灵，讲述依靠朋友来信治愈异乡求学困境的情感故事，探索物品作为精神支撑的心理联结。"
-        ],
-        "offers": [
-          {
-            "school": "爱丁堡大学",
-            "schoolEn": "The University of Edinburgh",
-            "program": "BA Illustration"
-          }
-        ],
-        "works": [
-          "assets/img/cases/hong-edin-01.jpg",
-          "assets/img/cases/hong-edin-03.jpg",
-          "assets/img/cases/hong-edin-04.png",
-          "assets/img/cases/hong-edin-05.png",
-          "assets/img/cases/hong-edin-06.png"
-        ],
-        "career": null
-      },
-      {
-        "student": "Xiao.",
-        "studentZh": "肖同学",
-        "school": "伦敦艺术大学 UAL",
-        "schoolEn": "University of the Arts London",
-        "college": "Central Saint Martins",
-        "country": "英国",
-        "region": "英国",
-        "major": "illustration",
-        "program": "BA Graphic Communication",
-        "programCn": "平面视觉传达",
-        "offerType": "本科",
-        "background": "海外高中",
-        "academic": [
-          "BTEC Distinction",
-          "GPA 3.73/4.0"
-        ],
-        "language": "雅思 6.5",
-        "tags": [
-          "海外高中",
-          "跨专业"
-        ],
-        "persona": "",
-        "creation": [
-          "用绘画与日记记录因转学而产生的友谊的离别，让经历者共鸣，予旁观者微光。",
-          "为无法归家的青少年设计海胆状可移动精神庇护所装置及对比手册。"
-        ],
-        "offers": [
-          {
-            "school": "UAL-CSM",
-            "schoolEn": "Central Saint Martins, UAL",
-            "program": "BA Graphic Communication"
-          }
-        ],
-        "works": [
-          "assets/img/cases/xiao-csm-02.jpg",
-          "assets/img/cases/xiao-csm-03.png",
-          "assets/img/cases/xiao-csm-04.png",
-          "assets/img/cases/xiao-csm-05.png",
-          "assets/img/cases/xiao-csm-06.png"
-        ],
-        "career": null
-      },
-      {
-        "student": "Xu.",
-        "studentZh": "徐同学",
-        "school": "伦敦艺术大学 UAL",
-        "schoolEn": "University of the Arts London",
-        "college": "Camberwell College of Arts",
-        "country": "英国",
-        "region": "英国",
-        "major": "illustration",
-        "program": "BA Illustration",
-        "programCn": "插画",
-        "offerType": "本科",
-        "background": "新东方艺术高中",
-        "academic": [
-          "A-Level 艺术 AB",
-          "BTEC Distinction"
-        ],
-        "language": "—",
-        "tags": [
-          "A-Level + BTEC",
-          "UAL 夏校"
-        ],
-        "persona": "",
-        "creation": [
-          "以孩童的低角度视野与强烈透视手法，描绘记忆中独属于童年的观察与想象。",
-          "基于中医「人体有机整体」与「天人动态平衡」的理念，通过植物与人体器官结合的视觉隐喻，诠释传统健康观的系统性智慧。"
-        ],
-        "offers": [
-          {
-            "school": "UAL-Camberwell",
-            "schoolEn": "Camberwell College of Arts, UAL",
-            "program": "BA Illustration"
-          }
-        ],
-        "works": [
-          "assets/img/cases/xu-ual-02.jpg",
-          "assets/img/cases/xu-ual-03.jpg",
-          "assets/img/cases/xu-ual-04.jpg",
-          "assets/img/cases/xu-ual-05.jpg",
-          "assets/img/cases/xu-ual-06.jpg"
-        ],
-        "career": null
+        "language": "无",
+        "gpa": "GPA91",
+        "origin": "东华大学",
+        "hero": "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/首图.jpg",
+        "works": [],
+        "idCity": "上海",
+        "idInitials": "YTY"
       }
     ],
-    "fine-art": [
-      {
-        "student": "Huang.",
-        "studentZh": "黄同学",
-        "school": "牛津大学",
-        "schoolEn": "University of Oxford",
-        "college": "",
-        "country": "英国",
-        "region": "英国",
-        "major": "fine-art",
-        "program": "Fine Art",
-        "programCn": "纯艺术",
-        "offerType": "本科",
-        "background": "斯芬克艺术高中",
-        "academic": [
-          "AP 5555",
-          "BTEC Merit",
-          "GPA 4.2"
-        ],
-        "language": "雅思 7.0",
-        "tags": [
-          "25F",
-          "牛津",
-          "五校录取"
-        ],
-        "persona": "对于中国本土文化很有感情的学生；从小受到父亲的影响对于传统美学感兴趣；喜欢思考哲学以及与社会科学相关问题。",
-        "creation": [],
-        "offers": [
-          {
-            "school": "牛津大学",
-            "schoolEn": "University of Oxford",
-            "program": "Fine Art"
-          },
-          {
-            "school": "爱丁堡大学",
-            "schoolEn": "University of Edinburgh",
-            "program": "BA Fine Art"
-          },
-          {
-            "school": "加州大学戴维斯分校",
-            "schoolEn": "University of California, Davis",
-            "program": "Bachelor of Arts"
-          },
-          {
-            "school": "伦敦大学金史密斯学院",
-            "schoolEn": "Goldsmiths University of London",
-            "program": "BA Fine Art (Extension Degree)"
-          },
-          {
-            "school": "利兹大学",
-            "schoolEn": "The University of Leeds",
-            "program": "Fine Art BA"
-          }
-        ],
-        "works": [
-          "assets/img/cases/huang-oxford-01.png",
-          "assets/img/cases/huang-oxford-02.png"
-        ],
-        "career": null
-      },
-      {
-        "student": "O.",
-        "studentZh": "O 同学",
-        "school": "格林内尔学院",
-        "schoolEn": "Grinnell College",
-        "college": "",
-        "country": "美国",
-        "region": "美国",
-        "major": "fine-art",
-        "program": "Fine Art BFA",
-        "programCn": "纯艺术",
-        "offerType": "本科",
-        "background": "广州斐特思 · 国际高中",
-        "academic": [
-          "BTEC Level 3 D*D*D"
-        ],
-        "language": "雅思 7.5",
-        "tags": [
-          "26F",
-          "文理学院",
-          "多校录取"
-        ],
-        "persona": "艺术奖项：在加拿大非盈利公益组织中担任 Vice President；其它活动：国际滑雪双板一级教练、美国童军远东第八分队成员；夏校 Parsons School of Design A。",
-        "creation": [
-          "技术净化背后污染物的迁移与隐匿性。",
-          "通过公众参与的剪与缝，具身化地探讨在达成性别平等的路径中，系统性暴力与集体修复之间的关系。",
-          "通过战争遗物重构缺席的个体痕迹，探讨历史记忆如何成为一个由生者与逝者共同参与的、永未完成的对话。"
-        ],
-        "offers": [
-          {
-            "school": "格林内尔学院",
-            "schoolEn": "Grinnell College",
-            "program": "文理学院"
-          },
-          {
-            "school": "罗德岛设计学院",
-            "schoolEn": "Rhode Island School of Design",
-            "program": "Fine Art BFA"
-          },
-          {
-            "school": "英属哥伦比亚大学",
-            "schoolEn": "The University of British Columbia",
-            "program": "Bachelor of Fine Arts in Visual Art"
-          },
-          {
-            "school": "牛津大学",
-            "schoolEn": "University of Oxford",
-            "program": "Fine Art BFA（面试邀请）"
-          }
-        ],
-        "works": [
-          "assets/img/cases/o-grinnell-01.jpg",
-          "assets/img/cases/o-grinnell-02.png",
-          "assets/img/cases/o-grinnell-03.png",
-          "assets/img/cases/o-grinnell-04.png",
-          "assets/img/cases/o-grinnell-05.png",
-          "assets/img/cases/o-grinnell-06.png"
-        ],
-        "career": null
-      },
-      {
-        "student": "Du.",
-        "studentZh": "杜同学",
-        "school": "伦敦大学学院 UCL",
-        "schoolEn": "University College London",
-        "college": "",
-        "country": "英国",
-        "region": "英国",
-        "major": "fine-art",
-        "program": "Fine Art BA",
-        "programCn": "纯艺术",
-        "offerType": "本科",
-        "background": "加拿大高中 · 海外高中",
-        "academic": [
-          "GPA 87"
-        ],
-        "language": "雅思 7.5",
-        "tags": [
-          "26F",
-          "海外高中",
-          "多校录取"
-        ],
-        "persona": "反思型观察者：善于对社会现象、技术影响、人性矛盾进行深入观察和哲学思考，并通过艺术形式提出问题和观点，而非给出简单答案。关注社会与人文的创作者：作品流露出对集体历史、社会重建、个体在当代社会中的处境等议题的深切关怀，试图揭示表象之下的人文价值。",
-        "creation": [
-          "秩序与无序、完美与缺陷的辩证关系。",
-          "建筑的社会意义与人文关怀。",
-          "技术、媒介与真实体验的反思。"
-        ],
-        "offers": [
-          {
-            "school": "UCL",
-            "schoolEn": "University College London",
-            "program": "Fine Art BA"
-          },
-          {
-            "school": "UAL-Camberwell",
-            "schoolEn": "Camberwell College of Arts, UAL",
-            "program": "BA (Hons) Fine Art: Sculpture"
-          },
-          {
-            "school": "UAL-Camberwell",
-            "schoolEn": "Camberwell College of Arts, UAL",
-            "program": "BA (Hons) Fine Art: Photography"
-          },
-          {
-            "school": "加州艺术学院",
-            "schoolEn": "CalArts",
-            "program": "BFA in Art"
-          },
-          {
-            "school": "艺术中心设计学院",
-            "schoolEn": "ArtCenter College of Design",
-            "program": "First Year Immersion"
-          },
-          {
-            "school": "伦敦大学金史密斯学院",
-            "schoolEn": "Goldsmiths, University of London",
-            "program": "BA Fine Art"
-          }
-        ],
-        "works": [
-          "assets/img/cases/du-ucl-01.jpg",
-          "assets/img/cases/du-ucl-02.png",
-          "assets/img/cases/du-ucl-03.png",
-          "assets/img/cases/du-ucl-04.png",
-          "assets/img/cases/du-ucl-05.png"
-        ],
-        "career": null
-      },
-      {
-        "student": "Li.",
-        "studentZh": "李同学",
-        "school": "伦敦大学学院 UCL",
-        "schoolEn": "University College London",
-        "college": "",
-        "country": "英国",
-        "region": "英国",
-        "major": "fine-art",
-        "program": "Fine Art BA",
-        "programCn": "纯艺术",
-        "offerType": "本科",
-        "background": "君诚国际 · 国际高中",
-        "academic": [
-          "AP + BTEC L4",
-          "GPA 3.87"
-        ],
-        "language": "雅思 6.0",
-        "tags": [
-          "26F",
-          "多校录取",
-          "RISD 夏校"
-        ],
-        "persona": "深具人文关怀的反思者：她的创作根植于真实的个人情感与社会观察，表现出对生命存在、记忆消逝、情感联结以及人类处境的深切关怀与哲学反思。研究始终围绕现代人的精神处境、记忆情感的价值以及人与技术、自然、内在自我的关系展开，并通过高度个人化、材料驱动且充满实验性的艺术语言，构建了一个连贯、有力且不断演进的艺术世界。",
-        "creation": [
-          "对人类中心主义与科技局限性的批判。",
-          "情感与存在状态的深切关怀。",
-          "在理性秩序与感性生命之间寻找平衡与突破。"
-        ],
-        "offers": [
-          {
-            "school": "UCL",
-            "schoolEn": "University College London",
-            "program": "Fine Art BA"
-          },
-          {
-            "school": "UAL-Chelsea",
-            "schoolEn": "Chelsea College of Arts, UAL",
-            "program": "BA (Hons) Fine Art"
-          },
-          {
-            "school": "UAL-CSM",
-            "schoolEn": "Central Saint Martins, UAL",
-            "program": "BA (Hons) Fine Art"
-          },
-          {
-            "school": "加州艺术学院",
-            "schoolEn": "CalArts",
-            "program": "BFA in Art"
-          },
-          {
-            "school": "艺术中心设计学院",
-            "schoolEn": "ArtCenter College of Design",
-            "program": "BS in Spatial Experience Design"
-          },
-          {
-            "school": "伦敦大学金史密斯学院",
-            "schoolEn": "Goldsmiths, University of London",
-            "program": "BA Fine Art"
-          },
-          {
-            "school": "帕森斯设计学院",
-            "schoolEn": "Parsons School of Design",
-            "program": "BFA in Fine Art"
-          },
-          {
-            "school": "普瑞特艺术学院",
-            "schoolEn": "Pratt Institute",
-            "program": "BFA in Fine Art"
-          },
-          {
-            "school": "芝加哥艺术学院",
-            "schoolEn": "School of the Art Institute of Chicago",
-            "program": "Painting & Drawing"
-          }
-        ],
-        "works": [
-          "assets/img/cases/li-ucl-01.jpg",
-          "assets/img/cases/li-ucl-02.png",
-          "assets/img/cases/li-ucl-03.png",
-          "assets/img/cases/li-ucl-04.png",
-          "assets/img/cases/li-ucl-05.png"
-        ],
-        "career": null
-      },
-      {
-        "student": "Yang.",
-        "studentZh": "杨同学",
-        "school": "伦敦艺术大学 UAL",
-        "schoolEn": "University of the Arts London",
-        "college": "Central Saint Martins",
-        "country": "英国",
-        "region": "英国",
-        "major": "fine-art",
-        "program": "BA Performance: Design and Practice",
-        "programCn": "表演设计与实践",
-        "offerType": "本科",
-        "background": "SFK 全日制",
-        "academic": [
-          "BTEC + A-Level",
-          "GPA 3.27/4.0",
-          "BTEC 预估 Distinction",
-          "A-Level 预估 中文 A* / 艺术 A / 艺术 B"
-        ],
-        "language": "—",
-        "tags": [
-          "26F",
-          "全日制",
-          "多校录取"
-        ],
-        "persona": "创作实践呈现出清晰的理论驱动、方法论自觉与主题关联性，其研究围绕当代个体在物理、数字与精神空间中的存在、感知与身份建构这一核心命题展开。研究构成了一个紧密的矩阵：从外部的物理与社会空间（城市、网络），到内部的哲学与精神空间（存在、意义），再到作为交界点的身体（表演身份、承载商品），全方位地探讨了当代个体如何感知、表演并建构自我。",
-        "creation": [
-          "研究构成紧密矩阵：从外部的物理与社会空间，到内部的哲学与精神空间，再到作为交界点的身体。"
-        ],
-        "offers": [
-          {
-            "school": "UAL-CSM",
-            "schoolEn": "Central Saint Martins, UAL",
-            "program": "BA Performance: Design and Practice"
-          },
-          {
-            "school": "金斯顿大学",
-            "schoolEn": "Kingston University London",
-            "program": "Photography BA (Hons)"
-          },
-          {
-            "school": "UCL",
-            "schoolEn": "University College London",
-            "program": "BA in Media"
-          },
-          {
-            "school": "UAL-Camberwell",
-            "schoolEn": "Camberwell College of Arts, UAL",
-            "program": "BA (Hons) Fine Art: Photography"
-          }
-        ],
-        "works": [
-          "assets/img/cases/yang-csm-01.jpg",
-          "assets/img/cases/yang-csm-02.png",
-          "assets/img/cases/yang-csm-03.png",
-          "assets/img/cases/yang-csm-04.png",
-          "assets/img/cases/yang-csm-05.png"
-        ],
-        "career": null
-      },
-      {
-        "student": "Zhang.",
-        "studentZh": "张同学",
-        "school": "伦敦艺术大学 UAL",
-        "schoolEn": "University of the Arts London",
-        "college": "Camberwell College of Arts",
-        "country": "英国",
-        "region": "英国",
-        "major": "fine-art",
-        "program": "BA (Hons) Fine Art: Sculpture",
-        "programCn": "纯艺术 · 雕塑",
-        "offerType": "本科",
-        "background": "SFK 全日制",
-        "academic": [
-          "A-Level + BTEC L4"
-        ],
-        "language": "—",
-        "tags": [
-          "26F",
-          "全日制",
-          "海外教授项目"
-        ],
-        "persona": "学生的艺术实践围绕自我身份探寻、空间与身体的交互体验、以及流行文化与权力结构的批判三大核心线索展开。坚定的身份重构者与自我叙事者；深度的同人文化参与者与理论实践者，将个人粉丝实践与宏大的权力结构分析相结合，揭示文化消费背后的身份政治与空间政治。",
-        "creation": [
-          "自我身份的重构与「苔藓」哲学的践行。",
-          "空间、身体与体验的「行动场域」。",
-          "对流行文化（同人文化）的权力解构与再生产。",
-          "女性叙事、神话重构与主体性赋权。"
-        ],
-        "offers": [
-          {
-            "school": "UAL-Camberwell",
-            "schoolEn": "Camberwell College of Arts, UAL",
-            "program": "BA (Hons) Fine Art: Sculpture"
-          },
-          {
-            "school": "UCL",
-            "schoolEn": "University College London",
-            "program": "Fine Art BFA"
-          },
-          {
-            "school": "ARU",
-            "schoolEn": "Anglia Ruskin University",
-            "program": "BA (Hons) Fine Art"
-          },
-          {
-            "school": "UCA",
-            "schoolEn": "University for the Creative Arts",
-            "program": "BA (Hons) Fine Art"
-          },
-          {
-            "school": "伦敦大学金史密斯学院",
-            "schoolEn": "Goldsmiths, University of London",
-            "program": "BA Fine Art Extension Degree"
-          }
-        ],
-        "works": [
-          "assets/img/cases/zhang-camberwell-01.jpg",
-          "assets/img/cases/zhang-camberwell-02.png",
-          "assets/img/cases/zhang-camberwell-03.png",
-          "assets/img/cases/zhang-camberwell-04.png",
-          "assets/img/cases/zhang-camberwell-05.png",
-          "assets/img/cases/zhang-camberwell-06.png",
-          "assets/img/cases/zhang-camberwell-07.png"
-        ],
-        "career": null
-      },
-      {
-        "student": "Huang.",
-        "studentZh": "黄同学",
-        "school": "伦敦艺术大学 UAL",
-        "schoolEn": "University of the Arts London",
-        "college": "Central Saint Martins",
-        "country": "英国",
-        "region": "英国",
-        "major": "fine-art",
-        "program": "BA (Hons) Ceramic",
-        "programCn": "陶瓷",
-        "offerType": "本科",
-        "background": "华爱融合国际高中",
-        "academic": [
-          "OSSD + BTEC"
-        ],
-        "language": "—",
-        "tags": [
-          "26F",
-          "材料叙事",
-          "UAL 夏校"
-        ],
-        "persona": "一位「材料叙事者」。擅长通过跨媒介实验，在身体触觉与社会符号之间搭建桥梁。比起单纯的造型，更关注材料背后的文化重量 —— 既有从艺术史与哲学中汲取养分的思辨严谨，又始终保持着对脆弱性、日常性的温柔注视，让陶瓷成为承载记忆与身份的「沉积层」。",
-        "creation": [
-          "研究始终围绕「材料的辩证关系」展开：用黏土固化织物的柔软褶皱，隐喻社会阶层对身体的规训。",
-          "重组破碎瓷片，在侘寂美学中探讨断裂与再生。",
-          "以硅藻土转译虚拟游戏空间，模糊数字与现实的边界。",
-          "最后解构日常包装，打捞那些被忽视的生活痕迹与时间记忆。"
-        ],
-        "offers": [
-          {
-            "school": "UAL-CSM",
-            "schoolEn": "Central Saint Martins, UAL",
-            "program": "BA (Hons) Ceramic"
-          }
-        ],
-        "works": [
-          "assets/img/cases/huang-csm-ceramic-01.jpg",
-          "assets/img/cases/huang-csm-ceramic-02.jpg",
-          "assets/img/cases/huang-csm-ceramic-03.jpg",
-          "assets/img/cases/huang-csm-ceramic-04.jpg",
-          "assets/img/cases/huang-csm-ceramic-05.jpg"
-        ],
-        "career": null
-      }
-    ],
-    "other": [
-      {
-        "student": "Zhou.",
-        "studentZh": "周同学",
-        "school": "威廉姆斯学院",
-        "schoolEn": "Williams College",
-        "college": "",
-        "country": "美国",
-        "region": "美国",
-        "major": "cross",
-        "program": "BA Physics",
-        "programCn": "物理",
-        "offerType": "本科",
-        "background": "北京国际学校",
-        "academic": [
-          "IB 42",
-          "SAT 1500"
-        ],
-        "language": "托福 115",
-        "tags": [
-          "学霸",
-          "跨学科",
-          "文理学院"
-        ],
-        "persona": "活动实践背景：Pioneer 量子物理研究和计算物理研究；自主创立项目 Physbirds，通过双语漫画和文章传播物理知识。奖项与荣誉：漫画作品 Physbirds 由中国机械工业出版社出版；Polyphony Literature 杂志 20 周年纪念刊「艺术家聚焦」专题作者；中篇小说发表于《青春》；短篇小说发表于《小小说》；两幅作品发表于 Teen Ink 杂志。",
-        "creation": [
-          "学生作品通过系列插画，描述在物理法则笼罩下，关于自由意志与虚无存在的哲思。",
-          "学生通过这套隧道装置，模拟现代社会的感官超载，隐喻技术进步对人类体验的复杂影响。"
-        ],
-        "offers": [
-          {
-            "school": "威廉姆斯学院",
-            "schoolEn": "Williams College",
-            "program": "BA Physics"
-          }
-        ],
-        "works": [
-          "assets/img/cases/zhou-williams-02.png",
-          "assets/img/cases/zhou-williams-03.png",
-          "assets/img/cases/zhou-williams-04.jpg",
-          "assets/img/cases/zhou-williams-05.jpg",
-          "assets/img/cases/zhou-williams-06.jpg"
-        ],
-        "career": null
-      },
-      {
-        "student": "Pan.",
-        "studentZh": "潘同学",
-        "school": "达特茅斯学院",
-        "schoolEn": "Dartmouth College",
-        "college": "",
-        "country": "美国",
-        "region": "美国",
-        "major": "cross",
-        "program": "BA Studio Art",
-        "programCn": "艺术",
-        "offerType": "本科",
-        "background": "包玉刚中学",
-        "academic": [
-          "IB 41",
-          "ACT 35"
-        ],
-        "language": "托福 113",
-        "tags": [
-          "学霸",
-          "藤校",
-          "跨学科"
-        ],
-        "persona": "录取成功因素：利用绘画充分体现学生对自我和周遭事物的观察；扎实的基本功；个人视觉语言的表现；留学指导部和作品导师共同规划；精准的院校和作品匹配；最终获得藤校达特茅斯录取。",
-        "creation": [
-          "装置和绘画以穿梭的肢体，模糊童年与当下、现实与虚幻的边界，揭示存在之外无尽的可能性。",
-          "创意绘画，强烈的情绪和感官表达。"
-        ],
-        "offers": [
-          {
-            "school": "达特茅斯学院",
-            "schoolEn": "Dartmouth College",
-            "program": "BA Studio Art"
-          }
-        ],
-        "works": [
-          "assets/img/cases/pan-dartmouth-02.png",
-          "assets/img/cases/pan-dartmouth-03.png",
-          "assets/img/cases/pan-dartmouth-04.png",
-          "assets/img/cases/pan-dartmouth-05.png",
-          "assets/img/cases/pan-dartmouth-06.jpg"
-        ],
-        "career": null
-      },
-      {
-        "student": "Zhu.",
-        "studentZh": "朱同学",
-        "school": "布朗大学",
-        "schoolEn": "Brown University",
-        "college": "",
-        "country": "美国",
-        "region": "美国",
-        "major": "cross",
-        "program": "BFA Fine Art",
-        "programCn": "纯艺术",
-        "offerType": "本科",
-        "background": "北京德威国际学校",
-        "academic": [
-          "GPA 40/42",
-          "SAT 1510"
-        ],
-        "language": "—",
-        "tags": [
-          "学霸",
-          "藤校",
-          "跨专业"
-        ],
-        "persona": "学生创作展现出敏锐的观察力、扎实的技艺与鲜明的个人语言。作品深入探索记忆、身份、情感与生态等议题，并能将个人体验转化为具有普遍共鸣的视觉叙事，体现了从观念到形式的成熟掌控力。",
-        "creation": [
-          "人之间的联结如静夜观星，相伴愈久，联结愈明，如月宫嫦娥：孤独宇宙中，相伴的微光尤为珍贵。",
-          "「家」究竟在何处？作品探讨宇宙的无限性和探索归属感，以单色极简的线条风格致敬了我对天体物理学的热爱。"
-        ],
-        "offers": [
-          {
-            "school": "布朗大学",
-            "schoolEn": "Brown University",
-            "program": "BFA Fine Art"
-          }
-        ],
-        "works": [
-          "assets/img/cases/zhu-brown-02.png",
-          "assets/img/cases/zhu-brown-03.png",
-          "assets/img/cases/zhu-brown-04.png",
-          "assets/img/cases/zhu-brown-05.png",
-          "assets/img/cases/zhu-brown-06.png",
-          "assets/img/cases/zhu-brown-07.jpg"
-        ],
-        "career": null
-      },
-      {
-        "student": "Xu.",
-        "studentZh": "徐同学",
-        "school": "罗德岛设计学院 RISD",
-        "schoolEn": "Rhode Island School of Design",
-        "college": "",
-        "country": "美国",
-        "region": "美国",
-        "major": "illustration",
-        "program": "BFA Painting",
-        "programCn": "绘画",
-        "offerType": "本科",
-        "background": "德闳国际学校",
-        "academic": [
-          "IB 37/42"
-        ],
-        "language": "雅思 7.5",
-        "tags": [
-          "艺术名校直申",
-          "国际奖项",
-          "夏校"
-        ],
-        "persona": "专业相关：个人展、作品多次参展、创立学校校刊社；夏校：RISD、UAL；公益与社会责任感：留学生主题书籍插画项目；领导力：独立运营摄影工作室。奖项：芬兰 AG 设计奖暨中芬国际文化艺术交流双年展铜奖（国际）、纽约 IYAC TOP 国际插画赛金奖（国际）、365 Art + Japanese Magazine 两次登刊（国际）。",
-        "creation": [
-          "一件承载 44 个人物的装置绘画，旨在剥离过度解读，引导观众直面并感受艺术中最原始的快乐。",
-          "人与物的互动。"
-        ],
-        "offers": [
-          {
-            "school": "罗德岛设计学院",
-            "schoolEn": "Rhode Island School of Design",
-            "program": "BFA Painting"
-          }
-        ],
-        "works": [
-          "assets/img/cases/xu-risd-02.png",
-          "assets/img/cases/xu-risd-03.png",
-          "assets/img/cases/xu-risd-04.png",
-          "assets/img/cases/xu-risd-05.jpg"
-        ],
-        "career": null
-      },
-      {
-        "student": "Li.",
-        "studentZh": "李同学",
-        "school": "谢尔丹学院",
-        "schoolEn": "Sheridan College",
-        "college": "",
-        "country": "加拿大",
-        "region": "加拿大",
-        "major": "illustration",
-        "program": "BA Illustration",
-        "programCn": "插画",
-        "offerType": "本科",
-        "background": "国美附中",
-        "academic": [],
-        "language": "雅思 6.5 / 多邻国 115",
-        "tags": [
-          "北美艺术院校",
-          "专业附中"
-        ],
-        "persona": "",
-        "creation": [
-          "受童年伙伴逝去启发，本作品借由「蝉」的意象构建了一场虚拟的告别仪式，旨在填补被遗忘的记忆空白，以此长久地怀念他。",
-          "这件作品以窗户为主题，记录了作者搬入社区四年来的回忆，意在传达高楼邻里间如家人般的联结感与幸福感。"
-        ],
-        "offers": [
-          {
-            "school": "谢尔丹学院",
-            "schoolEn": "Sheridan College",
-            "program": "BA Illustration"
-          }
-        ],
-        "works": [
-          "assets/img/cases/li-sheridan-02.png",
-          "assets/img/cases/li-sheridan-03.png",
-          "assets/img/cases/li-sheridan-04.png",
-          "assets/img/cases/li-sheridan-05.jpg"
-        ],
-        "career": null
-      },
-      {
-        "student": "Sang.",
-        "studentZh": "桑同学",
-        "school": "墨尔本大学",
-        "schoolEn": "The University of Melbourne",
-        "college": "",
-        "country": "澳洲",
-        "region": "澳洲",
-        "major": "illustration",
-        "program": "BA Design",
-        "programCn": "设计",
-        "offerType": "本科",
-        "background": "普高",
-        "academic": [],
-        "language": "雅思 6.5",
-        "tags": [
-          "澳八大",
-          "普高背景"
-        ],
-        "persona": "",
-        "creation": [
-          "该项目通过手工靠垫和绘画，将作者对猫的分离焦虑具象化，把私密情感转化为共享体验。",
-          "该项目用互动图画书和案例报告轻松揭示囤积的普遍性，倡导坦然接受无害的囤积习惯。"
-        ],
-        "offers": [
-          {
-            "school": "墨尔本大学",
-            "schoolEn": "The University of Melbourne",
-            "program": "BA Design"
-          }
-        ],
-        "works": [
-          "assets/img/cases/sang-melbourne-02.png",
-          "assets/img/cases/sang-melbourne-03.png",
-          "assets/img/cases/sang-melbourne-04.jpg"
-        ],
-        "career": null
-      },
-      {
-        "student": "Sang.",
-        "studentZh": "桑同学",
-        "school": "墨尔本大学",
-        "schoolEn": "The University of Melbourne",
-        "college": "",
-        "country": "澳洲",
-        "region": "澳洲",
-        "major": "illustration",
-        "program": "BA Design",
-        "programCn": "设计",
-        "offerType": "本科",
-        "background": "普高",
-        "academic": [],
-        "language": "雅思 6.5",
-        "tags": [
-          "澳八大",
-          "普高背景"
-        ],
-        "persona": "",
-        "creation": [
-          "该项目探讨年轻人用童真消费作为「精神盔甲」抵御现实压力的 Kidulting 现象。",
-          "该项目为残障人士设计鸢尾花主题的珠宝与 APP，将科技辅助与人文美学融为一体。"
-        ],
-        "offers": [
-          {
-            "school": "墨尔本大学",
-            "schoolEn": "The University of Melbourne",
-            "program": "BA Design"
-          }
-        ],
-        "works": [
-          "assets/img/cases/sang-melbourne-2-02.png",
-          "assets/img/cases/sang-melbourne-2-03.png",
-          "assets/img/cases/sang-melbourne-2-04.png",
-          "assets/img/cases/sang-melbourne-2-05.png",
-          "assets/img/cases/sang-melbourne-2-06.jpg"
-        ],
-        "career": null
-      }
-    ],
-    "dimension": {
-      "id": "dimension",
-      "label": "申请维度",
-      "labelEn": "DIMENSION",
-      "options": [
-        {
-          "value": "ug",
-          "label": "本科"
-        },
-        {
-          "value": "pg",
-          "label": "研究生"
-        }
-      ],
-      "note": "本科 = offerType 含「本科/大二」；研究生 = 含「研究生/硕士」。当前 24 条案例均为本科录取，研究生维度待真实数据就位后自动生效。"
-    }
+    "portfolioTotal": 45,
+    "portfolioConfirmed": 45
   },
   "planning": {
     "title": "产业全景 · 职业规划",
@@ -2379,17 +2876,17 @@ window.SFK_DATA = {
           "kind": "gallery",
           "items": [
             {
-              "img": "assets/img/directions/placeholder-project.svg",
+              "img": "assets/img/directions/品牌视觉系统.JPG",
               "t": "品牌视觉系统",
               "d": "Logo、字体、色彩、辅助图形和品牌应用。"
             },
             {
-              "img": "assets/img/directions/placeholder-project.svg",
+              "img": "assets/img/directions/商业插画联名.JPG",
               "t": "商业插画联名",
               "d": "为品牌、包装、活动或文创产品提供图像内容。"
             },
             {
-              "img": "assets/img/directions/placeholder-project.svg",
+              "img": "assets/img/directions/AIGC创意提案.JPG",
               "t": "AIGC创意提案",
               "d": "用AI生成风格方向、场景图和视觉传播方案。"
             }
@@ -2458,7 +2955,8 @@ window.SFK_DATA = {
       ],
       "summary": {
         "text": "「 商业视觉与品牌设计，是艺术人文学生从个人审美走向商业项目的关键路径 」"
-      }
+      },
+      "hero": "assets/img/directions/hero-brand.jpg"
     },
     "ip": {
       "id": "ip",
@@ -2664,17 +3162,17 @@ window.SFK_DATA = {
           "kind": "gallery",
           "items": [
             {
-              "img": "assets/img/directions/placeholder-project.svg",
+              "img": "assets/img/directions/原创IP角色项目.JPG",
               "t": "原创IP角色项目",
               "d": "角色设定、世界观、表情系统、角色故事和视觉应用规范。"
             },
             {
-              "img": "assets/img/directions/placeholder-project.svg",
+              "img": "assets/img/directions/潮玩盲盒设计.JPG",
               "t": "潮玩/盲盒设计",
               "d": "角色三视图、产品草图、材质设定、包装和系列化方案。"
             },
             {
-              "img": "assets/img/directions/placeholder-project.svg",
+              "img": "assets/img/directions/个人IP运营项目.JPG",
               "t": "个人IP运营项目",
               "d": "作品账号、产品样机、社群互动和销售场景。"
             }
@@ -2746,7 +3244,8 @@ window.SFK_DATA = {
       ],
       "summary": {
         "text": "「 潮流IP与文创衍生开发，是艺术人文学生把个人风格发展为商业资产的重要路径 」"
-      }
+      },
+      "hero": "assets/img/directions/hero-ip.jpg"
     },
     "gallery": {
       "id": "gallery",
@@ -2954,17 +3453,17 @@ window.SFK_DATA = {
           "kind": "gallery",
           "items": [
             {
-              "img": "assets/img/directions/placeholder-project.svg",
+              "img": "assets/img/directions/画廊群展执行.JPG",
               "t": "画廊群展执行",
               "d": "从艺术家沟通、作品清单、布展执行到开幕传播。"
             },
             {
-              "img": "assets/img/directions/placeholder-project.svg",
+              "img": "assets/img/directions/艺术家个展研究.JPG",
               "t": "艺术家个展研究",
               "d": "围绕创作脉络，完成展览文本、作品解读和传播内容。"
             },
             {
-              "img": "assets/img/directions/placeholder-project.svg",
+              "img": "assets/img/directions/艺博会展位项目.JPG",
               "t": "艺博会展位项目",
               "d": "参与作品筛选、展位视觉、客户接待和现场运营。"
             }
@@ -3034,7 +3533,8 @@ window.SFK_DATA = {
       ],
       "summary": {
         "text": "「 当代艺术生态与画廊运营，是艺术人文学生从“理解作品”走向“进入艺术现场”的核心路径 」"
-      }
+      },
+      "hero": "assets/img/directions/hero-gallery.jpg"
     },
     "curation": {
       "id": "curation",
@@ -3242,17 +3742,17 @@ window.SFK_DATA = {
           "kind": "gallery",
           "items": [
             {
-              "img": "assets/img/directions/placeholder-project.svg",
+              "img": "assets/img/directions/美术馆主题展.JPG",
               "t": "美术馆主题展",
               "d": "完成艺术家研究、作品选择、策展文本、空间动线与公教设计。"
             },
             {
-              "img": "assets/img/directions/placeholder-project.svg",
+              "img": "assets/img/directions/商业与品牌策展.JPG",
               "t": "商业与品牌策展",
               "d": "将品牌文化、产品故事与艺术内容结合，形成可传播体验。"
             },
             {
-              "img": "assets/img/directions/placeholder-project.svg",
+              "img": "assets/img/directions/公共文化与文旅.JPG",
               "t": "公共文化与文旅",
               "d": "把城市、地方文化与非遗转化为当代展览叙事。"
             }
@@ -3317,7 +3817,8 @@ window.SFK_DATA = {
       ],
       "summary": {
         "text": "「 从议题研究到空间现场，把艺术观点转化为观众能够进入、理解与传播的体验 」"
-      }
+      },
+      "hero": "assets/img/directions/hero-curation.jpg"
     },
     "education": {
       "id": "education",
@@ -3527,17 +4028,17 @@ window.SFK_DATA = {
           "kind": "gallery",
           "items": [
             {
-              "img": "assets/img/directions/placeholder-project.svg",
+              "img": "assets/img/directions/主题艺术课程.JPG",
               "t": "主题艺术课程",
               "d": "围绕身份、城市、生态与记忆，完成研究、创作和成果展示。"
             },
             {
-              "img": "assets/img/directions/placeholder-project.svg",
+              "img": "assets/img/directions/美术馆公共教育.JPG",
               "t": "美术馆公共教育",
               "d": "根据展览内容设计导览、工作坊、教育手册与公众活动。"
             },
             {
-              "img": "assets/img/directions/placeholder-project.svg",
+              "img": "assets/img/directions/跨学科数字美育.JPG",
               "t": "跨学科与数字美育",
               "d": "选择心理、社会、科技与公共文化，形成研究型课程内容。"
             }
@@ -3604,7 +4105,8 @@ window.SFK_DATA = {
       ],
       "summary": {
         "text": "「 把艺术知识转化为可学习、可体验、可持续传播的教育内容，让专业能力形成教学影响力与学术价值 」"
-      }
+      },
+      "hero": "assets/img/directions/hero-education.jpg"
     },
     "public": {
       "id": "public",
@@ -3814,17 +4316,17 @@ window.SFK_DATA = {
           "kind": "gallery",
           "items": [
             {
-              "img": "assets/img/directions/placeholder-project.svg",
+              "img": "assets/img/directions/城市文化节与公共艺术.JPG",
               "t": "城市文化节与公共艺术",
               "d": "围绕地方文化策划展览、论坛、公共艺术和城市传播活动。"
             },
             {
-              "img": "assets/img/directions/placeholder-project.svg",
+              "img": "assets/img/directions/博物馆公教与研学.JPG",
               "t": "博物馆公教与研学",
               "d": "将馆藏与展览转化为导览、课程、工作坊和研学路线。"
             },
             {
-              "img": "assets/img/directions/placeholder-project.svg",
+              "img": "assets/img/directions/非遗活动与文创开发.JPG",
               "t": "非遗活化与文创开发",
               "d": "完成文化研究、传承人访谈、产品设计与传播方案。"
             }
@@ -3894,7 +4396,8 @@ window.SFK_DATA = {
       ],
       "summary": {
         "text": "「 把艺术人文能力转化为城市文化策划、公共项目执行与社会文化服务，让学生既能理解文化，也能进入真实的公共文化现场 」"
-      }
+      },
+      "hero": "assets/img/directions/hero-public.png"
     },
     "artist": {
       "id": "artist",
@@ -4104,17 +4607,17 @@ window.SFK_DATA = {
           "kind": "gallery",
           "items": [
             {
-              "img": "assets/img/directions/placeholder-project.svg",
+              "img": "assets/img/directions/系列创作与个展计划.JPG",
               "t": "系列创作与个展计划",
               "d": "完成系列作品、艺术家陈述、展览效果图、作品清单与个展提案。"
             },
             {
-              "img": "assets/img/directions/placeholder-project.svg",
+              "img": "assets/img/directions/驻留研究与在地实践.JPG",
               "t": "驻留研究与在地实践",
               "d": "通过田野调查形成研究档案、驻留日志、在地作品与公共展示。"
             },
             {
-              "img": "assets/img/directions/placeholder-project.svg",
+              "img": "assets/img/directions/公共艺术与品牌合作.JPG",
               "t": "公共艺术与品牌合作",
               "d": "产出商业提案、效果图、制作方案、落地作品与传播复盘。"
             }
@@ -4189,7 +4692,8 @@ window.SFK_DATA = {
       ],
       "summary": {
         "text": "「 持续建立“艺术语言、作品体系、专业履历、行业关系与经营能力”，让个人创作从作品集走向展览、收藏、委托与长期艺术事业 」"
-      }
+      },
+      "hero": "assets/img/directions/hero-artist.jpg"
     },
     "therapy": {
       "id": "therapy",
@@ -5405,9 +5909,9 @@ window.SFK_DATA = {
   },
   "offers": {
     "hero": {
-      "eyebrow": "OFFERS 2026",
+      "eyebrow": "OFFERS 2024-2026",
       "title": "offer展示",
-      "desc": "【占位】2026 申请季录取战报描述待提供 —— 覆盖美国、英国、港新与全球院校的真实 offer 数据，后期由你填入。"
+      "desc": "2024–2026 三个申请季累计斩获 5493 枚 offer，覆盖美国、英国、港新、日韩及全球 260 所艺术院校与综合大学。"
     },
     "rows": 4,
     "filters": [
@@ -5425,2226 +5929,13202 @@ window.SFK_DATA = {
       },
       {
         "id": "JP",
-        "label": "🇯🇵 日本"
+        "label": "🇯🇵🇰🇷 日韩"
       },
       {
         "id": "OTHER",
         "label": "🌏 其他"
       }
     ],
-    "groups": {
-      "US": [
-        {
-          "count": "—",
-          "zh": "占位院校 01",
-          "en": "PLACEHOLDER 01",
-          "tags": [
-            "us-top30"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 02",
-          "en": "PLACEHOLDER 02",
-          "tags": [
-            "us-top30"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 03",
-          "en": "PLACEHOLDER 03",
-          "tags": [
-            "us-top30"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 04",
-          "en": "PLACEHOLDER 04",
-          "tags": [
-            "us-top30"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 05",
-          "en": "PLACEHOLDER 05",
-          "tags": [
-            "us-top30"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 06",
-          "en": "PLACEHOLDER 06",
-          "tags": [
-            "us-top30"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 07",
-          "en": "PLACEHOLDER 07",
-          "tags": [
-            "us-top30"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 08",
-          "en": "PLACEHOLDER 08",
-          "tags": [
-            "us-top30"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 09",
-          "en": "PLACEHOLDER 09",
-          "tags": [
-            "us-top30"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 10",
-          "en": "PLACEHOLDER 10",
-          "tags": [
-            "us-top30"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 11",
-          "en": "PLACEHOLDER 11",
-          "tags": [
-            "us-top30"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 12",
-          "en": "PLACEHOLDER 12",
-          "tags": [
-            "us-top30"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 13",
-          "en": "PLACEHOLDER 13",
-          "tags": [
-            "us-top30"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 14",
-          "en": "PLACEHOLDER 14",
-          "tags": [
-            "us-top30"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 15",
-          "en": "PLACEHOLDER 15",
-          "tags": [
-            "liberal-arts"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 16",
-          "en": "PLACEHOLDER 16",
-          "tags": [
-            "liberal-arts"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 17",
-          "en": "PLACEHOLDER 17",
-          "tags": [
-            "liberal-arts"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 18",
-          "en": "PLACEHOLDER 18",
-          "tags": [
-            "liberal-arts"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 19",
-          "en": "PLACEHOLDER 19",
-          "tags": [
-            "liberal-arts"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 20",
-          "en": "PLACEHOLDER 20",
-          "tags": [
-            "liberal-arts"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 21",
-          "en": "PLACEHOLDER 21",
-          "tags": [
-            "liberal-arts"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 22",
-          "en": "PLACEHOLDER 22",
-          "tags": [
-            "liberal-arts"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 23",
-          "en": "PLACEHOLDER 23",
-          "tags": [
-            "liberal-arts"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 24",
-          "en": "PLACEHOLDER 24",
-          "tags": [
-            "liberal-arts"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 25",
-          "en": "PLACEHOLDER 25",
-          "tags": [
-            "liberal-arts"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 26",
-          "en": "PLACEHOLDER 26",
-          "tags": [
-            "liberal-arts"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 27",
-          "en": "PLACEHOLDER 27",
-          "tags": [
-            "risd"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 28",
-          "en": "PLACEHOLDER 28",
-          "tags": [
-            "risd"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 29",
-          "en": "PLACEHOLDER 29",
-          "tags": [
-            "risd"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 30",
-          "en": "PLACEHOLDER 30",
-          "tags": [
-            "risd"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 31",
-          "en": "PLACEHOLDER 31",
-          "tags": [
-            "risd"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 32",
-          "en": "PLACEHOLDER 32",
-          "tags": [
-            "risd"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 33",
-          "en": "PLACEHOLDER 33",
-          "tags": [
-            "risd"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 34",
-          "en": "PLACEHOLDER 34",
-          "tags": [
-            "risd"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 35",
-          "en": "PLACEHOLDER 35",
-          "tags": [
-            "risd"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 36",
-          "en": "PLACEHOLDER 36",
-          "tags": [
-            "risd"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        }
-      ],
-      "UK": [
-        {
-          "count": "—",
-          "zh": "占位院校 01",
-          "en": "PLACEHOLDER 01",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 02",
-          "en": "PLACEHOLDER 02",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 03",
-          "en": "PLACEHOLDER 03",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 04",
-          "en": "PLACEHOLDER 04",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 05",
-          "en": "PLACEHOLDER 05",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 06",
-          "en": "PLACEHOLDER 06",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 07",
-          "en": "PLACEHOLDER 07",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 08",
-          "en": "PLACEHOLDER 08",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 09",
-          "en": "PLACEHOLDER 09",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 10",
-          "en": "PLACEHOLDER 10",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 11",
-          "en": "PLACEHOLDER 11",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 12",
-          "en": "PLACEHOLDER 12",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 13",
-          "en": "PLACEHOLDER 13",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 14",
-          "en": "PLACEHOLDER 14",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 15",
-          "en": "PLACEHOLDER 15",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 16",
-          "en": "PLACEHOLDER 16",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 17",
-          "en": "PLACEHOLDER 17",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 18",
-          "en": "PLACEHOLDER 18",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 19",
-          "en": "PLACEHOLDER 19",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 20",
-          "en": "PLACEHOLDER 20",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 21",
-          "en": "PLACEHOLDER 21",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 22",
-          "en": "PLACEHOLDER 22",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 23",
-          "en": "PLACEHOLDER 23",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 24",
-          "en": "PLACEHOLDER 24",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 25",
-          "en": "PLACEHOLDER 25",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 26",
-          "en": "PLACEHOLDER 26",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 27",
-          "en": "PLACEHOLDER 27",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 28",
-          "en": "PLACEHOLDER 28",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 29",
-          "en": "PLACEHOLDER 29",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 30",
-          "en": "PLACEHOLDER 30",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 31",
-          "en": "PLACEHOLDER 31",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 32",
-          "en": "PLACEHOLDER 32",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 33",
-          "en": "PLACEHOLDER 33",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 34",
-          "en": "PLACEHOLDER 34",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 35",
-          "en": "PLACEHOLDER 35",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 36",
-          "en": "PLACEHOLDER 36",
-          "tags": [
-            "uk-g5"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        }
-      ],
-      "HK_SG": [
-        {
-          "count": "—",
-          "zh": "占位院校 01",
-          "en": "PLACEHOLDER 01",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 02",
-          "en": "PLACEHOLDER 02",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 03",
-          "en": "PLACEHOLDER 03",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 04",
-          "en": "PLACEHOLDER 04",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 05",
-          "en": "PLACEHOLDER 05",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 06",
-          "en": "PLACEHOLDER 06",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 07",
-          "en": "PLACEHOLDER 07",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 08",
-          "en": "PLACEHOLDER 08",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 09",
-          "en": "PLACEHOLDER 09",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 10",
-          "en": "PLACEHOLDER 10",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 11",
-          "en": "PLACEHOLDER 11",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 12",
-          "en": "PLACEHOLDER 12",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 13",
-          "en": "PLACEHOLDER 13",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 14",
-          "en": "PLACEHOLDER 14",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 15",
-          "en": "PLACEHOLDER 15",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 16",
-          "en": "PLACEHOLDER 16",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 17",
-          "en": "PLACEHOLDER 17",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 18",
-          "en": "PLACEHOLDER 18",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 19",
-          "en": "PLACEHOLDER 19",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 20",
-          "en": "PLACEHOLDER 20",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 21",
-          "en": "PLACEHOLDER 21",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 22",
-          "en": "PLACEHOLDER 22",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 23",
-          "en": "PLACEHOLDER 23",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 24",
-          "en": "PLACEHOLDER 24",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 25",
-          "en": "PLACEHOLDER 25",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 26",
-          "en": "PLACEHOLDER 26",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 27",
-          "en": "PLACEHOLDER 27",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 28",
-          "en": "PLACEHOLDER 28",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 29",
-          "en": "PLACEHOLDER 29",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 30",
-          "en": "PLACEHOLDER 30",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 31",
-          "en": "PLACEHOLDER 31",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 32",
-          "en": "PLACEHOLDER 32",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 33",
-          "en": "PLACEHOLDER 33",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 34",
-          "en": "PLACEHOLDER 34",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 35",
-          "en": "PLACEHOLDER 35",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 36",
-          "en": "PLACEHOLDER 36",
-          "tags": [
-            "hk-sg"
-          ],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        }
-      ],
-      "OTHER": [
-        {
-          "count": "—",
-          "zh": "占位院校 01",
-          "en": "PLACEHOLDER 01",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 02",
-          "en": "PLACEHOLDER 02",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 03",
-          "en": "PLACEHOLDER 03",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 04",
-          "en": "PLACEHOLDER 04",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 05",
-          "en": "PLACEHOLDER 05",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 06",
-          "en": "PLACEHOLDER 06",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 07",
-          "en": "PLACEHOLDER 07",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 08",
-          "en": "PLACEHOLDER 08",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 09",
-          "en": "PLACEHOLDER 09",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 10",
-          "en": "PLACEHOLDER 10",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 11",
-          "en": "PLACEHOLDER 11",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 12",
-          "en": "PLACEHOLDER 12",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 13",
-          "en": "PLACEHOLDER 13",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 14",
-          "en": "PLACEHOLDER 14",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 15",
-          "en": "PLACEHOLDER 15",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 16",
-          "en": "PLACEHOLDER 16",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 17",
-          "en": "PLACEHOLDER 17",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 18",
-          "en": "PLACEHOLDER 18",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 19",
-          "en": "PLACEHOLDER 19",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 20",
-          "en": "PLACEHOLDER 20",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 21",
-          "en": "PLACEHOLDER 21",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 22",
-          "en": "PLACEHOLDER 22",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 23",
-          "en": "PLACEHOLDER 23",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 24",
-          "en": "PLACEHOLDER 24",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 25",
-          "en": "PLACEHOLDER 25",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 26",
-          "en": "PLACEHOLDER 26",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 27",
-          "en": "PLACEHOLDER 27",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 28",
-          "en": "PLACEHOLDER 28",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 29",
-          "en": "PLACEHOLDER 29",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 30",
-          "en": "PLACEHOLDER 30",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 31",
-          "en": "PLACEHOLDER 31",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 32",
-          "en": "PLACEHOLDER 32",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 33",
-          "en": "PLACEHOLDER 33",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 34",
-          "en": "PLACEHOLDER 34",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 35",
-          "en": "PLACEHOLDER 35",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 36",
-          "en": "PLACEHOLDER 36",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        }
-      ],
-      "JP": [
-        {
-          "count": "—",
-          "zh": "占位院校 01",
-          "en": "PLACEHOLDER 01",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 02",
-          "en": "PLACEHOLDER 02",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 03",
-          "en": "PLACEHOLDER 03",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 04",
-          "en": "PLACEHOLDER 04",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 05",
-          "en": "PLACEHOLDER 05",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 06",
-          "en": "PLACEHOLDER 06",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 07",
-          "en": "PLACEHOLDER 07",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 08",
-          "en": "PLACEHOLDER 08",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 09",
-          "en": "PLACEHOLDER 09",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 10",
-          "en": "PLACEHOLDER 10",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 11",
-          "en": "PLACEHOLDER 11",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 12",
-          "en": "PLACEHOLDER 12",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 13",
-          "en": "PLACEHOLDER 13",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 14",
-          "en": "PLACEHOLDER 14",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 15",
-          "en": "PLACEHOLDER 15",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 16",
-          "en": "PLACEHOLDER 16",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 17",
-          "en": "PLACEHOLDER 17",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 18",
-          "en": "PLACEHOLDER 18",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 19",
-          "en": "PLACEHOLDER 19",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 20",
-          "en": "PLACEHOLDER 20",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 21",
-          "en": "PLACEHOLDER 21",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 22",
-          "en": "PLACEHOLDER 22",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 23",
-          "en": "PLACEHOLDER 23",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 24",
-          "en": "PLACEHOLDER 24",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 25",
-          "en": "PLACEHOLDER 25",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 26",
-          "en": "PLACEHOLDER 26",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 27",
-          "en": "PLACEHOLDER 27",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 28",
-          "en": "PLACEHOLDER 28",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 29",
-          "en": "PLACEHOLDER 29",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 30",
-          "en": "PLACEHOLDER 30",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 31",
-          "en": "PLACEHOLDER 31",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 32",
-          "en": "PLACEHOLDER 32",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 33",
-          "en": "PLACEHOLDER 33",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 34",
-          "en": "PLACEHOLDER 34",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 35",
-          "en": "PLACEHOLDER 35",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        },
-        {
-          "count": "—",
-          "zh": "占位院校 36",
-          "en": "PLACEHOLDER 36",
-          "tags": [],
-          "seasons": [
-            "2024",
-            "2025",
-            "2026"
-          ]
-        }
-      ]
-    },
     "seasonFilters": [
       "2024",
       "2025",
       "2026"
-    ]
+    ],
+    "groups": {
+      "UK": [
+        {
+          "count": "1070",
+          "zh": "伦敦艺术大学",
+          "en": "University of the Arts London",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "234",
+            "2025": "377",
+            "2026": "459"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "BA (Hons) Illustration and Visual Media",
+                "插画与视觉媒体（荣誉）文学学士"
+              ],
+              [
+                "UAL Foundation Diploma in Art and Design",
+                "伦敦艺术大学·艺术与设计预科文凭"
+              ],
+              [
+                "Foundation Diploma in Art and Design",
+                "艺术与设计预科文凭"
+              ],
+              [
+                "BA (Hons) Fine Art: Photography",
+                "纯艺术·摄影（荣誉）文学学士"
+              ],
+              [
+                "Certificate in Higher Education: Preparation for Design, Media and Screen",
+                "教育·设计·媒体与影视证书课程高等预备"
+              ],
+              [
+                "BA (Hons) Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "Certificate of Higher Education: Preparation for Design, Media and Screen",
+                "设计·媒体与影视高等教育证书预备"
+              ],
+              [
+                "BA (Hons) Photography",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons) Fine Art",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "Level 3: International Introduction to the Study of Design, Media and Screen",
+                "设计·媒体与影视国际导论学习"
+              ],
+              [
+                "Illustration and Visual Media",
+                "插画与视觉媒体"
+              ],
+              [
+                "BA (Hons) Fine Art: Sculpture",
+                "纯艺术·雕塑（荣誉）文学学士"
+              ],
+              [
+                "BA Illustration",
+                "插画文学学士"
+              ],
+              [
+                "UAL Level 3 Foundation Diploma in Art and Design",
+                "伦敦艺术大学·艺术与设计预科文凭"
+              ],
+              [
+                "BA(Hons) Fine Art",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "CertHE Preparation for Design, Media and Screen",
+                "设计·媒体与影视高等教育证书预备"
+              ],
+              [
+                "：UAL Foundation Diploma in Art and Design",
+                "伦敦艺术大学·艺术与设计预科文凭"
+              ],
+              [
+                "摄影",
+                "摄影"
+              ],
+              [
+                "Fine Art",
+                "纯艺术"
+              ],
+              [
+                "：Certificate of Higher Education: Preparation for Design, Media and Screen",
+                "设计·媒体与影视高等教育证书预备"
+              ],
+              [
+                "Foundation Diploma in Art & Design",
+                "艺术·设计预科文凭"
+              ],
+              [
+                "BA (Hons) Fine Art: Painting",
+                "纯艺术·绘画（荣誉）文学学士"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "Art Direction and Visual Effects",
+                "艺术指导与视觉特效"
+              ],
+              [
+                "BA (Hons)Fine Art:Painting",
+                "纯艺术·绘画（荣誉）文学学士"
+              ],
+              [
+                "UAL Level 3 Foundation Diploma in Art and Design at UAL Pre-Degree Studies",
+                "伦敦艺术大学·艺术与设计·伦敦艺术大学·研究预科文凭预科"
+              ],
+              [
+                "BA (Hons) Photojournalism and Documentary Photography",
+                "新闻摄影与纪录片·摄影（荣誉）文学学士"
+              ],
+              [
+                "Certificate of Higher Education: Preparation for D",
+                "高等教育证书预备"
+              ],
+              [
+                "BA (Hons) Graphic Communication Design",
+                "平面·传播设计（荣誉）文学学士"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "BA (Hons) Fine Art: Drawing",
+                "纯艺术·素描（荣誉）文学学士"
+              ],
+              [
+                "Certificate in Higher Education: Preparation for D",
+                "教育证书课程高等预备"
+              ],
+              [
+                "Fine Art: Sculpture",
+                "纯艺术·雕塑"
+              ],
+              [
+                "BA (Hons) Art Direction and Visual Effects",
+                "艺术指导与视觉特效（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons) Fine Art (Painting)",
+                "纯艺术·绘画（荣誉）文学学士"
+              ],
+              [
+                "Pre-degree UAL Foundation Diploma in Art and Design",
+                "伦敦艺术大学·艺术与设计预科预科文凭"
+              ],
+              [
+                "BA (Hons)Fine Art:Sculputure",
+                "纯艺术·雕塑（荣誉）文学学士"
+              ],
+              [
+                "Level 3 Foundation Diploma in Art and Design",
+                "艺术与设计预科文凭"
+              ],
+              [
+                "Fine Art: Drawing",
+                "纯艺术·素描"
+              ],
+              [
+                "插画",
+                "插画"
+              ],
+              [
+                "BA Art Direction and Visual Effects",
+                "艺术指导与视觉特效文学学士"
+              ],
+              [
+                "Foundation Diploma in Art and Design -Communication Design",
+                "艺术与设计·传播设计预科文凭"
+              ],
+              [
+                "UAL Level 3 Foundation Diploma in Art And Design",
+                "伦敦艺术大学·艺术与设计预科文凭"
+              ],
+              [
+                "lllustration and VisualMedia",
+                "插画与视觉媒体"
+              ],
+              [
+                "BA (Hons)Fine Art:Drawing",
+                "纯艺术·素描（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons) Fashion Photography",
+                "时尚摄影（荣誉）文学学士"
+              ],
+              [
+                "：Certificate of Higher Education: Preparation for",
+                "高等教育证书预备"
+              ],
+              [
+                "CertHEPreparation for Design, Media and Screen",
+                "设计·媒体与影视"
+              ],
+              [
+                "lllustration",
+                "插画"
+              ],
+              [
+                "BA Fine Art",
+                "纯艺术文学学士"
+              ],
+              [
+                "BA Graphic Design Communication",
+                "平面设计·传播文学学士"
+              ],
+              [
+                "art direction and visual effects BA",
+                "艺术指导与视觉特效文学学士"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "BA (Hons)Fine Art: Painting",
+                "纯艺术·绘画（荣誉）文学学士"
+              ],
+              [
+                "fine art",
+                "纯艺术"
+              ],
+              [
+                "BA Illustration and Visual Media",
+                "插画与视觉媒体文学学士"
+              ],
+              [
+                "Wimbledon College of Arts--Art Direction and Visual Effects",
+                "学院·艺术·艺术指导与视觉特效"
+              ],
+              [
+                "International Preparation for Fashion (Certificate in Higher Education)",
+                "服装与服饰·教育国际预备证书课程高等"
+              ],
+              [
+                "International Introduction to the Study of Design, Media and Screen",
+                "设计·媒体与影视国际导论学习"
+              ],
+              [
+                "UAL Level 3 Foundation Diploma in Art and Design at UAL School of Pre-Degree Studies",
+                "伦敦艺术大学·艺术与设计·伦敦艺术大学·学院·研究预科文凭预科"
+              ],
+              [
+                "艺术设计",
+                "艺术设计"
+              ],
+              [
+                "level3 ）Foundation Diploma in Art and Design",
+                "艺术与设计预科文凭"
+              ],
+              [
+                "Level 3: International Introduction to the Study of Design",
+                "设计国际导论学习"
+              ],
+              [
+                "BA (Hons) Illustration and Visual Media at London College of Communication",
+                "插画与视觉媒体·学院·传播（荣誉）文学学士"
+              ],
+              [
+                "UAL Foundation",
+                "伦敦艺术大学预科"
+              ],
+              [
+                "BA (Hons) Fine Art: Photography at Camberwell College of Arts",
+                "纯艺术·摄影·坎伯韦尔·学院·艺术（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons)Fine Art: Drawing",
+                "纯艺术·素描（荣誉）文学学士"
+              ],
+              [
+                "策展",
+                "策展"
+              ],
+              [
+                "Commercial Photography",
+                "商业·摄影"
+              ],
+              [
+                "Illustration and Visual Media BA hons",
+                "插画与视觉媒体（荣誉）文学学士"
+              ],
+              [
+                "BA Fine Art: Photography",
+                "纯艺术·摄影文学学士"
+              ],
+              [
+                "UAL Level3 Foundation Diploma",
+                "伦敦艺术大学预科文凭"
+              ],
+              [
+                "BA (Hons) Commercial Photography",
+                "商业·摄影（荣誉）文学学士"
+              ],
+              [
+                "美术雕塑",
+                "美术雕塑"
+              ],
+              [
+                "UAL Foundation Diploma in Art and Design, Speciali",
+                "伦敦艺术大学·艺术与设计预科文凭"
+              ],
+              [
+                "BA (Hons) lllustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "Graduate Diploma Illustration",
+                "插画研究生文凭"
+              ],
+              [
+                "）Foundation Diploma in Art and Design",
+                "艺术与设计预科文凭"
+              ],
+              [
+                "Level 3 International: Introduction to the Study o",
+                "国际导论学习"
+              ],
+              [
+                "BFA in Illustration",
+                "插画艺术学士"
+              ],
+              [
+                "：UAL Foundation Diploma in Art and Design-Curricul",
+                "伦敦艺术大学·艺术与设计预科文凭"
+              ],
+              [
+                "Art and Design",
+                "艺术与设计"
+              ],
+              [
+                "Design, Media and screen",
+                "设计·媒体与影视"
+              ],
+              [
+                "Fashion Imaging and Illustration",
+                "时尚影像与插画"
+              ],
+              [
+                "Foundation Diploma in Art and Design, Art Speciali",
+                "艺术与设计·艺术预科文凭"
+              ],
+              [
+                "BA (Hons)Culture, Criticism and Curation",
+                "文化·艺术评论与策展（荣誉）文学学士"
+              ],
+              [
+                "A (Hons) Performance: Design and Practice",
+                "表演·设计与实践（荣誉）"
+              ],
+              [
+                "Fine Art: Photography",
+                "纯艺术·摄影"
+              ],
+              [
+                "Certificate in Huber education: preparation for de",
+                "教育证书课程预备"
+              ],
+              [
+                "Fine Art:Painting",
+                "纯艺术·绘画"
+              ],
+              [
+                "Level 3: International Introduction to the Study o",
+                "国际导论学习"
+              ],
+              [
+                "BA (Hons)Photojournalism andDocumentary Photograph",
+                "新闻摄影（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons) Photojournalism and Documentary Photogra",
+                "新闻摄影与纪录片（荣誉）文学学士"
+              ],
+              [
+                "lllustration and VisuaMedia(WPF3)",
+                "插画与"
+              ],
+              [
+                "CertHE Preparation for Design, Media and Screen at UAL School of Pre-Degree Studies",
+                "设计·媒体与影视·伦敦艺术大学·学院·研究高等教育证书预备预科"
+              ],
+              [
+                "艺术指导与视觉效果",
+                "艺术指导与视觉效果"
+              ],
+              [
+                "BA Photography",
+                "摄影文学学士"
+              ],
+              [
+                "UAL Foundation Diploma in Art & Design",
+                "伦敦艺术大学·艺术·设计预科文凭"
+              ],
+              [
+                "Pre-degree Certificate of Higher Education: Preparation for Design, Media and Screen",
+                "设计·媒体与影视预科高等教育证书预备"
+              ],
+              [
+                "International Introduction to the Study of Design, Media and Screen-Level 3",
+                "设计·媒体与影视国际导论学习"
+              ],
+              [
+                "：Foundation Diploma in Art and Design",
+                "艺术与设计预科文凭"
+              ],
+              [
+                "Certificate in Higher Education: Preparation for Design",
+                "教育·设计证书课程高等预备"
+              ],
+              [
+                "illustration and visual media",
+                "插画与视觉媒体"
+              ],
+              [
+                "BA Fine Art:Sculpture",
+                "纯艺术·雕塑文学学士"
+              ],
+              [
+                "BA （Hons) Photography",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "Culture, Criticism and Curation",
+                "文化·艺术评论与策展"
+              ],
+              [
+                "Design for Art Direction",
+                "设计·艺术指导"
+              ],
+              [
+                "UAL Level 3 Foundation Diploma",
+                "伦敦艺术大学预科文凭"
+              ],
+              [
+                "（）Certificate in Higher Education: Preparation for Design, Media and Screen",
+                "教育·设计·媒体与影视证书课程高等预备"
+              ],
+              [
+                "BA (Hons) Design Management",
+                "设计管理（荣誉）文学学士"
+              ],
+              [
+                "Certificate of Higher Education: Preparation for Design, Media and",
+                "设计·媒体与高等教育证书预备"
+              ],
+              [
+                "Certificate of Higher Education: Preparation for Design, Media and Screen -Level 4",
+                "设计·媒体与影视高等教育证书预备"
+              ],
+              [
+                "UAL Foundation Diploma in Art and Design (Communication Design pathway)",
+                "伦敦艺术大学·艺术与设计·传播设计·方向预科文凭"
+              ],
+              [
+                "：Certificate in Higher Education: Preparation for Design, Media",
+                "教育·设计·媒体证书课程高等预备"
+              ],
+              [
+                "：Foundation Diploma in Art & Design",
+                "艺术·设计预科文凭"
+              ],
+              [
+                "：Certificate in Higher Education: Preparation for Design, Media and Screen",
+                "教育·设计·媒体与影视证书课程高等预备"
+              ],
+              [
+                "BA (Hons) Ceramic Design",
+                "陶瓷·设计（荣誉）文学学士"
+              ],
+              [
+                "Certificate of Higher Education",
+                "高等教育证书"
+              ],
+              [
+                "UALLevel3 Foundation Diploma in Artand Design",
+                "设计预科文凭"
+              ],
+              [
+                "BA Fine Art: sculpture",
+                "纯艺术·雕塑文学学士"
+              ],
+              [
+                "BA (Hons)Fine Art: Photography",
+                "纯艺术·摄影（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons) Performance: Design and Practice",
+                "表演·设计与实践（荣誉）文学学士"
+              ],
+              [
+                "BA(Hons) Fine Art：sculpture",
+                "纯艺术·雕塑（荣誉）文学学士"
+              ],
+              [
+                "level3：International Introduction to the Study of Design, Media and Screen",
+                "设计·媒体与影视国际导论学习"
+              ],
+              [
+                "level4：Certificate of Higher Education: Preparation for Design, Media and Screen",
+                "设计·媒体与影视高等教育证书预备"
+              ],
+              [
+                "陶瓷",
+                "陶瓷"
+              ],
+              [
+                "Illustration and VisualMedia",
+                "插画与视觉媒体"
+              ],
+              [
+                "illustration",
+                "插画"
+              ],
+              [
+                "Drawing",
+                "素描"
+              ],
+              [
+                "Graphic Design Communication",
+                "平面设计·传播"
+              ],
+              [
+                "Level3：International Introduction to the Study of Design, Media and Screen",
+                "设计·媒体与影视国际导论学习"
+              ],
+              [
+                "BA (Hons) Graphic Branding and Identity",
+                "平面·品牌设计与（荣誉）文学学士"
+              ],
+              [
+                "UAL Foundation Diploma in Art and Design, Specialist mode, Communication Design",
+                "伦敦艺术大学·艺术与设计·传播设计预科文凭"
+              ],
+              [
+                ":Certifcate of HigherEducation: Preparation forDesign, Media and Screen",
+                "媒体与影视预备"
+              ],
+              [
+                ":Level 3: InternationalIntroduction to the Study of Design, Media and Screen",
+                "设计·媒体与影视学习"
+              ],
+              [
+                "Public Relations",
+                "公共关系"
+              ],
+              [
+                "Photojournalism and Documentary Photography",
+                "新闻摄影与纪录片·摄影"
+              ],
+              [
+                "BA Performance: Design and Practice",
+                "表演·设计与实践文学学士"
+              ],
+              [
+                "UAL Foundation Diploma in Art and Design, Specialist mode: Communication Design",
+                "伦敦艺术大学·艺术与设计·传播设计预科文凭"
+              ],
+              [
+                "BA Art Directon and Visual Effects",
+                "艺术与视觉特效文学学士"
+              ],
+              [
+                "UAL Foundation Diploma in Art and Design, Diagnostic mode",
+                "伦敦艺术大学·艺术与设计预科文凭"
+              ],
+              [
+                "Graphic Design BA (Hons)",
+                "平面设计（荣誉）文学学士"
+              ],
+              [
+                "Fine Art:Drawing",
+                "纯艺术·素描"
+              ],
+              [
+                "Pre-degree Level 3: International Introduction to the Study of Design, Media and Screen",
+                "设计·媒体与影视预科国际导论学习"
+              ],
+              [
+                "：Level 3: International Introduction to the Study of Design, Media and Screen",
+                "设计·媒体与影视国际导论学习"
+              ],
+              [
+                "BA (Hons)Fine Art:Sculpture",
+                "纯艺术·雕塑（荣誉）文学学士"
+              ],
+              [
+                "UAL Level 3 Foundation Diploma in Art and Design Pathway: Communication Design",
+                "伦敦艺术大学·艺术与设计·方向·传播设计预科文凭"
+              ],
+              [
+                "UAL level3 Foundation Diploma in Art & Design",
+                "伦敦艺术大学·艺术·设计预科文凭"
+              ],
+              [
+                "UAL level 3 Foundation Diploma in Art & Design",
+                "伦敦艺术大学·艺术·设计预科文凭"
+              ],
+              [
+                "Foundation Diploma in Art and Design-Communication Design",
+                "艺术与设计·传播设计预科文凭"
+              ],
+              [
+                "Foundation Diploma in Art and Design-Fine Art",
+                "艺术与设计·纯艺术预科文凭"
+              ],
+              [
+                "UAL Level3 Foundation Diploma in Art and Design",
+                "伦敦艺术大学·艺术与设计预科文凭"
+              ],
+              [
+                "BA (Hons) Fine Art (Drawing)",
+                "纯艺术·素描（荣誉）文学学士"
+              ],
+              [
+                "BA Graphic design",
+                "平面设计文学学士"
+              ],
+              [
+                "Communication Design",
+                "传播设计"
+              ],
+              [
+                "Fine Art: Painting",
+                "纯艺术·绘画"
+              ],
+              [
+                "lllustration and Visual Media",
+                "插画与视觉·媒体"
+              ]
+            ],
+            "pg": [
+              [
+                "MA Illustration",
+                "插画文学硕士"
+              ],
+              [
+                "MA Fine Art",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Graduate Diploma Illustration",
+                "插画研究生文凭"
+              ],
+              [
+                "MA Fine Art: Printmaking",
+                "纯艺术·版画文学硕士"
+              ],
+              [
+                "MA Illustration and Visual Media",
+                "插画与视觉媒体文学硕士"
+              ],
+              [
+                "MA Fine Art: Sculpture",
+                "纯艺术·雕塑文学硕士"
+              ],
+              [
+                "MA Photography",
+                "摄影文学硕士"
+              ],
+              [
+                "MA Fine Art:Printmaking",
+                "纯艺术·版画文学硕士"
+              ],
+              [
+                "MA Fine Art: Photography",
+                "纯艺术·摄影文学硕士"
+              ],
+              [
+                "MA Fine Art: Drawing",
+                "纯艺术·素描文学硕士"
+              ],
+              [
+                "MA Curating and Collections",
+                "策展与收藏文学硕士"
+              ],
+              [
+                "Graduate Diploma Fine Art",
+                "纯艺术研究生文凭"
+              ],
+              [
+                "MA Animation",
+                "动画文学硕士"
+              ],
+              [
+                "MA lllustration",
+                "插画文学硕士"
+              ],
+              [
+                "MA Fine Art: Painting",
+                "纯艺术·绘画文学硕士"
+              ],
+              [
+                "MA Fine Art-15 months",
+                "纯艺术文学硕士"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "MA Photojournalism and Documentary Photography",
+                "新闻摄影与纪录片·摄影文学硕士"
+              ],
+              [
+                "MA Illustration-15 months",
+                "插画文学硕士"
+              ],
+              [
+                "摄影",
+                "摄影"
+              ],
+              [
+                "Photography MA",
+                "摄影文学硕士"
+              ],
+              [
+                "MA Fine Art：Painting",
+                "纯艺术·绘画文学硕士"
+              ],
+              [
+                "MA Illustration 15",
+                "插画文学硕士"
+              ],
+              [
+                "Graduate Diploma lllustration",
+                "插画研究生文凭"
+              ],
+              [
+                "MA Contemporary Photography and Theory",
+                "当代·摄影与理论文学硕士"
+              ],
+              [
+                "MA Photography-1 year 3 months",
+                "摄影文学硕士"
+              ],
+              [
+                "MA Fine Art-2 years",
+                "纯艺术文学硕士"
+              ],
+              [
+                "lllustration",
+                "插画"
+              ],
+              [
+                "MA Character Animation",
+                "角色·动画文学硕士"
+              ],
+              [
+                "Fine Art MA",
+                "纯艺术文学硕士"
+              ],
+              [
+                "MA Contemporary Photography: Practices and Philosophies",
+                "当代·摄影·实践与哲学文学硕士"
+              ],
+              [
+                "MAFine Art",
+                "艺术"
+              ],
+              [
+                "MRes Art: Exhibition Studies",
+                "艺术·展览·研究研究型硕士"
+              ],
+              [
+                "MA Culture, Criticism and Curation",
+                "文化·艺术评论与策展文学硕士"
+              ],
+              [
+                "MA Innovation Management",
+                "创新管理文学硕士"
+              ],
+              [
+                "MA Fine Art: Computational Arts",
+                "纯艺术·计算·艺术文学硕士"
+              ],
+              [
+                "MA Internet Equalities",
+                "文学硕士"
+              ],
+              [
+                "MA Contemporary Photography; Practices and Philosophies",
+                "当代·摄影·实践与哲学文学硕士"
+              ],
+              [
+                "Graduate Diploma Illustration-1 year",
+                "插画研究生文凭"
+              ],
+              [
+                "MA Fine Art: Photography-15 months",
+                "纯艺术·摄影文学硕士"
+              ],
+              [
+                "MA Fine Art:Printmaking -15",
+                "纯艺术·版画文学硕士"
+              ],
+              [
+                "Fine Art",
+                "纯艺术"
+              ],
+              [
+                "MA Innovation Management-2 years",
+                "创新管理文学硕士"
+              ],
+              [
+                "MA Curating and Collections-1 year",
+                "策展与收藏文学硕士"
+              ],
+              [
+                "MA Fine Art: Drawing-15 months",
+                "纯艺术·素描文学硕士"
+              ],
+              [
+                "MA Fine art：Sculpture",
+                "纯艺术·雕塑文学硕士"
+              ],
+              [
+                "MA Contemporary Photography and Theory-2 years",
+                "当代·摄影与理论文学硕士"
+              ],
+              [
+                "MSc Creative Computing (FT)",
+                "创意计算·全日制理学硕士"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "MA Fine Art-Sculpture",
+                "纯艺术·雕塑文学硕士"
+              ],
+              [
+                "MA Fine Art 15 months",
+                "纯艺术文学硕士"
+              ],
+              [
+                "MA Fine Art- Sculpture 2 (60 weeks)",
+                "纯艺术·雕塑文学硕士"
+              ],
+              [
+                "MA Illustration and Visual Media-1 3",
+                "插画与视觉媒体文学硕士"
+              ],
+              [
+                "雕塑",
+                "雕塑"
+              ],
+              [
+                "MA Illustration and Visual Media at London College",
+                "插画与视觉媒体·学院文学硕士"
+              ],
+              [
+                "MA Fine Art：Sculpture",
+                "纯艺术·雕塑文学硕士"
+              ],
+              [
+                "MA Fine Art:Sculpture",
+                "纯艺术·雕塑文学硕士"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "插画",
+                "插画"
+              ],
+              [
+                "Fine Art: Painting",
+                "纯艺术·绘画"
+              ],
+              [
+                "MA Fine Art: Printmaking -15 months",
+                "纯艺术·版画文学硕士"
+              ],
+              [
+                "GraduateDiploma lllustration",
+                "插画"
+              ],
+              [
+                "illustration",
+                "插画"
+              ],
+              [
+                "MA Fine Art: Photography/15 months",
+                "纯艺术·摄影文学硕士"
+              ],
+              [
+                "MA Fine Art: Sculpture at Camberwell College of Arts",
+                "纯艺术·雕塑·坎伯韦尔·学院·艺术文学硕士"
+              ],
+              [
+                "MA Fine Art: Photography 15 months",
+                "纯艺术·摄影文学硕士"
+              ],
+              [
+                "MA Fine Art Printmaking",
+                "纯艺术·版画文学硕士"
+              ],
+              [
+                "MA Fine Art:Photography",
+                "纯艺术·摄影文学硕士"
+              ],
+              [
+                "MA Publishing",
+                "出版文学硕士"
+              ],
+              [
+                "MA Illustration at Camberwell College of Arts",
+                "插画·坎伯韦尔·学院·艺术文学硕士"
+              ],
+              [
+                "MA Photography/15 months",
+                "摄影文学硕士"
+              ],
+              [
+                "MA lllustration and Visual Media",
+                "插画与视觉·媒体文学硕士"
+              ],
+              [
+                "Animation MA",
+                "动画文学硕士"
+              ],
+              [
+                "MA Design Management",
+                "设计管理文学硕士"
+              ],
+              [
+                "MA Contemporary Photography：Practices and Philosophies",
+                "当代·摄影·实践与哲学文学硕士"
+              ],
+              [
+                "MA Fashion Photography",
+                "时尚摄影文学硕士"
+              ],
+              [
+                "MA Fine Art：Photography",
+                "纯艺术·摄影文学硕士"
+              ],
+              [
+                "Printmaking",
+                "版画"
+              ],
+              [
+                "MA illustration",
+                "插画文学硕士"
+              ],
+              [
+                "MA Fine Art 1",
+                "纯艺术文学硕士"
+              ],
+              [
+                "MA Fine Art: Printmaking - 1 year and 3 months",
+                "纯艺术·版画与文学硕士"
+              ],
+              [
+                "MA Fine Art: Drawing-12months",
+                "纯艺术·素描文学硕士"
+              ],
+              [
+                "MA Illustration - 15 Months",
+                "插画文学硕士"
+              ],
+              [
+                "MA Illustration/15 months",
+                "插画文学硕士"
+              ],
+              [
+                "MA Photojournalism and Documentary Photography-1 year 3 months",
+                "新闻摄影与纪录片·摄影文学硕士"
+              ],
+              [
+                "Fine Art: Photography MA",
+                "纯艺术·摄影文学硕士"
+              ],
+              [
+                "Photography MA 15 months",
+                "摄影文学硕士"
+              ],
+              [
+                "MA Fine Art/15 months",
+                "纯艺术文学硕士"
+              ],
+              [
+                "MA Illustration and Visual Media，15 months",
+                "插画与视觉媒体文学硕士"
+              ],
+              [
+                "Photography MA -15",
+                "摄影文学硕士"
+              ],
+              [
+                "MA Illustration and Visual Media - 1 year 3 months",
+                "插画与视觉媒体文学硕士"
+              ],
+              [
+                "MA Illustration -15",
+                "插画文学硕士"
+              ],
+              [
+                "MA Fine art：Printmaking",
+                "纯艺术·版画文学硕士"
+              ],
+              [
+                "MA Fine Art: Photography -15",
+                "纯艺术·摄影文学硕士"
+              ],
+              [
+                "MA Fine Art/2 years",
+                "纯艺术文学硕士"
+              ],
+              [
+                "艺术与设计",
+                "艺术与设计"
+              ],
+              [
+                "Fine Art MA/15 months",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Mres Art: Theory and Philosophy",
+                "艺术·理论与哲学研究型硕士"
+              ],
+              [
+                "MA Fine Art:sculpture",
+                "纯艺术·雕塑文学硕士"
+              ],
+              [
+                "MA Fine Art at Camberwell College of Arts",
+                "纯艺术·坎伯韦尔·学院·艺术文学硕士"
+              ],
+              [
+                "MA Fine Art （sculpture）",
+                "纯艺术·雕塑文学硕士"
+              ],
+              [
+                "MA Fine Art(sculpture)",
+                "纯艺术·雕塑文学硕士"
+              ],
+              [
+                "MA Fine Art: Painting - 1 Year",
+                "纯艺术·绘画文学硕士"
+              ],
+              [
+                "MRes Art: Exhibition Studies-2 years",
+                "艺术·展览·研究研究型硕士"
+              ],
+              [
+                "Commercial Photography",
+                "商业·摄影"
+              ],
+              [
+                "MA Commercial Photography",
+                "商业·摄影文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "542",
+          "zh": "金斯顿大学",
+          "en": "Kingston University London",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "201",
+            "2025": "188",
+            "2026": "153"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Illustration MA",
+                "插画文学硕士"
+              ],
+              [
+                "Graduate Diploma in Creative Practice",
+                "创意实践研究生文凭"
+              ],
+              [
+                "MA Illustration",
+                "插画文学硕士"
+              ],
+              [
+                "MA Photography",
+                "摄影文学硕士"
+              ],
+              [
+                "Fine Art MFA",
+                "纯艺术艺术硕士"
+              ],
+              [
+                "MA Animation",
+                "动画文学硕士"
+              ],
+              [
+                "MFA Fine Art",
+                "纯艺术艺术硕士"
+              ],
+              [
+                "Photography MA",
+                "摄影文学硕士"
+              ],
+              [
+                "插画",
+                "插画"
+              ],
+              [
+                "Animation MA",
+                "动画文学硕士"
+              ],
+              [
+                "Illustration MA-1 year",
+                "插画文学硕士"
+              ],
+              [
+                "MA Illustration with Professional Placement",
+                "插画·专业·实习文学硕士"
+              ],
+              [
+                "MA Illustration (1FT)",
+                "插画文学硕士"
+              ],
+              [
+                "Art Business MA",
+                "艺术商业文学硕士"
+              ],
+              [
+                "Graduate Diploma in Creative Practice course",
+                "创意实践·课程研究生文凭"
+              ],
+              [
+                "MA Art Business",
+                "艺术商业文学硕士"
+              ],
+              [
+                "MFA Fine Art (2FT)",
+                "纯艺术艺术硕士"
+              ],
+              [
+                "MA lllustration",
+                "插画文学硕士"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "MSc Project Management for Creative Practitioners",
+                "管理·创意理学硕士"
+              ],
+              [
+                "Curating Contemporary Design MA",
+                "策展·当代·设计文学硕士"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "摄影",
+                "摄影"
+              ],
+              [
+                "MA Sustainable Design (1FT)",
+                "可持续·设计文学硕士"
+              ],
+              [
+                "MA Photography-1 year",
+                "摄影文学硕士"
+              ],
+              [
+                "Illustration MA/1 year",
+                "插画文学硕士"
+              ],
+              [
+                "Fine Art MFA 2 years",
+                "纯艺术艺术硕士"
+              ],
+              [
+                "MA in Curating Contemporary Design",
+                "策展·当代·设计文学硕士"
+              ],
+              [
+                "MA Animation (1FT)",
+                "动画文学硕士"
+              ],
+              [
+                "Sustainable Design MA",
+                "可持续·设计文学硕士"
+              ],
+              [
+                "Museum and Gallery Studies MA",
+                "博物馆与画廊·研究文学硕士"
+              ],
+              [
+                "Curating Contemporary Design MA (in partnership with The Design Museum)",
+                "策展·当代·设计·设计·博物馆文学硕士"
+              ],
+              [
+                "Fine Art MFA/2 years",
+                "纯艺术艺术硕士"
+              ],
+              [
+                "lllustration",
+                "插画"
+              ],
+              [
+                "MA animatin",
+                "文学硕士"
+              ],
+              [
+                "Graduate Diploma in Creative Practice course.",
+                "创意实践·课程研究生文凭"
+              ],
+              [
+                "MA Communication Design: Illustration",
+                "传播设计·插画文学硕士"
+              ],
+              [
+                "Fine Art MFA 2",
+                "纯艺术艺术硕士"
+              ],
+              [
+                "Creative Practice course",
+                "创意实践·课程"
+              ],
+              [
+                "Graduate Diploma in Creative Practice & Animation",
+                "创意实践·动画研究生文凭"
+              ],
+              [
+                "Graduate Diploma in Creative Practice and MA Illus",
+                "创意实践与研究生文凭文学硕士"
+              ],
+              [
+                "Graduate Diploma in Creative Practice andMA Illust",
+                "创意实践研究生文凭"
+              ],
+              [
+                "Illustration MA 2 years with placement",
+                "插画·实习文学硕士"
+              ],
+              [
+                "MA in Museum & Gallery Studies",
+                "博物馆·画廊·研究文学硕士"
+              ],
+              [
+                "MA Illustration l year",
+                "插画文学硕士年制"
+              ],
+              [
+                "Graduate Diploma in Creative Practice + Illustrati",
+                "创意实践研究生文凭"
+              ],
+              [
+                "Animation MA 1 year",
+                "动画文学硕士"
+              ],
+              [
+                "Photography",
+                "摄影"
+              ],
+              [
+                "MA Illustration 1",
+                "插画文学硕士"
+              ],
+              [
+                "MA Communication Design: illustration",
+                "传播设计·插画文学硕士"
+              ],
+              [
+                "MA Museum & Gallery Studies with Professional Plac",
+                "博物馆·画廊·研究·专业文学硕士"
+              ],
+              [
+                "Arts Business MA",
+                "艺术·商业文学硕士"
+              ],
+              [
+                "Curating Contemporary Design MA (in partnership wi",
+                "策展·当代·设计文学硕士"
+              ],
+              [
+                "MA in Curating Contemporary Design (1FT)",
+                "策展·当代·设计文学硕士"
+              ],
+              [
+                "Photography (MA)",
+                "摄影文学硕士"
+              ],
+              [
+                "MA Photography 12 months",
+                "摄影文学硕士"
+              ],
+              [
+                "Graduate Diploma in Creative Practice+MA Illustration",
+                "创意实践·插画研究生文凭文学硕士"
+              ],
+              [
+                "MA Illustration (1F T)",
+                "插画文学硕士"
+              ],
+              [
+                ": MA Art Business",
+                "艺术商业文学硕士"
+              ],
+              [
+                "MA Sustainable Design",
+                "可持续·设计文学硕士"
+              ],
+              [
+                "MA lllustration(1FT)",
+                "插画文学硕士"
+              ],
+              [
+                "Fine art",
+                "纯艺术"
+              ],
+              [
+                "MA Fine Art",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Illustration MA 2 year with placement",
+                "插画·实习文学硕士"
+              ],
+              [
+                "Illustration MA 1 year",
+                "插画文学硕士"
+              ],
+              [
+                "Master of Design in Illustration",
+                "插画设计学硕士"
+              ],
+              [
+                "MA illustration",
+                "插画文学硕士"
+              ],
+              [
+                "MA Art Business (1FT)",
+                "艺术商业文学硕士"
+              ],
+              [
+                "Ilustration MA -1",
+                "文学硕士"
+              ],
+              [
+                "Art Business MA -2（including professional placement）",
+                "艺术商业·专业·实习文学硕士"
+              ],
+              [
+                "Sustainable Design MA 1",
+                "可持续·设计文学硕士"
+              ],
+              [
+                "Illustration MA，2 years",
+                "插画文学硕士"
+              ],
+              [
+                "Fine Art MFA/1 year",
+                "纯艺术艺术硕士"
+              ],
+              [
+                "MA Curating Contemporary Design",
+                "策展·当代·设计文学硕士"
+              ],
+              [
+                "Illustration MA -1",
+                "插画文学硕士"
+              ],
+              [
+                "MA Photography -1",
+                "摄影文学硕士"
+              ],
+              [
+                "MA Illustration - 1 year",
+                "插画文学硕士"
+              ],
+              [
+                "Illustration MA 1",
+                "插画文学硕士"
+              ],
+              [
+                "Illustration MA - 1 year",
+                "插画文学硕士"
+              ],
+              [
+                "Art Business MA -1",
+                "艺术商业文学硕士"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ]
+            ],
+            "ug": [
+              [
+                "Fine Art BA (Hons)",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "Illustration Animation BA (Hons)",
+                "插画·动画（荣誉）文学学士"
+              ],
+              [
+                "Photography BA (Hons)",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "Illustration Animation",
+                "插画·动画"
+              ],
+              [
+                "Fine Art",
+                "纯艺术"
+              ],
+              [
+                "BA (Hons)Illustration Animation",
+                "插画·动画（荣誉）文学学士"
+              ],
+              [
+                "Photography",
+                "摄影"
+              ],
+              [
+                "摄影",
+                "摄影"
+              ],
+              [
+                "BA (Hons) Illustration Animation",
+                "插画·动画（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons) Photography (3FT)",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "Creative and Cultural Industries: Events and Exper",
+                "创意与文化·产业·活动与"
+              ],
+              [
+                "Creative & Cultural Industries: Events and Experie",
+                "创意·文化·产业·活动与"
+              ],
+              [
+                "Creative and Cultural Industries: Events and Experiences Design",
+                "创意与文化·产业·活动与体验·设计"
+              ],
+              [
+                "BA (Hons) Fine Art",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "BA Photography",
+                "摄影文学学士"
+              ],
+              [
+                "BA (Hons) Photography",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "Creative and Cultural Industries: Events and Experiences Design (P991)",
+                "创意与文化·产业·活动与体验·设计"
+              ],
+              [
+                "Interaction Design",
+                "交互设计"
+              ],
+              [
+                "Foundation Diploma in Art, Design& Media Practice",
+                "艺术·设计·媒体·实践预科文凭"
+              ],
+              [
+                "BA Creative & Cultural Industries: Events and Expe",
+                "创意·文化·产业·活动与文学学士"
+              ],
+              [
+                "Creative & Cultural Industries: Events and Experiences Design",
+                "创意·文化·产业·活动与体验·设计"
+              ],
+              [
+                "Creative & Cultural industries: Events and Experiences Design",
+                "创意·文化·产业·活动与体验·设计"
+              ],
+              [
+                "美术",
+                "美术"
+              ],
+              [
+                "Events and Experiences Design",
+                "活动与体验·设计"
+              ],
+              [
+                "Creative and Cultural Industries:",
+                "创意与文化·产业"
+              ],
+              [
+                "Creative and Cultural Industries",
+                "创意与文化·产业"
+              ],
+              [
+                "Photography BA（Hons）",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "llustration",
+                "插画"
+              ],
+              [
+                "llustration Animation",
+                "插画·动画"
+              ],
+              [
+                "BA Fashion Promotion and Communications",
+                "时尚推广与传播文学学士"
+              ],
+              [
+                "Foundation Diploma in Art, Design & Media Practice",
+                "艺术·设计·媒体·实践预科文凭"
+              ],
+              [
+                "Creative and Cultural Industries: Events and Experiences Design BA (Hons)",
+                "创意与文化·产业·活动与体验·设计（荣誉）文学学士"
+              ],
+              [
+                "Creative and Cultural Industries:Events and Experiences Design",
+                "创意与文化·产业·活动与体验·设计"
+              ],
+              [
+                "Illustration Animation BA ( Hons)",
+                "插画·动画（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons) Graphic Design",
+                "平面设计（荣誉）文学学士"
+              ],
+              [
+                "BA(Hons) Illustration Animation",
+                "插画·动画（荣誉）文学学士"
+              ],
+              [
+                "插画",
+                "插画"
+              ],
+              [
+                "Photography BA(Hons)",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "Graphic Design BA (Hons)",
+                "平面设计（荣誉）文学学士"
+              ],
+              [
+                "BA Illustration Animation",
+                "插画·动画文学学士"
+              ],
+              [
+                "BA Fine Art",
+                "纯艺术文学学士"
+              ],
+              [
+                "Fashion Promotion and Communication",
+                "时尚推广与传播"
+              ],
+              [
+                "lllustration Animation(3FT)",
+                "插画·动画"
+              ],
+              [
+                "Illustration Animation BA",
+                "插画·动画文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "424",
+          "zh": "皇家艺术学院",
+          "en": "Royal College of Art",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "140",
+            "2025": "139",
+            "2026": "145"
+          },
+          "hl": true,
+          "majors": {
+            "pg": [
+              [
+                "MA Print",
+                "版画文学硕士"
+              ],
+              [
+                "Graduate Diploma in Art and Design",
+                "艺术与设计研究生文凭"
+              ],
+              [
+                "MA Contemporary Art Practice",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "MA Sculpture",
+                "雕塑文学硕士"
+              ],
+              [
+                "Photography MA",
+                "摄影文学硕士"
+              ],
+              [
+                "Graduate Diploma in Art and Design - Communication",
+                "艺术与设计·传播研究生文凭"
+              ],
+              [
+                "Graduate Diploma Art&Design",
+                "艺术·设计研究生文凭"
+              ],
+              [
+                "Print MA",
+                "版画文学硕士"
+              ],
+              [
+                "MA Visual Communication",
+                "视觉传达文学硕士"
+              ],
+              [
+                "Print (MA)",
+                "版画文学硕士"
+              ],
+              [
+                "Arts & Humanities MFA",
+                "艺术·人文学科艺术硕士"
+              ],
+              [
+                "Print",
+                "版画"
+              ],
+              [
+                "Art & Design Graduate Diploma",
+                "艺术·设计研究生文凭"
+              ],
+              [
+                "Graduate Diploma in Art and Design - Fine Art",
+                "艺术与设计·纯艺术研究生文凭"
+              ],
+              [
+                "MFA Communication",
+                "传播艺术硕士"
+              ],
+              [
+                "MA Photography",
+                "摄影文学硕士"
+              ],
+              [
+                "Contemporary Art Practice (MA)",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "MA Animation",
+                "动画文学硕士"
+              ],
+              [
+                "Sculpture MA",
+                "雕塑文学硕士"
+              ],
+              [
+                "Contemporary Art Practice MA",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "Arts and Humanities (MFA)",
+                "艺术与人文学科艺术硕士"
+              ],
+              [
+                "Photography",
+                "摄影"
+              ],
+              [
+                "Sculpture",
+                "雕塑"
+              ],
+              [
+                "Graduate Diploma Art & Design",
+                "艺术·设计研究生文凭"
+              ],
+              [
+                "MFA Arts & Humanities",
+                "艺术·人文学科艺术硕士"
+              ],
+              [
+                "Photography (MA)",
+                "摄影文学硕士"
+              ],
+              [
+                "MA Print-1 year",
+                "版画文学硕士"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "Communication MFA",
+                "传播艺术硕士"
+              ],
+              [
+                "雕塑",
+                "雕塑"
+              ],
+              [
+                "Fine Art",
+                "纯艺术"
+              ],
+              [
+                "Painting (MA)",
+                "绘画文学硕士"
+              ],
+              [
+                "pre-Master’s Art & Design Graduate Diploma",
+                "预科·艺术·设计硕士研究生文凭"
+              ],
+              [
+                "print",
+                "版画"
+              ],
+              [
+                "Print(MA)",
+                "版画文学硕士"
+              ],
+              [
+                "Animation (MA)",
+                "动画文学硕士"
+              ],
+              [
+                "Animation MA",
+                "动画文学硕士"
+              ],
+              [
+                "Ceramics & Glass MA",
+                "陶瓷·玻璃艺术文学硕士"
+              ],
+              [
+                "MA Painting",
+                "绘画文学硕士"
+              ],
+              [
+                "Graduate Diploma Art and Design - Communication",
+                "艺术与设计·传播研究生文凭"
+              ],
+              [
+                "插画",
+                "插画"
+              ],
+              [
+                "Creative Education",
+                "创意·教育"
+              ],
+              [
+                "Curating Contemporary Art",
+                "策展·当代艺术"
+              ],
+              [
+                "Arts & Humanities",
+                "艺术·人文学科"
+              ],
+              [
+                "Visual Communication",
+                "视觉传达"
+              ],
+              [
+                "Sculpture (MA)",
+                "雕塑文学硕士"
+              ],
+              [
+                "Sculpture（MA）",
+                "雕塑文学硕士"
+              ],
+              [
+                "MA Curating Contemporary Art",
+                "策展·当代艺术文学硕士"
+              ],
+              [
+                "Visual Communication (MA)",
+                "视觉传达文学硕士"
+              ],
+              [
+                "MA Ceramics & Glass",
+                "陶瓷·玻璃艺术文学硕士"
+              ],
+              [
+                "MA Sculpture/1 year",
+                "雕塑文学硕士"
+              ],
+              [
+                "MA Contemporary Art Practice/1 year",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "MA Photography 1 year",
+                "摄影文学硕士"
+              ],
+              [
+                "Graduate Diploma Art and Design-Fine Art",
+                "艺术与设计·纯艺术研究生文凭"
+              ],
+              [
+                "MA Contemporary Art Practice-Moving Image",
+                "当代艺术实践·动态影像文学硕士"
+              ],
+              [
+                "摄影制作",
+                "摄影制作"
+              ],
+              [
+                "Photography(MA)",
+                "摄影文学硕士"
+              ],
+              [
+                "Communication(MFA)",
+                "传播艺术硕士"
+              ],
+              [
+                "MA Visual Communication programme",
+                "视觉传达文学硕士"
+              ],
+              [
+                "Art & Design Graduate Diploma:Fine Art 30 week",
+                "艺术·设计·纯艺术研究生文凭"
+              ],
+              [
+                "当代艺术实践",
+                "当代艺术实践"
+              ],
+              [
+                "Graduate Diploma Art and Design - Fine Art",
+                "艺术与设计·纯艺术研究生文凭"
+              ],
+              [
+                "Graduate Diploma",
+                "研究生文凭"
+              ],
+              [
+                "MA Contemporary Art Practice ＋ MA Sculpture",
+                "当代艺术实践·雕塑文学硕士文学硕士"
+              ],
+              [
+                "Creative Education (MEd)",
+                "创意·教育教育学硕士"
+              ],
+              [
+                "艺术管理",
+                "艺术管理"
+              ],
+              [
+                "Curating Contemporary Art (MA)",
+                "策展·当代艺术文学硕士"
+              ],
+              [
+                "Master of Research RCA",
+                "皇家艺术学院研究型硕士"
+              ],
+              [
+                "Art and Design",
+                "艺术与设计"
+              ],
+              [
+                "Graduate Diploma Art and Design - Communication -S",
+                "艺术与设计·传播研究生文凭"
+              ],
+              [
+                "艺术与设计",
+                "艺术与设计"
+              ],
+              [
+                "Art and design",
+                "艺术与设计"
+              ],
+              [
+                "MA Curating Contemporary",
+                "策展·当代文学硕士"
+              ],
+              [
+                "Communication",
+                "传播"
+              ],
+              [
+                "Visual Communication: Illustration Pathway",
+                "视觉传达·插画·方向"
+              ],
+              [
+                "Visual Communication-Illustration pathway",
+                "视觉传达·插画·方向"
+              ],
+              [
+                "Sculpture (MA) 2425",
+                "雕塑文学硕士"
+              ],
+              [
+                "GraduateDiploma in Art and Design - Fine Art programme",
+                "艺术与设计·纯艺术"
+              ],
+              [
+                "Graduate Diploma in Art and Design - Fine Art programme",
+                "艺术与设计·纯艺术研究生文凭"
+              ],
+              [
+                "Graduate Diploma Art & Design Pre",
+                "艺术·设计·预科研究生文凭"
+              ],
+              [
+                "Painting",
+                "绘画"
+              ],
+              [
+                "Master of Research",
+                "研究型硕士"
+              ],
+              [
+                "MA lllustration",
+                "插画文学硕士"
+              ],
+              [
+                "MEd in Creative Education",
+                "创意·教育教育学硕士"
+              ],
+              [
+                "V&A/RCA History of Design",
+                "皇家艺术学院·历史·设计"
+              ],
+              [
+                "Painting（MA）",
+                "绘画文学硕士"
+              ],
+              [
+                "Curating Contemporary Art MA",
+                "策展·当代艺术文学硕士"
+              ],
+              [
+                "Arts& Humanities",
+                "艺术·人文学科"
+              ],
+              [
+                "MFA Arts& Humanities",
+                "艺术·人文学科艺术硕士"
+              ],
+              [
+                "Photography MA/1 year",
+                "摄影文学硕士"
+              ],
+              [
+                "visual communication",
+                "视觉传达"
+              ],
+              [
+                "摄影",
+                "摄影"
+              ],
+              [
+                "Photography（MA）",
+                "摄影文学硕士"
+              ],
+              [
+                "MA V&A/RCA History of Design",
+                "皇家艺术学院·历史·设计文学硕士"
+              ],
+              [
+                "MEd creative education",
+                "创意·教育教育学硕士"
+              ],
+              [
+                "Master of print",
+                "版画硕士"
+              ],
+              [
+                "Photography MA，1 year",
+                "摄影文学硕士"
+              ],
+              [
+                "MA Contemporary Art Practice-1 year",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "Print MA-1 year",
+                "版画文学硕士"
+              ],
+              [
+                "Sculpture MA -1 year",
+                "雕塑文学硕士"
+              ],
+              [
+                "Animation MA-1 year",
+                "动画文学硕士"
+              ],
+              [
+                "MA Sculpture-1 years",
+                "雕塑文学硕士"
+              ],
+              [
+                "装置艺术",
+                "装置艺术"
+              ],
+              [
+                "MA Photography - 1 year",
+                "摄影文学硕士"
+              ],
+              [
+                "Contemporary Art Practice",
+                "当代艺术实践"
+              ],
+              [
+                "Photography MA -1",
+                "摄影文学硕士"
+              ],
+              [
+                "MA Visual Communication: Illustration Pathway",
+                "视觉传达·插画·方向文学硕士"
+              ],
+              [
+                "Painting MA",
+                "绘画文学硕士"
+              ],
+              [
+                "Arts and Humanities (MF A)",
+                "艺术与人文学科"
+              ],
+              [
+                "MFA Arts & Humanities 1",
+                "艺术·人文学科艺术硕士"
+              ],
+              [
+                "Photography MA 1",
+                "摄影文学硕士"
+              ],
+              [
+                "MFA Art&Humanities",
+                "艺术·人文学科艺术硕士"
+              ],
+              [
+                "Photography MA-1 year",
+                "摄影文学硕士"
+              ],
+              [
+                "Prin (MA)",
+                "文学硕士"
+              ],
+              [
+                "MA in Painting",
+                "绘画文学硕士"
+              ],
+              [
+                "MA ContemMA Contemporary Art Practice-1 yearsporary Art Practice-1 years",
+                "当代艺术实践·艺术·实践文学硕士"
+              ],
+              [
+                "Contemporary Art Practice MA 1 Year",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "Visual Communication MA-1 year",
+                "视觉传达文学硕士"
+              ],
+              [
+                "MA Print 1",
+                "版画文学硕士"
+              ],
+              [
+                "MA Print - 1 Year",
+                "版画文学硕士"
+              ],
+              [
+                "版画",
+                "版画"
+              ],
+              [
+                "MA Sculpture-1 year",
+                "雕塑文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "270",
+          "zh": "格拉斯哥艺术学院",
+          "en": "The Glasgow School of Art",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "58",
+            "2025": "103",
+            "2026": "109"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Master of Design in Illustration",
+                "插画设计学硕士"
+              ],
+              [
+                "MLitt Contemporary Art Practice",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "Master of Letters in Contemporary Art Practice",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "Master of Fine Art",
+                "艺术硕士"
+              ],
+              [
+                "Master of Letters in Fine Art Practice",
+                "纯艺术·实践文学硕士"
+              ],
+              [
+                "Master of Design in Communication Design",
+                "传播设计设计学硕士"
+              ],
+              [
+                "MDes Communication Design",
+                "传播设计设计学硕士"
+              ],
+              [
+                "MASTER OF FINE ART",
+                "艺术硕士"
+              ],
+              [
+                "M.Des in Photography",
+                "摄影设计"
+              ],
+              [
+                "MLitt Fine Art Practice",
+                "纯艺术·实践文学硕士"
+              ],
+              [
+                "MLitt Contemporary Art Practice-1 year",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "MLitt CURATORIAL PRACTICE (CONTEMPORARY ART)",
+                "策展实践·当代艺术文学硕士"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "Master of Design in lllustration",
+                "插画设计学硕士"
+              ],
+              [
+                "Master of Design in Photography",
+                "摄影设计学硕士"
+              ],
+              [
+                "M.Des Photography",
+                "摄影设计"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "MLitt Fine Art Practice：Painting, Drawing and Prin",
+                "纯艺术·实践·绘画·素描与文学硕士"
+              ],
+              [
+                "M.Litt in Fine Art Practice: Photography and the M",
+                "纯艺术·实践·摄影与"
+              ],
+              [
+                "MDes in Illustration",
+                "插画设计学硕士"
+              ],
+              [
+                "MLitt Curatorial Practice (Contemporary Art)",
+                "策展实践·当代艺术文学硕士"
+              ],
+              [
+                "MDes in Photography",
+                "摄影设计学硕士"
+              ],
+              [
+                "Master of Letters in Curatorial Practice (Contemporary Art)",
+                "策展实践·当代艺术文学硕士"
+              ],
+              [
+                "Graduate Diploma in Art, Design and Creative Practice",
+                "艺术·设计与创意实践研究生文凭"
+              ],
+              [
+                "MDes Communication Design-2 years",
+                "传播设计设计学硕士"
+              ],
+              [
+                "Master of Design in Illustration-1 year",
+                "插画设计学硕士"
+              ],
+              [
+                "Design in Illustration",
+                "设计·插画"
+              ],
+              [
+                "COMMUNICATION DESIGN",
+                "传播设计"
+              ],
+              [
+                "Master of Desian in lllustration",
+                "插画硕士"
+              ],
+              [
+                "MLitt Fine Art Practice-Sculpture and Performance",
+                "纯艺术·实践·雕塑与表演文学硕士"
+              ],
+              [
+                "M.Litt Fine Art Practice",
+                "纯艺术·实践"
+              ],
+              [
+                "MLitt Fine Art Practice- Pathway Photography",
+                "纯艺术·实践·方向·摄影文学硕士"
+              ],
+              [
+                "Master of Letters in Curatorial Practice",
+                "策展实践文学硕士"
+              ],
+              [
+                "MASTER OF FINE ART 2 years",
+                "艺术硕士"
+              ],
+              [
+                "Master of Design (M.Des) in Communication Design",
+                "传播设计设计学硕士设计"
+              ],
+              [
+                "MA Fine Art",
+                "纯艺术文学硕士"
+              ],
+              [
+                "MLitt Fine Art Practice: Sculpture and Performance",
+                "纯艺术·实践·雕塑与表演文学硕士"
+              ],
+              [
+                "MLitt Fine Art Practice 12",
+                "纯艺术·实践文学硕士"
+              ],
+              [
+                "Master of Fine Art (MFA)",
+                "艺术硕士艺术硕士"
+              ],
+              [
+                "Master of Design in Graphic Design",
+                "平面设计设计学硕士"
+              ],
+              [
+                "Master of Design inIllustration",
+                "设计学硕士"
+              ],
+              [
+                "MDes Communication Design -2",
+                "传播设计设计学硕士"
+              ],
+              [
+                "Contemporary Art Practice/1 year",
+                "当代艺术实践"
+              ],
+              [
+                "MLitt Contemporary Art Practice/1 year",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "mdes communication design",
+                "传播设计设计学硕士"
+              ],
+              [
+                "Curatorial Practice (Contemporary Art)",
+                "策展实践·当代艺术"
+              ],
+              [
+                "Master of Design in illustration",
+                "插画设计学硕士"
+              ],
+              [
+                "MDes Illustration",
+                "插画设计学硕士"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "MLitt Contemporary Art Practice-1 years",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "MLitt Contemporary Art Practice – 1",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "MLitt Fine Art Practice（sculpture）",
+                "纯艺术·实践·雕塑文学硕士"
+              ],
+              [
+                "Master of Design in Illustratio",
+                "设计学硕士"
+              ],
+              [
+                "装置艺术",
+                "装置艺术"
+              ],
+              [
+                "MLitt in Contemporary Art Practice",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "Master of Design in Illustration 1",
+                "插画设计学硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "BA (Hons) Communication Design",
+                "传播设计（荣誉）文学学士"
+              ],
+              [
+                "Communication Design",
+                "传播设计"
+              ],
+              [
+                "International Foundation (Art and Design)",
+                "艺术与设计国际预科"
+              ],
+              [
+                "Communication Design-Illustration BA (Hons)",
+                "传播设计·插画（荣誉）文学学士"
+              ],
+              [
+                "BA(Hons) Fine Art PHOTOGRAPHY",
+                "纯艺术·摄影（荣誉）文学学士"
+              ],
+              [
+                "BA(Hons) Fine Art - Painting & Printmaking",
+                "纯艺术·绘画·版画（荣誉）文学学士"
+              ],
+              [
+                "INTERNATIONAL FOUNDATION (ART AND DESIGN)",
+                "艺术与设计国际预科"
+              ],
+              [
+                "International Foundation",
+                "国际预科"
+              ],
+              [
+                "BA (Hons) Painting & Printmaking",
+                "绘画·版画（荣誉）文学学士"
+              ],
+              [
+                "BA Fine Art Photography",
+                "纯艺术·摄影文学学士"
+              ],
+              [
+                "BA (Hons) Communication Design - Illustration",
+                "传播设计·插画（荣誉）文学学士"
+              ],
+              [
+                "BA FINE ART",
+                "纯艺术文学学士"
+              ],
+              [
+                "Communication Desian",
+                "传播"
+              ],
+              [
+                "FINE ART PHOTOGRAPHY",
+                "纯艺术·摄影"
+              ],
+              [
+                "BA(Hons) Fine Art SCULPTURE & ENVIRONMENTAL ART",
+                "纯艺术·雕塑·环境·艺术（荣誉）文学学士"
+              ],
+              [
+                "Painting & Printmaking-second year",
+                "绘画·版画年制"
+              ],
+              [
+                "Fine Art-Painting/Printmaking",
+                "纯艺术·绘画·版画"
+              ],
+              [
+                "PAINTING & PRINTMAKING",
+                "绘画·版画"
+              ],
+              [
+                "PAINTING & PRINTMAKING BA(Hons) Fine Art",
+                "绘画·版画·纯艺术（荣誉）文学学士"
+              ],
+              [
+                "BA(Hons) Fine Art FINE ART PHOTOGRAPHY",
+                "纯艺术·纯艺术·摄影（荣誉）文学学士"
+              ],
+              [
+                "BA FINE ART PHOTOGRAPHY",
+                "纯艺术·摄影文学学士"
+              ],
+              [
+                "BA(Hons) Fine Art",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "Sulputure & Environment Art",
+                "环境·艺术"
+              ],
+              [
+                "BA Fine Art: Sculpture and Environmental Art",
+                "纯艺术·雕塑与环境·艺术文学学士"
+              ],
+              [
+                "BA Fine Arts Photography",
+                "纯艺术·摄影文学学士"
+              ],
+              [
+                "Fine Art(Photography)",
+                "纯艺术·摄影"
+              ],
+              [
+                "BA(Hons) Fine Art：Sculpture & Environmental Art",
+                "纯艺术·雕塑·环境·艺术（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons) Communication Design：Illustration",
+                "传播设计·插画（荣誉）文学学士"
+              ],
+              [
+                "BA(Hons) Fine Art：Painting & Printmaking",
+                "纯艺术·绘画·版画（荣誉）文学学士"
+              ],
+              [
+                "BA(Hons) Fine Art-PHOTOGRAPHY",
+                "纯艺术·摄影（荣誉）文学学士"
+              ],
+              [
+                "International Foundation （Art and Design）",
+                "艺术与设计国际预科"
+              ],
+              [
+                "Fine Art - Painting and Printmaking",
+                "纯艺术·绘画与版画"
+              ],
+              [
+                "Painting & Printmaking BA(Hons) Fine Art",
+                "绘画·版画·纯艺术（荣誉）文学学士"
+              ],
+              [
+                "COMMUNICATION DESIGN",
+                "传播设计"
+              ],
+              [
+                "BA(Hons) Communication Design-Illustration",
+                "传播设计·插画（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons) Communication design",
+                "传播设计（荣誉）文学学士"
+              ],
+              [
+                "BA Communication design",
+                "传播设计文学学士"
+              ],
+              [
+                "BA Communication design -illustration",
+                "传播设计·插画文学学士"
+              ],
+              [
+                "Fine Art - Sculpture and Environmental Art",
+                "纯艺术·雕塑与环境·艺术"
+              ],
+              [
+                "Fine Art - Sculpture and Environmental Art (W130)",
+                "纯艺术·雕塑与环境·艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "263",
+          "zh": "爱丁堡大学",
+          "en": "University of Edinburgh",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "47",
+            "2025": "88",
+            "2026": "128"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Illustration",
+                "插画文学硕士"
+              ],
+              [
+                "Contemporary Art Practice MA",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "MA (eca) Illustration",
+                "爱丁堡艺术学院·插画文学硕士"
+              ],
+              [
+                "Modern and Contemporary Art: History, Curating and Criticism MSc",
+                "现代与当代艺术·历史·策展与艺术评论理学硕士"
+              ],
+              [
+                "Illustration MA",
+                "插画文学硕士"
+              ],
+              [
+                "MA Illustration-1 year",
+                "插画文学硕士"
+              ],
+              [
+                "Contemporary Art Practice, MA",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "MA Contemporary Art Practice",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "MA (eca) Contemporary Art Practice",
+                "爱丁堡艺术学院·当代艺术实践文学硕士"
+              ],
+              [
+                "Contemporary Art Practice",
+                "当代艺术实践"
+              ],
+              [
+                "Contemporary Art Theory MA",
+                "当代艺术·理论文学硕士"
+              ],
+              [
+                "MSc History of Art, Theory and Display",
+                "艺术史·理论与展示理学硕士"
+              ],
+              [
+                "MSc Modern and Contemporary Art: History, Curating and Criticism",
+                "现代与当代艺术·历史·策展与艺术评论理学硕士"
+              ],
+              [
+                "History of Art, Theory and Display MSc",
+                "艺术史·理论与展示理学硕士"
+              ],
+              [
+                "Contemporary Art Practice MA-1 year",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "MSc Modern and Contemporary Art: History, Curating, Criticism",
+                "现代与当代艺术·历史·策展·艺术评论理学硕士"
+              ],
+              [
+                "Design Informatics",
+                "设计"
+              ],
+              [
+                "MA Illustration/1 year",
+                "插画文学硕士"
+              ],
+              [
+                "History of Art, Theory and Display MSc-1 year",
+                "艺术史·理论与展示理学硕士"
+              ],
+              [
+                "Contemporary Art Practice, MA/1 year",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "Contemporary Art Practice (MA(eca))",
+                "当代艺术实践·爱丁堡艺术学院文学硕士"
+              ],
+              [
+                "MSc by Research Collections and Curating Practices - 1 Year (Full-time)",
+                "研究·收藏与策展·实践理学硕士全日制"
+              ],
+              [
+                "Graphic Design",
+                "平面设计"
+              ],
+              [
+                "MA Contemporary Art Theory",
+                "当代艺术·理论文学硕士"
+              ],
+              [
+                "策展设计",
+                "策展设计"
+              ],
+              [
+                "MA Illustration(eca)",
+                "插画·爱丁堡艺术学院文学硕士"
+              ],
+              [
+                "Illustration MA(eca)",
+                "插画·爱丁堡艺术学院文学硕士"
+              ],
+              [
+                "Illustration MA (eca)",
+                "插画·爱丁堡艺术学院文学硕士"
+              ],
+              [
+                "Illustration MA 1 year",
+                "插画文学硕士"
+              ],
+              [
+                "Modern and Contemporary Art: History, Curating and",
+                "现代与当代艺术·历史·策展与"
+              ],
+              [
+                "MA (eca) Contemporary Art Theory",
+                "爱丁堡艺术学院·当代艺术·理论文学硕士"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "History of Art MScR",
+                "艺术史"
+              ],
+              [
+                "CREATIVE INDUSTRIES",
+                "创意·产业"
+              ],
+              [
+                "Contemporary Art Practice MA (ECA) 1",
+                "当代艺术实践·爱丁堡艺术学院文学硕士"
+              ],
+              [
+                "illustration",
+                "插画"
+              ],
+              [
+                "Contemporary Art Practice,",
+                "当代艺术实践"
+              ],
+              [
+                "MSc Film, Exhibition and Curation - 1 Year",
+                "电影·展览与策展理学硕士"
+              ],
+              [
+                "MA Illustraion",
+                "文学硕士"
+              ],
+              [
+                "MSc Modern and Contemporary Art: History,Curating, Criticism",
+                "现代与当代艺术·历史·策展·艺术评论理学硕士"
+              ],
+              [
+                "MSc Service Management and Design",
+                "管理与设计理学硕士"
+              ],
+              [
+                "MA Illustration 1",
+                "插画文学硕士"
+              ],
+              [
+                "MSc Modern and Contemporary Art",
+                "现代与当代艺术理学硕士"
+              ],
+              [
+                "MA illutration",
+                "文学硕士"
+              ],
+              [
+                "MA Illustration - 1 year",
+                "插画文学硕士"
+              ],
+              [
+                "Craft MA",
+                "工艺文学硕士"
+              ],
+              [
+                "Modern and Contemporary Art: History, Curating and Criticism MSc-1 year",
+                "现代与当代艺术·历史·策展与艺术评论理学硕士"
+              ],
+              [
+                ": Contemporary Art Practice MA",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "Contemporary Art Theory MA (eca)-1 year",
+                "当代艺术·理论·爱丁堡艺术学院文学硕士"
+              ],
+              [
+                "Creative Industries MSc",
+                "创意·产业理学硕士"
+              ],
+              [
+                "Msc History of Art, Theory and Display",
+                "艺术史·理论与展示理学硕士"
+              ],
+              [
+                "Contemporary Art Theory MA (eca)",
+                "当代艺术·理论·爱丁堡艺术学院文学硕士"
+              ],
+              [
+                "Modern & Contemporary Art: History, Curating & Criticism MSc",
+                "现代·当代艺术·历史·策展·艺术评论理学硕士"
+              ],
+              [
+                "Contemporary Art Practice MA -1",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "Contemporary Art Practice MA-1 years",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "MA (eca) Illustration - 1 Year",
+                "爱丁堡艺术学院·插画文学硕士"
+              ],
+              [
+                "MA (eca) Contemporary Art Practice - 1 Year",
+                "爱丁堡艺术学院·当代艺术实践文学硕士"
+              ],
+              [
+                "MA (eca) Contemporary Art Practice - 1 Year (PTMARTCOAP1F)",
+                "爱丁堡艺术学院·当代艺术实践文学硕士"
+              ],
+              [
+                "MA Illustration - 1 Year",
+                "插画文学硕士"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "Contemporary Art Practice MA (eca)-1 year",
+                "当代艺术实践·爱丁堡艺术学院文学硕士"
+              ],
+              [
+                "MA Contemporary Art Practice 1",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "Contemporary Art Practice MA -1 year",
+                "当代艺术实践文学硕士"
+              ],
+              [
+                "Modern and Contemporary Art: History, Curating and Criticism - MSc",
+                "现代与当代艺术·历史·策展与艺术评论理学硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "BA Fine Art",
+                "纯艺术文学学士"
+              ],
+              [
+                "BA Illustration",
+                "插画文学学士"
+              ],
+              [
+                "Illustration BA (Hons)",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "Fine Art (BAFA)",
+                "纯艺术艺术学士"
+              ],
+              [
+                "Fine Art",
+                "纯艺术"
+              ],
+              [
+                "BA (Hons) Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "BA(Hons) Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons) Fine Art",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "Illustration BA",
+                "插画文学学士"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "Illustration BA (Hons)-2nd year",
+                "插画（荣誉）文学学士年制"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "Duanduan, Congratulations, The University of Edi",
+                "Duanduan, Congratulations, The University of Edi"
+              ],
+              [
+                "Illustration BA (Hons) Year 2",
+                "插画（荣誉）文学学士年制"
+              ],
+              [
+                "BA Illustration Year 2",
+                "插画文学学士年制"
+              ],
+              [
+                "BA Graphic Design",
+                "平面设计文学学士"
+              ],
+              [
+                "BA Fine Art: Photography",
+                "纯艺术·摄影文学学士"
+              ],
+              [
+                "BA Fine Art Year2",
+                "纯艺术文学学士"
+              ],
+              [
+                "BA Fine Art（BAFA）",
+                "纯艺术文学学士艺术学士"
+              ],
+              [
+                "BA Fine Art Year 2",
+                "纯艺术文学学士年制"
+              ],
+              [
+                "BA Illustration Year2",
+                "插画文学学士"
+              ],
+              [
+                "illustration",
+                "插画"
+              ],
+              [
+                "BA Illustration （Year 2）",
+                "插画文学学士年制"
+              ],
+              [
+                "Illustration BA (Hons) 2nd year",
+                "插画（荣誉）文学学士年制"
+              ],
+              [
+                "Fine Art 2nd year entry",
+                "纯艺术年制"
+              ],
+              [
+                "Fine Art BA (Hons)",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "BA FA Fine Art",
+                "纯艺术文学学士"
+              ],
+              [
+                "Fine Art BA (Hons) 2nd Year",
+                "纯艺术（荣誉）文学学士年制"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "251",
+          "zh": "布莱顿大学",
+          "en": "University of Brighton",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "86",
+            "2025": "92",
+            "2026": "73"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Illustration BA(Hons)",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "BA(Hons) Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "Photography BA(Hons)",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "Fine Art BA(Hons)",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "BA(Hons)Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons) Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "Illustration BA (Hons)",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "BA(Hons) Photography",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "摄影",
+                "摄影"
+              ],
+              [
+                "BA (Hons) Photography",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "Foundation Certificate for Art, Design and Media",
+                "艺术·设计与媒体预科证书课程"
+              ],
+              [
+                "Fine Art BA (Hons)",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "Illustration BA(Hons) 3",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "Photography BA (Hons)",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "BA(Hons) Art History and Visual Culture",
+                "艺术史与视觉·文化（荣誉）文学学士"
+              ],
+              [
+                "Fine Art Painting BA(Hons)",
+                "纯艺术·绘画（荣誉）文学学士"
+              ],
+              [
+                "BA (HONS) Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "BA(Hons) mustration",
+                "（荣誉）文学学士"
+              ],
+              [
+                "Illustration BA",
+                "插画文学学士"
+              ],
+              [
+                "llustration BA(Hons)",
+                "插画（荣誉）文学学士"
+              ]
+            ],
+            "pg": [
+              [
+                "The Sequential Design/Illustration MA",
+                "连续设计·插画文学硕士"
+              ],
+              [
+                "Sequential Design/Illustration MA",
+                "连续设计·插画文学硕士"
+              ],
+              [
+                "Fine Art MA",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Sequential Design / Illustration (MA)",
+                "连续设计·插画文学硕士"
+              ],
+              [
+                "MA Sequential Design/Illustration",
+                "连续设计·插画文学硕士"
+              ],
+              [
+                "Photography MA",
+                "摄影文学硕士"
+              ],
+              [
+                "MA Photography",
+                "摄影文学硕士"
+              ],
+              [
+                "MA Illustration",
+                "插画文学硕士"
+              ],
+              [
+                "Fine Art (MA)",
+                "纯艺术文学硕士"
+              ],
+              [
+                "MA The Sequential Design/Illustration",
+                "连续设计·插画文学硕士"
+              ],
+              [
+                "The Sequential Design/Illustration MA-1 year",
+                "连续设计·插画文学硕士"
+              ],
+              [
+                "Fine Art",
+                "纯艺术"
+              ],
+              [
+                "Photography (MA) (Full time)",
+                "摄影文学硕士全日制"
+              ],
+              [
+                "MA Fine Art",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Fine Art (MA) (Full time)",
+                "纯艺术文学硕士全日制"
+              ],
+              [
+                "The Sequential Design/Illustration MA -1 year",
+                "连续设计·插画文学硕士"
+              ],
+              [
+                "Sequential Design/Illustration",
+                "连续设计·插画"
+              ],
+              [
+                "Sequential Design / Illustration MA",
+                "连续设计·插画文学硕士"
+              ],
+              [
+                "插画",
+                "插画"
+              ],
+              [
+                "Fine Art – MA",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Photography (MA)",
+                "摄影文学硕士"
+              ],
+              [
+                "Sequential Design /llustration(MA)",
+                "连续设计·插画文学硕士"
+              ],
+              [
+                "MA Sequential Design / Illustration",
+                "连续设计·插画文学硕士"
+              ],
+              [
+                "MA Fine Art 1",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Sequential Design /llustration (MA)",
+                "连续设计·插画文学硕士"
+              ],
+              [
+                "llustration (MA)",
+                "插画文学硕士"
+              ],
+              [
+                "MASequentialDesign/Illustration",
+                "插画"
+              ],
+              [
+                "Photography (MA）",
+                "摄影文学硕士"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "MA Seguential Designylllustration",
+                "文学硕士"
+              ],
+              [
+                "摄影",
+                "摄影"
+              ],
+              [
+                "The Sequential Design/Illustration MA 1 : 26FALL :",
+                "连续设计·插画文学硕士"
+              ],
+              [
+                "The Sequential Design/Illustration",
+                "连续设计·插画"
+              ],
+              [
+                "The Sequential Design/Illustration MA/1 year",
+                "连续设计·插画文学硕士"
+              ],
+              [
+                "Sequential Design/Illustration MA，1 year",
+                "连续设计·插画文学硕士"
+              ],
+              [
+                "Fine Art M",
+                "纯艺术"
+              ],
+              [
+                "Sequential Design/lllustration MA",
+                "连续设计·插画文学硕士"
+              ],
+              [
+                "The Sequential Design/Illustration MA -1",
+                "连续设计·插画文学硕士"
+              ],
+              [
+                "Fine Art MA-1 year",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Sequential Design / Illustration (MA) (Full time)",
+                "连续设计·插画文学硕士全日制"
+              ],
+              [
+                "Sequential Design / lllustration (MA)",
+                "连续设计·插画文学硕士"
+              ],
+              [
+                "Photography MA-1 year",
+                "摄影文学硕士"
+              ],
+              [
+                "Pre-Master’s for Arts, Design and Media for Sequential Design/Illustration MA",
+                "预科·艺术·设计与媒体·连续设计·插画硕士文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "242",
+          "zh": "安格利亚鲁斯金大学",
+          "en": "Anglia Ruskin University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "69",
+            "2025": "86",
+            "2026": "87"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BA (Hons) Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "BA (HONS) Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "BA (HONS) Fine Art",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "Fine Art",
+                "纯艺术"
+              ],
+              [
+                "BA (HONS)Fine Art",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "BA(Hons) Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "BA(Hons)Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons) Animation and Illustration",
+                "动画与插画（荣誉）文学学士"
+              ],
+              [
+                "BA Illustration",
+                "插画文学学士"
+              ],
+              [
+                "BA (Hons) Fine Art",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "BA Fine Art",
+                "纯艺术文学学士"
+              ],
+              [
+                "Animation and Illustration",
+                "动画与插画"
+              ],
+              [
+                "BA Animation and IIlurstration",
+                "动画与文学学士"
+              ],
+              [
+                "A (Hons) Illustration",
+                "插画（荣誉）"
+              ],
+              [
+                "Illustration BA",
+                "插画文学学士"
+              ],
+              [
+                "BA (Hons) llustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "Fine Art BA (Hons)",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "Foundation pathway Art and Design",
+                "方向·艺术与设计预科"
+              ],
+              [
+                "BA Animation and Illustration",
+                "动画与插画文学学士"
+              ],
+              [
+                ": BA (Hons) Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "BA(Hons) Fine Art",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ]
+            ],
+            "pg": [
+              [
+                "MA Illustration",
+                "插画文学硕士"
+              ],
+              [
+                "Illustration MA",
+                "插画文学硕士"
+              ],
+              [
+                "MA Art, Health and Wellbeing",
+                "艺术·健康与身心健康文学硕士"
+              ],
+              [
+                "Children's Book Illustration MA",
+                "儿童·书籍·插画文学硕士"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "Art, Health and Wellbeing",
+                "艺术·健康与身心健康"
+              ],
+              [
+                "MA Fine Art",
+                "纯艺术文学硕士"
+              ],
+              [
+                "MA illustration",
+                "插画文学硕士"
+              ],
+              [
+                "MA Children's Book Illustration",
+                "儿童·书籍·插画文学硕士"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "MA Illustration/1 year",
+                "插画文学硕士"
+              ],
+              [
+                "MA Illustration - 1 year",
+                "插画文学硕士"
+              ],
+              [
+                "Children's Book lllustratlon",
+                "儿童·书籍"
+              ],
+              [
+                "MA Children's Book Illustration 18 months",
+                "儿童·书籍·插画文学硕士"
+              ],
+              [
+                "Master of Arts [MA]",
+                "文学硕士文学硕士"
+              ],
+              [
+                "MA Art，Health and Wellbeing",
+                "艺术·健康与身心健康文学硕士"
+              ],
+              [
+                "MA Art, Health and Wellbeing 1 year",
+                "艺术·健康与身心健康文学硕士"
+              ],
+              [
+                "illustration",
+                "插画"
+              ],
+              [
+                "Art, Health and Welbeing",
+                "艺术·健康与"
+              ],
+              [
+                "Illustration MA, 1year",
+                "插画文学硕士"
+              ],
+              [
+                "MA lllustration -1",
+                "插画文学硕士"
+              ],
+              [
+                "MA Illustration-1 year",
+                "插画文学硕士"
+              ],
+              [
+                "插画",
+                "插画"
+              ],
+              [
+                "MA illustration -1",
+                "插画文学硕士"
+              ],
+              [
+                "Children's Book Illustration MA-18 months",
+                "儿童·书籍·插画文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "199",
+          "zh": "伦敦大学金史密斯学院",
+          "en": "Goldsmiths",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "64",
+            "2025": "62",
+            "2026": "73"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Children's Literature: Children's Illustration",
+                "儿童·文学·儿童·插画文学硕士"
+              ],
+              [
+                "MA Arts Administration & Cultural Policy",
+                "艺术管理·文化政策文学硕士"
+              ],
+              [
+                "MA Photography & Urban Cultures",
+                "摄影·城市·文化文学硕士"
+              ],
+              [
+                "MA PHOTOGRAPHY AND URBAN CULTURES",
+                "摄影与城市·文化文学硕士"
+              ],
+              [
+                "Graduate Diploma in Art",
+                "艺术研究生文凭"
+              ],
+              [
+                "MFA Fine Art",
+                "纯艺术艺术硕士"
+              ],
+              [
+                "MA Contemporary Art Theory",
+                "当代艺术·理论文学硕士"
+              ],
+              [
+                "MA Children's Literature: Children's Book Illustra",
+                "儿童·文学·儿童·书籍·插画文学硕士"
+              ],
+              [
+                "MA Children's Literature: Children's Book Illustration",
+                "儿童·文学·儿童·书籍·插画文学硕士"
+              ],
+              [
+                "MA Photography Practice",
+                "摄影·实践文学硕士"
+              ],
+              [
+                "MA Children's Literature: Children's Illustration-1 year",
+                "儿童·文学·儿童·插画文学硕士"
+              ],
+              [
+                "MA in Photography: The Image & Electronic Arts",
+                "摄影·图像·电子·艺术文学硕士"
+              ],
+              [
+                "FT MA ARTS ADMINISTRATION AND CULTURAL POLICY",
+                "全日制·艺术管理与文化政策文学硕士"
+              ],
+              [
+                "MFA Curating",
+                "策展艺术硕士"
+              ],
+              [
+                "MA Photography Practice-1 year",
+                "摄影·实践文学硕士"
+              ],
+              [
+                "MA Photography: The Image & Electronic Arts",
+                "摄影·图像·电子·艺术文学硕士"
+              ],
+              [
+                "MA Creative And Cultural Entrepreneurship - Pathway 06: Theatre And Performance",
+                "创意与文化·创业·方向·戏剧与表演文学硕士"
+              ],
+              [
+                "FT MA PHOTOGRAPHY: THE IMAGE AND ELECTRONIC ARTS",
+                "全日制·摄影·图像与电子·艺术文学硕士"
+              ],
+              [
+                "MA ARTS ADMINISTRATION AND CULTURAL POLICY",
+                "艺术管理与文化政策文学硕士"
+              ],
+              [
+                "GRADUATE DIPLOMA IN ART",
+                "艺术研究生文凭"
+              ],
+              [
+                "Graduate Diploma in Contemporary Art History",
+                "当代艺术·历史研究生文凭"
+              ],
+              [
+                "MA Children’s Literature: Children’s Book Illustra",
+                "儿童·文学·儿童·书籍·插画文学硕士"
+              ],
+              [
+                "Photography & Urban Cultures",
+                "摄影·城市·文化"
+              ],
+              [
+                "MA CHILDRENS LITERATURE: CHILDRENS BOOK ILLUSTRATI",
+                "儿童·文学·儿童·书籍文学硕士"
+              ],
+              [
+                "FT MA ARTS ADMINISTRATION AND CULTURAL POLIC",
+                "全日制·艺术管理与文化文学硕士"
+              ],
+              [
+                "MFA in Fine Art",
+                "纯艺术艺术硕士"
+              ],
+              [
+                "FT MA EVENTS AND EXPERIENCE MANAGEMENT",
+                "全日制·活动与体验·管理文学硕士"
+              ],
+              [
+                "FT MA ART AND POLITICS",
+                "全日制·艺术与文学硕士"
+              ],
+              [
+                "Computational Arts MA",
+                "计算·艺术文学硕士"
+              ],
+              [
+                "MA Arts Administration & Cultural Police",
+                "艺术管理·文化文学硕士"
+              ],
+              [
+                "MA PHOTOGRAPHY PRACTICE",
+                "摄影·实践文学硕士"
+              ],
+              [
+                "GRADUATEDIPLOMAINART",
+                "GRADUATEDIPLOMAINART"
+              ],
+              [
+                "MFA FINE ART",
+                "纯艺术艺术硕士"
+              ],
+              [
+                "MA CHILDRENS LITERATURE: CHILDRENS BOOK ILLUSTRATION",
+                "儿童·文学·儿童·书籍·插画文学硕士"
+              ],
+              [
+                "MA Photography Practice-1 yea",
+                "摄影·实践文学硕士"
+              ],
+              [
+                "FT MA PHOTOGRAPHY PRACTICE",
+                "全日制·摄影·实践文学硕士"
+              ],
+              [
+                "MA Photography & Urban Cultures 1 year",
+                "摄影·城市·文化文学硕士"
+              ],
+              [
+                "FT MA CONTEMPORARY ART THEORY",
+                "全日制·当代艺术·理论文学硕士"
+              ],
+              [
+                "MSC MANAGEMENT OF INNOVATION",
+                "管理·创新理学硕士"
+              ],
+              [
+                "FT MA COMPUTATIONAL ARTS",
+                "全日制·计算·艺术文学硕士"
+              ],
+              [
+                "MA Photography and Urban Cultures",
+                "摄影与城市·文化文学硕士"
+              ],
+              [
+                "MA Children's Literature: Children's Illustration - 1 Year",
+                "儿童·文学·儿童·插画文学硕士"
+              ],
+              [
+                "MA Dance Movement Psychotherapy-2 years",
+                "舞蹈·心理治疗文学硕士"
+              ],
+              [
+                "MA Photography Practice -1",
+                "摄影·实践文学硕士"
+              ],
+              [
+                "MA Arts Administration & Cultural Policy-15 months",
+                "艺术管理·文化政策文学硕士"
+              ],
+              [
+                "MA Arts & Learning",
+                "艺术·学习文学硕士"
+              ],
+              [
+                "MFA Fine Art-2 years",
+                "纯艺术艺术硕士"
+              ],
+              [
+                "FT MFA FINE ART",
+                "全日制·纯艺术艺术硕士"
+              ],
+              [
+                "MFA Fine Art 2",
+                "纯艺术艺术硕士"
+              ],
+              [
+                "Fine Art MFA",
+                "纯艺术艺术硕士"
+              ],
+              [
+                "摄影",
+                "摄影"
+              ],
+              [
+                "MA Children's Literature: Children's Illustration -1",
+                "儿童·文学·儿童·插画文学硕士"
+              ],
+              [
+                "FT MA CHILDRENS LITERATURE: CHILDRENS BOOK ILLUSTRATIO",
+                "全日制·儿童·文学·儿童·书籍文学硕士"
+              ],
+              [
+                "装置艺术",
+                "装置艺术"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ]
+            ],
+            "ug": [
+              [
+                "BA Fine Art Extension Degree",
+                "纯艺术·延展·学位课程文学学士"
+              ],
+              [
+                "BA (Hons) Fine Art (Extension Degree)",
+                "纯艺术·延展·学位课程（荣誉）文学学士"
+              ],
+              [
+                "BA FINE ART (EXTENSION DEGREE)",
+                "纯艺术·延展·学位课程文学学士"
+              ],
+              [
+                "Fine Art (Extension Degree)",
+                "纯艺术·延展·学位课程"
+              ],
+              [
+                "Fine Art Extension Degree",
+                "纯艺术·延展·学位课程"
+              ],
+              [
+                "FT BA FINE ART (EXTENSION DEGREE)",
+                "全日制·纯艺术·延展·学位课程文学学士"
+              ],
+              [
+                "BA (Hons) Design",
+                "设计（荣誉）文学学士"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "BA (Hons) Fine Art Extension Degree",
+                "纯艺术·延展·学位课程（荣誉）文学学士"
+              ],
+              [
+                "BA Fine Art Extension",
+                "纯艺术·延展文学学士"
+              ],
+              [
+                "美术文学",
+                "美术文学"
+              ],
+              [
+                "FT BA CURATING",
+                "全日制·策展文学学士"
+              ],
+              [
+                "BA Fine Art fisrt year",
+                "纯艺术文学学士年制"
+              ],
+              [
+                "FT INTERNATIONAL FOUNDATION CERTIFICATE IN DESIGN",
+                "全日制·设计国际预科证书课程"
+              ],
+              [
+                "A Fine Art Extension Degree",
+                "纯艺术·延展·学位课程"
+              ],
+              [
+                "BA (Hons) Curating",
+                "策展（荣誉）文学学士"
+              ],
+              [
+                "INTERNATIONAL FOUNDATION CERTIFICATE IN DESIGN",
+                "设计国际预科证书课程"
+              ],
+              [
+                "FT BA FINE ART",
+                "全日制·纯艺术文学学士"
+              ],
+              [
+                "BA (Hons) Fine Art",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "Fine Art （Extension Degree）",
+                "纯艺术·延展·学位课程"
+              ],
+              [
+                "Fine Art（ Extension Degree）",
+                "纯艺术·延展·学位课程"
+              ],
+              [
+                "FT BA Fine Art",
+                "全日制·纯艺术文学学士"
+              ],
+              [
+                "BA FINE ART",
+                "纯艺术文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "151",
+          "zh": "创意艺术大学",
+          "en": "University for the Creative Arts",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "63",
+            "2025": "49",
+            "2026": "39"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BA (Hons) Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "Fine Art BA (Hons)",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "Illustration BA (Hons)",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons) Fine Art",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "BA (Hons) Photography",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "Fine Art",
+                "纯艺术"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "illustration",
+                "插画"
+              ],
+              [
+                "BA(Hons) Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "Photography",
+                "摄影"
+              ],
+              [
+                "Fine Art-Canterbury BA (Hons)",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons)Photography",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "BA Fashion Design",
+                "服装设计文学学士"
+              ],
+              [
+                "BA(Hons) Fine Art",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "Photography BA (Hons)",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "BA(Hons)Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "BA (HONS) Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "BA(Hons) Photography",
+                "摄影（荣誉）文学学士"
+              ]
+            ],
+            "pg": [
+              [
+                "MA Illustration",
+                "插画文学硕士"
+              ],
+              [
+                "Illustration MA",
+                "插画文学硕士"
+              ],
+              [
+                "MA Photography",
+                "摄影文学硕士"
+              ],
+              [
+                "MA Fine Art",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Photography MA",
+                "摄影文学硕士"
+              ],
+              [
+                "Fine Art MA",
+                "纯艺术文学硕士"
+              ],
+              [
+                "MA lllustration",
+                "插画文学硕士"
+              ],
+              [
+                "BA (Hons) Fashion Photography",
+                "时尚摄影（荣誉）文学学士"
+              ],
+              [
+                "Illustration MA-1",
+                "插画文学硕士"
+              ],
+              [
+                "MA Ceramics",
+                "陶瓷文学硕士"
+              ],
+              [
+                "MA illustration",
+                "插画文学硕士"
+              ],
+              [
+                "MA Illustration 1 year",
+                "插画文学硕士"
+              ],
+              [
+                "Illustration MA 1 year",
+                "插画文学硕士"
+              ],
+              [
+                "Filmmaking MA",
+                "电影制作文学硕士"
+              ],
+              [
+                "MA Photography with Integrated International Pre-M",
+                "摄影·综合·预科文学硕士国际"
+              ],
+              [
+                "插画",
+                "插画"
+              ],
+              [
+                "MA lllustration at UCA Farnham",
+                "插画文学硕士"
+              ],
+              [
+                "MA Fashion Photography",
+                "时尚摄影文学硕士"
+              ],
+              [
+                "MA Fine Art at UCA Canterbury",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "Illustration MA/1 year",
+                "插画文学硕士"
+              ],
+              [
+                "Illustration MA，1 year",
+                "插画文学硕士"
+              ],
+              [
+                "Illustration MA-1 year",
+                "插画文学硕士"
+              ],
+              [
+                "Ilustration MA -1",
+                "文学硕士"
+              ],
+              [
+                "摄影",
+                "摄影"
+              ],
+              [
+                "Fine Art MA 1",
+                "纯艺术文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "123",
+          "zh": "威斯敏斯特大学",
+          "en": "University of Westminster",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "37",
+            "2025": "43",
+            "2026": "43"
+          },
+          "majors": {
+            "ug": [
+              [
+                "ILLUSTRATION BA Honours",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "Illustration BA Honours",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "PHOTOGRAPHY BA Honours",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "FINE ART MIXED MEDIA BA Honours",
+                "纯艺术·综合材料（荣誉）文学学士"
+              ],
+              [
+                "BA Honours Fine Art Mixed Media",
+                "纯艺术·综合材料（荣誉）文学学士"
+              ],
+              [
+                "ILLUSTRATION",
+                "插画"
+              ],
+              [
+                "Photography BA Honours",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "ILLUSTRATION AND VISUAL COMMUNICATION BA Honours",
+                "插画与视觉传达（荣誉）文学学士"
+              ],
+              [
+                "BA Honours Photography",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "插画",
+                "插画"
+              ],
+              [
+                "Foundation Certificate for Art and Design",
+                "艺术与设计预科证书课程"
+              ],
+              [
+                "BA Hons Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons) Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "BA illustration",
+                "插画文学学士"
+              ],
+              [
+                "BA Illustration",
+                "插画文学学士"
+              ],
+              [
+                "Illustration BA(Hons)",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "BA Photography",
+                "摄影文学学士"
+              ],
+              [
+                "BA Hons Illustration and Visual Communication",
+                "插画与视觉传达（荣誉）文学学士"
+              ],
+              [
+                "Fine Art Mixed Media",
+                "纯艺术·综合材料"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "摄影",
+                "摄影"
+              ],
+              [
+                "BA photography",
+                "摄影文学学士"
+              ],
+              [
+                "ILLUSTRATION AND VISUAL COMMUNICATION BAHonours",
+                "插画与视觉传达"
+              ],
+              [
+                "BA (Hons) FINE ART MIXED MEDIA",
+                "纯艺术·综合材料（荣誉）文学学士"
+              ],
+              [
+                "BA(Hons) Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "ILLUSTRATION BA",
+                "插画文学学士"
+              ],
+              [
+                "BA Fine Arts Mixed Media",
+                "纯艺术·综合材料文学学士"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "BA Honours ILLUSTRATION",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "Photography",
+                "摄影"
+              ]
+            ],
+            "pg": [
+              [
+                "Expanded Photography MA",
+                "拓展·摄影文学硕士"
+              ],
+              [
+                "Film, Television and Moving Image MA",
+                "电影与动态影像文学硕士"
+              ],
+              [
+                "Museums, Galleries and Contemporary Culture MA",
+                "博物馆·画廊与当代·文化文学硕士"
+              ],
+              [
+                "Expanded Photography MA-1 year",
+                "拓展·摄影文学硕士"
+              ],
+              [
+                "Global Contemporary Art MA",
+                "全球·当代艺术文学硕士"
+              ],
+              [
+                "MA GLOBAL CONTEMPORARY ART",
+                "全球·当代艺术文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "107",
+          "zh": "诺丁汉特伦特大学",
+          "en": "Nottingham Trent University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "46",
+            "2025": "45",
+            "2026": "16"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Illustration",
+                "插画文学硕士"
+              ],
+              [
+                "MA Illustration FT",
+                "插画·全日制文学硕士"
+              ],
+              [
+                "Illustration MA",
+                "插画文学硕士"
+              ],
+              [
+                "MFA Fine Art",
+                "纯艺术艺术硕士"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "MA Illustration 1 year",
+                "插画文学硕士"
+              ],
+              [
+                "Photography MA",
+                "摄影文学硕士"
+              ],
+              [
+                "插画",
+                "插画"
+              ],
+              [
+                "MFA Fine Art FT",
+                "纯艺术·全日制艺术硕士"
+              ],
+              [
+                "MA Illustration 1",
+                "插画文学硕士"
+              ],
+              [
+                "MA illustration",
+                "插画文学硕士"
+              ],
+              [
+                "MA lllustration -1",
+                "插画文学硕士"
+              ],
+              [
+                "Illustration MA 1",
+                "插画文学硕士"
+              ],
+              [
+                "MFA Fine Art-2",
+                "纯艺术艺术硕士"
+              ],
+              [
+                "Illustration MA - 1 year",
+                "插画文学硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "Photography BA (Hons)",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "Fine Art BA (Hons)",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons) Fine Art",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "BA(Hons) Fine Art",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "Fine Art",
+                "纯艺术"
+              ],
+              [
+                "BA Illustration",
+                "插画文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "99",
+          "zh": "利兹大学",
+          "en": "The University of Leeds",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "29",
+            "2025": "35",
+            "2026": "35"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Design",
+                "设计文学硕士"
+              ],
+              [
+                "Design MA",
+                "设计文学硕士"
+              ],
+              [
+                "MA Art Gallery and Museum Studies",
+                "艺术·画廊与博物馆·研究文学硕士"
+              ],
+              [
+                "Art Gallery and Museum Studies MA",
+                "艺术·画廊与博物馆·研究文学硕士"
+              ],
+              [
+                "Arts Management and Heritage Studies MA",
+                "艺术管理与文化遗产·研究文学硕士"
+              ],
+              [
+                "MA Fine Art",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Design MA-1 year",
+                "设计文学硕士"
+              ],
+              [
+                "MA Art and Design",
+                "艺术与设计文学硕士"
+              ],
+              [
+                "Fine Art MA",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Art and Design",
+                "艺术与设计"
+              ],
+              [
+                "MA Culture Creativity and Entrepreneurship",
+                "文化与创业文学硕士"
+              ],
+              [
+                "MA Film Photography and Media",
+                "电影·摄影与媒体文学硕士"
+              ],
+              [
+                "Design MA/1 year",
+                "设计文学硕士"
+              ],
+              [
+                "MA Digital Design Futures",
+                "数字·设计·未来文学硕士"
+              ],
+              [
+                "Art and Design MA",
+                "艺术与设计文学硕士"
+              ],
+              [
+                "MA art design",
+                "艺术·设计文学硕士"
+              ],
+              [
+                "Art Gallery and Museum Studies",
+                "艺术·画廊与博物馆·研究"
+              ],
+              [
+                "Arts Management and Heritage Studies",
+                "艺术管理与文化遗产·研究"
+              ],
+              [
+                "Film, Photography and Media MA",
+                "电影·摄影与媒体文学硕士"
+              ],
+              [
+                "Art Gallery and Museum Studies MA 1",
+                "艺术·画廊与博物馆·研究文学硕士"
+              ],
+              [
+                "Art Gallery and Museum Studies MA-1 year",
+                "艺术·画廊与博物馆·研究文学硕士"
+              ],
+              [
+                "MA Social History of Art",
+                "社会·艺术史文学硕士"
+              ],
+              [
+                "MA Music Management",
+                "音乐·管理文学硕士"
+              ],
+              [
+                "MA Media Industries",
+                "媒体·产业文学硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "Fine Art BA",
+                "纯艺术文学学士"
+              ],
+              [
+                "Film, Photography and Media BA",
+                "电影·摄影与媒体文学学士"
+              ],
+              [
+                "Fine Art",
+                "纯艺术"
+              ],
+              [
+                "FilmPhotography and Media BA",
+                "与媒体文学学士"
+              ],
+              [
+                "International Foundation Year",
+                "国际预科年制"
+              ],
+              [
+                "BA Film, Photography and Media",
+                "电影·摄影与媒体文学学士"
+              ],
+              [
+                "Film, Photography and Media",
+                "电影·摄影与媒体"
+              ],
+              [
+                "Product Design",
+                "产品设计"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "84",
+          "zh": "南安普顿大学",
+          "en": "University of Southampton",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "20",
+            "2025": "39",
+            "2026": "25"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Fine Art",
+                "纯艺术文学硕士"
+              ],
+              [
+                "MA Contemporary Curation",
+                "当代·策展文学硕士"
+              ],
+              [
+                "MA Contemporary Curating",
+                "当代·策展文学硕士"
+              ],
+              [
+                "MA Design Management",
+                "设计管理文学硕士"
+              ],
+              [
+                "MA Fine Art 1 year",
+                "纯艺术文学硕士"
+              ],
+              [
+                "MA Fine Art-1 year",
+                "纯艺术文学硕士"
+              ],
+              [
+                "MA Digital Media Practice",
+                "数字·媒体·实践文学硕士"
+              ],
+              [
+                "Arts and Cultural Leadership (MA)",
+                "艺术与文化·领导力文学硕士"
+              ],
+              [
+                ": Contemporary Curating (MA)",
+                "当代·策展文学硕士"
+              ],
+              [
+                "MSc in Creative Technologies",
+                "创意理学硕士"
+              ],
+              [
+                "Arts and Cultural Leadership",
+                "艺术与文化·领导力"
+              ],
+              [
+                "MA in Fine Art",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Fine Art",
+                "纯艺术"
+              ],
+              [
+                "Contemporary Curation",
+                "当代·策展"
+              ],
+              [
+                "MA Digital Media Practice 1 year",
+                "数字·媒体·实践文学硕士"
+              ],
+              [
+                "MA Communication Design",
+                "传播设计文学硕士"
+              ],
+              [
+                "MA Contemporary Curating for 2025-2026",
+                "当代·策展文学硕士"
+              ],
+              [
+                "MA Arts and Cultural Leadership",
+                "艺术与文化·领导力文学硕士"
+              ],
+              [
+                "Fine Art MA",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Fine Art (MA)",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Arts and Cultural Leadership MA",
+                "艺术与文化·领导力文学硕士"
+              ],
+              [
+                "Communication Design MA",
+                "传播设计文学硕士"
+              ],
+              [
+                "MA Fine Art -1 year",
+                "纯艺术文学硕士"
+              ],
+              [
+                "MA Fine Art 1",
+                "纯艺术文学硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "Fine Art (BA)",
+                "纯艺术文学学士"
+              ],
+              [
+                "Graphic Communication (BA)",
+                "平面·传播文学学士"
+              ],
+              [
+                "：ONCAMPUS Southampton Art & Design Undergraduate F",
+                "艺术·设计·本科"
+              ],
+              [
+                "Graphic Communication",
+                "平面·传播"
+              ],
+              [
+                "BA Fine Art",
+                "纯艺术文学学士"
+              ],
+              [
+                "Undergraduate Foundation Programme (UFP)",
+                "本科预科"
+              ],
+              [
+                "Fine Art",
+                "纯艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "45",
+          "zh": "伦敦大学学院",
+          "en": "University College London",
+          "tags": [
+            "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "5",
+            "2025": "14",
+            "2026": "26"
+          },
+          "hl": true,
+          "majors": {
+            "pg": [
+              [
+                "Museums and Galleries in Education MA",
+                "博物馆与画廊·教育文学硕士"
+              ],
+              [
+                "MA Museums and Galleries in Education",
+                "博物馆与画廊·教育文学硕士"
+              ],
+              [
+                "History of Art MA",
+                "艺术史文学硕士"
+              ],
+              [
+                "Creative Health MASc",
+                "创意·健康"
+              ],
+              [
+                "History of Art MA-1 year",
+                "艺术史文学硕士"
+              ],
+              [
+                "MFA Fine Art",
+                "纯艺术艺术硕士"
+              ],
+              [
+                "Museum Studies MA",
+                "博物馆·研究文学硕士"
+              ],
+              [
+                "Archaeology and Heritage of Asia MA",
+                "与文化遗产文学硕士"
+              ],
+              [
+                "MA Cultural Heritage Studies",
+                "文化·文化遗产·研究文学硕士"
+              ],
+              [
+                "MA Art Education, Culture and Practice",
+                "艺术·教育·文化与实践文学硕士"
+              ],
+              [
+                "MA Digital Media: Production",
+                "数字·媒体·制作文学硕士"
+              ],
+              [
+                "MASc Creative Health",
+                "创意·健康"
+              ],
+              [
+                "MA History of Art",
+                "艺术史文学硕士"
+              ],
+              [
+                "MA Museums and Galleries in Education-1 year",
+                "博物馆与画廊·教育文学硕士"
+              ],
+              [
+                "Cultural Heritage Studies MA-1 year",
+                "文化·文化遗产·研究文学硕士"
+              ],
+              [
+                "Museums and Galleries in Education MA 1",
+                "博物馆与画廊·教育文学硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "Creative Arts and Humanities",
+                "创意·艺术与人文学科"
+              ],
+              [
+                "Media BA",
+                "媒体文学学士"
+              ],
+              [
+                "BFA Fine Art",
+                "纯艺术艺术学士"
+              ],
+              [
+                "Fine Art",
+                "纯艺术"
+              ],
+              [
+                "Fine Art BA",
+                "纯艺术文学学士"
+              ],
+              [
+                "BA Media",
+                "媒体文学学士"
+              ],
+              [
+                "BA Creative Arts and Humanities",
+                "创意·艺术与人文学科文学学士"
+              ],
+              [
+                "Fine Art BFA",
+                "纯艺术艺术学士"
+              ],
+              [
+                "Fine Art BA（4）",
+                "纯艺术文学学士"
+              ],
+              [
+                "BA Fine Art",
+                "纯艺术文学学士"
+              ],
+              [
+                "History of Art",
+                "艺术史"
+              ],
+              [
+                "艺术史",
+                "艺术史"
+              ],
+              [
+                "Art and Technology",
+                "艺术与技术"
+              ],
+              [
+                "Fine Art（4 years）",
+                "纯艺术"
+              ],
+              [
+                "BA media",
+                "媒体文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "37",
+          "zh": "伯恩茅斯艺术大学",
+          "en": "Arts University Bournemouth",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "16",
+            "2025": "10",
+            "2026": "11"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Illustration",
+                "插画文学硕士"
+              ],
+              [
+                "MA Photography",
+                "摄影文学硕士"
+              ],
+              [
+                "MA Fine Art",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Photography MA",
+                "摄影文学硕士"
+              ],
+              [
+                "MA illustration",
+                "插画文学硕士"
+              ],
+              [
+                "MA Animation Production",
+                "动画·制作文学硕士"
+              ],
+              [
+                "MA Illustration-1 year",
+                "插画文学硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "BA (Hons) Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons) Fine Art",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons) Graphic Design",
+                "平面设计（荣誉）文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "31",
+          "zh": "赫特福德大学",
+          "en": "University of Hertfordshire",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "18",
+            "2025": "8",
+            "2026": "5"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BA (Hons) Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "IIustration",
+                "IIustration"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "Illustration BA (Hons)",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "BA (HONOURS) Illustration",
+                "插画（荣誉）文学学士"
+              ]
+            ],
+            "pg": [
+              [
+                "MA Illustration",
+                "插画文学硕士"
+              ],
+              [
+                "MA Fine Art",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "Illustration MA",
+                "插画文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "30",
+          "zh": "伯明翰城市大学",
+          "en": "Birmingham City University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "14",
+            "2025": "7",
+            "2026": "9"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Illustration - BA (Hons)",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "Photography - BA (Hons)",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "BA Hons Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons) Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "Fine Art - BA (Hons)",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "PHOTOGRAPHY",
+                "摄影"
+              ],
+              [
+                "PHOTOGRAPHY - BA (HONS)",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "BA(Hons) Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "Photography BA (Hons)",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "ILLUSTRATION - BA (HONS)",
+                "插画（荣誉）文学学士"
+              ]
+            ],
+            "pg": [
+              [
+                "MA Fine Art",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Fine Art – MA",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Fine Art",
+                "纯艺术"
+              ],
+              [
+                "MA Visual Communication",
+                "视觉传达文学硕士"
+              ],
+              [
+                "Fine Art MA",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Master of Arts Fine Art with Professional Placement",
+                "纯艺术·专业·实习文学硕士"
+              ],
+              [
+                "Visual Communication",
+                "视觉传达"
+              ],
+              [
+                "Master of Arts Fine Art",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Postgraduate Pathway in Art for MA Visual Communication (Illustration)",
+                "方向·艺术·视觉传达·插画文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "30",
+          "zh": "曼彻斯特城市大学",
+          "en": "Manchester Metropolitan University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "16",
+            "2025": "13",
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Illustration",
+                "插画文学硕士"
+              ],
+              [
+                "MA lllustration",
+                "插画文学硕士"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "MFA Illustration",
+                "插画艺术硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "BA (Hons) Fine Art",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons) Art History and Curating",
+                "艺术史与策展（荣誉）文学学士"
+              ],
+              [
+                "Art History and Curating",
+                "艺术史与策展"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "21",
+          "zh": "格拉斯哥大学",
+          "en": "University of Glasgow",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "13",
+            "2025": "3",
+            "2026": "5"
+          },
+          "majors": {
+            "ug": [
+              [
+                "摄影",
+                "摄影"
+              ],
+              [
+                "INTERNATIONAL FOUNDATION (ART AND DESIGN)",
+                "艺术与设计国际预科"
+              ]
+            ],
+            "pg": [
+              [
+                "MUSEUM STUDIES MSc",
+                "博物馆·研究理学硕士"
+              ],
+              [
+                "MLitt Art History",
+                "艺术史文学硕士"
+              ],
+              [
+                "INTERNATIONAL MANAGEMENT & DESIGN INNOVATION MSc",
+                "管理·设计·创新国际理学硕士"
+              ],
+              [
+                "ART HISTORY MLitt",
+                "艺术史文学硕士"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "Creative Industries & Cultural Policy MSc",
+                "创意·产业·文化政策理学硕士"
+              ],
+              [
+                "MSc MUSEUM STUDIES",
+                "博物馆·研究理学硕士"
+              ],
+              [
+                "MSc in Creative Industries and Cultural Policy",
+                "创意·产业与文化政策理学硕士"
+              ],
+              [
+                "CREATIVE INDUSTRIES & CULTURAL POLICY",
+                "创意·产业·文化政策"
+              ],
+              [
+                "ART HISTORY MLitt-1 year",
+                "艺术史文学硕士"
+              ],
+              [
+                "Art History (MLitt)",
+                "艺术史文学硕士"
+              ],
+              [
+                "Msc Media, Culture & Society",
+                "媒体·文化理学硕士"
+              ],
+              [
+                "Art History MLitt",
+                "艺术史文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "19",
+          "zh": "考文垂大学",
+          "en": "Coventry University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "10",
+            "2025": "4",
+            "2026": "5"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Photography BA (Hons)",
+                "摄影（荣誉）文学学士"
+              ],
+              [
+                "Illustration BA (Hons)",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "Illustration BA(Hons)",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "BA Photography",
+                "摄影文学学士"
+              ],
+              [
+                "Photography",
+                "摄影"
+              ],
+              [
+                "BA (Hons) Illustration",
+                "插画（荣誉）文学学士"
+              ]
+            ],
+            "pg": [
+              [
+                "Illustration and Animation MA",
+                "插画与动画文学硕士"
+              ],
+              [
+                "MA Photography",
+                "摄影文学硕士"
+              ],
+              [
+                "MA Design Management",
+                "设计管理文学硕士"
+              ],
+              [
+                "Illustration and Animation MA -1",
+                "插画与动画文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "15",
+          "zh": "纽卡斯尔大学",
+          "en": "Newcastle University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "5",
+            "2025": "8",
+            "2026": "2"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Fine Art MFA",
+                "纯艺术艺术硕士"
+              ],
+              [
+                "Curating Art MA",
+                "策展·艺术文学硕士"
+              ],
+              [
+                "Museum Studies MA",
+                "博物馆·研究文学硕士"
+              ],
+              [
+                "MA Museum Studies",
+                "博物馆·研究文学硕士"
+              ],
+              [
+                "MA Curating Art",
+                "策展·艺术文学硕士"
+              ],
+              [
+                "MA Fine Art",
+                "纯艺术文学硕士"
+              ],
+              [
+                "MFA Fine Art",
+                "纯艺术艺术硕士"
+              ],
+              [
+                "Master of Fine Art",
+                "艺术硕士"
+              ],
+              [
+                "Contemporary Art History and Curating",
+                "当代艺术·历史与策展"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "14",
+          "zh": "提赛德大学",
+          "en": "Teesside University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "6",
+            "2025": "3",
+            "2026": "5"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Illustration",
+                "插画文学硕士"
+              ],
+              [
+                "MA 2D Animation and Stop Motion",
+                "动画与文学硕士"
+              ],
+              [
+                "Illustration MA",
+                "插画文学硕士"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "2D Animation and Stop Motion MA",
+                "动画与文学硕士"
+              ],
+              [
+                "MA Concept Art",
+                "概念设计文学硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "Illustration BA (Hons)",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "Fine Art BA (Hons)",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "BA (Hons) Illustration",
+                "插画（荣誉）文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "13",
+          "zh": "伦敦国王学院",
+          "en": "King's College London",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "8",
+            "2026": "5"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Arts & Cultural Management MA",
+                "艺术·文化·管理文学硕士"
+              ],
+              [
+                "Arts and Cultural Management MA",
+                "艺术与文化·管理文学硕士"
+              ],
+              [
+                "Arts & Cultural Management MA 1",
+                "艺术·文化·管理文学硕士"
+              ],
+              [
+                "Cultural & Creative Industries MA (Full-time)",
+                "文化·创意·产业文学硕士全日制"
+              ],
+              [
+                "Arts and Cultural Management MA (Full-time)",
+                "艺术与文化·管理文学硕士全日制"
+              ],
+              [
+                "MA Cultural & Creative Industries",
+                "文化·创意·产业文学硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "Digital Media and Culture BA",
+                "数字·媒体与文化文学学士"
+              ],
+              [
+                "BA Culture, Media & Creative Industries",
+                "文化·媒体·创意·产业文学学士"
+              ],
+              [
+                "Culture, Media & Creative Industries",
+                "文化·媒体·创意·产业"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "12",
+          "zh": "普利茅斯大学",
+          "en": "University of Plymouth",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "5",
+            "2025": "5",
+            "2026": "2"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BA (Hons) Illustration",
+                "插画（荣誉）文学学士"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "illustration",
+                "插画"
+              ],
+              [
+                "BA(Hons) Illustration",
+                "插画（荣誉）文学学士"
+              ]
+            ],
+            "pg": [
+              [
+                "MA Photography",
+                "摄影文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "9",
+          "zh": "伦敦大学伯贝克学院",
+          "en": "Birkbeck",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "5",
+            "2025": "2",
+            "2026": "2"
+          },
+          "majors": {
+            "ug": [
+              [
+                "艺术管理",
+                "艺术管理"
+              ]
+            ],
+            "pg": [
+              [
+                "Arts Policy and Management (MA)",
+                "艺术·政策与管理文学硕士"
+              ],
+              [
+                "MA Arts Policy and Management",
+                "艺术·政策与管理文学硕士"
+              ],
+              [
+                "ARTS POLICY AND MANAGEMENT MA",
+                "艺术·政策与管理文学硕士"
+              ],
+              [
+                "History of Art (MA)",
+                "艺术史文学硕士"
+              ],
+              [
+                "CREATIVE INDUSTRIES MANAGEMENT AND POLICY MA",
+                "创意·产业·管理与政策文学硕士"
+              ],
+              [
+                "HISTORY OF ART",
+                "艺术史"
+              ],
+              [
+                "HISTORY OF ART WITH CURATING",
+                "艺术史·策展"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "9",
+          "zh": "拉夫堡大学",
+          "en": "Loughborough University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "5",
+            "2025": "3",
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                ": ONCAMPUS Loughborough Art & Design Undergraduate",
+                "艺术·设计·本科"
+              ],
+              [
+                "Graphic Design BA (Hons)",
+                "平面设计（荣誉）文学学士"
+              ]
+            ],
+            "pg": [
+              [
+                "M.Sc. Design Innovation Management",
+                "设计·创新管理"
+              ],
+              [
+                "Graphic Design and Visualisation MA",
+                "平面设计与可视化文学硕士"
+              ],
+              [
+                "MSc Design Innovation Management 1",
+                "设计·创新管理理学硕士"
+              ],
+              [
+                "M.Sc. Digital Creative Media",
+                "数字·创意·媒体"
+              ],
+              [
+                "Design and Branding MA",
+                "设计与品牌设计文学硕士"
+              ],
+              [
+                "MSc Design Innovation Managemen",
+                "设计·创新理学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "9",
+          "zh": "莱斯特大学",
+          "en": "University of Leicester",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025"
+          ],
+          "seasonCounts": {
+            "2024": "5",
+            "2025": "4"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Art Museum and Gallery Studies MA",
+                "艺术·博物馆与画廊·研究文学硕士"
+              ],
+              [
+                "MA Art Museum and Gallery Studies",
+                "艺术·博物馆与画廊·研究文学硕士"
+              ],
+              [
+                "Museum Studies MA",
+                "博物馆·研究文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "9",
+          "zh": "谢菲尔德哈勒姆大学",
+          "en": "Sheffield Hallam University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "4",
+            "2025": "4",
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Design (Illustration)",
+                "设计·插画文学硕士"
+              ],
+              [
+                "Fine Art MFA",
+                "纯艺术艺术硕士"
+              ],
+              [
+                "MA Design (llustration) -1",
+                "设计·插画文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "8",
+          "zh": "曼彻斯特大学",
+          "en": "The University of Manchester",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "4",
+            "2026": "3"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Art Gallery and Museum Studies",
+                "艺术·画廊与博物馆·研究文学硕士"
+              ],
+              [
+                "MA Arts Management, Policy and Practice",
+                "艺术管理·政策与实践文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "8",
+          "zh": "牛津大学",
+          "en": "University of Oxford",
+          "tags": [
+            "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "2",
+            "2025": "2",
+            "2026": "4"
+          },
+          "hl": true,
+          "majors": {
+            "pg": [
+              [
+                "Master of Studies in History of Art and Visual Cul",
+                "研究·艺术史与视觉硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "Fine Art",
+                "纯艺术"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "人文科学",
+                "人文科学"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "7",
+          "zh": "谢菲尔德大学",
+          "en": "The University of Sheffield",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "5",
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MSc Creative and Cultural Industries Management",
+                "创意与文化·产业·管理理学硕士"
+              ],
+              [
+                "MA Cultural Heritage Management",
+                "文化·文化遗产·管理文学硕士"
+              ],
+              [
+                "Digital Media and Society",
+                "数字·媒体与"
+              ],
+              [
+                "Master of Arts Cultural Heritage Management",
+                "文化·文化遗产·管理文学硕士"
+              ],
+              [
+                ", Master of Arts Digital Culture and Communication",
+                "数字·文化与传播文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "6",
+          "zh": "伯明翰大学",
+          "en": "University of Birmingham",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "1",
+            "2026": "4"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Art History and Curating",
+                "艺术史与策展文学硕士"
+              ],
+              [
+                "History of Art (FT)",
+                "艺术史·全日制"
+              ],
+              [
+                "Digital Media and Creative Industries MA",
+                "数字·媒体与创意·产业文学硕士"
+              ],
+              [
+                "History of Art MA",
+                "艺术史文学硕士"
+              ],
+              [
+                "MA Digital Media and Creative Industries",
+                "数字·媒体与创意·产业文学硕士"
+              ],
+              [
+                "MA History of Art-1 year",
+                "艺术史文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "5",
+          "zh": "埃克塞特大学",
+          "en": "University of Exeter",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "3",
+            "2025": "1",
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Curation: Contemporary Art and Cultural Management",
+                "策展·当代艺术与文化·管理文学硕士"
+              ],
+              [
+                "MA Curation: Contemporary Art and Cultural Managem",
+                "策展·当代艺术与文化文学硕士"
+              ],
+              [
+                "Master of Arts in International Film Business",
+                "电影·商业文学硕士国际"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "5",
+          "zh": "约克大学(英国)",
+          "en": "University of York",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "3",
+            "2025": "1",
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA History of Art",
+                "艺术史文学硕士"
+              ],
+              [
+                "摄影",
+                "摄影"
+              ],
+              [
+                "MA Film and Television Production with Cinematogra",
+                "电影与制作文学硕士"
+              ],
+              [
+                "MA History of Art (Modern and Contemporary Art)",
+                "艺术史·现代与当代艺术文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "5",
+          "zh": "苏富比艺术学院-伦敦校区",
+          "en": "Sotheby's Institute of Art",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "2",
+            "2025": "2",
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Art Business",
+                "艺术商业文学硕士"
+              ],
+              [
+                "MA Contemporary Art",
+                "当代艺术文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "4",
+          "zh": "伦敦大学玛丽女王学院",
+          "en": "Queen Mary University of London",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "2",
+            "2026": "2"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Creative Industries and Arts Organisation",
+                "创意·产业与艺术文学硕士"
+              ],
+              [
+                "MA FT Creative Industries and Arts Organisation",
+                "全日制·创意·产业与艺术文学硕士"
+              ],
+              [
+                "Creative Arts and Media MA",
+                "创意·艺术与媒体文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "4",
+          "zh": "剑桥视觉表演艺术学院",
+          "en": "Cambridge School of Visual & Performing Arts",
+          "tags": [
+            "uk-g5"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "2",
+            "2025": "1",
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Visual & Performing Art",
+                "视觉·艺术"
+              ],
+              [
+                "BA (Hons) Illustration",
+                "插画（荣誉）文学学士"
+              ]
+            ],
+            "pg": [
+              [
+                "Graduate Diploma in Art & Design",
+                "艺术·设计研究生文凭"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "4",
+          "zh": "密德萨斯大学",
+          "en": "University of Middlesex",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "2",
+            "2025": "1",
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Photography",
+                "摄影文学硕士"
+              ],
+              [
+                "Photography MA",
+                "摄影文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "4",
+          "zh": "布里斯托大学",
+          "en": "University of Bristol",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025"
+          ],
+          "seasonCounts": {
+            "2024": "3",
+            "2025": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA History of Art",
+                "艺术史文学硕士"
+              ],
+              [
+                "Immersive Arts (Virtual and Augmented Reality) (MA",
+                "沉浸式·艺术与文学硕士"
+              ],
+              [
+                "History of Art (MA)",
+                "艺术史文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "4",
+          "zh": "格鲁斯特大学",
+          "en": "University of Gloucestershire",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "4"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Illustration",
+                "插画文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "4",
+          "zh": "考陶德艺术学院",
+          "en": "The Courtauld Institute of Art",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "1",
+            "2026": "2"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA in the History of Art",
+                "艺术史文学硕士"
+              ],
+              [
+                "Graduate Diploma in the History of Art programme",
+                "艺术史研究生文凭"
+              ],
+              [
+                "MA Art and Business",
+                "艺术与商业文学硕士"
+              ],
+              [
+                "MA History of Art-9 months",
+                "艺术史文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "伦敦大学亚非学院",
+          "en": "School of Oriental and African Studies(SOAS)",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "1",
+            "2026": "2"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Cultural Studies",
+                "文化研究文学硕士"
+              ],
+              [
+                "MA History of Art and Archaeology",
+                "艺术史与文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "兰卡斯特大学",
+          "en": "Lancaster University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025"
+          ],
+          "seasonCounts": {
+            "2024": "2",
+            "2025": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Fine Art MA",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Arts Management MA",
+                "艺术管理文学硕士"
+              ],
+              [
+                "MA Design Management",
+                "设计管理文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "兰开夏大学",
+          "en": "University of Lancashire",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "3"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Master of Arts in Photography",
+                "摄影文学硕士"
+              ],
+              [
+                "MA Photography",
+                "摄影文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "利物浦大学",
+          "en": "University of Liverpool",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025"
+          ],
+          "seasonCounts": {
+            "2024": "2",
+            "2025": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Art, Philosophy and Cultural Institutions MA",
+                "艺术·哲学与文化文学硕士"
+              ],
+              [
+                "MA Art, Phil & Cultural Instit",
+                "艺术·文化文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "华威大学",
+          "en": "The University of Warwick",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2026": "2"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA in Arts, Enterprise and Development",
+                "艺术与文学硕士"
+              ],
+              [
+                "Creative and Media Enterprises (MA)-1 year",
+                "创意与媒体文学硕士"
+              ],
+              [
+                "Arts, Enterprise and Development (MA)-1 year",
+                "艺术与文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "圣安德鲁斯大学",
+          "en": "University of St Andrews",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "1",
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MLitt Art History",
+                "艺术史文学硕士"
+              ],
+              [
+                "MLitt in Art History",
+                "艺术史文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "埃塞克斯大学",
+          "en": "University of Essex",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025"
+          ],
+          "seasonCounts": {
+            "2024": "2",
+            "2025": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Curating",
+                "策展文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "伦敦大学布鲁内尔学院",
+          "en": "Brunel University of London",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "2"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Art Psychotherapy-2 years",
+                "艺术心理治疗文学硕士"
+              ],
+              [
+                "MA Art Psychotherapy",
+                "艺术心理治疗文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "法尔茅斯大学",
+          "en": "Falmouth University",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "2"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Illustration: Authorial Practice MA",
+                "插画·实践文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "玛格丽特皇后大学",
+          "en": "Queen Margaret University",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "1",
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MSc in Art Psychotherapy",
+                "艺术心理治疗理学硕士"
+              ],
+              [
+                "Art Psychotherapy MSc-2 years",
+                "艺术心理治疗理学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "贝尔法斯特女王大学",
+          "en": "Queen's University Belfast",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "2"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Arts Management",
+                "艺术管理文学硕士"
+              ],
+              [
+                "Master of Arts in Arts Management",
+                "艺术管理文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "邓迪大学",
+          "en": "University of Dundee",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "2"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Comics & Graphic Novels MDes",
+                "漫画·平面设计学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "伦敦城市大学",
+          "en": "London Metropolitan University",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Fine Art",
+                "纯艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "伯恩茅斯大学",
+          "en": "Bournemouth University",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Directing Film & Television",
+                "导演·电影文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "切斯特大学",
+          "en": "University of Chester",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Art Therapy MA",
+                "艺术治疗文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "卡迪夫大学",
+          "en": "Cardiff University",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "摄影",
+                "摄影"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "德蒙福特大学",
+          "en": "De Montfort University",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BA (Hons) Arts and Festivals Management",
+                "艺术与管理（荣誉）文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "杜伦大学",
+          "en": "Durham University",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Museum and Artefact Studies",
+                "博物馆与研究文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "牛津大学-罗斯金艺术学院",
+          "en": "University of Oxford - Ruskin School of Art",
+          "tags": [
+            "uk-g5"
+          ],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "Fine Art",
+                "纯艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "皇家美术学院",
+          "en": "Royal Academy of Arts",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Photography MA",
+                "摄影文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "肯特大学",
+          "en": "University of Kent",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BA (Hons) Graphic Design",
+                "平面设计（荣誉）文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "英国安培德私立中学",
+          "en": "Mander Portman Woodward School",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "ALevel 2-year",
+                "年制"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "诺维奇艺术大学",
+          "en": "Norwich University of the Art",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Fine Art (with Integrated Foundation Year)",
+                "纯艺术·综合预科年制"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "雷丁大学",
+          "en": "University of Reading",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Art",
+                "艺术"
+              ]
+            ]
+          }
+        }
+      ],
+      "US": [
+        {
+          "count": "88",
+          "zh": "纽约视觉艺术学院",
+          "en": "School of Visual Arts",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "33",
+            "2025": "31",
+            "2026": "24"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BFA Illustration",
+                "插画艺术学士"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "BFA in Fine Arts",
+                "纯艺术艺术学士"
+              ],
+              [
+                "BFA Photography and Video",
+                "摄影与视频艺术学士"
+              ],
+              [
+                "BFA Fine Arts",
+                "纯艺术艺术学士"
+              ],
+              [
+                "插画",
+                "插画"
+              ],
+              [
+                "BFA in Illustration",
+                "插画艺术学士"
+              ],
+              [
+                "Fine Arts",
+                "纯艺术"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "Fine Art",
+                "纯艺术"
+              ],
+              [
+                "BA FINE ART",
+                "纯艺术文学学士"
+              ],
+              [
+                "illustration",
+                "插画"
+              ],
+              [
+                "English and the Visua Art Program",
+                "与艺术"
+              ],
+              [
+                "BFA in Fine Art",
+                "纯艺术艺术学士"
+              ],
+              [
+                "Bachelor of Fine Arts degree in Illustration",
+                "学位课程·插画艺术学士"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "FA Fine Arts",
+                "纯艺术"
+              ],
+              [
+                "BFA Ilustration",
+                "艺术学士"
+              ]
+            ],
+            "pg": [
+              [
+                "MFA Illustration as Visual Essay",
+                "插画·视觉·论文艺术硕士"
+              ],
+              [
+                "MA Curatorial Practice",
+                "策展实践文学硕士"
+              ],
+              [
+                "MFA in Illustration as Visual Essay",
+                "插画·视觉·论文艺术硕士"
+              ],
+              [
+                "纯艺术",
+                "纯艺术"
+              ],
+              [
+                "编辑插画",
+                "编辑插画"
+              ],
+              [
+                "MFA Fine Arts",
+                "纯艺术艺术硕士"
+              ],
+              [
+                "fine art",
+                "纯艺术"
+              ],
+              [
+                "MPS Digital Photography",
+                "专业硕士·数字·摄影"
+              ],
+              [
+                "MFA Photography, Video and Related Media，2 years",
+                "摄影·视频与媒体艺术硕士"
+              ],
+              [
+                "MFA in illustration as Visual Essay",
+                "插画·视觉·论文艺术硕士"
+              ],
+              [
+                "MFA Photography, Video, and Related Media，2",
+                "摄影·视频与媒体艺术硕士"
+              ],
+              [
+                "Master of Professional Studies in Art Therapy",
+                "专业·研究·艺术治疗硕士"
+              ],
+              [
+                "MFA in Fine Arts",
+                "纯艺术艺术硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "76",
+          "zh": "马里兰艺术学院",
+          "en": "Maryland Institute College of Art",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "25",
+            "2025": "34",
+            "2026": "17"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Illustration",
+                "插画文学硕士"
+              ],
+              [
+                "MA in Illustration",
+                "插画文学硕士"
+              ],
+              [
+                "插画",
+                "插画"
+              ],
+              [
+                "MFA Illustration Practice",
+                "插画·实践艺术硕士"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "Illustration (M.A.)",
+                "插画"
+              ],
+              [
+                "MFA in Illustration Practice",
+                "插画·实践艺术硕士"
+              ],
+              [
+                "纯艺术",
+                "纯艺术"
+              ],
+              [
+                "MFA Photography and Media & Society",
+                "摄影与媒体艺术硕士"
+              ],
+              [
+                "Illustration Practice MFA",
+                "插画·实践艺术硕士"
+              ],
+              [
+                "mfa illustration",
+                "插画艺术硕士"
+              ],
+              [
+                "插画实践",
+                "插画实践"
+              ],
+              [
+                "MA illustration",
+                "插画文学硕士"
+              ],
+              [
+                "Painting",
+                "绘画"
+              ],
+              [
+                "Illustration Practice (M.F.A.)-2 years",
+                "插画·实践"
+              ],
+              [
+                "M.A. in Illustration",
+                "插画"
+              ],
+              [
+                "Mount Royal School of Art",
+                "学院·艺术"
+              ]
+            ],
+            "ug": [
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "BFA in Painting",
+                "绘画艺术学士"
+              ],
+              [
+                "BFA Illustration",
+                "插画艺术学士"
+              ],
+              [
+                "BFA in Photography",
+                "摄影艺术学士"
+              ],
+              [
+                "BFA in Illustration",
+                "插画艺术学士"
+              ],
+              [
+                "BFA in General Fine Arts",
+                "通识·纯艺术艺术学士"
+              ],
+              [
+                "BFA in Interdisciplinary Sculpture",
+                "跨学科·雕塑艺术学士"
+              ],
+              [
+                "Photography",
+                "摄影"
+              ],
+              [
+                "Painting",
+                "绘画"
+              ],
+              [
+                "General Fine Arts",
+                "通识·纯艺术"
+              ],
+              [
+                "Fine Art",
+                "纯艺术"
+              ],
+              [
+                "Fine Arts",
+                "纯艺术"
+              ],
+              [
+                "illustration",
+                "插画"
+              ],
+              [
+                "BFA in Interactive Arts",
+                "艺术艺术学士"
+              ],
+              [
+                "插画",
+                "插画"
+              ],
+              [
+                "Bachelor of Fine Arts Illustration",
+                "插画艺术学士"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "Fine art",
+                "纯艺术"
+              ],
+              [
+                "Bachelor of fine arts",
+                "艺术学士"
+              ],
+              [
+                "Bachelor of Fine Arts",
+                "艺术学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "74",
+          "zh": "芝加哥艺术学院",
+          "en": "School of the Art Institute of Chicago",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "27",
+            "2025": "28",
+            "2026": "19"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BFA in Studio",
+                "工作室艺术学士"
+              ],
+              [
+                "BFA in Painting and Drawing",
+                "绘画与素描艺术学士"
+              ],
+              [
+                "Painting and Drawing",
+                "绘画与素描"
+              ],
+              [
+                "BFA in Sculpture",
+                "雕塑艺术学士"
+              ],
+              [
+                "BFA in Studio (Photography)",
+                "工作室·摄影艺术学士"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "Painting & Drawing",
+                "绘画·素描"
+              ],
+              [
+                "BFA in Fine Arts",
+                "纯艺术艺术学士"
+              ],
+              [
+                "插画",
+                "插画"
+              ],
+              [
+                "BFA Painting and Drawing",
+                "绘画与素描艺术学士"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "BA FINE ART",
+                "纯艺术文学学士"
+              ],
+              [
+                "Fine Arts",
+                "纯艺术"
+              ],
+              [
+                "BFA Studio - Photography",
+                "工作室·摄影艺术学士"
+              ],
+              [
+                "Painting",
+                "绘画"
+              ],
+              [
+                "BFA",
+                "艺术学士"
+              ],
+              [
+                "BFA in Painting & Drawing",
+                "绘画·素描艺术学士"
+              ],
+              [
+                "Bachelor of Fine Arts in Studio",
+                "工作室艺术学士"
+              ],
+              [
+                "Studio Art BFA",
+                "工作室·艺术艺术学士"
+              ],
+              [
+                "sculpture",
+                "雕塑"
+              ],
+              [
+                "Fine Art",
+                "纯艺术"
+              ],
+              [
+                "Sculpture",
+                "雕塑"
+              ],
+              [
+                "BFA in Studio - Painting and Drawing",
+                "工作室·绘画与素描艺术学士"
+              ],
+              [
+                "Printmaking",
+                "版画"
+              ],
+              [
+                "fine art",
+                "纯艺术"
+              ],
+              [
+                "photography",
+                "摄影"
+              ],
+              [
+                "BFA in studio",
+                "工作室艺术学士"
+              ],
+              [
+                "BFA in Studio（Painting and Drawing）",
+                "工作室·绘画与素描艺术学士"
+              ]
+            ],
+            "pg": [
+              [
+                "MFA Sculpture",
+                "雕塑艺术硕士"
+              ],
+              [
+                "MFA in Studio Photography 2",
+                "工作室·摄影艺术硕士"
+              ],
+              [
+                "Photography: Master of Fine Arts in Studio，2 years",
+                "摄影·工作室艺术硕士"
+              ],
+              [
+                "MA Arts Administration and Policy",
+                "艺术管理与政策文学硕士"
+              ],
+              [
+                "MFA in Studio, Painting and Drawing",
+                "工作室·绘画与素描艺术硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "60",
+          "zh": "萨凡纳艺术与设计学院",
+          "en": "Savannah College of Art and Design",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "24",
+            "2025": "19",
+            "2026": "17"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BFA in Illustration",
+                "插画艺术学士"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "BFA in Painting",
+                "绘画艺术学士"
+              ],
+              [
+                "illustration",
+                "插画"
+              ],
+              [
+                "BFA in photography",
+                "摄影艺术学士"
+              ],
+              [
+                "BFA in Sculpture",
+                "雕塑艺术学士"
+              ],
+              [
+                "BFA Painting",
+                "绘画艺术学士"
+              ],
+              [
+                "Bachelor of Fine Arts",
+                "艺术学士"
+              ],
+              [
+                "插画",
+                "插画"
+              ],
+              [
+                "B.F.A. in photography",
+                "摄影"
+              ],
+              [
+                "BFA in Photography",
+                "摄影艺术学士"
+              ],
+              [
+                "B.F.A. in illustration",
+                "插画"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ]
+            ],
+            "pg": [
+              [
+                "MFA Illustration",
+                "插画艺术硕士"
+              ],
+              [
+                "MFA Photography",
+                "摄影艺术硕士"
+              ],
+              [
+                "MA in Illustration",
+                "插画文学硕士"
+              ],
+              [
+                "M.A. in illustration",
+                "插画"
+              ],
+              [
+                "MFA in Illustration",
+                "插画艺术硕士"
+              ],
+              [
+                "插画",
+                "插画"
+              ],
+              [
+                "Illustration MFA",
+                "插画艺术硕士"
+              ],
+              [
+                "M.F.A. in illustration",
+                "插画"
+              ],
+              [
+                "MFA in Illustration, 2 years",
+                "插画艺术硕士"
+              ],
+              [
+                "MA in illustration",
+                "插画文学硕士"
+              ],
+              [
+                "Master of Fine Arts in Photography",
+                "摄影艺术硕士"
+              ],
+              [
+                "MA Illustration",
+                "插画文学硕士"
+              ],
+              [
+                "Master of Fine Arts in [Illustration]",
+                "插画艺术硕士"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "MFA Photography，2 years",
+                "摄影艺术硕士"
+              ],
+              [
+                "MFA Illustration, 2years",
+                "插画艺术硕士"
+              ],
+              [
+                "M.F.A. in illustration，2 years",
+                "插画"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "59",
+          "zh": "罗德岛设计学院",
+          "en": "Rhode Island School of Design",
+          "tags": [
+            "risd"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "13",
+            "2025": "23",
+            "2026": "23"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "BFA in Painting",
+                "绘画艺术学士"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "BFA in Illustration",
+                "插画艺术学士"
+              ],
+              [
+                "Painting",
+                "绘画"
+              ],
+              [
+                "BFA in Sculpture",
+                "雕塑艺术学士"
+              ],
+              [
+                "BFA Illustration",
+                "插画艺术学士"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "BFA in Photography",
+                "摄影艺术学士"
+              ],
+              [
+                "Sculpture",
+                "雕塑"
+              ],
+              [
+                "Sculpture BFA",
+                "雕塑艺术学士"
+              ],
+              [
+                "Fine Art",
+                "纯艺术"
+              ],
+              [
+                "Photography",
+                "摄影"
+              ],
+              [
+                "fine art",
+                "纯艺术"
+              ],
+              [
+                "Fine art",
+                "纯艺术"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "Illustration BFA",
+                "插画艺术学士"
+              ]
+            ],
+            "pg": [
+              [
+                "MFA Illustration",
+                "插画艺术硕士"
+              ],
+              [
+                "Art + Design Education",
+                "艺术·设计·教育"
+              ],
+              [
+                "lllustration",
+                "插画"
+              ],
+              [
+                "Illustration MFA-2 years",
+                "插画艺术硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "54",
+          "zh": "艺术中心设计学院",
+          "en": "ArtCenter College of Design",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "17",
+            "2025": "20",
+            "2026": "17"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "BFA Illustration",
+                "插画艺术学士"
+              ],
+              [
+                "BFA in Fine Art",
+                "纯艺术艺术学士"
+              ],
+              [
+                "BFA in Illustration",
+                "插画艺术学士"
+              ],
+              [
+                "BFA in Fine Arts",
+                "纯艺术艺术学士"
+              ],
+              [
+                "BFA Fine Art",
+                "纯艺术艺术学士"
+              ],
+              [
+                "illustration",
+                "插画"
+              ],
+              [
+                "Illustration BFA",
+                "插画艺术学士"
+              ],
+              [
+                "美术系",
+                "美术系"
+              ],
+              [
+                "Fine Art",
+                "纯艺术"
+              ],
+              [
+                "Illustration (BFA)",
+                "插画艺术学士"
+              ],
+              [
+                "Illustration (B.F.A.)",
+                "插画"
+              ],
+              [
+                "Photography",
+                "摄影"
+              ],
+              [
+                "llustration",
+                "插画"
+              ],
+              [
+                "Fine Art (B.F.A.)",
+                "纯艺术"
+              ],
+              [
+                "Photography and Imaging（B.F.A)",
+                "摄影与"
+              ],
+              [
+                "Illustration-Entertainment Arts Track",
+                "插画·艺术"
+              ],
+              [
+                "First Year immersion",
+                "年制"
+              ],
+              [
+                "Fine Art (BFA )",
+                "纯艺术艺术学士"
+              ],
+              [
+                "BS in Spatial Experience Design",
+                "空间·体验·设计"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "BFA Fine Arts",
+                "纯艺术艺术学士"
+              ],
+              [
+                "BFA Photography and Imaging",
+                "摄影与艺术学士"
+              ],
+              [
+                "Fine Arts",
+                "纯艺术"
+              ],
+              [
+                "fine art",
+                "纯艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "53",
+          "zh": "帕森斯设计学院",
+          "en": "Parsons School of Design at The New School",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "7",
+            "2025": "20",
+            "2026": "26"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BFA in Fine Art",
+                "纯艺术艺术学士"
+              ],
+              [
+                "Fine Arts",
+                "纯艺术"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "BFA Illustration",
+                "插画艺术学士"
+              ],
+              [
+                "BFA in Photography",
+                "摄影艺术学士"
+              ],
+              [
+                "illustration",
+                "插画"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "BFA in Illustration",
+                "插画艺术学士"
+              ],
+              [
+                "BFA Fine Arts",
+                "纯艺术艺术学士"
+              ],
+              [
+                "Illustration BFA",
+                "插画艺术学士"
+              ],
+              [
+                "PHOTOGRAPHY",
+                "摄影"
+              ],
+              [
+                "BFA in Fine Art+ESL",
+                "纯艺术艺术学士"
+              ],
+              [
+                "BFA in Fine Arts",
+                "纯艺术艺术学士"
+              ],
+              [
+                "BFA Photography",
+                "摄影艺术学士"
+              ],
+              [
+                "插画",
+                "插画"
+              ],
+              [
+                "fine art",
+                "纯艺术"
+              ],
+              [
+                "BA/BFA dual-degree program",
+                "学位课程文学学士艺术学士"
+              ],
+              [
+                "BFA Fine Art",
+                "纯艺术艺术学士"
+              ],
+              [
+                "The Bachelor of Fine Arts",
+                "艺术学士"
+              ]
+            ],
+            "pg": [
+              [
+                "MFA Photography",
+                "摄影艺术硕士"
+              ],
+              [
+                "Photography MFA，2 years",
+                "摄影艺术硕士"
+              ],
+              [
+                "Master of Fine Arts (MFA)",
+                "艺术硕士艺术硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "48",
+          "zh": "普瑞特艺术学院",
+          "en": "Pratt Institute",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "15",
+            "2025": "14",
+            "2026": "19"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BFA Communications Design-Illustration",
+                "传播·设计·插画艺术学士"
+              ],
+              [
+                "BFA in Fine Art",
+                "纯艺术艺术学士"
+              ],
+              [
+                "BFA in Photography",
+                "摄影艺术学士"
+              ],
+              [
+                "Fine Art",
+                "纯艺术"
+              ],
+              [
+                "Communications Design",
+                "传播·设计"
+              ],
+              [
+                "插画",
+                "插画"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "Communications Design, BFA (Emphasis in Illustrati",
+                "传播·设计·方向艺术学士"
+              ],
+              [
+                "Communications Design-Illustration",
+                "传播·设计·插画"
+              ],
+              [
+                "Fine Arts-Painting",
+                "纯艺术·绘画"
+              ],
+              [
+                "Fine Arts, BFA Emphasis on Drawing",
+                "纯艺术·方向·素描艺术学士"
+              ],
+              [
+                "Fine Arts, BFA",
+                "纯艺术艺术学士"
+              ],
+              [
+                "BFA in Fine Arts - Painting",
+                "纯艺术·绘画艺术学士"
+              ],
+              [
+                "Fine Arts - Painting",
+                "纯艺术·绘画"
+              ],
+              [
+                "Sculpture and Integrated Practices (Fine Art)/ BFA (4 Year Program)",
+                "雕塑与综合·实践·纯艺术艺术学士"
+              ],
+              [
+                "Fine Arts, BFA (Emphasis in Painting)",
+                "纯艺术·方向·绘画艺术学士"
+              ],
+              [
+                "Fine Arts (Emphasis in Sculpture andIntegrated Practices)",
+                "纯艺术·方向·雕塑·实践"
+              ],
+              [
+                "Communications Design, BFA (Emphasis in Illustration)",
+                "传播·设计·方向·插画艺术学士"
+              ],
+              [
+                "Fine Artsmajoring in Photography",
+                "摄影"
+              ],
+              [
+                "BFA in Fine Arts(Emphasis in Painting)",
+                "纯艺术·方向·绘画艺术学士"
+              ],
+              [
+                "Fine Arts",
+                "纯艺术"
+              ],
+              [
+                "BFA in Fine Art Sculpture & Integrated Practices",
+                "纯艺术·雕塑·综合·实践艺术学士"
+              ],
+              [
+                "BFA in Fine Arts",
+                "纯艺术艺术学士"
+              ]
+            ],
+            "pg": [
+              [
+                "纯艺术",
+                "纯艺术"
+              ],
+              [
+                "ARTS AND CULTURAL MANAGEMENT（MPS）",
+                "艺术与文化·管理·专业硕士"
+              ],
+              [
+                "MPS Arts and Cultural Management",
+                "专业硕士·艺术与文化·管理"
+              ],
+              [
+                "MFA Photography",
+                "摄影艺术硕士"
+              ],
+              [
+                "MFA in Photography",
+                "摄影艺术硕士"
+              ],
+              [
+                "MFA Fine Arts",
+                "纯艺术艺术硕士"
+              ],
+              [
+                "Art Therapy and Creativity Development, MPS",
+                "艺术治疗与专业硕士"
+              ],
+              [
+                "MFA Communications Design",
+                "传播·设计艺术硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "43",
+          "zh": "加州艺术学院(CCA)",
+          "en": "California College of the Arts",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025"
+          ],
+          "seasonCounts": {
+            "2024": "23",
+            "2025": "20"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "BFA in Painting and Drawing",
+                "绘画与素描艺术学士"
+              ],
+              [
+                "BFA Illustration",
+                "插画艺术学士"
+              ],
+              [
+                "BFA in Illustration",
+                "插画艺术学士"
+              ],
+              [
+                "BFA in Sculpture",
+                "雕塑艺术学士"
+              ],
+              [
+                "Sculpture",
+                "雕塑"
+              ],
+              [
+                "Photography BFA",
+                "摄影艺术学士"
+              ],
+              [
+                "BFA in Painting & Drawing",
+                "绘画·素描艺术学士"
+              ],
+              [
+                "Painting and Drawing",
+                "绘画与素描"
+              ],
+              [
+                "BFA Fine Arts",
+                "纯艺术艺术学士"
+              ],
+              [
+                "BFA Painting & Drawing",
+                "绘画·素描艺术学士"
+              ],
+              [
+                "Fine Art",
+                "纯艺术"
+              ],
+              [
+                "Illustration - BFA",
+                "插画艺术学士"
+              ],
+              [
+                "BFA in Photography",
+                "摄影艺术学士"
+              ],
+              [
+                "Undeclared",
+                "Undeclared"
+              ],
+              [
+                "Sculpture - BFA",
+                "雕塑艺术学士"
+              ],
+              [
+                "Painting/Drawing - BFA",
+                "绘画·素描艺术学士"
+              ],
+              [
+                "Photography",
+                "摄影"
+              ]
+            ],
+            "pg": [
+              [
+                "MFA Fine Arts",
+                "纯艺术艺术硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "38",
+          "zh": "加州大学戴维斯分校",
+          "en": "University of California",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "4",
+            "2025": "18",
+            "2026": "16"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Art Studio",
+                "艺术·工作室"
+              ],
+              [
+                "Studio Art BA",
+                "工作室·艺术文学学士"
+              ],
+              [
+                "BA Art Studio",
+                "艺术·工作室文学学士"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "Art Studio BA",
+                "艺术·工作室文学学士"
+              ],
+              [
+                "Art",
+                "艺术"
+              ],
+              [
+                "Bachelor of Arts",
+                "文学学士"
+              ],
+              [
+                "Art Studio B.A.",
+                "艺术·工作室"
+              ],
+              [
+                "BA in Studio Art",
+                "工作室·艺术文学学士"
+              ],
+              [
+                "Biological Sciences",
+                "科学"
+              ],
+              [
+                "Art Studio, A.B.",
+                "艺术·工作室"
+              ],
+              [
+                "fine art",
+                "纯艺术"
+              ],
+              [
+                "art studio",
+                "艺术·工作室"
+              ],
+              [
+                "Regents Scholar: Art Studio",
+                "艺术·工作室"
+              ],
+              [
+                "BA Studio Art",
+                "工作室·艺术文学学士"
+              ],
+              [
+                "Studio Art",
+                "工作室·艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "22",
+          "zh": "纽约大学",
+          "en": "New York University",
+          "tags": [
+            "us-top30"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "5",
+            "2025": "8",
+            "2026": "9"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "BFA Studio Art",
+                "工作室·艺术艺术学士"
+              ],
+              [
+                "Studio Art",
+                "工作室·艺术"
+              ],
+              [
+                "Studio Art (Steinhardt)",
+                "工作室·艺术"
+              ],
+              [
+                "摄影",
+                "摄影"
+              ],
+              [
+                "tisch photography",
+                "摄影"
+              ]
+            ],
+            "pg": [
+              [
+                "MA Visual Arts Administration",
+                "视觉艺术·管理文学硕士"
+              ],
+              [
+                "Masters (MS) in Integrated Marketing Brand Managem",
+                "综合·市场营销·品牌理学硕士"
+              ],
+              [
+                "Masters (MS) in Integrated Marketing-18 months",
+                "综合·市场营销理学硕士"
+              ],
+              [
+                "教育领导政治与倡导",
+                "教育领导政治与倡导"
+              ],
+              [
+                "Master of Arts Educational Theatre",
+                "戏剧文学硕士教育"
+              ],
+              [
+                "MS Integrated Marketing",
+                "综合·市场营销理学硕士"
+              ],
+              [
+                "整合营销",
+                "整合营销"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "19",
+          "zh": "旧金山艺术大学",
+          "en": "Academy of Art University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "7",
+            "2025": "5",
+            "2026": "7"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA in Illustration",
+                "插画文学硕士"
+              ],
+              [
+                "MFA Illustration",
+                "插画艺术硕士"
+              ],
+              [
+                "插画",
+                "插画"
+              ],
+              [
+                "Illustration MA",
+                "插画文学硕士"
+              ],
+              [
+                "Photography (MFA)",
+                "摄影艺术硕士"
+              ],
+              [
+                "MFA in Illustration",
+                "插画艺术硕士"
+              ],
+              [
+                "lllustration",
+                "插画"
+              ],
+              [
+                "MFA Illustration with an Comics emphasis",
+                "插画·漫画·方向艺术硕士"
+              ],
+              [
+                "MA Illustration",
+                "插画文学硕士"
+              ],
+              [
+                "Illustration with an emphasis in Comics",
+                "插画·方向·漫画"
+              ],
+              [
+                "MFA Illustration with an emphasis in Comics，6semesters",
+                "插画·方向·漫画艺术硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "Photography (BFA)",
+                "摄影艺术学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "17",
+          "zh": "加州大学尔湾分校",
+          "en": "University of California",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "2",
+            "2025": "10",
+            "2026": "5"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Art, BA",
+                "艺术文学学士"
+              ],
+              [
+                "Art BA",
+                "艺术文学学士"
+              ],
+              [
+                "Art",
+                "艺术"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "B.A. in Art",
+                "艺术"
+              ],
+              [
+                "BA in Art",
+                "艺术文学学士"
+              ],
+              [
+                "fine art",
+                "纯艺术"
+              ],
+              [
+                "art history",
+                "艺术史"
+              ],
+              [
+                "Bachelor of Arts in Art",
+                "艺术文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "17",
+          "zh": "波士顿大学",
+          "en": "Boston University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "3",
+            "2025": "7",
+            "2026": "7"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MFA in Visual Narrative",
+                "视觉·叙事艺术硕士"
+              ],
+              [
+                "MFA Visual Narrative",
+                "视觉·叙事艺术硕士"
+              ],
+              [
+                "MS in Arts Administration",
+                "艺术管理理学硕士"
+              ],
+              [
+                "Master of Science in Arts Administration",
+                "艺术管理理学硕士"
+              ],
+              [
+                "MFA VISUAL NARRATIVE",
+                "视觉·叙事艺术硕士"
+              ],
+              [
+                "MFA visual narrative",
+                "视觉·叙事艺术硕士"
+              ],
+              [
+                "MFA Print Media and Photography",
+                "版画·媒体与摄影艺术硕士"
+              ],
+              [
+                "Master of Fine Arts degree program in Sculbpture",
+                "学位课程艺术硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "纯艺术专业",
+                "纯艺术专业"
+              ],
+              [
+                "BFA Painting",
+                "绘画艺术学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "16",
+          "zh": "加州艺术学院(CalArts)",
+          "en": "California Institute of the Arts",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "4",
+            "2025": "6",
+            "2026": "6"
+          },
+          "majors": {
+            "pg": [
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "摄影",
+                "摄影"
+              ],
+              [
+                "Photography and Media MFA",
+                "摄影与媒体艺术硕士"
+              ],
+              [
+                "Experimental Animation",
+                "动画"
+              ]
+            ],
+            "ug": [
+              [
+                "BFA Photography and Media",
+                "摄影与媒体艺术学士"
+              ],
+              [
+                "BFA in Art",
+                "艺术艺术学士"
+              ],
+              [
+                "Art - BFA",
+                "艺术艺术学士"
+              ],
+              [
+                "Arts",
+                "艺术"
+              ],
+              [
+                "BFA: Art",
+                "艺术艺术学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "13",
+          "zh": "加州大学圣地亚哥分校",
+          "en": "University of California",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "9",
+            "2026": "3"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "Visual Arts - Studio",
+                "视觉艺术·工作室"
+              ],
+              [
+                "lllustration & Visual Culture",
+                "插画·视觉·文化"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "Studio Art BA",
+                "工作室·艺术文学学士"
+              ],
+              [
+                "艺术史",
+                "艺术史"
+              ],
+              [
+                "visual arts",
+                "视觉艺术"
+              ],
+              [
+                "Visual Art-Studio",
+                "视觉·艺术·工作室"
+              ],
+              [
+                "Visual Arts B.A.",
+                "视觉艺术"
+              ],
+              [
+                "Human Biology",
+                "Human Biology"
+              ],
+              [
+                "fine art",
+                "纯艺术"
+              ],
+              [
+                "Business Economics",
+                "商业·经济"
+              ],
+              [
+                "Visual Arts",
+                "视觉艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "12",
+          "zh": "加州大学圣芭芭拉分校",
+          "en": "University of California",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "5",
+            "2026": "6"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Art",
+                "艺术"
+              ],
+              [
+                "Art BA",
+                "艺术文学学士"
+              ],
+              [
+                "art",
+                "艺术"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "Art, College of Creative Studies",
+                "艺术·学院·创意·研究"
+              ],
+              [
+                "BA Art",
+                "艺术文学学士"
+              ],
+              [
+                "BA in Art",
+                "艺术文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "12",
+          "zh": "南加州大学",
+          "en": "University of Southern California",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "5",
+            "2026": "6"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BFA Art",
+                "艺术艺术学士"
+              ],
+              [
+                "插画",
+                "插画"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "Fine Arts",
+                "纯艺术"
+              ],
+              [
+                "History",
+                "历史"
+              ],
+              [
+                "Art,B.A",
+                "艺术"
+              ],
+              [
+                "World Bachelor in Business",
+                "商业学士"
+              ],
+              [
+                "BFA in Art",
+                "艺术艺术学士"
+              ]
+            ],
+            "pg": [
+              [
+                "fine art",
+                "纯艺术"
+              ],
+              [
+                "MFA Art",
+                "艺术艺术硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "12",
+          "zh": "圣路易斯华盛顿大学",
+          "en": "Washington University in St. Louis",
+          "tags": [
+            "us-top30"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "6",
+            "2025": "3",
+            "2026": "3"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Illustration & Visual Culture",
+                "插画·视觉·文化"
+              ],
+              [
+                "MFA in Illustration & Visual Culture",
+                "插画·视觉·文化艺术硕士"
+              ],
+              [
+                "MFA Illustration & Visual Culture",
+                "插画·视觉·文化艺术硕士"
+              ],
+              [
+                "Illustration & Visual Culture MFA",
+                "插画·视觉·文化艺术硕士"
+              ],
+              [
+                "lllustration & Visual Culture",
+                "插画·视觉·文化"
+              ],
+              [
+                "MFA in visual Art- 2 years",
+                "视觉·艺术艺术硕士"
+              ],
+              [
+                "fine arts",
+                "纯艺术"
+              ],
+              [
+                "MFA in Illustration & Visual Culture-2 years",
+                "插画·视觉·文化艺术硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "design&visual art",
+                "设计·视觉·艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "12",
+          "zh": "雪城大学",
+          "en": "Syracuse University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025"
+          ],
+          "seasonCounts": {
+            "2024": "4",
+            "2025": "8"
+          },
+          "majors": {
+            "pg": [
+              [
+                "插画",
+                "插画"
+              ],
+              [
+                "MFA in Illustration",
+                "插画艺术硕士"
+              ],
+              [
+                "MFA Illustration",
+                "插画艺术硕士"
+              ],
+              [
+                "Illustration MFA 3",
+                "插画艺术硕士"
+              ],
+              [
+                "MFA illustration",
+                "插画艺术硕士"
+              ],
+              [
+                "Illustration (M.F.A.)",
+                "插画"
+              ]
+            ],
+            "ug": [
+              [
+                "Studio Arts",
+                "工作室·艺术"
+              ],
+              [
+                "Women's and Gender Studies",
+                "与研究"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "11",
+          "zh": "伊利诺伊大学香槟分校",
+          "en": "University of Illinois at Urbana-Champaign",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "3",
+            "2025": "3",
+            "2026": "5"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BFA in Studio Art",
+                "工作室·艺术艺术学士"
+              ],
+              [
+                "Studio Art",
+                "工作室·艺术"
+              ],
+              [
+                "纯艺设计",
+                "纯艺设计"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "studio art",
+                "工作室·艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "10",
+          "zh": "哥伦比亚大学",
+          "en": "Columbia University",
+          "tags": [
+            "us-top30"
+          ],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "4",
+            "2026": "6"
+          },
+          "hl": true,
+          "majors": {
+            "pg": [
+              [
+                "Master of Science in SocialWork (MSSW)",
+                "理学硕士"
+              ],
+              [
+                "MA Art Education",
+                "艺术·教育文学硕士"
+              ],
+              [
+                "MA in Arts Administration",
+                "艺术管理文学硕士"
+              ],
+              [
+                "MFA in Visual Arts",
+                "视觉艺术艺术硕士"
+              ],
+              [
+                "艺术教育",
+                "艺术教育"
+              ],
+              [
+                "Arts Administration MA，2",
+                "艺术管理文学硕士"
+              ],
+              [
+                "Master of Arts in Art&Art Education",
+                "艺术·艺术·教育文学硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "BA in Visual Arts",
+                "视觉艺术文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "8",
+          "zh": "塔夫茨大学",
+          "en": "Tufts University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "3",
+            "2025": "2",
+            "2026": "3"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "Interdisciplinary Art",
+                "跨学科·艺术"
+              ],
+              [
+                "FINE ARTS",
+                "纯艺术"
+              ],
+              [
+                "艺术与科学",
+                "艺术与科学"
+              ],
+              [
+                "Bachelor of Fine Arts",
+                "艺术学士"
+              ],
+              [
+                "Painting and Art History",
+                "绘画与艺术史"
+              ]
+            ],
+            "pg": [
+              [
+                "纯艺术",
+                "纯艺术"
+              ],
+              [
+                "Master of Fine Arts (M.F.A.)",
+                "艺术硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "8",
+          "zh": "康奈尔大学",
+          "en": "Cornell University",
+          "tags": [
+            "us-top30"
+          ],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "5",
+            "2026": "3"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "Fine Arts",
+                "纯艺术"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "Dyson School of Applied Economics and Management",
+                "学院·应用·经济与管理"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "8",
+          "zh": "明尼阿波利斯艺术与设计学院",
+          "en": "Minneapolis College of Art and Design",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "3",
+            "2025": "4",
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Master of Fine Arts",
+                "艺术硕士"
+              ],
+              [
+                "Master of Fine Arts in Visual Studies",
+                "视觉·研究艺术硕士"
+              ],
+              [
+                "illustration",
+                "插画"
+              ],
+              [
+                "MFA Master of Fine Arts",
+                "艺术硕士艺术硕士"
+              ],
+              [
+                "MFA in Visual Studies",
+                "视觉·研究艺术硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "7",
+          "zh": "瑞林艺术设计学院",
+          "en": "Ringling College of Art and Design",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "3",
+            "2026": "4"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "BFA in Illustration",
+                "插画艺术学士"
+              ],
+              [
+                "lllustration",
+                "插画"
+              ],
+              [
+                "BFA in Illusration",
+                "艺术学士"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "7",
+          "zh": "罗格斯大学新布朗斯维克分校",
+          "en": "Rutgers University New Brunswick",
+          "tags": [
+            "us-top30"
+          ],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "2",
+            "2026": "5"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BFA in Visual Arts",
+                "视觉艺术艺术学士"
+              ],
+              [
+                "BFA in Visual Artsv",
+                "视觉艺术学士"
+              ],
+              [
+                "BFA in visual arts",
+                "视觉艺术艺术学士"
+              ],
+              [
+                "Visual Arts (BFA)",
+                "视觉艺术艺术学士"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "sociology",
+                "社会学"
+              ],
+              [
+                "Business Analytics and Information Technology",
+                "商业与技术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "6",
+          "zh": "东北大学",
+          "en": "Northeastern University",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "2",
+            "2026": "4"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Immerse Program",
+                "Immerse Program"
+              ],
+              [
+                "Art: Art, Visual Studies",
+                "艺术·艺术·视觉·研究"
+              ],
+              [
+                "Art/Media Arts/Design",
+                "艺术·媒体·艺术·设计"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "Business administration and design",
+                "商业·管理与设计"
+              ],
+              [
+                "Art",
+                "艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "6",
+          "zh": "华盛顿大学",
+          "en": "University of Washington",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "2",
+            "2026": "4"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "Pre Arts in the College of Arts and Sciences",
+                "预科·艺术·学院·艺术与科学"
+              ],
+              [
+                "纯艺术",
+                "纯艺术"
+              ],
+              [
+                "Art in the College of Arts and Sciences",
+                "艺术·学院·艺术与科学"
+              ],
+              [
+                "BA in Art",
+                "艺术文学学士"
+              ],
+              [
+                "Studio art",
+                "工作室·艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "5",
+          "zh": "奥蒂斯艺术设计学院",
+          "en": "Otis College of Art and Design",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025"
+          ],
+          "seasonCounts": {
+            "2024": "3",
+            "2025": "2"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "BFA Communiction Arts- illustration",
+                "艺术·插画艺术学士"
+              ],
+              [
+                "BFA in Fine Arts",
+                "纯艺术艺术学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "5",
+          "zh": "康涅狄格大学",
+          "en": "University of Connecticut",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "2",
+            "2026": "2"
+          },
+          "majors": {
+            "ug": [
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "BFA in Art & Design",
+                "艺术·设计艺术学士"
+              ],
+              [
+                "BFA in Art",
+                "艺术艺术学士"
+              ],
+              [
+                "Art - BFA",
+                "艺术艺术学士"
+              ],
+              [
+                "BFA in Art & Design - painting & drawing",
+                "艺术·设计·绘画·素描艺术学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "4",
+          "zh": "加州大学伯克利分校",
+          "en": "University of California",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "3",
+            "2026": "1"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "艺术史",
+                "艺术史"
+              ],
+              [
+                "Art Practice",
+                "艺术·实践"
+              ],
+              [
+                "Microbial Biology",
+                "Microbial Biology"
+              ],
+              [
+                "Spieker Undergraduate Business",
+                "本科·商业"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "4",
+          "zh": "加州大学河滨分校",
+          "en": "University of California",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "1",
+            "2026": "2"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Art",
+                "艺术"
+              ],
+              [
+                "BA Art",
+                "艺术文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "4",
+          "zh": "卡内基梅隆大学",
+          "en": "Carnegie Mellon University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "1",
+            "2026": "2"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "stage & production management",
+                "制作·管理"
+              ],
+              [
+                "BXA Intercollege Degree",
+                "学位课程"
+              ],
+              [
+                "School of Art",
+                "学院·艺术"
+              ]
+            ],
+            "pg": [
+              [
+                "Master of Arts Management (MAM)",
+                "管理文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "4",
+          "zh": "宾夕法尼亚大学",
+          "en": "University of Pennsylvania",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "1",
+            "2026": "3"
+          },
+          "hl": true,
+          "majors": {
+            "pg": [
+              [
+                "Teaching, Learning, and Leadership M.S.Ed. program",
+                "学习与领导力"
+              ],
+              [
+                "Fine Arts, MFA",
+                "纯艺术艺术硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "4",
+          "zh": "布朗大学",
+          "en": "Brown University",
+          "tags": [
+            "us-top30"
+          ],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "4"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "艺术史",
+                "艺术史"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "Visual Arts",
+                "视觉艺术"
+              ],
+              [
+                "BRDD: Visual Art + Painting",
+                "视觉·艺术·绘画"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "4",
+          "zh": "纽约时装学院",
+          "en": "Fashion Institute of Technology",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "2",
+            "2026": "2"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BFA in Fine Art",
+                "纯艺术艺术学士"
+              ],
+              [
+                "AAS Illustration",
+                "插画"
+              ]
+            ],
+            "pg": [
+              [
+                "Illustration MFA，2 years",
+                "插画艺术硕士"
+              ],
+              [
+                "MA Art Market Studies",
+                "艺术市场·研究文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "加州大学圣克鲁兹分校",
+          "en": "University of California",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "1",
+            "2026": "2"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Art",
+                "艺术"
+              ],
+              [
+                "BA Art & Media",
+                "艺术·媒体文学学士"
+              ],
+              [
+                "B.A. in Art",
+                "艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "加州大学洛杉矶分校",
+          "en": "University of California",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "1",
+            "2026": "1"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "艺术史",
+                "艺术史"
+              ],
+              [
+                "Business",
+                "商业"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "北卡罗莱纳大学教堂山分校",
+          "en": "University of North Carolina at Chapel Hill",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "3"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "Studio Art",
+                "工作室·艺术"
+              ],
+              [
+                "Honors Carolina",
+                "Honors Carolina"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "宾夕法尼亚州立大学",
+          "en": "The Pennsylvania State University",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "2",
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BFA Art",
+                "艺术艺术学士"
+              ],
+              [
+                "Philosophy B.A.",
+                "哲学"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "新泽西州立大学",
+          "en": "The State University of New Jersey",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "2",
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BFA in Art and Design",
+                "艺术与设计艺术学士"
+              ],
+              [
+                "Animal Sciences BS",
+                "科学"
+              ],
+              [
+                "BFA in Visual Arts",
+                "视觉艺术艺术学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "耶鲁大学",
+          "en": "Yale University",
+          "tags": [
+            "us-top30"
+          ],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "1",
+            "2026": "2"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "生物和艺术",
+                "生物和艺术"
+              ],
+              [
+                "African Studies",
+                "研究"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "俄亥俄州立大学",
+          "en": "The Ohio State University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BFA in Art",
+                "艺术艺术学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "卫斯理大学",
+          "en": "Wesleyan University",
+          "tags": [
+            "liberal-arts"
+          ],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "1",
+            "2026": "1"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "studio art",
+                "工作室·艺术"
+              ],
+              [
+                "Art Studio",
+                "艺术·工作室"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "威斯康辛大学麦迪逊分校",
+          "en": "University of Wisconsin-Madison",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "1",
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Bachelor of Fine Arts",
+                "艺术学士"
+              ],
+              [
+                "Art",
+                "艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "密歇根州立大学",
+          "en": "Michigan State University",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "2"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Philosophy",
+                "哲学"
+              ],
+              [
+                "Studio Art BA",
+                "工作室·艺术文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "弗吉尼亚大学",
+          "en": "University of Virginia",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BFA Studio Art",
+                "工作室·艺术艺术学士"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "德克萨斯州大学奥斯汀分校",
+          "en": "The University of Texas at Austin",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "B.F.A. in Studio Art",
+                "工作室·艺术"
+              ],
+              [
+                "Studio Art",
+                "工作室·艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "福特汉姆大学",
+          "en": "Fordham University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "纯艺",
+                "纯艺"
+              ]
+            ],
+            "pg": [
+              [
+                "Ph.D. in Innovation in Curriculum and Instruction program",
+                "创新与"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "纽约州立大学石溪分校",
+          "en": "State University of New York at Stony Brook",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "1",
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Women's & Gender Studies, BA",
+                "研究文学学士"
+              ],
+              [
+                "Art, Studio, BA",
+                "艺术·工作室文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "罗彻斯特理工大学",
+          "en": "Rochester Institute of Technology",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "2"
+          },
+          "majors": {
+            "pg": [
+              [
+                "fine art",
+                "纯艺术"
+              ]
+            ],
+            "ug": [
+              [
+                "纯艺",
+                "纯艺"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "麻省大学达特茅斯分校",
+          "en": "University of Massachusetts-Dartmouth",
+          "tags": [
+            "us-top30"
+          ],
+          "seasons": [
+            "2024",
+            "2025"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Illustration MFA",
+                "插画艺术硕士"
+              ],
+              [
+                "v",
+                "v"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "乔治华盛顿大学",
+          "en": "George Washington University",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA in Art Therapy，2",
+                "艺术治疗文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "乔治敦大学",
+          "en": "Georgetown University",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "International Political Economy and Business",
+                "与商业国际"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "亚利桑那大学",
+          "en": "University of Arizona(UA)",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "纯艺",
+                "纯艺"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "佛罗里达大学",
+          "en": "University of Florida",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "纯艺",
+                "纯艺"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "加州州立大学洛杉矶分校",
+          "en": "California State University",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Business",
+                "商业"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "南佛罗里达大学",
+          "en": "University of South Florida",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Curriculum and Instruction",
+                "与"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "史密斯学院",
+          "en": "Smith College",
+          "tags": [
+            "liberal-arts"
+          ],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "Sociology/women and gender studies",
+                "社会学与研究"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "哥伦比亚芝加哥学院",
+          "en": "Columbia College Chicago",
+          "tags": [
+            "us-top30"
+          ],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Photography BFA",
+                "摄影艺术学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "因特劳肯艺术高中",
+          "en": "Interlochen Center for the Arts",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Visual Arts",
+                "视觉艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "威廉姆斯学院",
+          "en": "Williams College",
+          "tags": [
+            "liberal-arts"
+          ],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "物理",
+                "物理"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "宾夕法尼亚州立大学帕克分校",
+          "en": "Pennsylvania State University—University Park",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "ART, B.F.A.",
+                "艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "密歇根安娜堡分校",
+          "en": "University of Michigan",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "Art and Design",
+                "艺术与设计"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "巴德学院",
+          "en": "Bard College",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "Exception-Admit",
+                "Exception-Admit"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "弗吉尼亚联邦大学",
+          "en": "Virginia Commonwealth University",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "纯艺",
+                "纯艺"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "斯基德莫尔学院",
+          "en": "Skidmore College",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "Undeclared",
+                "Undeclared"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "旧金山艺术学院",
+          "en": "San Francisco Art Institute",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA Illustration",
+                "插画文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "明尼苏达双城大学",
+          "en": "University of Minnesota Twin Cities",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Animal Science BS",
+                "科学"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "格林内尔学院",
+          "en": "Grinnell College",
+          "tags": [
+            "liberal-arts"
+          ],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "fine art",
+                "纯艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "皇后学院",
+          "en": "Queens College",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BA (Hons) art program",
+                "艺术（荣誉）文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "约翰霍普金斯大学",
+          "en": "Johns Hopkins University",
+          "tags": [
+            "us-top30"
+          ],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "hl": true,
+          "majors": {
+            "pg": [
+              [
+                "MS in Education – International Teaching & Global Leadership Cohort",
+                "教育·全球·领导力理学硕士国际"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "纽约市立大学亨特学院",
+          "en": "City University Of New York: Hunter College",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MFA in Studio Art",
+                "工作室·艺术艺术硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "罗彻斯特大学",
+          "en": "University of Rochester",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BA Studio Arts",
+                "工作室·艺术文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "罗格斯大学",
+          "en": "Rutgers University",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BFA in Visual Art",
+                "视觉·艺术艺术学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "考尼什艺术学院",
+          "en": "Cornish College of the Arts",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "插画设计",
+                "插画设计"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "胡桃山艺术高中",
+          "en": "Walnut Hill School for the Arts",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "无",
+                "无"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "艾迪怀特艺术高中",
+          "en": "Idyllwild Arts Academy",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Visual Arts",
+                "视觉艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "芝加哥大学",
+          "en": "The University of Chicago",
+          "tags": [
+            "us-top30"
+          ],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "hl": true,
+          "majors": {
+            "pg": [
+              [
+                "Master of Arts Program in Humanities【MAPH】-Curatorial Studies Specialization",
+                "人文学科·策展·研究文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "达特茅斯学院",
+          "en": "Dartmouth College",
+          "tags": [
+            "us-top30"
+          ],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "艺术史",
+                "艺术史"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "韦尔斯利学院",
+          "en": "Wellesley College",
+          "tags": [
+            "liberal-arts"
+          ],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "Art",
+                "艺术"
+              ]
+            ]
+          }
+        }
+      ],
+      "OTHER": [
+        {
+          "count": "24",
+          "zh": "安大略艺术设计学院",
+          "en": "Ontario College of Art & Design University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "8",
+            "2025": "7",
+            "2026": "9"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Bachelor of Design in Illustration",
+                "设计·插画学士"
+              ],
+              [
+                "Bachelor of Fine Arts in Drawing & Painting",
+                "素描·绘画艺术学士"
+              ],
+              [
+                "Bachelor of Design-Illustration",
+                "设计·插画学士"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "Bdes in Illustration",
+                "插画"
+              ],
+              [
+                "Bachelor of Design",
+                "设计学士"
+              ],
+              [
+                "Environmental Design",
+                "环境·设计"
+              ],
+              [
+                "Bachelor of Fine Arts in Photography",
+                "摄影艺术学士"
+              ]
+            ],
+            "pg": [
+              [
+                "Art, Media and Design",
+                "艺术·媒体与设计"
+              ],
+              [
+                "Interdisciplinary Master's in Art, Media and Design (MA, MDes and MFA)",
+                "跨学科·艺术·媒体与设计与硕士文学硕士设计学硕士艺术硕士"
+              ],
+              [
+                "Digital Futures",
+                "数字·未来"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "19",
+          "zh": "皇家墨尔本理工大学",
+          "en": "Royal Melbourne Institute of Technology",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "3",
+            "2025": "6",
+            "2026": "10"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Master of Fine Art",
+                "艺术硕士"
+              ],
+              [
+                "Fine Art MA",
+                "纯艺术文学硕士"
+              ],
+              [
+                "Master of Fine Art-2 years",
+                "艺术硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "Bachelor of Fine Arts",
+                "艺术学士"
+              ],
+              [
+                "Bachelor of Design (Communication Design)",
+                "设计·传播设计学士"
+              ],
+              [
+                "Bachelor of Arts (Fine Art)",
+                "纯艺术文学学士"
+              ],
+              [
+                "Bachelor of Design (Animation and Interactive Media)",
+                "设计·动画与媒体学士"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "Bachelor of Arts (Photography)",
+                "摄影文学学士"
+              ],
+              [
+                "Bachelor of Graphic Design",
+                "平面设计学士"
+              ],
+              [
+                "Graphic design",
+                "平面设计"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "17",
+          "zh": "悉尼大学",
+          "en": "University of Sydney",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "4",
+            "2026": "12"
+          },
+          "hl": true,
+          "majors": {
+            "pg": [
+              [
+                "Master of Digital Communication and Culture",
+                "数字·传播与文化硕士"
+              ],
+              [
+                "Master of Media Practice",
+                "媒体·实践硕士"
+              ],
+              [
+                "Master of Cultural Studies",
+                "文化研究硕士"
+              ],
+              [
+                "Master of Design (Strategic Design)",
+                "设计设计学硕士"
+              ],
+              [
+                "Master of Design (Design Innovation)",
+                "设计·创新设计学硕士"
+              ],
+              [
+                "Master of Art Curating",
+                "艺术·策展硕士"
+              ],
+              [
+                "Master of Design（Design Innovation）",
+                "设计·创新设计学硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "Bachelor of Visual Arts",
+                "视觉艺术学士"
+              ],
+              [
+                "Bachelor of Agricultural Science",
+                "科学学士"
+              ],
+              [
+                "文理",
+                "文理"
+              ],
+              [
+                "Bachelor of Visual Art",
+                "视觉·艺术学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "16",
+          "zh": "艾米丽卡尔艺术设计学院",
+          "en": "Emily Carr University of Art & Design",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "7",
+            "2025": "4",
+            "2026": "5"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BFA majoring in Illustration",
+                "插画艺术学士"
+              ],
+              [
+                "Illustration",
+                "插画"
+              ],
+              [
+                "Visual Arts",
+                "视觉艺术"
+              ],
+              [
+                "Bachelor of Fine Arts, Majoring in Illustration",
+                "插画艺术学士"
+              ],
+              [
+                "BFA Illustration",
+                "插画艺术学士"
+              ],
+              [
+                "Creative Art Pathway Program",
+                "创意·艺术·方向"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "BFA in Illustration",
+                "插画艺术学士"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "Art design",
+                "艺术·设计"
+              ],
+              [
+                "Bachelor of Fine Arts, Majoring in Visual Arts (BFA, Visual Arts)",
+                "视觉艺术·视觉艺术艺术学士艺术学士"
+              ],
+              [
+                "BFA, Visual Arts",
+                "视觉艺术艺术学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "12",
+          "zh": "蒙纳士大学",
+          "en": "Monash University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "3",
+            "2025": "6",
+            "2026": "3"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Master of Design",
+                "设计学硕士"
+              ],
+              [
+                "Master of Communications and Media Studies",
+                "传播与媒体研究硕士"
+              ],
+              [
+                "Master of Design:Collaborative design",
+                "设计设计学硕士"
+              ],
+              [
+                "教育",
+                "教育"
+              ]
+            ],
+            "ug": [
+              [
+                "Bachelor of Design (F2010)",
+                "设计学士"
+              ],
+              [
+                "BA Design",
+                "设计文学学士"
+              ],
+              [
+                "Bachelor of Design",
+                "设计学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "11",
+          "zh": "多伦多大学",
+          "en": "University of Toronto",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "3",
+            "2025": "3",
+            "2026": "5"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "Visual Studies",
+                "视觉·研究"
+              ],
+              [
+                "摄影",
+                "摄影"
+              ],
+              [
+                "visual studies- Studio",
+                "视觉·研究·工作室"
+              ],
+              [
+                "Visual and Performing Arts, Arts Management & Medi",
+                "视觉与艺术·艺术管理"
+              ],
+              [
+                "Social Sciences",
+                "社会·科学"
+              ],
+              [
+                "BA Visual Studies",
+                "视觉·研究文学学士"
+              ],
+              [
+                "Communication, Culture, Information and Technology",
+                "传播·文化与技术"
+              ],
+              [
+                "visual studies",
+                "视觉·研究"
+              ],
+              [
+                "Visual and Performing Arts",
+                "视觉与艺术"
+              ],
+              [
+                "Bachelor of Arts Visual Studies",
+                "视觉·研究文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "11",
+          "zh": "新南威尔士大学",
+          "en": "The University of New South Wales",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "2",
+            "2025": "5",
+            "2026": "4"
+          },
+          "majors": {
+            "ug": [
+              [
+                "：UNSW Standard Foundation Program: Arts & Social S",
+                "艺术·社会预科"
+              ],
+              [
+                "FINE ART",
+                "纯艺术"
+              ],
+              [
+                "Bachelor of Fine Arts in Visual arts",
+                "视觉艺术艺术学士"
+              ],
+              [
+                "Bachelor of Fine Arts",
+                "艺术学士"
+              ]
+            ],
+            "pg": [
+              [
+                "Master of Design",
+                "设计学硕士"
+              ],
+              [
+                "Journalism andCommunication",
+                "新闻"
+              ],
+              [
+                "Materials Technology",
+                "技术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "9",
+          "zh": "不列颠哥伦比亚大学",
+          "en": "University of British Columbia",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "2",
+            "2025": "2",
+            "2026": "5"
+          },
+          "majors": {
+            "ug": [
+              [
+                "fine art",
+                "纯艺术"
+              ],
+              [
+                "Visual Art (BFA)",
+                "视觉·艺术艺术学士"
+              ],
+              [
+                "Visual Arts (BFA)",
+                "视觉艺术艺术学士"
+              ],
+              [
+                "Media Studies",
+                "媒体·研究"
+              ],
+              [
+                "Visual Art",
+                "视觉·艺术"
+              ],
+              [
+                "Bachelor of Arts program with EFP",
+                "文学学士"
+              ],
+              [
+                "BFA Visual Art",
+                "视觉·艺术艺术学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "9",
+          "zh": "墨尔本大学",
+          "en": "The University of Melbourne",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "2",
+            "2025": "1",
+            "2026": "6"
+          },
+          "hl": true,
+          "majors": {
+            "pg": [
+              [
+                "Master of Arts and Cultural Managemen",
+                "与文化文学硕士"
+              ],
+              [
+                "Art Curatorship",
+                "艺术"
+              ],
+              [
+                "艺术策展",
+                "艺术策展"
+              ],
+              [
+                "Master of Contemporary Art",
+                "当代艺术硕士"
+              ],
+              [
+                "艺术治疗",
+                "艺术治疗"
+              ]
+            ],
+            "ug": [
+              [
+                "Bachelor of Arts",
+                "文学学士"
+              ],
+              [
+                "Bachelor of Design",
+                "设计学士"
+              ],
+              [
+                "Bachelor of design",
+                "设计学士"
+              ],
+              [
+                "Bachelor of Fine Arts (Visual Art)",
+                "视觉·艺术艺术学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "7",
+          "zh": "奥克兰大学",
+          "en": "University of Auckland",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "2",
+            "2025": "2",
+            "2026": "3"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Master of Fine Arts",
+                "艺术硕士"
+              ],
+              [
+                "Master of Heritage Conservation",
+                "文化遗产·文物修复硕士"
+              ],
+              [
+                "Master of Dance Movement Therapy-2 years",
+                "舞蹈·治疗硕士"
+              ],
+              [
+                "Master of Fine Arts MFA",
+                "艺术硕士艺术硕士"
+              ],
+              [
+                "Fine arts",
+                "纯艺术"
+              ]
+            ],
+            "ug": [
+              [
+                "Bachelor of Fine Arts",
+                "艺术学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "5",
+          "zh": "格里菲斯大学",
+          "en": "Griffith University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "2",
+            "2026": "3"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Master of Design",
+                "设计学硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "Diploma of Design",
+                "设计文凭课程"
+              ],
+              [
+                "Bachelor of Visual Arts",
+                "视觉艺术学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "5",
+          "zh": "谢尔丹学院",
+          "en": "Sheridan College",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "3",
+            "2026": "2"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Honors Bachelor of lllustration",
+                "插画学士"
+              ],
+              [
+                "Honours Bachelor of Illustration",
+                "插画（荣誉）学士"
+              ],
+              [
+                "Honours Bachelor of lllustration.PBAA!",
+                "插画（荣誉）学士"
+              ],
+              [
+                "插画设计",
+                "插画设计"
+              ],
+              [
+                "Graphic Design-Creative Strategies",
+                "平面设计·创意"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "5",
+          "zh": "阿尔伯塔艺术大学",
+          "en": "Alberta University of the Arts",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025"
+          ],
+          "seasonCounts": {
+            "2024": "3",
+            "2025": "2"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Bdes in Visual Communications Design",
+                "视觉传播·设计"
+              ],
+              [
+                "摄影",
+                "摄影"
+              ],
+              [
+                "BFA Drawing",
+                "素描艺术学士"
+              ],
+              [
+                "Visual Communication Design",
+                "视觉传达·设计"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "4",
+          "zh": "悉尼科技大学",
+          "en": "University of Technology",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "2",
+            "2026": "2"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Master of Design (Research)",
+                "研究设计学硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "Bachelor of Design in Visual Communication",
+                "设计·视觉传达学士"
+              ],
+              [
+                "Bachelor of Design in Visua' Communication",
+                "设计·传播学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "4",
+          "zh": "意大利-都灵美术学院",
+          "en": "Accademia Albertina di belle arti di Torino",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "2",
+            "2026": "2"
+          },
+          "majors": {
+            "pg": [
+              [
+                "插画-绘画",
+                "插画-绘画"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "装饰艺术",
+                "装饰艺术"
+              ],
+              [
+                "PITTURA",
+                "PITTURA"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "南澳大学",
+          "en": "University of South Australia",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025"
+          ],
+          "seasonCounts": {
+            "2024": "2",
+            "2025": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Master of Design",
+                "设计学硕士"
+              ],
+              [
+                "Master of Design Contemporary Art",
+                "当代艺术设计学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "康考迪亚大学",
+          "en": "Concordia University",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "3"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Studio Art (BFA)",
+                "工作室·艺术艺术学士"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "澳门城市大学",
+          "en": "Universidade da Cidade de Macau / City University of Macau",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "1",
+            "2026": "2"
+          },
+          "majors": {
+            "pg": [
+              [
+                "美术学",
+                "美术学"
+              ],
+              [
+                "Applied Linguistic",
+                "应用"
+              ],
+              [
+                "Master of Cultural Industries Management-2 years",
+                "文化·产业·管理硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "澳门科技大学",
+          "en": "Macau University of Science and Technology",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "1",
+            "2026": "2"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Master of Fine Arts-2 years",
+                "艺术硕士"
+              ],
+              [
+                "Master of Fine Art",
+                "艺术硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "米兰布雷拉美术学院",
+          "en": "Accademia di Belle Arti di Brera",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "2",
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "纯艺",
+                "纯艺"
+              ],
+              [
+                "艺术治疗",
+                "艺术治疗"
+              ],
+              [
+                "装饰艺术",
+                "装饰艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "阿德莱德大学",
+          "en": "Adelaide University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "1",
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Master of Media（Strtegic Communication）",
+                "媒体·传播硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "Bachelor of Media and Communication",
+                "媒体与传播学士"
+              ],
+              [
+                "Bachelor of Illustration and Animation",
+                "插画与动画学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "巴黎高等艺术设计学院",
+          "en": "Autograf",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "纯艺",
+                "纯艺"
+              ]
+            ],
+            "pg": [
+              [
+                "纯艺",
+                "纯艺"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "敦刻尔克美院",
+          "en": "École Supérieure d'art| Dunkerque-Tourcoing - Site de Tourcoing",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "纯艺",
+                "纯艺"
+              ]
+            ],
+            "pg": [
+              [
+                "纯艺",
+                "纯艺"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "昆士兰大学",
+          "en": "The University of Queensland",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Bachelor of Communication",
+                "传播学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "昆特兰理工大学",
+          "en": "Kwantlen Polytechnic University",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "2"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Bachelor of Fine Arts, Visual Arts",
+                "视觉艺术艺术学士"
+              ],
+              [
+                "Visual Arts",
+                "视觉艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "滑铁卢大学",
+          "en": "University of Waterloo",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Fine Arts",
+                "纯艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "澳大利亚国立大学",
+          "en": "The Australian National University",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "2"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Bachelor of Visual Arts",
+                "视觉艺术学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "西安大略大学",
+          "en": "Western University",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Visual Arts",
+                "视觉艺术"
+              ],
+              [
+                "纯艺",
+                "纯艺"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "西澳大学",
+          "en": "The University of Western Australia",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "1",
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Fine Arts",
+                "纯艺术"
+              ],
+              [
+                "Bachelor of Arts",
+                "文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "诺瓦艺术与设计大学",
+          "en": "NSCAD University",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "2"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Bachelor of Fine Arts, Major in Fine Art(drawing/painting/printmaking/sculpture)",
+                "纯艺术·素描·绘画·版画·雕塑艺术学士"
+              ],
+              [
+                "Fine Art(drawing/painting/printmaking/sculpture)",
+                "纯艺术·素描·绘画·版画·雕塑"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "CEPU语言学校",
+          "en": "CEPU",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          }
+        },
+        {
+          "count": "1",
+          "zh": "世纪大学",
+          "en": "SEGi University",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Master of Creative Design Management",
+                "创意·设计管理硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "佛罗伦萨美术学院",
+          "en": "Accademia di Belle Arti di Firenze",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Decorazione",
+                "Decorazione"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "列宾美术学院",
+          "en": "Saint Petersburg Repin Academy of Arts",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Живопись",
+                "Живопись"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "南特美院",
+          "en": "École Supérieure des Beaux-Arts de Nantes Saint-Nazaire",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "纯艺",
+                "纯艺"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "博洛尼亚美院",
+          "en": "Accademia di Belle Arti di Bologna",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "插画出版",
+                "插画出版"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "卡尔加里大学",
+          "en": "University of Calgary",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BA in Gender and Sexuality Studies",
+                "与研究文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "埃因霍芬设计学院",
+          "en": "Design Academy Eindhoven",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Bachelor Design",
+                "设计学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "埃米尔·科尔美术学院",
+          "en": "École Emile Cohl",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "纯艺",
+                "纯艺"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "大西洋理工大学",
+          "en": "Atlantic Technological University",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Fine Art Bachelor of Arts",
+                "纯艺术文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "女王大学",
+          "en": "Queen's University",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Computing and the Creative Arts",
+                "计算与创意·艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "巴塞罗那自治大学艺术设计学院",
+          "en": "Centro Universitaria Cardenal Cisneros",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "艺术与设计研究硕士",
+                "艺术与设计研究硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "布伦瑞克艺术大学",
+          "en": "HBK Braunschweig‌(Hochschule für Bildende Künste Braunschweig)",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Freie Kunst",
+                "Freie Kunst"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "布列塔尼欧洲高等艺术学院",
+          "en": "École Européenne Supérieure d'Art de Bretagne",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "纯艺",
+                "纯艺"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "惠灵顿维多利亚大学",
+          "en": "Victoria University of Wellington",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Master of Museum and Heritage Practice",
+                "博物馆与文化遗产·实践硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "意大利-威尼斯美术学院",
+          "en": "Accademia di belle arti di VENEZIA",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "插画设计",
+                "插画设计"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "意大利那不勒斯美术学院",
+          "en": "Accademia di Belle Arti di Napoli",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "纯艺",
+                "纯艺"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "柏林艺术大学",
+          "en": "Universität der Künste Berlin",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Bildende Kunst",
+                "Bildende Kunst"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "格罗宁根汉斯应用科技大学",
+          "en": "Hanze University of Applied Sciences Groningen",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BFA",
+                "艺术学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "梅西大学",
+          "en": "Massey University",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Master of Management Communication",
+                "管理·传播硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "欧洲设计学院",
+          "en": "Istituto Europeo di Design(IED)",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "fotography",
+                "fotography"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "泰莱大学",
+          "en": "Taylor's University",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Bachelor of Design (Honours) in Creative Media",
+                "设计·创意·媒体（荣誉）学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "温哥华岛大学",
+          "en": "Vancouver Island University",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Visual Art (BA)",
+                "视觉·艺术文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "温莎大学",
+          "en": "University of Windsor",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BFA in Visual Arts",
+                "视觉艺术艺术学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "澳门大学",
+          "en": "University of Macau",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "插画设计",
+                "插画设计"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "澳门理工大学",
+          "en": "Macao Polytechnic University",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Master of Interdisciplinary Arts-2 years",
+                "跨学科·艺术硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "米兰美术学院",
+          "en": "Accademia di belle arti BRERA DI MILANO",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Decorative design",
+                "设计"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "约克大学(加拿大)",
+          "en": "York University",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "摄影",
+                "摄影"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "维罗纳美院",
+          "en": "Accademia di belle artilegalmente riconosciuta“Cignaroli” di VERONA",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "插画设计",
+                "插画设计"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "艾文思应用科学大学",
+          "en": "Avans University of Applied Sciences",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Master of Arts in Fine Art & Design",
+                "纯艺术·设计文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "英迪国际大学",
+          "en": "INTI International University & Colleges",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Master of Education in Learning, Design and Technology (by Research)",
+                "学习·设计与技术·研究教育学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "西悉尼大学",
+          "en": "Western Sydney University",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Master of Art Therapy-2 years",
+                "艺术治疗硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "都柏林大学",
+          "en": "University College Dublin",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Classics, Art History & Archaeology (BA)",
+                "艺术史文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "阿尔伯塔大学",
+          "en": "University of Alberta",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Art&Deisgn",
+                "艺术"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "阿尔特兹艺术学院",
+          "en": "ArtEZ University Arnhem",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Bachelor of BEAR Fine Art",
+                "纯艺术学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "马来西亚理科大学",
+          "en": "Universiti Sains Malaysia",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Master of Design in Creative Industry (Coursework)",
+                "创意·产业设计学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "麦克马斯特大学",
+          "en": "McMaster University",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Integrated Arts",
+                "综合·艺术"
+              ]
+            ]
+          }
+        }
+      ],
+      "JP": [
+        {
+          "count": "6",
+          "zh": "京都艺术大学",
+          "en": "京都芸術大学",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "5",
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "イラストレーション",
+                "插画"
+              ],
+              [
+                "陶芸",
+                "陶艺"
+              ],
+              [
+                "版画",
+                "版画"
+              ]
+            ],
+            "ug": [
+              [
+                "油絵",
+                "油画"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "6",
+          "zh": "多摩美术大学",
+          "en": "多摩美術大学",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "2",
+            "2026": "4"
+          },
+          "hl": true,
+          "majors": {
+            "ug": [
+              [
+                "工芸",
+                "工艺"
+              ],
+              [
+                "油絵専攻",
+                "油画专攻"
+              ],
+              [
+                "版画",
+                "版画"
+              ]
+            ],
+            "pg": [
+              [
+                "版画",
+                "版画"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "5",
+          "zh": "神户艺术工科大学",
+          "en": "神戸芸術工科大学",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "1",
+            "2026": "3"
+          },
+          "majors": {
+            "ug": [
+              [
+                "イラストレーション",
+                "插画"
+              ],
+              [
+                "ビジュアルデザイン学科",
+                "视觉设计学科"
+              ],
+              [
+                "ビジュアルデザイン（イラストレーションコース）",
+                "视觉设计（插画方向）"
+              ],
+              [
+                "生産工芸デザイン",
+                "生产工艺设计"
+              ],
+              [
+                "メディア芸術",
+                "媒体艺术"
+              ]
+            ],
+            "pg": []
+          }
+        },
+        {
+          "count": "4",
+          "zh": "京都精华大学",
+          "en": "京都精華大学",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "2",
+            "2026": "2"
+          },
+          "majors": {
+            "ug": [
+              [
+                "造形学科",
+                "造形学科"
+              ],
+              [
+                "造形学科（版画）",
+                "造形学科（版画）"
+              ],
+              [
+                "アート＆デザイン",
+                "艺术与设计"
+              ]
+            ],
+            "pg": []
+          }
+        },
+        {
+          "count": "4",
+          "zh": "名古屋艺术大学",
+          "en": "名古屋芸術大学",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "2",
+            "2025": "1",
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "デザインファンデーション",
+                "设计基础"
+              ],
+              [
+                "イラストレーション",
+                "插画"
+              ],
+              [
+                "デザイン領域ファンデーション",
+                "设计领域基础"
+              ]
+            ],
+            "pg": [
+              [
+                "油絵",
+                "油画"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "东京艺术大学",
+          "en": "東京芸術大学",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "1",
+            "2026": "2"
+          },
+          "majors": {
+            "pg": [
+              [
+                "グローバルアートプラクティス",
+                "全球艺术实践"
+              ],
+              [
+                "ゲーム・インタラクティブアート",
+                "游戏与交互艺术"
+              ],
+              [
+                "インターメディアアート",
+                "媒体艺术"
+              ]
+            ],
+            "ug": []
+          }
+        },
+        {
+          "count": "3",
+          "zh": "尚美学园大学",
+          "en": "尚美学園大学",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "1",
+            "2026": "2"
+          },
+          "majors": {
+            "ug": [
+              [
+                "情報表現学科",
+                "信息表现学科"
+              ],
+              [
+                "イラストレーション",
+                "插画"
+              ]
+            ],
+            "pg": [
+              [
+                "情報表現",
+                "信息表现"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "弘益大学",
+          "en": "홍익대학교",
+          "tags": [],
+          "seasons": [
+            "2024",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "회화",
+                "纯艺术"
+              ]
+            ],
+            "ug": [
+              [
+                "회화과",
+                "绘画科"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "文星艺术大学",
+          "en": "文星芸術大学",
+          "tags": [],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "1",
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "総合造形（立体分野・編入学）",
+                "综合造形（立体方向·编入）"
+              ],
+              [
+                "油絵",
+                "油画"
+              ]
+            ],
+            "pg": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "专门学校动画艺术家学院",
+          "en": "専門学校アニメ・アーティスト・アカデミー",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "アニメーションデザイン",
+                "动画设计"
+              ]
+            ],
+            "ug": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "世宗大学",
+          "en": "세종대학교",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "회화과（서양화）",
+                "绘画科（西洋画）"
+              ]
+            ],
+            "pg": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "东京学艺大学",
+          "en": "東京学芸大学",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Arts & Crafts Teacher Education Subprogram",
+                "艺术与工艺教师教育子课程"
+              ]
+            ],
+            "ug": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "东京工艺大学",
+          "en": "東京工芸大学",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "写真学科（Photography and Imaging）",
+                "摄影学科"
+              ]
+            ],
+            "ug": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "东京福祉大学",
+          "en": "東京福祉大学",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "保育児童",
+                "保育儿童"
+              ]
+            ],
+            "pg": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "东京视觉艺术学院专门学校",
+          "en": "専門学校 東京ビジュアルアーツ・アカデミー",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "写真学科",
+                "摄影学科"
+              ]
+            ],
+            "ug": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "九州产业大学",
+          "en": "九州産業大学",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "フォトメディア",
+                "摄影媒体"
+              ]
+            ],
+            "pg": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "京都情报大学院大学",
+          "en": "京都情報大学院大学",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "ウェブビジネス技術専攻",
+                "网络商务技术专攻"
+              ]
+            ],
+            "ug": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "仓敷艺术科学大学",
+          "en": "倉敷芸術科学大学",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "イラストレーション",
+                "插画"
+              ]
+            ],
+            "pg": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "创形专门学校",
+          "en": "創形専門学校",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "油絵",
+                "油画"
+              ]
+            ],
+            "ug": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "城西国际大学",
+          "en": "城西国際大学",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "ニューメディアコース",
+                "新媒体方向"
+              ]
+            ],
+            "pg": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "大阪艺术大学",
+          "en": "大阪芸術大学",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "美術学科",
+                "美术学科"
+              ]
+            ],
+            "pg": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "女子美术大学",
+          "en": "女子美術大学",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "hl": true,
+          "majors": {
+            "pg": [
+              [
+                "版画",
+                "版画"
+              ]
+            ],
+            "ug": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "嵯峨美术大学",
+          "en": "嵯峨美術大学",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "陶芸",
+                "陶艺"
+              ]
+            ],
+            "pg": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "建国大学",
+          "en": "건국대학교",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "회화",
+                "绘画"
+              ]
+            ],
+            "pg": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "成安造形大学",
+          "en": "成安造形大学",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "イラストレーション",
+                "插画"
+              ]
+            ],
+            "pg": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "文京学院大学",
+          "en": "文京学院大学",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "イラストレーション",
+                "插画"
+              ]
+            ],
+            "ug": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "日本大学",
+          "en": "日本大学",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "hl": true,
+          "majors": {
+            "pg": [
+              [
+                "版画",
+                "版画"
+              ]
+            ],
+            "ug": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "武藏野美术大学",
+          "en": "武蔵野美術大学",
+          "tags": [],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "hl": true,
+          "majors": {
+            "pg": [
+              [
+                "版画",
+                "版画"
+              ]
+            ],
+            "ug": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "涩谷时尚艺术专门学校",
+          "en": "渋谷ファッション&アート専門学校",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "美術表現",
+                "美术表现"
+              ]
+            ],
+            "ug": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "爱知县立艺术大学",
+          "en": "愛知県立芸術大学",
+          "tags": [],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "陶芸",
+                "陶艺"
+              ]
+            ],
+            "ug": []
+          }
+        },
+        {
+          "count": "1",
+          "zh": "赤堀制果专门学校",
+          "en": "赤堀製菓専門学校",
+          "tags": [],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "スイーツ・パン",
+                "甜点·面包"
+              ]
+            ],
+            "ug": []
+          }
+        }
+      ],
+      "HK_SG": [
+        {
+          "count": "7",
+          "zh": "新加坡拉萨尔艺术学院",
+          "en": "LASALLE College of the Arts",
+          "tags": [
+            "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "3",
+            "2026": "3"
+          },
+          "majors": {
+            "ug": [
+              [
+                "FINE ART",
+                "纯艺术"
+              ],
+              [
+                "ININTERIOR DESIGN",
+                "设计"
+              ],
+              [
+                "BA(HONS) FINE ARTS (YEAR 1)",
+                "纯艺术（荣誉）文学学士年制"
+              ],
+              [
+                "BA(HONS) FINE ARTS",
+                "纯艺术（荣誉）文学学士"
+              ],
+              [
+                "BA (HONS) Arts Management",
+                "艺术管理（荣誉）文学学士"
+              ],
+              [
+                "Product design",
+                "产品设计"
+              ],
+              [
+                "BA (HONS) ART HISTORIES AND CURATORIAL PRACTICES: ASIA AND THE WORLD",
+                "艺术与策展·实践与（荣誉）文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "6",
+          "zh": "新加坡南洋艺术学院",
+          "en": "Nanyang Academy of Fine Arts",
+          "tags": [
+            "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "2",
+            "2026": "3"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BACHELOR OF ARTS (HONOURS) DESIGN PRACTICE—Communication Design",
+                "设计·实践·传播设计（荣誉）文学学士"
+              ],
+              [
+                "FINE ART",
+                "纯艺术"
+              ],
+              [
+                "DESIGN PRACTICE",
+                "设计·实践"
+              ],
+              [
+                "DIPLOMA FINE ARTS",
+                "纯艺术文凭课程"
+              ]
+            ],
+            "pg": [
+              [
+                "Master of Fine Arts Fine Art - 2 Years",
+                "纯艺术艺术硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "6",
+          "zh": "香港大学",
+          "en": "The University of Hong Kong",
+          "tags": [
+            "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2026": "5"
+          },
+          "hl": true,
+          "majors": {
+            "pg": [
+              [
+                "Master of Arts in Creative Communications",
+                "创意·传播文学硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "Bachelor of Arts",
+                "文学学士"
+              ],
+              [
+                "Global Creative Industries",
+                "全球·创意·产业"
+              ],
+              [
+                "Bachelor of Arts in Global Creative Industries",
+                "全球·创意·产业文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "6",
+          "zh": "香港岭南大学",
+          "en": "Lingnan University",
+          "tags": [
+            "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "1",
+            "2026": "4"
+          },
+          "majors": {
+            "pg": [
+              [
+                "艺术管理",
+                "艺术管理"
+              ],
+              [
+                "Master of Science in Arts Technology and Business",
+                "艺术·技术与商业理学硕士"
+              ],
+              [
+                "MSc in Arts Technology and Business -1",
+                "艺术·技术与商业理学硕士"
+              ],
+              [
+                "Curating and Art History",
+                "策展与艺术史"
+              ],
+              [
+                "Master of Arts in Creative and Media Industries",
+                "创意与媒体·产业文学硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "Bachelor of Arts (Hons) in Animation and Digital Arts",
+                "动画与数字·艺术（荣誉）文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "4",
+          "zh": "新加坡莱佛士设计学院",
+          "en": "Raffles Design Institute Singapore",
+          "tags": [
+            "hk-sg"
+          ],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "1",
+            "2026": "3"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Diploma in Graphic Design",
+                "平面设计文凭课程"
+              ],
+              [
+                "BA Graphic Design (Visual Communication)",
+                "平面设计·视觉传达文学学士"
+              ],
+              [
+                "Bachelor of Arts with Honours in Graphic Design",
+                "平面设计（荣誉）文学学士"
+              ],
+              [
+                "Graphic Design",
+                "平面设计"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "4",
+          "zh": "香港教育大学",
+          "en": "The Education University of Hong Kong",
+          "tags": [
+            "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "2",
+            "2026": "2"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Bachelor of Arts (Honours) in Creative Arts and Culture- Visual Arts",
+                "创意·艺术与文化·视觉艺术（荣誉）文学学士"
+              ]
+            ],
+            "pg": [
+              [
+                "Master of Arts in Visual Arts Education and Creative Practice",
+                "视觉艺术·教育与创意实践文学硕士"
+              ],
+              [
+                "Master of Arts in Visual Arts Education and Creati",
+                "视觉艺术·教育与文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "香港中文大学",
+          "en": "The Chinese University of Hong Kong",
+          "tags": [
+            "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "1",
+            "2026": "1"
+          },
+          "hl": true,
+          "majors": {
+            "pg": [
+              [
+                "MASTER OF ARTS CULTURAL MANAGEMENT",
+                "文化·管理文学硕士"
+              ],
+              [
+                "MA in Cultural Management",
+                "文化·管理文学硕士"
+              ],
+              [
+                "Master of Arts in Cultural Management 1",
+                "文化·管理文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "香港城市大学",
+          "en": "City University of Hong Kong",
+          "tags": [
+            "hk-sg"
+          ],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "2",
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA in Creative Media",
+                "创意·媒体文学硕士"
+              ],
+              [
+                "MA Creative Media",
+                "创意·媒体文学硕士"
+              ]
+            ],
+            "ug": [
+              [
+                "BA Creative Media",
+                "创意·媒体文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "3",
+          "zh": "香港浸会大学",
+          "en": "Hong Kong Baptist University",
+          "tags": [
+            "hk-sg"
+          ],
+          "seasons": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2024": "1",
+            "2025": "1",
+            "2026": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "MA in Visual Arts",
+                "视觉艺术文学硕士"
+              ],
+              [
+                "Master of Arts in Communication - Media Management Concentration",
+                "传播·媒体·管理文学硕士"
+              ],
+              [
+                "Master of Social Sciences (MSocSc) in Media Management",
+                "社会·科学·媒体·管理硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "2",
+          "zh": "香港都会大学",
+          "en": "Hong Kong Metropolitan University",
+          "tags": [
+            "hk-sg"
+          ],
+          "seasons": [
+            "2025",
+            "2026"
+          ],
+          "seasonCounts": {
+            "2025": "1",
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Bachelor of Fine Arts with Honours in Imaging Design and Digital Art",
+                "设计与数字·艺术（荣誉）艺术学士"
+              ],
+              [
+                "BA (Hons) Creative Advertising and Media Design",
+                "创意·广告与媒体·设计（荣誉）文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "北京师范大学-香港浸会大学联合国际学院",
+          "en": "Beijing Normal University-Hong Kong Baptist University United International College",
+          "tags": [
+            "hk-sg"
+          ],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "pg": [
+              [
+                "Master of Arts in Communication - Interactive Media Studies Concentration",
+                "传播·媒体·研究文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "新加坡国立大学",
+          "en": "National University of Singapore",
+          "tags": [
+            "hk-sg"
+          ],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "hl": true,
+          "majors": {
+            "pg": [
+              [
+                "MA (Arts and Cultural Entrepreneurship)",
+                "艺术与文化·创业文学硕士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "新加坡莱佛士营销管理学院",
+          "en": "Raffles Merchandising Institute",
+          "tags": [
+            "hk-sg"
+          ],
+          "seasons": [
+            "2024"
+          ],
+          "seasonCounts": {
+            "2024": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BA Fashion Business",
+                "服装与服饰·商业文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "香港树仁大学",
+          "en": "Hong Kong Shue Yan University",
+          "tags": [
+            "hk-sg"
+          ],
+          "seasons": [
+            "2026"
+          ],
+          "seasonCounts": {
+            "2026": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "Bachelor of Arts (Hons) in Media Design and Immersive Technology",
+                "媒体·设计与沉浸式·技术（荣誉）文学学士"
+              ]
+            ]
+          }
+        },
+        {
+          "count": "1",
+          "zh": "香港理工大学",
+          "en": "The Hong Kong Polytechnic University",
+          "tags": [
+            "hk-sg"
+          ],
+          "seasons": [
+            "2025"
+          ],
+          "seasonCounts": {
+            "2025": "1"
+          },
+          "majors": {
+            "ug": [
+              [
+                "BA (HONS) SCHEME IN DESIGN",
+                "设计（荣誉）文学学士"
+              ]
+            ]
+          }
+        }
+      ]
+    }
   },
   "instructors": {
     "rows": 4,
@@ -7657,339 +19137,903 @@ window.SFK_DATA = {
     ],
     "instructors": [
       {
-        "name": "占位导师 01",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "海外教授",
-        "img": "",
-        "regions": [
-          "us-top30"
-        ]
-      },
-      {
-        "name": "占位导师 02",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "海外教授",
-        "img": "",
-        "regions": [
-          "liberal-arts"
-        ]
-      },
-      {
-        "name": "占位导师 03",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "海外教授",
-        "img": "",
-        "regions": [
-          "uk-g5"
-        ]
-      },
-      {
-        "name": "占位导师 04",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "海外教授",
-        "img": "",
-        "regions": [
-          "risd"
-        ]
-      },
-      {
-        "name": "占位导师 05",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "海外教授",
-        "img": "",
-        "regions": [
-          "hk-sg"
-        ]
-      },
-      {
-        "name": "占位导师 06",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "海外教授",
-        "img": "",
-        "regions": [
-          "us-top30"
-        ]
-      },
-      {
-        "name": "占位导师 07",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "海外教授",
-        "img": "",
-        "regions": [
-          "liberal-arts"
-        ]
-      },
-      {
-        "name": "占位导师 08",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "海外教授",
-        "img": "",
-        "regions": [
-          "uk-g5"
-        ]
-      },
-      {
-        "name": "占位导师 09",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
+        "id": "inst-aca-001",
+        "name": "Zheng.L.Y",
+        "background": "伦敦艺术大学",
+        "title": "视觉叙事 · 艺术疗愈",
         "category": "教研导师",
-        "img": "",
+        "img": "assets/img/instructors/Zheng.L.Y.jpg",
+        "photoSource": "instructors/教研导师/Zheng.L.Y.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 10",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
+        "id": "inst-aca-002",
+        "name": "Guo.F",
+        "background": "美国普瑞特艺术学院",
+        "title": "当代艺术",
         "category": "教研导师",
-        "img": "",
+        "img": "assets/img/instructors/Guo.F.jpg",
+        "photoSource": "instructors/教研导师/Guo.F.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 11",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
+        "id": "inst-aca-003",
+        "name": "Zhou.C.Q",
+        "background": "格拉斯哥艺术学院",
+        "title": "插画 · 商业视觉",
         "category": "教研导师",
-        "img": "",
+        "img": "assets/img/instructors/Zhou.C.Q.jpg",
+        "photoSource": "instructors/教研导师/Zhou.C.Q.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 12",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
+        "id": "inst-aca-004",
+        "name": "Han.M.F",
+        "background": "伦敦艺术大学",
+        "title": "绘本 · 跨学科",
         "category": "教研导师",
-        "img": "",
+        "img": "assets/img/instructors/Han.M.F.jpg",
+        "photoSource": "instructors/教研导师/Han.M.F.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 13",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
+        "id": "inst-aca-005",
+        "name": "Zhao.Z.Q",
+        "background": "德国基尔艺术学院",
+        "title": "当代艺术 · 升学规划",
         "category": "教研导师",
-        "img": "",
+        "img": "assets/img/instructors/Zhao.Z.Q.jpg",
+        "photoSource": "instructors/教研导师/Zhao.Z.Q.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 14",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
+        "id": "inst-aca-006",
+        "name": "Ding.Y.X",
+        "background": "伦敦艺术大学",
+        "title": "视觉媒体 · 艺术疗愈",
         "category": "教研导师",
-        "img": "",
+        "img": "assets/img/instructors/Ding.Y.X.jpg",
+        "photoSource": "instructors/教研导师/Ding.Y.X.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 15",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "教研导师",
-        "img": "",
-        "regions": []
-      },
-      {
-        "name": "占位导师 16",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "教研导师",
-        "img": "",
-        "regions": []
-      },
-      {
-        "name": "占位导师 17",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
+        "id": "inst-aca-007",
+        "name": "Yi.L",
+        "background": "皇家艺术学院",
+        "title": "纯艺 · 雕塑装置",
         "category": "学术导师",
-        "img": "",
+        "img": "assets/img/instructors/Yi.L.jpg",
+        "photoSource": "instructors/学术导师/Yi.L.JPG",
         "regions": []
       },
       {
-        "name": "占位导师 18",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
+        "id": "inst-aca-008",
+        "name": "Wenxi.W",
+        "background": "皇家艺术学院",
+        "title": "纯艺 · 版画",
         "category": "学术导师",
-        "img": "",
+        "img": "assets/img/instructors/Wenxi.W.jpg",
+        "photoSource": "instructors/学术导师/Wenxi.W.JPG",
         "regions": []
       },
       {
-        "name": "占位导师 19",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
+        "id": "inst-aca-009",
+        "name": "Yuheng.Z",
+        "background": "皇家艺术学院",
+        "title": "纯艺 · 实验艺术",
         "category": "学术导师",
-        "img": "",
+        "img": "assets/img/instructors/Yuheng.Z.jpg",
+        "photoSource": "instructors/学术导师/Yuheng.Z.JPG",
         "regions": []
       },
       {
-        "name": "占位导师 20",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
+        "id": "inst-aca-010",
+        "name": "Yuhui.W",
+        "background": "伦敦大学学院",
+        "title": "纯艺 · 摄影 · 影像",
         "category": "学术导师",
-        "img": "",
+        "img": "assets/img/instructors/Yuhui.W.jpg",
+        "photoSource": "instructors/学术导师/Yuhui.W.JPG",
         "regions": []
       },
       {
-        "name": "占位导师 21",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
+        "id": "inst-aca-011",
+        "name": "Yuxiao.R",
+        "background": "皇家艺术学院",
+        "title": "纯艺 · 绘画装置",
         "category": "学术导师",
-        "img": "",
+        "img": "assets/img/instructors/Yuxiao.R.jpg",
+        "photoSource": "instructors/学术导师/Yuxiao.R.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 22",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
+        "id": "inst-aca-012",
+        "name": "Mingzhong.Z",
+        "background": "皇家艺术学院",
+        "title": "纯艺",
         "category": "学术导师",
-        "img": "",
+        "img": "assets/img/instructors/Mingzhong.Z.jpg",
+        "photoSource": "instructors/学术导师/Mingzhong.Z.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 23",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
+        "id": "inst-aca-013",
+        "name": "Yiqi.W",
+        "background": "中央圣马丁艺术学院",
+        "title": "纯艺 · 多媒介",
         "category": "学术导师",
-        "img": "",
+        "img": "assets/img/instructors/Yiqi.W.jpg",
+        "photoSource": "instructors/学术导师/Yiqi.W.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 24",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
+        "id": "inst-aca-014",
+        "name": "Zhang.RT",
+        "background": "纽约大学",
+        "title": "插画 · 艺术管理",
         "category": "学术导师",
-        "img": "",
+        "img": "assets/img/instructors/Zhang.RT.jpg",
+        "photoSource": "instructors/学术导师/Zhang.RT.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 25",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "业界导师",
-        "img": "",
+        "id": "inst-aca-015",
+        "name": "Wang.SL",
+        "background": "伦敦艺术大学",
+        "title": "插画叙事 · 绘本",
+        "category": "学术导师",
+        "img": "assets/img/instructors/Wang.SL.jpg",
+        "photoSource": "instructors/学术导师/Wang.SL.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 26",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "业界导师",
-        "img": "",
+        "id": "inst-aca-016",
+        "name": "Liu.YZ",
+        "background": "金史密斯大学",
+        "title": "绘本叙事 · 编辑插画",
+        "category": "学术导师",
+        "img": "assets/img/instructors/Liu.YZ.jpg",
+        "photoSource": "instructors/学术导师/Liu.YZ.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 27",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "业界导师",
-        "img": "",
+        "id": "inst-aca-017",
+        "name": "Li.Shelly",
+        "background": "伦敦艺术大学",
+        "title": "动态插画",
+        "category": "学术导师",
+        "img": "assets/img/instructors/Li.Shelly.jpg",
+        "photoSource": "instructors/学术导师/Li.Shelly.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 28",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "业界导师",
-        "img": "",
+        "id": "inst-aca-018",
+        "name": "Wan.LY",
+        "background": "伦敦艺术大学",
+        "title": "摄影 · 实验影像",
+        "category": "学术导师",
+        "img": "assets/img/instructors/Wan.LY.jpg",
+        "photoSource": "instructors/学术导师/Wan.LY.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 29",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "业界导师",
-        "img": "",
+        "id": "inst-aca-019",
+        "name": "Liu.EE",
+        "background": "雪城大学",
+        "title": "插画叙事 · 编辑插画",
+        "category": "学术导师",
+        "img": "assets/img/instructors/Liu.EE.jpg",
+        "photoSource": "instructors/学术导师/Liu.EE.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 30",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "业界导师",
-        "img": "",
+        "id": "inst-aca-020",
+        "name": "Li.ZM",
+        "background": "爱丁堡大学",
+        "title": "插画 · 绘本叙事",
+        "category": "学术导师",
+        "img": "assets/img/instructors/Li.ZM.jpg",
+        "photoSource": "instructors/学术导师/Li.ZM.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 31",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "业界导师",
-        "img": "",
+        "id": "inst-aca-021",
+        "name": "Du.S",
+        "background": "南加州大学",
+        "title": "纯艺 · 生物艺术 · 艺术疗愈",
+        "category": "学术导师",
+        "img": "assets/img/instructors/Du.S.jpg",
+        "photoSource": "instructors/学术导师/D.Shu.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 32",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "业界导师",
-        "img": "",
+        "id": "inst-aca-022",
+        "name": "Miu.J",
+        "background": "伦敦艺术大学",
+        "title": "插画 · 多模态叙事",
+        "category": "学术导师",
+        "img": "assets/img/instructors/Miu.J.jpg",
+        "photoSource": "instructors/学术导师/Miu.J.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 33",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
+        "id": "inst-aca-023",
+        "name": "Wang.J.L",
+        "background": "爱丁堡大学",
+        "title": "插画",
+        "category": "学术导师",
+        "img": "assets/img/instructors/Wang.J.L.jpg",
+        "photoSource": "instructors/学术导师/Wang.J.L.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-024",
+        "name": "Ren.J.C",
+        "background": "皇家艺术学院",
+        "title": "纯艺 · 雕塑",
+        "category": "学术导师",
+        "img": "assets/img/instructors/Ren.J.C.jpg",
+        "photoSource": "instructors/学术导师/Ren.J.C.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-026",
+        "name": "Hu.CC",
+        "background": "皇家艺术学院",
+        "title": "纯艺 · 摄影",
+        "category": "学术导师",
+        "img": "assets/img/instructors/Hu.CC.jpg",
+        "photoSource": "instructors/学术导师/Hu.CC.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-027",
+        "name": "Shan.YY",
+        "background": "伦敦艺术大学",
+        "title": "插画",
+        "category": "学术导师",
+        "img": "assets/img/instructors/Shan.YY.jpg",
+        "photoSource": "instructors/学术导师/Shan.YY.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-028",
+        "name": "Liu.WQ",
+        "background": "伦敦艺术大学",
+        "title": "插画 · 综合材料",
+        "category": "学术导师",
+        "img": "assets/img/instructors/Liu.WQ.jpg",
+        "photoSource": "instructors/学术导师/Liu.WQ.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-029",
+        "name": "Ming.SQ",
+        "background": "Pratt",
+        "title": "纯艺 · 摄影",
+        "category": "学术导师",
+        "img": "assets/img/instructors/Ming.SQ.jpg",
+        "photoSource": "instructors/学术导师/Ming.SQ.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-030",
+        "name": "Ni.EX",
+        "background": "伦敦艺术大学",
+        "title": "插画",
+        "category": "学术导师",
+        "img": "assets/img/instructors/Ni.EX.jpg",
+        "photoSource": "instructors/学术导师/Ni.EX.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-031",
+        "name": "Jiang.YX",
+        "background": "金斯顿",
+        "title": "插画",
+        "category": "学术导师",
+        "img": "assets/img/instructors/Jiang.YX.jpg",
+        "photoSource": "instructors/学术导师/Jiang.YX.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-032",
+        "name": "Jin.D",
+        "background": "皇家艺术学院",
+        "title": "纯艺 · 版画 · 油画",
+        "category": "学术导师",
+        "img": "assets/img/instructors/Jin.D.jpg",
+        "photoSource": "instructors/学术导师/Jin.D.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-033",
+        "name": "Luo.C.Y",
+        "background": "意大利博洛尼亚美术学院",
+        "title": "纯艺 · 装置",
+        "category": "学术导师",
+        "img": "assets/img/instructors/Luo.C.Y.jpg",
+        "photoSource": "instructors/学术导师/Luo.C.Y.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-034",
+        "name": "Huang.DL",
+        "background": "纽约帕森斯设计艺术学院",
+        "title": "纯艺 · 摄影 · 策展",
+        "category": "学术导师",
+        "img": "assets/img/instructors/Huang.DL.jpg",
+        "photoSource": "instructors/学术导师/Huang.DL.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-035",
+        "name": "Liu.B.J",
+        "background": "皇家艺术学院",
+        "title": "纯艺 · 油画 · 版画",
+        "category": "学术导师",
+        "img": "assets/img/instructors/Liu.B.J.jpg",
+        "photoSource": "instructors/学术导师/Liu.B.J.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-036",
+        "name": "He.D",
+        "background": "伦敦艺术大学",
+        "title": "纯艺 · 综合材料 · 雕塑",
+        "category": "学术导师",
+        "img": "assets/img/instructors/He.D.jpg",
+        "photoSource": "instructors/学术导师/He.D.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-037",
+        "name": "W. Mona",
+        "background": "纽约视觉艺术学院",
+        "title": "纯艺 · 摄影 · 实验影像",
+        "category": "学术导师",
+        "img": "assets/img/instructors/W. Mona.jpg",
+        "photoSource": "instructors/学术导师/W. Mona.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-038",
+        "name": "Yu.TG",
+        "background": "皇家艺术学院",
+        "title": "绘画 · 摄影 · 数字媒体 · 艺术疗愈",
+        "category": "学术导师",
+        "img": "assets/img/instructors/Yu.TG.jpg",
+        "photoSource": "instructors/学术导师/Yu.TG.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-039",
+        "name": "A.F",
+        "background": "牛津大学",
+        "title": "纯艺资深讲师 跨媒介艺术家",
+        "category": "海外教授",
+        "img": "assets/img/instructors/A.F.jpg",
+        "photoSource": "instructors/海外教授/A.F 牛津大学 纯艺资深讲师 跨媒介艺术家.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-040",
+        "name": "M.C",
+        "background": "哈佛大学",
+        "title": "客座讲师 皇家艺术学院客座讲师",
+        "category": "海外教授",
+        "img": "assets/img/instructors/M.C.jpg",
+        "photoSource": "instructors/海外教授/M.C 哈佛大学 客座讲师 皇家艺术学院客座讲师.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-041",
+        "name": "L.M",
+        "background": "康奈尔大学",
+        "title": "艺术系教授 研究生项目负责人 OyG艺术运营空间联合创办人及总监",
+        "category": "海外教授",
+        "img": "assets/img/instructors/L.M.jpg",
+        "photoSource": "instructors/海外教授/L.M 康奈尔大学 艺术系教授 研究生项目负责人 OyG艺术运营空间联合创办人及总监.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-042",
+        "name": "E.H",
+        "background": "康奈尔大学",
+        "title": "纯艺讲师 视觉艺术家",
+        "category": "海外教授",
+        "img": "assets/img/instructors/E.H.jpg",
+        "photoSource": "instructors/海外教授/E.H 康奈尔大学 纯艺讲师 视觉艺术家.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-043",
+        "name": "I.T",
+        "background": "宾夕法尼亚大学",
+        "title": "纯艺讲师 观澜国际版画奖得主",
+        "category": "海外教授",
+        "img": "assets/img/instructors/I.T.jpg",
+        "photoSource": "instructors/海外教授/I.T 宾夕法尼亚大学 纯艺讲师 观澜国际版画奖得主.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-044",
+        "name": "S.M",
+        "background": "耶鲁大学",
+        "title": "耶鲁大学绘画版画专业导师 施耐德艺术博物馆执行馆长",
+        "category": "海外教授",
+        "img": "assets/img/instructors/S.M.jpg",
+        "photoSource": "instructors/海外教授/S.M 耶鲁大学 耶鲁大学绘画版画专业导师 施耐德艺术博物馆执行馆长.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-045",
+        "name": "M.H",
+        "background": "耶鲁大学",
+        "title": "耶鲁大学讲师 作为策展人",
+        "category": "海外教授",
+        "img": "assets/img/instructors/M.H.jpg",
+        "photoSource": "instructors/海外教授/M.H 耶鲁大学 耶鲁大学讲师 作为策展人.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-046",
+        "name": "J.D",
+        "background": "卡耐基梅隆大学",
+        "title": "艺术系教授 惠普应用研究项目负责人",
+        "category": "海外教授",
+        "img": "assets/img/instructors/J.D.jpg",
+        "photoSource": "instructors/海外教授/J.D 卡耐基梅隆大学 艺术系教授 惠普应用研究项目负责人.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-047",
+        "name": "L.F",
+        "background": "伦敦大学学院",
+        "title": "纯艺专业副教授 斯莱德美术学院纯艺招生负责人 旅居伦敦",
+        "category": "海外教授",
+        "img": "assets/img/instructors/L.F.jpg",
+        "photoSource": "instructors/海外教授/L.F 伦敦大学学院 纯艺专业副教授 斯莱德美术学院纯艺招生负责人 旅居伦敦.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-048",
+        "name": "C.Y",
+        "background": "伦敦大学学院",
+        "title": "纯艺专业教授 驻伦敦",
+        "category": "海外教授",
+        "img": "assets/img/instructors/C.Y.jpg",
+        "photoSource": "instructors/海外教授/C.Y 伦敦大学学院 纯艺专业教授 驻伦敦.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-049",
+        "name": "M.J",
+        "background": "罗德岛设计学院",
+        "title": "插画系导师 小马宝莉系列官方绘本首席插画师",
+        "category": "海外教授",
+        "img": "assets/img/instructors/M.J.jpg",
+        "photoSource": "instructors/海外教授/M.J 罗德岛设计学院 插画系导师 小马宝莉系列官方绘本首席插画师.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-050",
+        "name": "P.B",
+        "background": "罗德岛设计学院",
+        "title": "插画系导师 插画家兼艺术家",
+        "category": "海外教授",
+        "img": "assets/img/instructors/P.B.jpg",
+        "photoSource": "instructors/海外教授/P.B 罗德岛设计学院 插画系导师 插画家兼艺术家.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-051",
+        "name": "J.B",
+        "background": "罗德岛设计学院",
+        "title": "插画系导师 驻场艺术家",
+        "category": "海外教授",
+        "img": "assets/img/instructors/J.B.jpg",
+        "photoSource": "instructors/海外教授/J.B 罗德岛设计学院 插画系导师 驻场艺术家.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-052",
+        "name": "G.S",
+        "background": "罗德岛设计学院",
+        "title": "副教授 卓越教学奖得主",
+        "category": "海外教授",
+        "img": "assets/img/instructors/G.S.jpg",
+        "photoSource": "instructors/海外教授/G.S 罗德岛设计学院 副教授 卓越教学奖得主.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-053",
+        "name": "D.Z",
+        "background": "罗德岛设计学院",
+        "title": "教授 古根海姆奖得主",
+        "category": "海外教授",
+        "img": "assets/img/instructors/D.Z.jpg",
+        "photoSource": "instructors/海外教授/D.Z 罗德岛设计学院 教授 古根海姆奖得主.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-054",
+        "name": "C.B",
+        "background": "罗德岛设计学院",
+        "title": "教授 插画家与儿童文学作家",
+        "category": "海外教授",
+        "img": "assets/img/instructors/C.B.jpg",
+        "photoSource": "instructors/海外教授/C.B 罗德岛设计学院 教授 插画家与儿童文学作家.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-055",
+        "name": "L.H",
+        "background": "罗德岛设计学院",
+        "title": "教授 威尼斯双年展参展艺术家",
+        "category": "海外教授",
+        "img": "assets/img/instructors/L.H.jpg",
+        "photoSource": "instructors/海外教授/L.H 罗德岛设计学院 教授 威尼斯双年展参展艺术家.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-056",
+        "name": "R.R",
+        "background": "罗德岛设计学院",
+        "title": "副教授 制琴大师兼工业设计师",
+        "category": "海外教授",
+        "img": "assets/img/instructors/R.R.jpg",
+        "photoSource": "instructors/海外教授/R.R 罗德岛设计学院 副教授 制琴大师兼工业设计师.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-057",
+        "name": "K.R",
+        "background": "纽约视觉艺术学院",
+        "title": "讲师 艺术评论家与客座策展人",
+        "category": "海外教授",
+        "img": "assets/img/instructors/K.R.jpg",
+        "photoSource": "instructors/海外教授/K.R 纽约视觉艺术学院 讲师 艺术评论家与客座策展人.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-058",
+        "name": "S.J",
+        "background": "视觉艺术学院",
+        "title": "讲师 印度裔艺术家",
+        "category": "海外教授",
+        "img": "assets/img/instructors/S.J.jpg",
+        "photoSource": "instructors/海外教授/S.J 视觉艺术学院 讲师 印度裔艺术家.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-059",
+        "name": "M.B",
+        "background": "皇家艺术学院",
+        "title": "讲师 艺术家和电影制片人",
+        "category": "海外教授",
+        "img": "assets/img/instructors/M.B.jpg",
+        "photoSource": "instructors/海外教授/M.B 皇家艺术学院 讲师 艺术家和电影制片人.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-060",
+        "name": "H.G",
+        "background": "皇家艺术学院",
+        "title": "讲师 伦敦艺术家",
+        "category": "海外教授",
+        "img": "assets/img/instructors/H.G.jpg",
+        "photoSource": "instructors/海外教授/H.G 皇家艺术学院 讲师 伦敦艺术家.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-061",
+        "name": "A.K",
+        "background": "皇家艺术学院",
+        "title": "讲师 世界剧场研究中心联合创始人",
+        "category": "海外教授",
+        "img": "assets/img/instructors/A.K.jpg",
+        "photoSource": "instructors/海外教授/A.K 皇家艺术学院 讲师 世界剧场研究中心联合创始人.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-062",
+        "name": "K.B",
+        "background": "伦敦传媒学院",
+        "title": "摄影资深讲师 威尼斯双年展保加利亚馆艺术家",
+        "category": "海外教授",
+        "img": "assets/img/instructors/K.B.jpg",
+        "photoSource": "instructors/海外教授/K.B 伦敦传媒学院 摄影资深讲师 威尼斯双年展保加利亚馆艺术家.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-063",
+        "name": "K.H",
+        "background": "伦敦艺术学院",
+        "title": "预科讲师 英国高等教育学院副院士",
+        "category": "海外教授",
+        "img": "assets/img/instructors/K.H.jpg",
+        "photoSource": "instructors/海外教授/K.H 伦敦艺术学院 预科讲师 英国高等教育学院副院士.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-064",
+        "name": "N.B",
+        "background": "坎伯韦尔艺术学院",
+        "title": "插画讲师 获奖儿童读物插画家",
+        "category": "海外教授",
+        "img": "assets/img/instructors/N.B.jpg",
+        "photoSource": "instructors/海外教授/N.B 坎伯韦尔艺术学院 插画讲师 获奖儿童读物插画家.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-065",
+        "name": "S.K",
+        "background": "创意艺术大学",
+        "title": "插画讲师 国际参展插画家",
+        "category": "海外教授",
+        "img": "assets/img/instructors/S.K.jpg",
+        "photoSource": "instructors/海外教授/S.K 创意艺术大学 插画讲师 国际参展插画家.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-066",
+        "name": "E.D",
+        "background": "坎伯韦尔艺术学院",
+        "title": "高级讲师 皇家艺术学院参展艺术家",
+        "category": "海外教授",
+        "img": "assets/img/instructors/E.D.jpg",
+        "photoSource": "instructors/海外教授/E.D 坎伯韦尔艺术学院 高级讲师 皇家艺术学院参展艺术家.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-067",
+        "name": "G.K",
+        "background": "伦敦艺术学院",
+        "title": "高级讲师 艺术家",
+        "category": "海外教授",
+        "img": "assets/img/instructors/G.K.jpg",
+        "photoSource": "instructors/海外教授/G.K 伦敦艺术学院 高级讲师 艺术家.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-068",
+        "name": "G.B",
+        "background": "坎伯韦尔艺术学院",
+        "title": "高级讲师 插画家与教育家（金斯顿校外考官）",
+        "category": "海外教授",
+        "img": "assets/img/instructors/G.B.jpg",
+        "photoSource": "instructors/海外教授/G.B 坎伯韦尔艺术学院 高级讲师 插画家与教育家（金斯顿校外考官）.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-069",
+        "name": "M.H",
+        "background": "坎伯韦尔艺术学院",
+        "title": "高级讲师 平面艺术家",
+        "category": "海外教授",
+        "img": "assets/img/instructors/M.H-inst-aca-069.jpg",
+        "photoSource": "instructors/海外教授/M.H 坎伯韦尔艺术学院 高级讲师 平面艺术家.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-070",
+        "name": "S.E",
+        "background": "坎伯韦尔艺术学院",
+        "title": "研究生课程负责人 插画教育者组织创始成员",
+        "category": "海外教授",
+        "img": "assets/img/instructors/S.E.jpg",
+        "photoSource": "instructors/海外教授/S.E 坎伯韦尔艺术学院 研究生课程负责人 插画教育者组织创始成员.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-071",
+        "name": "P.G",
+        "background": "坎伯韦尔艺术学院",
+        "title": "讲师 实验性漫画家与诗人",
+        "category": "海外教授",
+        "img": "assets/img/instructors/P.G.jpg",
+        "photoSource": "instructors/海外教授/P.G 坎伯韦尔艺术学院 讲师 实验性漫画家与诗人.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-072",
+        "name": "S.R",
+        "background": "伦敦传媒学院",
+        "title": "资深讲师 摄影艺术家与作家",
+        "category": "海外教授",
+        "img": "assets/img/instructors/S.R.jpg",
+        "photoSource": "instructors/海外教授/S.R 伦敦传媒学院 资深讲师 摄影艺术家与作家.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-073",
+        "name": "L.C",
+        "background": "伦敦传媒学院",
+        "title": "资深讲师 RCA版画硕士",
+        "category": "海外教授",
+        "img": "assets/img/instructors/L.C.jpg",
+        "photoSource": "instructors/海外教授/L.C 伦敦传媒学院 资深讲师 RCA版画硕士.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-074",
+        "name": "T.C",
+        "background": "中央圣马丁艺术学院",
+        "title": "资深讲师 RCA金奖得主",
+        "category": "海外教授",
+        "img": "assets/img/instructors/T.C.jpg",
+        "photoSource": "instructors/海外教授/T.C 中央圣马丁艺术学院 资深讲师 RCA金奖得主.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-075",
+        "name": "R.T",
+        "background": "坎伯韦尔艺术学院",
+        "title": "本科课程负责人 插画作家与研究者",
+        "category": "海外教授",
+        "img": "assets/img/instructors/R.T.jpg",
+        "photoSource": "instructors/海外教授/R.T 坎伯韦尔艺术学院 本科课程负责人 插画作家与研究者.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-076",
+        "name": "B.A",
+        "background": "坎伯韦尔艺术学院",
+        "title": "插画讲师 艺术家",
+        "category": "海外教授",
+        "img": "assets/img/instructors/B.A.jpg",
+        "photoSource": "instructors/海外教授/B.A 坎伯韦尔艺术学院 插画讲师 艺术家.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-077",
+        "name": "B.C",
+        "background": "伦敦传媒学院",
+        "title": "摄影课程资深讲师 摄影师与作家（皇家摄影学会获奖）",
+        "category": "海外教授",
+        "img": "assets/img/instructors/B.C.jpg",
+        "photoSource": "instructors/海外教授/B.C 伦敦传媒学院 摄影课程资深讲师 摄影师与作家（皇家摄影学会获奖）.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-078",
+        "name": "T.G",
+        "background": "伦敦艺术大学",
+        "title": "预科讲师 Anima Loci期刊联合创办人",
+        "category": "海外教授",
+        "img": "assets/img/instructors/T.G.jpg",
+        "photoSource": "instructors/海外教授/T.G 伦敦艺术大学 预科讲师 Anima Loci期刊联合创办人.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-079",
+        "name": "岳嵩",
+        "background": "清华美院",
+        "title": "工艺美术系主任副教授",
         "category": "顶尖学者",
-        "img": "",
+        "img": "assets/img/instructors/岳嵩.jpg",
+        "photoSource": "instructors/顶尖学者/岳嵩 清华美院 工艺美术系主任副教授.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 34",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
+        "id": "inst-aca-080",
+        "name": "蔡潇",
+        "background": "中央美术学院",
+        "title": "央美生物设计实验室负责人",
         "category": "顶尖学者",
-        "img": "",
+        "img": "assets/img/instructors/蔡潇.jpg",
+        "photoSource": "instructors/顶尖学者/蔡潇 中央美术学院 央美生物设计实验室负责人.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 35",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
+        "id": "inst-aca-081",
+        "name": "费俊",
+        "background": "中央美术学院",
+        "title": "艺术与科技国内数字媒体领军人物",
         "category": "顶尖学者",
-        "img": "",
+        "img": "assets/img/instructors/费俊.jpg",
+        "photoSource": "instructors/顶尖学者/费俊 中央美术学院 艺术与科技国内数字媒体领军人物.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 36",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "顶尖学者",
-        "img": "",
+        "id": "inst-aca-082",
+        "name": "卢老师",
+        "background": "BranD杂志",
+        "title": "主编",
+        "category": "业界导师",
+        "img": "assets/img/instructors/卢老师.jpg",
+        "photoSource": "instructors/业界导师/卢老师 BranD杂志 主编.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 37",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "顶尖学者",
-        "img": "",
+        "id": "inst-aca-083",
+        "name": "孟老师",
+        "background": "中国时尚品牌先锋",
+        "title": "",
+        "category": "业界导师",
+        "img": "assets/img/instructors/孟老师.jpg",
+        "photoSource": "instructors/业界导师/孟老师 中国时尚品牌先锋.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 38",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "顶尖学者",
-        "img": "",
+        "id": "inst-aca-084",
+        "name": "晏老师",
+        "background": "今日美术馆",
+        "title": "馆长",
+        "category": "业界导师",
+        "img": "assets/img/instructors/晏老师.jpg",
+        "photoSource": "instructors/业界导师/晏老师 今日美术馆 馆长.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 39",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "顶尖学者",
-        "img": "",
+        "id": "inst-aca-085",
+        "name": "朱会长",
+        "background": "国家级插画协会",
+        "title": "会长",
+        "category": "业界导师",
+        "img": "assets/img/instructors/朱会长.jpg",
+        "photoSource": "instructors/业界导师/朱会长 国家级插画协会 会长.jpg",
         "regions": []
       },
       {
-        "name": "占位导师 40",
-        "background": "院校 / 机构（待提供）",
-        "title": "职称 / 方向（待提供）",
-        "category": "顶尖学者",
-        "img": "",
+        "id": "inst-aca-086",
+        "name": "翁老师",
+        "background": "黑神话悟空",
+        "title": "分集导演",
+        "category": "业界导师",
+        "img": "assets/img/instructors/翁老师.jpg",
+        "photoSource": "instructors/业界导师/翁老师 黑神话悟空 分集导演.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-087",
+        "name": "蒋老师",
+        "background": "中国著名雕塑家",
+        "title": "",
+        "category": "业界导师",
+        "img": "assets/img/instructors/蒋老师.jpg",
+        "photoSource": "instructors/业界导师/蒋老师 中国著名雕塑家.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-088",
+        "name": "蔺老师",
+        "background": "歌华",
+        "title": "设计文创项目打造者",
+        "category": "业界导师",
+        "img": "assets/img/instructors/蔺老师.jpg",
+        "photoSource": "instructors/业界导师/蔺老师 歌华 设计文创项目打造者.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-089",
+        "name": "陆老师",
+        "background": "策展人",
+        "title": "华人第一女策展人",
+        "category": "业界导师",
+        "img": "assets/img/instructors/陆老师.jpg",
+        "photoSource": "instructors/业界导师/陆老师 策展人 华人第一女策展人.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-090",
+        "name": "石院长",
+        "background": "IFIC艺术疗愈研究院院长",
+        "title": "",
+        "category": "业界导师",
+        "img": "assets/img/instructors/石院长 IFIC艺术疗愈研究院院长.jpg",
+        "photoSource": "instructors/业界导师/石院长 IFIC艺术疗愈研究院院长.jpg",
+        "regions": []
+      },
+      {
+        "id": "inst-aca-091",
+        "name": "Weety老师",
+        "background": "JUST FOTO设计负责人",
+        "title": "",
+        "category": "业界导师",
+        "img": "assets/img/instructors/Weety老师 JUST FOTO设计负责人.jpg",
+        "photoSource": "instructors/业界导师/Weety老师 JUST FOTO设计负责人.jpg",
         "regions": []
       }
     ]
@@ -7998,111 +20042,876 @@ window.SFK_DATA = {
     "speedPxPerSec": 47,
     "partners": [
       {
-        "nameEn": "PARTNER NAME 01",
-        "nameCn": "校企名称（待提供）",
-        "logo": "",
-        "intro": "合作内容待提供",
+        "nameEn": "Central Academy of Fine Arts (CAFA)",
+        "nameCn": "中央美术学院",
+        "logo": "assets/img/resources/central-academy-of-fine-arts-cafa.jpg",
+        "intro": "中央美术学院（CAFA）始建于 1918 年，坐落北京，是中国历史悠久的顶尖美术学府，教育部直属双一流高校，立足本土文化，面向国际，持续推动艺术教育、创作与学术研究。",
         "collab": [
-          "合作方向待提供"
+          "冬夏校合作"
         ]
       },
       {
-        "nameEn": "PARTNER NAME 02",
-        "nameCn": "校企名称（待提供）",
-        "logo": "",
-        "intro": "合作内容待提供",
+        "nameEn": "China Academy of Art (CAA)",
+        "nameCn": "中国美术学院",
+        "logo": "assets/img/resources/china-academy-of-art-caa.png",
+        "intro": "中国美术学院（CAA）始建于 1928 年，坐落杭州，教育部直属双一流高校，中国第一所综合性国立高等美术院校，立足东方艺术文脉，持续推动艺术创作、设计创新与跨媒介学术研究，构建开放的国际艺术对话平台。",
         "collab": [
-          "合作方向待提供"
+          "冬夏校合作"
         ]
       },
       {
-        "nameEn": "PARTNER NAME 03",
-        "nameCn": "校企名称（待提供）",
-        "logo": "",
-        "intro": "合作内容待提供",
+        "nameEn": "Guangzhou Academy of Fine Arts (GAFA)",
+        "nameCn": "广州美术学院",
+        "logo": "assets/img/resources/guangzhou-academy-of-fine-arts-gafa.png",
+        "intro": "华南唯一独立建制高等美术学府，1953年创建，立足大湾区",
         "collab": [
-          "合作方向待提供"
+          "艺术精英计划",
+          "就业力实习实训"
         ]
       },
       {
-        "nameEn": "PARTNER NAME 04",
-        "nameCn": "校企名称（待提供）",
-        "logo": "",
-        "intro": "合作内容待提供",
+        "nameEn": "Sichuan Fine Arts Institute (SCFAI)",
+        "nameCn": "四川美术学院",
+        "logo": "assets/img/resources/sichuan-fine-arts-institute-scfai.jpg",
+        "intro": "重庆多科性学术研究型美院，1940年创办，美术学与设计学并重",
         "collab": [
-          "合作方向待提供"
+          "艺术精英计划"
         ]
       },
       {
-        "nameEn": "PARTNER NAME 05",
-        "nameCn": "校企名称（待提供）",
-        "logo": "",
-        "intro": "合作内容待提供",
+        "nameEn": "LuXun Academy of Fine Arts (LAFA)",
+        "nameCn": "鲁迅美术学院",
+        "logo": "assets/img/resources/luxun-academy-of-fine-arts-lafa.png",
+        "intro": "辽宁省属高等美术学府，源于1938年延安鲁艺，新中国美术摇篮",
         "collab": [
-          "合作方向待提供"
+          "艺术精英计划"
         ]
       },
       {
-        "nameEn": "PARTNER NAME 06",
-        "nameCn": "校企名称（待提供）",
-        "logo": "",
-        "intro": "合作内容待提供",
+        "nameEn": "Tianjin Academy of Fine Arts (TAFA)",
+        "nameCn": "天津美术学院",
+        "logo": "assets/img/resources/tianjin-academy-of-fine-arts-tafa.webp",
+        "intro": "独立设置八所美院之一，1906年办学，首设人工智能艺术学院",
         "collab": [
-          "合作方向待提供"
+          "艺术精英计划"
         ]
       },
       {
-        "nameEn": "PARTNER NAME 07",
-        "nameCn": "校企名称（待提供）",
-        "logo": "",
-        "intro": "合作内容待提供",
+        "nameEn": "Hubei Institute of Fine Arts (HIFA)",
+        "nameCn": "湖北美术学院",
+        "logo": "assets/img/resources/hubei-institute-of-fine-arts-hifa.png",
+        "intro": "中部地区唯一独立设置高等美院，源于1920年武昌美术学校",
         "collab": [
-          "合作方向待提供"
+          "艺术精英计划"
         ]
       },
       {
-        "nameEn": "PARTNER NAME 08",
-        "nameCn": "校企名称（待提供）",
+        "nameEn": "Xi’an Academy of Fine Arts (XAFA)",
+        "nameCn": "西安美术学院",
         "logo": "",
-        "intro": "合作内容待提供",
+        "intro": "陕西省属美术高校，1949年建校，突出西部特色与周秦汉唐传统",
         "collab": [
-          "合作方向待提供"
+          "艺术精英计划"
         ]
       },
       {
-        "nameEn": "PARTNER NAME 09",
-        "nameCn": "校企名称（待提供）",
-        "logo": "",
-        "intro": "合作内容待提供",
+        "nameEn": "Nanjing University of the Arts",
+        "nameCn": "南京艺术学院",
+        "logo": "assets/img/resources/nanjing-university-of-the-arts.jpg",
+        "intro": "文旅部与江苏省共建综合性艺术院校，源自1912年上海美专",
         "collab": [
-          "合作方向待提供"
+          "艺术精英计划"
         ]
       },
       {
-        "nameEn": "PARTNER NAME 10",
-        "nameCn": "校企名称（待提供）",
-        "logo": "",
-        "intro": "合作内容待提供",
+        "nameEn": "Communication University of China",
+        "nameCn": "中国传媒大学",
+        "logo": "assets/img/resources/communication-university-of-china.jpg",
+        "intro": "中国传媒大学（CUC）始建于 1954 年，位于北京，教育部直属双一流高校，是国内传媒与视听领域的核心高等学府，立足媒介文化研究，面向全球开展传播、艺术与技术方向的学术探索。",
         "collab": [
-          "合作方向待提供"
+          "冬夏校合作"
         ]
       },
       {
-        "nameEn": "PARTNER NAME 11",
-        "nameCn": "校企名称（待提供）",
-        "logo": "",
-        "intro": "合作内容待提供",
+        "nameEn": "Hong Kong Baptist University",
+        "nameCn": "香港浸会大学",
+        "logo": "assets/img/resources/hong-kong-baptist-university.jpg",
+        "intro": "1956年创校的香港公立大学，全人教育，设艺术与传理等七学院",
         "collab": [
-          "合作方向待提供"
+          "冬夏校合作"
         ]
       },
       {
-        "nameEn": "PARTNER NAME 12",
-        "nameCn": "校企名称（待提供）",
-        "logo": "",
-        "intro": "合作内容待提供",
+        "nameEn": "Royal College of Art (RCA)",
+        "nameCn": "英国皇家艺术学院",
+        "logo": "assets/img/resources/royal-college-of-art-rca.jpg",
+        "intro": "伦敦皇家艺术学院（RCA），全球顶尖全研究生艺术设计学府，常年稳居 QS 艺术设计学科世界首位。",
         "collab": [
-          "合作方向待提供"
+          "冬夏校合作",
+          "海外教授审核",
+          "艺术前沿讯息讲座",
+          "境外项目"
+        ]
+      },
+      {
+        "nameEn": "University of the Arts London (UAL)",
+        "nameCn": "伦敦艺术大学",
+        "logo": "assets/img/resources/university-of-the-arts-london-ual.jpg",
+        "intro": "伦敦艺术大学（UAL）坐落英国伦敦，由六所历史悠久的艺术学院联合组成，是全球顶尖公立创意大学，依托伦敦丰富的文化生态，汇聚全球创意学习者与实践者。",
+        "collab": [
+          "冬夏校合作",
+          "境外项目",
+          "艺术前沿讯息讲座",
+          "海外教授审核"
+        ]
+      },
+      {
+        "nameEn": "The Glasgow School of Art (GSA)",
+        "nameCn": "格拉斯哥艺术学院",
+        "logo": "assets/img/resources/the-glasgow-school-of-art-gsa.jpg",
+        "intro": "1845年创校的英国独立艺术学院，以工作室制实践教学为特色",
+        "collab": [
+          "艺术前沿讯息讲座",
+          "海外教授审核",
+          "境外项目"
+        ]
+      },
+      {
+        "nameEn": "Goldsmiths",
+        "nameCn": "伦敦大学金史密斯学院",
+        "logo": "assets/img/resources/goldsmiths.jpg",
+        "intro": "伦敦大学成员院校，单一校区位于伦敦东南，创意艺术与传媒见长",
+        "collab": [
+          "境外项目",
+          "艺术前沿讯息讲座",
+          "海外教授审核"
+        ]
+      },
+      {
+        "nameEn": "Rhode Island School of Design (RISD)",
+        "nameCn": "罗德岛设计学院",
+        "logo": "assets/img/resources/rhode-island-school-of-design-risd.jpg",
+        "intro": "罗德岛设计学院（RISD）创立于 1877 年，坐落于美国普罗维登斯，是全球极具影响力的顶尖私立艺术学府，拥有深厚的美育底蕴与国际化创意育人体系。",
+        "collab": [
+          "艺术精英计划",
+          "艺术前沿讯息讲座",
+          "境外项目",
+          "海外教授审核"
+        ]
+      },
+      {
+        "nameEn": "School of the Art Institute of Chicago (SAIC)",
+        "nameCn": "芝加哥艺术学院",
+        "logo": "assets/img/resources/school-of-the-art-institute-of-chicago-saic.jpg",
+        "intro": "1866年创校的博物馆附属学院，艺术与设计并重，自主学习",
+        "collab": [
+          "艺术前沿讯息讲座",
+          "海外教授审核"
+        ]
+      },
+      {
+        "nameEn": "ArtCenter College of Design",
+        "nameCn": "艺术中心设计学院",
+        "logo": "assets/img/resources/artcenter-college-of-design.jpg",
+        "intro": "1930年创办的设计学院，以交通工具设计著称，重产学合作",
+        "collab": [
+          "艺术前沿讯息讲座",
+          "海外教授审核"
+        ]
+      },
+      {
+        "nameEn": "Tokyo University of the Arts",
+        "nameCn": "东京艺术大学",
+        "logo": "assets/img/resources/tokyo-university-of-the-arts.jpg",
+        "intro": "1887年创立，日本唯一的国立艺术大学，美术与音乐并重",
+        "collab": [
+          "艺术前沿讯息讲座",
+          "海外教授审核"
+        ]
+      },
+      {
+        "nameEn": "Tama Art University",
+        "nameCn": "多摩美术大学",
+        "logo": "assets/img/resources/tama-art-university.jpg",
+        "intro": "1935年创校的私立美术大学，以“自由与意力”为建学理念",
+        "collab": [
+          "艺术前沿讯息讲座",
+          "海外教授审核"
+        ]
+      },
+      {
+        "nameEn": "Musashino Art University",
+        "nameCn": "武藏野美术大学",
+        "logo": "assets/img/resources/musashino-art-university.jpg",
+        "intro": "1929年创校的私立美术大学，以培养有教养的美术家为宗旨",
+        "collab": [
+          "艺术前沿讯息讲座",
+          "海外教授审核"
+        ]
+      },
+      {
+        "nameEn": "Columbia University",
+        "nameCn": "哥伦比亚大学",
+        "logo": "assets/img/resources/columbia-university.jpg",
+        "intro": "哥伦比亚大学坐落纽约，依托城市丰富的创意生态，在数字艺术、新兴媒介与跨媒体创作领域构建前沿的艺术研究与实践平台，探索技术与艺术融合的创新表达。",
+        "collab": [
+          "艺术前沿讯息讲座",
+          "海外教授审核",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "Brown University",
+        "nameCn": "布朗大学",
+        "logo": "assets/img/resources/brown-university.jpg",
+        "intro": "1764年创办的常春藤研究型大学，以开放式课程体系著称",
+        "collab": [
+          "艺术精英计划",
+          "艺术前沿讯息讲座",
+          "海外教授审核"
+        ]
+      },
+      {
+        "nameEn": "New York University (NYU)",
+        "nameCn": "纽约大学",
+        "logo": "assets/img/resources/new-york-university-nyu.jpg",
+        "intro": "纽约大学（NYU）始建于 1831 年，扎根纽约曼哈顿，是世界顶尖私立综合性研究大学，拥有覆盖全球的校区与学术网络，倡导无边界的国际化治学理念。",
+        "collab": [
+          "艺术精英计划",
+          "艺术前沿讯息讲座",
+          "海外教授审核"
+        ]
+      },
+      {
+        "nameEn": "University of California",
+        "nameCn": "加利福尼亚大学洛杉矶分校",
+        "logo": "assets/img/resources/university-of-california.jpg",
+        "intro": "加利福尼亚大学洛杉矶分校（UCLA），美国顶尖公立常春藤研究型大学，坐落洛杉矶西木区，其艺术与建筑学院、戏剧电影电视学院享誉全球，依托好莱坞区位优势深耕跨媒介创意与前沿设计研究。",
+        "collab": [
+          "艺术前沿讯息讲座",
+          "海外教授审核"
+        ]
+      },
+      {
+        "nameEn": "Stanford University",
+        "nameCn": "斯坦福大学",
+        "logo": "assets/img/resources/stanford-university.jpg",
+        "intro": "斯坦福大学（Stanford University）于 1891 年正式开学，坐落美国加州硅谷腹地，是全球顶尖私立研究型大学，秉持自由探索的治学精神，融合学术研究与创新实践，持续推动跨领域知识突破。",
+        "collab": [
+          "艺术前沿讯息讲座",
+          "海外教授审核"
+        ]
+      },
+      {
+        "nameEn": "University of Oxford",
+        "nameCn": "牛津大学",
+        "logo": "assets/img/resources/university-of-oxford.jpg",
+        "intro": "英语世界最古老的大学，书院制研究型大学，重导师小班教学",
+        "collab": [
+          "境外项目",
+          "艺术前沿讯息讲座",
+          "海外教授审核",
+          "海外大师课",
+          "冬夏校合作"
+        ]
+      },
+      {
+        "nameEn": "University College London (UCL)",
+        "nameCn": "伦敦大学学院",
+        "logo": "assets/img/resources/university-college-london-ucl.jpg",
+        "intro": "伦敦大学学院（UCL），1826 年建校于伦敦，世界顶尖的综合性研究学府，也是英国 G5 超级精英大学之一。",
+        "collab": [
+          "冬夏校合作",
+          "海外大师课",
+          "艺术前沿讯息讲座",
+          "海外教授审核"
+        ]
+      },
+      {
+        "nameEn": "University of Edinburgh",
+        "nameCn": "爱丁堡大学",
+        "logo": "assets/img/resources/university-of-edinburgh.jpg",
+        "intro": "1583年创立的苏格兰古典大学，英国第六古老，学科齐全",
+        "collab": [
+          "艺术前沿讯息讲座",
+          "海外教授审核"
+        ]
+      },
+      {
+        "nameEn": "Peking University",
+        "nameCn": "北京大学",
+        "logo": "assets/img/resources/peking-university.jpg",
+        "intro": "1898年创立于北京，前身为京师大学堂，国立综合性大学",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "Academy of\n  Arts & Design",
+        "nameCn": "清华大学美术学院",
+        "logo": "assets/img/resources/academy-of-arts-and-design.jpg",
+        "intro": "清华大学下属艺术设计学院，以艺科融合为办学与教育特色",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "The Chinese University of Hong Kong (CUHK)",
+        "nameCn": "香港中文大学",
+        "logo": "assets/img/resources/the-chinese-university-of-hong-kong-cuhk.jpg",
+        "intro": "1963年创校的研究型综合大学，以书院制和中英兼重为特色",
+        "collab": [
+          "艺术精英计划",
+          "艺术前沿讯息讲座"
+        ]
+      },
+      {
+        "nameEn": "The Palace Museum",
+        "nameCn": "故宫博物院",
+        "logo": "assets/img/resources/the-palace-museum.jpg",
+        "intro": "1925年成立于明清皇宫，以清宫旧藏为基础的综合性博物馆",
+        "collab": [
+          "商业实践课程",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "Suzhou Museum",
+        "nameCn": "苏州博物馆",
+        "logo": "assets/img/resources/suzhou-museum.png",
+        "intro": "1960年建馆的苏州地方综合性博物馆，新馆由贝聿铭设计",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "Shenzhen Art Museum",
+        "nameCn": "深圳美术馆",
+        "logo": "assets/img/resources/shenzhen-art-museum.jpg",
+        "intro": "深圳最早的艺术品展览机构，学术方向立足本土、面向世界",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "Zhejiang Provincial Museum",
+        "nameCn": "浙江省博物馆",
+        "logo": "",
+        "intro": "1929年创建，浙江省规模最大的综合性人文科学博物馆",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "Power Station of Art (PSA)",
+        "nameCn": "上海当代艺术博物馆",
+        "logo": "assets/img/resources/power-station-of-art-psa.jpg",
+        "intro": "中国大陆首家国有当代艺术博物馆，亦为上海双年展主场馆",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "National Art Museum of China (NAMOC)",
+        "nameCn": "中国美术馆",
+        "logo": "assets/img/resources/national-art-museum-of-china-namoc.jpg",
+        "intro": "国家造型艺术博物馆，以收藏展示中国近现代至当代美术为重点",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "Tsinghua University Art Museum (TAM)",
+        "nameCn": "清华大学艺术博物馆",
+        "logo": "assets/img/resources/tsinghua-university-art-museum-tam.jpg",
+        "intro": "2016年开馆，以清华美院旧藏为基础的高校艺术博物馆",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "Suzhou Jinji Lake Art Museum",
+        "nameCn": "苏州金鸡湖美术馆",
+        "logo": "assets/img/resources/suzhou-jinji-lake-art-museum.png",
+        "intro": "2012年开馆的公益性美术馆，以当代艺术研究与展示为主",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "West Bund Museum",
+        "nameCn": "西岸美术馆",
+        "logo": "assets/img/resources/west-bund-museum.jpg",
+        "intro": "2019年开放，与法国蓬皮杜中心五年展陈合作的文化场馆",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "Ullens Center for Contemporary Art (UCCA)",
+        "nameCn": "UCCA尤伦斯当代艺术中心",
+        "logo": "assets/img/resources/ullens-center-for-contemporary-art-ucca.jpg",
+        "intro": "2007年创建于北京798艺术区的非营利当代艺术机构",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "Museum of Art Pudong (MAP)",
+        "nameCn": "浦东美术馆",
+        "logo": "assets/img/resources/museum-of-art-pudong-map.jpg",
+        "intro": "2021年开放的浦东滨江美术馆，以国际艺术展示交流为主",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "Long Museum",
+        "nameCn": "龙美术馆",
+        "logo": "assets/img/resources/long-museum.jpg",
+        "intro": "刘益谦王薇夫妇创办的私立美术馆，古今中西艺术对比研究展示",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "PIFO Gallery",
+        "nameCn": "偏锋画廊",
+        "logo": "assets/img/resources/pifo-gallery.jpg",
+        "intro": "2006年创办的北京798画廊，专注抽象艺术与具象绘画",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "Hive Center for Contemporary Art",
+        "nameCn": "蜂巢当代艺术中心",
+        "logo": "assets/img/resources/hive-center-for-contemporary-art.jpg",
+        "intro": "北京798当代艺术机构，蜂巢·生成项目扶持年轻艺术家创作",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "Platform China",
+        "nameCn": "站台中国",
+        "logo": "assets/img/resources/platform-china.jpg",
+        "intro": "北京798当代艺术机构，2005年创办，具实验性与开放性",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "Guardian Art Center",
+        "nameCn": "嘉德艺术中心",
+        "logo": "assets/img/resources/guardian-art-center.jpg",
+        "intro": "2017年运营的王府井艺术综合体，集会展、拍卖、仓储、酒店",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "Today Art Museum",
+        "nameCn": "今日美术馆",
+        "logo": "assets/img/resources/today-art-museum.png",
+        "intro": "今日美术馆，2002 年成立于北京，中国首家民营非营利当代美术馆，致力于当代艺术研究与国际文化对话。",
+        "collab": [
+          "商业实践课程",
+          "冬夏校合作",
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "Vanities Gallery",
+        "nameCn": "虚荣画廊",
+        "logo": "assets/img/resources/vanities-gallery.jpeg",
+        "intro": "法中当代艺术画廊，总部设于巴黎，致力于亚欧艺术交流与推广",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "MadeIn Gallery",
+        "nameCn": "没顶画廊",
+        "logo": "assets/img/resources/madein-gallery.jpg",
+        "intro": "上海当代艺术画廊，2014年由没顶公司创办，推广当代艺术",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "ShanghART Gallery",
+        "nameCn": "香格纳画廊",
+        "logo": "assets/img/resources/shanghart-gallery.jpg",
+        "intro": "上海当代艺术画廊，1996年创办，专注中国当代艺术与推广",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "Pace Gallery",
+        "nameCn": "佩斯画廊",
+        "logo": "assets/img/resources/pace-gallery.jpg",
+        "intro": "1960年创立的全球现当代艺术画廊，代理约八十位艺术家",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "Contemporary Tokyo",
+        "nameCn": "当代东京",
+        "logo": "assets/img/resources/contemporary-tokyo.jpg",
+        "intro": "东京当代艺术机构，深耕日本当代艺术二十余年，涉版权授权",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "Red Brick Art Museum",
+        "nameCn": "红砖美术馆",
+        "logo": "assets/img/resources/red-brick-art-museum.jpg",
+        "intro": "红砖美术馆（Red Brick Art Museum），由董豫赣设计的北京当代艺术美术馆，以中式园林与红砖建筑为空间特色，专注当代艺术、新媒体与跨媒介展览实践。",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "Tang Contemporary Art",
+        "nameCn": "当代唐人艺术中心",
+        "logo": "assets/img/resources/tang-contemporary-art.jpg",
+        "intro": "1997年创立于曼谷的当代艺术机构，推动亚洲与国际艺术交流",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "White Cube",
+        "nameCn": "白立方",
+        "logo": "assets/img/resources/white-cube.jpg",
+        "intro": "1993年创立于伦敦的当代艺术画廊，代理国际艺术家及遗产",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "Sotheby's",
+        "nameCn": "苏富比",
+        "logo": "assets/img/resources/sotheby-s.jpg",
+        "intro": "1744年创立于伦敦的国际艺术拍卖行，全球网络与多品类拍卖",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "China Guardian Auctions",
+        "nameCn": "中国嘉德",
+        "logo": "assets/img/resources/china-guardian-auctions.jpg",
+        "intro": "创立于1993年的综合性拍卖公司，全品类中国文物艺术品拍卖",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "Christie's",
+        "nameCn": "佳士得",
+        "logo": "assets/img/resources/christie-s.jpg",
+        "intro": "1766年创立的国际拍卖行，覆盖八十余类艺术与奢侈品拍卖",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "Rong Bao Zhai",
+        "nameCn": "荣宝斋",
+        "logo": "assets/img/resources/rong-bao-zhai.jpg",
+        "intro": "1672年创立的中华老字号文化企业，兼营书画经营与木版水印",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "CUPPAR Auction",
+        "nameCn": "开拍国际拍卖",
+        "logo": "assets/img/resources/cuppar-auction.jpg",
+        "intro": "2020年成立的文物艺术品拍卖公司，秉持年轻专业国际化理念",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "Holly's Auctions",
+        "nameCn": "华艺国际",
+        "logo": "assets/img/resources/holly-s-auctions.jpeg",
+        "intro": "1993年创立于广州的拍卖企业，涵盖书画瓷杂现当代等门类",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "Sungari International Auction",
+        "nameCn": "中贸圣佳国际拍卖",
+        "logo": "assets/img/resources/sungari-international-auction.jpeg",
+        "intro": "1995年创立、立足北京的拍卖行，涵盖书画古籍善本瓷杂",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "Yongle Auction",
+        "nameCn": "永乐拍卖",
+        "logo": "assets/img/resources/yongle-auction.jpeg",
+        "intro": "2005年始建，具一类文物拍卖资质，涵盖书画古董现当代艺术",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "Shanghai Mission Auction (Mingxuan)",
+        "nameCn": "上海明轩拍卖",
+        "logo": "assets/img/resources/shanghai-mission-auction-mingxuan.jpg",
+        "intro": "2013年创立于上海的拍卖行，专注中国传统书画的收藏与拍卖",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "Poly Auction",
+        "nameCn": "保利拍卖",
+        "logo": "assets/img/resources/poly-auction.jpg",
+        "intro": "2005年成立的保利集团旗下拍卖平台，多门类中国艺术品拍卖",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "ART021 Shanghai Contemporary Art Fair",
+        "nameCn": "上海廿一当代艺术博览会",
+        "logo": "assets/img/resources/art021-shanghai-contemporary-art-fair.jpg",
+        "intro": "2013年创办于上海的当代艺术博览会，汇集全球画廊与机构",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "Art Basel",
+        "nameCn": "巴塞尔艺术展",
+        "logo": "assets/img/resources/art-basel.jpg",
+        "intro": "1970年创立的国际艺术展会，设巴塞尔香港巴黎迈阿密四站",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "ART SHENZHEN",
+        "nameCn": "艺术深圳",
+        "logo": "assets/img/resources/art-shenzhen.jpg",
+        "intro": "2013年创办的当代艺博会，文博会重点项目，秉持全球视野",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "ART BEIJING",
+        "nameCn": "北京当代",
+        "logo": "assets/img/resources/art-beijing.png",
+        "intro": "2018年创办的当代艺术博览会，设多元单元，联动北京艺术季",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训",
+          "商业实践课程"
+        ]
+      },
+      {
+        "nameEn": "West Bund Art\n  & Design",
+        "nameCn": "西岸艺术与设计博览会",
+        "logo": "assets/img/resources/west-bund-art-and-design.jpg",
+        "intro": "2014年创办于上海的艺术设计博览会，多馆联动呈现当代艺术",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "Shenzhen International Art Fair",
+        "nameCn": "深圳国际艺术博览会",
+        "logo": "assets/img/resources/shenzhen-international-art-fair.jpg",
+        "intro": "2012年创办的深圳首个大型原创艺术博览会，邀全球画廊参展",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "Artron",
+        "nameCn": "雅昌艺术网",
+        "logo": "assets/img/resources/artron.jpeg",
+        "intro": "中国艺术品资讯门户，2000年创办，发布AMI市场指数",
+        "collab": [
+          "艺术精英计划",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "Shenzhen Illustration Association (SIA)",
+        "nameCn": "深圳市插画协会",
+        "logo": "",
+        "intro": "2007年成立的首家插画行业协会，长期主办CIB双年展",
+        "collab": [
+          "商业实践课程",
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "Beijing International Book Fair (BIBF)",
+        "nameCn": "北京国际图书博览会",
+        "logo": "assets/img/resources/beijing-international-book-fair-bibf.jpg",
+        "intro": "1986年创办的国际书展，从事版权贸易与出版物进出口贸易",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "UNESCO",
+        "nameCn": "联合国教科文组织",
+        "logo": "assets/img/resources/unesco.jpg",
+        "intro": "1945年成立的联合国专门机构，教科文领域推动世界遗产保护",
+        "collab": [
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "International Centre for Engineering Education (ICEE)",
+        "nameCn": "国际工程教育中心",
+        "logo": "assets/img/resources/international-centre-for-engineering-education-icee.png",
+        "intro": "教科文二类机构，2016年成立，中国工程院与清华大学共建",
+        "collab": [
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "POP MART",
+        "nameCn": "泡泡玛特",
+        "logo": "assets/img/resources/pop-mart.jpg",
+        "intro": "POP MART 泡泡玛特，国内头部潮流文化娱乐集团，深耕潮玩 IP 孵化、艺术家合作与潮玩零售，推动潮流玩具、数字收藏与青年消费文化创意生态。",
+        "collab": [
+          "就业力实习实训",
+          "商业实践课程",
+          "冬夏校合作"
+        ]
+      },
+      {
+        "nameEn": "JUST.FOTO",
+        "nameCn": "大头贴",
+        "logo": "assets/img/resources/just-foto.png",
+        "intro": "自助大头贴设备品牌，运营智能自拍系统，常推IP联名相框",
+        "collab": [
+          "冬夏校合作",
+          "商业实践课程",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "Alor Valley",
+        "nameCn": "十里芳菲",
+        "logo": "assets/img/resources/alor-valley.jpg",
+        "intro": "十里芳菲（Shilifangfei），沉浸式乡村文旅品牌，依托自然村落打造体验空间，以场景美学、在地文化，探索文旅空间的沉浸式体验设计。",
+        "collab": [
+          "冬夏校合作",
+          "商业实践课程",
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "Brand Bigger",
+        "nameCn": "BIGGER 艺术书展",
+        "logo": "assets/img/resources/brand-bigger.jpg",
+        "intro": "由善本文化2021年创办的艺术出版交流平台，推广艺术书展",
+        "collab": [
+          "商业实践课程",
+          "就业力实习实训"
+        ]
+      },
+      {
+        "nameEn": "K11",
+        "nameCn": "K11",
+        "logo": "assets/img/resources/k11.jpg",
+        "intro": "新世界发展旗下购物艺术馆，2009年首创，融艺术人文自然",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "Dragon TV",
+        "nameCn": "东方卫视",
+        "logo": "assets/img/resources/dragon-tv.jpg",
+        "intro": "2003年开播的上星综合频道，SMG旗下，新闻综艺并重",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "Deji Group",
+        "nameCn": "德基集团",
+        "logo": "assets/img/resources/deji-group.jpg",
+        "intro": "2000年成立的南京企业，主营高端商业综合体与文化产业",
+        "collab": [
+          "就业力实习实训",
+          "艺术精英计划"
+        ]
+      },
+      {
+        "nameEn": "Art Healing Research Institute (IFIC)",
+        "nameCn": "艺术疗愈研究院",
+        "logo": "assets/img/resources/art-healing-research-institute-ific.jpg",
+        "intro": "艺术疗愈领域研究教育机构，举办IFIC国际艺术疗愈双年展",
+        "collab": [
+          "商业实践课程",
+          "就业力实习实训",
+          "艺术精英计划"
         ]
       }
     ]

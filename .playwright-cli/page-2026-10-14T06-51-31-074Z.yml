@@ -1,0 +1,50 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "Art & Humanities 艺术人文科系 Art & Humanities 艺术人文科系" [ref=e4] [cursor=pointer]:
+      - /url: "#/home"
+      - img "Art & Humanities 艺术人文科系" [ref=e5]
+      - generic [ref=e6]:
+        - generic [ref=e7]: Art & Humanities
+        - generic [ref=e8]: 艺术人文科系
+    - generic [ref=e9]:
+      - button "主要内容" [ref=e11] [cursor=pointer]
+      - link "规划我的未来" [ref=e14] [cursor=pointer]:
+        - /url: "#/employment"
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - text: SFK · 艺术人文科系 ·
+        - generic [ref=e18]: Cases
+      - heading "作品集" [level=1] [ref=e19]
+      - paragraph [ref=e20]: 真正决定这些年轻人去向的，从来不是分数、国别与课程标签，而是他们如何以独有的目光审视世界，把成长里的困惑、眷恋与追问，淬炼成有温度、有思想密度的作品——这正是艺术与人文区别于一切标准化评价的气质与厚度。
+    - generic [ref=e23]:
+      - generic [ref=e24]: GALLERY
+      - heading "学生案例" [level=2] [ref=e25]
+      - paragraph [ref=e26]: 从插画与纯艺术两条申请主线出发，逐条拆解每位学员的院校背景、课程体系、学术与语言成绩、作品集研究方向与最终录取结果。案例覆盖英国、美国、加拿大、澳洲四个申请地区，既有 UAL、RISD 等艺术名校，也有 牛津、UCL、布朗、达特茅斯等综合性大学。
+  - contentinfo [ref=e29]:
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]: SFK 艺术人文科系
+        - paragraph [ref=e34]: 插画 × 纯艺术 · 本科爬藤与升学就业规划
+      - heading "主要内容" [level=3] [ref=e36]
+      - generic [ref=e37]:
+        - heading "科系板块" [level=3] [ref=e38]
+        - link "关于艺术人文" [ref=e39] [cursor=pointer]:
+          - /url: "#/home"
+        - link "OFFER成果" [ref=e40] [cursor=pointer]:
+          - /url: "#/home/offers"
+        - link "导师团队" [ref=e41] [cursor=pointer]:
+          - /url: "#/home/instructors"
+        - link "校企资源" [ref=e42] [cursor=pointer]:
+          - /url: "#/home/resources"
+        - link "成长时间轴" [ref=e43] [cursor=pointer]:
+          - /url: "#/home/timeline"
+        - link "课程产品" [ref=e44] [cursor=pointer]:
+          - /url: "#/home/courses"
+      - generic [ref=e45]:
+        - heading "规划咨询" [level=3] [ref=e46]
+        - link "admissions@sfk-edu.demo" [ref=e47] [cursor=pointer]:
+          - /url: mailto:admissions@sfk-edu.demo
+        - link "400-000-0000" [ref=e48] [cursor=pointer]:
+          - /url: tel:400-000-0000
+    - generic [ref=e49]: © 2026 SFK 艺术人文科系 · 本页面为课程与案例演示站点，数据仅供展示

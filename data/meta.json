@@ -10,7 +10,7 @@
         "_restore": "恢复机制：①把下列条目移回上方 items；②移除 index.html 中 view-fulltime / view-graduate 的 hidden 属性；③把 fulltime.html / graduate.html 的跳转目标改回各自 hash",
         "items": [
           { "id": "undergraduate", "label": "本科爬藤", "href": "#/undergraduate", "note": "已整体迁移至 overlay.primary 第 4 项（目录页 04）" },
-          { "id": "fulltime", "label": "全日制", "href": "#/fulltime" },
+          { "id": "fulltime", "label": "全日制", "href": "#/fulltime", "note": "目录页 overlay.primary 第 5 项已放置占位（内容即将上线），内容就位后去掉该项 placeholder 并恢复 view-fulltime" },
           { "id": "graduate", "label": "研究生", "href": "#/graduate" }
         ]
       }
@@ -30,7 +30,8 @@
         { "id": "cases", "label": "学生案例", "href": "#/cases" },
         { "id": "timeline", "label": "成长时间轴", "href": "#/home/timeline" },
         { "id": "courses", "label": "课程产品", "href": "#/home/courses" },
-        { "id": "undergraduate", "label": "本科爬藤", "href": "#/undergraduate" }
+        { "id": "undergraduate", "label": "本科爬藤", "href": "#/undergraduate" },
+        { "id": "fulltime", "label": "全日制", "href": "#/fulltime", "placeholder": true, "placeholderNote": "内容即将上线" }
       ],
       "secondary": [
         { "id": "intro", "label": "关于艺术人文", "href": "#/home" },

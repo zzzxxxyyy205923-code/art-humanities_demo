@@ -1,0 +1,6 @@
+[     147ms] TypeError: this.multiBtns is not a function
+    at Object.renderFilters (http://localhost:8850/assets/js/main.js?v=20261014d:2462:36)
+    at Object.build (http://localhost:8850/assets/js/main.js?v=20261014d:2376:10)
+    at Object.cases (http://localhost:8850/assets/js/main.js?v=20261014d:540:23)
+    at Object.apply (http://localhost:8850/assets/js/main.js?v=20261014d:112:56)
+    at http://localhost:8850/assets/js/main.js?v=20261014d:3396:10

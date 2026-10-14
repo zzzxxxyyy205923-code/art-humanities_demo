@@ -203,17 +203,17 @@
         "kind": "gallery",
         "items": [
           {
-            "img": "assets/img/directions/placeholder-project.svg",
+            "img": "assets/img/directions/品牌视觉系统.JPG",
             "t": "品牌视觉系统",
             "d": "Logo、字体、色彩、辅助图形和品牌应用。"
           },
           {
-            "img": "assets/img/directions/placeholder-project.svg",
+            "img": "assets/img/directions/商业插画联名.JPG",
             "t": "商业插画联名",
             "d": "为品牌、包装、活动或文创产品提供图像内容。"
           },
           {
-            "img": "assets/img/directions/placeholder-project.svg",
+            "img": "assets/img/directions/AIGC创意提案.JPG",
             "t": "AIGC创意提案",
             "d": "用AI生成风格方向、场景图和视觉传播方案。"
           }
@@ -282,7 +282,8 @@
     ],
     "summary": {
       "text": "「 商业视觉与品牌设计，是艺术人文学生从个人审美走向商业项目的关键路径 」"
-    }
+    },
+    "hero": "assets/img/directions/hero-brand.jpg"
   },
   "ip": {
     "id": "ip",
@@ -488,17 +489,17 @@
         "kind": "gallery",
         "items": [
           {
-            "img": "assets/img/directions/placeholder-project.svg",
+            "img": "assets/img/directions/原创IP角色项目.JPG",
             "t": "原创IP角色项目",
             "d": "角色设定、世界观、表情系统、角色故事和视觉应用规范。"
           },
           {
-            "img": "assets/img/directions/placeholder-project.svg",
+            "img": "assets/img/directions/潮玩盲盒设计.JPG",
             "t": "潮玩/盲盒设计",
             "d": "角色三视图、产品草图、材质设定、包装和系列化方案。"
           },
           {
-            "img": "assets/img/directions/placeholder-project.svg",
+            "img": "assets/img/directions/个人IP运营项目.JPG",
             "t": "个人IP运营项目",
             "d": "作品账号、产品样机、社群互动和销售场景。"
           }
@@ -570,7 +571,8 @@
     ],
     "summary": {
       "text": "「 潮流IP与文创衍生开发，是艺术人文学生把个人风格发展为商业资产的重要路径 」"
-    }
+    },
+    "hero": "assets/img/directions/hero-ip.jpg"
   },
   "gallery": {
     "id": "gallery",
@@ -778,17 +780,17 @@
         "kind": "gallery",
         "items": [
           {
-            "img": "assets/img/directions/placeholder-project.svg",
+            "img": "assets/img/directions/画廊群展执行.JPG",
             "t": "画廊群展执行",
             "d": "从艺术家沟通、作品清单、布展执行到开幕传播。"
           },
           {
-            "img": "assets/img/directions/placeholder-project.svg",
+            "img": "assets/img/directions/艺术家个展研究.JPG",
             "t": "艺术家个展研究",
             "d": "围绕创作脉络，完成展览文本、作品解读和传播内容。"
           },
           {
-            "img": "assets/img/directions/placeholder-project.svg",
+            "img": "assets/img/directions/艺博会展位项目.JPG",
             "t": "艺博会展位项目",
             "d": "参与作品筛选、展位视觉、客户接待和现场运营。"
           }
@@ -858,7 +860,8 @@
     ],
     "summary": {
       "text": "「 当代艺术生态与画廊运营，是艺术人文学生从“理解作品”走向“进入艺术现场”的核心路径 」"
-    }
+    },
+    "hero": "assets/img/directions/hero-gallery.jpg"
   },
   "curation": {
     "id": "curation",
@@ -1066,17 +1069,17 @@
         "kind": "gallery",
         "items": [
           {
-            "img": "assets/img/directions/placeholder-project.svg",
+            "img": "assets/img/directions/美术馆主题展.JPG",
             "t": "美术馆主题展",
             "d": "完成艺术家研究、作品选择、策展文本、空间动线与公教设计。"
           },
           {
-            "img": "assets/img/directions/placeholder-project.svg",
+            "img": "assets/img/directions/商业与品牌策展.JPG",
             "t": "商业与品牌策展",
             "d": "将品牌文化、产品故事与艺术内容结合，形成可传播体验。"
           },
           {
-            "img": "assets/img/directions/placeholder-project.svg",
+            "img": "assets/img/directions/公共文化与文旅.JPG",
             "t": "公共文化与文旅",
             "d": "把城市、地方文化与非遗转化为当代展览叙事。"
           }
@@ -1141,7 +1144,8 @@
     ],
     "summary": {
       "text": "「 从议题研究到空间现场，把艺术观点转化为观众能够进入、理解与传播的体验 」"
-    }
+    },
+    "hero": "assets/img/directions/hero-curation.jpg"
   },
   "education": {
     "id": "education",
@@ -1351,17 +1355,17 @@
         "kind": "gallery",
         "items": [
           {
-            "img": "assets/img/directions/placeholder-project.svg",
+            "img": "assets/img/directions/主题艺术课程.JPG",
             "t": "主题艺术课程",
             "d": "围绕身份、城市、生态与记忆，完成研究、创作和成果展示。"
           },
           {
-            "img": "assets/img/directions/placeholder-project.svg",
+            "img": "assets/img/directions/美术馆公共教育.JPG",
             "t": "美术馆公共教育",
             "d": "根据展览内容设计导览、工作坊、教育手册与公众活动。"
           },
           {
-            "img": "assets/img/directions/placeholder-project.svg",
+            "img": "assets/img/directions/跨学科数字美育.JPG",
             "t": "跨学科与数字美育",
             "d": "选择心理、社会、科技与公共文化，形成研究型课程内容。"
           }
@@ -1428,7 +1432,8 @@
     ],
     "summary": {
       "text": "「 把艺术知识转化为可学习、可体验、可持续传播的教育内容，让专业能力形成教学影响力与学术价值 」"
-    }
+    },
+    "hero": "assets/img/directions/hero-education.jpg"
   },
   "public": {
     "id": "public",
@@ -1638,17 +1643,17 @@
         "kind": "gallery",
         "items": [
           {
-            "img": "assets/img/directions/placeholder-project.svg",
+            "img": "assets/img/directions/城市文化节与公共艺术.JPG",
             "t": "城市文化节与公共艺术",
             "d": "围绕地方文化策划展览、论坛、公共艺术和城市传播活动。"
           },
           {
-            "img": "assets/img/directions/placeholder-project.svg",
+            "img": "assets/img/directions/博物馆公教与研学.JPG",
             "t": "博物馆公教与研学",
             "d": "将馆藏与展览转化为导览、课程、工作坊和研学路线。"
           },
           {
-            "img": "assets/img/directions/placeholder-project.svg",
+            "img": "assets/img/directions/非遗活动与文创开发.JPG",
             "t": "非遗活化与文创开发",
             "d": "完成文化研究、传承人访谈、产品设计与传播方案。"
           }
@@ -1718,7 +1723,8 @@
     ],
     "summary": {
       "text": "「 把艺术人文能力转化为城市文化策划、公共项目执行与社会文化服务，让学生既能理解文化，也能进入真实的公共文化现场 」"
-    }
+    },
+    "hero": "assets/img/directions/hero-public.png"
   },
   "artist": {
     "id": "artist",
@@ -1928,17 +1934,17 @@
         "kind": "gallery",
         "items": [
           {
-            "img": "assets/img/directions/placeholder-project.svg",
+            "img": "assets/img/directions/系列创作与个展计划.JPG",
             "t": "系列创作与个展计划",
             "d": "完成系列作品、艺术家陈述、展览效果图、作品清单与个展提案。"
           },
           {
-            "img": "assets/img/directions/placeholder-project.svg",
+            "img": "assets/img/directions/驻留研究与在地实践.JPG",
             "t": "驻留研究与在地实践",
             "d": "通过田野调查形成研究档案、驻留日志、在地作品与公共展示。"
           },
           {
-            "img": "assets/img/directions/placeholder-project.svg",
+            "img": "assets/img/directions/公共艺术与品牌合作.JPG",
             "t": "公共艺术与品牌合作",
             "d": "产出商业提案、效果图、制作方案、落地作品与传播复盘。"
           }
@@ -2013,7 +2019,8 @@
     ],
     "summary": {
       "text": "「 持续建立“艺术语言、作品体系、专业履历、行业关系与经营能力”，让个人创作从作品集走向展览、收藏、委托与长期艺术事业 」"
-    }
+    },
+    "hero": "assets/img/directions/hero-artist.jpg"
   },
   "therapy": {
     "id": "therapy",

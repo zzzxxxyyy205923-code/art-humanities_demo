@@ -1,0 +1,513 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "Art & Humanities 艺术人文科系 Art & Humanities 艺术人文科系" [ref=e4] [cursor=pointer]:
+      - /url: "#/home"
+      - img "Art & Humanities 艺术人文科系" [ref=e5]
+      - generic [ref=e6]:
+        - generic [ref=e7]: Art & Humanities
+        - generic [ref=e8]: 艺术人文科系
+    - generic [ref=e9]:
+      - button "主要内容" [ref=e11] [cursor=pointer]
+      - link "规划我的未来" [ref=e14] [cursor=pointer]:
+        - /url: "#/employment"
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - text: SFK · 艺术人文科系 ·
+        - generic [ref=e18]: Cases
+      - heading "作品集" [level=1] [ref=e19]
+      - paragraph [ref=e20]: 真正决定这些年轻人去向的，从来不是分数、国别与课程标签，而是他们如何以独有的目光审视世界，把成长里的困惑、眷恋与追问，淬炼成有温度、有思想密度的作品——这正是艺术与人文区别于一切标准化评价的气质与厚度。
+    - generic [ref=e23]:
+      - figure [ref=e24]
+      - figure [ref=e25]
+      - figure [ref=e26]
+      - figure [ref=e27]
+      - figure [ref=e28]
+      - figure [ref=e29]
+      - figure [ref=e30]
+      - figure [ref=e31]
+      - figure [ref=e32]
+      - figure [ref=e33]
+      - figure [ref=e34]
+      - figure [ref=e35]
+      - figure [ref=e36]
+      - figure [ref=e37]
+      - figure [ref=e38]
+      - figure [ref=e39]
+      - figure [ref=e40]
+      - figure [ref=e41]
+      - figure [ref=e42]
+      - figure [ref=e43]
+      - figure [ref=e44]
+      - figure [ref=e45]
+      - figure [ref=e46]
+      - figure [ref=e47]
+      - figure [ref=e48]
+      - figure [ref=e49]
+      - figure [ref=e50]
+      - figure [ref=e51]
+      - figure [ref=e52]
+      - figure [ref=e53]
+      - figure [ref=e54]
+      - figure [ref=e55]
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - generic [ref=e58]: GALLERY
+        - heading "学生案例" [level=2] [ref=e59]
+        - paragraph [ref=e60]: 从插画与纯艺术两条申请主线出发，逐条拆解每位学员的院校背景、课程体系、学术与语言成绩、作品集研究方向与最终录取结果。案例覆盖英国、美国、加拿大、澳洲四个申请地区，既有 UAL、RISD 等艺术名校，也有 牛津、UCL、布朗、达特茅斯等综合性大学。
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - generic "本科 = offerType 含「本科/大二」；研究生 = 含「研究生/硕士」。当前 24 条案例均为本科录取，研究生维度待真实数据就位后自动生效。" [ref=e63]: 申请维度 DIMENSION
+          - generic [aria-hidden] [ref=e64]: "|"
+          - generic [ref=e65]:
+            - button "本科24" [pressed] [ref=e66] [cursor=pointer]
+            - button "研究生0" [ref=e67] [cursor=pointer]
+        - generic [ref=e68]:
+          - generic [ref=e69]: 专业方向 MAJOR
+          - generic [aria-hidden] [ref=e70]: "|"
+          - generic [ref=e71]:
+            - button "全部24" [pressed] [ref=e72] [cursor=pointer]
+            - button "插画14" [ref=e73] [cursor=pointer]
+            - button "纯艺术7" [ref=e74] [cursor=pointer]
+            - button "插画 / 纯艺术3" [ref=e75] [cursor=pointer]
+        - generic [ref=e76]:
+          - generic [ref=e77]: 申请国家 COUNTRY
+          - generic [aria-hidden] [ref=e78]: "|"
+          - generic [ref=e79]:
+            - button "全部24" [pressed] [ref=e80] [cursor=pointer]
+            - button "英国16" [ref=e81] [cursor=pointer]
+            - button "美国5" [ref=e82] [cursor=pointer]
+            - button "加拿大1" [ref=e83] [cursor=pointer]
+            - button "澳洲2" [ref=e84] [cursor=pointer]
+      - generic [ref=e85]:
+        - text: 共
+        - generic [ref=e86]: "24"
+        - text: 个案例 · 全部
+        - generic [ref=e87]: "24"
+        - text: 个
+      - generic [ref=e88]:
+        - button "插画 · 本科直录 林同学 Lin. 伦敦艺术大学 UAL University of the Arts London BA Illustration · 插画 厦门国际高中 · 国际学校背景 时间紧迫 目标高 一年制冲刺" [ref=e89] [cursor=pointer]:
+          - generic [ref=e90]:
+            - generic [ref=e91]: 插画 · 本科直录
+            - generic [ref=e92]:
+              - text: 林同学
+              - generic [ref=e93]: Lin.
+          - generic [ref=e94]:
+            - generic [ref=e95]: 伦敦艺术大学 UAL
+            - generic [ref=e96]: University of the Arts London
+          - generic [ref=e97]:
+            - generic [ref=e98]: BA Illustration
+            - text: · 插画
+          - generic [ref=e99]: 厦门国际高中 · 国际学校背景
+          - generic [ref=e100]:
+            - generic [ref=e101]: 时间紧迫
+            - generic [ref=e102]: 目标高
+            - generic [ref=e103]: 一年制冲刺
+        - button "插画 · 大二直录 管同学 Guan. 爱丁堡大学 The University of Edinburgh BA Illustration（大二直录） · 插画 普高脱产 · SFK 全日制 非国际背景 想去综校 两年规划" [ref=e104] [cursor=pointer]:
+          - generic [ref=e105]:
+            - generic [ref=e106]: 插画 · 大二直录
+            - generic [ref=e107]:
+              - text: 管同学
+              - generic [ref=e108]: Guan.
+          - generic [ref=e109]:
+            - generic [ref=e110]: 爱丁堡大学
+            - generic [ref=e111]: The University of Edinburgh
+          - generic [ref=e112]:
+            - generic [ref=e113]: BA Illustration（大二直录）
+            - text: · 插画
+          - generic [ref=e114]: 普高脱产 · SFK 全日制
+          - generic [ref=e115]:
+            - generic [ref=e116]: 非国际背景
+            - generic [ref=e117]: 想去综校
+            - generic [ref=e118]: 两年规划
+        - button "插画 · 本科 藤同学 Teng. 伦敦大学学院 UCL University College London BA Creative Arts and Humanities · 创意艺术与人文科学 光华剑桥 · 国际高中 全链路版本 A-Level + BTEC" [ref=e119] [cursor=pointer]:
+          - generic [ref=e120]:
+            - generic [ref=e121]: 插画 · 本科
+            - generic [ref=e122]:
+              - text: 藤同学
+              - generic [ref=e123]: Teng.
+          - generic [ref=e124]:
+            - generic [ref=e125]: 伦敦大学学院 UCL
+            - generic [ref=e126]: University College London
+          - generic [ref=e127]:
+            - generic [ref=e128]: BA Creative Arts and Humanities
+            - text: · 创意艺术与人文科学
+          - generic [ref=e129]: 光华剑桥 · 国际高中
+          - generic [ref=e130]:
+            - generic [ref=e131]: 全链路版本
+            - generic [ref=e132]: A-Level + BTEC
+        - button "插画 · 本科 刘同学 Liu. 伦敦大学学院 UCL University College London BA Media · 媒体 青岛中学国际部 · 普高国际部 公益与社会责任 领导力 跨专业" [ref=e133] [cursor=pointer]:
+          - generic [ref=e134]:
+            - generic [ref=e135]: 插画 · 本科
+            - generic [ref=e136]:
+              - text: 刘同学
+              - generic [ref=e137]: Liu.
+          - generic [ref=e138]:
+            - generic [ref=e139]: 伦敦大学学院 UCL
+            - generic [ref=e140]: University College London
+          - generic [ref=e141]:
+            - generic [ref=e142]: BA Media
+            - text: · 媒体
+          - generic [ref=e143]: 青岛中学国际部 · 普高国际部
+          - generic [ref=e144]:
+            - generic [ref=e145]: 公益与社会责任
+            - generic [ref=e146]: 领导力
+            - generic [ref=e147]: 跨专业
+        - button "插画 · 本科 王同学 Wang. 伦敦艺术大学 UAL University of the Arts London BA Illustration · 插画 牛津公学 · 国际高中 A-Level + BTEC UAL 夏校" [ref=e148] [cursor=pointer]:
+          - generic [ref=e149]:
+            - generic [ref=e150]: 插画 · 本科
+            - generic [ref=e151]:
+              - text: 王同学
+              - generic [ref=e152]: Wang.
+          - generic [ref=e153]:
+            - generic [ref=e154]: 伦敦艺术大学 UAL
+            - generic [ref=e155]: University of the Arts London
+          - generic [ref=e156]:
+            - generic [ref=e157]: BA Illustration
+            - text: · 插画
+          - generic [ref=e158]: 牛津公学 · 国际高中
+          - generic [ref=e159]:
+            - generic [ref=e160]: A-Level + BTEC
+            - generic [ref=e161]: UAL 夏校
+        - button "插画 · 本科 黄同学 Huang. 伦敦艺术大学 UAL University of the Arts London BA Illustration · 插画 SFK 全日制 全日制 A-Level 冬校冲刺" [ref=e162] [cursor=pointer]:
+          - generic [ref=e163]:
+            - generic [ref=e164]: 插画 · 本科
+            - generic [ref=e165]:
+              - text: 黄同学
+              - generic [ref=e166]: Huang.
+          - generic [ref=e167]:
+            - generic [ref=e168]: 伦敦艺术大学 UAL
+            - generic [ref=e169]: University of the Arts London
+          - generic [ref=e170]:
+            - generic [ref=e171]: BA Illustration
+            - text: · 插画
+          - generic [ref=e172]: SFK 全日制
+          - generic [ref=e173]:
+            - generic [ref=e174]: 全日制
+            - generic [ref=e175]: A-Level 冬校冲刺
+        - button "插画 · 本科 丁同学 Ding. 伦敦艺术大学 UAL University of the Arts London BA Fashion Imaging and Illustration · 时尚影像与插画 SFK 全日制 全日制 时尚插画" [ref=e176] [cursor=pointer]:
+          - generic [ref=e177]:
+            - generic [ref=e178]: 插画 · 本科
+            - generic [ref=e179]:
+              - text: 丁同学
+              - generic [ref=e180]: Ding.
+          - generic [ref=e181]:
+            - generic [ref=e182]: 伦敦艺术大学 UAL
+            - generic [ref=e183]: University of the Arts London
+          - generic [ref=e184]:
+            - generic [ref=e185]: BA Fashion Imaging and Illustration
+            - text: · 时尚影像与插画
+          - generic [ref=e186]: SFK 全日制
+          - generic [ref=e187]:
+            - generic [ref=e188]: 全日制
+            - generic [ref=e189]: 时尚插画
+        - button "插画 · 大二录取 洪同学 Hong. 爱丁堡大学 The University of Edinburgh BA Illustration（大二录取） · 插画 SFK 全日制 全日制 大二录取" [ref=e190] [cursor=pointer]:
+          - generic [ref=e191]:
+            - generic [ref=e192]: 插画 · 大二录取
+            - generic [ref=e193]:
+              - text: 洪同学
+              - generic [ref=e194]: Hong.
+          - generic [ref=e195]:
+            - generic [ref=e196]: 爱丁堡大学
+            - generic [ref=e197]: The University of Edinburgh
+          - generic [ref=e198]:
+            - generic [ref=e199]: BA Illustration（大二录取）
+            - text: · 插画
+          - generic [ref=e200]: SFK 全日制
+          - generic [ref=e201]:
+            - generic [ref=e202]: 全日制
+            - generic [ref=e203]: 大二录取
+        - button "插画 · 本科 肖同学 Xiao. 伦敦艺术大学 UAL University of the Arts London BA Graphic Communication · 平面视觉传达 海外高中 海外高中 跨专业" [ref=e204] [cursor=pointer]:
+          - generic [ref=e205]:
+            - generic [ref=e206]: 插画 · 本科
+            - generic [ref=e207]:
+              - text: 肖同学
+              - generic [ref=e208]: Xiao.
+          - generic [ref=e209]:
+            - generic [ref=e210]: 伦敦艺术大学 UAL
+            - generic [ref=e211]: University of the Arts London
+          - generic [ref=e212]:
+            - generic [ref=e213]: BA Graphic Communication
+            - text: · 平面视觉传达
+          - generic [ref=e214]: 海外高中
+          - generic [ref=e215]:
+            - generic [ref=e216]: 海外高中
+            - generic [ref=e217]: 跨专业
+        - button "插画 · 本科 徐同学 Xu. 伦敦艺术大学 UAL University of the Arts London BA Illustration · 插画 新东方艺术高中 A-Level + BTEC UAL 夏校" [ref=e218] [cursor=pointer]:
+          - generic [ref=e219]:
+            - generic [ref=e220]: 插画 · 本科
+            - generic [ref=e221]:
+              - text: 徐同学
+              - generic [ref=e222]: Xu.
+          - generic [ref=e223]:
+            - generic [ref=e224]: 伦敦艺术大学 UAL
+            - generic [ref=e225]: University of the Arts London
+          - generic [ref=e226]:
+            - generic [ref=e227]: BA Illustration
+            - text: · 插画
+          - generic [ref=e228]: 新东方艺术高中
+          - generic [ref=e229]:
+            - generic [ref=e230]: A-Level + BTEC
+            - generic [ref=e231]: UAL 夏校
+        - button "纯艺术 · 本科 黄同学 Huang. 牛津大学 University of Oxford Fine Art · 纯艺术 斯芬克艺术高中 25F 牛津 五校录取" [ref=e232] [cursor=pointer]:
+          - generic [ref=e233]:
+            - generic [ref=e234]: 纯艺术 · 本科
+            - generic [ref=e235]:
+              - text: 黄同学
+              - generic [ref=e236]: Huang.
+          - generic [ref=e237]:
+            - generic [ref=e238]: 牛津大学
+            - generic [ref=e239]: University of Oxford
+          - generic [ref=e240]:
+            - generic [ref=e241]: Fine Art
+            - text: · 纯艺术
+          - generic [ref=e242]: 斯芬克艺术高中
+          - generic [ref=e243]:
+            - generic [ref=e244]: 25F
+            - generic [ref=e245]: 牛津
+            - generic [ref=e246]: 五校录取
+        - button "纯艺术 · 本科 O 同学 O. 格林内尔学院 Grinnell College Fine Art BFA · 纯艺术 广州斐特思 · 国际高中 26F 文理学院 多校录取" [ref=e247] [cursor=pointer]:
+          - generic [ref=e248]:
+            - generic [ref=e249]: 纯艺术 · 本科
+            - generic [ref=e250]:
+              - text: O 同学
+              - generic [ref=e251]: O.
+          - generic [ref=e252]:
+            - generic [ref=e253]: 格林内尔学院
+            - generic [ref=e254]: Grinnell College
+          - generic [ref=e255]:
+            - generic [ref=e256]: Fine Art BFA
+            - text: · 纯艺术
+          - generic [ref=e257]: 广州斐特思 · 国际高中
+          - generic [ref=e258]:
+            - generic [ref=e259]: 26F
+            - generic [ref=e260]: 文理学院
+            - generic [ref=e261]: 多校录取
+        - button "纯艺术 · 本科 杜同学 Du. 伦敦大学学院 UCL University College London Fine Art BA · 纯艺术 加拿大高中 · 海外高中 26F 海外高中 多校录取" [ref=e262] [cursor=pointer]:
+          - generic [ref=e263]:
+            - generic [ref=e264]: 纯艺术 · 本科
+            - generic [ref=e265]:
+              - text: 杜同学
+              - generic [ref=e266]: Du.
+          - generic [ref=e267]:
+            - generic [ref=e268]: 伦敦大学学院 UCL
+            - generic [ref=e269]: University College London
+          - generic [ref=e270]:
+            - generic [ref=e271]: Fine Art BA
+            - text: · 纯艺术
+          - generic [ref=e272]: 加拿大高中 · 海外高中
+          - generic [ref=e273]:
+            - generic [ref=e274]: 26F
+            - generic [ref=e275]: 海外高中
+            - generic [ref=e276]: 多校录取
+        - button "纯艺术 · 本科 李同学 Li. 伦敦大学学院 UCL University College London Fine Art BA · 纯艺术 君诚国际 · 国际高中 26F 多校录取 RISD 夏校" [ref=e277] [cursor=pointer]:
+          - generic [ref=e278]:
+            - generic [ref=e279]: 纯艺术 · 本科
+            - generic [ref=e280]:
+              - text: 李同学
+              - generic [ref=e281]: Li.
+          - generic [ref=e282]:
+            - generic [ref=e283]: 伦敦大学学院 UCL
+            - generic [ref=e284]: University College London
+          - generic [ref=e285]:
+            - generic [ref=e286]: Fine Art BA
+            - text: · 纯艺术
+          - generic [ref=e287]: 君诚国际 · 国际高中
+          - generic [ref=e288]:
+            - generic [ref=e289]: 26F
+            - generic [ref=e290]: 多校录取
+            - generic [ref=e291]: RISD 夏校
+        - 'button "纯艺术 · 本科 杨同学 Yang. 伦敦艺术大学 UAL University of the Arts London BA Performance: Design and Practice · 表演设计与实践 SFK 全日制 26F 全日制 多校录取" [ref=e292] [cursor=pointer]':
+          - generic [ref=e293]:
+            - generic [ref=e294]: 纯艺术 · 本科
+            - generic [ref=e295]:
+              - text: 杨同学
+              - generic [ref=e296]: Yang.
+          - generic [ref=e297]:
+            - generic [ref=e298]: 伦敦艺术大学 UAL
+            - generic [ref=e299]: University of the Arts London
+          - generic [ref=e300]:
+            - generic [ref=e301]: "BA Performance: Design and Practice"
+            - text: · 表演设计与实践
+          - generic [ref=e302]: SFK 全日制
+          - generic [ref=e303]:
+            - generic [ref=e304]: 26F
+            - generic [ref=e305]: 全日制
+            - generic [ref=e306]: 多校录取
+        - 'button "纯艺术 · 本科 张同学 Zhang. 伦敦艺术大学 UAL University of the Arts London BA (Hons) Fine Art: Sculpture · 纯艺术 · 雕塑 SFK 全日制 26F 全日制 海外教授项目" [ref=e307] [cursor=pointer]':
+          - generic [ref=e308]:
+            - generic [ref=e309]: 纯艺术 · 本科
+            - generic [ref=e310]:
+              - text: 张同学
+              - generic [ref=e311]: Zhang.
+          - generic [ref=e312]:
+            - generic [ref=e313]: 伦敦艺术大学 UAL
+            - generic [ref=e314]: University of the Arts London
+          - generic [ref=e315]:
+            - generic [ref=e316]: "BA (Hons) Fine Art: Sculpture"
+            - text: · 纯艺术 · 雕塑
+          - generic [ref=e317]: SFK 全日制
+          - generic [ref=e318]:
+            - generic [ref=e319]: 26F
+            - generic [ref=e320]: 全日制
+            - generic [ref=e321]: 海外教授项目
+        - button "纯艺术 · 本科 黄同学 Huang. 伦敦艺术大学 UAL University of the Arts London BA (Hons) Ceramic · 陶瓷 华爱融合国际高中 26F 材料叙事 UAL 夏校" [ref=e322] [cursor=pointer]:
+          - generic [ref=e323]:
+            - generic [ref=e324]: 纯艺术 · 本科
+            - generic [ref=e325]:
+              - text: 黄同学
+              - generic [ref=e326]: Huang.
+          - generic [ref=e327]:
+            - generic [ref=e328]: 伦敦艺术大学 UAL
+            - generic [ref=e329]: University of the Arts London
+          - generic [ref=e330]:
+            - generic [ref=e331]: BA (Hons) Ceramic
+            - text: · 陶瓷
+          - generic [ref=e332]: 华爱融合国际高中
+          - generic [ref=e333]:
+            - generic [ref=e334]: 26F
+            - generic [ref=e335]: 材料叙事
+            - generic [ref=e336]: UAL 夏校
+        - button "插画 / 纯艺术 · 本科 周同学 Zhou. 威廉姆斯学院 Williams College BA Physics · 物理 北京国际学校 学霸 跨学科 文理学院" [ref=e337] [cursor=pointer]:
+          - generic [ref=e338]:
+            - generic [ref=e339]: 插画 / 纯艺术 · 本科
+            - generic [ref=e340]:
+              - text: 周同学
+              - generic [ref=e341]: Zhou.
+          - generic [ref=e342]:
+            - generic [ref=e343]: 威廉姆斯学院
+            - generic [ref=e344]: Williams College
+          - generic [ref=e345]:
+            - generic [ref=e346]: BA Physics
+            - text: · 物理
+          - generic [ref=e347]: 北京国际学校
+          - generic [ref=e348]:
+            - generic [ref=e349]: 学霸
+            - generic [ref=e350]: 跨学科
+            - generic [ref=e351]: 文理学院
+        - button "插画 / 纯艺术 · 本科 潘同学 Pan. 达特茅斯学院 Dartmouth College BA Studio Art · 艺术 包玉刚中学 学霸 藤校 跨学科" [ref=e352] [cursor=pointer]:
+          - generic [ref=e353]:
+            - generic [ref=e354]: 插画 / 纯艺术 · 本科
+            - generic [ref=e355]:
+              - text: 潘同学
+              - generic [ref=e356]: Pan.
+          - generic [ref=e357]:
+            - generic [ref=e358]: 达特茅斯学院
+            - generic [ref=e359]: Dartmouth College
+          - generic [ref=e360]:
+            - generic [ref=e361]: BA Studio Art
+            - text: · 艺术
+          - generic [ref=e362]: 包玉刚中学
+          - generic [ref=e363]:
+            - generic [ref=e364]: 学霸
+            - generic [ref=e365]: 藤校
+            - generic [ref=e366]: 跨学科
+        - button "插画 / 纯艺术 · 本科 朱同学 Zhu. 布朗大学 Brown University BFA Fine Art · 纯艺术 北京德威国际学校 学霸 藤校 跨专业" [ref=e367] [cursor=pointer]:
+          - generic [ref=e368]:
+            - generic [ref=e369]: 插画 / 纯艺术 · 本科
+            - generic [ref=e370]:
+              - text: 朱同学
+              - generic [ref=e371]: Zhu.
+          - generic [ref=e372]:
+            - generic [ref=e373]: 布朗大学
+            - generic [ref=e374]: Brown University
+          - generic [ref=e375]:
+            - generic [ref=e376]: BFA Fine Art
+            - text: · 纯艺术
+          - generic [ref=e377]: 北京德威国际学校
+          - generic [ref=e378]:
+            - generic [ref=e379]: 学霸
+            - generic [ref=e380]: 藤校
+            - generic [ref=e381]: 跨专业
+        - button "插画 / 纯艺术 · 本科 徐同学 Xu. 罗德岛设计学院 RISD Rhode Island School of Design BFA Painting · 绘画 德闳国际学校 艺术名校直申 国际奖项 夏校" [ref=e382] [cursor=pointer]:
+          - generic [ref=e383]:
+            - generic [ref=e384]: 插画 / 纯艺术 · 本科
+            - generic [ref=e385]:
+              - text: 徐同学
+              - generic [ref=e386]: Xu.
+          - generic [ref=e387]:
+            - generic [ref=e388]: 罗德岛设计学院 RISD
+            - generic [ref=e389]: Rhode Island School of Design
+          - generic [ref=e390]:
+            - generic [ref=e391]: BFA Painting
+            - text: · 绘画
+          - generic [ref=e392]: 德闳国际学校
+          - generic [ref=e393]:
+            - generic [ref=e394]: 艺术名校直申
+            - generic [ref=e395]: 国际奖项
+            - generic [ref=e396]: 夏校
+        - button "插画 / 纯艺术 · 本科 李同学 Li. 谢尔丹学院 Sheridan College BA Illustration · 插画 国美附中 北美艺术院校 专业附中" [ref=e397] [cursor=pointer]:
+          - generic [ref=e398]:
+            - generic [ref=e399]: 插画 / 纯艺术 · 本科
+            - generic [ref=e400]:
+              - text: 李同学
+              - generic [ref=e401]: Li.
+          - generic [ref=e402]:
+            - generic [ref=e403]: 谢尔丹学院
+            - generic [ref=e404]: Sheridan College
+          - generic [ref=e405]:
+            - generic [ref=e406]: BA Illustration
+            - text: · 插画
+          - generic [ref=e407]: 国美附中
+          - generic [ref=e408]:
+            - generic [ref=e409]: 北美艺术院校
+            - generic [ref=e410]: 专业附中
+        - button "插画 / 纯艺术 · 本科 桑同学 Sang. 墨尔本大学 The University of Melbourne BA Design · 设计 普高 澳八大 普高背景" [ref=e411] [cursor=pointer]:
+          - generic [ref=e412]:
+            - generic [ref=e413]: 插画 / 纯艺术 · 本科
+            - generic [ref=e414]:
+              - text: 桑同学
+              - generic [ref=e415]: Sang.
+          - generic [ref=e416]:
+            - generic [ref=e417]: 墨尔本大学
+            - generic [ref=e418]: The University of Melbourne
+          - generic [ref=e419]:
+            - generic [ref=e420]: BA Design
+            - text: · 设计
+          - generic [ref=e421]: 普高
+          - generic [ref=e422]:
+            - generic [ref=e423]: 澳八大
+            - generic [ref=e424]: 普高背景
+        - button "插画 / 纯艺术 · 本科 桑同学 Sang. 墨尔本大学 The University of Melbourne BA Design · 设计 普高 澳八大 普高背景" [ref=e425] [cursor=pointer]:
+          - generic [ref=e426]:
+            - generic [ref=e427]: 插画 / 纯艺术 · 本科
+            - generic [ref=e428]:
+              - text: 桑同学
+              - generic [ref=e429]: Sang.
+          - generic [ref=e430]:
+            - generic [ref=e431]: 墨尔本大学
+            - generic [ref=e432]: The University of Melbourne
+          - generic [ref=e433]:
+            - generic [ref=e434]: BA Design
+            - text: · 设计
+          - generic [ref=e435]: 普高
+          - generic [ref=e436]:
+            - generic [ref=e437]: 澳八大
+            - generic [ref=e438]: 普高背景
+  - contentinfo [ref=e440]:
+    - generic [ref=e441]:
+      - generic [ref=e442]:
+        - generic [ref=e443]: SFK 艺术人文科系
+        - paragraph [ref=e445]: 插画 × 纯艺术 · 本科爬藤与升学就业规划
+      - heading "主要内容" [level=3] [ref=e447]
+      - generic [ref=e448]:
+        - heading "科系板块" [level=3] [ref=e449]
+        - link "关于艺术人文" [ref=e450] [cursor=pointer]:
+          - /url: "#/home"
+        - link "OFFER成果" [ref=e451] [cursor=pointer]:
+          - /url: "#/home/offers"
+        - link "导师团队" [ref=e452] [cursor=pointer]:
+          - /url: "#/home/instructors"
+        - link "校企资源" [ref=e453] [cursor=pointer]:
+          - /url: "#/home/resources"
+        - link "成长时间轴" [ref=e454] [cursor=pointer]:
+          - /url: "#/home/timeline"
+        - link "课程产品" [ref=e455] [cursor=pointer]:
+          - /url: "#/home/courses"
+      - generic [ref=e456]:
+        - heading "规划咨询" [level=3] [ref=e457]
+        - link "admissions@sfk-edu.demo" [ref=e458] [cursor=pointer]:
+          - /url: mailto:admissions@sfk-edu.demo
+        - link "400-000-0000" [ref=e459] [cursor=pointer]:
+          - /url: tel:400-000-0000
+    - generic [ref=e460]: © 2026 SFK 艺术人文科系 · 本页面为课程与案例演示站点，数据仅供展示

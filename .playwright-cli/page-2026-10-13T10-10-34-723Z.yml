@@ -1,0 +1,1203 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "Art & Humanities 艺术人文科系 Art & Humanities 艺术人文科系" [ref=e4] [cursor=pointer]:
+      - /url: "#/home"
+      - img "Art & Humanities 艺术人文科系" [ref=e5]
+      - generic [ref=e6]:
+        - generic [ref=e7]: Art & Humanities
+        - generic [ref=e8]: 艺术人文科系
+    - generic [ref=e9]:
+      - button "主要内容" [ref=e11] [cursor=pointer]
+      - link "规划我的未来" [ref=e14] [cursor=pointer]:
+        - /url: "#/employment"
+  - main [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18]: SFK · 艺术人文科系 · ARTS & HUMANITIES
+      - heading [level=1] [ref=e19]:
+        - text: 以人文深度
+        - emphasis [ref=e20]: 塑造未来艺术人才
+      - paragraph [ref=e21]: 从艺术创作、人⽂研究到⾏业现场，艺术⼈⽂科系帮助学⽣建⽴⼀条能被名校看⻅、能被⾏业理解、能被未来转化的成⻓路径。
+      - generic "学科方向" [ref=e22]:
+        - generic [ref=e23]: ART
+        - generic [ref=e24]: SCULPTURE
+        - generic [ref=e25]: PHOTOGRAPHY
+      - generic [ref=e26]:
+        - link "本科爬藤" [ref=e27]:
+          - /url: "#/undergraduate"
+        - link "就业力规划" [ref=e28]:
+          - /url: "#/employment"
+        - link "学生案例" [ref=e29]:
+          - /url: "#/cases"
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]: Contemporary Art Practice
+        - heading "当代艺术实践" [level=2] [ref=e33]
+        - paragraph [ref=e34]: 以观念为核心，运用多元媒介回应当代社会与文化议题，通向独立创作、艺术驻留、展览及公共艺术等发展方向。
+      - generic [ref=e35]:
+        - button "绘画 Painting" [ref=e36] [cursor=pointer]:
+          - generic [ref=e37]:
+            - generic [ref=e38]: "01"
+            - generic [ref=e39]: 绘画
+            - generic [ref=e40]: Painting
+        - button "雕塑 Sculpture" [ref=e41] [cursor=pointer]:
+          - generic [ref=e42]:
+            - generic [ref=e43]: "02"
+            - generic [ref=e44]: 雕塑
+            - generic [ref=e45]: Sculpture
+        - button "装置 Installation Art" [ref=e46] [cursor=pointer]:
+          - generic [ref=e47]:
+            - generic [ref=e48]: "03"
+            - generic [ref=e49]: 装置
+            - generic [ref=e50]: Installation Art
+        - button "策展与艺术管理 Curating & Arts Management" [ref=e51] [cursor=pointer]:
+          - generic [ref=e52]:
+            - generic [ref=e53]: "04"
+            - generic [ref=e54]: 策展与艺术管理
+            - generic [ref=e55]: Curating & Arts Management
+        - button "艺术史 Art History" [ref=e56] [cursor=pointer]:
+          - generic [ref=e57]:
+            - generic [ref=e58]: "05"
+            - generic [ref=e59]: 艺术史
+            - generic [ref=e60]: Art History
+        - button "艺术疗愈 Art Therapy" [ref=e61] [cursor=pointer]:
+          - generic [ref=e62]:
+            - generic [ref=e63]: "06"
+            - generic [ref=e64]: 艺术疗愈
+            - generic [ref=e65]: Art Therapy
+        - button "插画与视觉艺术 Illustration & Visual Arts" [ref=e66] [cursor=pointer]:
+          - generic [ref=e67]:
+            - generic [ref=e68]: "07"
+            - generic [ref=e69]: 插画与视觉艺术
+            - generic [ref=e70]: Illustration & Visual Arts
+        - button "跨学科艺术 Interdisciplinary Art" [ref=e71] [cursor=pointer]:
+          - generic [ref=e72]:
+            - generic [ref=e73]: "08"
+            - generic [ref=e74]: 跨学科艺术
+            - generic [ref=e75]: Interdisciplinary Art
+    - generic [ref=e76]:
+      - generic [ref=e77]:
+        - generic [ref=e78]: OFFERS 2024-2026
+        - heading "OFFERS" [level=2] [ref=e79]
+        - paragraph [ref=e80]: 2024–2026 三个申请季累计斩获 5493 枚 offer，覆盖美国、英国、港新、日韩及全球 260 所艺术院校与综合大学。
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - generic [ref=e84]: 申请季
+            - generic [ref=e85]: "|"
+            - generic [ref=e86]:
+              - button "2024" [ref=e87] [cursor=pointer]
+              - button "2025" [ref=e88] [cursor=pointer]
+              - button "2026" [ref=e89] [cursor=pointer]
+          - generic [ref=e90]:
+            - generic [ref=e91]: 国家
+            - generic [ref=e92]: "|"
+            - generic [ref=e93]:
+              - button "🇺🇸 美国" [ref=e94] [cursor=pointer]
+              - button "🇬🇧 英国" [ref=e95] [cursor=pointer]
+              - button "🇭🇰 港新" [ref=e96] [cursor=pointer]
+              - button "🇯🇵🇰🇷 日韩" [ref=e97] [cursor=pointer]
+              - button "🌏 其他" [ref=e98] [cursor=pointer]
+          - generic [ref=e99]:
+            - generic [ref=e100]: 搜索
+            - generic [ref=e101]: "|"
+            - searchbox "输入院校中 / 英文名" [ref=e102]
+        - generic [ref=e103]:
+          - generic "点击展开院校详情" [ref=e104] [cursor=pointer]:
+            - generic [ref=e105]: "33"
+            - generic [ref=e106]: 纽约视觉艺术学院
+            - generic [ref=e107]: School of Visual Arts
+          - generic "点击展开院校详情" [ref=e108] [cursor=pointer]:
+            - generic [ref=e109]: "25"
+            - generic [ref=e110]: 马里兰艺术学院
+            - generic [ref=e111]: Maryland Institute College of Art
+          - generic "点击展开院校详情" [ref=e112] [cursor=pointer]:
+            - generic [ref=e113]: "27"
+            - generic [ref=e114]: 芝加哥艺术学院
+            - generic [ref=e115]: School of the Art Institute of Chicago
+          - generic "点击展开院校详情" [ref=e116] [cursor=pointer]:
+            - generic [ref=e117]: "24"
+            - generic [ref=e118]: 萨凡纳艺术与设计学院
+            - generic [ref=e119]: Savannah College of Art and Design
+          - generic "点击展开院校详情" [ref=e120] [cursor=pointer]:
+            - generic [ref=e121]: "13"
+            - generic [ref=e122]: 罗德岛设计学院
+            - generic [ref=e123]: Rhode Island School of Design
+          - generic "点击展开院校详情" [ref=e124] [cursor=pointer]:
+            - generic [ref=e125]: "17"
+            - generic [ref=e126]: 艺术中心设计学院
+            - generic [ref=e127]: ArtCenter College of Design
+          - generic "点击展开院校详情" [ref=e128] [cursor=pointer]:
+            - generic [ref=e129]: "7"
+            - generic [ref=e130]: 帕森斯设计学院
+            - generic [ref=e131]: Parsons School of Design at The New School
+          - generic "点击展开院校详情" [ref=e132] [cursor=pointer]:
+            - generic [ref=e133]: "15"
+            - generic [ref=e134]: 普瑞特艺术学院
+            - generic [ref=e135]: Pratt Institute
+          - generic "点击展开院校详情" [ref=e136] [cursor=pointer]:
+            - generic [ref=e137]: "23"
+            - generic [ref=e138]: 加州艺术学院(CCA)
+            - generic [ref=e139]: California College of the Arts
+          - generic "点击展开院校详情" [ref=e140] [cursor=pointer]:
+            - generic [ref=e141]: "4"
+            - generic [ref=e142]: 加州大学戴维斯分校
+            - generic [ref=e143]: University of California
+          - generic "点击展开院校详情" [ref=e144] [cursor=pointer]:
+            - generic [ref=e145]: "5"
+            - generic [ref=e146]: 纽约大学
+            - generic [ref=e147]: New York University
+          - generic "点击展开院校详情" [ref=e148] [cursor=pointer]:
+            - generic [ref=e149]: "7"
+            - generic [ref=e150]: 旧金山艺术大学
+            - generic [ref=e151]: Academy of Art University
+          - generic "点击展开院校详情" [ref=e152] [cursor=pointer]:
+            - generic [ref=e153]: "2"
+            - generic [ref=e154]: 加州大学尔湾分校
+            - generic [ref=e155]: University of California
+          - generic "点击展开院校详情" [ref=e156] [cursor=pointer]:
+            - generic [ref=e157]: "3"
+            - generic [ref=e158]: 波士顿大学
+            - generic [ref=e159]: Boston University
+          - generic "点击展开院校详情" [ref=e160] [cursor=pointer]:
+            - generic [ref=e161]: "4"
+            - generic [ref=e162]: 加州艺术学院(CalArts)
+            - generic [ref=e163]: California Institute of the Arts
+          - generic "点击展开院校详情" [ref=e164] [cursor=pointer]:
+            - generic [ref=e165]: "1"
+            - generic [ref=e166]: 加州大学圣地亚哥分校
+            - generic [ref=e167]: University of California
+          - generic "点击展开院校详情" [ref=e168] [cursor=pointer]:
+            - generic [ref=e169]: "1"
+            - generic [ref=e170]: 加州大学圣芭芭拉分校
+            - generic [ref=e171]: University of California
+          - generic "点击展开院校详情" [ref=e172] [cursor=pointer]:
+            - generic [ref=e173]: "1"
+            - generic [ref=e174]: 南加州大学
+            - generic [ref=e175]: University of Southern California
+          - generic "点击展开院校详情" [ref=e176] [cursor=pointer]:
+            - generic [ref=e177]: "6"
+            - generic [ref=e178]: 圣路易斯华盛顿大学
+            - generic [ref=e179]: Washington University in St. Louis
+          - generic "点击展开院校详情" [ref=e180] [cursor=pointer]:
+            - generic [ref=e181]: "4"
+            - generic [ref=e182]: 雪城大学
+            - generic [ref=e183]: Syracuse University
+          - generic "点击展开院校详情" [ref=e184] [cursor=pointer]:
+            - generic [ref=e185]: "3"
+            - generic [ref=e186]: 伊利诺伊大学香槟分校
+            - generic [ref=e187]: University of Illinois at Urbana-Champaign
+          - generic "点击展开院校详情" [ref=e188] [cursor=pointer]:
+            - generic [ref=e189]: "3"
+            - generic [ref=e190]: 塔夫茨大学
+            - generic [ref=e191]: Tufts University
+          - generic "点击展开院校详情" [ref=e192] [cursor=pointer]:
+            - generic [ref=e193]: "3"
+            - generic [ref=e194]: 明尼阿波利斯艺术与设计学院
+            - generic [ref=e195]: Minneapolis College of Art and Design
+          - generic "点击展开院校详情" [ref=e196] [cursor=pointer]:
+            - generic [ref=e197]: "3"
+            - generic [ref=e198]: 奥蒂斯艺术设计学院
+            - generic [ref=e199]: Otis College of Art and Design
+        - button "查看更多 / 11 more" [ref=e201] [cursor=pointer]
+    - generic [ref=e202]:
+      - generic [ref=e203]:
+        - generic [ref=e204]: INSTRUCTORS
+        - heading "导师团队" [level=2] [ref=e205]
+        - paragraph [ref=e206]: 【占位】来自顶尖高校与业界的导师团队 —— 覆盖海外教授、教研导师、学术导师、业界导师与顶尖学者，导师信息后期由你填入。
+      - generic [ref=e207]:
+        - generic [ref=e208]:
+          - button "全部" [ref=e209] [cursor=pointer]
+          - button "海外教授" [ref=e210] [cursor=pointer]
+          - button "教研导师" [ref=e211] [cursor=pointer]
+          - button "学术导师" [ref=e212] [cursor=pointer]
+          - button "业界导师" [ref=e213] [cursor=pointer]
+          - button "顶尖学者" [ref=e214] [cursor=pointer]
+        - generic [ref=e215]:
+          - generic [ref=e216]:
+            - generic [ref=e217]: 待提供
+            - generic [ref=e219]: 占位导师 01
+            - generic [ref=e220]: 院校 / 机构（待提供）
+            - generic [ref=e221]: 职称 / 方向（待提供）
+          - generic [ref=e222]:
+            - generic [ref=e223]: 待提供
+            - generic [ref=e225]: 占位导师 02
+            - generic [ref=e226]: 院校 / 机构（待提供）
+            - generic [ref=e227]: 职称 / 方向（待提供）
+          - generic [ref=e228]:
+            - generic [ref=e229]: 待提供
+            - generic [ref=e231]: 占位导师 03
+            - generic [ref=e232]: 院校 / 机构（待提供）
+            - generic [ref=e233]: 职称 / 方向（待提供）
+          - generic [ref=e234]:
+            - generic [ref=e235]: 待提供
+            - generic [ref=e237]: 占位导师 04
+            - generic [ref=e238]: 院校 / 机构（待提供）
+            - generic [ref=e239]: 职称 / 方向（待提供）
+          - generic [ref=e240]:
+            - generic [ref=e241]: 待提供
+            - generic [ref=e243]: 占位导师 05
+            - generic [ref=e244]: 院校 / 机构（待提供）
+            - generic [ref=e245]: 职称 / 方向（待提供）
+          - generic [ref=e246]:
+            - generic [ref=e247]: 待提供
+            - generic [ref=e249]: 占位导师 06
+            - generic [ref=e250]: 院校 / 机构（待提供）
+            - generic [ref=e251]: 职称 / 方向（待提供）
+          - generic [ref=e252]:
+            - generic [ref=e253]: 待提供
+            - generic [ref=e255]: 占位导师 07
+            - generic [ref=e256]: 院校 / 机构（待提供）
+            - generic [ref=e257]: 职称 / 方向（待提供）
+          - generic [ref=e258]:
+            - generic [ref=e259]: 待提供
+            - generic [ref=e261]: 占位导师 08
+            - generic [ref=e262]: 院校 / 机构（待提供）
+            - generic [ref=e263]: 职称 / 方向（待提供）
+          - generic [ref=e264]:
+            - generic [ref=e265]: 待提供
+            - generic [ref=e267]: 占位导师 09
+            - generic [ref=e268]: 院校 / 机构（待提供）
+            - generic [ref=e269]: 职称 / 方向（待提供）
+          - generic [ref=e270]:
+            - generic [ref=e271]: 待提供
+            - generic [ref=e273]: 占位导师 10
+            - generic [ref=e274]: 院校 / 机构（待提供）
+            - generic [ref=e275]: 职称 / 方向（待提供）
+          - generic [ref=e276]:
+            - generic [ref=e277]: 待提供
+            - generic [ref=e279]: 占位导师 11
+            - generic [ref=e280]: 院校 / 机构（待提供）
+            - generic [ref=e281]: 职称 / 方向（待提供）
+          - generic [ref=e282]:
+            - generic [ref=e283]: 待提供
+            - generic [ref=e285]: 占位导师 12
+            - generic [ref=e286]: 院校 / 机构（待提供）
+            - generic [ref=e287]: 职称 / 方向（待提供）
+          - generic [ref=e288]:
+            - generic [ref=e289]: 待提供
+            - generic [ref=e291]: 占位导师 13
+            - generic [ref=e292]: 院校 / 机构（待提供）
+            - generic [ref=e293]: 职称 / 方向（待提供）
+          - generic [ref=e294]:
+            - generic [ref=e295]: 待提供
+            - generic [ref=e297]: 占位导师 14
+            - generic [ref=e298]: 院校 / 机构（待提供）
+            - generic [ref=e299]: 职称 / 方向（待提供）
+          - generic [ref=e300]:
+            - generic [ref=e301]: 待提供
+            - generic [ref=e303]: 占位导师 15
+            - generic [ref=e304]: 院校 / 机构（待提供）
+            - generic [ref=e305]: 职称 / 方向（待提供）
+          - generic [ref=e306]:
+            - generic [ref=e307]: 待提供
+            - generic [ref=e309]: 占位导师 16
+            - generic [ref=e310]: 院校 / 机构（待提供）
+            - generic [ref=e311]: 职称 / 方向（待提供）
+          - generic [ref=e312]:
+            - generic [ref=e313]: 待提供
+            - generic [ref=e315]: 占位导师 17
+            - generic [ref=e316]: 院校 / 机构（待提供）
+            - generic [ref=e317]: 职称 / 方向（待提供）
+          - generic [ref=e318]:
+            - generic [ref=e319]: 待提供
+            - generic [ref=e321]: 占位导师 18
+            - generic [ref=e322]: 院校 / 机构（待提供）
+            - generic [ref=e323]: 职称 / 方向（待提供）
+          - generic [ref=e324]:
+            - generic [ref=e325]: 待提供
+            - generic [ref=e327]: 占位导师 19
+            - generic [ref=e328]: 院校 / 机构（待提供）
+            - generic [ref=e329]: 职称 / 方向（待提供）
+          - generic [ref=e330]:
+            - generic [ref=e331]: 待提供
+            - generic [ref=e333]: 占位导师 20
+            - generic [ref=e334]: 院校 / 机构（待提供）
+            - generic [ref=e335]: 职称 / 方向（待提供）
+          - generic [ref=e336]:
+            - generic [ref=e337]: 待提供
+            - generic [ref=e339]: 占位导师 21
+            - generic [ref=e340]: 院校 / 机构（待提供）
+            - generic [ref=e341]: 职称 / 方向（待提供）
+          - generic [ref=e342]:
+            - generic [ref=e343]: 待提供
+            - generic [ref=e345]: 占位导师 22
+            - generic [ref=e346]: 院校 / 机构（待提供）
+            - generic [ref=e347]: 职称 / 方向（待提供）
+          - generic [ref=e348]:
+            - generic [ref=e349]: 待提供
+            - generic [ref=e351]: 占位导师 23
+            - generic [ref=e352]: 院校 / 机构（待提供）
+            - generic [ref=e353]: 职称 / 方向（待提供）
+          - generic [ref=e354]:
+            - generic [ref=e355]: 待提供
+            - generic [ref=e357]: 占位导师 24
+            - generic [ref=e358]: 院校 / 机构（待提供）
+            - generic [ref=e359]: 职称 / 方向（待提供）
+        - button "展开查看更多 / 16 more" [ref=e361] [cursor=pointer]
+    - generic [ref=e362]:
+      - generic [ref=e363]:
+        - generic [ref=e364]: RESOURCES
+        - heading "校企资源" [level=2] [ref=e365]
+        - paragraph [ref=e366]: 【占位】横跨八大行业方向、深度覆盖的校企资源网络 —— 合作院校与企业信息后期由你填入。
+      - generic [ref=e370]:
+        - generic [ref=e371]:
+          - generic [ref=e373]: Central Academy of Fine Arts (CAFA)
+          - generic [ref=e374]: 中央美术学院
+        - generic [ref=e375]:
+          - generic [ref=e377]: China Academy of Art (CAA)
+          - generic [ref=e378]: 中国美术学院
+        - generic [ref=e379]:
+          - generic [ref=e381]: Guangzhou Academy of Fine Arts (GAFA)
+          - generic [ref=e382]: 广州美术学院
+        - generic [ref=e383]:
+          - generic [ref=e385]: Sichuan Fine Arts Institute (SCFAI)
+          - generic [ref=e386]: 四川美术学院
+        - generic [ref=e387]:
+          - generic [ref=e389]: LuXun Academy of Fine Arts (LAFA)
+          - generic [ref=e390]: 鲁迅美术学院
+        - generic [ref=e391]:
+          - generic [ref=e393]: Tianjin Academy of Fine Arts (TAFA)
+          - generic [ref=e394]: 天津美术学院
+        - generic [ref=e395]:
+          - generic [ref=e397]: Hubei Institute of Fine Arts (HIFA)
+          - generic [ref=e398]: 湖北美术学院
+        - generic [ref=e399]:
+          - generic [ref=e400]: LOGO
+          - generic [ref=e402]: Xi’an Academy of Fine Arts (XAFA)
+          - generic [ref=e403]: 西安美术学院
+        - generic [ref=e404]:
+          - generic [ref=e406]: Nanjing University of the Arts
+          - generic [ref=e407]: 南京艺术学院
+        - generic [ref=e408]:
+          - generic [ref=e410]: Communication University of China
+          - generic [ref=e411]: 中国传媒大学
+        - generic [ref=e412]:
+          - generic [ref=e414]: Hong Kong Baptist University
+          - generic [ref=e415]: 香港浸会大学
+        - generic [ref=e416]:
+          - generic [ref=e418]: Royal College of Art (RCA)
+          - generic [ref=e419]: 英国皇家艺术学院
+        - generic [ref=e420]:
+          - generic [ref=e422]: University of the Arts London (UAL)
+          - generic [ref=e423]: 伦敦艺术大学
+        - generic [ref=e424]:
+          - generic [ref=e426]: The Glasgow School of Art (GSA)
+          - generic [ref=e427]: 格拉斯哥艺术学院
+        - generic [ref=e428]:
+          - generic [ref=e430]: Goldsmiths
+          - generic [ref=e431]: 伦敦大学金史密斯学院
+        - generic [ref=e432]:
+          - generic [ref=e434]: Rhode Island School of Design (RISD)
+          - generic [ref=e435]: 罗德岛设计学院
+        - generic [ref=e436]:
+          - generic [ref=e438]: School of the Art Institute of Chicago (SAIC)
+          - generic [ref=e439]: 芝加哥艺术学院
+        - generic [ref=e440]:
+          - generic [ref=e442]: ArtCenter College of Design
+          - generic [ref=e443]: 艺术中心设计学院
+        - generic [ref=e444]:
+          - generic [ref=e446]: Tokyo University of the Arts
+          - generic [ref=e447]: 东京艺术大学
+        - generic [ref=e448]:
+          - generic [ref=e450]: Tama Art University
+          - generic [ref=e451]: 多摩美术大学
+        - generic [ref=e452]:
+          - generic [ref=e454]: Musashino Art University
+          - generic [ref=e455]: 武藏野美术大学
+        - generic [ref=e456]:
+          - generic [ref=e458]: Columbia University
+          - generic [ref=e459]: 哥伦比亚大学
+        - generic [ref=e460]:
+          - generic [ref=e462]: Brown University
+          - generic [ref=e463]: 布朗大学
+        - generic [ref=e464]:
+          - generic [ref=e466]: New York University (NYU)
+          - generic [ref=e467]: 纽约大学
+        - generic [ref=e468]:
+          - generic [ref=e470]: University of California
+          - generic [ref=e471]: 加利福尼亚大学洛杉矶分校
+        - generic [ref=e472]:
+          - generic [ref=e474]: Stanford University
+          - generic [ref=e475]: 斯坦福大学
+        - generic [ref=e476]:
+          - generic [ref=e478]: University of Oxford
+          - generic [ref=e479]: 牛津大学
+        - generic [ref=e480]:
+          - generic [ref=e482]: University College London (UCL)
+          - generic [ref=e483]: 伦敦大学学院
+        - generic [ref=e484]:
+          - generic [ref=e486]: University of Edinburgh
+          - generic [ref=e487]: 爱丁堡大学
+        - generic [ref=e488]:
+          - generic [ref=e490]: Peking University
+          - generic [ref=e491]: 北京大学
+        - generic [ref=e492]:
+          - generic [ref=e494]: Academy of Arts & Design
+          - generic [ref=e495]: 清华大学美术学院
+        - generic [ref=e496]:
+          - generic [ref=e498]: The Chinese University of Hong Kong (CUHK)
+          - generic [ref=e499]: 香港中文大学
+        - generic [ref=e500]:
+          - generic [ref=e502]: The Palace Museum
+          - generic [ref=e503]: 故宫博物院
+        - generic [ref=e504]:
+          - generic [ref=e506]: Suzhou Museum
+          - generic [ref=e507]: 苏州博物馆
+        - generic [ref=e508]:
+          - generic [ref=e510]: Shenzhen Art Museum
+          - generic [ref=e511]: 深圳美术馆
+        - generic [ref=e512]:
+          - generic [ref=e513]: LOGO
+          - generic [ref=e515]: Zhejiang Provincial Museum
+          - generic [ref=e516]: 浙江省博物馆
+        - generic [ref=e517]:
+          - generic [ref=e519]: Power Station of Art (PSA)
+          - generic [ref=e520]: 上海当代艺术博物馆
+        - generic [ref=e521]:
+          - generic [ref=e523]: National Art Museum of China (NAMOC)
+          - generic [ref=e524]: 中国美术馆
+        - generic [ref=e525]:
+          - generic [ref=e527]: Tsinghua University Art Museum (TAM)
+          - generic [ref=e528]: 清华大学艺术博物馆
+        - generic [ref=e529]:
+          - generic [ref=e531]: Suzhou Jinji Lake Art Museum
+          - generic [ref=e532]: 苏州金鸡湖美术馆
+        - generic [ref=e533]:
+          - generic [ref=e535]: West Bund Museum
+          - generic [ref=e536]: 西岸美术馆
+        - generic [ref=e537]:
+          - generic [ref=e539]: Ullens Center for Contemporary Art (UCCA)
+          - generic [ref=e540]: UCCA尤伦斯当代艺术中心
+        - generic [ref=e541]:
+          - generic [ref=e543]: Museum of Art Pudong (MAP)
+          - generic [ref=e544]: 浦东美术馆
+        - generic [ref=e545]:
+          - generic [ref=e547]: Long Museum
+          - generic [ref=e548]: 龙美术馆
+        - generic [ref=e549]:
+          - generic [ref=e551]: PIFO Gallery
+          - generic [ref=e552]: 偏锋画廊
+        - generic [ref=e553]:
+          - generic [ref=e555]: Hive Center for Contemporary Art
+          - generic [ref=e556]: 蜂巢当代艺术中心
+        - generic [ref=e557]:
+          - generic [ref=e559]: Platform China
+          - generic [ref=e560]: 站台中国
+        - generic [ref=e561]:
+          - generic [ref=e563]: Guardian Art Center
+          - generic [ref=e564]: 嘉德艺术中心
+        - generic [ref=e565]:
+          - generic [ref=e567]: Today Art Museum
+          - generic [ref=e568]: 今日美术馆
+        - generic [ref=e569]:
+          - generic [ref=e571]: Vanities Gallery
+          - generic [ref=e572]: 虚荣画廊
+        - generic [ref=e573]:
+          - generic [ref=e575]: MadeIn Gallery
+          - generic [ref=e576]: 没顶画廊
+        - generic [ref=e577]:
+          - generic [ref=e579]: ShanghART Gallery
+          - generic [ref=e580]: 香格纳画廊
+        - generic [ref=e581]:
+          - generic [ref=e583]: Pace Gallery
+          - generic [ref=e584]: 佩斯画廊
+        - generic [ref=e585]:
+          - generic [ref=e587]: Contemporary Tokyo
+          - generic [ref=e588]: 当代东京
+        - generic [ref=e589]:
+          - generic [ref=e591]: Red Brick Art Museum
+          - generic [ref=e592]: 红砖美术馆
+        - generic [ref=e593]:
+          - generic [ref=e595]: Tang Contemporary Art
+          - generic [ref=e596]: 当代唐人艺术中心
+        - generic [ref=e597]:
+          - generic [ref=e599]: White Cube
+          - generic [ref=e600]: 白立方
+        - generic [ref=e601]:
+          - generic [ref=e603]: Sotheby's
+          - generic [ref=e604]: 苏富比
+        - generic [ref=e605]:
+          - generic [ref=e607]: China Guardian Auctions
+          - generic [ref=e608]: 中国嘉德
+        - generic [ref=e609]:
+          - generic [ref=e611]: Christie's
+          - generic [ref=e612]: 佳士得
+        - generic [ref=e613]:
+          - generic [ref=e615]: Rong Bao Zhai
+          - generic [ref=e616]: 荣宝斋
+        - generic [ref=e617]:
+          - generic [ref=e619]: CUPPAR Auction
+          - generic [ref=e620]: 开拍国际拍卖
+        - generic [ref=e621]:
+          - generic [ref=e623]: Holly's Auctions
+          - generic [ref=e624]: 华艺国际
+        - generic [ref=e625]:
+          - generic [ref=e627]: Sungari International Auction
+          - generic [ref=e628]: 中贸圣佳国际拍卖
+        - generic [ref=e629]:
+          - generic [ref=e631]: Yongle Auction
+          - generic [ref=e632]: 永乐拍卖
+        - generic [ref=e633]:
+          - generic [ref=e635]: Shanghai Mission Auction (Mingxuan)
+          - generic [ref=e636]: 上海明轩拍卖
+        - generic [ref=e637]:
+          - generic [ref=e639]: Poly Auction
+          - generic [ref=e640]: 保利拍卖
+        - generic [ref=e641]:
+          - generic [ref=e643]: ART021 Shanghai Contemporary Art Fair
+          - generic [ref=e644]: 上海廿一当代艺术博览会
+        - generic [ref=e645]:
+          - generic [ref=e647]: Art Basel
+          - generic [ref=e648]: 巴塞尔艺术展
+        - generic [ref=e649]:
+          - generic [ref=e651]: ART SHENZHEN
+          - generic [ref=e652]: 艺术深圳
+        - generic [ref=e653]:
+          - generic [ref=e655]: ART BEIJING
+          - generic [ref=e656]: 北京当代
+        - generic [ref=e657]:
+          - generic [ref=e659]: West Bund Art & Design
+          - generic [ref=e660]: 西岸艺术与设计博览会
+        - generic [ref=e661]:
+          - generic [ref=e663]: Shenzhen International Art Fair
+          - generic [ref=e664]: 深圳国际艺术博览会
+        - generic [ref=e665]:
+          - generic [ref=e667]: Artron
+          - generic [ref=e668]: 雅昌艺术网
+        - generic [ref=e669]:
+          - generic [ref=e670]: LOGO
+          - generic [ref=e672]: Shenzhen Illustration Association (SIA)
+          - generic [ref=e673]: 深圳市插画协会
+        - generic [ref=e674]:
+          - generic [ref=e676]: Beijing International Book Fair (BIBF)
+          - generic [ref=e677]: 北京国际图书博览会
+        - generic [ref=e678]:
+          - generic [ref=e680]: UNESCO
+          - generic [ref=e681]: 联合国教科文组织
+        - generic [ref=e682]:
+          - generic [ref=e684]: International Centre for Engineering Education (ICEE)
+          - generic [ref=e685]: 国际工程教育中心
+        - generic [ref=e686]:
+          - generic [ref=e688]: POP MART
+          - generic [ref=e689]: 泡泡玛特
+        - generic [ref=e690]:
+          - generic [ref=e692]: JUST.FOTO
+          - generic [ref=e693]: 大头贴
+        - generic [ref=e694]:
+          - generic [ref=e696]: Alor Valley
+          - generic [ref=e697]: 十里芳菲
+        - generic [ref=e698]:
+          - generic [ref=e700]: Brand Bigger
+          - generic [ref=e701]: BIGGER 艺术书展
+        - generic [ref=e702]:
+          - generic [ref=e704]: K11
+          - generic [ref=e705]: K11
+        - generic [ref=e706]:
+          - generic [ref=e708]: Dragon TV
+          - generic [ref=e709]: 东方卫视
+        - generic [ref=e710]:
+          - generic [ref=e712]: Deji Group
+          - generic [ref=e713]: 德基集团
+        - generic [ref=e714]:
+          - generic [ref=e716]: Art Healing Research Institute (IFIC)
+          - generic [ref=e717]: 艺术疗愈研究院
+        - generic [ref=e718]:
+          - generic [ref=e720]: Central Academy of Fine Arts (CAFA)
+          - generic [ref=e721]: 中央美术学院
+        - generic [ref=e722]:
+          - generic [ref=e724]: China Academy of Art (CAA)
+          - generic [ref=e725]: 中国美术学院
+        - generic [ref=e726]:
+          - generic [ref=e728]: Guangzhou Academy of Fine Arts (GAFA)
+          - generic [ref=e729]: 广州美术学院
+        - generic [ref=e730]:
+          - generic [ref=e732]: Sichuan Fine Arts Institute (SCFAI)
+          - generic [ref=e733]: 四川美术学院
+        - generic [ref=e734]:
+          - generic [ref=e736]: LuXun Academy of Fine Arts (LAFA)
+          - generic [ref=e737]: 鲁迅美术学院
+        - generic [ref=e738]:
+          - generic [ref=e740]: Tianjin Academy of Fine Arts (TAFA)
+          - generic [ref=e741]: 天津美术学院
+        - generic [ref=e742]:
+          - generic [ref=e744]: Hubei Institute of Fine Arts (HIFA)
+          - generic [ref=e745]: 湖北美术学院
+        - generic [ref=e746]:
+          - generic [ref=e747]: LOGO
+          - generic [ref=e749]: Xi’an Academy of Fine Arts (XAFA)
+          - generic [ref=e750]: 西安美术学院
+        - generic [ref=e751]:
+          - generic [ref=e753]: Nanjing University of the Arts
+          - generic [ref=e754]: 南京艺术学院
+        - generic [ref=e755]:
+          - generic [ref=e757]: Communication University of China
+          - generic [ref=e758]: 中国传媒大学
+        - generic [ref=e759]:
+          - generic [ref=e761]: Hong Kong Baptist University
+          - generic [ref=e762]: 香港浸会大学
+        - generic [ref=e763]:
+          - generic [ref=e765]: Royal College of Art (RCA)
+          - generic [ref=e766]: 英国皇家艺术学院
+        - generic [ref=e767]:
+          - generic [ref=e769]: University of the Arts London (UAL)
+          - generic [ref=e770]: 伦敦艺术大学
+        - generic [ref=e771]:
+          - generic [ref=e773]: The Glasgow School of Art (GSA)
+          - generic [ref=e774]: 格拉斯哥艺术学院
+        - generic [ref=e775]:
+          - generic [ref=e777]: Goldsmiths
+          - generic [ref=e778]: 伦敦大学金史密斯学院
+        - generic [ref=e779]:
+          - generic [ref=e781]: Rhode Island School of Design (RISD)
+          - generic [ref=e782]: 罗德岛设计学院
+        - generic [ref=e783]:
+          - generic [ref=e785]: School of the Art Institute of Chicago (SAIC)
+          - generic [ref=e786]: 芝加哥艺术学院
+        - generic [ref=e787]:
+          - generic [ref=e789]: ArtCenter College of Design
+          - generic [ref=e790]: 艺术中心设计学院
+        - generic [ref=e791]:
+          - generic [ref=e793]: Tokyo University of the Arts
+          - generic [ref=e794]: 东京艺术大学
+        - generic [ref=e795]:
+          - generic [ref=e797]: Tama Art University
+          - generic [ref=e798]: 多摩美术大学
+        - generic [ref=e799]:
+          - generic [ref=e801]: Musashino Art University
+          - generic [ref=e802]: 武藏野美术大学
+        - generic [ref=e803]:
+          - generic [ref=e805]: Columbia University
+          - generic [ref=e806]: 哥伦比亚大学
+        - generic [ref=e807]:
+          - generic [ref=e809]: Brown University
+          - generic [ref=e810]: 布朗大学
+        - generic [ref=e811]:
+          - generic [ref=e813]: New York University (NYU)
+          - generic [ref=e814]: 纽约大学
+        - generic [ref=e815]:
+          - generic [ref=e817]: University of California
+          - generic [ref=e818]: 加利福尼亚大学洛杉矶分校
+        - generic [ref=e819]:
+          - generic [ref=e821]: Stanford University
+          - generic [ref=e822]: 斯坦福大学
+        - generic [ref=e823]:
+          - generic [ref=e825]: University of Oxford
+          - generic [ref=e826]: 牛津大学
+        - generic [ref=e827]:
+          - generic [ref=e829]: University College London (UCL)
+          - generic [ref=e830]: 伦敦大学学院
+        - generic [ref=e831]:
+          - generic [ref=e833]: University of Edinburgh
+          - generic [ref=e834]: 爱丁堡大学
+        - generic [ref=e835]:
+          - generic [ref=e837]: Peking University
+          - generic [ref=e838]: 北京大学
+        - generic [ref=e839]:
+          - generic [ref=e841]: Academy of Arts & Design
+          - generic [ref=e842]: 清华大学美术学院
+        - generic [ref=e843]:
+          - generic [ref=e845]: The Chinese University of Hong Kong (CUHK)
+          - generic [ref=e846]: 香港中文大学
+        - generic [ref=e847]:
+          - generic [ref=e849]: The Palace Museum
+          - generic [ref=e850]: 故宫博物院
+        - generic [ref=e851]:
+          - generic [ref=e853]: Suzhou Museum
+          - generic [ref=e854]: 苏州博物馆
+        - generic [ref=e855]:
+          - generic [ref=e857]: Shenzhen Art Museum
+          - generic [ref=e858]: 深圳美术馆
+        - generic [ref=e859]:
+          - generic [ref=e860]: LOGO
+          - generic [ref=e862]: Zhejiang Provincial Museum
+          - generic [ref=e863]: 浙江省博物馆
+        - generic [ref=e864]:
+          - generic [ref=e866]: Power Station of Art (PSA)
+          - generic [ref=e867]: 上海当代艺术博物馆
+        - generic [ref=e868]:
+          - generic [ref=e870]: National Art Museum of China (NAMOC)
+          - generic [ref=e871]: 中国美术馆
+        - generic [ref=e872]:
+          - generic [ref=e874]: Tsinghua University Art Museum (TAM)
+          - generic [ref=e875]: 清华大学艺术博物馆
+        - generic [ref=e876]:
+          - generic [ref=e878]: Suzhou Jinji Lake Art Museum
+          - generic [ref=e879]: 苏州金鸡湖美术馆
+        - generic [ref=e880]:
+          - generic [ref=e882]: West Bund Museum
+          - generic [ref=e883]: 西岸美术馆
+        - generic [ref=e884]:
+          - generic [ref=e886]: Ullens Center for Contemporary Art (UCCA)
+          - generic [ref=e887]: UCCA尤伦斯当代艺术中心
+        - generic [ref=e888]:
+          - generic [ref=e890]: Museum of Art Pudong (MAP)
+          - generic [ref=e891]: 浦东美术馆
+        - generic [ref=e892]:
+          - generic [ref=e894]: Long Museum
+          - generic [ref=e895]: 龙美术馆
+        - generic [ref=e896]:
+          - generic [ref=e898]: PIFO Gallery
+          - generic [ref=e899]: 偏锋画廊
+        - generic [ref=e900]:
+          - generic [ref=e902]: Hive Center for Contemporary Art
+          - generic [ref=e903]: 蜂巢当代艺术中心
+        - generic [ref=e904]:
+          - generic [ref=e906]: Platform China
+          - generic [ref=e907]: 站台中国
+        - generic [ref=e908]:
+          - generic [ref=e910]: Guardian Art Center
+          - generic [ref=e911]: 嘉德艺术中心
+        - generic [ref=e912]:
+          - generic [ref=e914]: Today Art Museum
+          - generic [ref=e915]: 今日美术馆
+        - generic [ref=e916]:
+          - generic [ref=e918]: Vanities Gallery
+          - generic [ref=e919]: 虚荣画廊
+        - generic [ref=e920]:
+          - generic [ref=e922]: MadeIn Gallery
+          - generic [ref=e923]: 没顶画廊
+        - generic [ref=e924]:
+          - generic [ref=e926]: ShanghART Gallery
+          - generic [ref=e927]: 香格纳画廊
+        - generic [ref=e928]:
+          - generic [ref=e930]: Pace Gallery
+          - generic [ref=e931]: 佩斯画廊
+        - generic [ref=e932]:
+          - generic [ref=e934]: Contemporary Tokyo
+          - generic [ref=e935]: 当代东京
+        - generic [ref=e936]:
+          - generic [ref=e938]: Red Brick Art Museum
+          - generic [ref=e939]: 红砖美术馆
+        - generic [ref=e940]:
+          - generic [ref=e942]: Tang Contemporary Art
+          - generic [ref=e943]: 当代唐人艺术中心
+        - generic [ref=e944]:
+          - generic [ref=e946]: White Cube
+          - generic [ref=e947]: 白立方
+        - generic [ref=e948]:
+          - generic [ref=e950]: Sotheby's
+          - generic [ref=e951]: 苏富比
+        - generic [ref=e952]:
+          - generic [ref=e954]: China Guardian Auctions
+          - generic [ref=e955]: 中国嘉德
+        - generic [ref=e956]:
+          - generic [ref=e958]: Christie's
+          - generic [ref=e959]: 佳士得
+        - generic [ref=e960]:
+          - generic [ref=e962]: Rong Bao Zhai
+          - generic [ref=e963]: 荣宝斋
+        - generic [ref=e964]:
+          - generic [ref=e966]: CUPPAR Auction
+          - generic [ref=e967]: 开拍国际拍卖
+        - generic [ref=e968]:
+          - generic [ref=e970]: Holly's Auctions
+          - generic [ref=e971]: 华艺国际
+        - generic [ref=e972]:
+          - generic [ref=e974]: Sungari International Auction
+          - generic [ref=e975]: 中贸圣佳国际拍卖
+        - generic [ref=e976]:
+          - generic [ref=e978]: Yongle Auction
+          - generic [ref=e979]: 永乐拍卖
+        - generic [ref=e980]:
+          - generic [ref=e982]: Shanghai Mission Auction (Mingxuan)
+          - generic [ref=e983]: 上海明轩拍卖
+        - generic [ref=e984]:
+          - generic [ref=e986]: Poly Auction
+          - generic [ref=e987]: 保利拍卖
+        - generic [ref=e988]:
+          - generic [ref=e990]: ART021 Shanghai Contemporary Art Fair
+          - generic [ref=e991]: 上海廿一当代艺术博览会
+        - generic [ref=e992]:
+          - generic [ref=e994]: Art Basel
+          - generic [ref=e995]: 巴塞尔艺术展
+        - generic [ref=e996]:
+          - generic [ref=e998]: ART SHENZHEN
+          - generic [ref=e999]: 艺术深圳
+        - generic [ref=e1000]:
+          - generic [ref=e1002]: ART BEIJING
+          - generic [ref=e1003]: 北京当代
+        - generic [ref=e1004]:
+          - generic [ref=e1006]: West Bund Art & Design
+          - generic [ref=e1007]: 西岸艺术与设计博览会
+        - generic [ref=e1008]:
+          - generic [ref=e1010]: Shenzhen International Art Fair
+          - generic [ref=e1011]: 深圳国际艺术博览会
+        - generic [ref=e1012]:
+          - generic [ref=e1014]: Artron
+          - generic [ref=e1015]: 雅昌艺术网
+        - generic [ref=e1016]:
+          - generic [ref=e1017]: LOGO
+          - generic [ref=e1019]: Shenzhen Illustration Association (SIA)
+          - generic [ref=e1020]: 深圳市插画协会
+        - generic [ref=e1021]:
+          - generic [ref=e1023]: Beijing International Book Fair (BIBF)
+          - generic [ref=e1024]: 北京国际图书博览会
+        - generic [ref=e1025]:
+          - generic [ref=e1027]: UNESCO
+          - generic [ref=e1028]: 联合国教科文组织
+        - generic [ref=e1029]:
+          - generic [ref=e1031]: International Centre for Engineering Education (ICEE)
+          - generic [ref=e1032]: 国际工程教育中心
+        - generic [ref=e1033]:
+          - generic [ref=e1035]: POP MART
+          - generic [ref=e1036]: 泡泡玛特
+        - generic [ref=e1037]:
+          - generic [ref=e1039]: JUST.FOTO
+          - generic [ref=e1040]: 大头贴
+        - generic [ref=e1041]:
+          - generic [ref=e1043]: Alor Valley
+          - generic [ref=e1044]: 十里芳菲
+        - generic [ref=e1045]:
+          - generic [ref=e1047]: Brand Bigger
+          - generic [ref=e1048]: BIGGER 艺术书展
+        - generic [ref=e1049]:
+          - generic [ref=e1051]: K11
+          - generic [ref=e1052]: K11
+        - generic [ref=e1053]:
+          - generic [ref=e1055]: Dragon TV
+          - generic [ref=e1056]: 东方卫视
+        - generic [ref=e1057]:
+          - generic [ref=e1059]: Deji Group
+          - generic [ref=e1060]: 德基集团
+        - generic [ref=e1061]:
+          - generic [ref=e1063]: Art Healing Research Institute (IFIC)
+          - generic [ref=e1064]: 艺术疗愈研究院
+    - generic [ref=e1065]:
+      - generic [ref=e1066]:
+        - generic [ref=e1067]: TIMELINE
+        - heading "成长时间轴" [level=2] [ref=e1068]
+        - paragraph [ref=e1069]: 本科与研究生全链路成长时间规划——选择申请路径，横向查看每个阶段的时间节点与需要完成的事件。
+      - generic [ref=e1070]:
+        - tablist [ref=e1071]:
+          - button "本科" [ref=e1072] [cursor=pointer]
+          - button "研究生" [ref=e1073] [cursor=pointer]
+          - button "英国本科 3 年" [ref=e1074] [cursor=pointer]
+          - button "美国本科 4 年" [ref=e1075] [cursor=pointer]
+          - button "长线爬藤" [ref=e1076] [cursor=pointer]
+          - button "当季爬藤" [ref=e1077] [cursor=pointer]
+          - button "全日制" [ref=e1078] [cursor=pointer]
+        - paragraph [ref=e1079]: 英本三年制：大二暑假前完成积累，大三直接进入申请
+        - paragraph [ref=e1080]: 没有大四缓冲：2026 年完成核心实习与材料，2027 年入读硕士并参加 2028 届秋招，2028 年毕业入职。核心策略：唯一核心暑期窗口不能浪费｜Dissertation、申请递交和毕业集中在大三｜硕士入学即进入秋招。
+        - generic [ref=e1081]:
+          - generic [ref=e1082]:
+            - generic [ref=e1083]:
+              - generic [ref=e1084]: 2024.09 — 2025.06
+              - heading "大一全年" [level=4] [ref=e1086]
+            - article [ref=e1087]:
+              - generic [ref=e1088]: 方向探索
+              - generic [ref=e1089]:
+                - generic [ref=e1090]: 升学 / 申请线
+                - list [ref=e1091]:
+                  - listitem [ref=e1092]: 适应英本体系
+                  - listitem [ref=e1093]: Major 与 GPA
+                  - listitem [ref=e1094]: 目标方向初筛
+              - generic [ref=e1095]:
+                - generic [ref=e1096]: 实践 / 就业线
+                - list [ref=e1097]:
+                  - listitem [ref=e1098]: Part-time / Volunteer
+                  - listitem [ref=e1099]: Career Service
+                  - listitem [ref=e1100]: Spring Week 探索
+          - generic [ref=e1101]:
+            - generic [ref=e1102]:
+              - generic [ref=e1103]: 2025.06 — 08
+              - heading "大一暑假" [level=4] [ref=e1105]
+            - article [ref=e1106]:
+              - generic [ref=e1107]: 实习 01
+              - generic [ref=e1108]:
+                - generic [ref=e1109]: 升学 / 申请线
+                - list [ref=e1110]:
+                  - listitem [ref=e1111]: 调研 8–12 项目
+                  - listitem [ref=e1112]: 建立院校 / 教授 List
+                  - listitem [ref=e1113]: 整理推荐关系
+              - generic [ref=e1114]:
+                - generic [ref=e1115]: 实践 / 就业线
+                - list [ref=e1116]:
+                  - listitem [ref=e1117]: 第 1 段正式实习
+                  - listitem [ref=e1118]: 暑研 / 行业实践
+          - generic [ref=e1119]:
+            - generic [ref=e1120]:
+              - generic [ref=e1121]: 2025.09 — 2026.05
+              - heading "大二全年" [level=4] [ref=e1123]
+            - article [ref=e1124]:
+              - generic [ref=e1125]: 申请核心实习
+              - generic [ref=e1126]:
+                - generic [ref=e1127]: 升学 / 申请线
+                - list [ref=e1128]:
+                  - listitem [ref=e1129]: 高阶课与推荐人
+                  - listitem [ref=e1130]: Dissertation 选题
+                  - listitem [ref=e1131]: SOP / 作品集启动
+              - generic [ref=e1132]:
+                - generic [ref=e1133]: 实践 / 就业线
+                - list [ref=e1134]:
+                  - listitem [ref=e1135]: 申请暑期实习
+                  - listitem [ref=e1136]: Career Fair / 面试
+                  - listitem [ref=e1137]: 求职作品集初版
+          - generic [ref=e1138]:
+            - generic [ref=e1139]:
+              - generic [ref=e1140]: 2026.06 — 08
+              - heading "大二暑假" [level=4] [ref=e1142]
+            - article [ref=e1143]:
+              - generic [ref=e1144]: 唯一核心窗口
+              - generic [ref=e1145]:
+                - generic [ref=e1146]: 升学 / 申请线
+                - list [ref=e1147]:
+                  - listitem [ref=e1148]: 主作品集定稿
+                  - listitem [ref=e1149]: SOP / 选校锁定
+                  - listitem [ref=e1150]: 推荐信到位
+                  - listitem [ref=e1151]: 材料必须基本就绪
+              - generic [ref=e1152]:
+                - generic [ref=e1153]: 实践 / 就业线
+                - list [ref=e1154]:
+                  - listitem [ref=e1155]: 第 2 段核心实习
+                  - listitem [ref=e1156]: 转化项目成果
+                  - listitem [ref=e1157]: 争取 Return Offer
+          - generic [ref=e1158]:
+            - generic [ref=e1159]:
+              - generic [ref=e1160]: 2026.09 — 2027.01
+              - heading "大三上" [level=4] [ref=e1162]
+            - article [ref=e1163]:
+              - generic [ref=e1164]: 申请递交
+              - generic [ref=e1165]:
+                - generic [ref=e1166]: 升学 / 申请线
+                - list [ref=e1167]:
+                  - listitem [ref=e1168]: Dissertation 推进
+                  - listitem [ref=e1169]: 分批递交 27 FALL
+                  - listitem [ref=e1170]: 准备院校面试
+              - generic [ref=e1171]:
+                - generic [ref=e1172]: 实践 / 就业线
+                - list [ref=e1173]:
+                  - listitem [ref=e1174]: 维护行业网络
+                  - listitem [ref=e1175]: 完善求职材料
+                  - listitem [ref=e1176]: 明确 2028 岗位
+          - generic [ref=e1177]:
+            - generic [ref=e1178]:
+              - generic [ref=e1179]: 2027.02 — 08
+              - heading "大三下 ＋ 毕业" [level=4] [ref=e1181]
+            - article [ref=e1182]:
+              - generic [ref=e1183]: 结果与衔接
+              - generic [ref=e1184]:
+                - generic [ref=e1185]: 升学 / 申请线
+                - list [ref=e1186]:
+                  - listitem [ref=e1187]: 录取 / 押金 / 签证
+                  - listitem [ref=e1188]: 完成 Dissertation
+                  - listitem [ref=e1189]: 本科毕业
+              - generic [ref=e1190]:
+                - generic [ref=e1191]: 实践 / 就业线
+                - list [ref=e1192]:
+                  - listitem [ref=e1193]: 比较升学与工作选项
+                  - listitem [ref=e1194]: 行前实习
+                  - listitem [ref=e1195]: 秋招材料 80%
+          - generic [ref=e1196]:
+            - generic [ref=e1197]:
+              - generic [ref=e1198]: 2027.09 — 2028.09
+              - heading "硕士 ＋ 就业" [level=4] [ref=e1200]
+            - article [ref=e1201]:
+              - generic [ref=e1202]: 秋招 → 春招 → 入职
+              - generic [ref=e1203]:
+                - generic [ref=e1204]: 升学 / 申请线
+                - list [ref=e1205]:
+                  - listitem [ref=e1206]: 硕士课程 / 毕业项目
+                  - listitem [ref=e1207]: 将课程转为职业案例
+              - generic [ref=e1208]:
+                - generic [ref=e1209]: 实践 / 就业线
+                - list [ref=e1210]:
+                  - listitem [ref=e1211]: 2027 秋：2028 届秋招
+                  - listitem [ref=e1212]: 2028 春：补录 / 春招
+                  - listitem [ref=e1213]: 2028 毕业入职
+        - generic [ref=e1214]:
+          - generic [ref=e1215]:
+            - generic [ref=e1216]: 时间压缩
+            - text: 每个学年权重更高，任务必须前置
+          - generic [ref=e1217]:
+            - generic [ref=e1218]: 核心暑假
+            - text: 大二暑假同时服务申请与就业
+          - generic [ref=e1219]:
+            - generic [ref=e1220]: 最终转化
+            - text: 27 FALL 入学 → 2028 届招聘 → 2028 入职
+        - paragraph [ref=e1221]: 适用于英格兰、威尔士及北爱尔兰常见三年制本科；苏格兰四年制需单独调整。（27 FALL · UK UNDERGRADUATE）
+    - generic [ref=e1222]:
+      - generic [ref=e1223]:
+        - generic [ref=e1224]: COURSE PRODUCTS
+        - heading "课程产品" [level=2] [ref=e1225]
+        - paragraph [ref=e1226]: 从长线旗舰项目到分类课程目录，覆盖学术探索、行业实习与商业实践的完整课程体系。点击任意卡片查看完整介绍。
+      - generic [ref=e1227]:
+        - button "本科" [ref=e1228] [cursor=pointer]
+        - button "研究生" [ref=e1229] [cursor=pointer]
+      - generic [ref=e1230]:
+        - generic [ref=e1231]:
+          - generic [ref=e1232]: Global Talent Visa
+          - heading "艺术精英计划" [level=3] [ref=e1233]
+          - generic [ref=e1234]:
+            - button "艺术生留英计划" [ref=e1235] [cursor=pointer]:
+              - generic [ref=e1236]: UK Centre
+              - generic [ref=e1238]:
+                - generic [ref=e1239]: UK Centre｜艺术生留英 · Global Talent Visa
+                - generic [ref=e1240]: 艺术生留英计划
+                - generic [ref=e1241]: Global Talent Visa
+                - paragraph [ref=e1242]: 面向艺术、设计、建筑、影视、时尚等创意从业者的留英发展方案：以英国全球人才签证（Global Talent Visa）为目标路径——它不是传统「先拿 offer、再由雇主担保」的工签，而是「先认人、再给发展空间」的路线。从艺术家身份规划、展览与媒体报道、推荐信，到移民律师递交与签证落地，完成全链条孵化。
+                - generic [ref=e1243]:
+                  - generic [ref=e1244]: 无需雇主担保
+                  - generic [ref=e1245]: 3 / 5 年转永居
+                  - generic [ref=e1246]: 艺术家身份孵化
+                  - generic [ref=e1247]: 招募中
+            - button "青年艺术家孵化计划" [ref=e1248] [cursor=pointer]:
+              - generic [ref=e1249]: 孵化计划
+              - generic [ref=e1251]:
+                - generic [ref=e1252]: Arts & Humanities｜青年艺术家孵化 · Young Artist Incubation
+                - generic [ref=e1253]: 青年艺术家孵化计划
+                - generic [ref=e1254]: Young Artist Incubation Program
+                - paragraph [ref=e1255]: 为有艺术志向的学生搭建一条从创作身份到展览背书、行业资源与商业化可能的艺术家成长路径：面向具有潜力的青年艺术家及优秀艺术毕业生，以系统性课程与高端定制服务相结合，提供从艺术家身份定位、核心作品创作、驻地与展览策划，到知名度提升、行业资源对接与商业变现的全周期、阶梯式培育路径。
+                - generic [ref=e1256]:
+                  - generic [ref=e1257]: 五大成长资产
+                  - generic [ref=e1258]: 8 大服务模块
+                  - generic [ref=e1259]: 三档成长方案
+                  - generic [ref=e1260]: 招募中
+        - generic [ref=e1261]:
+          - generic [ref=e1262]: Signature Programs
+          - heading "长线旗舰产品" [level=3] [ref=e1263]
+          - generic [ref=e1264]:
+            - button "美国研究生未来精英计划" [ref=e1265] [cursor=pointer]:
+              - generic [ref=e1266]: 长线内容
+              - generic [ref=e1268]:
+                - generic [ref=e1269]: US Graduate Admissions｜研究生申请 · 作品集 + 科研双轨
+                - generic [ref=e1270]: 美国研究生未来精英计划
+                - generic [ref=e1271]: US Graduate Elite Program
+                - paragraph [ref=e1272]: 面向冲刺美国顶尖艺术院校、藤校及综合大学艺术设计/跨学科创意方向的长期规划型产品：以作品集为核心，整合 AI 前沿技术、科研论文、海外教授项目与商业实践，建立更完整、更有说服力的美研申请竞争力。
+                - generic [ref=e1273]:
+                  - generic [ref=e1274]: TOP1 – TOP10 五层级
+                  - generic [ref=e1275]: AI全线覆盖
+                  - generic [ref=e1276]: 科研论文双收获
+                  - generic [ref=e1277]: 招募中
+            - button "英国研究生未来成长计划" [ref=e1278] [cursor=pointer]:
+              - generic [ref=e1279]: 长线内容
+              - generic [ref=e1281]:
+                - generic [ref=e1282]: UK Graduate Admissions｜研究生申请 · 升学就业一体化
+                - generic [ref=e1283]: 英国研究生未来成长计划
+                - generic [ref=e1284]: UK Graduate Program
+                - paragraph [ref=e1285]: 同时面向名校申请与长期职业发展的升学就业一体化产品：以个性化作品集和英国研究生申请为基础，向前加入专业定位与项目规划，向后衔接商业实践、岗位制实习、求职作品集与企业内推。
+                - generic [ref=e1286]:
+                  - generic [ref=e1287]: TOP1 – TOP9 多层级
+                  - generic [ref=e1288]: 升学就业一体化
+                  - generic [ref=e1289]: 5个项目建高匹配作品集
+                  - generic [ref=e1290]: 招募中
+            - button "香港研究生升学计划" [ref=e1291] [cursor=pointer]:
+              - generic [ref=e1292]: 长线内容
+              - generic [ref=e1294]:
+                - generic [ref=e1295]: HK Graduate Admissions｜研究生申请 · 常规计划 + 学霸计划
+                - generic [ref=e1296]: 香港研究生升学计划
+                - generic [ref=e1297]: Hong Kong Graduate Program
+                - paragraph [ref=e1298]: 以作品集为核心，结合目标院校定位、专业能力补强、个性化项目、香港高校夏冬校、商业实践、实习推荐和全流程申请服务的港研升学产品。分为常规计划与学霸计划两条路径：常规计划面向需要系统建立专业与作品集能力的学生，学霸计划面向基础较强、目标明确、时间有限的学生。
+                - generic [ref=e1299]:
+                  - generic [ref=e1300]: 常规计划 · 学霸计划
+                  - generic [ref=e1301]: TOP3 – TOP8 分层
+                  - generic [ref=e1302]: 作品集+商业实践+实习
+                  - generic [ref=e1303]: 招募中
+        - generic [ref=e1304]:
+          - generic [ref=e1305]: Program Catalog
+          - heading "课程目录" [level=3] [ref=e1306]
+          - generic [ref=e1307]:
+            - button "就业实习课程 · 岗位实习与导师带训" [ref=e1308] [cursor=pointer]:
+              - generic [ref=e1309]: 90 门课程
+              - generic [ref=e1311]:
+                - generic [ref=e1312]: Employment Track｜岗位实习 × 行业导师带训
+                - generic [ref=e1313]: 就业实习课程 · 岗位实习与导师带训
+                - generic [ref=e1314]: Career Internship Program
+                - paragraph [ref=e1315]: 面向希望获得真实行业经验、积累作品集与推荐信的学生，通过岗位制实地实习与线上行业导师带训两种路径，进入头部大厂、行业名企与创意工作室的真实项目。
+                - generic [ref=e1316]:
+                  - generic [ref=e1317]: 岗位制实习
+                  - generic [ref=e1318]: 行业导师带训
+                  - generic [ref=e1319]: 真实项目产出
+                  - generic [ref=e1320]: 招募中
+            - button "海外冬夏校课程 · 顶尖院校在地学习" [ref=e1321] [cursor=pointer]:
+              - generic [ref=e1322]: 9 门课程
+              - generic [ref=e1324]:
+                - generic [ref=e1325]: Academic Track｜海外院校冬夏校
+                - generic [ref=e1326]: 海外冬夏校课程 · 顶尖院校在地学习
+                - generic [ref=e1327]: Overseas Summer & Winter School
+                - paragraph [ref=e1328]: 走进海外顶尖院校的官方冬夏校项目，在真实校园环境中体验前沿学术方向，积累院校认可的学术背景与教授推荐资源。
+                - generic [ref=e1329]:
+                  - generic [ref=e1330]: 院校官方项目
+                  - generic [ref=e1331]: 在地学习
+                  - generic [ref=e1332]: 官方结业证明
+                  - generic [ref=e1333]: 招募中
+            - button "商业实践课程 · 真实商业项目实战" [ref=e1334] [cursor=pointer]:
+              - generic [ref=e1335]: 5 门课程
+              - generic [ref=e1337]:
+                - generic [ref=e1338]: Practice Track｜真实商业项目实战
+                - generic [ref=e1339]: 商业实践课程 · 真实商业项目实战
+                - generic [ref=e1340]: Business Practice Program
+                - paragraph [ref=e1341]: 以真实企业命题为起点，在导师带领下完成从市场调研、方案设计到路演展示的完整商业实践闭环，锻炼商业思维与团队协作能力。
+                - generic [ref=e1342]:
+                  - generic [ref=e1343]: 真实命题
+                  - generic [ref=e1344]: 路演展示
+                  - generic [ref=e1345]: 团队协作
+                  - generic [ref=e1346]: 招募中
+            - button "海外大师课程 · 教授视角与方法论" [ref=e1347] [cursor=pointer]:
+              - generic [ref=e1348]: 10 门课程
+              - generic [ref=e1350]:
+                - generic [ref=e1351]: Academic Track｜海外教授大师课
+                - generic [ref=e1352]: 海外大师课程 · 教授视角与方法论
+                - generic [ref=e1353]: Overseas Masterclass
+                - paragraph [ref=e1354]: 由海外院校教授亲自授课，围绕特定学术方向展开深度方法论训练，为学生带来教授视角的专业指导与推荐信资源。
+                - generic [ref=e1355]:
+                  - generic [ref=e1356]: 教授亲授
+                  - generic [ref=e1357]: 方法论训练
+                  - generic [ref=e1358]: 推荐信资源
+                  - generic [ref=e1359]: 招募中
+        - generic [ref=e1360]:
+          - generic [ref=e1361]: Overseas Programs
+          - heading "境外项目" [level=3] [ref=e1362]
+          - button "境外项目" [ref=e1364] [cursor=pointer]:
+            - generic [ref=e1365]: 5 门课程
+            - generic [ref=e1367]:
+              - generic [ref=e1368]: Overseas Programs｜境外项目
+              - generic [ref=e1369]: 境外项目
+              - generic [ref=e1370]: Overseas Program
+              - paragraph [ref=e1371]: 共 5 门境外项目课程，分为境外访校（新加坡 / 英国 / 美国）与境外夏校（RISD / UAL）两类，行程 7–14 天。
+              - generic [ref=e1372]:
+                - generic [ref=e1373]: 5 门课程
+                - generic [ref=e1374]: 境外访校 3 · 境外夏校 2
+                - generic [ref=e1375]: 本科 / 研究生
+        - generic [ref=e1376]:
+          - generic [ref=e1377]: Art Frontier Lectures
+          - heading "艺术前沿讯息讲座" [level=3] [ref=e1378]
+          - button "艺术前沿讯息讲座" [ref=e1380] [cursor=pointer]:
+            - generic [ref=e1381]: 11 门课程
+            - generic [ref=e1383]:
+              - generic [ref=e1384]: Art Frontier Lectures｜艺术前沿讯息讲座
+              - generic [ref=e1385]: 艺术前沿讯息讲座
+              - generic [ref=e1386]: Art Frontier Lecture
+              - paragraph [ref=e1387]: 覆盖 lecture 25 与 lecture 26 两季共 11 门海外院校领航课，由 Camberwell、RCA、CSM、UCL、Stanford、RISD、LCC、Penn 等院校教授线上授课，地方导师总结。
+              - generic [ref=e1388]:
+                - generic [ref=e1389]: 11 门课程
+                - generic [ref=e1390]: lecture 25 / lecture 26
+                - generic [ref=e1391]: 线上
+                - generic [ref=e1392]: 本科 / 研究生
+  - contentinfo [ref=e1394]:
+    - generic [ref=e1395]:
+      - generic [ref=e1396]:
+        - generic [ref=e1397]: SFK 艺术人文科系
+        - paragraph [ref=e1399]: 插画 × 纯艺术 · 本科爬藤与升学就业规划
+      - heading "主要内容" [level=3] [ref=e1401]
+      - generic [ref=e1402]:
+        - heading "科系板块" [level=3] [ref=e1403]
+        - link "关于艺术人文" [ref=e1404] [cursor=pointer]:
+          - /url: "#/home"
+        - link "OFFER成果" [ref=e1405] [cursor=pointer]:
+          - /url: "#/home/offers"
+        - link "导师团队" [ref=e1406] [cursor=pointer]:
+          - /url: "#/home/instructors"
+        - link "校企资源" [ref=e1407] [cursor=pointer]:
+          - /url: "#/home/resources"
+        - link "成长时间轴" [ref=e1408] [cursor=pointer]:
+          - /url: "#/home/timeline"
+        - link "课程产品" [ref=e1409] [cursor=pointer]:
+          - /url: "#/home/courses"
+      - generic [ref=e1410]:
+        - heading "规划咨询" [level=3] [ref=e1411]
+        - link "admissions@sfk-edu.demo" [ref=e1412] [cursor=pointer]:
+          - /url: mailto:admissions@sfk-edu.demo
+        - link "400-000-0000" [ref=e1413] [cursor=pointer]:
+          - /url: tel:400-000-0000
+    - generic [ref=e1414]: © 2026 SFK 艺术人文科系 · 本页面为课程与案例演示站点，数据仅供展示
+  - button "开启影像声音" [ref=e1415] [cursor=pointer]

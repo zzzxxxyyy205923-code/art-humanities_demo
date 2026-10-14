@@ -2,111 +2,876 @@
   "speedPxPerSec": 47,
   "partners": [
     {
-      "nameEn": "PARTNER NAME 01",
-      "nameCn": "校企名称（待提供）",
-      "logo": "",
-      "intro": "合作内容待提供",
+      "nameEn": "Central Academy of Fine Arts (CAFA)",
+      "nameCn": "中央美术学院",
+      "logo": "assets/img/resources/central-academy-of-fine-arts-cafa.jpg",
+      "intro": "中央美术学院（CAFA）始建于 1918 年，坐落北京，是中国历史悠久的顶尖美术学府，教育部直属双一流高校，立足本土文化，面向国际，持续推动艺术教育、创作与学术研究。",
       "collab": [
-        "合作方向待提供"
+        "冬夏校合作"
       ]
     },
     {
-      "nameEn": "PARTNER NAME 02",
-      "nameCn": "校企名称（待提供）",
-      "logo": "",
-      "intro": "合作内容待提供",
+      "nameEn": "China Academy of Art (CAA)",
+      "nameCn": "中国美术学院",
+      "logo": "assets/img/resources/china-academy-of-art-caa.png",
+      "intro": "中国美术学院（CAA）始建于 1928 年，坐落杭州，教育部直属双一流高校，中国第一所综合性国立高等美术院校，立足东方艺术文脉，持续推动艺术创作、设计创新与跨媒介学术研究，构建开放的国际艺术对话平台。",
       "collab": [
-        "合作方向待提供"
+        "冬夏校合作"
       ]
     },
     {
-      "nameEn": "PARTNER NAME 03",
-      "nameCn": "校企名称（待提供）",
-      "logo": "",
-      "intro": "合作内容待提供",
+      "nameEn": "Guangzhou Academy of Fine Arts (GAFA)",
+      "nameCn": "广州美术学院",
+      "logo": "assets/img/resources/guangzhou-academy-of-fine-arts-gafa.png",
+      "intro": "华南唯一独立建制高等美术学府，1953年创建，立足大湾区",
       "collab": [
-        "合作方向待提供"
+        "艺术精英计划",
+        "就业力实习实训"
       ]
     },
     {
-      "nameEn": "PARTNER NAME 04",
-      "nameCn": "校企名称（待提供）",
-      "logo": "",
-      "intro": "合作内容待提供",
+      "nameEn": "Sichuan Fine Arts Institute (SCFAI)",
+      "nameCn": "四川美术学院",
+      "logo": "assets/img/resources/sichuan-fine-arts-institute-scfai.jpg",
+      "intro": "重庆多科性学术研究型美院，1940年创办，美术学与设计学并重",
       "collab": [
-        "合作方向待提供"
+        "艺术精英计划"
       ]
     },
     {
-      "nameEn": "PARTNER NAME 05",
-      "nameCn": "校企名称（待提供）",
-      "logo": "",
-      "intro": "合作内容待提供",
+      "nameEn": "LuXun Academy of Fine Arts (LAFA)",
+      "nameCn": "鲁迅美术学院",
+      "logo": "assets/img/resources/luxun-academy-of-fine-arts-lafa.png",
+      "intro": "辽宁省属高等美术学府，源于1938年延安鲁艺，新中国美术摇篮",
       "collab": [
-        "合作方向待提供"
+        "艺术精英计划"
       ]
     },
     {
-      "nameEn": "PARTNER NAME 06",
-      "nameCn": "校企名称（待提供）",
-      "logo": "",
-      "intro": "合作内容待提供",
+      "nameEn": "Tianjin Academy of Fine Arts (TAFA)",
+      "nameCn": "天津美术学院",
+      "logo": "assets/img/resources/tianjin-academy-of-fine-arts-tafa.webp",
+      "intro": "独立设置八所美院之一，1906年办学，首设人工智能艺术学院",
       "collab": [
-        "合作方向待提供"
+        "艺术精英计划"
       ]
     },
     {
-      "nameEn": "PARTNER NAME 07",
-      "nameCn": "校企名称（待提供）",
-      "logo": "",
-      "intro": "合作内容待提供",
+      "nameEn": "Hubei Institute of Fine Arts (HIFA)",
+      "nameCn": "湖北美术学院",
+      "logo": "assets/img/resources/hubei-institute-of-fine-arts-hifa.png",
+      "intro": "中部地区唯一独立设置高等美院，源于1920年武昌美术学校",
       "collab": [
-        "合作方向待提供"
+        "艺术精英计划"
       ]
     },
     {
-      "nameEn": "PARTNER NAME 08",
-      "nameCn": "校企名称（待提供）",
+      "nameEn": "Xi’an Academy of Fine Arts (XAFA)",
+      "nameCn": "西安美术学院",
       "logo": "",
-      "intro": "合作内容待提供",
+      "intro": "陕西省属美术高校，1949年建校，突出西部特色与周秦汉唐传统",
       "collab": [
-        "合作方向待提供"
+        "艺术精英计划"
       ]
     },
     {
-      "nameEn": "PARTNER NAME 09",
-      "nameCn": "校企名称（待提供）",
-      "logo": "",
-      "intro": "合作内容待提供",
+      "nameEn": "Nanjing University of the Arts",
+      "nameCn": "南京艺术学院",
+      "logo": "assets/img/resources/nanjing-university-of-the-arts.jpg",
+      "intro": "文旅部与江苏省共建综合性艺术院校，源自1912年上海美专",
       "collab": [
-        "合作方向待提供"
+        "艺术精英计划"
       ]
     },
     {
-      "nameEn": "PARTNER NAME 10",
-      "nameCn": "校企名称（待提供）",
-      "logo": "",
-      "intro": "合作内容待提供",
+      "nameEn": "Communication University of China",
+      "nameCn": "中国传媒大学",
+      "logo": "assets/img/resources/communication-university-of-china.jpg",
+      "intro": "中国传媒大学（CUC）始建于 1954 年，位于北京，教育部直属双一流高校，是国内传媒与视听领域的核心高等学府，立足媒介文化研究，面向全球开展传播、艺术与技术方向的学术探索。",
       "collab": [
-        "合作方向待提供"
+        "冬夏校合作"
       ]
     },
     {
-      "nameEn": "PARTNER NAME 11",
-      "nameCn": "校企名称（待提供）",
-      "logo": "",
-      "intro": "合作内容待提供",
+      "nameEn": "Hong Kong Baptist University",
+      "nameCn": "香港浸会大学",
+      "logo": "assets/img/resources/hong-kong-baptist-university.jpg",
+      "intro": "1956年创校的香港公立大学，全人教育，设艺术与传理等七学院",
       "collab": [
-        "合作方向待提供"
+        "冬夏校合作"
       ]
     },
     {
-      "nameEn": "PARTNER NAME 12",
-      "nameCn": "校企名称（待提供）",
-      "logo": "",
-      "intro": "合作内容待提供",
+      "nameEn": "Royal College of Art (RCA)",
+      "nameCn": "英国皇家艺术学院",
+      "logo": "assets/img/resources/royal-college-of-art-rca.jpg",
+      "intro": "伦敦皇家艺术学院（RCA），全球顶尖全研究生艺术设计学府，常年稳居 QS 艺术设计学科世界首位。",
       "collab": [
-        "合作方向待提供"
+        "冬夏校合作",
+        "海外教授审核",
+        "艺术前沿讯息讲座",
+        "境外项目"
+      ]
+    },
+    {
+      "nameEn": "University of the Arts London (UAL)",
+      "nameCn": "伦敦艺术大学",
+      "logo": "assets/img/resources/university-of-the-arts-london-ual.jpg",
+      "intro": "伦敦艺术大学（UAL）坐落英国伦敦，由六所历史悠久的艺术学院联合组成，是全球顶尖公立创意大学，依托伦敦丰富的文化生态，汇聚全球创意学习者与实践者。",
+      "collab": [
+        "冬夏校合作",
+        "境外项目",
+        "艺术前沿讯息讲座",
+        "海外教授审核"
+      ]
+    },
+    {
+      "nameEn": "The Glasgow School of Art (GSA)",
+      "nameCn": "格拉斯哥艺术学院",
+      "logo": "assets/img/resources/the-glasgow-school-of-art-gsa.jpg",
+      "intro": "1845年创校的英国独立艺术学院，以工作室制实践教学为特色",
+      "collab": [
+        "艺术前沿讯息讲座",
+        "海外教授审核",
+        "境外项目"
+      ]
+    },
+    {
+      "nameEn": "Goldsmiths",
+      "nameCn": "伦敦大学金史密斯学院",
+      "logo": "assets/img/resources/goldsmiths.jpg",
+      "intro": "伦敦大学成员院校，单一校区位于伦敦东南，创意艺术与传媒见长",
+      "collab": [
+        "境外项目",
+        "艺术前沿讯息讲座",
+        "海外教授审核"
+      ]
+    },
+    {
+      "nameEn": "Rhode Island School of Design (RISD)",
+      "nameCn": "罗德岛设计学院",
+      "logo": "assets/img/resources/rhode-island-school-of-design-risd.jpg",
+      "intro": "罗德岛设计学院（RISD）创立于 1877 年，坐落于美国普罗维登斯，是全球极具影响力的顶尖私立艺术学府，拥有深厚的美育底蕴与国际化创意育人体系。",
+      "collab": [
+        "艺术精英计划",
+        "艺术前沿讯息讲座",
+        "境外项目",
+        "海外教授审核"
+      ]
+    },
+    {
+      "nameEn": "School of the Art Institute of Chicago (SAIC)",
+      "nameCn": "芝加哥艺术学院",
+      "logo": "assets/img/resources/school-of-the-art-institute-of-chicago-saic.jpg",
+      "intro": "1866年创校的博物馆附属学院，艺术与设计并重，自主学习",
+      "collab": [
+        "艺术前沿讯息讲座",
+        "海外教授审核"
+      ]
+    },
+    {
+      "nameEn": "ArtCenter College of Design",
+      "nameCn": "艺术中心设计学院",
+      "logo": "assets/img/resources/artcenter-college-of-design.jpg",
+      "intro": "1930年创办的设计学院，以交通工具设计著称，重产学合作",
+      "collab": [
+        "艺术前沿讯息讲座",
+        "海外教授审核"
+      ]
+    },
+    {
+      "nameEn": "Tokyo University of the Arts",
+      "nameCn": "东京艺术大学",
+      "logo": "assets/img/resources/tokyo-university-of-the-arts.jpg",
+      "intro": "1887年创立，日本唯一的国立艺术大学，美术与音乐并重",
+      "collab": [
+        "艺术前沿讯息讲座",
+        "海外教授审核"
+      ]
+    },
+    {
+      "nameEn": "Tama Art University",
+      "nameCn": "多摩美术大学",
+      "logo": "assets/img/resources/tama-art-university.jpg",
+      "intro": "1935年创校的私立美术大学，以“自由与意力”为建学理念",
+      "collab": [
+        "艺术前沿讯息讲座",
+        "海外教授审核"
+      ]
+    },
+    {
+      "nameEn": "Musashino Art University",
+      "nameCn": "武藏野美术大学",
+      "logo": "assets/img/resources/musashino-art-university.jpg",
+      "intro": "1929年创校的私立美术大学，以培养有教养的美术家为宗旨",
+      "collab": [
+        "艺术前沿讯息讲座",
+        "海外教授审核"
+      ]
+    },
+    {
+      "nameEn": "Columbia University",
+      "nameCn": "哥伦比亚大学",
+      "logo": "assets/img/resources/columbia-university.jpg",
+      "intro": "哥伦比亚大学坐落纽约，依托城市丰富的创意生态，在数字艺术、新兴媒介与跨媒体创作领域构建前沿的艺术研究与实践平台，探索技术与艺术融合的创新表达。",
+      "collab": [
+        "艺术前沿讯息讲座",
+        "海外教授审核",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "Brown University",
+      "nameCn": "布朗大学",
+      "logo": "assets/img/resources/brown-university.jpg",
+      "intro": "1764年创办的常春藤研究型大学，以开放式课程体系著称",
+      "collab": [
+        "艺术精英计划",
+        "艺术前沿讯息讲座",
+        "海外教授审核"
+      ]
+    },
+    {
+      "nameEn": "New York University (NYU)",
+      "nameCn": "纽约大学",
+      "logo": "assets/img/resources/new-york-university-nyu.jpg",
+      "intro": "纽约大学（NYU）始建于 1831 年，扎根纽约曼哈顿，是世界顶尖私立综合性研究大学，拥有覆盖全球的校区与学术网络，倡导无边界的国际化治学理念。",
+      "collab": [
+        "艺术精英计划",
+        "艺术前沿讯息讲座",
+        "海外教授审核"
+      ]
+    },
+    {
+      "nameEn": "University of California",
+      "nameCn": "加利福尼亚大学洛杉矶分校",
+      "logo": "assets/img/resources/university-of-california.jpg",
+      "intro": "加利福尼亚大学洛杉矶分校（UCLA），美国顶尖公立常春藤研究型大学，坐落洛杉矶西木区，其艺术与建筑学院、戏剧电影电视学院享誉全球，依托好莱坞区位优势深耕跨媒介创意与前沿设计研究。",
+      "collab": [
+        "艺术前沿讯息讲座",
+        "海外教授审核"
+      ]
+    },
+    {
+      "nameEn": "Stanford University",
+      "nameCn": "斯坦福大学",
+      "logo": "assets/img/resources/stanford-university.jpg",
+      "intro": "斯坦福大学（Stanford University）于 1891 年正式开学，坐落美国加州硅谷腹地，是全球顶尖私立研究型大学，秉持自由探索的治学精神，融合学术研究与创新实践，持续推动跨领域知识突破。",
+      "collab": [
+        "艺术前沿讯息讲座",
+        "海外教授审核"
+      ]
+    },
+    {
+      "nameEn": "University of Oxford",
+      "nameCn": "牛津大学",
+      "logo": "assets/img/resources/university-of-oxford.jpg",
+      "intro": "英语世界最古老的大学，书院制研究型大学，重导师小班教学",
+      "collab": [
+        "境外项目",
+        "艺术前沿讯息讲座",
+        "海外教授审核",
+        "海外大师课",
+        "冬夏校合作"
+      ]
+    },
+    {
+      "nameEn": "University College London (UCL)",
+      "nameCn": "伦敦大学学院",
+      "logo": "assets/img/resources/university-college-london-ucl.jpg",
+      "intro": "伦敦大学学院（UCL），1826 年建校于伦敦，世界顶尖的综合性研究学府，也是英国 G5 超级精英大学之一。",
+      "collab": [
+        "冬夏校合作",
+        "海外大师课",
+        "艺术前沿讯息讲座",
+        "海外教授审核"
+      ]
+    },
+    {
+      "nameEn": "University of Edinburgh",
+      "nameCn": "爱丁堡大学",
+      "logo": "assets/img/resources/university-of-edinburgh.jpg",
+      "intro": "1583年创立的苏格兰古典大学，英国第六古老，学科齐全",
+      "collab": [
+        "艺术前沿讯息讲座",
+        "海外教授审核"
+      ]
+    },
+    {
+      "nameEn": "Peking University",
+      "nameCn": "北京大学",
+      "logo": "assets/img/resources/peking-university.jpg",
+      "intro": "1898年创立于北京，前身为京师大学堂，国立综合性大学",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "Academy of\n  Arts & Design",
+      "nameCn": "清华大学美术学院",
+      "logo": "assets/img/resources/academy-of-arts-and-design.jpg",
+      "intro": "清华大学下属艺术设计学院，以艺科融合为办学与教育特色",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "The Chinese University of Hong Kong (CUHK)",
+      "nameCn": "香港中文大学",
+      "logo": "assets/img/resources/the-chinese-university-of-hong-kong-cuhk.jpg",
+      "intro": "1963年创校的研究型综合大学，以书院制和中英兼重为特色",
+      "collab": [
+        "艺术精英计划",
+        "艺术前沿讯息讲座"
+      ]
+    },
+    {
+      "nameEn": "The Palace Museum",
+      "nameCn": "故宫博物院",
+      "logo": "assets/img/resources/the-palace-museum.jpg",
+      "intro": "1925年成立于明清皇宫，以清宫旧藏为基础的综合性博物馆",
+      "collab": [
+        "商业实践课程",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "Suzhou Museum",
+      "nameCn": "苏州博物馆",
+      "logo": "assets/img/resources/suzhou-museum.png",
+      "intro": "1960年建馆的苏州地方综合性博物馆，新馆由贝聿铭设计",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "Shenzhen Art Museum",
+      "nameCn": "深圳美术馆",
+      "logo": "assets/img/resources/shenzhen-art-museum.jpg",
+      "intro": "深圳最早的艺术品展览机构，学术方向立足本土、面向世界",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "Zhejiang Provincial Museum",
+      "nameCn": "浙江省博物馆",
+      "logo": "",
+      "intro": "1929年创建，浙江省规模最大的综合性人文科学博物馆",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "Power Station of Art (PSA)",
+      "nameCn": "上海当代艺术博物馆",
+      "logo": "assets/img/resources/power-station-of-art-psa.jpg",
+      "intro": "中国大陆首家国有当代艺术博物馆，亦为上海双年展主场馆",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "National Art Museum of China (NAMOC)",
+      "nameCn": "中国美术馆",
+      "logo": "assets/img/resources/national-art-museum-of-china-namoc.jpg",
+      "intro": "国家造型艺术博物馆，以收藏展示中国近现代至当代美术为重点",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "Tsinghua University Art Museum (TAM)",
+      "nameCn": "清华大学艺术博物馆",
+      "logo": "assets/img/resources/tsinghua-university-art-museum-tam.jpg",
+      "intro": "2016年开馆，以清华美院旧藏为基础的高校艺术博物馆",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "Suzhou Jinji Lake Art Museum",
+      "nameCn": "苏州金鸡湖美术馆",
+      "logo": "assets/img/resources/suzhou-jinji-lake-art-museum.png",
+      "intro": "2012年开馆的公益性美术馆，以当代艺术研究与展示为主",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "West Bund Museum",
+      "nameCn": "西岸美术馆",
+      "logo": "assets/img/resources/west-bund-museum.jpg",
+      "intro": "2019年开放，与法国蓬皮杜中心五年展陈合作的文化场馆",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "Ullens Center for Contemporary Art (UCCA)",
+      "nameCn": "UCCA尤伦斯当代艺术中心",
+      "logo": "assets/img/resources/ullens-center-for-contemporary-art-ucca.jpg",
+      "intro": "2007年创建于北京798艺术区的非营利当代艺术机构",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "Museum of Art Pudong (MAP)",
+      "nameCn": "浦东美术馆",
+      "logo": "assets/img/resources/museum-of-art-pudong-map.jpg",
+      "intro": "2021年开放的浦东滨江美术馆，以国际艺术展示交流为主",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "Long Museum",
+      "nameCn": "龙美术馆",
+      "logo": "assets/img/resources/long-museum.jpg",
+      "intro": "刘益谦王薇夫妇创办的私立美术馆，古今中西艺术对比研究展示",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "PIFO Gallery",
+      "nameCn": "偏锋画廊",
+      "logo": "assets/img/resources/pifo-gallery.jpg",
+      "intro": "2006年创办的北京798画廊，专注抽象艺术与具象绘画",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "Hive Center for Contemporary Art",
+      "nameCn": "蜂巢当代艺术中心",
+      "logo": "assets/img/resources/hive-center-for-contemporary-art.jpg",
+      "intro": "北京798当代艺术机构，蜂巢·生成项目扶持年轻艺术家创作",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "Platform China",
+      "nameCn": "站台中国",
+      "logo": "assets/img/resources/platform-china.jpg",
+      "intro": "北京798当代艺术机构，2005年创办，具实验性与开放性",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "Guardian Art Center",
+      "nameCn": "嘉德艺术中心",
+      "logo": "assets/img/resources/guardian-art-center.jpg",
+      "intro": "2017年运营的王府井艺术综合体，集会展、拍卖、仓储、酒店",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "Today Art Museum",
+      "nameCn": "今日美术馆",
+      "logo": "assets/img/resources/today-art-museum.png",
+      "intro": "今日美术馆，2002 年成立于北京，中国首家民营非营利当代美术馆，致力于当代艺术研究与国际文化对话。",
+      "collab": [
+        "商业实践课程",
+        "冬夏校合作",
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "Vanities Gallery",
+      "nameCn": "虚荣画廊",
+      "logo": "assets/img/resources/vanities-gallery.jpeg",
+      "intro": "法中当代艺术画廊，总部设于巴黎，致力于亚欧艺术交流与推广",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "MadeIn Gallery",
+      "nameCn": "没顶画廊",
+      "logo": "assets/img/resources/madein-gallery.jpg",
+      "intro": "上海当代艺术画廊，2014年由没顶公司创办，推广当代艺术",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "ShanghART Gallery",
+      "nameCn": "香格纳画廊",
+      "logo": "assets/img/resources/shanghart-gallery.jpg",
+      "intro": "上海当代艺术画廊，1996年创办，专注中国当代艺术与推广",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "Pace Gallery",
+      "nameCn": "佩斯画廊",
+      "logo": "assets/img/resources/pace-gallery.jpg",
+      "intro": "1960年创立的全球现当代艺术画廊，代理约八十位艺术家",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "Contemporary Tokyo",
+      "nameCn": "当代东京",
+      "logo": "assets/img/resources/contemporary-tokyo.jpg",
+      "intro": "东京当代艺术机构，深耕日本当代艺术二十余年，涉版权授权",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "Red Brick Art Museum",
+      "nameCn": "红砖美术馆",
+      "logo": "assets/img/resources/red-brick-art-museum.jpg",
+      "intro": "红砖美术馆（Red Brick Art Museum），由董豫赣设计的北京当代艺术美术馆，以中式园林与红砖建筑为空间特色，专注当代艺术、新媒体与跨媒介展览实践。",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "Tang Contemporary Art",
+      "nameCn": "当代唐人艺术中心",
+      "logo": "assets/img/resources/tang-contemporary-art.jpg",
+      "intro": "1997年创立于曼谷的当代艺术机构，推动亚洲与国际艺术交流",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "White Cube",
+      "nameCn": "白立方",
+      "logo": "assets/img/resources/white-cube.jpg",
+      "intro": "1993年创立于伦敦的当代艺术画廊，代理国际艺术家及遗产",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "Sotheby's",
+      "nameCn": "苏富比",
+      "logo": "assets/img/resources/sotheby-s.jpg",
+      "intro": "1744年创立于伦敦的国际艺术拍卖行，全球网络与多品类拍卖",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "China Guardian Auctions",
+      "nameCn": "中国嘉德",
+      "logo": "assets/img/resources/china-guardian-auctions.jpg",
+      "intro": "创立于1993年的综合性拍卖公司，全品类中国文物艺术品拍卖",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "Christie's",
+      "nameCn": "佳士得",
+      "logo": "assets/img/resources/christie-s.jpg",
+      "intro": "1766年创立的国际拍卖行，覆盖八十余类艺术与奢侈品拍卖",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "Rong Bao Zhai",
+      "nameCn": "荣宝斋",
+      "logo": "assets/img/resources/rong-bao-zhai.jpg",
+      "intro": "1672年创立的中华老字号文化企业，兼营书画经营与木版水印",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "CUPPAR Auction",
+      "nameCn": "开拍国际拍卖",
+      "logo": "assets/img/resources/cuppar-auction.jpg",
+      "intro": "2020年成立的文物艺术品拍卖公司，秉持年轻专业国际化理念",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "Holly's Auctions",
+      "nameCn": "华艺国际",
+      "logo": "assets/img/resources/holly-s-auctions.jpeg",
+      "intro": "1993年创立于广州的拍卖企业，涵盖书画瓷杂现当代等门类",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "Sungari International Auction",
+      "nameCn": "中贸圣佳国际拍卖",
+      "logo": "assets/img/resources/sungari-international-auction.jpeg",
+      "intro": "1995年创立、立足北京的拍卖行，涵盖书画古籍善本瓷杂",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "Yongle Auction",
+      "nameCn": "永乐拍卖",
+      "logo": "assets/img/resources/yongle-auction.jpeg",
+      "intro": "2005年始建，具一类文物拍卖资质，涵盖书画古董现当代艺术",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "Shanghai Mission Auction (Mingxuan)",
+      "nameCn": "上海明轩拍卖",
+      "logo": "assets/img/resources/shanghai-mission-auction-mingxuan.jpg",
+      "intro": "2013年创立于上海的拍卖行，专注中国传统书画的收藏与拍卖",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "Poly Auction",
+      "nameCn": "保利拍卖",
+      "logo": "assets/img/resources/poly-auction.jpg",
+      "intro": "2005年成立的保利集团旗下拍卖平台，多门类中国艺术品拍卖",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "ART021 Shanghai Contemporary Art Fair",
+      "nameCn": "上海廿一当代艺术博览会",
+      "logo": "assets/img/resources/art021-shanghai-contemporary-art-fair.jpg",
+      "intro": "2013年创办于上海的当代艺术博览会，汇集全球画廊与机构",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "Art Basel",
+      "nameCn": "巴塞尔艺术展",
+      "logo": "assets/img/resources/art-basel.jpg",
+      "intro": "1970年创立的国际艺术展会，设巴塞尔香港巴黎迈阿密四站",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "ART SHENZHEN",
+      "nameCn": "艺术深圳",
+      "logo": "assets/img/resources/art-shenzhen.jpg",
+      "intro": "2013年创办的当代艺博会，文博会重点项目，秉持全球视野",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "ART BEIJING",
+      "nameCn": "北京当代",
+      "logo": "assets/img/resources/art-beijing.png",
+      "intro": "2018年创办的当代艺术博览会，设多元单元，联动北京艺术季",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训",
+        "商业实践课程"
+      ]
+    },
+    {
+      "nameEn": "West Bund Art\n  & Design",
+      "nameCn": "西岸艺术与设计博览会",
+      "logo": "assets/img/resources/west-bund-art-and-design.jpg",
+      "intro": "2014年创办于上海的艺术设计博览会，多馆联动呈现当代艺术",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "Shenzhen International Art Fair",
+      "nameCn": "深圳国际艺术博览会",
+      "logo": "assets/img/resources/shenzhen-international-art-fair.jpg",
+      "intro": "2012年创办的深圳首个大型原创艺术博览会，邀全球画廊参展",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "Artron",
+      "nameCn": "雅昌艺术网",
+      "logo": "assets/img/resources/artron.jpeg",
+      "intro": "中国艺术品资讯门户，2000年创办，发布AMI市场指数",
+      "collab": [
+        "艺术精英计划",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "Shenzhen Illustration Association (SIA)",
+      "nameCn": "深圳市插画协会",
+      "logo": "",
+      "intro": "2007年成立的首家插画行业协会，长期主办CIB双年展",
+      "collab": [
+        "商业实践课程",
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "Beijing International Book Fair (BIBF)",
+      "nameCn": "北京国际图书博览会",
+      "logo": "assets/img/resources/beijing-international-book-fair-bibf.jpg",
+      "intro": "1986年创办的国际书展，从事版权贸易与出版物进出口贸易",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "UNESCO",
+      "nameCn": "联合国教科文组织",
+      "logo": "assets/img/resources/unesco.jpg",
+      "intro": "1945年成立的联合国专门机构，教科文领域推动世界遗产保护",
+      "collab": [
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "International Centre for Engineering Education (ICEE)",
+      "nameCn": "国际工程教育中心",
+      "logo": "assets/img/resources/international-centre-for-engineering-education-icee.png",
+      "intro": "教科文二类机构，2016年成立，中国工程院与清华大学共建",
+      "collab": [
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "POP MART",
+      "nameCn": "泡泡玛特",
+      "logo": "assets/img/resources/pop-mart.jpg",
+      "intro": "POP MART 泡泡玛特，国内头部潮流文化娱乐集团，深耕潮玩 IP 孵化、艺术家合作与潮玩零售，推动潮流玩具、数字收藏与青年消费文化创意生态。",
+      "collab": [
+        "就业力实习实训",
+        "商业实践课程",
+        "冬夏校合作"
+      ]
+    },
+    {
+      "nameEn": "JUST.FOTO",
+      "nameCn": "大头贴",
+      "logo": "assets/img/resources/just-foto.png",
+      "intro": "自助大头贴设备品牌，运营智能自拍系统，常推IP联名相框",
+      "collab": [
+        "冬夏校合作",
+        "商业实践课程",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "Alor Valley",
+      "nameCn": "十里芳菲",
+      "logo": "assets/img/resources/alor-valley.jpg",
+      "intro": "十里芳菲（Shilifangfei），沉浸式乡村文旅品牌，依托自然村落打造体验空间，以场景美学、在地文化，探索文旅空间的沉浸式体验设计。",
+      "collab": [
+        "冬夏校合作",
+        "商业实践课程",
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "Brand Bigger",
+      "nameCn": "BIGGER 艺术书展",
+      "logo": "assets/img/resources/brand-bigger.jpg",
+      "intro": "由善本文化2021年创办的艺术出版交流平台，推广艺术书展",
+      "collab": [
+        "商业实践课程",
+        "就业力实习实训"
+      ]
+    },
+    {
+      "nameEn": "K11",
+      "nameCn": "K11",
+      "logo": "assets/img/resources/k11.jpg",
+      "intro": "新世界发展旗下购物艺术馆，2009年首创，融艺术人文自然",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "Dragon TV",
+      "nameCn": "东方卫视",
+      "logo": "assets/img/resources/dragon-tv.jpg",
+      "intro": "2003年开播的上星综合频道，SMG旗下，新闻综艺并重",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "Deji Group",
+      "nameCn": "德基集团",
+      "logo": "assets/img/resources/deji-group.jpg",
+      "intro": "2000年成立的南京企业，主营高端商业综合体与文化产业",
+      "collab": [
+        "就业力实习实训",
+        "艺术精英计划"
+      ]
+    },
+    {
+      "nameEn": "Art Healing Research Institute (IFIC)",
+      "nameCn": "艺术疗愈研究院",
+      "logo": "assets/img/resources/art-healing-research-institute-ific.jpg",
+      "intro": "艺术疗愈领域研究教育机构，举办IFIC国际艺术疗愈双年展",
+      "collab": [
+        "商业实践课程",
+        "就业力实习实训",
+        "艺术精英计划"
       ]
     }
   ]
