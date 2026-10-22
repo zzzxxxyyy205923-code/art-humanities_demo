@@ -867,6 +867,42 @@
         "ug",
         "pg"
       ]
+    },
+    {
+      "id": "anxin-ban",
+      "badge": "2 门课程",
+      "tileVariant": null,
+      "cover": "",
+      "placeholder": true,
+      "curriculumSource": "anxin-courses",
+      "curriculumFacets": {
+        "searchPlaceholder": "搜索课程…",
+        "groups": [
+          {
+            "label": "安心伴",
+            "value": "安心伴"
+          },
+          {
+            "label": "毕无忧",
+            "value": "毕无忧"
+          }
+        ]
+      },
+      "meta": {
+        "eyebrow": "Overseas Programs｜安心伴",
+        "titleEn": "Anxin Companion Program",
+        "titleCn": "安心伴",
+        "desc": "安心伴与毕无忧两大境外陪伴式服务模块，覆盖行前准备、在读支持与毕业护航全流程。课程内容正在整理中，即将上线。",
+        "chips": [
+          "2 门课程",
+          "安心伴 · 毕无忧",
+          "本科 / 研究生"
+        ]
+      },
+      "levels": [
+        "ug",
+        "pg"
+      ]
     }
   ],
   "frontier": [

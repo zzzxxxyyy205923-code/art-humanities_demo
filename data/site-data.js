@@ -1536,10 +1536,10 @@ window.SFK_DATA = {
         "idInitials": "ZRC"
       },
       {
-        "id": "艺术人文-摄影-本科-FYW-上海",
+        "id": "艺术人文-纯艺-本科-FYW-上海",
         "degree": "本科",
         "schoolType": "艺术院校",
-        "branch": "摄影",
+        "branch": "纯艺",
         "region": "意大利",
         "admitted": "欧洲设计学院（IED）",
         "admittedEn": "Istituto Europeo di Design (IED)",
@@ -1555,51 +1555,24 @@ window.SFK_DATA = {
         "language": "雅思5.5",
         "gpa": "无",
         "origin": "普高",
-        "hero": "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/首图.png",
+        "hero": "assets/img/portfolio/艺术人文-纯艺-本科-FYW-上海/首图.png",
         "works": [
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/1.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/2.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/3.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/4.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/5.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/6.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/7.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/8.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/9.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/10.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/11.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/12.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/13.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/14.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/15.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/16.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/17.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/18.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/19.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/20.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/21.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/22.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/23.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/24.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/25.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/26.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/27.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/28.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/29.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/30.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/31.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/32.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/33.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/34.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/35.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/36.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/37.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/38.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/39.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/40.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/41.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/42.png",
-          "assets/img/portfolio/艺术人文-摄影-本科-FYW-上海/43.png"
+          "assets/img/portfolio/艺术人文-纯艺-本科-FYW-上海/1.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-FYW-上海/2.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-FYW-上海/3.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-FYW-上海/4.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-FYW-上海/5.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-FYW-上海/6.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-FYW-上海/7.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-FYW-上海/8.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-FYW-上海/9.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-FYW-上海/10.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-FYW-上海/11.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-FYW-上海/12.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-FYW-上海/13.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-FYW-上海/14.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-FYW-上海/15.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-FYW-上海/16.png"
         ],
         "idCity": "上海",
         "idInitials": "FYW"
@@ -1889,7 +1862,26 @@ window.SFK_DATA = {
         "gpa": "Alevel AAA，BTEC L4 D",
         "origin": "全日制",
         "hero": "assets/img/portfolio/艺术人文-纯艺-本科-LJN-北京CBD/首图.jpg",
-        "works": [],
+        "works": [
+          "assets/img/portfolio/艺术人文-纯艺-本科-LJN-北京CBD/1.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LJN-北京CBD/2.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LJN-北京CBD/3.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LJN-北京CBD/4.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LJN-北京CBD/5.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LJN-北京CBD/6.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LJN-北京CBD/7.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LJN-北京CBD/8.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LJN-北京CBD/9.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LJN-北京CBD/10.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LJN-北京CBD/11.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LJN-北京CBD/12.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LJN-北京CBD/13.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LJN-北京CBD/14.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LJN-北京CBD/15.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LJN-北京CBD/16.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LJN-北京CBD/17.png",
+          "assets/img/portfolio/艺术人文-纯艺-本科-LJN-北京CBD/18.png"
+        ],
         "idCity": "北京CBD",
         "idInitials": "LJN"
       },
@@ -1913,7 +1905,38 @@ window.SFK_DATA = {
         "gpa": "GPA3.95/5",
         "origin": "四川美术学院",
         "hero": "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/首图.jpg",
-        "works": [],
+        "works": [
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/1.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/2.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/3.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/4.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/5.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/6.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/7.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/8.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/9.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/10.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/11.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/12.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/13.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/14.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/15.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/16.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/17.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/18.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/19.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/20.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/21.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/22.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/23.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/24.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/25.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/26.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/27.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/28.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/29.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-LYC-成都/30.png"
+        ],
         "idCity": "成都",
         "idInitials": "LYC"
       },
@@ -1942,7 +1965,28 @@ window.SFK_DATA = {
         "gpa": "GPA84.46",
         "origin": "中国美术学院",
         "hero": "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/首图.jpg",
-        "works": [],
+        "works": [
+          "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/1.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/2.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/3.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/4.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/5.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/6.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/7.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/8.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/9.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/10.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/11.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/12.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/13.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/14.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/15.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/16.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/17.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/18.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/19.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-ZYX-武汉/20.png"
+        ],
         "idCity": "武汉",
         "idInitials": "ZYX"
       },
@@ -1969,7 +2013,15 @@ window.SFK_DATA = {
         "gpa": "无",
         "origin": "安格利亚鲁斯金",
         "hero": "assets/img/portfolio/艺术人文-插画-研究生-CXY-上海/首图.jpg",
-        "works": [],
+        "works": [
+          "assets/img/portfolio/艺术人文-插画-研究生-CXY-上海/1.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-CXY-上海/2.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-CXY-上海/3.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-CXY-上海/4.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-CXY-上海/5.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-CXY-上海/6.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-CXY-上海/7.png"
+        ],
         "idCity": "上海",
         "idInitials": "CXY"
       },
@@ -1996,7 +2048,26 @@ window.SFK_DATA = {
         "gpa": "GPA3.83",
         "origin": "悉尼大学",
         "hero": "assets/img/portfolio/艺术人文-插画-研究生-YJ-重庆/首图.jpg",
-        "works": [],
+        "works": [
+          "assets/img/portfolio/艺术人文-插画-研究生-YJ-重庆/1.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YJ-重庆/2.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YJ-重庆/3.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YJ-重庆/4.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YJ-重庆/5.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YJ-重庆/6.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YJ-重庆/7.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YJ-重庆/8.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YJ-重庆/9.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YJ-重庆/10.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YJ-重庆/11.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YJ-重庆/12.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YJ-重庆/13.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YJ-重庆/14.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YJ-重庆/15.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YJ-重庆/16.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YJ-重庆/17.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YJ-重庆/18.png"
+        ],
         "idCity": "重庆",
         "idInitials": "YJ"
       },
@@ -2022,13 +2093,44 @@ window.SFK_DATA = {
         "gpa": "GPA91",
         "origin": "东华大学",
         "hero": "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/首图.jpg",
-        "works": [],
+        "works": [
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/1.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/2.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/3.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/4.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/5.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/6.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/7.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/8.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/9.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/10.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/11.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/12.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/13.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/14.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/15.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/16.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/17.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/18.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/19.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/20.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/21.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/22.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/23.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/24.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/25.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/26.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/27.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/28.png",
+          "assets/img/portfolio/艺术人文-插画-研究生-YTY-上海/29.png"
+        ],
         "idCity": "上海",
         "idInitials": "YTY"
       }
     ],
     "portfolioTotal": 45,
-    "portfolioConfirmed": 45
+    "portfolioConfirmed": 45,
+    "rows": 4
   },
   "planning": {
     "title": "产业全景 · 职业规划",
@@ -5871,6 +5973,42 @@ window.SFK_DATA = {
           "chips": [
             "5 门课程",
             "境外访校 3 · 境外夏校 2",
+            "本科 / 研究生"
+          ]
+        },
+        "levels": [
+          "ug",
+          "pg"
+        ]
+      },
+      {
+        "id": "anxin-ban",
+        "badge": "2 门课程",
+        "tileVariant": null,
+        "cover": "",
+        "placeholder": true,
+        "curriculumSource": "anxin-courses",
+        "curriculumFacets": {
+          "searchPlaceholder": "搜索课程…",
+          "groups": [
+            {
+              "label": "安心伴",
+              "value": "安心伴"
+            },
+            {
+              "label": "毕无忧",
+              "value": "毕无忧"
+            }
+          ]
+        },
+        "meta": {
+          "eyebrow": "Overseas Programs｜安心伴",
+          "titleEn": "Anxin Companion Program",
+          "titleCn": "安心伴",
+          "desc": "安心伴与毕无忧两大境外陪伴式服务模块，覆盖行前准备、在读支持与毕业护航全流程。课程内容正在整理中，即将上线。",
+          "chips": [
+            "2 门课程",
+            "安心伴 · 毕无忧",
             "本科 / 研究生"
           ]
         },
@@ -14450,7 +14588,7 @@ window.SFK_DATA = {
                 "纯艺术"
               ],
               [
-                "纯艺",
+                "Fine Arts",
                 "纯艺"
               ],
               [
@@ -19144,7 +19282,8 @@ window.SFK_DATA = {
         "category": "教研导师",
         "img": "assets/img/instructors/Zheng.L.Y.jpg",
         "photoSource": "instructors/教研导师/Zheng.L.Y.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-002",
@@ -19154,7 +19293,8 @@ window.SFK_DATA = {
         "category": "教研导师",
         "img": "assets/img/instructors/Guo.F.jpg",
         "photoSource": "instructors/教研导师/Guo.F.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-003",
@@ -19164,7 +19304,8 @@ window.SFK_DATA = {
         "category": "教研导师",
         "img": "assets/img/instructors/Zhou.C.Q.jpg",
         "photoSource": "instructors/教研导师/Zhou.C.Q.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-004",
@@ -19174,7 +19315,8 @@ window.SFK_DATA = {
         "category": "教研导师",
         "img": "assets/img/instructors/Han.M.F.jpg",
         "photoSource": "instructors/教研导师/Han.M.F.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-005",
@@ -19184,7 +19326,8 @@ window.SFK_DATA = {
         "category": "教研导师",
         "img": "assets/img/instructors/Zhao.Z.Q.jpg",
         "photoSource": "instructors/教研导师/Zhao.Z.Q.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-006",
@@ -19194,7 +19337,8 @@ window.SFK_DATA = {
         "category": "教研导师",
         "img": "assets/img/instructors/Ding.Y.X.jpg",
         "photoSource": "instructors/教研导师/Ding.Y.X.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-007",
@@ -19204,7 +19348,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Yi.L.jpg",
         "photoSource": "instructors/学术导师/Yi.L.JPG",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-008",
@@ -19214,7 +19359,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Wenxi.W.jpg",
         "photoSource": "instructors/学术导师/Wenxi.W.JPG",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-009",
@@ -19224,7 +19370,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Yuheng.Z.jpg",
         "photoSource": "instructors/学术导师/Yuheng.Z.JPG",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-010",
@@ -19234,7 +19381,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Yuhui.W.jpg",
         "photoSource": "instructors/学术导师/Yuhui.W.JPG",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-011",
@@ -19244,7 +19392,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Yuxiao.R.jpg",
         "photoSource": "instructors/学术导师/Yuxiao.R.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-012",
@@ -19254,7 +19403,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Mingzhong.Z.jpg",
         "photoSource": "instructors/学术导师/Mingzhong.Z.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-013",
@@ -19264,7 +19414,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Yiqi.W.jpg",
         "photoSource": "instructors/学术导师/Yiqi.W.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-014",
@@ -19274,7 +19425,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Zhang.RT.jpg",
         "photoSource": "instructors/学术导师/Zhang.RT.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-015",
@@ -19284,7 +19436,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Wang.SL.jpg",
         "photoSource": "instructors/学术导师/Wang.SL.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-016",
@@ -19294,7 +19447,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Liu.YZ.jpg",
         "photoSource": "instructors/学术导师/Liu.YZ.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-017",
@@ -19304,7 +19458,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Li.Shelly.jpg",
         "photoSource": "instructors/学术导师/Li.Shelly.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-018",
@@ -19314,7 +19469,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Wan.LY.jpg",
         "photoSource": "instructors/学术导师/Wan.LY.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-019",
@@ -19324,7 +19480,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Liu.EE.jpg",
         "photoSource": "instructors/学术导师/Liu.EE.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-020",
@@ -19334,7 +19491,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Li.ZM.jpg",
         "photoSource": "instructors/学术导师/Li.ZM.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-021",
@@ -19344,7 +19502,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Du.S.jpg",
         "photoSource": "instructors/学术导师/D.Shu.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-022",
@@ -19354,7 +19513,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Miu.J.jpg",
         "photoSource": "instructors/学术导师/Miu.J.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-023",
@@ -19364,7 +19524,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Wang.J.L.jpg",
         "photoSource": "instructors/学术导师/Wang.J.L.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-024",
@@ -19374,7 +19535,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Ren.J.C.jpg",
         "photoSource": "instructors/学术导师/Ren.J.C.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-026",
@@ -19384,7 +19546,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Hu.CC.jpg",
         "photoSource": "instructors/学术导师/Hu.CC.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-027",
@@ -19394,7 +19557,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Shan.YY.jpg",
         "photoSource": "instructors/学术导师/Shan.YY.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-028",
@@ -19404,7 +19568,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Liu.WQ.jpg",
         "photoSource": "instructors/学术导师/Liu.WQ.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-029",
@@ -19414,7 +19579,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Ming.SQ.jpg",
         "photoSource": "instructors/学术导师/Ming.SQ.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-030",
@@ -19424,7 +19590,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Ni.EX.jpg",
         "photoSource": "instructors/学术导师/Ni.EX.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-031",
@@ -19434,7 +19601,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Jiang.YX.jpg",
         "photoSource": "instructors/学术导师/Jiang.YX.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-032",
@@ -19444,7 +19612,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Jin.D.jpg",
         "photoSource": "instructors/学术导师/Jin.D.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-033",
@@ -19454,7 +19623,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Luo.C.Y.jpg",
         "photoSource": "instructors/学术导师/Luo.C.Y.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-034",
@@ -19464,7 +19634,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Huang.DL.jpg",
         "photoSource": "instructors/学术导师/Huang.DL.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-035",
@@ -19474,7 +19645,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Liu.B.J.jpg",
         "photoSource": "instructors/学术导师/Liu.B.J.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-036",
@@ -19484,7 +19656,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/He.D.jpg",
         "photoSource": "instructors/学术导师/He.D.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-037",
@@ -19494,7 +19667,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/W. Mona.jpg",
         "photoSource": "instructors/学术导师/W. Mona.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-038",
@@ -19504,7 +19678,8 @@ window.SFK_DATA = {
         "category": "学术导师",
         "img": "assets/img/instructors/Yu.TG.jpg",
         "photoSource": "instructors/学术导师/Yu.TG.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
         "id": "inst-aca-039",
@@ -19514,527 +19689,1001 @@ window.SFK_DATA = {
         "category": "海外教授",
         "img": "assets/img/instructors/A.F.jpg",
         "photoSource": "instructors/海外教授/A.F 牛津大学 纯艺资深讲师 跨媒介艺术家.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "Daughters of the River",
+            "The air is subtle various and sweet",
+            "Proposal for a parakeet's garden",
+            "The heart wants what the heart wants"
+          ],
+          "highlights": [
+            "他是一位跨媒介艺术家，其创作涵盖动态影像、雕塑装置、行为艺术、版画、绘画及墙面作品，通过探讨物质性、触感与有毒具象化等议题，质疑边缘化群体与自然概念的关联性。",
+            "其作品曾在纽约古根海姆博物馆、伦敦泰特现代美术馆与泰特英国美术馆、伦敦蛇形画廊、巴黎拉法叶前瞻空间等机构展出。其展览足迹遍及雅典阿玛之家、绍森德焦点画廊、卡迪夫天画廊、伦敦金匠大学当代艺术中心、伦敦萨默塞特宫、布法罗大学画廊、奥马哈米斯中心、伦敦尼鲁·拉特南画廊及伦敦细胞项目空间。"
+          ],
+          "officialLink": "https://www.ox.ac.uk/"
+        }
       },
       {
         "id": "inst-aca-040",
+        "name": "M.W",
+        "background": "斯坦福大学",
+        "title": "造纸艺术家、版画艺术家、书籍艺术家、装置艺术家和社会实践艺术家",
+        "category": "海外教授",
+        "img": "assets/img/instructors/M.W.jpg",
+        "photoSource": "instructors/海外教授/M.W 斯坦福大学 造纸艺术家 版画艺术家 书籍艺术家 装置艺术家和社会实践艺术家.jpg",
+        "regions": [],
+        "detail": {
+          "repWorks": [],
+          "highlights": [
+            "她是一位造纸艺术家、版画艺术家、书籍艺术家、装置艺术家和社会实践艺术家",
+            "她还是持续合作的政治艺术团队BOOK BOMBS的成员之一。她的作品已在美国和国外展出，包括参加费城2010年Philagrafika双年展和2006年在埃及亚历山大举办的第二届国际艺术家书籍双年展。她的作品发现了我个人叙事与沉思式行动主义之间的同步性。在她所探索的线性叙事中，地点、景观和历史都扮演着重要角色。它们不仅仅是背景；它们是转变的推动者和催化剂。所描绘的外部景观是所探索的内部景观的化身，是认知环境的一种体现。她所探索的许多叙事都具有思想的二元性或相互联系：政治与环境的交汇、殖民主义与自然史、文字游戏、迁移、植被以及多样性的丧失。她的作品被众多机构收藏，包括耶鲁大学（康涅狄格州纽黑文）、美国国家女性艺术博物馆（华盛顿特区）以及安德烈·马尔斯媒体中心（法国斯特拉斯堡）。"
+          ]
+        }
+      },
+      {
+        "id": "inst-aca-041",
         "name": "M.C",
         "background": "哈佛大学",
         "title": "客座讲师 皇家艺术学院客座讲师",
         "category": "海外教授",
         "img": "assets/img/instructors/M.C.jpg",
         "photoSource": "instructors/海外教授/M.C 哈佛大学 客座讲师 皇家艺术学院客座讲师.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [],
+          "highlights": [
+            "他是一位生活在伦敦的艺术家。他的创作涵盖雕塑、绘画和版画领域。",
+            "他的实践探索着“转化”的潜能——当理念、结构及其构成材料在不同框架间流动时所产生的蜕变。",
+            "其视觉语言由精选单元元素构成，这些元素依据艺术家为特定项目设计的逻辑反复组合、重组与消解。最终作品引发观众对秩序/无序、工业制造/手工技艺、单元/系统之间张力的思考。",
+            "他于2017年获得伦敦皇家艺术学院硕士学位。其作品被巴黎蓬皮杜中心现代艺术博物馆及萨格勒布工艺美术博物馆永久收藏。曾参展2021年克林尼亚纺织艺术双年展、第48届萨格勒布沙龙展、拉文纳Eccentrico Musivo艺术展，现任皇家艺术学院与哈佛大学客座讲师。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-041",
+        "id": "inst-aca-042",
         "name": "L.M",
         "background": "康奈尔大学",
         "title": "艺术系教授 研究生项目负责人 OyG艺术运营空间联合创办人及总监",
         "category": "海外教授",
         "img": "assets/img/instructors/L.M.jpg",
         "photoSource": "instructors/海外教授/L.M 康奈尔大学 艺术系教授 研究生项目负责人 OyG艺术运营空间联合创办人及总监.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "《Turret Tops》（塔楼之巅）",
+            "《HOST, STORE, SHED》 - 布鲁克林音乐学院（BAM）",
+            "《Tip Cozy》 - 犹他当代艺术博物馆（UMOCA）"
+          ],
+          "highlights": [
+            "纽约布鲁克林重要艺术家运营空间OyG的联合创始人与总监。该机构获得安迪·沃霍尔基金会和美国国家艺术基金会（NEA）的资助，并被《纽约时报格调杂志》专题报道。",
+            "荣获纽约艺术基金会/纽约州艺术委员会（NYFA/NYSCA）奖学金和雷·马特·惠曼基金会新锐艺术家奖。",
+            "作品和项目被《纽约时报》、《纽约客》（The New Yorker）、《BOMB》等全球顶级媒体多次报道评述。",
+            "在纽约文化地标布鲁克林音乐学院（BAM）中，她创造了一个沉浸式装置，用绚丽的图案和织物重新定义了建筑内部空间，使其像一个巨大的、可穿行的身体器官，探索了公共空间的功能性、记忆与感官体验之间的关系。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-042",
+        "id": "inst-aca-043",
         "name": "E.H",
         "background": "康奈尔大学",
         "title": "纯艺讲师 视觉艺术家",
         "category": "海外教授",
         "img": "assets/img/instructors/E.H.jpg",
         "photoSource": "instructors/海外教授/E.H 康奈尔大学 纯艺讲师 视觉艺术家.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "The Spontaneous Garden, solo exhibition at Hexum Gallery, Montpelier, VT (2023)",
+            "Art on Paper: The 46th Exhibition, Weatherspoon Art Museum, Greensboro, NC (2021)",
+            "Prism in the Window, solo exhibition at Morgan Lehman Gallery, New York, NY (2021)"
+          ],
+          "highlights": [
+            "他是一位驻纽约市的视觉艺术家，研究创作涵盖素描、油画、雕塑、丙烯与水墨水彩画、色彩理论、雕塑性绘画、拼贴画。其作品曾在摩根·莱曼画廊、迪安娜·埃文斯项目空间、一河艺术设计学院、虎击小行星画廊、TV项目空间、赫克森画廊、韦瑟斯庞艺术博物馆、玛哈西大学丰格艺术中心、佛蒙特大学等机构展出。其作品曾获《纽约时报》《纽约客报》《蒙蒙特·海姆日报》等媒体报道。艺术家驻留经历包括特拉基金会、金·布鲁国际艺术驻留项目，以及摩洛哥得土安市的绿橄榄艺术中心。出版物包括与诗人杰弗里·杨合著的《致好莱坞编剧们》、与作家惠特·科斯滕鲍姆合著的《绘画与寓言》，以及威利出版社出版的《傻瓜色彩学》。现任纽约布鲁克林艺术家自营画廊“奥尔特·加塞特项目”联合总监。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-043",
+        "id": "inst-aca-044",
         "name": "I.T",
         "background": "宾夕法尼亚大学",
         "title": "纯艺讲师 观澜国际版画奖得主",
         "category": "海外教授",
         "img": "assets/img/instructors/I.T.jpg",
         "photoSource": "instructors/海外教授/I.T 宾夕法尼亚大学 纯艺讲师 观澜国际版画奖得主.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "《Between Two Lands》（双生之地）",
+            "《Memory's Border》（记忆的边界）",
+            "《Translating Nostalgia》（乡译）",
+            "《Erasure and Persistence》（消逝与存留）"
+          ],
+          "highlights": [
+            "作品多次入选中国观澜国际版画双年展，并获“观澜国际版画奖”，在中国版画与当代艺术界具有广泛知名度。",
+            "曾在首尔美术馆、东京都美术馆、台湾国立美术馆等亚洲重要艺术机构展出，深受东亚艺术圈关注。",
+            "获得波洛克·克拉斯纳基金会奖金（Pollock-Krasner Grant）。",
+            "个人作品展遍布纽约、费城、柏林和斯科普里等地，包括美国国家版画中心（The Print Center）个展，影响力跨越两大西洋两岸。",
+            "《Between Two Lands》（双生之地）通过绘画与雕塑的结合，探讨了同时身处美国费城与马其顿比托拉两地的双重身份体验，视觉化地呈现了记忆与归属之间的张力与诗意。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-044",
+        "id": "inst-aca-045",
         "name": "S.M",
         "background": "耶鲁大学",
         "title": "耶鲁大学绘画版画专业导师 施耐德艺术博物馆执行馆长",
         "category": "海外教授",
         "img": "assets/img/instructors/S.M.jpg",
         "photoSource": "instructors/海外教授/S.M 耶鲁大学 耶鲁大学绘画版画专业导师 施耐德艺术博物馆执行馆长.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "《Land/Spirit》（土地/灵性）",
+            "《Ancestral Echoes》（祖先的回响）",
+            "《Borderless Dialogues》（无界对话）",
+            "《Memory in Motion》（流动的记忆）"
+          ],
+          "highlights": [
+            "作品曾多次入选中国知名艺术刊物《艺术评论》及《纽约艺术杂志》（NY Arts Magazine）。",
+            "作为策展人，在纽约平台艺术中心和施耐德艺术博物馆等地策划多个国际性展览，推动美洲原住民艺术与当代艺术的对话。",
+            "在耶鲁大学、芝加哥艺术学院、普拉德学院等多所顶尖艺术学院举办讲座和工作坊，其教育理念深入影响中美艺术教育界。",
+            "《Ancestral Echoes》（祖先的回响）通过版画与混合媒介的结合，重构美洲原住民的视觉传统与当代符号，在层叠的图像与肌理中追问历史记忆与文化延续的当代意义。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-045",
+        "id": "inst-aca-046",
         "name": "M.H",
         "background": "耶鲁大学",
         "title": "耶鲁大学讲师 作为策展人",
         "category": "海外教授",
         "img": "assets/img/instructors/M.H.jpg",
         "photoSource": "instructors/海外教授/M.H 耶鲁大学 耶鲁大学讲师 作为策展人.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "《Land/Spirit》（土地/灵性）",
+            "《Ancestral Echoes》（祖先的回响）",
+            "《Borderless Dialogues》（无界对话）",
+            "《Memory in Motion》（流动的记忆）"
+          ],
+          "highlights": [
+            "作品曾多次入选中国知名艺术刊物《艺术评论》及《纽约艺术杂志》（NY Arts Magazine）。",
+            "作为策展人，在纽约平台艺术中心和施耐德艺术博物馆等地策划多个国际性展览，推动美洲原住民艺术与当代艺术的对话。",
+            "在耶鲁大学、芝加哥艺术学院、普拉德学院等多所顶尖艺术学院举办讲座和工作坊，其教育理念深入影响中美艺术教育界。",
+            "《Ancestral Echoes》（祖先的回响）通过版画与混合媒介的结合，重构美洲原住民的视觉传统与当代符号，在层叠的图像与肌理中追问历史记忆与文化延续的当代意义。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-046",
+        "id": "inst-aca-047",
         "name": "J.D",
         "background": "卡耐基梅隆大学",
         "title": "艺术系教授 惠普应用研究项目负责人",
         "category": "海外教授",
         "img": "assets/img/instructors/J.D.jpg",
         "photoSource": "instructors/海外教授/J.D 卡耐基梅隆大学 艺术系教授 惠普应用研究项目负责人.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "《Big Hypnotic Eye Perversion》（大型催眠之眼-颠覆）",
+            "《Strange Loops》（奇异循环）",
+            "《Labyrinths》（迷宫）",
+            "《In Kingdom Come》（在天国来临之际）"
+          ],
+          "highlights": [
+            "担任美国计算机协会图形学会（ACM SIGGRAPH）数字艺术委员会和教育委员会会员。",
+            "作为项目负责人获得科技巨头惠普（HP）的巨额应用研究资助，领导艺术与机器学习、混合现实（XR）等前沿领域的研发项目。",
+            "作品多次入选德国B3移动影像双年展及温哥华、蒙特利尔、悉尼等全球数十个国际电影节。",
+            "《Strange Loops》（奇异循环）为由艺术家联合策展并于纽约知名机构Artspace展出的重磅群展。展览探讨了在技术驱动的时代，真实与虚拟、自我与媒介之间相互映射、循环往复的复杂关系。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-047",
+        "id": "inst-aca-048",
         "name": "L.F",
         "background": "伦敦大学学院",
         "title": "纯艺专业副教授 斯莱德美术学院纯艺招生负责人 旅居伦敦",
         "category": "海外教授",
         "img": "assets/img/instructors/L.F.jpg",
         "photoSource": "instructors/海外教授/L.F 伦敦大学学院 纯艺专业副教授 斯莱德美术学院纯艺招生负责人 旅居伦敦.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "Code Clay, Dirt Data, First Site, Colchester, UK.",
+            "Which pixel am I standing on? Maria Stenfors, London, UK",
+            "Bits and Pieces put together to present a semblance of a whole, Academy of Visual Arts, Hong Kong Baptist University, China, 2014",
+            "Passage and pair, Maria Stenfors, London, UK, 2013",
+            "Circles, props and edges, Siobhan Davies Studios, London, UK, 2013",
+            "Band, Space in Between, London, UK, 2011"
+          ],
+          "highlights": [
+            "她是一位旅居伦敦的英日混血艺术家。她的创作游走于数字、模拟与有机技法之间，从手工编织、陶瓷到塞莱斯特培育及定制图像生成软件，其艺术作品以景观与基础设施建设议题为切入点，深化我们对超景观地缘政治的认知。其以雕塑为核心的装置作品融合纺织品、黏土、拾得物、影像与声音，常受跨学科研究者协作对话的启发。这些创作既探索媒介内在的抽象潜能，又在从塑胶到像素的材料谱系中，开辟物质转化的新可能。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-048",
+        "id": "inst-aca-049",
         "name": "C.Y",
         "background": "伦敦大学学院",
         "title": "纯艺专业教授 驻伦敦",
         "category": "海外教授",
         "img": "assets/img/instructors/C.Y.jpg",
         "photoSource": "instructors/海外教授/C.Y 伦敦大学学院 纯艺专业教授 驻伦敦.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "TORCH (University of Oxford, 2023)",
+            "Smithsonian Artist Research Fellowship (2020)",
+            "Creative Arts Fellowship, Wolfson College, University of Oxford (2018–2021)",
+            "Artist's residency, Sharjah Art Foundation, 2006/7",
+            "Artist's residency, IASPIS, Stockholm, 2004",
+            "School of Law, Birkbeck, University of London (ongoing since 2013)"
+          ],
+          "highlights": [
+            "她是一位驻伦敦的艺术家，其作品涵盖视频、摄影、文本、表演及装置艺术，探索身体、语言、电影性与权力体系之间的关系。自2002年起，她通过性别、建筑、表演与崇高感等议题，创作了大量探讨并批判法律与正义的艺术作品。策展人兼评论家托马斯·坎普斯评价她的作品呈现出“概念性、纪实性与想象力的独特融合。”自2017年起，她创作了一系列主题关联的宏大视频装置作品，深化了对性别、权力与凝视的探讨。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-049",
+        "id": "inst-aca-050",
         "name": "M.J",
         "background": "罗德岛设计学院",
         "title": "插画系导师 小马宝莉系列官方绘本首席插画师",
         "category": "海外教授",
         "img": "assets/img/instructors/M.J.jpg",
         "photoSource": "instructors/海外教授/M.J 罗德岛设计学院 插画系导师 小马宝莉系列官方绘本首席插画师.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "《Willow Buds: The Tale of Toad and Badger》（柳树新芽：蟾蜍与獾的寓言）",
+            "《My Little Pony: Under the Sparkling Sea》（小马宝莉：璀璨海底）",
+            "《Dragons on Dazzle Island》（炫彩岛巨龙）"
+          ],
+          "highlights": [
+            "作为“小马宝莉”系列官方绘本首席插画师，其创作的《璀璨海底》中文版在中国销量超50万册，成为现象级童书。",
+            "凭借原创绘本《柳树新芽》荣获中国最具权威的冰心儿童文学奖，是该奖项少数外籍得主之一。",
+            "在深圳设计协会举办个人艺术展，其原画作品被何香凝美术馆收藏，推动中美插画艺术深度交流。",
+            "《My Little Pony: Under the Sparkling Sea》以梦幻般的海洋光谱色系与流动型构图，重新诠释经典IP的视觉语言，成为跨文化童书创作的典范之作。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-050",
+        "id": "inst-aca-051",
         "name": "P.B",
         "background": "罗德岛设计学院",
         "title": "插画系导师 插画家兼艺术家",
         "category": "海外教授",
         "img": "assets/img/instructors/P.B.jpg",
         "photoSource": "instructors/海外教授/P.B 罗德岛设计学院 插画系导师 插画家兼艺术家.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [],
+          "highlights": [
+            "她的作品曾刊登于无数杂志和报纸，并荣获多项评审赛事奖项，包括《传播艺术》插画年鉴、美国插画奖、出版设计师协会奖以及插画家协会奖（该协会还授予她银奖）。她的作品在全球范围内出版发行，并在美国、欧洲和中东地区举办过个展与联展。《美国插画》杂志曾如此评价贝尔：“这位插画师兼艺术家以精妙、优雅且极具想象力的拼贴作品闻名。”除拼贴创作外，她还擅长以18世纪木刻版画为灵感来源的钢笔墨水画。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-051",
+        "id": "inst-aca-052",
         "name": "J.B",
         "background": "罗德岛设计学院",
         "title": "插画系导师 驻场艺术家",
         "category": "海外教授",
         "img": "assets/img/instructors/J.B.jpg",
         "photoSource": "instructors/海外教授/J.B 罗德岛设计学院 插画系导师 驻场艺术家.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [],
+          "highlights": [
+            "他担任罗德岛设计学院绘画系教师。其作品在新英格兰地区多家画廊展出，并被欧美众多艺术机构收藏。曾于波士顿科普利艺术协会画廊、普罗维登斯惠勒画廊、康涅狄格中央画廊等知名场馆举办个展。他荣获罗德岛州艺术委员会奖学金，并曾担任马萨诸塞州普罗沃斯敦美术工作中心暑期驻场艺术家。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-052",
+        "id": "inst-aca-053",
         "name": "G.S",
         "background": "罗德岛设计学院",
         "title": "副教授 卓越教学奖得主",
         "category": "海外教授",
         "img": "assets/img/instructors/G.S.jpg",
         "photoSource": "instructors/海外教授/G.S 罗德岛设计学院 副教授 卓越教学奖得主.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "2025 Susan Lichtman and Gwen Strahle, Nancy Devine Gallery, Warren, RI",
+            "2025 Object Lessons, The Concord Center for the Visual Arts, MA",
+            "2024 Menagerie, Group Show, The Painting Center,NY",
+            "2024 Mighty Small, Group Show, Front Gallery, Houston, TX",
+            "2022 For the Love of Chardin, Zeuxis Group Exhibit, Miller Art Museum, WI, First Street Gallery, NY"
+          ],
+          "highlights": [
+            "罗德岛艺术设计学院副教授",
+            "MFA Yale University School of Art",
+            "BA Rhode Island College",
+            "自1984年以来一直在RISD教授绘画，拥有超过四十年教学经验，是罗德岛艺术设计学院The Drawing Concentration课程的负责人。并获得John R. Frazier Award卓越教学奖。她在静物画家协会Zeuxis和普罗维登斯的LenoreGray画廊展出了她的画作，她的作品也在全国各地的画廊和博物馆展出"
+          ]
+        }
       },
       {
-        "id": "inst-aca-053",
+        "id": "inst-aca-054",
         "name": "D.Z",
         "background": "罗德岛设计学院",
         "title": "教授 古根海姆奖得主",
         "category": "海外教授",
         "img": "assets/img/instructors/D.Z.jpg",
         "photoSource": "instructors/海外教授/D.Z 罗德岛设计学院 教授 古根海姆奖得主.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "《The light gets in》（光之透入）",
+            "《Genealogies》（谱系）",
+            "《Flight Plans》（飞行计划）",
+            "《DNA Paintings》（DNA绘画）"
+          ],
+          "highlights": [
+            "罗德岛设计学院实验与基础研究教授",
+            "古根海姆奖得主，纽约Markel画廊签约艺术家",
+            "2019年荣获古根海姆奖，成为中国当代艺术界研究美国抽象绘画的重要案例。作品入选北京国际艺术双年展平行单元，其抽象绘画中的东方哲学思考引发中国批评界关注。",
+            "为深圳设计协会创作大型装置作品，成为中国公共艺术领域跨国合作的典范案例。两次获得纽约艺术基金会绘画奖（2012、2018）",
+            "《Flight Plans》（飞行计划）以解构的纸飞机折叠轨迹为灵感，通过16英尺大型数字打印呈现交锁的空间几何，在理性结构与诗意想象之间建立视觉平衡，该作品永久陈列于纽约奥尔巴尼国际机场票务大厅。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-054",
+        "id": "inst-aca-055",
         "name": "C.B",
         "background": "罗德岛设计学院",
         "title": "教授 插画家与儿童文学作家",
         "category": "海外教授",
         "img": "assets/img/instructors/C.B.jpg",
         "photoSource": "instructors/海外教授/C.B 罗德岛设计学院 教授 插画家与儿童文学作家.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "《Polkabats and Octopus Slacks: 14 Stories》",
+            "《Flamingos on the Roof: Poems and Paintings》",
+            "《Hallowilloween: Nefarious Silliness》",
+            "《Hypnotize a Tiger》"
+          ],
+          "highlights": [
+            "罗德岛设计学院插画系教授",
+            "插画家与儿童文学作家",
+            "美国马里昂·范内特·里奇诗歌奖与玛拉·科恩·利文斯通诗歌奖得主",
+            "荣获美国马里昂·范内特·里奇诗歌奖的作品《波尔卡蝙蝠与章鱼休闲裤》被列入上海国际童书展推荐书目，受到中国绘本研究者关注。",
+            "为《纽约客》《时代周刊》《滚石》等国际顶级杂志创作插画，其独特风格通过媒体平台被中国插画师群体熟知。",
+            "作品《屋顶上的火烈鸟》获得玛拉·科恩·利文斯通诗歌奖，其诗歌绘画结合的艺术形式被中央美术学院绘本工作室列为研究案例",
+            "《Hallowilloween: Nefarious Silliness》（万圣节·邪恶的傻气）以诡谲俏皮的插画重新诠释万圣节传说，通过巫婆、幽灵和南瓜等经典元素的非常规演绎，在诡异与滑稽的平衡中创造出既令人毛骨悚然又忍俊不禁的奇幻世界。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-055",
+        "id": "inst-aca-056",
         "name": "L.H",
         "background": "罗德岛设计学院",
         "title": "教授 威尼斯双年展参展艺术家",
         "category": "海外教授",
         "img": "assets/img/instructors/L.H.jpg",
         "photoSource": "instructors/海外教授/L.H 罗德岛设计学院 教授 威尼斯双年展参展艺术家.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "《Museo del Merletto》（蕾丝博物馆）",
+            "《Groundwork》（地基）",
+            "《Durable Memory》（持久的记忆）",
+            "《Language of Materials》（材料的语言）"
+          ],
+          "highlights": [
+            "罗德岛设计学院教授",
+            "第56届威尼斯双年展参展艺术家，麦克约翰逊艺术奖得主",
+            "作为第56届威尼斯双年展官方特邀艺术家，在威尼斯蕾丝博物馆举办个展，该展览被《艺术新闻中文版》专题报道。",
+            "作品入选韩国三星艺术设计学院、土耳其其比尔吉大学等国际艺术机构展览，其材料语言研究被中央美术学院实验艺术系列为教学案例。",
+            "《Museo del Merletto》（蕾丝博物馆）通过将传统蕾丝工艺与当代装置艺术相结合，在威尼斯历史建筑中构建跨越时空的对话，探索物质记忆与文化传承之间的永恒连结，该作品被誉为“威尼斯双年展最具诗意的跨界实践之一”。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-056",
+        "id": "inst-aca-057",
         "name": "R.R",
         "background": "罗德岛设计学院",
         "title": "副教授 制琴大师兼工业设计师",
         "category": "海外教授",
         "img": "assets/img/instructors/R.R.jpg",
         "photoSource": "instructors/海外教授/R.R 罗德岛设计学院 副教授 制琴大师兼工业设计师.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [],
+          "highlights": [
+            "她是普罗维登斯市一位制琴大师，专事设计与手工制作独特的弦乐器。她还多年担任家具制造师，并在多家大型企业的创新部门担任工业设计师。在照明领域，她主导开发了如今广泛应用的变色技术。",
+            "她出生于法国蒙费梅伊并在此成长，先后在ESAG彭宁根设计学院和罗德岛设计学院深造，期间系统学习了纯艺术与应用艺术的双重造诣。她的作品曾在巴黎卢浮宫卡鲁塞尔展厅、东京当代艺术博物馆，以及韩国首尔赫拉姆现代美术馆展出。她于大都会艺术博物馆举办过专题讲座，并在帕森斯设计学院、伍斯特理工学院等机构主持过研讨会、专题讨论会及工作坊。其作品曾亮相安东尼·波登的《原始工艺》及欧特克《设计思维》专题节目。",
+            "正如她在音乐与设计领域的实践，她通过制琴工艺融合传统与创新，在探索新技法的过程中，以可持续性为核心理念——尤其注重生物材料的应用——为传统技法注入独特视角。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-057",
+        "id": "inst-aca-058",
         "name": "K.R",
         "background": "纽约视觉艺术学院",
         "title": "讲师 艺术评论家与客座策展人",
         "category": "海外教授",
         "img": "assets/img/instructors/K.R.jpg",
         "photoSource": "instructors/海外教授/K.R 纽约视觉艺术学院 讲师 艺术评论家与客座策展人.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "Galeria Alfredo Ginnochlio, Mexico City, MX",
+            "Casul UNAM, Mexico City, MX",
+            "Fridman Gallery, NY",
+            "Driscoll Babcock Gallery, NY",
+            "the Montclair Art Museum, NJ",
+            "the Pera Museum, Istanbul, Turkey"
+          ],
+          "highlights": [
+            "她是来自纽约布鲁克林的跨界艺术家和评论家，从事表演、雕塑和新媒体装置工作；担任过艺术评论家、客座讲师和客座策展人等各种职位。",
+            "除视觉创作外，她还担任过艺术评论家、客座讲师及客座策展人等职务，其中最引人注目的是2009至2016年间担任《布鲁克林铁路》杂志的“艺术视界”专栏编辑。其评论文章发表于《美国艺术》《布鲁克林铁路》《Hyperallergic》《M/E/A/N/I/N/G》等刊物，并收录于大卫·兹维纳出版社、伦敦白教堂美术馆及普林理工大学出版社的出版物中。她目前担任CLEA RSKY CDMX的策展人兼项目总监。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-058",
+        "id": "inst-aca-059",
         "name": "S.J",
         "background": "视觉艺术学院",
         "title": "讲师 印度裔艺术家",
         "category": "海外教授",
         "img": "assets/img/instructors/S.J.jpg",
         "photoSource": "instructors/海外教授/S.J 视觉艺术学院 讲师 印度裔艺术家.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [],
+          "highlights": [
+            "纽约视觉艺术学院插画讲师",
+            "纽约视觉艺术学院动画讲师",
+            "插画家",
+            "她是一位来自印度的插画家和动画师，目前常驻纽约。她参与过的项目包括《纽约时报》、《大西洋月刊》、欧特克、Samsonite、多力多滋、沃尔玛、Entenmann's、FiveThirtyEight、WaterBear 等。她的作品曾获得蓬皮杜艺术中心、翠贝卡电影节、美国插画节的认可，并在全球各地的艺术节上展出。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-059",
+        "id": "inst-aca-060",
         "name": "M.B",
         "background": "皇家艺术学院",
         "title": "讲师 艺术家和电影制片人",
         "category": "海外教授",
         "img": "assets/img/instructors/M.B.jpg",
         "photoSource": "instructors/海外教授/M.B 皇家艺术学院 讲师 艺术家和电影制片人.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "VISUAL Carlow, Ireland; Galerie für Gegenwartskunst, E-WERK Freiburg (both 2023)",
+            "Stanley Picker Gallery, London (2022)",
+            "Mother's Tankstation, Dublin (2018)",
+            "Wäinö Aaltonen Museum of Art in Turku, Finland (2018)"
+          ],
+          "highlights": [
+            "皇家艺术学院摄影讲师",
+            "电影制片人",
+            "她是一位艺术家和电影制片人，现居伦敦。她的创作实践探索材料和地点的政治和历史共鸣。她主要使用动态影像、装置、雕塑和印刷品进行创作，以个人机遇为主导展开长期调查。她采用纪实手法，与拍摄对象建立亲密关系，创作出复杂而多层次的作品，打破了主流的表述方式。她的作品特别关注那些包含相关物理实践的专业形式--地质学家、考古学家、建筑师、机械师、刺绣师--挖掘材料本身潜藏的多重叙事。她的个展遍布世界各地，她的电影曾在鹿特丹国际电影节、FILMADR-ID、谢菲尔德纪录片节和阿姆斯特丹 Sonic Acts 放映。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-060",
+        "id": "inst-aca-061",
         "name": "H.G",
         "background": "皇家艺术学院",
         "title": "讲师 伦敦艺术家",
         "category": "海外教授",
         "img": "assets/img/instructors/H.G.jpg",
         "photoSource": "instructors/海外教授/H.G 皇家艺术学院 讲师 伦敦艺术家.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "The Warp / The Weft / The Wake, 2024",
+            "Sustaining a Weight, 2023",
+            "On the verge of something very big, 2023",
+            "While the Piled Cumuli Sail Galleon-Like Above, 2020",
+            "Be/hold/en - A Duty of Care, 2020",
+            "Sweet Swollen, 2020"
+          ],
+          "highlights": [
+            "皇家艺术学院版画讲师",
+            "伦敦艺术家",
+            "她是一位居住在伦敦的艺术家，她的作品关注记忆和叙事塑造集体历史的方式。她的作品在全球数十个国家参与展出，并获得国际多项奖项。她同时是皇家艺术学院版画讲师，通过一对一辅导、小组辅导和评论提供学术和教育支持。",
+            "她还是“Cypher BILLBOARD”的联合创始人，该组织委托创作特定场地的广告牌艺术作品和场外项目，并在 2021 年至 2022 年间担任位于克罗伊登的艺术空间“Turf Projects”的联合总监。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-061",
+        "id": "inst-aca-062",
         "name": "A.K",
         "background": "皇家艺术学院",
         "title": "讲师 世界剧场研究中心联合创始人",
         "category": "海外教授",
         "img": "assets/img/instructors/A.K.jpg",
         "photoSource": "instructors/海外教授/A.K 皇家艺术学院 讲师 世界剧场研究中心联合创始人.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [],
+          "highlights": [
+            "他的研究横跨城市理论、协调实践与表演艺术领域。作为跨学科学者，他专注于城市中文化、历史与不平等现象的交汇研究。",
+            "他拥有伦敦政治经济学院城市学博士学位，并在该校城市研究所工作十年。他共同创立了国际城市文化研究中心“世界剧场”，并曾任该机构主任（2015-2017年）。2016 年，他担任多伦多大学约翰·丹尼斯建筑、景观与设计学院客座教授。其著作《Uncommon Building》（Spirit Duplicator出版社，2017 年）记录了一项合作实践，通过科幻小说作为方法论，跨学科批判性地思考空间、场地与城市议题。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-062",
+        "id": "inst-aca-063",
         "name": "K.B",
         "background": "伦敦传媒学院",
         "title": "摄影资深讲师 威尼斯双年展保加利亚馆艺术家",
         "category": "海外教授",
         "img": "assets/img/instructors/K.B.jpg",
         "photoSource": "instructors/海外教授/K.B 伦敦传媒学院 摄影资深讲师 威尼斯双年展保加利亚馆艺术家.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "《The Neighbors》",
+            "《Slices of Red》",
+            "《Inside of our house》"
+          ],
+          "highlights": [
+            "她以东欧为背景，参与了有关创伤、探索记忆与遗忘的动态、承载与呵护记忆的理念。她创作动态影像、摄影和声音作品以及多媒体装置，试图将创伤体验、空间/景观记忆、非官方档案和沉默/无声的叙事视觉化。",
+            "2024 年，她凭借装置作品《The Neighbors》入选第60届威尼斯艺术双年展保加利亚馆。2022 年，她获得了 BAZA 当代艺术奖（YVAA），2021 年，她获得了德国斯图加特独城堡艺术学院的艺术家奖学金。她还是 Revolv Collective 的联合创始人之一，曾任 eep berlin 编辑和撰稿人，以及 History in Between 数字档案和项目的策展人。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-063",
+        "id": "inst-aca-064",
         "name": "K.H",
         "background": "伦敦艺术学院",
         "title": "预科讲师 英国高等教育学院副院士",
         "category": "海外教授",
         "img": "assets/img/instructors/K.H.jpg",
         "photoSource": "instructors/海外教授/K.H 伦敦艺术学院 预科讲师 英国高等教育学院副院士.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [],
+          "highlights": [
+            "毕业于伦敦艺术大学室内设计专业，在布莱顿大学取得艺术与文化研究硕士，并持有伦敦艺术实践研究生证书是英国高等教育学院副院士(AFHEA)。她长期在伦敦艺术大学执教，并曾担任河内伦敦设计与时装学院课程主任，积累了丰富的跨国与跨层级教学经验。",
+            "她的背景横跨空间设计、平面与媒体、纺织艺术与体验设计，并融入健康实践与跨文化合作，能够以多学科视角帮助不同基础的学生提升作品集与学术成绩。她的课程注重跨界融合、实验探索与个人发展，为学生拓展申请与创作的多元可能性。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-064",
+        "id": "inst-aca-065",
         "name": "N.B",
         "background": "坎伯韦尔艺术学院",
         "title": "插画讲师 获奖儿童读物插画家",
         "category": "海外教授",
         "img": "assets/img/instructors/N.B.jpg",
         "photoSource": "instructors/海外教授/N.B 坎伯韦尔艺术学院 插画讲师 获奖儿童读物插画家.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "《Klutz》",
+            "《The Elephant Hotel》",
+            "《Donald's Dream》",
+            "《Riviera》",
+            "《Wrought》"
+          ],
+          "highlights": [
+            "伦艺坎伯韦尔艺术学院插画讲师",
+            "获奖儿童读物作者/插画家",
+            "拼拼贴画创作艺术家",
+            "他是一位插图画家和艺术家，主要从事拼贴画创作，他的抽象和具象作品受到外来艺术和现代主义设计的影响。",
+            "他的作品多被应用于动画、编辑插图、纺织品、包装设计和唱片封面。他曾为《纽约时报》、Domino Records、Airbnb、Vevo、Modus和The Idler创作作品。他是获奖儿童读物《The Elephant Hotel》的作者/插画家。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-065",
+        "id": "inst-aca-066",
         "name": "S.K",
         "background": "创意艺术大学",
         "title": "插画讲师 国际参展插画家",
         "category": "海外教授",
         "img": "assets/img/instructors/S.K.jpg",
         "photoSource": "instructors/海外教授/S.K 创意艺术大学 插画讲师 国际参展插画家.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "书籍&漫画：《Sunday's Child》《Monuments》《Submerged》",
+            "插画：《IFLA! 》《Seafarers' Stories》《Kii the Indian Save the Man》"
+          ],
+          "highlights": [
+            "创意艺术大学插画专业高级讲师",
+            "皇家艺术学院插画硕士学位:",
+            "作品曾多次在国际展出",
+            "S.K目前就职于创意艺术大学插画专业担任高级讲师，在此之前她曾在多所院校，例如坎伯韦尔艺术学院，皇家艺术学院教授插画课程；",
+            "她的创作着眼于如何将插画作为一种积极的工具来理解、解释和重新评价关于历史事件的主流叙述和话语；如何能增加我们对历史的理解。她的作品曾多次获奖并在国际展出。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-066",
+        "id": "inst-aca-067",
         "name": "E.D",
         "background": "坎伯韦尔艺术学院",
         "title": "高级讲师 皇家艺术学院参展艺术家",
         "category": "海外教授",
         "img": "assets/img/instructors/E.D.jpg",
         "photoSource": "instructors/海外教授/E.D 坎伯韦尔艺术学院 高级讲师 皇家艺术学院参展艺术家.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "Bubbly Smuggler, 2016",
+            "Puffy Fish Trap, 2016. Courtesy the artist and Zabludowicz Collection",
+            "The Manbody, 2017",
+            "Super Normal Returns"
+          ],
+          "highlights": [
+            "坎伯韦尔艺术学院纯艺高级讲师",
+            "于 2016 年毕业于英国皇家学院学校，此前曾就读于伦敦Slade艺术学院。目前就职于伦敦艺术大学教授本科纯艺课程。",
+            "他的作品表面和技术体现了全球技术狂人的精神。他设计的雕塑物品、图画和动态影像将欲望、自信和权威的语言重新组合成一种新的流体复合结构。",
+            "他有着非常丰富的展览经历：最近的展览包括Steps to Aerations, Tanya Leighton, Berlin (2017); The Man-body, Zabludowicz Collection, London (2017) and Virtually Real, Royal Academy of Arts, London (2017)."
+          ]
+        }
       },
       {
-        "id": "inst-aca-067",
+        "id": "inst-aca-068",
         "name": "G.K",
         "background": "伦敦艺术学院",
         "title": "高级讲师 艺术家",
         "category": "海外教授",
         "img": "assets/img/instructors/G.K.jpg",
         "photoSource": "instructors/海外教授/G.K 伦敦艺术学院 高级讲师 艺术家.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [
+            "2025 Fossils, Chemist Gallery, London.",
+            "2023 Fossils, Pastor Projects, Tecate, Mexico.",
+            "2019 (In)Visible Propaganda, Hospitale Project, Tottori, Japan.",
+            "2018 Second Annual Report from the Strategic Sanctuary for the Destruction of Free Will, Centre Clark, Montreal."
+          ],
+          "highlights": [
+            "她是一位艺术家、作家和策展人；她与 Pii Kollectiv 博士合作，共同探索艺术与政治之间的关系。他们通过表演、电影和雕塑装置，对劳动组织和晚期资本主义意识形态的表现形式进行了拷问。",
+            "在切尔西艺术与设计学院担任职位之前，她曾在伦敦大都会大学担任高级讲师，并在雷丁大学担任讲师和研究生研究主任。他们曾在伦敦泵房画廊（Pump House Gallery）、新西兰特图希艺术中心（Te Tuhi Center for the Arts）、谢菲尔德 S1 艺术空间（S1 Artspace）和伦敦陈列室画廊（The Showroom Gallery）举办个展。他们还在阿姆斯特丹 Stedelijk 博物馆、第五届柏林双年展、第五届蒙特利尔双年展、奥斯陆艺术馆、布里斯托尔 Arnolfini 和英国泰特美术馆 Late 展出过现场作品，并担任过艺术家运营项目空间 xero、kline & coma 的负责人。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-068",
+        "id": "inst-aca-069",
         "name": "G.B",
         "background": "坎伯韦尔艺术学院",
         "title": "高级讲师 插画家与教育家（金斯顿校外考官）",
         "category": "海外教授",
         "img": "assets/img/instructors/G.B.jpg",
         "photoSource": "instructors/海外教授/G.B 坎伯韦尔艺术学院 高级讲师 插画家与教育家（金斯顿校外考官）.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [],
+          "highlights": [
+            "伦艺坎伯韦尔插画高级讲师",
+            "插画家、研究员和教育家",
+            "皇家艺术学院博士",
+            "G.B目前在伦艺坎伯韦尔插画专业担任高级讲师，他还曾在英国多所大学任教，包括伯明翰城市大学（曾担任艺术与设计学士学位课程负责人）和皇家艺术学院。他还是金斯顿大学插画硕士的校外考官。他的作品运用设计虚构来推测不稳定的景观和材料体现历史的方式，将自我出版、演讲表演和散文电影作为插图（作为一种表演行为）扩展方法的一部分。",
+            "他最近的项目曾在伦敦计算机学院的 V&A 数字未来研讨会、沃尔索尔的新美术馆、丹麦的 REFORM 设计双年展和中国长沙的 Plan8t 展出。G.B目前正在皇家艺术学院批判与历史研究系攻读博士学位。通过对互联网空间的唯物主义解读--不是虚拟的、抽象的网络空间，而是旧的、现实世界的增强版--他试图重新激活我们与地方的关系，以及文献实践记录正在丢失、遗忘或错位的历史的方式。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-069",
+        "id": "inst-aca-070",
         "name": "M.H",
         "background": "坎伯韦尔艺术学院",
         "title": "高级讲师 平面艺术家",
         "category": "海外教授",
-        "img": "assets/img/instructors/M.H-inst-aca-069.jpg",
+        "img": "assets/img/instructors/M.H-inst-aca-070.jpg",
         "photoSource": "instructors/海外教授/M.H 坎伯韦尔艺术学院 高级讲师 平面艺术家.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [],
+          "highlights": [
+            "他是一位生活和工作在伦敦的平面艺术家。自 2001 年从英国皇家艺术学院毕业以来，他已经形成了自己鲜明的视觉特征，其中包含了广泛的影响和学科，而他对图像制作的热情又巩固了这一切。",
+            "他的作品以大众媒体传播和广告为背景，探索日常生活中的景观和建筑，这些图像塑造了我们对世界存在方式的理解。他拥有超过 25 年的教育工作经验，曾在金斯顿大学、南安普顿索伦特大学、切尔西艺术学院和坎伯韦尔艺术学院任教。自 2007 年以来，他一直在坎伯韦尔艺术学院（UAL）任教，目前是插画课程的高级讲师和综合实践协调员。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-070",
+        "id": "inst-aca-071",
         "name": "S.E",
         "background": "坎伯韦尔艺术学院",
         "title": "研究生课程负责人 插画教育者组织创始成员",
         "category": "海外教授",
         "img": "assets/img/instructors/S.E.jpg",
         "photoSource": "instructors/海外教授/S.E 坎伯韦尔艺术学院 研究生课程负责人 插画教育者组织创始成员.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [],
+          "highlights": [
+            "坎伯韦尔艺术学院插画研究生课程负责人",
+            "作为插画研究生课程的负责人，她的教学实践立足于插画是一门关系学科、跨学科和寄生性学科的立场。她曾为《Varoom》、《插画杂志》等出版物供稿，还是《Limner 杂志》的特约编辑。她是插画教育者组织的创始成员之一，该组织致力于插画实践的共同发展。此前，她曾在金斯顿大学、诺里奇艺术大学、伦敦城市大学、创意艺术大学和皇家艺术学院教授课程。",
+            "她的创作聚焦于与陶瓷、电影和摄影合作，探索触觉如何在图像中发挥作用，以说明共同的经历和记忆。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-071",
+        "id": "inst-aca-072",
         "name": "P.G",
         "background": "坎伯韦尔艺术学院",
         "title": "讲师 实验性漫画家与诗人",
         "category": "海外教授",
         "img": "assets/img/instructors/P.G.jpg",
         "photoSource": "instructors/海外教授/P.G 坎伯韦尔艺术学院 讲师 实验性漫画家与诗人.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [],
+          "highlights": [
+            "知名插画家、实验性漫画家、艺术家、诗人",
+            "插画之家第六届驻场插画家",
+            "客户包括VGA / 弗里兹杂志 / SkyArts / So Young 杂志/伦敦漫画与艺术博览会/ House of illustration / 哈克尼漫画与杂志博览会",
+            "她的作品通常聚焦于集体记忆的概念以及诗歌作为反抗行为的力量。绘画是她创作的核心，她以快速而轻松的手法捕捉主题的本质。她的作品旨在通过讲故事和形式化的庆祝来提升生活中被忽视的事物。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-072",
+        "id": "inst-aca-073",
         "name": "S.R",
         "background": "伦敦传媒学院",
         "title": "资深讲师 摄影艺术家与作家",
         "category": "海外教授",
         "img": "assets/img/instructors/S.R.jpg",
         "photoSource": "instructors/海外教授/S.R 伦敦传媒学院 资深讲师 摄影艺术家与作家.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [],
+          "highlights": [
+            "伦敦传媒学院摄影资深讲师英国摄影艺术家、作家",
+            "毕业于英国皇家艺术学院毕业。在许多画廊和机构举办过个展，包括剑桥 Kettle's Yard、贝克斯希尔 De La WarrPavilion、东京 Nichido Contemporary Art、法国 Cha-teau de Lichtenberg、布里斯托尔 Arnolfini、牛津科学史博物馆。她曾两次获得英国皇家艺术研究中心（AHRC）颁发的奖项（2010年和2012年）。",
+            "她的作品被许多私人和公共机构收藏，包括英国政府艺术收藏、巴黎蓬皮杜收藏、伦敦维多利亚和阿尔伯特博物馆、华盛顿美联储、意大利桑德雷托·雷·雷鲍登戈基金会。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-073",
+        "id": "inst-aca-074",
         "name": "L.C",
         "background": "伦敦传媒学院",
         "title": "资深讲师 RCA版画硕士",
         "category": "海外教授",
         "img": "assets/img/instructors/L.C.jpg",
         "photoSource": "instructors/海外教授/L.C 伦敦传媒学院 资深讲师 RCA版画硕士.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [],
+          "highlights": [
+            "伦敦传媒学院插画高级讲师",
+            "伦敦传媒学院视觉媒体高级讲师",
+            "他是伦敦传媒学院BA (Hons) Illustration and Visual Media的高级讲师。他于 1998 年获得皇家艺术学院版画硕士学位，此后一直专注于国内外的继续教育、高等教育和研究生教育。",
+            "他曾担任安特卫普皇家学院版画硕士课程和布鲁塞尔 La Cambre 版画硕士课程的特邀评论员。自 2012 年以来，他一直担任皇家艺术学院的版画导师。2015 年，他获得了 UAL 艺术教学奖。",
+            "他在 Margate的工作室积极开展艺术实践，其作品曾在利物浦沃克艺术博物馆、白教堂画廊、当代艺术学院、特纳当代艺术中心、皇家艺术学院和瓦隆-布鲁塞尔联合会绘画和图像印刷中心展出。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-074",
+        "id": "inst-aca-075",
         "name": "T.C",
         "background": "中央圣马丁艺术学院",
         "title": "资深讲师 RCA金奖得主",
         "category": "海外教授",
         "img": "assets/img/instructors/T.C.jpg",
         "photoSource": "instructors/海外教授/T.C 中央圣马丁艺术学院 资深讲师 RCA金奖得主.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [],
+          "highlights": [
+            "伦艺中央圣马丁学院纯艺资深讲师",
+            "T.C曾就读于伦敦温布尔登艺术学院，2012 年毕业于英国皇家美术学院，并获得金奖。他的作品在许多伦敦的公共机构广泛展出，包括 Gasworks、泰特现代美术馆、弗洛伊德博物馆、白教堂画廊、The Bloomberg Space和The Drawing Room；他的作品也同时在国际上展出，包括沃尔索尔的The New Art Gallery、格拉斯哥的Centre for Contemporary Arts; 卢森堡的internationally at MUDAM, 都灵的Fondazione 107 Galleries Poirel等。他也曾著作《措施》（2013 年）和《衣领》（2017 年）。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-075",
+        "id": "inst-aca-076",
         "name": "R.T",
         "background": "坎伯韦尔艺术学院",
         "title": "本科课程负责人 插画作家与研究者",
         "category": "海外教授",
         "img": "assets/img/instructors/R.T.jpg",
         "photoSource": "instructors/海外教授/R.T 坎伯韦尔艺术学院 本科课程负责人 插画作家与研究者.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [],
+          "highlights": [
+            "R.T博士是一位艺术家、作家和研究员，目前担任坎伯韦尔艺术学院插画学士学位课程的课程负责人。她是《插画与遗产》（Bloomsbury，2024年2月）一书的作者，并主持了伦敦艺术大学于2024年11月22日至23日举办的第14届国际插画研究研讨会“插画与遗产：分享历史以描绘未来”。她目前担任《插画期刊》“遗产”特刊的联合编辑。",
+            "她的研究聚焦于插画如何成为与遗产合作时的重要调查过程和参与策略。她与多家博物馆建立了紧密合作关系，曾在巫术与魔法博物馆、勃朗特牧师宅邸博物馆、鲍威斯博物馆、国家海事博物馆及霍尼曼博物馆开展艺术家驻留项目和咨询工作。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-076",
+        "id": "inst-aca-077",
         "name": "B.A",
         "background": "坎伯韦尔艺术学院",
         "title": "插画讲师 艺术家",
         "category": "海外教授",
         "img": "assets/img/instructors/B.A.jpg",
         "photoSource": "instructors/海外教授/B.A 坎伯韦尔艺术学院 插画讲师 艺术家.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [],
+          "highlights": [
+            "她是一位艺术家兼讲师，其创作融合绘画与面料技法，运用多种媒介进行创作。她的实践与研究致力于表达对“线条”的迷恋，并已在全球不同语境中展开探索。她曾担任蒙蒂宫、维拉-莱娜艺术村及圣奥古斯丁艺术中心的驻场艺术家，并获得英国艺术委员会颁发的“发展创意实践”资助金，用于与中美洲及北美洲社区开展合作。其作品曾于西区美术馆、COB画廊、杰伍德空间、46号画廊、圣殿广场艺术中心及玛娜当代艺术馆展出。2017、2018 及 2020 年，她的素描作品三度入围杰伍德素描奖与圣三一浮标码头素描奖。她还曾与 Cubitts及伦敦设计节合作创作艺术项目。",
+            "她持续为香奈儿、维拉·莱娜艺术基金会及慈善机构“亲吻治愈”等客户主持融合绘画与正念实践的工坊。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-077",
+        "id": "inst-aca-078",
         "name": "B.C",
         "background": "伦敦传媒学院",
         "title": "摄影课程资深讲师 摄影师与作家（皇家摄影学会获奖）",
         "category": "海外教授",
         "img": "assets/img/instructors/B.C.jpg",
         "photoSource": "instructors/海外教授/B.C 伦敦传媒学院 摄影课程资深讲师 摄影师与作家（皇家摄影学会获奖）.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [],
+          "highlights": [
+            "伦敦传媒学院摄影高级讲师摄影师、视觉艺术家、作家",
+            "她是屡获殊荣的伦敦传媒学院摄影课程资深讲师，曾担任该课程负责人。她在教学与研究方法中倡导跨学科协作模式，认为这种方式富有成效且富有洞见。其教学实践屡获殊荣：2019年获英国皇家摄影学会颁发高等教育摄影贡献奖，2020年获高等教育管理局授予高级研究员称号。",
+            "作为皇家艺术学院毕业的艺术家兼教育工作者，她专注于探索过渡性时刻及其通过仪式得以化解的机制。其作品常从体验性而非临床视角审视这些时刻，为亲身经历留出时间与意义。她挑战既定认知，打破禁忌，使那些被忽视、误解或视为无足轻重的议题获得应有的关注。她现任伦敦城市大学摄影与当代想象力研究中心成员，并联合创立了多个研究项目。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-078",
+        "id": "inst-aca-079",
         "name": "T.G",
         "background": "伦敦艺术大学",
         "title": "预科讲师 Anima Loci期刊联合创办人",
         "category": "海外教授",
         "img": "assets/img/instructors/T.G.jpg",
         "photoSource": "instructors/海外教授/T.G 伦敦艺术大学 预科讲师 Anima Loci期刊联合创办人.jpg",
-        "regions": []
+        "regions": [],
+        "detail": {
+          "repWorks": [],
+          "highlights": [
+            "伦敦艺术大学预科讲师",
+            "他是一位意大利艺术家兼研究者，以跨学科视角探索视觉艺术领域。他关注图像能动性与视觉情感，通过从绘画到研究的多元方式展开探索。",
+            "他共同创办了视觉文化期刊《Anima Loci》，是 El Cocuy Projects的创始成员兼策展人，并担任 Drawing Tube联合策展人。曾在欧洲多所高等院校教授艺术理论与实践课程，包括坎伯韦尔艺术学院、威斯敏斯特大学、布雷西亚圣朱利亚学院、伦敦城市大学及维罗纳美术学院。持有巴黎高等社会科学研究院认知人类学博士学位，现往返于意大利与英国两地生活。"
+          ]
+        }
       },
       {
-        "id": "inst-aca-079",
+        "id": "inst-aca-080",
         "name": "岳嵩",
         "background": "清华美院",
         "title": "工艺美术系主任副教授",
         "category": "顶尖学者",
         "img": "assets/img/instructors/岳嵩.jpg",
         "photoSource": "instructors/顶尖学者/岳嵩 清华美院 工艺美术系主任副教授.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
-        "id": "inst-aca-080",
+        "id": "inst-aca-081",
         "name": "蔡潇",
         "background": "中央美术学院",
         "title": "央美生物设计实验室负责人",
         "category": "顶尖学者",
         "img": "assets/img/instructors/蔡潇.jpg",
         "photoSource": "instructors/顶尖学者/蔡潇 中央美术学院 央美生物设计实验室负责人.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
-        "id": "inst-aca-081",
+        "id": "inst-aca-082",
         "name": "费俊",
         "background": "中央美术学院",
         "title": "艺术与科技国内数字媒体领军人物",
         "category": "顶尖学者",
         "img": "assets/img/instructors/费俊.jpg",
         "photoSource": "instructors/顶尖学者/费俊 中央美术学院 艺术与科技国内数字媒体领军人物.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
-        "id": "inst-aca-082",
+        "id": "inst-aca-083",
         "name": "卢老师",
         "background": "BranD杂志",
         "title": "主编",
         "category": "业界导师",
         "img": "assets/img/instructors/卢老师.jpg",
         "photoSource": "instructors/业界导师/卢老师 BranD杂志 主编.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
-        "id": "inst-aca-083",
+        "id": "inst-aca-084",
         "name": "孟老师",
         "background": "中国时尚品牌先锋",
         "title": "",
         "category": "业界导师",
         "img": "assets/img/instructors/孟老师.jpg",
         "photoSource": "instructors/业界导师/孟老师 中国时尚品牌先锋.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
-        "id": "inst-aca-084",
+        "id": "inst-aca-085",
         "name": "晏老师",
         "background": "今日美术馆",
         "title": "馆长",
         "category": "业界导师",
         "img": "assets/img/instructors/晏老师.jpg",
         "photoSource": "instructors/业界导师/晏老师 今日美术馆 馆长.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
-        "id": "inst-aca-085",
+        "id": "inst-aca-086",
         "name": "朱会长",
         "background": "国家级插画协会",
         "title": "会长",
         "category": "业界导师",
         "img": "assets/img/instructors/朱会长.jpg",
         "photoSource": "instructors/业界导师/朱会长 国家级插画协会 会长.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
-        "id": "inst-aca-086",
+        "id": "inst-aca-087",
         "name": "翁老师",
         "background": "黑神话悟空",
         "title": "分集导演",
         "category": "业界导师",
         "img": "assets/img/instructors/翁老师.jpg",
         "photoSource": "instructors/业界导师/翁老师 黑神话悟空 分集导演.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
-        "id": "inst-aca-087",
+        "id": "inst-aca-088",
         "name": "蒋老师",
         "background": "中国著名雕塑家",
         "title": "",
         "category": "业界导师",
         "img": "assets/img/instructors/蒋老师.jpg",
         "photoSource": "instructors/业界导师/蒋老师 中国著名雕塑家.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
-        "id": "inst-aca-088",
+        "id": "inst-aca-089",
         "name": "蔺老师",
         "background": "歌华",
         "title": "设计文创项目打造者",
         "category": "业界导师",
         "img": "assets/img/instructors/蔺老师.jpg",
         "photoSource": "instructors/业界导师/蔺老师 歌华 设计文创项目打造者.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
-        "id": "inst-aca-089",
+        "id": "inst-aca-090",
         "name": "陆老师",
         "background": "策展人",
         "title": "华人第一女策展人",
         "category": "业界导师",
         "img": "assets/img/instructors/陆老师.jpg",
         "photoSource": "instructors/业界导师/陆老师 策展人 华人第一女策展人.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
-        "id": "inst-aca-090",
+        "id": "inst-aca-091",
         "name": "石院长",
         "background": "IFIC艺术疗愈研究院院长",
         "title": "",
         "category": "业界导师",
         "img": "assets/img/instructors/石院长 IFIC艺术疗愈研究院院长.jpg",
         "photoSource": "instructors/业界导师/石院长 IFIC艺术疗愈研究院院长.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       },
       {
-        "id": "inst-aca-091",
+        "id": "inst-aca-092",
         "name": "Weety老师",
         "background": "JUST FOTO设计负责人",
         "title": "",
         "category": "业界导师",
         "img": "assets/img/instructors/Weety老师 JUST FOTO设计负责人.jpg",
         "photoSource": "instructors/业界导师/Weety老师 JUST FOTO设计负责人.jpg",
-        "regions": []
+        "regions": [],
+        "detail": null
       }
     ]
   },
@@ -20961,6 +21610,35 @@ window.SFK_DATA = {
           "NYU",
           "纽约大学"
         ],
+        "pathway": {
+          "num": "01",
+          "label": "UNITED STATES / TOP30",
+          "motto": "综合大学跨学科型",
+          "title": "让艺术成为一条",
+          "titleEm": "独特的知识路径。",
+          "intro": "目标不是用一份作品集“补强”申请，而是让艺术成为学生理解人文、社会、科学或技术问题的独特方式。",
+          "fit": "学术表现稳定，已有持续兴趣、科研、公益、社团或学科强项，希望让艺术与其中一条主线深度连接。",
+          "focus": "从个人议题出发，建立 3–5 个彼此关联的项目，并把作品、活动、研究和文书组织为一个完整画像。",
+          "material": "Common App、Supplement、活动列表、艺术作品集/SlideRoom、项目说明与必要时的个人视频。",
+          "outcome": "跨学科思考、独立研究、项目表达与进入不同领域继续创造的能力。",
+          "resources": [
+            [
+              "Yale Art",
+              "工作室实践 × 艺术史",
+              "Studio Art 与艺术史、批评性思维共同构成学习路径。"
+            ],
+            [
+              "Yale College Arts",
+              "校园艺术资源",
+              "本科画廊、工作室与跨学科艺术资源支持学生实践。"
+            ],
+            [
+              "培养重点",
+              "从主线到证据",
+              "把学术、活动与创作连接为可被阅读的个人命题。"
+            ]
+          ]
+        },
         "timeline": [
           "【占位】成长时间轴内容待接入——将同步目录页「成长时间轴」模块中本方向对应的本科爬藤时间轴。"
         ]
@@ -21005,6 +21683,35 @@ window.SFK_DATA = {
           "卫斯理安",
           "Wesleyan"
         ],
+        "pathway": {
+          "num": "02",
+          "label": "LIBERAL ARTS COLLEGES / TOP20",
+          "motto": "导师制通识研究型",
+          "title": "用艺术为入口，",
+          "titleEm": "建立广阔的自由学习能力。",
+          "intro": "小班讨论和通识教育让艺术成为一种思考方法。作品不脱离阅读、写作与讨论，而是从中获得更扎实的研究密度。",
+          "fit": "享受阅读、讨论和跨领域探索，希望在紧密的学术社区中逐步确认专业方向的学生。",
+          "focus": "以通识为底，以导师反馈和独立研究为推力；强调过程、批判判断与作品背后的知识路径。",
+          "material": "学术课程轨迹、艺术项目过程、个人陈述/补充文书，以及能说明研究兴趣的作品集。",
+          "outcome": "批判思考、独立研究、跨学科沟通与持续学习的能力。",
+          "resources": [
+            [
+              "Pomona Studio Art",
+              "高密度工作室环境",
+              "绘画、雕塑、数码与多媒体等工作室支持多媒介实践。"
+            ],
+            [
+              "Benton Museum",
+              "馆藏与展览资源",
+              "艺术课程可与校园美术馆和纸本收藏发生连接。"
+            ],
+            [
+              "培养重点",
+              "研究与讨论能力",
+              "以作品过程回应阅读、观察和独立思考。"
+            ]
+          ]
+        },
         "timeline": [
           "【占位】成长时间轴内容待接入——将同步目录页「成长时间轴」模块中本方向对应的本科爬藤时间轴。"
         ]
@@ -21031,6 +21738,35 @@ window.SFK_DATA = {
           "伦敦大学学院",
           "UCL"
         ],
+        "pathway": {
+          "num": "03",
+          "label": "UNITED KINGDOM / G5",
+          "motto": "专业研究与批判思维型",
+          "title": "用研究与作品过程，",
+          "titleEm": "证明专业选择。",
+          "intro": "英国艺术申请更在意学生是否理解自己正在研究什么、如何创作、为何选择这一专业；过程、反思与面试表达都很重要。",
+          "fit": "专业方向相对明确，愿意以阅读、写作、研究和持续的作品过程驱动工作室创作的学生。",
+          "focus": "先建立专业判断，再以研究、实验、反思和作品集证明学生与目标学科的匹配度。",
+          "material": "学术成绩与课程、UCAS 文书/材料、过程型作品集、作品说明、面试与作品集面谈准备。",
+          "outcome": "研究方法、批判反思、专业工作室实践与清晰的学术表达。",
+          "resources": [
+            [
+              "Oxford Fine Art",
+              "教程制 × 城市艺术资源",
+              "教程、评图与职业实践支持，并连接 Ashmolean、Bodleian 和 Modern Art Oxford。"
+            ],
+            [
+              "UCL Slade",
+              "伦敦工作室与技术设施",
+              "工作室、版画、雕塑、影像、暗房与数字化设施支持跨媒介实践。"
+            ],
+            [
+              "培养重点",
+              "研究问题先行",
+              "让阅读、研究、作品过程与专业选择指向同一问题。"
+            ]
+          ]
+        },
         "timeline": [
           "【占位】成长时间轴内容待接入——将同步目录页「成长时间轴」模块中本方向对应的本科爬藤时间轴。"
         ]
@@ -21050,6 +21786,35 @@ window.SFK_DATA = {
           "RISD",
           "Rhode Island"
         ],
+        "pathway": {
+          "num": "04",
+          "label": "RHODE ISLAND SCHOOL OF DESIGN",
+          "motto": "高密度工作室训练型",
+          "title": "把想法变成方法，",
+          "titleEm": "也变成真正完成的作品。",
+          "intro": "RISD 重视学生的观察、材料实验和持续迭代。申请不只展示“最好的成品”，更要展示具有个人选择和完成度的创作方法。",
+          "fit": "对媒介和制作有高投入，愿意不断试错、接受评图，并希望在专业艺术共同体中成长的学生。",
+          "focus": "以观察与基础训练为起点，发展媒介判断、项目执行、批评与修改能力，形成强韧的工作室方法。",
+          "material": "作品集/SlideRoom、过程与研究、创作说明，以及能说明个人观察和媒介探索的项目材料。",
+          "outcome": "独立创作、工作室协作、材料实验、项目完成与专业展示能力。",
+          "resources": [
+            [
+              "RISD EFS",
+              "一年级共同基础",
+              "Drawing、Design 与 Spatial Dynamics 构成所有本科生的共享基础。"
+            ],
+            [
+              "RISD Campus",
+              "博物馆、图书馆与实验室",
+              "RISD Museum、Fleet Library、专业实验室和学生展览空间连接学习与展示。"
+            ],
+            [
+              "培养重点",
+              "过程与完成度",
+              "通过观察、实验、评图和迭代形成可见的工作室方法。"
+            ]
+          ]
+        },
         "timeline": [
           "【占位】成长时间轴内容待接入——将同步目录页「成长时间轴」模块中本方向对应的本科爬藤时间轴。"
         ]
@@ -21079,6 +21844,35 @@ window.SFK_DATA = {
           "管理大学",
           "SMU"
         ],
+        "pathway": {
+          "num": "05",
+          "label": "HONG KONG / SINGAPORE",
+          "motto": "亚洲国际化文化枢纽型",
+          "title": "在亚洲与世界之间，",
+          "titleEm": "建立清晰的艺术方向。",
+          "intro": "港新路径让英美式高等教育与亚洲的城市文化生态连接起来，适合兼顾学术能力、区域文化观察、创作实践与国际表达的学生。",
+          "fit": "希望在国际化环境中关注亚洲文化、跨文化交流或创意产业，同时保持较强学术基础和作品实践的学生。",
+          "focus": "以区域文化经验形成研究问题，再以国际化的视觉语言、工作室实践和展示能力进入更广阔的艺术网络。",
+          "material": "成绩与课程、作品集、个人陈述/面试，以及能够体现区域观察、实践和跨文化理解的项目过程。",
+          "outcome": "跨文化表达、策展/展示、创作实践、行业协作与区域艺术网络意识。",
+          "resources": [
+            [
+              "HKU / CUHK",
+              "博物馆、工作室与艺术档案",
+              "HKU UMAG 支持课程与实习；中大拥有多类工作室及香港艺术档案。"
+            ],
+            [
+              "NTU ADM",
+              "实验室与专业实习",
+              "跨媒介实验室、编辑套间与十周实习连接视觉艺术、科技和行业。"
+            ],
+            [
+              "NAFA / LASALLE",
+              "Fine Art 的区域实践",
+              "工作室、展览空间、跨学科实践和面向亚洲文化语境的 Fine Arts 训练。"
+            ]
+          ]
+        },
         "timeline": [
           "【占位】成长时间轴内容待接入——将同步目录页「成长时间轴」模块中本方向对应的本科爬藤时间轴。"
         ]
@@ -24142,6 +24936,36 @@ window.SFK_DATA = {
       "poster": "assets/img/courses/2027暑假- UAL伦艺本科官方夏校.jpg",
       "university": "英国",
       "professor": "",
+      "type": "境外项目"
+    }
+  ],
+  "anxin-courses": [
+    {
+      "tab": "oversea",
+      "program_type": "安心伴",
+      "category": "艺术人文",
+      "role_or_course": "安心伴 · 课程内容整理中",
+      "suitable_for": "课程信息即将上线，敬请期待",
+      "location": "待定",
+      "level": "本科/研究生",
+      "outcomes": "敬请期待",
+      "poster": "",
+      "university": "待定",
+      "professor": "待定",
+      "type": "境外项目"
+    },
+    {
+      "tab": "oversea",
+      "program_type": "毕无忧",
+      "category": "艺术人文",
+      "role_or_course": "毕无忧 · 课程内容整理中",
+      "suitable_for": "课程信息即将上线，敬请期待",
+      "location": "待定",
+      "level": "本科/研究生",
+      "outcomes": "敬请期待",
+      "poster": "",
+      "university": "待定",
+      "professor": "待定",
       "type": "境外项目"
     }
   ]

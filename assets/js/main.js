@@ -9,7 +9,7 @@
 const DATA = { cache: {} };
 
 /* ── 数据加载：内嵌优先，fetch 兜底 ── */
-async function loadData(files = ['meta', 'majors', 'cases', 'planning', 'careers', 'directions', 'direction-details', 'course-products', 'offers', 'instructors', 'resources', 'undergrad-regions', 'timeline', 'frontier-lectures', 'masterclass-courses', 'summer-winter-courses', 'industry-courses', 'overseas-courses']) {
+async function loadData(files = ['meta', 'majors', 'cases', 'planning', 'careers', 'directions', 'direction-details', 'course-products', 'offers', 'instructors', 'resources', 'undergrad-regions', 'timeline', 'frontier-lectures', 'masterclass-courses', 'summer-winter-courses', 'industry-courses', 'overseas-courses', 'anxin-courses']) {
   if (window.SFK_DATA) { DATA.cache = window.SFK_DATA; return; }      // file:// 直开也能拿到数据
   if (location.protocol === 'file:') throw new Error('file 协议下无法 fetch，请改用 HTTP 预览');
   await Promise.all(files.map(async name => {
@@ -125,71 +125,90 @@ const Router = {
   built: {}
 };
 
-/* ═══════════ 马赛克横向滚动图卷 ═══════════
-   把已收集的 20 张作品拼成「一张」无缝马赛克，只在「关于艺术人文」全屏界面出现：
-   - 以「基础格 unit」为最小单位，每个图块 = unit 的整数倍（如 1×1、2×1、3×2…）
-   - 图块之间零间距、严丝合缝铺满整幅；20 张图循环取用（允许重复使用）
-   - 整幅复制一份首尾相接 → 横向无缝循环滚动
-   - 格边长与列数随视口重算，整幅始终正好一屏高、且半幅宽度 ≥ 视口宽（循环不露底） */
+/* ═══════════ 单行横向滚动图卷 ═══════════
+   把已收集的 125 张作品排成「单行」，只在「关于艺术人文」全屏界面出现：
+   - 每张图高度 = 视口高（上下边缘完整撑满，无空白），宽度按原图比例自适应
+   - 125 张图循环取用（允许重复使用），半幅总宽 ≥ 视口宽（循环不露底）
+   - 整幅复制一份首尾相接 → 向左无缝循环滚动
+   - 行宽随视口重算，保证任何视口下都不露底 */
 const Mosaic = {
-  /* [文件名, 宽, 高] —— 取自「x同学」案例子页的作品/项目图（已 OCR 剔除录取截图） */
-  /* 顺序已打散：原 01–10 与新增 11–20 交错，非按来源分组 */
+  /* [文件名, 宽, 高] —— 取自「案例滚动播放」素材库（按修改时间正序编号 1–125） */
   IMAGES: [
-    ['reel-03.png', 800, 401], ['reel-11.png', 799, 648], ['reel-07.jpg', 799, 565],
-    ['reel-18.png', 686, 800], ['reel-01.jpg', 800, 600], ['reel-14.jpg', 800, 600],
-    ['reel-09.png', 799, 794], ['reel-12.png', 799, 581], ['reel-05.png', 800, 634],
-    ['reel-19.png', 800, 347], ['reel-02.png', 799, 589], ['reel-16.png', 799, 595],
-    ['reel-08.png', 502, 708], ['reel-13.png', 800, 453], ['reel-04.png', 531, 799],
-    ['reel-20.png', 798, 454], ['reel-06.jpg', 799, 565], ['reel-15.png', 799, 444],
-    ['reel-10.png', 800, 550], ['reel-17.png', 800, 464]
+    ['1.png', 846, 1166], ['2.png', 1510, 1010], ['3.png', 1632, 1014],
+    ['4.png', 1388, 1060], ['5.png', 1602, 1066], ['6.png', 1602, 1068],
+    ['7.png', 1608, 1068], ['8.png', 1518, 1140], ['9.png', 1932, 1346],
+    ['10.png', 1966, 1258], ['11.png', 1908, 1366], ['12.jpeg', 3568, 2537],
+    ['13.jpeg', 3000, 1687], ['14.jpeg', 4096, 2304], ['15.jpeg', 4096, 2461],
+    ['16.jpeg', 4096, 2126], ['17.jpeg', 4096, 2305], ['18.png', 2245, 1587],
+    ['19.png', 2000, 1124], ['20.png', 1732, 1148], ['21.png', 1506, 1046],
+    ['22.png', 1280, 905], ['23.png', 1280, 916], ['24.jpeg', 1754, 1240],
+    ['25.png', 2245, 1587], ['26.jpeg', 1754, 1240], ['27.png', 1881, 1280],
+    ['28.png', 2870, 1614], ['29.png', 2550, 1603], ['30.jpeg', 1800, 1620],
+    ['31.png', 2401, 1601], ['32.png', 4096, 2797], ['33.png', 4096, 2078],
+    ['34.png', 1570, 1189], ['35.png', 2048, 963], ['36.png', 3840, 1605],
+    ['37.png', 2528, 1279], ['38.png', 2246, 1028], ['39.jpg', 1584, 1245],
+    ['40.jpg', 2340, 1620], ['41.png', 3238, 1823], ['42.png', 4591, 2041],
+    ['43.png', 4336, 2041], ['44.jpg', 4000, 2250], ['45.jpg', 6035, 4265],
+    ['46.jpg', 2834, 1417], ['47.png', 3000, 1688], ['48.png', 3000, 1688],
+    ['49.png', 3000, 1688], ['50.png', 3000, 1688], ['51.png', 3000, 1688],
+    ['52.png', 1754, 1170], ['53.png', 1754, 1170], ['54.png', 1754, 1170],
+    ['55.png', 1754, 1170], ['56.png', 1754, 1170], ['57.png', 1754, 1170],
+    ['58.png', 1754, 1170], ['59.png', 4430, 1772], ['60.png', 3125, 1563],
+    ['61.png', 3125, 1563], ['62.png', 3125, 1563], ['63.png', 1446, 681],
+    ['64.png', 1446, 681], ['65.png', 1446, 681], ['66.png', 1446, 681],
+    ['67.png', 1446, 681], ['68.png', 1531, 681], ['69.png', 1531, 681],
+    ['70.png', 1531, 681], ['71.png', 1531, 681], ['72.png', 1531, 681],
+    ['73.png', 1531, 681], ['74.png', 1531, 681], ['75.png', 1531, 681],
+    ['76.png', 2687, 1900], ['77.png', 2500, 1670], ['78.png', 2846, 1600],
+    ['79.png', 2846, 1600], ['80.png', 2846, 1600], ['81.png', 2846, 1600],
+    ['82.png', 2846, 1600], ['83.png', 2846, 1600], ['84.png', 867, 1275],
+    ['85.png', 877, 1342], ['86.png', 1160, 1275], ['87.png', 1708, 1275],
+    ['88.png', 1650, 1298], ['89.png', 1475, 1275], ['90.png', 891, 1275],
+    ['91.png', 1650, 1275], ['92.png', 927, 1275], ['93.png', 1650, 1275],
+    ['94.png', 899, 1275], ['95.png', 1650, 1113], ['96.png', 881, 1275],
+    ['97.png', 2953, 1241], ['98.png', 2953, 1241], ['99.png', 2989, 1276],
+    ['100.png', 2989, 1276], ['101.png', 2365, 1688], ['102.png', 2633, 1535],
+    ['103.png', 1032, 1688], ['104.png', 2582, 1688], ['105.png', 3000, 1688],
+    ['106.png', 2496, 1686], ['107.png', 4000, 2250], ['108.png', 4000, 2250],
+    ['109.png', 4000, 2250], ['110.png', 4000, 2250], ['111.png', 4000, 2250],
+    ['112.png', 3000, 1688], ['113.png', 2953, 1181], ['114.png', 2953, 1181],
+    ['115.png', 2953, 1181], ['116.png', 2953, 1181], ['117.png', 2953, 1181],
+    ['118.png', 2953, 1181], ['119.png', 1240, 1755], ['120.png', 1240, 1755],
+    ['121.png', 1240, 1755], ['122.png', 7754, 3877], ['123.png', 7754, 3877],
+    ['124.png', 7752, 3875], ['125.png', 1240, 1755]
   ],
-  ROWS: [2, 1, 2, 1],        // 每行高度（基础格数）；合计 = UNIT_ROWS
-  UNIT_ROWS: 6,              // 竖向基础格数 → unit = 视口高 / 6，整幅正好一屏高
-  WIDTHS: [2, 1, 3, 1, 2],   // 图块宽度（基础格数），循环取用，行尾自动收口
   SPEED: 34,                 // px/s
   built: false,
 
-  /* 生成排布：返回格边长、列数与每个图块的 [行/列/跨行数/跨列数]（单位均为基础格） */
+  /* 生成单行排布：图高 = 视口高 vh，图宽 = vh × 原图宽高比；累计宽 ≥ 视口宽即止 */
   layout(vw, vh) {
-    // 取整到整像素：避免分数格宽在拼接处留下亚像素缝隙
-    const unit = Math.round(vh / this.UNIT_ROWS) || 1;      // 基础格边长
-    const cols = Math.max(6, Math.ceil(vw / unit) + 1);     // 半幅 ≥ 视口宽
     const tiles = [];
-    let seq = 0, rowStart = 0;
-
-    this.ROWS.forEach((h, r) => {
-      let col = 0, k = r * 2;                               // 每行错开起点 → 上下不错缝
-      while (col < cols) {
-        let w = this.WIDTHS[k % this.WIDTHS.length]; k++;
-        if (w > cols - col) w = cols - col;                 // 行尾收口，绝不留下空隙
-        let i = seq++ % this.IMAGES.length;
-        const prev = tiles[tiles.length - 1];               // 相邻不重复（能避则避）
-        if (prev && prev.src === this.IMAGES[i][0]) i = seq++ % this.IMAGES.length;
-        tiles.push({ src: this.IMAGES[i][0], r: rowStart, c: col, h, w });
-        col += w;
-      }
-      rowStart += h;
-    });
-    return { unit, cols, tiles };
+    let total = 0, i = 0;
+    while (total < vw) {
+      const [src, iw, ih] = this.IMAGES[i++ % this.IMAGES.length];
+      const w = Math.max(1, Math.round(vh * iw / ih));
+      tiles.push({ src, w });
+      total += w;
+    }
+    return { tiles };
   },
 
-  /* 两份首尾相接：第二份整体右移 cols 列 → 横向无缝循环 */
-  markup({ tiles, cols }) {
-    const cell = (t, off) =>
-      `<figure style="grid-area:${t.r + 1}/${t.c + 1 + off}/span ${t.h}/span ${t.w}">
+  /* 两份首尾相接：第二份紧随第一份 → translateX(-50%) 横向无缝循环 */
+  markup({ tiles }) {
+    const one = () => tiles.map(t =>
+      `<figure style="width:${t.w}px">
          <img data-src="assets/img/reel/${t.src}" alt="" decoding="async" draggable="false">
-       </figure>`;
-    return tiles.map(t => cell(t, 0)).join('') + tiles.map(t => cell(t, cols)).join('');
+       </figure>`).join('');
+    return one() + one();
   },
 
   mount() {
     const track = document.getElementById('nav-overlay-track');
     if (!track) return;
-    const { unit, cols, tiles } = this.layout(window.innerWidth, window.innerHeight);
-    track.style.gridTemplateColumns = `repeat(${cols * 2}, ${unit}px)`;
-    track.style.gridTemplateRows = `repeat(${this.UNIT_ROWS}, ${unit}px)`;
-    track.style.height = `${unit * this.UNIT_ROWS}px`;      // 整幅 = 整数格，避免底部半像素留白
-    track.innerHTML = this.markup({ tiles, cols });
+    const vh = window.innerHeight;
+    const tiles = this.layout(window.innerWidth, vh).tiles;
+    track.style.height = `${vh}px`;                 // 图高 = 视口高，上下边缘撑满
+    track.innerHTML = this.markup({ tiles });
     window.requestIdleCallback
       ? requestIdleCallback(() => this.hydrate(), { timeout: 600 })
       : setTimeout(() => this.hydrate(), 300);
@@ -216,7 +235,7 @@ const Mosaic = {
 
 /* ═══════════ 学生案例页 · 作品横向滚动带 ═══════════
    视觉与交互参照目录页（「关于艺术人文」浮层）的滚动马赛克（Mosaic）：
-   同一套 20 张作品图源（Mosaic.IMAGES），内容复制两份首尾相接，
+   同一套 125 张作品图源（Mosaic.IMAGES），内容复制两份首尾相接，
    translateX(0 → -50%) 无缝自右向左循环；时长 = 半幅宽 / 速度，任何视口下线速度恒定。
 
    与目录页「按行铺满」不同，这里按「列」打包成打乱拼接的马赛克：
@@ -360,7 +379,7 @@ const NavOverlay = {
     return `
       <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
         <div class="nav-overlay__sweep"></div>
-        <button class="nav-overlay__close" type="button" onclick="NavOverlay.close()" aria-label="关闭">&times;</button>
+        <button class="nav-overlay__close" type="button" onclick="NavOverlay.close()" aria-label="关闭"><span class="u-en">×</span></button>
         <!-- 横向滚动马赛克：20 张作品无缝拼合，仅此界面出现（首次展开时才建） -->
         <div class="nav-overlay__reel" aria-hidden="true">
           <div class="nav-overlay__track" id="nav-overlay-track"></div>
@@ -564,7 +583,9 @@ const CAT_TAG_COLORS = {
   '境外夏校': { color: '#4ADBA0', border: 'rgba(74,219,160,.5)', rgb: '74,219,160', veil: .3, glow: .28 },
   '境外冬校': { color: '#E5C07B', border: 'rgba(229,192,123,.5)', rgb: '229,192,123', veil: .3, glow: .28 },
   '境外研学': { color: '#C678DD', border: 'rgba(198,120,221,.5)', rgb: '198,120,221', veil: .3, glow: .28 },
-  '家长团': { color: '#E06C9F', border: 'rgba(224,108,159,.5)', rgb: '224,108,159', veil: .3, glow: .28 }
+  '家长团': { color: '#E06C9F', border: 'rgba(224,108,159,.5)', rgb: '224,108,159', veil: .3, glow: .28 },
+  '招募中': { color: '#4ADBA0', border: 'rgba(74,219,160,.5)', rgb: '74,219,160', veil: .3, glow: .28 },
+  '往期': { color: '#98A2B3', border: 'rgba(152,162,179,.5)', rgb: '152,162,179', veil: .3, glow: .28 }
 };
 
 /* 课程模块数据源登记表：条目声明 curriculumSource 后，由其指向的原始数据
@@ -576,7 +597,8 @@ const CURRICULUM_SOURCES = {
   'masterclass-courses': 'masterclassCards',
   'summer-winter-courses': 'summerWinterCards',
   'industry-courses': 'industryCards',
-  'overseas-courses': 'overseasCards'
+  'overseas-courses': 'overseasCards',
+  'anxin-courses': 'overseasCards'
 };
 
 /* ═══════════ 课程产品（主页 #courses 板块） ═══════════
@@ -932,7 +954,7 @@ const CourseProducts = {
      艺术前沿讯息讲座、本科爬藤「课程产品」板块均复用本方法，保证全站一致。 */
   curriculumCard(c) {
     const esc = this.esc;
-    const img = c.img ? `<img src="${esc(c.img)}" alt="" loading="lazy">` : '';
+    const img = c.img ? `<img src="${esc(c.img)}" alt="${esc(c.alt || c.title || '')}" loading="lazy">` : '';
     const catTag = c.catTag ? `<span class="cd-curriculum-card__cat-tag">${esc(c.catTag)}</span>` : '';
     const cls = 'cd-curriculum-card__img' + (c.img ? ' cd-curriculum-card__img--photo' : '');
     /* 色系变量统一挂在卡片上，角标经 CSS 变量继承，无需各自写样式 */
@@ -1019,7 +1041,7 @@ const CourseProducts = {
     return (rows || []).map(r => ({
       img: r.poster || '',
       pdf: this.pdfPath(pdfDir, r.poster),
-      catTag: r.tab || '',
+      catTag: (r.tab === 'Autumn 26') ? '招募中' : '往期',
       eyebrow: r.program_type || '',
       title: r.role_or_course || '',
       program: [r.university, r.professor].filter(Boolean).join('｜'),
@@ -1040,7 +1062,7 @@ const CourseProducts = {
       return {
         img: r.poster || '',
         pdf: this.pdfPath(pdfDir, r.poster),
-        catTag: r.tab || '',
+        catTag: ((r.role_or_course || '').includes('27冬校')) ? '招募中' : '往期',
         eyebrow: r.program_type || '',
         title: r.role_or_course || '',
         program: [r.university, r.professor].filter(Boolean).join('｜'),
@@ -1813,6 +1835,8 @@ const InstructorsSection = {
     });
     root.addEventListener('click', e => {
       if (e.target.closest('#instructors-expand-btn')) this.toggle();
+      const card = e.target.closest('.person-card');
+      if (card && card.dataset.mid) MentorSheet.open(card.dataset.mid);
     });
   },
 
@@ -1822,7 +1846,7 @@ const InstructorsSection = {
       return `<div style="padding:32px 0;grid-column:1/-1;color:var(--text-dim);text-align:center;">该分类暂无导师数据 · 敬请期待</div>`;
     }
     return list.map(r => `
-      <div class="person-card">
+      <div class="person-card" data-mid="${this.esc(r.id || '')}">
         <div class="person-card__avatar">${r.img ? `<img src="${this.esc(r.img)}" alt="" loading="lazy">` : `<span class="person-card__avatar-ph">待提供</span>`}</div>
         <div class="person-card__name">${this.esc(r.name)}</div>
         ${r.background ? `<div class="person-card__background">${this.esc(r.background)}</div>` : ''}
@@ -1863,6 +1887,104 @@ const InstructorsSection = {
   toggle() {
     this._expanded = !this._expanded;
     this._applyClamp();
+  }
+};
+
+/* ═══════════ 导师详情页（点击导师卡片 → 居中叠加层）═══════════
+   版式参照游戏动画后台「课程管理 · 实时预览」：眉标 → 元信息行 → 大标题 →
+   品牌色副标题 → 编号内容区块（01 / 代表作，02 / 成就亮点……）。
+   叠加层覆盖上一层级页面（暗化 + 模糊），面板居中、有明确边界（边框 + 圆角）。
+   有 detail（教授海报提取内容）的导师展示完整范式；其余展示基础信息 + 占位。
+   ESC / 点击遮罩 / 关闭按钮均可退出。 */
+const MentorSheet = {
+  esc(v) { return DirectionsSection.escape(v == null ? '' : String(v)); },
+
+  ensure() {
+    if (this.el) return this.el;
+    const el = document.createElement('div');
+    el.className = 'mentor-sheet';
+    el.id = 'mentor-sheet';
+    el.setAttribute('aria-hidden', 'true');
+    el.innerHTML = `
+      <div class="mentor-sheet__bg" onclick="MentorSheet.close()"></div>
+      <div class="mentor-sheet__panel" role="dialog" aria-modal="true" aria-label="导师详情">
+        <div class="mentor-sheet__scroll"></div>
+        <button type="button" class="mentor-sheet__back" onclick="MentorSheet.close()" aria-label="关闭">×</button>
+      </div>`;
+    document.body.appendChild(el);
+    this.el = el;
+    this.panel = el.querySelector('.mentor-sheet__panel');
+    this.scroll = el.querySelector('.mentor-sheet__scroll');
+    if (!this.keybound) {
+      this.keybound = true;
+      document.addEventListener('keydown', e => {
+        if (!this.isOpen()) return;
+        if (e.key === 'Escape') this.close();
+      });
+    }
+    return el;
+  },
+
+  isOpen() { return !!this.el && this.el.classList.contains('is-open'); },
+
+  open(id) {
+    const c = (InstructorsSection._instructors || []).find(x => x.id === id);
+    if (!c) return;
+    const el = this.ensure();
+    this.scroll.innerHTML = this.markup(c);
+    el.classList.add('is-open');
+    el.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('is-locked');
+    this.scroll.scrollTop = 0;
+  },
+
+  close() {
+    if (!this.isOpen()) return;
+    this.el.classList.remove('is-open');
+    this.el.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('is-locked');
+  },
+
+  markup(c) {
+    const d = c.detail;
+    const row = (label, val) => val
+      ? `<div class="mentor-sheet__kv"><dt>${label}</dt><dd>${this.esc(val)}</dd></div>` : '';
+    return `
+      <header class="mentor-sheet__head">
+        <div class="mentor-sheet__avatar">${c.img ? `<img src="${this.esc(c.img)}" alt="${this.esc(c.name)}">` : `<span class="mentor-sheet__avatar-ph">待提供</span>`}</div>
+        <div class="mentor-sheet__id">
+          <span class="mentor-sheet__eyebrow u-en">MENTOR PROFILE · ${this.esc(c.category)}</span>
+          <div class="mentor-sheet__meta">${this.esc(c.background)}${c.title ? `<span class="mentor-sheet__meta-sep">｜</span>${this.esc(c.title)}` : ''}</div>
+          <div class="mentor-sheet__name">${this.esc(c.name)}</div>
+        </div>
+      </header>
+      <div class="mentor-sheet__body">
+        ${d ? `
+        <section class="mentor-sheet__block">
+          <h4 class="mentor-sheet__h4"><span class="u-en">01 /</span> 成就亮点</h4>
+          ${(d.highlights || []).map(p => `<p class="mentor-sheet__p">${this.esc(p)}</p>`).join('')}
+        </section>
+        ${(d.repWorks || []).length ? `
+        <section class="mentor-sheet__block">
+          <h4 class="mentor-sheet__h4"><span class="u-en">02 /</span> 代表作</h4>
+          <p class="mentor-sheet__workline">${(d.repWorks || []).map(w => this.esc(w)).join(' ｜ ')}</p>
+        </section>` : ''}
+        ${d.officialLink ? `
+        <section class="mentor-sheet__block">
+          <h4 class="mentor-sheet__h4"><span class="u-en">03 /</span> 官方链接</h4>
+          <a class="mentor-sheet__link u-en" href="${this.esc(d.officialLink)}" target="_blank" rel="noopener">${this.esc(d.officialLink)}</a>
+        </section>` : ''}`
+        : `
+        <section class="mentor-sheet__block">
+          <h4 class="mentor-sheet__h4"><span class="u-en">01 /</span> 导师详情</h4>
+          <p class="mentor-sheet__p mentor-sheet__ph">详情内容整理中 · 敬请期待</p>
+        </section>`}
+        <dl class="mentor-sheet__meta-grid">
+          ${row('所属分类', c.category)}
+          ${row('毕业院校', c.background)}
+          ${row('专业方向', c.title)}
+        </dl>
+      </div>`;
   }
 };
 
@@ -2121,6 +2243,7 @@ const UndergradPage = {
     /* 视口变化会让正文换行、面板变高 → 重算已展开项的高度 */
     window.addEventListener('resize', () => this.applyOpen());
 
+    this.renderPathwayCards();   // 五大院校方向模块卡（静态横向栅格）
     this.render();   // 首次渲染只填充内容，不滚动（进页定位交给 Router）
   },
 
@@ -2175,6 +2298,105 @@ const UndergradPage = {
   esc(v) {
     return String(v == null ? '' : v)
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  },
+
+  /* ── 五大院校方向 · 培养路径模块卡（静态横向栅格，不滑动）──────────
+     卡片形态沿用「八大就业方向一览」的 .direction-card（编号 + 箭头 → 院校体系
+     小标 → 标题 → 院校类型副标 → 导语），区别是这里为 5 张卡片静态排开的等分
+     栅格，不参与 .directions__rail 的无缝滚动。文案取自 data/undergrad-regions.json
+     各 tab 的 pathway 字段，对应源码「02 培养路径」面板左侧的
+     上方文字（label）/ 标题（title + titleEm）/ 副标题（motto）。 */
+  renderPathwayCards() {
+    const box = document.getElementById('ug-pathway-cards');
+    if (!box) return;
+    const esc = this.esc;
+    const arrow = `<svg class="direction-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>`;
+
+    box.innerHTML = this.tabs.filter(t => t.pathway).map(t => {
+      const w = t.pathway;
+      return `<article class="direction-card ug-pathway-card" data-pathway-key="${esc(t.id)}"
+          style="--direction-color: ${esc(t.color)}" role="button" tabindex="0"
+          aria-label="查看${esc(t.title)}培养路径详情">
+        <div class="direction-card__top">
+          <span class="direction-card__num">${esc(w.num)}</span>${arrow}
+        </div>
+        <div class="ug-pathway-card__label u-en">${esc(w.label)}</div>
+        <h3 class="direction-card__title">${esc(w.title)}<em>${esc(w.titleEm)}</em></h3>
+        <div class="ug-pathway-card__motto">${esc(w.motto)}</div>
+        <p class="direction-card__desc">${esc(w.intro)}</p>
+      </article>`;
+    }).join('');
+
+    /* 卡片点击 / 回车 → 打开详情页（与「长线旗舰产品」模块详情同一套浮层与
+       cd-* 层级）；事件委托一次，后续重渲染仍有效 */
+    if (this._pathwayBound) return;
+    this._pathwayBound = true;
+    box.addEventListener('click', e => {
+      const card = e.target.closest('.ug-pathway-card');
+      if (card) this.openPathway(card.getAttribute('data-pathway-key'));
+    });
+    box.addEventListener('keydown', e => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const card = e.target.closest('.ug-pathway-card');
+      if (!card) return;
+      e.preventDefault();
+      this.openPathway(card.getAttribute('data-pathway-key'));
+    });
+  },
+
+  openPathway(key) {
+    const tab = (this.tabs || []).filter(t => t.id === key)[0];
+    if (!tab || !tab.pathway) return;
+    /* 详情页复用课程详情浮层 #course-overlay：其关闭按钮 / 点背景 / ESC 均由
+       CourseProducts.bind 绑定，而本页（PAGES.undergraduate）不跑 CourseProducts.build。
+       直接以 #/undergraduate 进入时那套监听尚未建立 → 这里幂等补一次绑定，
+       保证详情浮层在任何入口都能正常关闭（bind 内部有 _bound 幂等保护）。 */
+    if (CourseProducts && !CourseProducts._bound) CourseProducts.bind();
+    const ov = document.getElementById('course-overlay');
+    const body = document.getElementById('course-overlay-body');
+    if (!ov || !body) return;
+    body.innerHTML = this.pathwayDetail(tab);
+    body.classList.add('is-wide');
+    ov.classList.add('is-open');
+    document.body.classList.add('is-locked');
+    const panel = ov.querySelector('.course-overlay__panel');
+    if (panel) panel.scrollTop = 0;
+    body.scrollTop = 0;
+    const btn = ov.querySelector('.course-overlay__close');
+    if (btn) btn.focus();
+  },
+
+  /* 详情页：布局 / 信息层级 / 样式对齐「课程产品 · 长线旗舰产品」模块详情——
+     同一套 cd-* 分区层级：hero（眉标 → 标题 → 英文副标 → 导语 → 标签）
+     → 核心数据 SNAPSHOT → 培养路径解读网格 → 院校资源 → 收尾语。
+     文案逐字取自源码 schoolData，不新增或改写。 */
+  pathwayDetail(tab) {
+    const esc = this.esc, w = tab.pathway;
+    const sec = (label, inner) =>
+      `<section class="cd-section"><div class="cd-section__label">${esc(label)}</div>${inner}</section>`;
+    const stat = (k, v) =>
+      `<div class="cd-stat"><div class="cd-stat__k">${esc(k)}</div><div class="cd-stat__v">${esc(v)}</div></div>`;
+    const why = (t, d) =>
+      `<div class="cd-why"><div class="cd-stat__k">${esc(t)}</div><div class="cd-stat__v">${esc(d)}</div></div>`;
+    return `
+      <div class="cd-hero">
+        <div class="cd-hero__content">
+          <div class="cd-hero__eyebrow">${esc(w.label)}｜${esc(w.motto)}</div>
+          <h2 class="cd-hero__title">${esc(w.title)}${esc(w.titleEm)}</h2>
+          <div class="cd-hero__subtitle">${esc(tab.titleEn)}</div>
+          <p class="cd-hero__desc">${esc(w.intro)}</p>
+          <div class="cd-chips">${[w.motto, tab.title].map(c => `<span class="cd-chip">${esc(c)}</span>`).join('')}</div>
+        </div>
+        <div class="cd-hero__tile" aria-hidden="true"></div>
+      </div>
+      ${sec('核心数据 · SNAPSHOT', `<div class="cd-stat-grid">${stat('培养类型', w.motto)}${stat('院校体系', w.label)}${stat('代表区域', tab.title)}</div>`)}
+      ${sec('培养路径 · INTERPRETATION', `<div class="cd-why-grid">${why('适合的学生', w.fit)}${why('培养侧重点', w.focus)}${why('申请材料重点', w.material)}${why('大学毕业后的能力', w.outcome)}</div>`)}
+      ${sec('院校资源 · RESOURCES', `<div class="dir-sec__cards">${w.resources.map(([n, s, d]) =>
+        `<div class="dir-card" style="--dir-color:${esc(tab.color)}"><div class="dir-card__t">${esc(n)}</div><div class="dir-card__d">${esc(s)}｜${esc(d)}</div></div>`).join('')}</div>`)}
+      <div class="cd-cta">
+        <p class="cd-cta__statement">${esc(w.title)}${esc(w.titleEm)}</p>
+        <p class="cd-cta__statement-en">${esc(w.label)}</p>
+      </div>`;
   },
 
   professorsOf(tab) {
@@ -2376,6 +2598,23 @@ const CasesPage = {
       if (alt) this.dimension = alt.value;
     }
 
+    /* 折叠 / 展开：与「导师团队」板块同款 section-cta 折叠标签 + 网格行数钳制 */
+    this._expanded = false;
+    this.rows = data.rows || 4;
+    let moreWrap = document.getElementById('cases-more-wrap');
+    if (!moreWrap) {
+      moreWrap = document.createElement('div');
+      moreWrap.id = 'cases-more-wrap';
+      moreWrap.style.cssText = 'text-align:center;margin-top:24px;';
+      grid.after(moreWrap);
+    }
+    if (!this._moreBound) {
+      this._moreBound = true;
+      moreWrap.addEventListener('click', e => {
+        if (e.target.closest('#cases-expand-btn')) this.toggle();
+      });
+    }
+
     this.renderFilters();
     this.renderGrid();
   },
@@ -2470,7 +2709,7 @@ const CasesPage = {
     const group = (label, btns) => this._group(label, btns);
     const btn = (attrs, label, active, util) => this._btn(attrs, label, active, util);
 
-    /* 第一行：申请维度（单选）+ 申请国家（多选，置于其右侧） */
+    /* 第一行：申请维度（单选）+ 国家（多选，紧挨维度组右侧） */
     const dimBtns = cfg.options.map(o => btn(
       `type="button" data-dimension="${o.value}" onclick="CasesPage.pickDimension('${o.value}')"`,
       o.label, this.dimension === o.value
@@ -2613,6 +2852,36 @@ const CasesPage = {
            <p>当前筛选条件下暂无案例，请切换其它子类。</p>
            <button type="button" class="btn btn--ghost" onclick="CasesPage.reset()">重置筛选</button>
          </div>`;
+
+    this._applyClamp();
+  },
+
+  /* ── 折叠 / 展开（严格参照「导师团队」板块：section-cta 折叠标签 + 网格行数钳制）──
+     收起态只保留前 rows 行卡片，其余 display:none；标签置于网格之后，
+     控制其位置之前的全部案例模块；筛选 / 搜索 / 维度切换重渲染后自动维持当前状态 */
+  _gridClamp(gridEl, rows, open) {
+    if (!gridEl) return { limit: Infinity, total: 0 };
+    const tpl = getComputedStyle(gridEl).gridTemplateColumns;
+    const cols = (tpl && tpl !== 'none') ? tpl.split(' ').length : 1;
+    const limit = cols * rows;
+    const children = Array.from(gridEl.children);
+    children.forEach((card, i) => { card.style.display = (open || i < limit) ? '' : 'none'; });
+    return { limit, total: children.length };
+  },
+
+  _applyClamp() {
+    const grid = this.grid, wrap = document.getElementById('cases-more-wrap');
+    if (!grid || !wrap) return;
+    const open = !!this._expanded;
+    const { limit, total } = this._gridClamp(grid, this.rows, open);
+    wrap.innerHTML = total <= limit ? '' : (open
+      ? `<button class="section-cta" id="cases-expand-btn" type="button">收起</button>`
+      : `<button class="section-cta" id="cases-expand-btn" type="button">展开查看更多 <span class="u-en">/ ${total - limit} more</span></button>`);
+  },
+
+  toggle() {
+    this._expanded = !this._expanded;
+    this._applyClamp();
   }
 };
 

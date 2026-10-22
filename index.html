@@ -32,11 +32,6 @@
       <div class="hero__tags" aria-label="学科方向">
         <span>ART</span> <span>SCULPTURE</span> <span>PHOTOGRAPHY</span>
       </div>
-      <div class="hero__actions">
-        <a class="btn btn--primary" href="#/undergraduate">本科爬藤</a>
-        <a class="btn btn--ghost" href="#/employment">就业力规划</a>
-        <a class="btn btn--ghost" href="#/cases">学生案例</a>
-      </div>
     </div>
   </section>
 
@@ -232,7 +227,7 @@
   <section class="planning-hero planning-hero--wide" style="border-bottom:1px solid var(--line);">
     <div class="hero__eyebrow" style="justify-content:center;display:flex;">SFK · 艺术人文科系 · <span class="u-en">Undergraduate</span></div>
     <h1>本科爬藤</h1>
-    <p>以插画与纯艺术两大方向为轴，覆盖英联邦学术背景、升学体系、英本与美本全链路规划。</p>
+    <p>从学术基础、研究问题到创作实践与申请表达，帮助学生把艺术发展为一条经得起大学检验、也能够长期生长的个人路径。</p>
   </section>
   <!-- 01–05 五个规划模块：横向手风琴 + 联动详情
        （布局 / 结构 / 层级 / 悬停反馈对齐「十大核心岗位」.careers，
@@ -241,7 +236,7 @@
     <section class="pacc" id="planning-modules">
       <div class="pacc__head">
         <span class="section__eyebrow u-en">Undergraduate Planning 01–05</span>
-        <p class="pacc__hint">悬停或点击任一模块 → 该模块横向展开、其余收窄，下方详情同步切换。</p>
+        <p class="pacc__hint">顶尖大学期待的，不只是会创作的学生，而是能够思考、研究、行动，并清晰表达选择的人。</p>
       </div>
       <div class="pacc__rail" id="planning-sections"></div>
       <div class="pacc__detail" id="planning-detail"></div>
@@ -261,6 +256,16 @@
          圆角、高亮描边、文字居中，悬停自动切换下方板块；容器叠加 .tabs 保留吸顶，
          数据来自 data/undergrad-regions.json，由 UndergradPage 渲染 -->
     <div class="tabs region-tabs" id="major-tabs"></div>
+    <!-- 五个院校方向 · 培养路径模块卡：静态横向栅格，五卡排开且不滑动。
+         信息层级与卡片样式沿用「八大就业方向一览」的 .direction-card，
+         内容为源码「02 培养路径」各方向面板左侧的上方文字 / 标题 / 副标题。 -->
+    <div class="ug-pathways" id="ug-pathways">
+      <div class="ug-pathways__head">
+        <span class="section__eyebrow u-en">02 / School Systems</span>
+        <h3 class="ug-pathways__title">培养路径 · 五大院校方向</h3>
+      </div>
+      <div class="ug-pathways__grid" id="ug-pathway-cards"></div>
+    </div>
     <div id="major-content"></div>
   </section>
 </main>

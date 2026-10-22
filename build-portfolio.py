@@ -322,6 +322,7 @@ for r in recs:
     portfolio.append(c)
 cases['portfolio'] = portfolio
 cases['portfolioConfirmed'] = len(portfolio)
+cases['rows'] = 4   # 学生案例板块折叠/展开：默认收起时保留的网格行数（前端 _gridClamp 使用）
 
 cases['dimension'] = {
     'id': 'dimension', 'label': '申请维度', 'labelEn': 'DIMENSION',

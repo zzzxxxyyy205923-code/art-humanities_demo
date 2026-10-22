@@ -24,7 +24,8 @@ const files = [
   'masterclass-courses.json',
   'summer-winter-courses.json',
   'industry-courses.json',
-  'overseas-courses.json'
+  'overseas-courses.json',
+  'anxin-courses.json'
 ];
 
 const out = {};
