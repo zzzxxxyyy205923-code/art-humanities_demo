@@ -1294,7 +1294,7 @@ body.is-locked { overflow: hidden; }
 
 /* ═══ 本科爬藤 · 五大院校方向模块卡（静态横向栅格，不滑动）═══
    信息层级与视觉语言沿用「八大就业方向一览」卡片：编号 + 箭头 → 院校体系小标
-   → 标题（两行，次行方向色强调）→ 院校类型副标 → 导语正文。
+   → 标题（方向名）→ 院校类型副标。
    与滑动卡片带的区别：这里是 5 张卡片等分横向排开的静态栅格，
    不参与 .directions__rail 的无缝滚动（无 animation / 无 hover 暂停）。 */
 .ug-pathways { margin: 28px 0 8px; }
@@ -1304,18 +1304,21 @@ body.is-locked { overflow: hidden; }
   display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: var(--dc-gap, 20px); align-items: stretch;
 }
-.ug-pathways__grid .direction-card { flex: 1 1 auto; cursor: pointer; min-width: 0; }
+.ug-pathways__grid .direction-card { flex: 1 1 auto; cursor: pointer; min-width: 0; gap: 10px; }
 .ug-pathway-card__label {
   font-family: var(--font-en); font-size: 10px; font-weight: var(--fw-semibold);
-  letter-spacing: .14em; text-transform: uppercase;
+  letter-spacing: .14em; text-transform: uppercase; line-height: 1.4;
   color: var(--direction-color, var(--brand));
 }
-/* 次行强调：源码面板里 <em> 包裹的后半句，用方向色且独占一行 */
-.ug-pathway-card .direction-card__title em {
-  display: block; font-style: normal; color: var(--direction-color, var(--brand));
-}
+/* 同层级文字跨卡水平对齐：按内容为各文字块预留固定高度——
+   上方文字预留两行（英文体系名长短不一，最长会折两行）、
+   标题与副标题各预留一行，使五张卡的标题 / 副标题分别落在同一水平线上；
+   卡片边框高度随内容自适应（栅格 stretch 等高 + 内部固定行高）。 */
+.ug-pathway-card__label { min-height: 28px; }
+.ug-pathway-card .direction-card__title { min-height: calc(var(--fs-h3) * 1.3); }
 .ug-pathway-card__motto {
   font-size: 12.5px; line-height: 1.5; color: var(--text-soft);
+  min-height: 1.5em;
   padding-left: 8px; border-left: 2px solid var(--direction-color, var(--brand));
 }
 @media (max-width: 1100px) { .ug-pathways__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }

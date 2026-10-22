@@ -1036,11 +1036,20 @@ const CourseProducts = {
      university + professor→院校·教授 · type + location + level + outcomes→标签组 ·
      suitable_for→说明）。该模块的 suitable_for 是整句适合对象，故放在说明层；
      其余短字段进标签组。逐字取用原始字段，不新增或改写任何文案。 */
+  /* 海外大师课程中仅这三门 26F 秋季课提供真实课件 PDF：点击弹出对应名称的文档；
+     其余课程不挂 PDF，卡片仅作圆角图片海报展示（点击查看海报大图）。
+     后续补充课件后，把课程名（role_or_course）加入此清单即可生效。 */
+  MASTERCLASS_PDF_COURSES: [
+    '26F-插画设计本研大师课-LCC-Leigh',
+    '26F-纯艺本科大师课-UPenn-Ivanco',
+    '26F-纯艺研究生大师课-CSM-Linda'
+  ],
+
   masterclassCards(rows, p) {
     const pdfDir = (p && p.pdfDir) || '';
     return (rows || []).map(r => ({
       img: r.poster || '',
-      pdf: this.pdfPath(pdfDir, r.poster),
+      pdf: this.MASTERCLASS_PDF_COURSES.includes(r.role_or_course) ? this.pdfPath(pdfDir, r.poster) : '',
       catTag: (r.tab === 'Autumn 26') ? '招募中' : '往期',
       eyebrow: r.program_type || '',
       title: r.role_or_course || '',
@@ -2302,10 +2311,10 @@ const UndergradPage = {
 
   /* ── 五大院校方向 · 培养路径模块卡（静态横向栅格，不滑动）──────────
      卡片形态沿用「八大就业方向一览」的 .direction-card（编号 + 箭头 → 院校体系
-     小标 → 标题 → 院校类型副标 → 导语），区别是这里为 5 张卡片静态排开的等分
-     栅格，不参与 .directions__rail 的无缝滚动。文案取自 data/undergrad-regions.json
-     各 tab 的 pathway 字段，对应源码「02 培养路径」面板左侧的
-     上方文字（label）/ 标题（title + titleEm）/ 副标题（motto）。 */
+     小标 → 标题 → 院校类型副标），区别是这里为 5 张卡片静态排开的等分栅格，
+     不参与 .directions__rail 的无缝滚动。标题为方向名（美国TOP30 / 文理学院 /
+     英国G5 / 罗德岛RISD / 港新），副标题取源码 motto；完整培养路径文案
+     （title/titleEm/intro 等）保留在数据中，供点击后的详情页使用。 */
   renderPathwayCards() {
     const box = document.getElementById('ug-pathway-cards');
     if (!box) return;
@@ -2321,9 +2330,8 @@ const UndergradPage = {
           <span class="direction-card__num">${esc(w.num)}</span>${arrow}
         </div>
         <div class="ug-pathway-card__label u-en">${esc(w.label)}</div>
-        <h3 class="direction-card__title">${esc(w.title)}<em>${esc(w.titleEm)}</em></h3>
+        <h3 class="direction-card__title">${esc(t.title)}</h3>
         <div class="ug-pathway-card__motto">${esc(w.motto)}</div>
-        <p class="direction-card__desc">${esc(w.intro)}</p>
       </article>`;
     }).join('');
 
