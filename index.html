@@ -225,9 +225,10 @@
 <!-- 本科爬藤 -->
 <main class="view" id="view-undergraduate">
   <section class="planning-hero planning-hero--wide" style="border-bottom:1px solid var(--line);">
-    <div class="hero__eyebrow" style="justify-content:center;display:flex;">SFK · 艺术人文科系 · <span class="u-en">Undergraduate</span></div>
+    <div class="hero__eyebrow" style="justify-content:center;display:flex;">SFK · 艺术人文科系 · <span class="u-en">IVY</span></div>
     <h1>本科爬藤</h1>
-    <p>从学术基础、研究问题到创作实践与申请表达，帮助学生把艺术发展为一条经得起大学检验、也能够长期生长的个人路径。</p>
+    <p class="planning-hero__slogan">在艺术中看见自我，在人文中理解世界，成为拥有长期成长力的未来创造者。</p>
+    <p></p>
   </section>
   <!-- 01–05 五个规划模块：横向手风琴 + 联动详情
        （布局 / 结构 / 层级 / 悬停反馈对齐「十大核心岗位」.careers，
@@ -236,7 +237,7 @@
     <section class="pacc" id="planning-modules">
       <div class="pacc__head">
         <span class="section__eyebrow u-en">Undergraduate Planning 01–05</span>
-        <p class="pacc__hint">顶尖大学期待的，不只是会创作的学生，而是能够思考、研究、行动，并清晰表达选择的人。</p>
+        <p class="pacc__hint">悬停或点击任一模块 → 该模块横向展开、其余收窄，下方详情同步切换。</p>
       </div>
       <div class="pacc__rail" id="planning-sections"></div>
       <div class="pacc__detail" id="planning-detail"></div>
@@ -244,28 +245,39 @@
   </section>
 
   <section class="section" style="padding-top:48px;">
-    <!-- 切换标签后的滚动落点：大标题（与标签文字一致）+ 副标题（占位，待提供）
-         （id 供 UndergradPage.scrollToDetail 定位） -->
-    <div id="major-detail" style="margin-bottom:16px;">
-      <h2 class="section__title active-major__title" id="active-major-title"></h2>
-      <p class="section__desc" id="active-major-tagline"></p>
-    </div>
-    <!-- 地区标签（美国TOP30 / 文理学院 / 英国G5 / 罗德岛RISD / 港新）：
-         位于大/小标题下方（副标题之下、展开板块之上，两处均留间距）；
-         形态对齐「艺术疗愈与跨界应用」展开页底部的 dir-sheet__tab —— 竖向长方形、
-         圆角、高亮描边、文字居中，悬停自动切换下方板块；容器叠加 .tabs 保留吸顶，
-         数据来自 data/undergrad-regions.json，由 UndergradPage 渲染 -->
-    <div class="tabs region-tabs" id="major-tabs"></div>
-    <!-- 五个院校方向 · 培养路径模块卡：静态横向栅格，五卡排开且不滑动。
-         信息层级与卡片样式沿用「八大就业方向一览」的 .direction-card，
-         内容为源码「02 培养路径」各方向面板左侧的上方文字 / 标题 / 副标题。 -->
+    <!-- 培养路径 · 五大院校方向：本 section 的标题（站内标准 .section__title 样式）
+         + 五个院校方向模块卡（静态横向栅格，不滑动）。卡片信息层级与样式沿用
+         「八大就业方向一览」的 .direction-card；原「美国TOP30」大标题、占位副标题
+         与五个地区切换标签及其悬停/点击交互已移除，下方六板块按默认地区渲染。 -->
     <div class="ug-pathways" id="ug-pathways">
-      <div class="ug-pathways__head">
+      <div class="section__header">
         <span class="section__eyebrow u-en">02 / School Systems</span>
-        <h3 class="ug-pathways__title">培养路径 · 五大院校方向</h3>
+        <h2 class="section__title">培养路径 · 五大院校方向</h2>
+        <p class="section__desc">从学术基础、研究问题到创作实践与申请表达，帮助学生把艺术发展为一条经得起大学检验、也能够长期生长的个人路径。</p>
       </div>
       <div class="ug-pathways__grid" id="ug-pathway-cards"></div>
     </div>
+
+    <!-- 03 成长时间轴：从「02 培养路径」脱离的独立 section。
+         结构 / 层级移植自本科爬藤源码 index.html 的「03 / G9—G12 ROADMAP 成长时间轴」：
+         标题区（眉标 + 标题）→ 申请地区路线标签 → 路径总览（总览句 · 目标 · 三个视角）
+         → 阶段里程碑轴（时间点 + 圆点连线 + 阶段名）→ 7 张阶段卡（升学主线 / 创作／研究 /
+         资源与动作 + 阶段成果）→ 本阶段可调用资源条。数据来自 data/ug-timeline.json，
+         由 UgTimeline 渲染；id 供 #/undergraduate/ug-timeline 锚点定位。 -->
+    <section class="ugt" id="ug-timeline" aria-labelledby="ugt-title">
+      <div class="section__header">
+        <span class="section__eyebrow u-en">03 / G9—G12 Roadmap</span>
+        <h2 class="section__title" id="ugt-title">成长时间轴</h2>
+      </div>
+      <div class="ugt__tabs" id="ugt-tabs" role="tablist" aria-label="申请地区路径"></div>
+      <div class="ugt__summary" id="ugt-summary"></div>
+      <div class="ugt__scroll">
+        <div class="ugt__milestones" id="ugt-milestones"></div>
+        <div class="ugt__grid" id="ugt-grid"></div>
+      </div>
+      <div class="ugt__season" id="ugt-season"></div>
+    </section>
+
     <div id="major-content"></div>
   </section>
 </main>

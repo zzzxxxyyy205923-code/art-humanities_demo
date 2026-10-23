@@ -537,15 +537,9 @@ p { margin: 0 0 14px; text-wrap: pretty; }
   background: var(--brand); color: var(--brand-dark); border-color: var(--brand); font-weight: var(--fw-bold);
 }
 
-/* 专业切换的滚动落点：标题 + 下属内容（本科爬藤）
-   注意：不要再给落点加 scroll-margin-top —— html 上已有 scroll-padding-top
+/* 本科爬藤的滚动落点与切换淡入动画（#major-detail）已随地区切换标签一并移除；
+   注意：落点容器不要加 scroll-margin-top —— html 上已有 scroll-padding-top
    （导航栏 64 + 12），两者会叠加成 152px，反而落不到位。 */
-/* 切换反馈：内容区极短的一次淡入，提示「内容已换」，不做位移、不影响布局 */
-@keyframes major-detail-in { from { opacity: .35; } to { opacity: 1; } }
-#major-detail.is-switching { animation: major-detail-in .32s ease-out; }
-@media (prefers-reduced-motion: reduce) {
-  #major-detail.is-switching { animation: none; }
-}
 
 /* ═══ CASES ═══ */
 .case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -1067,6 +1061,11 @@ body.is-locked { overflow: hidden; }
 .planning-hero--wide { max-width: var(--max-w); }
 .planning-hero--wide p { max-width: none; }
 
+/* 本科爬藤页头副标题（.planning-hero__slogan）不设任何专属样式：
+   与「学生案例」页副标题同为 .planning-hero 内的普通 <p>，字体 / 字号 / 字重 /
+   颜色 / 行高 / 字距 / 限宽 / 对齐全部由同一套 .planning-hero p（含
+   .planning-hero--wide p 的 max-width: none）给出，两页副标题呈现完全一致。 */
+
 /* ── 八大方向标签：副标题底部，8 个一行横向居中排布 ──
    单行 flex + nowrap：标签文字永不折行，8 个始终在同一行内；
    justify-content:center → 整组标签在页头内居中（窄屏一行放不下时改为可横向滑动）。
@@ -1165,8 +1164,6 @@ body.is-locked { overflow: hidden; }
   .planning-tag { flex: 0 0 auto; padding: 8px 10px; }
   .planning-tags.is-fixed { padding-left: 24px; padding-right: 24px; }
 }
-
-.active-major__title { margin-bottom: 8px; }
 
 /* ═══════════════════════════════════════════
    八大就业方向：持续滑动卡片带
@@ -1298,8 +1295,9 @@ body.is-locked { overflow: hidden; }
    与滑动卡片带的区别：这里是 5 张卡片等分横向排开的静态栅格，
    不参与 .directions__rail 的无缝滚动（无 animation / 无 hover 暂停）。 */
 .ug-pathways { margin: 28px 0 8px; }
-.ug-pathways__head { margin-bottom: 16px; }
-.ug-pathways__title { font-size: var(--fs-h3); font-weight: var(--fw-title); letter-spacing: -.018em; margin: 6px 0 0; }
+/* 标题组（眉标 + 标题 + 副标题）→ 下方模块卡片的间距沿用站内标准
+   .section__header 的 margin-bottom: 42px，与「成长时间轴」「OFFER 成果」等
+   板块的疏密关系一致，此处不再另设覆盖值 */
 .ug-pathways__grid {
   display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: var(--dc-gap, 20px); align-items: stretch;
@@ -1324,6 +1322,89 @@ body.is-locked { overflow: hidden; }
 @media (max-width: 1100px) { .ug-pathways__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 700px) { .ug-pathways__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 480px) { .ug-pathways__grid { grid-template-columns: 1fr; } }
+
+/* ═══ 本科爬藤 · 03 成长时间轴（独立 section，与 02 培养路径同级）═══
+   布局 / 比例移植自本科爬藤源码「03 / G9—G12 ROADMAP 成长时间轴」section：
+     路径总览四栏卡 → 7 阶段里程碑轴（圆点连线）→ 7 张阶段卡 → 资源条（1 + 4 栏）。
+   阶段轴按源码做法设 min-width 1334px 并横向滚动：窄屏保持可读的列宽，
+   不把 7 个阶段挤压成不可读的窄条（与源码一致，不做纵向折叠）。
+   配色映射站内色板：主色 --brand（源码 mint），阶段名沿用源码的三色循环
+   蓝 / 金 / 粉（取站内 8 色板同色值），边框与淡底沿用站内令牌。 */
+.ugt { margin-top: 72px; scroll-margin-top: calc(var(--navbar-h) + 12px); }
+.ugt__tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 21px; }
+.ugt__summary {
+  display: grid; grid-template-columns: minmax(220px, 1.6fr) repeat(3, 1fr);
+  gap: 25px; margin-bottom: 28px; padding: 20px 22px;
+  border: 1px solid rgba(99, 230, 212, .48); border-radius: 22px;
+  background: rgba(9, 42, 36, .4);
+}
+.ugt__summary > section:first-child { padding-right: 18px; border-right: 1px solid var(--line); }
+.ugt__label {
+  display: block; margin-bottom: 7px; color: var(--brand);
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em;
+}
+.ugt__summary h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.48; letter-spacing: -.02em; }
+.ugt__summary p { margin: 0; color: var(--text-muted); font-size: 12px; line-height: 1.65; }
+/* 阶段轴：横向滚动容器 */
+.ugt__scroll { overflow-x: auto; padding-bottom: 6px; }
+.ugt__milestones, .ugt__grid {
+  display: grid; grid-template-columns: repeat(7, minmax(182px, 1fr));
+  gap: 10px; min-width: 1334px;
+}
+.ugt__milestones { margin-bottom: 12px; }
+.ugt__milestone { position: relative; min-height: 64px; padding-left: 3px; }
+/* 轴线：贯穿相邻圆点的水平线（首末段截断，避免超出两端） */
+.ugt__milestone::before {
+  content: ''; position: absolute; z-index: 0; top: 29px; left: -10px; right: -10px;
+  border-top: 1px solid rgba(99, 230, 212, .62);
+}
+.ugt__milestone:first-child::before { left: 11px; }
+.ugt__milestone:last-child::before { right: 100%; }
+.ugt__term, .ugt__point, .ugt__milestone b { position: relative; z-index: 1; }
+.ugt__term {
+  display: block; margin-bottom: 5px; color: var(--brand);
+  font-family: var(--font-mono); font-size: 11px; white-space: nowrap;
+}
+.ugt__point {
+  display: block; width: 13px; height: 13px; margin: 0 0 7px;
+  border: 3px solid var(--brand); border-radius: 50%; background: var(--surface);
+}
+.ugt__milestone b { display: block; font-size: 13px; font-weight: 700; }
+/* 阶段卡 */
+.ugt__card {
+  padding: 14px 15px; border: 1px solid var(--line); border-radius: 10px;
+  background: var(--surface-2);
+}
+.ugt__out {
+  display: inline-block; padding: 6px 9px; border-radius: 999px;
+  background: rgba(99, 230, 212, .14); color: var(--brand); font-size: 11px;
+}
+.ugt__stage { display: block; margin: 14px 0 18px; font-size: 21px; text-align: center; color: #61AFEF; }
+.ugt__card:nth-child(3n + 2) .ugt__stage { color: #E5C07B; }
+.ugt__card:nth-child(3n) .ugt__stage { color: #E06C9F; }
+.ugt__row { padding: 11px 0; border-top: 1px solid var(--line); }
+.ugt__row .ugt__label { margin-bottom: 6px; }
+.ugt__row p { margin: 0; color: var(--text-soft); font-size: 11px; line-height: 1.72; text-align: center; }
+/* 资源条 */
+.ugt__season {
+  display: grid; grid-template-columns: 120px repeat(4, 1fr);
+  gap: 16px; margin-top: 14px; padding: 15px 20px;
+  border: 1px solid rgba(99, 230, 212, .48); border-radius: 22px;
+  background: rgba(9, 42, 36, .4);
+}
+.ugt__season-label { align-self: center; color: var(--brand); font-size: 12px; }
+.ugt__season-card b { display: block; margin: 6px 0; font-size: 13px; }
+.ugt__season-card p { margin: 0; color: var(--text-muted); font-size: 11px; line-height: 1.75; }
+@media (max-width: 900px) {
+  .ugt__summary { grid-template-columns: 1fr 1fr; }
+  .ugt__summary > section:first-child { padding-right: 0; border-right: 0; }
+  .ugt__season { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .ugt { margin-top: 56px; }
+  .ugt__summary { grid-template-columns: 1fr; }
+  .ugt__season { grid-template-columns: 1fr; }
+}
 
 
 @media (max-width: 900px) {
@@ -2366,6 +2447,19 @@ html.is-overlay-open { overflow: hidden; }
   font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: .08em;
   text-transform: uppercase; color: var(--text-dim); margin-bottom: var(--space-4);
 }
+/* 方向定位（本科爬藤方向卡详情 · 原「专业解读」）：展示源码「02 培养路径」
+   面板左侧的标题与副标题。层级对齐 cd-hero：主句为标题级字号，次行（源码中
+   <em> 包裹的后半句）独占一行并用品牌色强调，副标题为小号等宽品牌色。 */
+.cd-pos { max-width: 34em; }
+.cd-pos__statement {
+  margin: 0; font-size: var(--fs-h3); font-weight: var(--fw-title);
+  line-height: 1.45; letter-spacing: -.02em; color: var(--text);
+}
+.cd-pos__statement em { display: block; font-style: normal; color: var(--brand); }
+.cd-pos__sub {
+  margin: 12px 0 0; color: var(--brand);
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: .1em;
+}
 .cd-stat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); }
 .cd-stat {
   background: var(--surface); border: 1px solid var(--line); border-left: 2px solid var(--brand);
@@ -2674,40 +2768,11 @@ html.is-overlay-open { overflow: hidden; }
 .coop-hover-overlay__collab { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; }
 .coop-card__collab-tag { font-size: 8.5px; font-weight: 700; letter-spacing: .01em; color: var(--brand-dark); background: var(--brand); padding: 2px 7px; border-radius: var(--radius-pill); white-space: nowrap; }
 
-/* ═══════════════════════════════════════════════════════════════
-   本科爬藤 · 地区标签（美国TOP30 / 文理学院 / 英国G5 / 罗德岛RISD / 港新）
-   形态对齐「艺术疗愈与跨界应用」展开页底部的 .dir-sheet__tab：
-   竖向长方形、圆角、高亮描边、标题文字居中；悬停提亮 + 描边转方向色，
-   选中态描边与文字同色。容器叠加 .tabs（吸顶在固定导航条下方）。
-   ═══════════════════════════════════════════════════════════════ */
-.region-tabs { justify-content: center; gap: 12px; }
-.region-tab {
-  appearance: none; cursor: pointer; background: transparent;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  /* 高度较此前等比缩减 15%：垂直内边距 9→5px、行距 3→2.5px（文字字号/行高不变），
-     标签总高 ≈56px → ≈47.6px，两行文字仍完整居中 */
-  gap: 2.5px; width: 128px; padding: 5px 12px;
-  font-family: var(--font-sans); text-align: center; line-height: 1.3;
-  color: var(--text-soft); border: 1px solid var(--line-strong);
-  border-radius: var(--radius-sm); transition: .2s;
-}
-.region-tab__title { font-size: var(--fs-body); font-weight: var(--fw-semibold); }
-.region-tab__en { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--text-dim); }
-.region-tab:hover { color: var(--text); background: var(--surface-2); border-color: var(--tab-color, var(--brand)); box-shadow: var(--glow-primary-soft); transform: translateY(-2px); }
-.region-tab.is-active {
-  color: var(--tab-color, var(--brand)); border-color: var(--tab-color, var(--brand));
-  background: var(--surface-2); font-weight: var(--fw-semibold);
-}
-.region-tab.is-active .region-tab__en { color: var(--tab-color, var(--brand)); }
-.region-tab:focus-visible {
-  outline: none; border-color: var(--tab-color, var(--brand));
-  box-shadow: 0 0 0 3px rgba(99,230,212,.16);
-}
+/* 本科爬藤 · 地区切换标签（美国TOP30 / 文理学院 / 英国G5 / 罗德岛RISD / 港新）
+   已随「培养路径 · 五大院校方向」模块卡方案移除，相关样式一并清理；
+   该区域现由 .ug-pathways 承担（标题用站内 .section__title 标准样式）。 */
 /* 展开面板的空态（某标签下暂无匹配的教授 / 案例 / 课程等） */
 .plate__empty { margin: 0; color: var(--text-dim); font-size: var(--fs-small); }
-@media (max-width: 600px) {
-  .region-tab { width: 104px; padding: 4px 10px; }   /* 同步等比缩减 15% */
-}
 
 /* 录取案例：标题说明文字扁平化 —— 横向拉长（取消 34em 限宽，通栏排布）
    并收紧行高降低整体高度，形成更扁的排版效果 */

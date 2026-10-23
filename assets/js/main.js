@@ -9,7 +9,7 @@
 const DATA = { cache: {} };
 
 /* ── 数据加载：内嵌优先，fetch 兜底 ── */
-async function loadData(files = ['meta', 'majors', 'cases', 'planning', 'careers', 'directions', 'direction-details', 'course-products', 'offers', 'instructors', 'resources', 'undergrad-regions', 'timeline', 'frontier-lectures', 'masterclass-courses', 'summer-winter-courses', 'industry-courses', 'overseas-courses', 'anxin-courses']) {
+async function loadData(files = ['meta', 'majors', 'cases', 'planning', 'careers', 'directions', 'direction-details', 'course-products', 'offers', 'instructors', 'resources', 'undergrad-regions', 'timeline', 'frontier-lectures', 'masterclass-courses', 'summer-winter-courses', 'industry-courses', 'overseas-courses', 'anxin-courses', 'ug-timeline']) {
   if (window.SFK_DATA) { DATA.cache = window.SFK_DATA; return; }      // file:// 直开也能拿到数据
   if (location.protocol === 'file:') throw new Error('file 协议下无法 fetch，请改用 HTTP 预览');
   await Promise.all(files.map(async name => {
@@ -555,7 +555,7 @@ const PAGES = {
     TimelineSection.build();
   },
 
-  undergraduate() { PlanningModules.build(); UndergradPage.init(); },
+  undergraduate() { PlanningModules.build(); UndergradPage.init(); UgTimeline.build(); },
   cases() { CasesPage.build(); CasesReel.build(); },
   employment() { EmploymentPage.build(); },
   fulltime() {},
@@ -2201,12 +2201,12 @@ const UndergradPage = {
     const tabs = (DATA.cache['undergrad-regions'] || {}).tabs || [];
     this.tabs = tabs;
     this.keys = tabs.map(t => t.id);
-    this.tabWrap = document.getElementById('major-tabs');
     this.content = document.getElementById('major-content');
-    if (!this.tabWrap || !this.content) return;
+    if (!this.content) return;
 
-    const { section } = Router.parse();
-    this.active = this.keys.includes(section) ? section : this.keys[0];
+    /* 地区切换标签已移除：下方六板块固定按默认地区（美国TOP30）渲染；
+       switch 保留供 hash 定位等场景复用，页面上不再有触发入口 */
+    this.active = this.keys[0];
 
     this.switch = (key, opts) => {
       if (!this.keys.includes(key)) return;
@@ -2218,14 +2218,6 @@ const UndergradPage = {
       if (changed) this.render();
       if (!opts || opts.scroll !== false) this.scrollToDetail();
     };
-
-    /* 光标悬停标签 → 下方板块自动切换（不滚动、不打断阅读）；
-       点击仍走 switch 的滚动定位，二者共用同一渲染 */
-    this.tabWrap.addEventListener('mouseover', e => {
-      const btn = e.target.closest('.region-tab');
-      if (!btn) return;
-      this.switch(btn.getAttribute('data-key'), { scroll: false });
-    });
 
     /* 默认全部收起：进入页面 / 切换专业都从空集合开始 */
     this.openIds = new Set();
@@ -2269,11 +2261,11 @@ const UndergradPage = {
     });
   },
 
-  /* 点击切换标签后：平滑滚到大标题（与标签文字一致）处，让它完整落在固定导航条
-     下方，作为内容阅读的起始位置（标签行已位于标题之下，无需再为其让位）。
+  /* 平滑滚到「培养路径 · 五大院校方向」标题处，让它完整落在固定导航条
+     下方，作为内容阅读的起始位置。
      用 window.scrollTo 而非 scrollIntoView：后者会叠加 html 上的 scroll-padding-top。 */
   scrollToDetail() {
-    const el = document.getElementById('major-detail');
+    const el = document.getElementById('ug-pathways');
     if (!el) return;
     requestAnimationFrame(() => {
       const navH = parseFloat(getComputedStyle(document.documentElement)
@@ -2363,7 +2355,7 @@ const UndergradPage = {
     const ov = document.getElementById('course-overlay');
     const body = document.getElementById('course-overlay-body');
     if (!ov || !body) return;
-    body.innerHTML = this.pathwayDetail(tab);
+    body.innerHTML = this.regionDetail(tab);
     body.classList.add('is-wide');
     ov.classList.add('is-open');
     document.body.classList.add('is-locked');
@@ -2374,42 +2366,82 @@ const UndergradPage = {
     if (btn) btn.focus();
   },
 
-  /* 详情页：布局 / 信息层级 / 样式对齐「课程产品 · 长线旗舰产品」模块详情——
-     同一套 cd-* 分区层级：hero（眉标 → 标题 → 英文副标 → 导语 → 标签）
-     → 核心数据 SNAPSHOT → 培养路径解读网格 → 院校资源 → 收尾语。
-     文案逐字取自源码 schoolData，不新增或改写。 */
-  pathwayDetail(tab) {
+  /* 详情页：结构 / 信息层级 / section 样式沿用 dad_demo「课程产品 · 长线旗舰产品」
+     详情页（cd-hero → 若干 cd-section → cd-cta；分区标签沿用 dad_demo 的
+     「中文 + <span class="u-en">英文</span>」写法），并把五个模块集成进来——
+     内容与卡片组件全部复用站内既有实现，不另造一套：
+       方向定位 POSITIONING ← 原「专业解读」改名；内容取源码「02 培养路径」
+                              点击各方向后展示页左侧的标题与副标题
+       海外教授 FACULTY     ← 导师团队「海外教授」person-card（按地区过滤）
+       OFFER成果 OFFERS     ← OFFER 成果页 offer-card（该地区录取院校）
+       学生案例 CASES       ← 学生案例页 case-card（该地区录取院校，点击开 CaseSheet）
+       课程产品 COURSES     ← 课程产品「海外冬夏校课程」中该地区院校的课程卡 */
+  regionDetail(tab) {
     const esc = this.esc, w = tab.pathway;
-    const sec = (label, inner) =>
-      `<section class="cd-section"><div class="cd-section__label">${esc(label)}</div>${inner}</section>`;
-    const stat = (k, v) =>
-      `<div class="cd-stat"><div class="cd-stat__k">${esc(k)}</div><div class="cd-stat__v">${esc(v)}</div></div>`;
-    const why = (t, d) =>
-      `<div class="cd-why"><div class="cd-stat__k">${esc(t)}</div><div class="cd-stat__v">${esc(d)}</div></div>`;
+    /* 与 dad_demo 的 sec() 同构 */
+    const sec = (cn, en, inner) =>
+      `<section class="cd-section"><div class="cd-section__label">${esc(cn)} <span class="u-en">${esc(en)}</span></div>${inner}</section>`;
+    const empty = `<p class="plate__empty">该分类内容筹备中 · 敬请期待</p>`;
+    /* 海外教授 / OFFER成果 / 学生案例：直接复用六个板块里同名的卡片渲染 */
+    const plate = id => this.plateBodyHTML(tab, { id }) || empty;
+
+    /* 方向定位：源码面板左侧的标题（次行强调）与副标题（院校类型） */
+    const positioning = `
+      <div class="cd-pos">
+        <p class="cd-pos__statement">${esc(w.title)}<em>${esc(w.titleEm)}</em></p>
+        <p class="cd-pos__sub">${esc(w.motto)}</p>
+      </div>`;
+
     return `
       <div class="cd-hero">
         <div class="cd-hero__content">
           <div class="cd-hero__eyebrow">${esc(w.label)}｜${esc(w.motto)}</div>
-          <h2 class="cd-hero__title">${esc(w.title)}${esc(w.titleEm)}</h2>
+          <h2 class="cd-hero__title">${esc(tab.title)}</h2>
           <div class="cd-hero__subtitle">${esc(tab.titleEn)}</div>
           <p class="cd-hero__desc">${esc(w.intro)}</p>
           <div class="cd-chips">${[w.motto, tab.title].map(c => `<span class="cd-chip">${esc(c)}</span>`).join('')}</div>
         </div>
         <div class="cd-hero__tile" aria-hidden="true"></div>
       </div>
-      ${sec('核心数据 · SNAPSHOT', `<div class="cd-stat-grid">${stat('培养类型', w.motto)}${stat('院校体系', w.label)}${stat('代表区域', tab.title)}</div>`)}
-      ${sec('培养路径 · INTERPRETATION', `<div class="cd-why-grid">${why('适合的学生', w.fit)}${why('培养侧重点', w.focus)}${why('申请材料重点', w.material)}${why('大学毕业后的能力', w.outcome)}</div>`)}
-      ${sec('院校资源 · RESOURCES', `<div class="dir-sec__cards">${w.resources.map(([n, s, d]) =>
-        `<div class="dir-card" style="--dir-color:${esc(tab.color)}"><div class="dir-card__t">${esc(n)}</div><div class="dir-card__d">${esc(s)}｜${esc(d)}</div></div>`).join('')}</div>`)}
+      ${sec('方向定位', 'Positioning', positioning)}
+      ${sec('海外教授', 'Faculty', plate('professors'))}
+      ${sec('OFFER成果', 'Offers', plate('offers'))}
+      ${sec('学生案例', 'Cases', plate('cases'))}
+      ${sec('课程产品', 'Courses', this.pathwayCoursesHTML(tab))}
       <div class="cd-cta">
         <p class="cd-cta__statement">${esc(w.title)}${esc(w.titleEm)}</p>
         <p class="cd-cta__statement-en">${esc(w.label)}</p>
       </div>`;
   },
 
+  /* 课程产品模块：取「课程产品 → 海外冬夏校课程 · 顶尖院校在地学习」中
+     院校归属于当前方向的课程（院校名 / 课程名命中该地区院校关键词），
+     卡片复用课程模块统一的 cd-curriculum-card（点击看课程 PDF 或海报大图）。 */
+  pathwayCoursesHTML(tab) {
+    const empty = `<p class="plate__empty">该分类内容筹备中 · 敬请期待</p>`;
+    const rows = DATA.cache['summer-winter-courses'] || [];
+    const keys = tab.caseSchoolKeys || [];
+    const list = rows.filter(r => {
+      const hay = `${r.university || ''} ${r.role_or_course || ''}`;
+      return keys.some(k => hay.includes(k));
+    });
+    if (!list.length) return empty;
+    /* 归一化与详情页同一条路径：走 CourseProducts 的 summerWinterCards（含 PDF 映射） */
+    const entry = ((DATA.cache['course-products'] || {}).catalog || [])
+      .filter(x => x.id === 'summerwinter')[0] || {};
+    const cards = CourseProducts.summerWinterCards(list, entry);
+    return `<div class="cd-curriculum-grid">${cards.map(c => CourseProducts.curriculumCard(c)).join('')}</div>`;
+  },
+
+  /* 海外教授：按「院校归属」筛选——instructors.json 的 regions 字段暂为空，
+     以 background（院校名，如「哈佛大学」）命中该地区院校关键词为准，
+     与「学生案例」按录取院校归属的口径保持一致 */
   professorsOf(tab) {
+    const keys = tab.caseSchoolKeys || [];
+    if (!keys.length) return [];
     return ((DATA.cache.instructors || {}).instructors || [])
-      .filter(r => r.category === '海外教授' && (r.regions || []).includes(tab.id));
+      .filter(r => r.category === '海外教授')
+      .filter(r => keys.some(k => `${r.background || ''}`.includes(k)));
   },
 
   offersOf(tab) {
@@ -2426,23 +2458,25 @@ const UndergradPage = {
   allCases() {
     if (CasesPage.all && CasesPage.all.length) return CasesPage.all;
     const c = DATA.cache.cases || {};
-    CasesPage.all = [
-      ...(c.illustration || []).map(x => ({ ...x, branch: '插画' })),
-      ...(c['fine-art'] || []).map(x => ({ ...x, branch: '纯艺术' })),
-      ...(c.other || []).map(x => ({ ...x, branch: '插画 / 纯艺术' }))
-    ];
+    /* cases.json 的案例全集在 portfolio 数组（与 CasesPage.build 同源同序），
+       索引一致才能保证 CaseSheet.open(全局下标) 打开同一份档案 */
+    CasesPage.all = (c.portfolio || []).map(x => ({ ...x }));
     return CasesPage.all;
   },
 
+  /* 学生案例：按「录取院校」归属地区——命中该地区院校关键词
+     （admitted / admittedEn / 其它录取院校 / 国家地区）即归入 */
   casesOf(tab) {
     const keys = tab.caseSchoolKeys || [];
     if (!keys.length) return [];
     return this.allCases()
       .map((x, idx) => ({ ...x, __idx: idx }))
       .filter(x => {
-        const hay = [x.school, x.schoolEn, x.region]
-          .concat((x.offers || []).map(o => `${o.school || ''} ${o.schoolEn || ''}`))
-          .join(' | ');
+        const others = Array.isArray(x.otherAdmitted)
+          ? x.otherAdmitted
+          : (x.otherAdmitted ? [String(x.otherAdmitted)] : []);
+        const hay = [x.admitted, x.admittedEn, x.admittedCountry, x.region]
+          .concat(others).join(' | ');
         return keys.some(k => hay.includes(k));
       });
   },
@@ -2489,22 +2523,26 @@ const UndergradPage = {
         </div>`).join('')}</div>`;
     }
     if (plate.id === 'cases') {
+      /* 与学生案例页（CasesPage）同款卡片：首图 + 科系 · 城市 → 录取院校（中 / 英）
+         → 录取专业 → 标签；点击开 CaseSheet 档案（与首页共用同一份索引） */
       const list = this.casesOf(tab);
       if (!list.length) return empty;
       return `<div class="case-grid">${list.map(c => `
         <article class="case-card" role="button" tabindex="0"
                  onclick="CaseSheet.open(${c.__idx})"
                  onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();CaseSheet.open(${c.__idx})}">
-          <div class="case-card__top">
-            <span class="case-card__branch u-en">${this.esc(c.branch)} · ${this.esc(c.offerType || '')}</span>
-            <span class="case-card__student">${this.esc(c.studentZh || c.student)}<span class="u-en">${this.esc(c.student || '')}</span></span>
+          <div class="case-card__hero">${c.hero
+            ? `<img src="${this.esc(c.hero)}" alt="${this.esc(c.admitted)} 首图">`
+            : `<span class="case-card__hero-ph">首图 · 待置入</span>`}
+            <div class="case-card__top">
+              <span class="case-card__branch">${this.esc(c.schoolType)} · ${this.esc(c.branch)}</span>
+              <span class="case-card__student"><span class="case-card__city">${this.esc(c.idCity)}</span></span>
+            </div>
           </div>
-          <div class="case-card__school">${this.esc(c.school)}</div>
-          <div class="case-card__school-en u-en">${this.esc(c.schoolEn || '')}</div>
-          <div class="case-card__program"><span class="u-en">${this.esc(c.program || '')}</span>${c.programCn ? ` · ${this.esc(c.programCn)}` : ''}</div>
-          <div class="case-card__meta">${this.esc(c.background || '')}</div>
+          <div class="case-card__school">${this.esc(c.admitted)}</div>
+          <div class="case-card__school-en u-en">${this.esc(c.admittedEn || '')}</div>
+          <div class="case-card__program"><span class="u-en">${this.esc(c.admittedMajor)}</span></div>
           <div class="case-card__tags">${(c.tags || []).map(t => `<span class="case-card__tag">${this.esc(t)}</span>`).join('')}</div>
-          <span class="case-card__more">查看作品与申请档案 <span class="u-en">→</span></span>
         </article>`).join('')}</div>`;
     }
     if (plate.id === 'courses') {
@@ -2521,21 +2559,8 @@ const UndergradPage = {
   render() {
     const tab = this.tabs.find(t => t.id === this.active) || this.tabs[0];
 
-    /* 地区标签：竖向长方形、圆角、高亮描边、文字居中（形态对齐「艺术疗愈与跨界应用」
-       展开页底部的 dir-sheet__tab：悬停提亮 + 描边转方向色，选中态描边与文字同色） */
-    this.tabWrap.innerHTML = this.keys.map(k => {
-      const t = this.tabs.find(x => x.id === k);
-      return `
-      <button class="region-tab${k === this.active ? ' is-active' : ''}" style="--tab-color:${t.color || '#63E6D4'}" data-key="${k}" onclick="UndergradPage.switch('${k}')">
-        <span class="region-tab__title">${this.esc(t.title)}</span>
-        <span class="region-tab__en u-en">${this.esc(t.titleEn)}</span>
-      </button>
-    `;
-    }).join('');
-
-    /* 大标题与标签文字一致；副标题暂为占位，后续由你提供 */
-    document.getElementById('active-major-title').textContent = tab.title;
-    document.getElementById('active-major-tagline').textContent = tab.tagline;
+    /* 地区切换标签与大标题已移除：本 section 由「培养路径 · 五大院校方向」
+       标题 + 五个方向模块卡承担导航，六板块固定按默认地区渲染 */
 
     this.content.innerHTML = this.PLATES.map(p => `
       <article class="plate" id="${p.id}" data-id="${p.id}">
@@ -3074,6 +3099,89 @@ const CaseSheet = {
    展示布局改为与「十大核心岗位」同构的横向手风琴（.pacc / .pmod）：
    收起态 = 窄条 + 竖排模块名；悬停 / 聚焦 / 点击 → 横向展开露出正文，其余收窄，
    并联动刷新下方 .pacc__detail 详情面板；总宽 = 主栏内容宽（不做外扩）。 */
+/* ═══════════ 本科爬藤 · 03 成长时间轴（独立 section）══════════
+   结构 / 层级移植自本科爬藤源码 index.html 的「03 / G9—G12 ROADMAP 成长时间轴」：
+     标题区（眉标 + 标题）→ 申请地区路线标签（美国 IVY / TOP 30 · 英国 G5）
+     → 路径总览（总览句 + 目标 + 三个视角）→ 阶段里程碑轴（时间点 + 圆点连线 + 阶段名）
+     → 7 张阶段卡（阶段成果徽标 + 阶段名 + 升学主线 / 创作／研究 / 资源与动作）
+     → 本阶段可调用资源条。
+   数据来自 data/ug-timeline.json（源码 timelineData 原样结构化，文案逐字保留）。
+   路线标签复用站内 .filter-btn，保证与站内筛选交互的视觉一致。 */
+const UgTimeline = {
+  esc(v) { return DirectionsSection.escape(v == null ? '' : String(v)); },
+
+  build() {
+    const d = DATA.cache['ug-timeline'];
+    const tabs = document.getElementById('ugt-tabs');
+    if (!d || !tabs || !d.routes || !d.routes.length) return;
+    this.routes = d.routes;
+    this.active = d.routes[0].id;
+
+    tabs.innerHTML = this.routes.map(r =>
+      `<button class="filter-btn ugt__tab${r.id === this.active ? ' is-active' : ''}" type="button"
+        role="tab" aria-selected="${r.id === this.active ? 'true' : 'false'}"
+        data-route="${this.esc(r.id)}">${this.esc(r.label)}</button>`).join('');
+
+    /* 事件只绑一次：切换路线只重渲染下方四块，不重建标签本身 */
+    if (!this._bound) {
+      this._bound = true;
+      tabs.addEventListener('click', e => {
+        const b = e.target.closest('.ugt__tab');
+        if (b) this.select(b.getAttribute('data-route'));
+      });
+      tabs.addEventListener('keydown', e => {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        const b = e.target.closest('.ugt__tab');
+        if (!b) return;
+        e.preventDefault();
+        this.select(b.getAttribute('data-route'));
+      });
+    }
+    this.select(this.active);
+  },
+
+  select(id) {
+    const r = (this.routes || []).filter(x => x.id === id)[0];
+    if (!r) return;
+    this.active = id;
+    document.querySelectorAll('#ugt-tabs .ugt__tab').forEach(b => {
+      const on = b.getAttribute('data-route') === id;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+
+    const esc = s => this.esc(s);
+    const set = (elId, html) => { const el = document.getElementById(elId); if (el) el.innerHTML = html; };
+
+    /* 路径总览：首个格子为「路径总览」（总览句 + 目标），后三格为三个视角 */
+    set('ugt-summary',
+      `<section class="ugt__summary-lead"><span class="ugt__label">路径总览</span>
+         <h3>${esc(r.title)}</h3><p>${esc(r.goal)}</p></section>` +
+      r.lenses.map(l => `<section><span class="ugt__label">${esc(l.k)}</span><p>${esc(l.v)}</p></section>`).join(''));
+
+    /* 里程碑轴：时间点 + 轴线圆点 + 阶段名 */
+    set('ugt-milestones', r.stages.map(s =>
+      `<article class="ugt__milestone"><span class="ugt__term">${esc(s.term)}</span>
+         <i class="ugt__point" aria-hidden="true"></i><b>${esc(s.title)}</b></article>`).join(''));
+
+    /* 阶段卡：阶段成果徽标 + 阶段名 + 三行主线 */
+    set('ugt-grid', r.stages.map(s => `
+      <article class="ugt__card">
+        <span class="ugt__label">阶段成果</span>
+        <b class="ugt__out">${esc(s.output)}</b>
+        <b class="ugt__stage">${esc(s.title)}</b>
+        <div class="ugt__row"><span class="ugt__label">升学主线</span><p>${esc(s.main)}</p></div>
+        <div class="ugt__row"><span class="ugt__label">创作／研究</span><p>${esc(s.art)}</p></div>
+        <div class="ugt__row"><span class="ugt__label">资源与动作</span><p>${esc(s.resource)}</p></div>
+      </article>`).join(''));
+
+    /* 资源条：本阶段可调用资源 */
+    set('ugt-season', `<b class="ugt__season-label">本阶段可调用资源</b>` +
+      r.resources.map(x => `<article class="ugt__season-card"><span class="ugt__label">资源模块</span>
+        <b>${esc(x.k)}</b><p>${esc(x.v)}</p></article>`).join(''));
+  }
+};
+
 const PlanningModules = {
   build() {
     const p = DATA.cache.planning;
